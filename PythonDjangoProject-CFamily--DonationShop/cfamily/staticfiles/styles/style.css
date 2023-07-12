@@ -1,0 +1,5 @@
+@import url('profile_create');
+@import url('profile_delete');
+@import url('profile_details');
+@import url('profile_edit');
+@import url('profile_login');

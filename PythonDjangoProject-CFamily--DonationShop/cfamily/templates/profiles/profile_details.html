@@ -1,0 +1,26 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/users/user_details.css' %}">
+    <section class="details-acc">
+        <h1>Profile Details</h1>
+        <div class="details-container">
+            <div class="current-details">
+                <p class="label-p">Name:</p>
+                <p class="information-acc">{{ object.get_name }}</p>
+            </div>
+            <div class="current-details">
+                <p class="label-p">Username:</p>
+                <p class="information-acc">{{ object.username }}</p>
+            </div>
+            <div class="current-details">
+                <p class="label-p">Email:</p>
+                <p class="information-acc">{{ object.email }}</p>
+            </div>
+        </div>
+        <div class="actions">
+            <a class="edit-acc" href="{% url 'profile edit' pk=object.pk %}">Edit Profile</a>
+            <a class="change-pass" href="{% url 'change password' pk=object.pk %}">Change Pass</a>
+        </div>
+    </section>
+{% endblock %}
