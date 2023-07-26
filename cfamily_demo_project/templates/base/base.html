@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+
+</head>
+
+<body>
+    <header class="container-page-header">
+        <nav class="page-header-items" id="nav-items-list">
+            <a href="{% url 'homepage' %}" class='page-header-brand' >CFamily</a>
+            <ul role="list" class="page-header-items-list">
+                {% if request.user.is_authenticated %}
+                    <li class="page-header-items-list-element"><a href="{% url 'user details' pk=request.user.pk %}">{{ user.username }}</a></li>
+                    <li class="page-header-items-list-element"><a href="{% url 'user logout' %}" class="split">Log out</a></li>
+                {% else %}
+                    <li class="page-header-items-list-element"><a href="{% url 'user login' %}">Sing in</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+ 
+
+    {% block content %}
+    {% endblock %}
+
+
+    <footer>
+        <p>Copyright Association 'CFamily' Bulgaria</p>
+        <p>Powered by Django, designed and developed by LORINDI</p>
+    </footer>
+</body>
+
+</html>

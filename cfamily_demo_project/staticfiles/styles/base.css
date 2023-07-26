@@ -1,0 +1,74 @@
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Tenor Sans', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif; */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+   
+}
+.container-page-header {
+    width: 100%;
+    
+    font-family: 'Poiret One', cursive;
+}
+
+.page-header-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #26414F;
+}
+
+.page-header-brand {
+    margin: 10px 0px 10px 0px;
+    font-size: 28px;
+    color: aliceblue;
+    text-decoration: none;
+    background-color: #26414F;
+    padding: 10px 20px;
+    border: 3px solid aliceblue;
+    border-radius: 100%;
+}
+.page-header-items-list {
+    display: flex;
+    flex-direction: row;
+    
+}
+.page-header-items-list-element{
+    margin-right: 25px;
+}
+.page-header-items-list-element a {
+    font-size: 25px;
+    text-decoration: none;
+    color: aliceblue;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #26414F;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    
+}
+footer p{
+    color: aliceblue;
+    font-size: 22px;
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 1px;
+}

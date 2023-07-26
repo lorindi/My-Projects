@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+
+<main>
+    <section class="container-login-page-form-authentication">
+        <nav class="login-page-form-authentication-header">
+            <article class="login-page-form-authentication-header-login">
+                <a href={% url 'user login' %}>Login</a>
+            </article>
+            <article class="login-page-form-authentication-header-register">
+                <a href="{% url 'user register' %}">Register</a>
+            </article>
+        </nav>
+        <header class="login-page-form-subtitle">
+            <h3>Welcome to CFamily!</h3>
+            <p>Embark on a Charitable Quest</p>
+        </header>
+        <form method="post" action="{% url 'user login' %}" class="login-page-form-authentication-form">
+            {{ form.as_div }}
+            {% csrf_token %}
+            <button>Sign In</button>
+        </form>
+    </section>
+</main>
+
+
+
+{% endblock %}

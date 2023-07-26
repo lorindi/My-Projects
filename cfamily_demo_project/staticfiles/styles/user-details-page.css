@@ -1,0 +1,95 @@
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Tenor Sans', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif; */
+
+.container-user-details {
+    border: 3px solid #26414F;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.base-container-user-details {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 500px;
+}
+
+.user-details-header-and-edit {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+    justify-content: space-between;
+
+}
+
+.user-details-header {
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-size: 30px;
+    font-weight: 10;
+}
+
+.user-edit i {
+    font-size: 30px;
+    color: #26414F;
+}
+
+.all-details-for-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+}
+
+.all-details-for-user img {
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    /* height: 80%; */
+    justify-content: space-evenly;
+    border: 2px dotted #26414F;
+    border-radius: 5px;
+    padding: 20px;
+
+
+
+}
+
+.current-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+
+.current-details label {
+    padding: 5px;
+}
+
+.information-user {
+    border-bottom: 1px solid #26414F;
+    /* height: 30px; */
+    padding: 5px;
+}
+
+.user-delete {
+    font-family: 'Wix Madefor Display', sans-serif;
+    color: aliceblue;
+    text-decoration: none;
+    background-color: #26414F;
+    padding: 10px;
+    border-radius: 5px;
+
+}

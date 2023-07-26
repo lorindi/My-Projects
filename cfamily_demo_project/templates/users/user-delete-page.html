@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<main>
+    <section>
+        <h1>Are you sure you want to delete your profile?</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="btns-logout">
+                <button class="btn" type="submit"><a>Yes</a></button>
+                <a href="{% url 'homepage' %}">No</a>
+            </div>
+        </form>
+    </section>
+</main>
+
+{% endblock %}

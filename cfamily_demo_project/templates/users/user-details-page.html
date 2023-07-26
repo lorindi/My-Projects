@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<main>
+    <section class="container-user-details">
+        <section class="base-container-user-details">
+            <div class="user-details-header-and-edit">
+                <h1 class="user-details-header">Profile Details</h1>
+                <a class="user-edit" href="{% url 'user edit' pk=object.pk %}"><i
+                        class="fa-solid fa-pen-to-square"></i></a>
+            </div>
+            <div class="all-details-for-user">
+
+                <img src="https://avatars.githubusercontent.com/u/92224899?v=4" alt="">
+                <div class="details-container">
+
+                    <div class="current-details">
+                        <label>Username:</label>
+                        <p class="information-user">{{ object.username }}</p>
+                    </div>
+                    <div class="current-details">
+                        <label>Name:</label>
+                        <p class="information-user">{{ object.get_name }}</p>
+                    </div>
+                    <div class="current-details">
+                        <label>Email:</label>
+                        <p class="information-user">{{ object.email }}</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <a class="user-delete" href="{% url 'user delete' pk=object.pk %}">Delete Profile</a>
+
+    </section>
+</main>
+{% endblock %}
