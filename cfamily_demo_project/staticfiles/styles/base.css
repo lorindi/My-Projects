@@ -7,8 +7,25 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    /* background-image: linear-gradient(to right, #517F57, #517F57, #0D3E3E); */
+    background-image: linear-gradient(25deg, #517F57,#517F57,#517F57,#F8F7EE,#12523bd0,#0D3E3E,#0D3E3E);
    
 }
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: -300px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/lungs1.png");
+    background-size: 900px 95%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; 
+  }
+
 .container-page-header {
     width: 100%;
     
@@ -20,7 +37,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #26414F;
+    /* background-color: #26414F; */
 }
 
 .page-header-brand {
@@ -28,7 +45,7 @@ body {
     font-size: 28px;
     color: aliceblue;
     text-decoration: none;
-    background-color: #26414F;
+    /* background-color: #26414F; */
     padding: 10px 20px;
     border: 3px solid aliceblue;
     border-radius: 100%;
@@ -60,7 +77,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: #26414F;
+    /* background-color: #26414F; */
     padding-top: 5px;
     padding-bottom: 5px;
     

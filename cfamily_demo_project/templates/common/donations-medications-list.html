@@ -1,0 +1,16 @@
+{% extends 'common/donations-home-page.html' %}
+{% load static %}
+{% block donation_content %}
+
+    <section id="medications-section">
+        <h1>Medications</h1>
+        <ul class="Medications">
+            {% for medication in medications %}
+                <li>{{ medication.name }} - {{ medication.description }}</li>
+            {% empty %}
+                <li>No medications available.</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+{% endblock %}

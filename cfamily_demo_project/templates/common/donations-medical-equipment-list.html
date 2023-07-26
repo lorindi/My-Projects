@@ -1,0 +1,17 @@
+{% extends 'common/donations-home-page.html' %}
+{% load static %}
+{% block donation_content %}
+
+    <section id="medical-equipment-section">
+        <h1>Medical Equipment</h1>
+        <ul class="medical-equipment">
+            {% for equipment in medical_equipment %}
+            <li>{{ equipment.name }} - {{ equipment.description }}</li>
+            {% empty %}
+            <li>No medical equipment available.</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+
+{% endblock %}

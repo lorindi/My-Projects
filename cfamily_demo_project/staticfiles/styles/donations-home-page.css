@@ -1,0 +1,39 @@
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Tenor Sans', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif; */
+main {
+    position: relative;
+
+}
+.container-nav-medications-medical-equipment{
+    position: absolute;
+    top: -350px;
+    left: 50px;
+    border: 2px solid black;
+    padding: 30px;
+    width: 300px;
+    height: 700px;
+    border-radius: 10px;
+
+}
+.container-nav{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+
+    
+
+}
+.container-nav li{
+   margin-bottom: 20px;
+   margin-left: 0px;
+
+    
+
+}
+#medications-link, #medical-equipment-link{
+    text-decoration: none;
+    font-size: 23px;
+    font-family: 'Wix Madefor Display', sans-serif;
+}
