@@ -3,23 +3,23 @@
 {% block content %}
 
 <main>
-    <section class="container-login-page-form-authentication">
-        <nav class="login-page-form-authentication-header">
-            <article class="login-page-form-authentication-header-login">
+    <section class="container-authentication-form">
+        <nav class="authentication-form-header" id="authentication-form-header-login">
+            <article class="authentication-form-header-login">
                 <a href={% url 'user login' %}>Login</a>
             </article>
-            <article class="login-page-form-authentication-header-register">
+            <article class="authentication-form-header-register">
                 <a href="{% url 'user register' %}">Register</a>
             </article>
         </nav>
-        <header class="login-page-form-subtitle">
-            <h3>Welcome to CFamily!</h3>
+        <header class="authentication-form-subtitle">
+            <h1>Welcome to CFamily!</h1>
             <p>Embark on a Charitable Quest</p>
         </header>
-        <form method="post" action="{% url 'user login' %}" class="login-page-form-authentication-form">
+        <form method="post" action="{% url 'user login' %}" class="authentication-form">
             {{ form.as_div }}
             {% csrf_token %}
-            <button>Sign In</button>
+            <button>Sign in</button>
         </form>
     </section>
 </main>

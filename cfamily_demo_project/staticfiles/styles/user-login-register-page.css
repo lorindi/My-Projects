@@ -1,0 +1,118 @@
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Tenor Sans', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif; */
+
+.container-authentication-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #0D3E3E;
+    background-color: #0d3e3e50;
+    backdrop-filter: blur(10px); 
+    text-shadow: 1px 1px 2px #0D3E3E;
+    box-shadow: 1px 1px 30px 5px #F8F7EE;
+    color: aliceblue;
+    padding: 10px;
+    width: 500px;
+    height: 580px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5%;
+}
+
+.authentication-form-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 15%;
+}
+#authentication-form-header-login{
+    margin-bottom: 40px;
+    margin-top: 10px;
+    /* transition: 1s; */
+}
+#authentication-form-header-register {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+
+.authentication-form-header-login a,
+.authentication-form-header-register a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.authentication-form-subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 15%;
+    
+}
+.authentication-form-subtitle h1{
+    font-family: 'Poiret One', cursive;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.authentication-form-subtitle p{
+    font-family: 'Poiret One', cursive;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.authentication-form {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-evenly;
+}
+
+.authentication-form div {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Tenor Sans', sans-serif;
+    font-weight: 100;
+
+}
+.authentication-form div label{
+    margin-bottom: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+input::placeholder {
+    color: rgba(240, 248, 255, 0.664);
+    font-style: italic;
+}
+#id_username, #id_password, #id_email, #id_password1, #id_password2{
+    background-color: #0d3e3e50;
+    border-radius: 30px 15px 30px 15px;
+    padding: 5px 10px;
+    letter-spacing: 1.5px;
+    width: 250px;
+    font-size: 16px;
+    color: rgba(240, 248, 255, 0.855);
+    font-style: italic;
+}
+.authentication-form button{
+    background-color: #ffffff7d;
+    border-radius: 10px;
+    color: #0D3E3E;
+    font-family: 'Poiret One', cursive;
+    font-size: 23px;
+    letter-spacing: 2px;
+    padding: 5px;
+    font-weight: bolder;
+
+    
+}

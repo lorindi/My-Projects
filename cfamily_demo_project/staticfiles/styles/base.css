@@ -57,11 +57,13 @@ body::before {
 }
 .page-header-items-list-element{
     margin-right: 25px;
+
 }
 .page-header-items-list-element a {
     font-size: 25px;
     text-decoration: none;
     color: aliceblue;
+    letter-spacing: 2.5px;
 }
 main {
     display: flex;

@@ -23,7 +23,7 @@
                     <li class="page-header-items-list-element"><a href="{% url 'user details' pk=request.user.pk %}">{{ user.username }}</a></li>
                     <li class="page-header-items-list-element"><a href="{% url 'user logout' %}" class="split">Log out</a></li>
                 {% else %}
-                    <li class="page-header-items-list-element"><a href="{% url 'user login' %}">Sing in</a></li>
+                    <li class="page-header-items-list-element"><a href="{% url 'user login' %}">Sign in</a></li>
                 {% endif %}
             </ul>
         </nav>

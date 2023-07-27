@@ -6,17 +6,22 @@ UserModel = get_user_model()
 
 
 class UserRegisterForm(UserCreationForm):
-    password1 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'password'}), label='Password:')
-    password2 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'password'}), label='Retype password:')
+    password1 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}), label='')
+    password2 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Retype password'}), label='')
 
     class Meta(UserCreationForm.Meta):
         model = UserModel
         fields = ['username', 'email', 'password1', 'password2']
         widgets = {
             'username': forms.TextInput(
-                attrs={'placeholder': 'username'}),
+                attrs={'placeholder': 'Username'}),
             'email': forms.EmailInput(
-                attrs={'placeholder': 'email'}),
+                attrs={'placeholder': 'Email'}),
+
+        }
+        labels = {
+            'username': '',
+            'email': '',
 
         }
 

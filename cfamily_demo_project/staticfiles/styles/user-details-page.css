@@ -4,16 +4,18 @@ font-family: 'Tenor Sans', sans-serif;
 font-family: 'Wix Madefor Display', sans-serif; */
 
 .container-user-details {
-    border: 3px solid #26414F;
+    border: 1px solid #0D3E3E;
+    box-shadow: 1px 1px 30px 5px #F8F7EE;
     padding: 30px;
     border-radius: 5px;
+    backdrop-filter: blur(10px); 
 }
 
 .base-container-user-details {
     display: flex;
     flex-direction: column;
-    width: 800px;
-    height: 500px;
+    width: 900px;
+    height: 600px;
 }
 
 .user-details-header-and-edit {
@@ -26,14 +28,18 @@ font-family: 'Wix Madefor Display', sans-serif; */
 }
 
 .user-details-header {
-    font-family: 'Wix Madefor Display', sans-serif;
-    font-size: 30px;
-    font-weight: 10;
+    font-family: 'Poiret One', cursive;
+    font-size: 45px;
+    color: #0D3E3E;
+    text-shadow: 1px 1px 10px #F8F7EE;
+    font-weight: bolder;
+    letter-spacing: 2.5px;
 }
 
 .user-edit i {
     font-size: 30px;
-    color: #26414F;
+    color: #0D3E3E;
+    text-shadow: 1px 1px 5px #F8F7EE;
 }
 
 .all-details-for-user {
@@ -85,11 +91,14 @@ font-family: 'Wix Madefor Display', sans-serif; */
 }
 
 .user-delete {
-    font-family: 'Wix Madefor Display', sans-serif;
-    color: aliceblue;
+    font-family: 'Poiret One', cursive;
+    color: #0D3E3E;
     text-decoration: none;
-    background-color: #26414F;
+    background-color: #f8f7eeae;
     padding: 10px;
     border-radius: 5px;
+    letter-spacing: 2.5px;
+    font-size: 18.5px;
+    font-weight: 900;
 
 }
