@@ -8,14 +8,21 @@ main {
 }
 .container-nav-medications-medical-equipment{
     position: absolute;
-    top: -350px;
-    left: 50px;
-    border: 2px solid black;
+    top: -250px;
+    left: 200px;
     padding: 30px;
-    width: 300px;
-    height: 700px;
+    width: 12%;
+    height: 600px;
     border-radius: 10px;
-
+    /* border: 1px solid #0D3E3E; */
+    background-color: #0d3e3e50;
+    backdrop-filter: blur(10px); 
+    text-shadow: 1px 1px 2px #0D3E3E;
+    box-shadow: 0px 0px 5px 1px aliceblue ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 .container-nav{
     display: flex;
@@ -26,7 +33,7 @@ main {
 
 }
 .container-nav li{
-   margin-bottom: 20px;
+   margin-bottom: 25px;
    margin-left: 0px;
 
     
@@ -34,6 +41,9 @@ main {
 }
 #medications-link, #medical-equipment-link{
     text-decoration: none;
-    font-size: 23px;
+    font-size: 22px;
     font-family: 'Wix Madefor Display', sans-serif;
+    font-weight: 100;
+    color: aliceblue;
+    font-style: italic;
 }
