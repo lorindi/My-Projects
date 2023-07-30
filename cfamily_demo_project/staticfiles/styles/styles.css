@@ -4,4 +4,5 @@
 @import "user-login-register-page.css";
 @import "user-details-page.css";
 @import "user-edit-page.css";
-@import "donations-home-page.css";
+
+@import "base-donations-home-page.css";

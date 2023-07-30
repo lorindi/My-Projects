@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-97mg_-xlm&fz01dx!y3@9)%vrz(^k9r!u%=p%o0(mz0d%ssewg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -137,5 +137,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.UserProfile'
+LOGIN_URL = reverse_lazy('user login')
 LOGIN_REDIRECT_URL = reverse_lazy('homepage')
 LOGOUT_REDIRECT_URL = reverse_lazy('homepage')

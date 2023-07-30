@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <main>
+        <section>
+            <h2>Edit Donation</h2>
+            <form method="post" action="{% url 'donation edit' pk=object.pk %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+    </main>
+
+{% endblock %}

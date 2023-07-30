@@ -24,7 +24,7 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1; 
-  }
+}
 
 .container-page-header {
     width: 100%;
@@ -37,6 +37,8 @@ body::before {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+  
     /* background-color: #26414F; */
 }
 
@@ -49,21 +51,36 @@ body::before {
     padding: 10px 20px;
     border: 3px solid aliceblue;
     border-radius: 100%;
+   
 }
 .page-header-items-list {
     display: flex;
     flex-direction: row;
+    width: 60%;
+    justify-content: space-around;
+    
     
 }
-.page-header-items-list-element{
-    margin-right: 25px;
-
+.page-header-items-list-div{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+   
+    
+    
 }
-.page-header-items-list-element a {
+.page-header-items-list-div:nth-child(2) a{
+    display: flex;
+    flex-direction: row;
+   
+   
+}
+.page-header-items-list-element {
     font-size: 25px;
     text-decoration: none;
     color: aliceblue;
     letter-spacing: 2.5px;
+
 }
 main {
     display: flex;

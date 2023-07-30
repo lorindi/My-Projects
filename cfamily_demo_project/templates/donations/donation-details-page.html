@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <main>
+        <section>
+            <h2>Donation Details</h2>
+            <p><strong>Name:</strong> {{ object.name }}</p>
+            <p><strong>Type:</strong> {{ object.type }}</p>
+            <p><strong>Description:</strong> {{ object.description }}</p>
+            <p><strong>Donation Price:</strong> {{ object.donation_price }}</p>
+            <p><strong>Creator:</strong> {{ object.creator }}</p>
+            <p><strong>Creation Time:</strong> {{ object.creation_time }}</p>
+            <p><strong>Date Modified:</strong> {{ object.date_modified }}</p>
+        </section>
+    </main>
+{% endblock %}

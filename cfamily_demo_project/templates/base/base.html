@@ -17,18 +17,28 @@
 
     <header class="container-page-header">
         <nav class="page-header-items" id="nav-items-list">
-            <a href="{% url 'homepage' %}" class='page-header-brand' >CFamily</a>
-            <ul role="list" class="page-header-items-list">
+            <a href="{% url 'homepage' %}" class='page-header-brand'>CFamily</a>
+            <div role="list" class="page-header-items-list">
                 {% if request.user.is_authenticated %}
-                    <li class="page-header-items-list-element"><a href="{% url 'user details' pk=request.user.pk %}">{{ user.username }}</a></li>
-                    <li class="page-header-items-list-element"><a href="{% url 'user logout' %}" class="split">Log out</a></li>
+                <div class="page-header-items-list-div">
+                    <a href="{% url 'donations homepage'%}" class="page-header-items-list-element"><i
+                            class="fa-regular fa-heart"></i></a>
+                </div>
+                <div class="page-header-items-list-div">
+                    <a href="{% url 'user details' pk=request.user.pk %}" class="page-header-items-list-element"><i
+                            class="fa-regular fa-user"></i>{{ user.username }}</a>
+                    <a href="{% url 'user logout' %}" class="page-header-items-list-element"><i
+                            class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a>
+                </div>
                 {% else %}
-                    <li class="page-header-items-list-element"><a href="{% url 'user login' %}">Sign in</a></li>
+                <div class="page-header-items-list-div">
+                    <a href="{% url 'user login' %}" class="page-header-items-list-element">Sign in</a>
+                </div>
                 {% endif %}
-            </ul>
+            </div>
         </nav>
     </header>
- 
+
 
     {% block content %}
     {% endblock %}

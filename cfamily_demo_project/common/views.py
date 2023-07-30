@@ -7,8 +7,9 @@ from donations.models import MedicationAndMedicalEquipment
 class HomePage(generic.TemplateView):
     template_name = 'common/home-page.html'
 
+
 class DonationsHomePage(generic.TemplateView):
-    template_name = 'common/donations-home-page.html'
+    template_name = 'base/base-donations-home-page.html'
 
 
 class DonationsMedicationsListView(View):

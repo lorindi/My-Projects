@@ -1,16 +1,31 @@
-{% extends 'common/donations-home-page.html' %}
+{% extends 'base/base-donations-home-page.html' %}
 {% load static %}
 {% block donation_content %}
 
-    <section id="medications-section">
-        <h1>Medications</h1>
-        <ul class="Medications">
+
+        <section id="medications-section">
+            <h1>Medications</h1>
+
             {% for medication in medications %}
-                <li>{{ medication.name }} - {{ medication.description }}</li>
+                <div class="medications">
+                    <h1>{{ medication.name }}</h1>
+                    <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
+                    <p>{{ medication.description }}</p>
+                    <p>{{ medication.donation_price }}lv.</p>
+                    <p>{{ medication.creation_time }}/{{ medication.date_modified }}</p>
+
+                </div>
+
+
+
             {% empty %}
-                <li>No medications available.</li>
+                <div class="empty">
+                    <p>No medications available.</p>
+                </div>
+
             {% endfor %}
-        </ul>
-    </section>
+
+        </section>
+
 
 {% endblock %}

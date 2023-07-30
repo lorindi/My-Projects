@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <main>
+        <section>
+
+            <h2>Create Donation</h2>
+            <form method="post" action="{% url 'donation create' %}">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <button type="submit">Create</button>
+            </form>
+
+
+        </section>
+    </main>
+{% endblock %}
