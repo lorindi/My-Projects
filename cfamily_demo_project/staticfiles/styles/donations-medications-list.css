@@ -1,0 +1,39 @@
+.medications-section, .medical-equipment-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 600px;
+    color: black;
+    position: absolute;
+    top: 15px;
+    right: 400px;
+    
+}
+.medications, .medical-equipment{
+    width: 200px;
+    height: 300px;
+    box-shadow: 0px 0px 5px 1px gray ;
+    border-radius: 10px;
+    background-color: #ffffff89;
+    backdrop-filter: blur(5px);
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    
+}
+.medications h1, .medical-equipment h1{
+   
+    
+}
+.medications img, .medical-equipment img{
+    border-radius: 5px;
+    width: 150px;
+    height: auto;
+
+    object-fit: scale-down;
+}
+

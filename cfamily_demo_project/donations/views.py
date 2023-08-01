@@ -21,21 +21,23 @@ class DonationCreateView(LoginRequiredMixin,GroupRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-@method_decorator(login_required, name='dispatch')
-class DonationEditView(LoginRequiredMixin, UpdateView):
+
+class DonationEditView(LoginRequiredMixin,GroupRequiredMixin, UpdateView):
     model = MedicationAndMedicalEquipment
     template_name = 'donations/donation-edit-page.html'
     fields = ['name', 'image', 'type', 'description', 'donation_price']
+    allowed_groups = ['Admins']
 
 
-@method_decorator(login_required, name='dispatch')
-class DonationDeleteView(LoginRequiredMixin, DeleteView):
+
+class DonationDeleteView(LoginRequiredMixin,GroupRequiredMixin, DeleteView):
     model = MedicationAndMedicalEquipment
     template_name = 'donations/donation-delete-page.html'
     success_url = reverse_lazy('donation_list')
+    allowed_groups = ['Admins']
 
 
-@method_decorator(login_required, name='dispatch')
+
 class DonationDetailsView(LoginRequiredMixin, DetailView):
     model = MedicationAndMedicalEquipment
     template_name = 'donations/donation-details-page.html'

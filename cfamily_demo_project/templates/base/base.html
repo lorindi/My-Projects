@@ -17,7 +17,9 @@
 
     <header class="container-page-header">
         <nav class="page-header-items" id="nav-items-list">
-            <a href="{% url 'homepage' %}" class='page-header-brand'>CFamily</a>
+            <div class='page-header-brand-container'>
+                <a href="{% url 'homepage' %}" class='page-header-brand'>CFamily</a>
+            </div>
             <div role="list" class="page-header-items-list">
                 {% if request.user.is_authenticated %}
                 <div class="page-header-items-list-div">
@@ -31,7 +33,7 @@
                             class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a>
                 </div>
                 {% else %}
-                <div class="page-header-items-list-div">
+                <div class="page-header-items-list-div sign-in">
                     <a href="{% url 'user login' %}" class="page-header-items-list-element">Sign in</a>
                 </div>
                 {% endif %}

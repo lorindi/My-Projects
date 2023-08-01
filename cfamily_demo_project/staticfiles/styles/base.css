@@ -1,16 +1,13 @@
-/* font-family: 'Baloo 2', cursive;
-font-family: 'Poiret One', cursive;
-font-family: 'Tenor Sans', sans-serif;
-font-family: 'Wix Madefor Display', sans-serif; */
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    /* background-image: linear-gradient(to right, #517F57, #517F57, #0D3E3E); */
-    background-image: linear-gradient(25deg, #517F57,#517F57,#517F57,#F8F7EE,#12523bd0,#0D3E3E,#0D3E3E);
-   
+    background-image: linear-gradient(25deg, #517F57, #517F57, #517F57, #F8F7EE, #12523bd0, #0D3E3E, #0D3E3E);
+
 }
+
 body::before {
     content: "";
     display: block;
@@ -20,26 +17,28 @@ body::before {
     width: 100%;
     height: 100%;
     background-image: url("../images/lungs1.png");
-    background-size: 900px 95%; 
+    background-size: 900px 95%;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; 
+    z-index: -1;
 }
 
 .container-page-header {
     width: 100%;
-    
     font-family: 'Poiret One', cursive;
 }
 
 .page-header-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    align-items: baseline;
     width: 100%;
-  
-    /* background-color: #26414F; */
+    justify-content: space-evenly;
+}
+
+.page-header-brand-container {
+    display: flex;
+    flex-direction: row;
 }
 
 .page-header-brand {
@@ -47,41 +46,48 @@ body::before {
     font-size: 28px;
     color: aliceblue;
     text-decoration: none;
-    /* background-color: #26414F; */
     padding: 10px 20px;
     border: 3px solid aliceblue;
     border-radius: 100%;
-   
+
+
 }
+
 .page-header-items-list {
     display: flex;
     flex-direction: row;
-    width: 60%;
     justify-content: space-around;
-    
-    
+    width: 50%;
+
+
 }
-.page-header-items-list-div{
+
+.page-header-items-list-div {
     display: flex;
     flex-direction: row;
-    width: 20%;
-   
-    
-    
+
 }
-.page-header-items-list-div:nth-child(2) a{
-    display: flex;
-    flex-direction: row;
-   
-   
-}
+
 .page-header-items-list-element {
-    font-size: 25px;
+    font-size: 23px;
     text-decoration: none;
     color: aliceblue;
     letter-spacing: 2.5px;
+    margin-right: 35px;
+    /* display: flex;
+    flex-direction: row; */
 
 }
+.fa-heart{
+    font-size: 25px;
+}
+
+.fa-user,
+.fa-arrow-right-from-bracket {
+    margin-right: 10px;
+}
+
+
 main {
     display: flex;
     flex-direction: column;
@@ -89,6 +95,7 @@ main {
     align-items: center;
 
 }
+
 footer {
     width: 100%;
     display: flex;
@@ -96,13 +103,12 @@ footer {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    /* background-color: #26414F; */
     padding-top: 5px;
     padding-bottom: 5px;
-    
-    
+
 }
-footer p{
+
+footer p {
     color: aliceblue;
     font-size: 22px;
     font-family: 'Poiret One', cursive;
