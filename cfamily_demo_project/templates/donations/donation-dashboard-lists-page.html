@@ -1,0 +1,57 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <main class="main main-dashboard">
+        <section class="container-dashboard-medications-list">
+            {% for medication in medications %}
+                <div class="medications">
+                    <h1 class="medications-title">{{ medication.name }}</h1>
+                    <div>
+                        <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
+                        <!-- <p class="medications-date-modified">{{ medication.date_modified }}</p> -->
+                        <p class="medications-description">{{ medication.description }}</p>
+                    </div>
+                    <p class="medications-donation-price">{{ medication.donation_price }}<span>lv</span></p>
+
+                    <button>ADD TO CARD</button>
+
+                </div>
+
+
+
+
+            {% empty %}
+                <div class="empty">
+                    <p>No medications available.</p>
+                </div>
+
+            {% endfor %}
+
+
+        </section>
+        <section class="container-dashboard-medical-equipment-list">
+            {% for equipment in medical_equipment %}
+                <div class="medical-equipment">
+                    <h1 class="medical-equipment-title">{{ equipment.name }}</h1>
+                    <div>
+                        <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
+                        <!-- <p class="medical-equipment-date-modified">{{ equipment.date_modified }}</p> -->
+                        <p class="medical-equipment-description">{{ equipment.description }}</p>
+                    </div>
+                    <p class="medical-equipment-donation-price">{{ equipment.donation_price }}<span>lv</span></p>
+
+                    <button>ADD TO CARD</button>
+
+                </div>
+
+
+
+            {% empty %}
+                <div class="empty">
+                    <p>No medical equipment available.</p>
+                </div>
+
+            {% endfor %}
+        </section>
+    </main>
+
+{% endblock %}

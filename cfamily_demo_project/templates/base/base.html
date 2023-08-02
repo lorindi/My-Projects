@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'styles/reset.css' %}">
@@ -15,41 +15,49 @@
 
 <body>
 
-    <header class="container-page-header">
-        <nav class="page-header-items" id="nav-items-list">
-            <div class='page-header-brand-container'>
-                <a href="{% url 'homepage' %}" class='page-header-brand'>CFamily</a>
-            </div>
-            <div role="list" class="page-header-items-list">
-                {% if request.user.is_authenticated %}
+<header class="container-page-header">
+    <nav class="page-header-items" id="nav-items-list">
+        <div class='page-header-brand-container'>
+            <a href="{% url 'homepage' %}" class='page-header-brand'>CFamily</a>
+        </div>
+        <div role="list" class="page-header-items-list">
+
+            {% if request.user.is_authenticated %}
                 <div class="page-header-items-list-div">
-                    <a href="{% url 'donations homepage'%}" class="page-header-items-list-element"><i
+                    <a href="{% url 'donations homepage' %}" class="page-header-items-list-element"><i
                             class="fa-regular fa-heart"></i></a>
                 </div>
+                {% if request.user.is_authenticated and request.user.is_superuser %}
+                    <div>
+                        <a href="{% url 'donation create' %}" class="page-header-items-list-element">Create</a>
+                        <a href="{% url 'dashboard' %}" class="page-header-items-list-element">Dashboard</a>
+                    </div>
+                {% endif %}
                 <div class="page-header-items-list-div">
                     <a href="{% url 'user details' pk=request.user.pk %}" class="page-header-items-list-element"><i
                             class="fa-regular fa-user"></i>{{ user.username }}</a>
                     <a href="{% url 'user logout' %}" class="page-header-items-list-element"><i
                             class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a>
                 </div>
-                {% else %}
+            {% else %}
                 <div class="page-header-items-list-div sign-in">
                     <a href="{% url 'user login' %}" class="page-header-items-list-element">Sign in</a>
                 </div>
-                {% endif %}
-            </div>
-        </nav>
-    </header>
+            {% endif %}
+
+        </div>
+    </nav>
+</header>
 
 
-    {% block content %}
-    {% endblock %}
+{% block content %}
+{% endblock %}
 
 
-    <footer>
-        <p>Copyright Association 'CFamily' Bulgaria</p>
-        <p>Powered by Django, designed and developed by LORINDI</p>
-    </footer>
+<footer>
+    <p>Copyright Association 'CFamily' Bulgaria</p>
+    <p>Powered by Django, designed and developed by LORINDI</p>
+</footer>
 </body>
 
 </html>
