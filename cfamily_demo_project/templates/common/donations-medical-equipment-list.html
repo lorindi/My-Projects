@@ -2,31 +2,33 @@
 {% block donation_content %}
 
 
-        <section class="medical-equipment-section">
-  
+<section class="medical-equipment-section">
 
-            {% for equipment in medical_equipment %}
-                <div class="medical-equipment">
-                    <h1>{{ equipment.name }}</h1>
-                    <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
-                    <p>{{ equipment.date_modified }}</p>
-                    <p>{{ equipment.description }}</p>
-                    <p>{{ equipment.donation_price }}lv.</p>
-                    
-                    <button>ADD TO CARD</button>
-    
-                </div>
-    
-    
-    
-            {% empty %}
-                <div class="empty">
-                    <p>No medical equipment available.</p>
-                </div>
-    
-            {% endfor %}
-    
-        </section>
+
+    {% for equipment in medical_equipment %}
+    <div class="medical-equipment">
+        <h1 class="medical-equipment-title">{{ equipment.name }}</h1>
+        <div>
+            <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
+            <!-- <p class="medical-equipment-date-modified">{{ equipment.date_modified }}</p> -->
+            <p class="medical-equipment-description">{{ equipment.description }}</p>
+        </div>
+        <p class="medical-equipment-donation-price">{{ equipment.donation_price }}<span>lv</span></p>
+
+        <button>ADD TO CARD</button>
+
+    </div>
+
+
+
+    {% empty %}
+    <div class="empty">
+        <p>No medical equipment available.</p>
+    </div>
+
+    {% endfor %}
+
+</section>
 
 
 

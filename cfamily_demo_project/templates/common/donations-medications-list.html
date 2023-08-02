@@ -4,31 +4,33 @@
 
 
 
-    <section class="medications-section">
-  
-
-        {% for medication in medications %}
-            <div class="medications">
-                <h1>{{ medication.name }}</h1>
-                <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
-                <p>{{ medication.date_modified }}</p>
-                <p>{{ medication.description }}</p>
-                <p>{{ medication.donation_price }}lv.</p>
-                
-                <button>ADD TO CARD</button>
-
-            </div>
+<section class="medications-section">
 
 
+    {% for medication in medications %}
+    <div class="medications">
+        <h1 class="medications-title">{{ medication.name }}</h1>
+        <div>
+            <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
+            <!-- <p class="medications-date-modified">{{ medication.date_modified }}</p> -->
+            <p class="medications-description">{{ medication.description }}</p>
+        </div>
+        <p class="medications-donation-price">{{ medication.donation_price }}<span>lv</span></p>
 
-        {% empty %}
-            <div class="empty">
-                <p>No medications available.</p>
-            </div>
+        <button>ADD TO CARD</button>
 
-        {% endfor %}
+    </div>
 
-    </section>
+
+
+    {% empty %}
+    <div class="empty">
+        <p>No medications available.</p>
+    </div>
+
+    {% endfor %}
+
+</section>
 
 
 

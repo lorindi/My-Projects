@@ -29,9 +29,9 @@
     </nav>
 </header>
 <main class="main-content">
-
-    <section class="container-nav-medications-medical-equipment">
-
+    <h1 class="main-content-header">Discover the power of your donation :)</h1>
+    <section class="container-nav-medications-medical-equipment medications-medical-equipment-section">
+        
         <ul role='list' class="container-nav">
             <li><a href="{% url 'donations medications' %}" id="medications-link">Medications</a></li>
             <li><a href="{% url 'donations medical equipment' %}" id="medical-equipment-link">Medical Equipment</a>
@@ -39,7 +39,7 @@
 
 
         </ul>
-        <h1 class="main-content-header">Discover the power of your donation :)</h1>
+       
 
 
         {% block donation_content %}
