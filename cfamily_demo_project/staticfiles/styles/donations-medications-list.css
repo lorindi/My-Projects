@@ -67,9 +67,7 @@
 .medications img,
 .medical-equipment img {
 
-    width: 150px;
-    height: auto;
-    object-fit: scale-down;
+   
 
 }
 
@@ -99,17 +97,18 @@
     border: none;
     box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.468);
 
-      
-      
+
+
 
 }
+
 .medical-equipment button:active,
 .medications button:active {
-    
+
     box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.468);
     /* box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.468); */
-      
-      
+
+
 
 }
 

@@ -22,7 +22,7 @@ class DonationDashboardView(GroupRequiredMixin, View):
         return render(request, self.template_name, context)
 
 
-class DonationCreateView(LoginRequiredMixin,GroupRequiredMixin, CreateView):
+class DonationCreateView(GroupRequiredMixin, CreateView):
     model = MedicationAndMedicalEquipment
     template_name = 'donations/donation-create-page.html'
     fields = ['name', 'image', 'type', 'description', 'donation_price']
@@ -36,7 +36,7 @@ class DonationCreateView(LoginRequiredMixin,GroupRequiredMixin, CreateView):
 
 
 
-class DonationEditView(LoginRequiredMixin,GroupRequiredMixin, UpdateView):
+class DonationEditView(GroupRequiredMixin, UpdateView):
     model = MedicationAndMedicalEquipment
     template_name = 'donations/donation-edit-page.html'
     fields = ['name', 'image', 'type', 'description', 'donation_price']
@@ -45,7 +45,7 @@ class DonationEditView(LoginRequiredMixin,GroupRequiredMixin, UpdateView):
 
 
 
-class DonationDeleteView(LoginRequiredMixin,GroupRequiredMixin, DeleteView):
+class DonationDeleteView(GroupRequiredMixin, DeleteView):
     model = MedicationAndMedicalEquipment
     template_name = 'donations/donation-delete-page.html'
     success_url = reverse_lazy('donation_list')
@@ -54,7 +54,7 @@ class DonationDeleteView(LoginRequiredMixin,GroupRequiredMixin, DeleteView):
 
 
 
-class DonationDetailsView(LoginRequiredMixin, DetailView):
+class DonationDetailsView(DetailView):
     model = MedicationAndMedicalEquipment
     template_name = 'donations/donation-details-page.html'
     success_url = 'dashboard'

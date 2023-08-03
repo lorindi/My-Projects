@@ -1,123 +1,154 @@
-.dashboard-medications-section,
-.dashboard-medical-equipment-section {
+.main-dashboard {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Tenor Sans', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+.container-dashboard-medications-list,
+.dashboard-container-dashboard-medical-equipment-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 1000px;
-    height: 600px;
-    color: black;
-
-
-
 }
 
 .dashboard-medications,
 .dashboard-medical-equipment {
-    width: 200px;
-    height: 320px;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.486);
-    border-radius: 10px;
-    background-color: #ffffff89;
-    backdrop-filter: blur(5px);
-    margin-right: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    border: 1px solid #0D3E3E;
+    background-color: #0d3e3e50;
+    backdrop-filter: blur(10px);
+    text-shadow: 1px 1px 2px #0D3E3E;
+    box-shadow: 1px 1px 5px 1px aliceblue;
+    color: aliceblue;
     padding: 10px;
-    margin-bottom: 10px;
-
-
-}
-
-.medications div,
-.medical-equipment div {
-    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.486);
-    border: 1px solid white;
-    border-radius: 5px;
-
-}
-
-.dashboard-medications-title,
-.dashboard-medical-equipment-title {
-    font-family: 'Tenor Sans', sans-serif;
-    font-weight: 100;
-    text-shadow: 1px 1px 1px white;
-    padding: 5px;
-    font-size: 20px;
-
-}
-
-
-.dashboard-medications-description,
-.dashboard-medical-equipment-description {
-
-    width: 150px;
-    padding: 0px 5px;
-    font-size: 12px;
-    font-family: 'Tenor Sans', sans-serif;
-
+    border-radius: 10px;
+    width: 250px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .dashboard-medications img,
 .dashboard-medical-equipment img {
-
-    width: 150px;
     height: auto;
     object-fit: scale-down;
 
+
 }
 
-.dashboard-medical-equipment-donation-price,
-.dashboard-medications-donation-price {
-    color: rgba(0, 0, 0, 0.622);
+.dashboard-medications-type,
+.dashboard-medical-equipment-type {
+    font-size: 18px;
+}
+
+.div-title-img-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 225px;
+    height: 300px;
+    background-color: #ffffff50;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.477);
+}
+
+.dashboard-medications-title,
+.dashboard-medical-equipment-title {
+    font-size: 15px;
+}
+
+.dashboard-medications-description,
+.dashboard-medical-equipment-description {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2px;
+
+}
+
+.dashboard-medications-donation-price,
+.dashboard-medical-equipment-donation-price {
+    font-size: 13px;
+}
+
+.div-creation-time-date-modified {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* border-top: 3px dotted rgba(255, 255, 255, 0.484); */
+    border-bottom: 3px dotted rgba(255, 255, 255, 0.484);
+}
+
+.dashboard-medications-creation-time,
+.dashboard-medical-equipment-creation-time {
+    font-size: 13px;
+}
+
+.dashboard-medications-date-modified,
+.dashboard-medical-equipment-date-modified {
+    font-size: 13px;
+}
+
+.dashboard-medications-creator,
+.dashboard-medical-equipment-creator {
+    font-size: 13px;
+}
+
+.div-creator-donation-price {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.484);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    
+}
+
+.dashboard-medications-links,
+.dashboard-medical-equipment-links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 2px;
+}
+
+.dashboard-medications-links a,
+.dashboard-medical-equipment-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff7d;
+    border-radius: 10px;
+    color: #0D3E3E;
     font-family: 'Tenor Sans', sans-serif;
-}
-
-.dashboard-medical-equipment-donation-price span,
-.dashboard-medications-donation-price span {
-    color: rgba(0, 0, 0, 0.622);
-    font-family: 'Tenor Sans', sans-serif;
-}
-
-.dashboard-medications-medical-equipment-section {
-    position: relative;
-
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 2px;
+    font-weight: 100;
+    text-decoration: none;
+    width: 70px;
 
 }
 
-.dashboard-medical-equipment button,
-.dashboard-medications button {
-    width: 150px;
-    border-radius: 5px;
-    padding: 5px;
-    border: none;
-    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.468);
-
-
-}
-
-.dashboard-medical-equipment button:active,
-.dashboard-medications button:active {
-
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.468);
-
-
-
-}
-
-.dashboard-empty {
-    position: absolute;
-    top: 250px;
-    right: 500px;
-
-
-}
+.dashboard-empty {}
 
 .dashboard-empty p {
     font-size: 25px;
     color: white;
     text-shadow: 1px 1px 5px black;
+    background-color: #0d3e3e50;
     font-weight: 100;
     letter-spacing: 2.5px;
     font-style: italic;
