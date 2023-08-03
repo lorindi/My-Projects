@@ -3,14 +3,14 @@
     <main class="main main-dashboard">
         <section class="container-dashboard-medications-list">
             {% for medication in medications %}
-                <div class="medications">
-                    <h1 class="medications-title">{{ medication.name }}</h1>
+                <div class="dashboard-medications">
+                    <h1 class="dashboard-medications-title">{{ medication.name }}</h1>
                     <div>
                         <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
                         <!-- <p class="medications-date-modified">{{ medication.date_modified }}</p> -->
-                        <p class="medications-description">{{ medication.description }}</p>
+                        <p class="dashboard-medications-description">{{ medication.description }}</p>
                     </div>
-                    <p class="medications-donation-price">{{ medication.donation_price }}<span>lv</span></p>
+                    <p class="dashboard-medications-donation-price">{{ medication.donation_price }}<span>lv</span></p>
 
                     <button>ADD TO CARD</button>
 
@@ -20,7 +20,7 @@
 
 
             {% empty %}
-                <div class="empty">
+                <div class="dashboard-empty">
                     <p>No medications available.</p>
                 </div>
 
@@ -28,16 +28,16 @@
 
 
         </section>
-        <section class="container-dashboard-medical-equipment-list">
+        <section class="dashboard-container-dashboard-medical-equipment-list">
             {% for equipment in medical_equipment %}
-                <div class="medical-equipment">
-                    <h1 class="medical-equipment-title">{{ equipment.name }}</h1>
+                <div class="dashboard-medical-equipment">
+                    <h1 class="dashboard-medical-equipment-title">{{ equipment.name }}</h1>
                     <div>
                         <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
                         <!-- <p class="medical-equipment-date-modified">{{ equipment.date_modified }}</p> -->
-                        <p class="medical-equipment-description">{{ equipment.description }}</p>
+                        <p class="dashboard-medical-equipment-description">{{ equipment.description }}</p>
                     </div>
-                    <p class="medical-equipment-donation-price">{{ equipment.donation_price }}<span>lv</span></p>
+                    <p class="dashboard-medical-equipment-donation-price">{{ equipment.donation_price }}<span>lv</span></p>
 
                     <button>ADD TO CARD</button>
 
@@ -46,7 +46,7 @@
 
 
             {% empty %}
-                <div class="empty">
+                <div class="dashboard-empty">
                     <p>No medical equipment available.</p>
                 </div>
 

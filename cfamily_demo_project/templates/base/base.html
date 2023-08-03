@@ -27,7 +27,7 @@
                     <a href="{% url 'donations homepage' %}" class="page-header-items-list-element"><i
                             class="fa-regular fa-heart"></i></a>
                 </div>
-                {% if request.user.is_authenticated and request.user.is_superuser %}
+                {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff%}
                     <div>
                         <a href="{% url 'donation create' %}" class="page-header-items-list-element">Create</a>
                         <a href="{% url 'dashboard' %}" class="page-header-items-list-element">Dashboard</a>

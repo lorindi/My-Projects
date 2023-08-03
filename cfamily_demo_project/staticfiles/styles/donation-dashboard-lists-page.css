@@ -1,0 +1,131 @@
+.dashboard-medications-section,
+.dashboard-medical-equipment-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 600px;
+    color: black;
+
+
+
+}
+
+.dashboard-medications,
+.dashboard-medical-equipment {
+    width: 200px;
+    height: 320px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.486);
+    border-radius: 10px;
+    background-color: #ffffff89;
+    backdrop-filter: blur(5px);
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+.medications div,
+.medical-equipment div {
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.486);
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
+
+.dashboard-medications-title,
+.dashboard-medical-equipment-title {
+    font-family: 'Tenor Sans', sans-serif;
+    font-weight: 100;
+    text-shadow: 1px 1px 1px white;
+    padding: 5px;
+    font-size: 20px;
+
+}
+
+
+.dashboard-medications-description,
+.dashboard-medical-equipment-description {
+
+    width: 150px;
+    padding: 0px 5px;
+    font-size: 12px;
+    font-family: 'Tenor Sans', sans-serif;
+
+}
+
+.dashboard-medications img,
+.dashboard-medical-equipment img {
+
+    width: 150px;
+    height: auto;
+    object-fit: scale-down;
+
+}
+
+.dashboard-medical-equipment-donation-price,
+.dashboard-medications-donation-price {
+    color: rgba(0, 0, 0, 0.622);
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+.dashboard-medical-equipment-donation-price span,
+.dashboard-medications-donation-price span {
+    color: rgba(0, 0, 0, 0.622);
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+.dashboard-medications-medical-equipment-section {
+    position: relative;
+
+
+}
+
+.dashboard-medical-equipment button,
+.dashboard-medications button {
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.468);
+
+
+}
+
+.dashboard-medical-equipment button:active,
+.dashboard-medications button:active {
+
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.468);
+
+
+
+}
+
+.dashboard-empty {
+    position: absolute;
+    top: 250px;
+    right: 500px;
+
+
+}
+
+.dashboard-empty p {
+    font-size: 25px;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    font-weight: 100;
+    letter-spacing: 2.5px;
+    font-style: italic;
+    font-family: 'Baloo 2', cursive;
+    backdrop-filter: blur(5px);
+    text-shadow: 1px 1px 2px #0D3E3E;
+    box-shadow: 0px 0px 5px 1px aliceblue;
+    padding: 10px 20px;
+    border-radius: 8px;
+
+}
