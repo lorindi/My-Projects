@@ -4,12 +4,15 @@
     font-family: 'Tenor Sans', sans-serif;
     letter-spacing: 1px;
     font-weight: 100;
+    height: 900px;
+    justify-content: space-evenly;
 }
 
 .container-dashboard-medications-list,
-.dashboard-container-dashboard-medical-equipment-list {
+.container-dashboard-medical-equipment-list {
     display: flex;
     flex-direction: row;
+    
 }
 
 .dashboard-medications,
@@ -25,6 +28,7 @@
     padding: 10px;
     border-radius: 10px;
     width: 250px;
+    height: 380px;
     margin-right: 10px;
     align-items: center;
     justify-content: center;
@@ -34,13 +38,15 @@
 .dashboard-medical-equipment img {
     height: auto;
     object-fit: scale-down;
+    width: 160px;
+    border-radius: 10px;
 
 
 }
 
 .dashboard-medications-type,
 .dashboard-medical-equipment-type {
-    font-size: 18px;
+    font-size: 13px;
 }
 
 .div-title-img-description {
@@ -51,7 +57,7 @@
     border-radius: 10px;
     font-size: 18px;
     width: 225px;
-    height: 300px;
+    height: 235px;
     background-color: #ffffff50;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.477);
 }
