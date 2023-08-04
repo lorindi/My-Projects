@@ -4,6 +4,10 @@ from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import generic
 
+from django.contrib.auth.forms import PasswordChangeForm, PasswordResetForm, SetPasswordForm
+from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView, \
+    PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
+
 from users.forms import UserRegisterForm
 
 UserModel = get_user_model()
@@ -57,3 +61,38 @@ class UserDeleteView(generic.DeleteView):
     def post(self, *args, **kwargs):
         self.request.user.delete()
         return redirect('homepage')
+
+
+
+
+
+
+
+class ChangeAccPasswordView(PasswordChangeView):
+    form_class = PasswordChangeForm
+    success_url = reverse_lazy("password_change_done")
+    template_name = "user_passwords/change_password.html"
+
+
+class PassChanged(PasswordChangeDoneView):
+    template_name = "user_passwords/change_pass_successful.html"
+
+
+class PasswordReset(PasswordResetView):
+    form_class = PasswordResetForm
+    template_name = "user_passwords/password_reset.html"
+    success_url = reverse_lazy("password_reset_done")
+
+
+class PasswordResetDone(PasswordResetDoneView):
+    template_name = "user_passwords/password_reset_done.html"
+
+
+class PasswordResetConfirm(PasswordResetConfirmView):
+    form_class = SetPasswordForm
+    success_url = reverse_lazy("password_reset_complete")
+    template_name = "user_passwords/password_reset_confirm.html"
+
+
+class PasswordResetComplete(PasswordResetCompleteView):
+    template_name = "user_passwords/password_reset_complete.html"

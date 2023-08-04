@@ -1,74 +1,114 @@
 {% extends 'base/base.html' %}
 {% block content %}
-<main class="main-dashboard">
-    <section class="container-dashboard-medications-list">
-        {% for medication in medications %}
-        <div class="dashboard-medications">
-            <p class="dashboard-medications-type">{{ medication.type }}</p>
-            <div class="div-title-img-description">
-                <h1 class="dashboard-medications-title">{{ medication.name }}</h1>
-                <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
-                <p class="dashboard-medications-description">{{ medication.description }}</p>
-            </div>
-            <div class="div-creation-time-date-modified">
-                <p class="dashboard-medications-creation-time">{{ medication.creation_time }}</p>
-                <p class="dashboard-medications-date-modified"> {{ medication.date_modified }}</p>
-            </div>
-            <div class="div-creator-donation-price">
-                <p class="dashboard-medications-creator">{{ medication.creator }}</p>
-                <p class="dashboard-medications-donation-price">{{ medication.donation_price }}lv</p>
+    <main class="main-dashboard">
+        <section class="container-dashboard-medications-list">
+            {% for medication in medications %}
+                <div class="dashboard-medications">
+                    <p class="dashboard-medications-type">{{ medication.type }}</p>
+                    <div class="div-title-img-description">
+                        <h1 class="dashboard-medications-title">{{ medication.name }}</h1>
+                        <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
+                        <p class="dashboard-medications-description">{{ medication.description }}</p>
+                    </div>
+                    <div class="div-creation-time-date-modified">
+                        <p class="dashboard-medications-creation-time">{{ medication.creation_time }}</p>
+                        <p class="dashboard-medications-date-modified"> {{ medication.date_modified }}</p>
+                    </div>
+                    <div class="div-creator-donation-price">
+                        <p class="dashboard-medications-creator">{{ medication.creator }}</p>
+                        <p class="dashboard-medications-donation-price">{{ medication.donation_price }}lv</p>
 
-            </div>
-            <div class="dashboard-medications-links">
-                {# <a href="{% url 'donation create' %}">Create</a>#}
-                <a class="dashboard-medications-details-link"
-                    href="{% url 'donation details' medication.pk %}">Details</a>
-                <a class="dashboard-medications-edit-link" href="{% url 'donation edit' medication.pk %}">Edit</a>
-                <a class="dashboard-medications-delete-link" href="{% url 'donation delete' medication.pk %}">Delete</a>
-            </div>
-        </div>
-        {% empty %}
-        <div class="dashboard-empty">
-            <p>No medications available.</p>
-        </div>
+                    </div>
+                    <div class="dashboard-medications-links">
+                        {# <a href="{% url 'donation create' %}">Create</a>#}
+                        <a class="dashboard-medications-details-link"
+                           href="{% url 'donation details' medication.pk %}">Details</a>
+                        <a class="dashboard-medications-edit-link"
+                           href="{% url 'donation edit' medication.pk %}">Edit</a>
+                        <a class="dashboard-medications-delete-link" href="{% url 'donation delete' medication.pk %}">Delete</a>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="dashboard-empty">
+                    <p>No medications available.</p>
+                </div>
 
-        {% endfor %}
-    </section>
-    <section class="container-dashboard-medical-equipment-list">
-        {% for equipment in medical_equipment %}
-        <div class="dashboard-medical-equipment">
-            <p class="dashboard-medical-equipment-type">{{ equipment.type }}</p>
-            <div class="div-title-img-description">
-                <h1 class="dashboard-medical-equipment-title">{{ equipment.name }}</h1>
-                <img src="{{ equipment.image.url }}" alt="{{ equipment.name }}">
-                <p class="dashboard-medical-equipment-description">{{ equipment.description }}</p>
-            </div>
-            <div class="div-creation-time-date-modified">
-                <p class="dashboard-medical-equipment-creation-time">{{ equipment.creation_time }}</p>
-                <p class="dashboard-medical-equipment-date-modified"> {{ equipment.date_modified }}</p>
-            </div>
+            {% endfor %}
+            {% if medications.has_other_pages %}
+                <div class="pagination">
+                <span class="step-links">
+                    {% if medications.has_previous %}
+                        <a href="?medications=1">&laquo; first</a>
+                        <a href="?medications={{ medications.previous_page_number }}">previous</a>
+                    {% endif %}
 
-            <div class="div-creator-donation-price">
-                <p class="dashboard-medical-equipment-creator">{{ equipment.creator }}</p>
-                <p class="dashboard-medical-equipment-donation-price">{{ equipment.donation_price }}</p>
-            </div>
-            <div class="dashboard-medical-equipment-links">
-                {# <a href="{% url 'donation create' %}">Create</a>#}
-                <a class="dashboard-medical-equipment-details-link"
-                    href="{% url 'donation details' equipment.date.pk %}">Details</a>
-                <a class="dashboard-medical-equipment-edit-link"
-                    href="{% url 'donation edit' equipment.date.pk %}">Edit</a>
-                <a class="dashboard-medical-equipment-delete-link"
-                    href="{% url 'donation delete' equipment.date.pk %}">Delete</a>
-            </div>
+                    <span class="current-page">
+                        Page {{ medications.number }} of {{ medications.paginator.num_pages }}.
+                    </span>
 
-        </div>
-        {% empty %}
-        <div class="dashboard-empty">
-            <p>No medical equipment available.</p>
-        </div>
-        {% endfor %}
-    </section>
-</main>
+                    {% if medications_page.has_next %}
+                        <a href="?medications={{ medications.next_page_number }}">next</a>
+                        <a href="?medications={{ medications.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+                </div>
+            {% endif %}
+
+        </section>
+        <section class="container-dashboard-medical-equipment-list">
+            {% for equipment in medical_equipment %}
+                <div class="dashboard-medical-equipment">
+                    <p class="dashboard-medical-equipment-type">{{ equipment.type }}</p>
+                    <div class="div-title-img-description">
+                        <h1 class="dashboard-medical-equipment-title">{{ equipment.name }}</h1>
+                        <img src="{{ equipment.image.url }}" alt="{{ equipment.name }}">
+                        <p class="dashboard-medical-equipment-description">{{ equipment.description }}</p>
+                    </div>
+                    <div class="div-creation-time-date-modified">
+                        <p class="dashboard-medical-equipment-creation-time">{{ equipment.creation_time }}</p>
+                        <p class="dashboard-medical-equipment-date-modified"> {{ equipment.date_modified }}</p>
+                    </div>
+
+                    <div class="div-creator-donation-price">
+                        <p class="dashboard-medical-equipment-creator">{{ equipment.creator }}</p>
+                        <p class="dashboard-medical-equipment-donation-price">{{ equipment.donation_price }}</p>
+                    </div>
+                    <div class="dashboard-medical-equipment-links">
+                        {# <a href="{% url 'donation create' %}">Create</a>#}
+                        <a class="dashboard-medical-equipment-details-link"
+                           href="{% url 'donation details' equipment.date.pk %}">Details</a>
+                        <a class="dashboard-medical-equipment-edit-link"
+                           href="{% url 'donation edit' equipment.date.pk %}">Edit</a>
+                        <a class="dashboard-medical-equipment-delete-link"
+                           href="{% url 'donation delete' equipment.date.pk %}">Delete</a>
+                    </div>
+
+                </div>
+            {% empty %}
+                <div class="dashboard-empty">
+                    <p>No medical equipment available.</p>
+                </div>
+            {% endfor %}
+            {% if medical_equipment.has_other_pages %}
+                <div class="pagination">
+                <span class="step-links">
+                    {% if medical_equipment.has_previous %}
+                        <a href="?medical_equipment=1">&laquo; first</a>
+                        <a href="?medical_equipment={{ medical_equipment.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current-page">
+                        Page {{ medical_equipment.number }} of {{ medical_equipment.paginator.num_pages }}.
+                    </span>
+
+                    {% if medical_equipment.has_next %}
+                        <a href="?medical_equipment={{ medical_equipment.next_page_number }}">next</a>
+                        <a href="?medical_equipment={{ medical_equipment.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+                </div>
+            {% endif %}
+        </section>
+    </main>
 
 {% endblock %}

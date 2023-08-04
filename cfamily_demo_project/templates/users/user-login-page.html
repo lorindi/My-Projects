@@ -20,6 +20,7 @@
             {{ form.as_div }}
             {% csrf_token %}
             <button>Sign in</button>
+            <a href="{% url 'reset_password' %}">Forgotten password</a>
         </form>
     </section>
 </main>
