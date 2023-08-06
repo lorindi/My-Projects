@@ -7,7 +7,8 @@ font-family: 'Wix Madefor Display', sans-serif; */
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    background-image: linear-gradient(15deg, #273c3e, #396c5e, #638380, #33739e, #25495a);
+    background-image: linear-gradient(25deg, #517F57, #517F57, #517F57, #F8F7EE, #12523bd0, #0D3E3E, #0D3E3E);
+
 
 }
 
@@ -16,12 +17,11 @@ font-family: 'Wix Madefor Display', sans-serif; */
     content: "";
     display: block;
     position: fixed;
-    top: 150px;
+    top: 50px;
     left: -300px;
     width: 100%;
-    height: 80%;
-    background-image: url("../images/lungs3.png");
-    opacity: 0.9;
+    height: 100%;
+    background-image: url("../images/lungs1.png");
     background-size: 900px 95%;
     background-position: center;
     background-repeat: no-repeat;

@@ -9,6 +9,13 @@
 @import "user-details-page.css";
 @import "user-edit-page.css";
 
+@import "password-reset.css";
+@import "password-reset-done.css";
+@import "password-reset-confirm.css";
+
+
+
+
 @import "donation-dashboard-lists-page.css";
 @import "donation-create-page.css";
 @import "donation-delete-page.css";
