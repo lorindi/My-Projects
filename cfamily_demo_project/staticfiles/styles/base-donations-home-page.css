@@ -37,7 +37,7 @@ font-family: 'Wix Madefor Display', sans-serif; */
 .main-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
 }
@@ -50,7 +50,7 @@ font-family: 'Wix Madefor Display', sans-serif; */
     padding: 10px 20px;
     border: 3px solid aliceblue;
     border-radius: 100%;
-    margin-right: 370px;
+    margin-right: 338px;
 }
 
 .nav-list {
@@ -69,6 +69,9 @@ font-family: 'Wix Madefor Display', sans-serif; */
     text-decoration: none;
     color: aliceblue;
     letter-spacing: 2.5px;
+}
+.donation-split i{
+margin-right: 10px;
 }
 
 .main-content {

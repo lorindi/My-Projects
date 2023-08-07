@@ -1,10 +1,12 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
-{#    <link rel="stylesheet" href="{% static 'css/users/pass_changed.css' %}">#}
-    <section class="pass-changed">
-        <h3>Password change successful</h3>
-        <p>Your password was changed.</p>
-        <a href="{% url 'user details' pk=request.user.pk %}">Profile Details</a>
-    </section>
+
+    <main class="main-users-passwords-content">
+        <section class="pass-changed">
+            <h3>Password change successful</h3>
+            <p>Your password was changed.</p>
+            <a href="{% url 'user details' pk=request.user.pk %}">Profile Details</a>
+        </section>
+    </main>
 {% endblock %}

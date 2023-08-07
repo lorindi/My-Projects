@@ -1,10 +1,14 @@
-{% extends 'base/base-donations-home-page.html' %}
-{% block donation_content %}
-  <h1>Delete Cart Item</h1>
-  <p>Are you sure you want to delete '{{ cart_item }}'?</p>
-  <form method="post">
-    {% csrf_token %}
-    <button type="submit">Confirm Delete</button>
-  </form>
-  <a href="{% url 'cart_list' %}">Cancel</a>
+{% extends 'base/shopping_cart.html' %}
+{% block shopping_cart_content %}
+    <main class="main-shopping-cart">
+        <section>
+            <h1>Delete Cart Item</h1>
+            <p>Are you sure you want to delete '{{ cart_item }}'?</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit">Confirm Delete</button>
+            </form>
+            <a href="{% url 'cart_list' %}">Cancel</a>
+        </section>
+    </main>
 {% endblock %}

@@ -27,17 +27,25 @@
                     <a href="{% url 'donations homepage' %}" class="page-header-items-list-element"><i
                             class="fa-regular fa-heart"></i></a>
                 </div>
-                {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff%}
+                {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
                     <div>
                         <a href="{% url 'donation create' %}" class="page-header-items-list-element">Create</a>
                         <a href="{% url 'dashboard' %}" class="page-header-items-list-element">Dashboard</a>
                     </div>
                 {% endif %}
-                <div class="page-header-items-list-div">
-                    <a href="{% url 'user details' pk=request.user.pk %}" class="page-header-items-list-element"><i
-                            class="fa-regular fa-user"></i>{{ user.username }}</a>
-                    <a href="{% url 'user logout' %}" class="page-header-items-list-element"><i
-                            class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a>
+                <div class="page-header-items-list-div dropdown">
+                    <button class="page-header-items-list-element dropbtn"><i
+                            class="fa-regular fa-user"></i>{{ user.username }} <i
+                            class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'user details' pk=request.user.pk %}" class="page-header-items-list-element"><i
+                                class="fa-solid fa-user"></i>Profile details</a>
+                        <a href="{% url 'user edit' pk=request.user.pk %}" class="page-header-items-list-element"><i
+                                class="fa-solid fa-user"></i>Profile edit</a>
+                        <a href="{% url 'user logout' %}" class="page-header-items-list-element"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a>
+                    </div>
+
                 </div>
             {% else %}
                 <div class="page-header-items-list-div sign-in">

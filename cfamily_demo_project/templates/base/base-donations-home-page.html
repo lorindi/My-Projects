@@ -18,10 +18,26 @@
         <a href="{% url 'homepage' %}" class="logo">CFamily</a>
         <ul role="list" class="nav-list">
             {% if request.user.is_authenticated %}
-                <li class="nav-item"><a href="{% url 'user details' pk=request.user.pk %}"><i
-                        class="fa-solid fa-user"></i></a></li>
+
                 <li class="nav-item"><a href="{% url 'cart_list' %}" class="donation-split"><i
-                        class="fa-solid fa-cart-shopping"></i></a></li>
+                        class="fa-solid fa-cart-shopping"></i>Donation cart</a></li>
+                <li class="nav-item">
+                    <div class="page-header-items-list-div dropdown">
+                        <button class="page-header-items-list-element dropbtn"><i
+                                class="fa-regular fa-user"></i>{{ user.username }} <i
+                                class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="{% url 'user details' pk=request.user.pk %}"
+                               class="page-header-items-list-element"><i class="fa-solid fa-user"></i>Profile
+                                details</a>
+                            <a href="{% url 'user edit' pk=request.user.pk %}" class="page-header-items-list-element"><i
+                                    class="fa-solid fa-user"></i>Profile edit</a>
+                            <a href="{% url 'user logout' %}" class="page-header-items-list-element"><i
+                                    class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a>
+                        </div>
+                    </div>
+                </li>
+
             {% else %}
                 <li class="nav-item"><a href="{% url 'user login' %}">Sign in</a></li>
             {% endif %}
@@ -31,7 +47,7 @@
 <main class="main-content">
     <h1 class="main-content-header">Discover the power of your donation :)</h1>
     <section class="container-nav-medications-medical-equipment medications-medical-equipment-section">
-        
+
         <ul role='list' class="container-nav">
             <li><a href="{% url 'donations medications' %}" id="medications-link">Medications</a></li>
             <li><a href="{% url 'donations medical equipment' %}" id="medical-equipment-link">Medical Equipment</a>
@@ -39,7 +55,7 @@
 
 
         </ul>
-       
+
 
 
         {% block donation_content %}
