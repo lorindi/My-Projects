@@ -20,7 +20,7 @@
             {% if request.user.is_authenticated %}
                 <li class="nav-item"><a href="{% url 'user details' pk=request.user.pk %}"><i
                         class="fa-solid fa-user"></i></a></li>
-                <li class="nav-item"><a href="{% url 'user logout' %}" class="donation-split"><i
+                <li class="nav-item"><a href="{% url 'cart_list' %}" class="donation-split"><i
                         class="fa-solid fa-cart-shopping"></i></a></li>
             {% else %}
                 <li class="nav-item"><a href="{% url 'user login' %}">Sign in</a></li>

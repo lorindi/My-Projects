@@ -17,11 +17,8 @@ class DonationsMedicationsListView(View):
 
     def get(self, request):
         medications = MedicationAndMedicalEquipment.objects.filter(type='Medication')
-
-        context = {
-            'medications': medications,
-
-        }
+        donations = MedicationAndMedicalEquipment.objects.all()
+        context = {'medications': medications, }
         return render(request, self.template_name, context)
 
 
@@ -31,8 +28,5 @@ class DonationsMedicalEquipmentListView(View):
     def get(self, request):
         medical_equipment = MedicationAndMedicalEquipment.objects.filter(type='Medical Equipment')
 
-        context = {
-            'medical_equipment': medical_equipment,
-
-        }
+        context = {'medical_equipment': medical_equipment, }
         return render(request, self.template_name, context)

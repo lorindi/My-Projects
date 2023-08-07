@@ -1,0 +1,31 @@
+{#{% extends 'base/base.html' %}#}
+{##}
+{#{% block content %}#}
+{#  <h1>Your Cart</h1>#}
+{#  <ul>#}
+{#    {% for cart_item in cart_items %}#}
+{#      <li>#}
+{#        {{ cart_item.quantity }} x {{ cart_item.donation.name }}#}
+{#        <a href="{% url 'cart_update' cart_item.pk %}">Edit</a>#}
+{#        <a href="{% url 'cart_delete' cart_item.pk %}">Delete</a>#}
+{#      </li>#}
+{#    {% endfor %}#}
+{#  </ul>#}
+{#  <a href="{% url 'cart_add' %}">Add Item</a>#}
+{#{% endblock %}#}
+
+{% extends 'base/base-donations-home-page.html' %}
+{% block donation_content %}
+  <h1>Your Cart</h1>
+  <ul>
+    {% for cart_item in cart_items %}
+      <li>
+        {{ cart_item.quantity }} x {{ cart_item.donation.name }}
+        <a href="{% url 'cart_update' cart_item.pk %}">Edit</a>
+        <a href="{% url 'cart_delete' cart_item.pk %}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'donations homepage' %}">Browse Donations</a>
+{% endblock %}
+
