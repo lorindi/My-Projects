@@ -1,0 +1,15 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main>
+        <section>
+            <h1>Confirm Delete</h1>
+            <p>Are you sure you want to delete "{{ campaign.title }}"?</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a href="{% url 'campaign_detail' campaign.pk %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </section>
+    </main>
+{% endblock %}

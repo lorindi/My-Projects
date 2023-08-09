@@ -3,7 +3,7 @@ from django.views.generic import CreateView, DetailView, UpdateView, DeleteView,
 from django.urls import reverse_lazy
 from django.shortcuts import redirect, render
 from .models import MedicationAndMedicalEquipment
-from mixins.donations_mixins import GroupRequiredMixin
+from mixins.mixins import GroupRequiredMixin
 
 from django.core.paginator import Paginator, Page
 

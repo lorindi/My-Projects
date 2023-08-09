@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'donations',
     'cart',
     'payments',
+    'events',
+    'campaigns',
 ]
 
 MIDDLEWARE = [

@@ -1,7 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poiret+One&family=Tenor+Sans&family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
-@import "base.css";
-@import "base-donations-home-page.css";
+@import "index.css";
+
 
 @import "donations-medications-list.css";
 

@@ -1,0 +1,15 @@
+{% extends 'base/index.html' %}
+{% block content %}
+
+    <main>
+        <section>
+            <h1>Event List</h1>
+            <ul>
+                {% for event in events %}
+                    <li><a href="{% url 'event_detail' event.pk %}">{{ event.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+
+{% endblock %}

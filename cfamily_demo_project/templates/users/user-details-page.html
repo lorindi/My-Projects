@@ -1,6 +1,7 @@
-{% extends 'base/base.html' %}
-{% load static %}
+{% extends 'base/index.html' %}
 {% block content %}
+{% load static %}
+
 <main class="main-users-content">
     <section class="container-user-details">
         <section class="base-container-user-details">
@@ -27,6 +28,18 @@
                         <p class="information-user">{{ object.email }}</p>
                     </div>
                 </div>
+            </div>
+            <div class="registered-events">
+                <h2>Registered Events</h2>
+                <ul>
+                    {% for registration in object.eventregistration_set.all %}
+                        <li>
+                            <p><strong>Event:</strong> {{ registration.event.title }}</p>
+                            <p><strong>Date:</strong> {{ registration.event.start_date }}</p>
+                            <p><strong>Time:</strong> {{ registration.event.start_hour }} - {{ registration.event.end_hour }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
 
         </section>

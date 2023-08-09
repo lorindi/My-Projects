@@ -5,7 +5,7 @@ font-family: 'Wix Madefor Display', sans-serif; */
 
 .container-user-details {
     border: 1px solid #0D3E3E;
-    box-shadow: 1px 1px 30px 5px #F8F7EE;
+    box-shadow: 1px 1px 10px 1px #F8F7EE;
     padding: 30px;
     border-radius: 5px;
     backdrop-filter: blur(10px); 

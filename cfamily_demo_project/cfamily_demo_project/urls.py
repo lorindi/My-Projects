@@ -27,4 +27,6 @@ urlpatterns = [
     path('donation/', include('donations.urls')),
     path('cart/', include('cart.urls')),
     path('payment/', include('payments.urls')),
+    path('event/', include('events.urls')),
+    path('campaign/', include('campaigns.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

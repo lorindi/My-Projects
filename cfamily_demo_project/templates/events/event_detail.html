@@ -1,0 +1,36 @@
+{% extends 'base/index.html' %}
+{% block content %}
+
+    <main>
+        <section>
+            <h1>{{ event.title }}</h1>
+            <p>{{ event.description }}</p>
+            <p>Start Date: {{ event.start_date }}</p>
+            <p>End Date: {{ event.end_date }}</p>
+            <p>Location: {{ event.location }}</p>
+
+            {% if request.user.is_authenticated %}
+                <form method="post" action="{% url 'event_register' event.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" {% if registered %}disabled{% endif %}>{% if registered %}Unregister{% else %}
+                        Register{% endif %}</button>
+
+                </form>
+
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <form method="post" action="{% url 'event_unregister' event.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" {% if not registered %}disabled{% endif %}>
+                        {% if not registered %}Not Registered{% else %}Unregister{% endif %}
+                    </button>
+                </form>
+            {% endif %}
+            {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
+                <a href="{% url 'event_update' event.pk %}">Event edit</a>
+                <a href="{% url 'event_delete' event.pk %}">Event delete</a>
+            {% endif %}
+        </section>
+    </main>
+
+{% endblock %}
