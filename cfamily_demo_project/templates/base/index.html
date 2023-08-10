@@ -20,8 +20,17 @@
         </div>
         {% if request.user.is_authenticated %}
             <div class="user-nav">
-                <div class="shop-link">
-                    <a class="shop-icon-link" href="#"><i class="fa-solid fa-heart"></i>Charity Mart</a>
+                <div class="shop-link dropdown">
+                    <button class="shop-icon-link dropbtn"><i class="fa-solid fa-heart"></i>Charity Mart</button>
+                    <div class="dropdown-content">
+                        <a class="donations-link" href="{% url 'dashboard' %}">
+                            <i class="fa-solid fa-heart"></i>All donations</a>
+                        <a class="donation-medications-link" href="{% url 'donation medications' %}">
+                            <i class="fa-solid fa-heart"></i>Donation medications</a>
+                        <a class="donations-medical-equipment-link" href="{% url 'donation medical equipment' %}">
+                            <i class="fa-solid fa-heart"></i>Donation medical equipment</a>
+
+                    </div>
                 </div>
                 <div class="cart-link">
                     <a class="cart-icon-link" href="{% url 'cart_list' %}">
@@ -63,7 +72,7 @@
                 <a class="events-link" href="{% url 'event_list' %}">Events</a>
                 <a class="charitable-treks-link" href="#">Charitable treks</a>
                 <a class="charity-races-link" href="#">Charity races</a>
-                <a class="benefactors-link" href="#">Our benefactors</a>
+                <a class="benefactors-link" href="{% url 'benefactor_list' %}">Our benefactors</a>
             </div>
             <div class="help-dropdown dropdown">
                 <button class="cfamily-help dropbtn">CFamily HELP</button>
@@ -79,13 +88,13 @@
 
     {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
         <nav class="admin-nav">
-            <a class="create-donation-link" href="#">New donation</a>
+            <a class="create-donation-link" href="{% url 'donation create' %}">New donation</a>
             <a class="create-projects-link" href="{% url 'campaign_create' %}">New campaign</a>
             <a class="create-initiatives-link" href="#">New initiatives</a>
             <a class="create-events-link" href="{% url 'event_create' %}">New event</a>
             <a class="create-charitable-treks-link" href="#">New charitable treks</a>
             <a class="create-charity-races-link" href="#">New charity races</a>
-            <a class="create-benefactors-link" href="#">New our benefactors</a>
+            <a class="create-benefactors-link" href="{% url 'benefactor_create' %}">New our benefactors</a>
 
 
         </nav>

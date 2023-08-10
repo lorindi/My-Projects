@@ -21,7 +21,7 @@ class AddToCartView(View):
         cart_item, created = CartItem.objects.get_or_create(user=user, donation=donation)
         cart_item.quantity += quantity
         cart_item.save()
-        return redirect('donations homepage')
+        return redirect('homepage')
 
 
 class CartListView(View):

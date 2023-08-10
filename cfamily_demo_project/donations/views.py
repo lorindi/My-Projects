@@ -7,9 +7,30 @@ from mixins.mixins import GroupRequiredMixin
 
 from django.core.paginator import Paginator, Page
 
-class DonationDashboardView(GroupRequiredMixin, View):
+
+class DonationsMedicationsListView(View):
+    template_name = 'donations/donations-medications-list.html'
+
+    def get(self, request):
+        medications = MedicationAndMedicalEquipment.objects.filter(type='Medication')
+        donations = MedicationAndMedicalEquipment.objects.all()
+        context = {'medications': medications, }
+        return render(request, self.template_name, context)
+
+
+class DonationsMedicalEquipmentListView(View):
+    template_name = 'donations/donations-medical-equipment-list.html'
+
+    def get(self, request):
+        medical_equipment = MedicationAndMedicalEquipment.objects.filter(type='Medical Equipment')
+
+        context = {'medical_equipment': medical_equipment, }
+        return render(request, self.template_name, context)
+
+
+class DonationDashboardView(View):
     template_name = 'donations/donation-dashboard-lists-page.html'
-    allowed_groups = ['Admins']
+
     paginate_by = 4
 
     def get(self, request):
@@ -30,7 +51,6 @@ class DonationDashboardView(GroupRequiredMixin, View):
             'medical_equipment': medical_equipment_page,
         }
         return render(request, self.template_name, context)
-
 
 
 class DonationCreateView(GroupRequiredMixin, CreateView):

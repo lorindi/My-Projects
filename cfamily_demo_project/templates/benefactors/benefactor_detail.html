@@ -1,0 +1,21 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main>
+        <section>
+            <h1>{{ benefactor.name_benefactor }}</h1>
+            <p>{{ benefactor.description }}</p>
+            <p>Contact Email: {{ benefactor.contact_email }}</p>
+            <p>Contact Phone: {{ benefactor.contact_phone }}</p>
+            {% if benefactor.benefactor_image %}
+                <img src="{{ benefactor.benefactor_image.url }}" alt="{{ benefactor.name_benefactor }}">
+            {% else %}
+                <p>No image available</p>
+            {% endif %}
+            {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
+                <a href="{% url 'benefactor_update' benefactor.pk %}">Campaign edit</a>
+                <a href="{% url 'benefactor_delete' benefactor.pk %}">Campaign delete</a>
+            {% endif %}
+        </section>
+    </main>
+{% endblock %}

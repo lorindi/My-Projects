@@ -12,7 +12,8 @@
                     </li>
                 {% endfor %}
             </ul>
-            <a href="#">Browse Donations</a>
+            <a href="{% url 'dashboard' %}">Browse Donations</a>
+            <a href="{% url 'payment' %}">Continue to Payment</a>
         </section>
     </main>
 {% endblock %}

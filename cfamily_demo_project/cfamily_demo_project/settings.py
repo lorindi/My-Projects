@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'payments',
     'events',
     'campaigns',
+    'benefactors',
 ]
 
 MIDDLEWARE = [

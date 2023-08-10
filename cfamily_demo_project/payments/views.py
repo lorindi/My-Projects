@@ -1,6 +1,5 @@
-from django.shortcuts import render
-from django.views import View
 from django.shortcuts import render, redirect
+from django.views import View
 from payments.models import Payment
 from cart.models import CartItem
 
@@ -20,11 +19,13 @@ class PaymentView(View):
         cart_items = CartItem.objects.filter(user=user)
         total_amount = sum(item.donation.donation_price * item.quantity for item in cart_items)
         payment = Payment.objects.create(user=user, total_amount=total_amount)
-        payment.cart_items.set(cart_items)
-        # Тук трябва да добавите логика за интеграция с платежен шлюз
-        # След успешно обработено плащане, може да изтриете артикулите от количката
+
+        for cart_item in cart_items:
+            payment.cart_items.add(cart_item)
+
+
         cart_items.delete()
-        return redirect('payment_success')  # Редирект към страница за успешно плащане
+        return redirect('payment_success')
 
 
 class PaymentSuccessView(View):
@@ -32,3 +33,4 @@ class PaymentSuccessView(View):
 
     def get(self, request):
         return render(request, self.template_name)
+

@@ -1,0 +1,14 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main>
+        <section>
+            <h1>Benefactors List</h1>
+            <ul>
+                {% for benefactor in benefactors %}
+                    <li><a href="{% url 'benefactor_detail' benefactor.pk %}">{{ benefactor.name_benefactor }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+{% endblock %}
