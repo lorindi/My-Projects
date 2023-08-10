@@ -1,13 +1,13 @@
 {% extends 'base/index.html' %}
 
 {% block content %}
-    <main>
-        <section>
-            <h1>Create Campaign</h1>
-            <form method="post" enctype="multipart/form-data">
+    <main class="main-campaign-content">
+        <section class="container-campaign-create-form">
+            <h1 class="campaign-create-form-title" >Create Campaign</h1>
+            <form method="post" enctype="multipart/form-data" class="campaign-create-form">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Create Campaign</button>
+                {{ form.as_div }}
+                <button type="submit" class="campaign-create-form-button btn btn-primary">Create Campaign</button>
             </form>
         </section>
     </main>

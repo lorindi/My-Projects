@@ -2,12 +2,12 @@
 
 {% block content %}
     <main>
-        <section>
-            <h1>Create Event</h1>
-            <form method="post" enctype="multipart/form-data">
+        <section class="container-event-create-form">
+            <h1 class="event-create-form-title">Create Event</h1>
+            <form class="event-create-form" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_div }}
-                <button type="submit">Create</button>
+                <button class="event-create-form-button" type="submit">Create</button>
             </form>
         </section>
     </main>

@@ -1,14 +1,14 @@
 {% extends 'base/index.html' %}
 
 {% block content %}
-    <main>
-        <section class="container">
-            <h1>Create New Initiative</h1>
-            <form method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Create Initiative</button>
-            </form>
-        </section>
-    </main>
+<main class="main-initiative-content">
+    <section class="container-initiative-create-form">
+        <h1 class="initiative-create-form-title">Create New Initiative</h1>
+        <form class="initiative-create-form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_div }}
+            <button class="initiative-create-form-button" type="submit">Create Initiative</button>
+        </form>
+    </section>
+</main>
 {% endblock %}

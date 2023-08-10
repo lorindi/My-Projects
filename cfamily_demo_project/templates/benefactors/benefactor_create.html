@@ -2,12 +2,12 @@
 
 {% block content %}
     <main>
-        <section>
-            <h1>Create New Benefactor</h1>
-            <form method="post" enctype="multipart/form-data">
+        <section class="container-benefactor-create-form" >
+            <h1 class="benefactor-create-form-title" >Create New benefactor</h1>
+            <form class="benefactor-create-form"  method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Create Benefactor</button>
+                {{ form.as_div }}
+                <button class="benefactor-create-form-button"  type="submit">Create Benefactor</button>
             </form>
         </section>
     </main>

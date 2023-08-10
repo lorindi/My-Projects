@@ -100,6 +100,7 @@ font-family: 'Wix Madefor Display', sans-serif; */
     padding-left: 100px;
     padding-right: 250px;
     background: linear-gradient(to right,  #3a6e5ded, #517F57);
+    flex-wrap: wrap;
 
 }
 

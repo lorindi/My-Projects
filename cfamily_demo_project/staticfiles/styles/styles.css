@@ -14,11 +14,16 @@
 @import "password-reset-confirm.css";
 
 
-
-
 @import "donation-dashboard-lists-page.css";
 @import "donation-create-page.css";
 @import "donation-delete-page.css";
 @import "donation-edit-page.css";
 @import "donation-details-page.css";
+
+@import "campaign-create.css";
+@import "initiative_create.css";
+@import "event-create.css";
+@import "charitable-trek-create.css";
+@import "benefactor-create.css";
+@import "";
 
