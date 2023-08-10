@@ -1,0 +1,15 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main>
+        <section>
+            <h2>Create Charitable Trek</h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Create</button>
+            </form>
+            <a href="{% url 'charitable_trek_list' %}">Back to List</a>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main>
+        <section><h1>Initiatives</h1>
+            <ul>
+                {% for initiative in initiatives %}
+                    <li><a href="{% url 'initiative_detail' initiative.pk %}">{{ initiative.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+{% endblock %}

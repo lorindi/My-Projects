@@ -1,0 +1,14 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main>
+        <section><h1>Delete Initiative</h1>
+            <p>Are you sure you want to delete the initiative "{{ initiative.title }}"?</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit">Delete</button>
+                <a href="{% url 'initiative_detail' initiative.pk %}">Cancel</a>
+            </form>
+        </section>
+    </main>
+{% endblock %}

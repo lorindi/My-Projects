@@ -1,0 +1,13 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main>
+        <section><h2>Charitable Treks</h2>
+            <ul>
+                {% for trek in treks %}
+                    <li><a href="{% url 'charitable_trek_detail' trek.pk %}">{{ trek.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+{% endblock %}

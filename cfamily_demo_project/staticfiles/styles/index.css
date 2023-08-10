@@ -40,8 +40,8 @@ font-family: 'Wix Madefor Display', sans-serif; */
     justify-content: space-between;
     font-family: 'Poiret One', cursive;
     align-items: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 12px;
+    padding-top: 12px;
     padding-left: 100px;
     padding-right: 100px;
 
@@ -49,7 +49,7 @@ font-family: 'Wix Madefor Display', sans-serif; */
 
 .logo-link {
     color: #0D3E3E;
-    font-size: 35px;
+    font-size: 40px;
     text-shadow: 1px 1px 2px aliceblue;
     font-weight: 700;
 }
@@ -95,7 +95,7 @@ font-family: 'Wix Madefor Display', sans-serif; */
     display: flex;
     width: 100%;
     background-color: #f8f7ee3b;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding-left: 100px;
     padding-right: 250px;

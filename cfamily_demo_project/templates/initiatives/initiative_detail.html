@@ -1,0 +1,16 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main>
+        <section>
+            <h1>{{ initiative.title }}</h1>
+            <p>{{ initiative.description }}</p>
+            <p>Start Date: {{ initiative.start_date }}</p>
+            <p>Target Amount: {{ initiative.target_amount }}</p>
+            {% if initiative.youtube_link %}
+                <iframe width="560" height="315" src="{{ initiative.youtube_link }}" frameborder="0"
+                        allowfullscreen></iframe>
+            {% endif %}
+        </section>
+    </main>
+{% endblock %}

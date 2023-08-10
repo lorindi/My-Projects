@@ -68,10 +68,9 @@
         <nav class="user-nav-links">
             <div class="main-links">
                 <a class="projects-link" href="{% url 'campaign_list' %}">Campaigns</a>
-                <a class="initiatives-link" href="#">Initiatives</a>
+                <a class="initiatives-link" href="{% url 'initiative_list' %}">Initiatives</a>
                 <a class="events-link" href="{% url 'event_list' %}">Events</a>
-                <a class="charitable-treks-link" href="#">Charitable treks</a>
-                <a class="charity-races-link" href="#">Charity races</a>
+                <a class="charitable-treks-link" href="{% url 'charitable_trek_list' %}">Charitable treks</a>
                 <a class="benefactors-link" href="{% url 'benefactor_list' %}">Our benefactors</a>
             </div>
             <div class="help-dropdown dropdown">
@@ -90,10 +89,9 @@
         <nav class="admin-nav">
             <a class="create-donation-link" href="{% url 'donation create' %}">New donation</a>
             <a class="create-projects-link" href="{% url 'campaign_create' %}">New campaign</a>
-            <a class="create-initiatives-link" href="#">New initiatives</a>
+            <a class="create-initiatives-link" href="{% url 'initiative_create' %}">New initiatives</a>
             <a class="create-events-link" href="{% url 'event_create' %}">New event</a>
-            <a class="create-charitable-treks-link" href="#">New charitable treks</a>
-            <a class="create-charity-races-link" href="#">New charity races</a>
+            <a class="create-charitable-treks-link" href="{% url 'charitable_trek_create' %}">New charitable treks</a>
             <a class="create-benefactors-link" href="{% url 'benefactor_create' %}">New our benefactors</a>
 
 

@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'events',
     'campaigns',
     'benefactors',
+    'initiatives',
+    'charitable_treks',
 ]
 
 MIDDLEWARE = [

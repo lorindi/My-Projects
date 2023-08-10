@@ -1,0 +1,15 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main>
+        <section>
+            <h2>{{ trek.title }}</h2>
+            <p>{{ trek.description }}</p>
+            <p>Start Date: {{ trek.start_date }}</p>
+            <p>End Date: {{ trek.end_date }}</p>
+            <p>Location: {{ trek.location }}</p>
+            <a href="{% url 'charitable_trek_update' trek.pk %}">Edit</a>
+            <a href="{% url 'charitable_trek_delete' trek.pk %}">Delete</a>
+        </section>
+    </main>
+{% endblock %}
