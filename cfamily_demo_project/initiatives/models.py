@@ -10,6 +10,7 @@ class Initiative(models.Model):
         blank=False)
     purpose= models.TextField(null=True,
         blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='initiative_covers/')
     target_amount = models.DecimalField(max_digits=10, decimal_places=2)
     start_date = models.DateField()

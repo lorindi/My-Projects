@@ -1,15 +1,30 @@
 {% extends 'base/index.html' %}
 
 {% block content %}
-    <main>
-        <section>
+<main class="main-details-content">
+    <section class="container-details">
+        <div>
+            <p>{{ trek.participants }}</p>
+        </div>
+        <div>
             <h2>{{ trek.title }}</h2>
             <p>{{ trek.description }}</p>
+            <img src="{{ trek.cover_image.url }}" alt="{{ trek.title }}">
+            <p>{{ trek.description }}</p>
+            <p>{{ trek.target_amount}}</p>
+
+        </div>
+        
+        <div>
             <p>Start Date: {{ trek.start_date }}</p>
             <p>End Date: {{ trek.end_date }}</p>
             <p>Location: {{ trek.location }}</p>
-            <a href="{% url 'charitable_trek_update' trek.pk %}">Edit</a>
-            <a href="{% url 'charitable_trek_delete' trek.pk %}">Delete</a>
-        </section>
-    </main>
+        </div>
+        {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
+        <a href="{% url 'charitable_trek_update' trek.pk %}">Edit</a>
+        <a href="{% url 'charitable_trek_delete' trek.pk %}">Delete</a>
+        {% endif %}
+
+    </section>
+</main>
 {% endblock %}

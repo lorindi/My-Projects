@@ -1,8 +1,8 @@
 {% extends 'base/index.html' %}
 
 {% block content %}
-    <main>
-        <section>
+    <main class="main-details-content">
+        <section class="container-details">
             <h1>{{ benefactor.name_benefactor }}</h1>
             <p>{{ benefactor.description }}</p>
             <p>Contact Email: {{ benefactor.contact_email }}</p>
@@ -13,8 +13,8 @@
                 <p>No image available</p>
             {% endif %}
             {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
-                <a href="{% url 'benefactor_update' benefactor.pk %}">Campaign edit</a>
-                <a href="{% url 'benefactor_delete' benefactor.pk %}">Campaign delete</a>
+                <a href="{% url 'benefactor_update' benefactor.pk %}">Edit</a>
+                <a href="{% url 'benefactor_delete' benefactor.pk %}">Delete</a>
             {% endif %}
         </section>
     </main>
