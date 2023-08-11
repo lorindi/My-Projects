@@ -61,6 +61,9 @@ textarea,
 select {
   font: inherit;
 }
+ul {
+  padding-left: 0px;
+}
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {

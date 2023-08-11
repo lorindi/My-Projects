@@ -1,16 +1,19 @@
 {% extends 'base/index.html' %}
 
 {% block content %}
-    <main class="main-campaign-content">
-        <section>
-            <h1>Campaign List</h1>
-            <ul>
-                {% for campaign in campaigns %}
-                    <li>
-                        <a href="{% url 'campaign_detail' campaign.pk %}">{{ campaign.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </section>
-    </main>
+<main class="main-cards-content">
+    <section class="container-cards">
+
+        <ul class="cards-lists" role="list">
+            {% for campaign in campaigns %}
+            <li class="card-list-element">
+                <img class="card-list-element-img" src="{{ campaign.image.url }}" alt="{{ campaign.title }}">
+                <h1 class="card-list-element-title">{{ campaign.title }}</h1>
+
+                <a href="{% url 'campaign_detail' campaign.pk %}">SEE MORE</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</main>
 {% endblock %}

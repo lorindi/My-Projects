@@ -1,13 +1,17 @@
 {% extends 'base/index.html' %}
 
 {% block content %}
-    <main>
-        <section><h1>Initiatives</h1>
-            <ul>
-                {% for initiative in initiatives %}
-                    <li><a href="{% url 'initiative_detail' initiative.pk %}">{{ initiative.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </section>
-    </main>
+<main class="main-cards-content">
+    <section class="container-cards">
+        <ul class="cards-lists" role="list">
+            {% for initiative in initiatives %}
+            <li class="card-list-element">
+                <img class="card-list-element-img" src="{{ initiative.image.url }}" alt="{{ initiative.title }}">
+                <h1 class="card-list-element-title">{{ initiative.title }}</h1>
+                <a href="{% url 'initiative_detail' initiative.pk %}">SEE MORE</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</main>
 {% endblock %}

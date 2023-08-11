@@ -3,15 +3,29 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import CreateView, DetailView, ListView, DeleteView, UpdateView
+from mixins.mixins import GroupRequiredMixin
+from django.core.paginator import Paginator
+from django.shortcuts import render
+from django.views.generic import ListView
 from .models import Campaign
-from mixins.mixins import GroupRequiredMixin  # Импортирайте GroupRequiredMixin от вашия mixins.py
-
 
 class CampaignListView(ListView):
     model = Campaign
     template_name = 'campaigns/campaign_list.html'
     context_object_name = 'campaigns'
+    paginate_by = 3
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.order_by('-start_date')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        paginator = Paginator(context['campaigns'], self.paginate_by)
+        page_number = self.request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        context['page_obj'] = page_obj
+        return context
 
 class CampaignDetailView(LoginRequiredMixin, DetailView):
     model = Campaign

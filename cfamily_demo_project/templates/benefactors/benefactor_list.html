@@ -1,12 +1,16 @@
 {% extends 'base/index.html' %}
 
 {% block content %}
-    <main>
-        <section>
-            <h1>Benefactors List</h1>
-            <ul>
+    <main class="main-cards-content">
+        <section class="container-cards">
+         
+            <ul class="cards-lists" role="list">
                 {% for benefactor in benefactors %}
-                    <li><a href="{% url 'benefactor_detail' benefactor.pk %}">{{ benefactor.name_benefactor }}</a></li>
+                    <li class="card-list-element">
+                        <img class="card-list-element-img" src="{{ benefactor.benefactor_image.url }}" alt="{{ benefactor.name_benefactor }}">
+                        <h1 class="card-list-element-title">{{ benefactor.name_benefactor }}</h1>
+                        <a href="{% url 'benefactor_detail' benefactor.pk %}">SEE MORE</a>
+                    </li>
                 {% endfor %}
             </ul>
         </section>

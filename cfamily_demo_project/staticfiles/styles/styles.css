@@ -25,5 +25,6 @@
 @import "event-create.css";
 @import "charitable-trek-create.css";
 @import "benefactor-create.css";
-@import "";
+
+@import "styles-of-all-lists.css";
 

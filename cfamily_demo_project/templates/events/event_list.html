@@ -1,12 +1,15 @@
 {% extends 'base/index.html' %}
 {% block content %}
 
-    <main>
-        <section>
-            <h1>Event List</h1>
-            <ul>
+    <main class="main-cards-content">
+        <section class="container-cards">
+            <ul class="cards-lists" role="list">
                 {% for event in events %}
-                    <li><a href="{% url 'event_detail' event.pk %}">{{ event.title }}</a></li>
+                    <li class="card-list-element">
+                        <img class="card-list-element-img" src="{{ event.cover_image.url }}" alt="{{ event.title }}">
+                        <h1 class="card-list-element-title">{{ event.title }}</h1>
+                        <a href="{% url 'event_detail' event.pk %}">SEE MORE</a>
+                    </li>
                 {% endfor %}
             </ul>
         </section>
