@@ -15,6 +15,9 @@ font-family: 'Wix Madefor Display', sans-serif; */
 .container-cards {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+        align-items: center;
 }
 .cards-lists {
     display: flex;
@@ -29,14 +32,14 @@ font-family: 'Wix Madefor Display', sans-serif; */
     
 }
 .card-list-element{
-    width: 320px;
+    width: 270px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
     overflow: hidden;
-    height: 500px;
+    height: 450px;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffffa1;
@@ -53,12 +56,12 @@ font-family: 'Wix Madefor Display', sans-serif; */
     padding: 5px 10px;
     font-weight: bolder;
     margin-bottom: 10px;
-    width: 300px;
+    width: 260px;
     align-items: center;
     justify-content: center;
 }
 .card-list-element-img{
-    width: 320px;
+    width: 270px;
     overflow: hidden;
   
     
@@ -68,7 +71,7 @@ font-family: 'Wix Madefor Display', sans-serif; */
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
-    width: 300px;
+    width: 250px;
     padding-bottom: 20px;
     letter-spacing: 1px;
 }

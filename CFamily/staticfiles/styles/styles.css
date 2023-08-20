@@ -1,0 +1,38 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import "index.css";
+
+
+@import "donations-medications-list.css";
+
+@import "user-login-register-page.css";
+@import "user-details-page.css";
+@import "user-edit-page.css";
+
+@import "password-reset.css";
+@import "password-reset-done.css";
+@import "password-reset-confirm.css";
+
+
+@import "donation-dashboard-lists-page.css";
+@import "donation-create-page.css";
+@import "donation-delete-page.css";
+@import "donation-edit-page.css";
+@import "donation-details-page.css";
+
+@import "campaign-create.css";
+@import "initiative_create.css";
+@import "event-create.css";
+@import "charitable-trek-create.css";
+@import "benefactor-create.css";
+
+@import "styles-of-all-lists.css";
+@import "details-page-styles.css";
+@import "styles-of-all-donations-lists.css";
+@import "";
+@import "";
+@import "";
+
+

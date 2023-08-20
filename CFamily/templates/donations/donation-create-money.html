@@ -1,0 +1,13 @@
+{% extends 'base/index.html' %}
+{% block content %}
+    <main>
+        <section>
+            <h1>Create Monetary Donation</h1>
+            <form method="post" action="{% url 'donation_money_create' %}">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <button type="submit">Create Donation</button>
+            </form>
+        </section>
+    </main>
+{% endblock %}

@@ -9,23 +9,23 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from .models import Campaign
 
+
 class CampaignListView(ListView):
     model = Campaign
     template_name = 'campaigns/campaign_list.html'
     context_object_name = 'campaigns'
-    paginate_by = 3
+    paginate_by = 2
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset.order_by('-start_date')
+        return queryset.order_by('-created_at')
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        paginator = Paginator(context['campaigns'], self.paginate_by)
-        page_number = self.request.GET.get('page')
-        page_obj = paginator.get_page(page_number)
-        context['page_obj'] = page_obj
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['search'] = self.request.GET.get('search', '')
+        # context['categories'] = Category.objects.all()
         return context
+
 
 class CampaignDetailView(LoginRequiredMixin, DetailView):
     model = Campaign
@@ -73,9 +73,3 @@ class CampaignSupportView(LoginRequiredMixin, View):
         # логика за обработка на подкрепа за кампанията
         # запис в базата данни за подкрепата
         return redirect('campaign_success', pk=campaign.pk)
-
-
-
-
-
-

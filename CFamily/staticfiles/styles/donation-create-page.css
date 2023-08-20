@@ -1,0 +1,94 @@
+.section-create-donaton {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #0D3E3E; */
+    backdrop-filter: blur(10px);
+    text-shadow: 1px 1px 2px #0D3E3E;
+    background-color: #0d3e3e50;
+    box-shadow: 1px 1px 5px 1px #F8F7EE;
+    color: aliceblue;
+    width: 450px;
+    height: 580px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    font-family: 'Wix Madefor Display', sans-serif;
+
+}
+
+.section-create-donaton-title {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+    font-family: 'Poiret One', cursive;
+}
+
+.section-create-donaton-form {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+}
+
+.section-create-donaton-form div {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+
+}
+
+.section-create-donaton-form div label {
+    margin-bottom: 3px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 100;
+
+
+}
+
+
+
+#id_name,
+#id_image,
+#id_type,
+#id_description,
+#id_donation_price,
+#id_purpose,
+#id_topics,
+#id_contact_information, 
+#id_start_hour,
+#id_end_hour,
+#id_organizers, 
+#id_location, 
+#id_name_benefactor, 
+#id_contact_email, 
+#id_contact_phone {
+    background-color: #0d3e3e50;
+    border-radius: 5px;
+    padding: 3px 5px;
+    letter-spacing: 1.5px;
+    width: 280px;
+    font-size: 16px;
+    color: white;
+    font-style: italic;
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+#id_description, #id_purpose, #id_topics, #id_contact_information {
+    height: 35px;
+}
+
+.section-create-donaton-button {
+    width: 280px;
+    background-color: #ffffff7d;
+    border-radius: 10px;
+    color: #0D3E3E;
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 5px;
+    font-weight: 100;
+    margin-top: 10px;
+}

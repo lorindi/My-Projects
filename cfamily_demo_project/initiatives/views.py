@@ -7,6 +7,15 @@ class InitiativeListView(ListView):
     model = Initiative
     template_name = 'initiatives/initiative_list.html'
     context_object_name = 'initiatives'
+    paginate_by = 1
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.order_by('-created_at')
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['search'] = self.request.GET.get('search', '')
+        # context['categories'] = Category.objects.all()
+        return context
 
 class InitiativeDetailView(DetailView):
     model = Initiative

@@ -20,7 +20,7 @@
 
                     </div>
 
-                    
+
                     <div class="dashboard-medications-links">
                         <form method="post" action="{% url 'add_to_cart' medication.pk %}">
                             {% csrf_token %}
@@ -28,15 +28,16 @@
                             <button type="submit">Add to Cart</button>
                         </form>
                         {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
-                        {# <a href="{% url 'donation create' %}">Create</a>#}
-                        <a class="dashboard-medications-details-link"
-                           href="{% url 'donation details' medication.pk %}">Details</a>
-                        <a class="dashboard-medications-edit-link"
-                           href="{% url 'donation edit' medication.pk %}">Edit</a>
-                        <a class="dashboard-medications-delete-link" href="{% url 'donation delete' medication.pk %}">Delete</a>
+                            {# <a href="{% url 'donation create' %}">Create</a>#}
+                            <a class="dashboard-medications-details-link"
+                               href="{% url 'donation details' medication.pk %}">Details</a>
+                            <a class="dashboard-medications-edit-link"
+                               href="{% url 'donation edit' medication.pk %}">Edit</a>
+                            <a class="dashboard-medications-delete-link"
+                               href="{% url 'donation delete' medication.pk %}">Delete</a>
                         {% endif %}
                     </div>
-                    
+
                 </div>
             {% empty %}
                 <div class="dashboard-empty">
@@ -83,7 +84,7 @@
                         <p class="dashboard-medical-equipment-creator">{{ equipment.creator }}</p>
                         <p class="dashboard-medical-equipment-donation-price">{{ equipment.donation_price }}</p>
                     </div>
-                    
+
                     <div class="dashboard-medical-equipment-links">
                         <form method="post" action="{% url 'add_to_cart' equipment.pk %}">
                             {% csrf_token %}
@@ -91,16 +92,16 @@
                             <button type="submit">Add to Cart</button>
                         </form>
                         {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
-                        {# <a href="{% url 'donation create' %}">Create</a>#}
-                        <a class="dashboard-medical-equipment-details-link"
-                           href="{% url 'donation details' equipment.date.pk %}">Details</a>
-                        <a class="dashboard-medical-equipment-edit-link"
-                           href="{% url 'donation edit' equipment.date.pk %}">Edit</a>
-                        <a class="dashboard-medical-equipment-delete-link"
-                           href="{% url 'donation delete' equipment.date.pk %}">Delete</a>
+                            {# <a href="{% url 'donation create' %}">Create</a>#}
+                            <a class="dashboard-medical-equipment-details-link"
+                               href="{% url 'donation details' equipment.pk %}">Details</a>
+                            <a class="dashboard-medical-equipment-edit-link"
+                               href="{% url 'donation edit' equipment.pk %}">Edit</a>
+                            <a class="dashboard-medical-equipment-delete-link"
+                               href="{% url 'donation delete' equipment.pk %}">Delete</a>
                         {% endif %}
                     </div>
-                    
+
 
                 </div>
             {% empty %}

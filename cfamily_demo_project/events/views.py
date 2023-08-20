@@ -14,6 +14,12 @@ class EventListView(ListView):
     model = Event
     template_name = 'events/event_list.html'
     context_object_name = 'events'
+    paginate_by = 5
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['search'] = self.request.GET.get('search', '')
+        # context['categories'] = Category.objects.all()
+        return context
 
 
 class EventDetailView(LoginRequiredMixin, DetailView):

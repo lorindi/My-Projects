@@ -12,7 +12,7 @@
                 <img src="{{ initiative.image.url }}" alt="{{ initiative.title }}">
                 <p>{{ initiative.description }}</p>
             </div>
-           
+
 
             {% if initiative.youtube_link %}
                 <iframe width="560" height="315" src="{{ initiative.youtube_link }}" frameborder="0"
@@ -20,8 +20,10 @@
             {% endif %}
             <div>
                 {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
-                <a href="{% url 'event_update' initiative.pk %}">Edit</a>
-                <a href="{% url 'event_delete' initiative.pk %}">Delete</a>
+                    <a href="{% url 'initiative_update' initiative.pk %}">Edit</a>
+                    <a href="{% url 'initiative_delete' initiative.pk %}">Delete</a>
+                    {#                    <a href="{% url 'event_update' initiative.pk %}">Edit</a>#}
+                    {#                    <a href="{% url 'event_delete' initiative.pk %}">Delete</a>#}
                 {% endif %}
             </div>
         </section>

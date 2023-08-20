@@ -4,7 +4,7 @@
     <main>
         <section class="container-benefactor-create-form" >
             <h1 class="benefactor-create-form-title" >Create New benefactor</h1>
-            <form class="benefactor-create-form"  method="post" enctype="multipart/form-data">
+            <form class="benefactor-create-form"  method="post">
                 {% csrf_token %}
                 {{ form.as_div }}
                 <button class="benefactor-create-form-button"  type="submit">Create Benefactor</button>

@@ -10,6 +10,12 @@ class CharitableTrekListView(ListView):
     model = CharitableTrek
     template_name = 'charitable_treks/charitable_trek_list.html'
     context_object_name = 'treks'
+    paginate_by = 5
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['search'] = self.request.GET.get('search', '')
+        # context['categories'] = Category.objects.all()
+        return context
 
 class CharitableTrekDetailView(LoginRequiredMixin, DetailView):
     model = CharitableTrek

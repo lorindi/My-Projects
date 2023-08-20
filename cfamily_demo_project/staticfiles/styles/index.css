@@ -24,6 +24,7 @@ font-family: 'Wix Madefor Display', sans-serif; */
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
+    
 }
 
 .header {
@@ -189,7 +190,9 @@ font-family: 'Wix Madefor Display', sans-serif; */
 .fa-heart:hover,
 .fa-cart-shopping:hover,
 .fa-user:hover,
-.fa-arrow-right-from-bracket:hover{
+.fa-arrow-right-from-bracket:hover,
+.fa-caret-left:hover,
+.fa-caret-right:hover{
 
     color: rgb(148, 255, 121);
     

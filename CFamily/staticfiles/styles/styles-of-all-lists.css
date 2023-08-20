@@ -1,0 +1,77 @@
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Tenor Sans', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif; */
+.main-cards-content {
+    /* background-color: #CED9CE; */
+    backdrop-filter: blur(100px); 
+    background-color: rgba(255, 255, 255, 0.288);
+    height: 100%;
+    min-height: 825px;
+    width: 100%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.253);
+    border-top: 2px solid rgba(255, 255, 255, 0.253);
+}
+.container-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards-lists {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    
+    
+}
+.card-list-element{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    overflow: hidden;
+    height: 450px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffffa1;
+    
+   
+}
+.card-list-element a {
+    display: flex;
+    border: 1px solid #0D3E3E;
+    border-radius: 7px;
+    color: #0D3E3E;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    width: 260px;
+    align-items: center;
+    justify-content: center;
+}
+.card-list-element-img{
+    width: 270px;
+    overflow: hidden;
+  
+    
+}
+.card-list-element-title {
+    color: #0D3E3E;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    width: 250px;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}

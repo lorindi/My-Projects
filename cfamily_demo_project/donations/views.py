@@ -70,13 +70,14 @@ class DonationEditView(GroupRequiredMixin, UpdateView):
     template_name = 'donations/donation-edit-page.html'
     fields = ['name', 'image', 'type', 'description', 'donation_price']
     allowed_groups = ['Admins']
-    success_url = 'dashboard'
+    success_url = reverse_lazy('dashboard')
 
 
 class DonationDeleteView(GroupRequiredMixin, DeleteView):
     model = MedicationAndMedicalEquipment
     template_name = 'donations/donation-delete-page.html'
-    success_url = reverse_lazy('donation_list')
+    # success_url = reverse_lazy('donation_list')
+    success_url = reverse_lazy('dashboard')
     allowed_groups = ['Admins']
 
 

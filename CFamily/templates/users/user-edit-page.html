@@ -1,0 +1,19 @@
+{% extends 'base/index.html' %}
+{% block content %}
+{% load static %}
+
+<main class="main-users-content">
+    <section class="container-user-edit-form">
+        <h1>Edit profile</h1>
+   
+        
+            <form method="post" action="{% url 'user_edit' pk=object.pk %}" enctype="multipart/form-data" class="user-edit-form">
+                {% csrf_token %}
+                {{ form.as_div }}
+
+                <button type="submit" class="edit-button">Edit</button>
+            </form>
+    </section>
+</main>
+
+{% endblock %}

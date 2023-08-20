@@ -1,0 +1,14 @@
+{% extends 'base/index.html' %}
+{% block content %}
+    <main class="main-donations-cards-content">
+        <section class="container-donations-cards">
+            <h2>Edit Donation</h2>
+            <form method="post" action="{% url 'donation_edit' object.pk %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+    </main>
+
+{% endblock %}
