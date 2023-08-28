@@ -21,9 +21,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'CFamily.users',
-    'CFamily.common',
-    'CFamily.donations',
+    'users',
+    'common',
+    'donations',
 
 ]
 

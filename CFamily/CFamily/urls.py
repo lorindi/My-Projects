@@ -5,9 +5,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('CFamily.common.urls')),
-    path('user/', include('CFamily.users.urls')),
-    path('donation/', include('CFamily.donations.urls')),
+    path('', include('common.urls')),
+    path('user/', include('users.urls')),
+    path('donation/', include('donations.urls')),
     # path('cart/', include('CFamily.cart.urls')),
     # path('payment/', include('CFamily.payments.urls')),
     # path('event/', include('CFamily.events.urls')),

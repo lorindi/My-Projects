@@ -1,13 +1,13 @@
 {% extends 'base/index.html' %}
 {% block content %}
-    <main class="">
-        <section class="">
+    <main class="main-donations-create-edit-card">
+        <section class="container-donation-create-edit-card">
 
-            <h2 class="section-create-donaton-title">Create Donation</h2>
-            <form method="post" action="{% url 'donation_create' %}" enctype="multipart/form-data" class="section-create-donaton-form">
+            <h2 class="donation-create-edit-card-title">Create Donation</h2>
+            <form class="donation-create-edit-card-form" method="post" action="{% url 'donation_create' %}" enctype="multipart/form-data" >
                 {% csrf_token %}
                 {{ form.as_div }}
-                <button class="section-create-donaton-button" type="submit">CREATE</button>
+                <button class="donation-create-edit-card-button" type="submit">CREATE</button>
             </form>
 
 

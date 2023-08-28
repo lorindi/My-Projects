@@ -39,7 +39,7 @@
     font-size: 25px;
     font-family: 'Poiret One', cursive;
 }
-#id_title, #id_youtube_link, #id_target_amount, #id_start_date, #id_end_date {
+#id_youtube_link, #id_target_amount, #id_start_date, #id_end_date {
     background-color: #0d3e3e50;
     border-radius: 5px;
     padding: 3px 5px;

@@ -1,15 +1,28 @@
 {% extends 'base/index.html' %}
 {% block content %}
-    <main class="main-donations-content">
-        <section>
-            <h2>Donation Details</h2>
-            <p><strong>Name:</strong> {{ object.title }}</p>
-            <p><strong>Type:</strong> {{ object.type }}</p>
-            <p><strong>Description:</strong> {{ object.description }}</p>
-            <p><strong>Donation Price:</strong> {{ object.donation_price }}</p>
-            <p><strong>Creator:</strong> {{ object.creator }}</p>
-            <p><strong>Creation Time:</strong> {{ object.creation_time }}</p>
-            <p><strong>Date Modified:</strong> {{ object.date_modified }}</p>
-        </section>
-    </main>
+<main class="main-donations-content">
+    <section class="container-donation-details" >
+        <div class="content-first-donation-details">
+            <h1 class="donation-details-title">{{ object.title }}</h1>
+            <img class="donation-details-image" src="{{ object.image.url }}" alt="{{ object.title }}">
+
+            
+        </div>
+        <div class="content-second-donation-details">
+            <p class="donation-details-description"> {{ object.description }}</p>
+            <div class="second-donation-details">
+                
+                <input class="quantity-input" type="number" name="quantity" value="1" min="1">
+                <button class="add-to-cart-button" type="submit">Add to Cart</button>
+                {# <form method="post" action="{% url 'add_to_cart' donation.pk %}">#}
+                {# {% csrf_token %}#}
+                {# <input class="quantity-input" type="number" name="quantity" value="1" min="1">#}
+                {# <button class="add-to-cart-button" type="submit">Add to Cart</button>#}
+                {# </form>#}
+
+            </div>
+
+        </div>
+    </section>
+</main>
 {% endblock %}

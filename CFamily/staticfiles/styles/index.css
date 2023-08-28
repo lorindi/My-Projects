@@ -8,6 +8,8 @@ font-family: 'Roboto', sans-serif; */
     justify-content: space-between;
     height: 100%;
     /* background-image: linear-gradient(25deg, #517F57, #517F57, #517F57, #F8F7EE, #12523bd0, #0D3E3E, #0D3E3E); */
+    /* background-color: rgba(0, 0, 0, 0.486); */
+    
    
 
 }
@@ -16,22 +18,21 @@ font-family: 'Roboto', sans-serif; */
     content: "";
     display: block;
     position: fixed;
-    top: 50px;
-    left: -350px;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 100%;
-    background-image: url("../images/lungs1.png");
-    background-size: 700px 75%;
+    background-image: url("../images/pascal-meier-W8T90757rhM-unsplash.jpg");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-   
+    opacity: 1;
 }
 
 .header {
     display: flex;
     flex-direction: column;
-    /* text-shadow: 1px 1px 2px black; */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -51,10 +52,14 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .logo-link {
-    color: #0D3E3E;
+    color: #3B874D;
     font-size: 40px;
-    text-shadow: 1px 1px 2px aliceblue;
+    text-shadow: 2px 2px 1px white;
+    /* background-color: white; */
     font-weight: 400;
+    /* padding: 10px; */
+    /* border-radius: 50%; */
+    letter-spacing: 0;
 }
 
 .user-nav {
@@ -72,7 +77,7 @@ font-family: 'Roboto', sans-serif; */
 .shop-icon-link,
 .cart-icon-link,
 .username {
-
+    /* text-shadow: 1px 1px 1px white; */
     color: #53A35C;
     font-size: 20px;
     letter-spacing: 1.5px;
@@ -80,9 +85,10 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .signin-button {
-    color: aliceblue;
-    font-size: 22px;
+    color: #53A35C;
+    font-size: 30px;
     letter-spacing: 1.5px;
+    text-shadow: 1px 1px 1px white;
 }
 
 
@@ -102,8 +108,11 @@ font-family: 'Roboto', sans-serif; */
     align-items: center;
     padding-left: 100px;
     padding-right: 250px;
-    background-color: #4FA163;
-    /* background: linear-gradient(to right,  #3a6e5ded, #517F57); */
+    background-image: linear-gradient(180deg, #459459,#4A9C5F,#52A666, #57AB6C, #60A968);
+    /* background-image: linear-gradient(180deg, #4D9F93,#6DB9AC,#85C59B, #A5D1AE, #B7D2A9); */
+    /* background-image: linear-gradient(180deg, #347F79,#4EA195, #53A761,#82C49F,#99C800, #9DCD65, #B7D2A9); */
+    /* background-image: linear-gradient(180deg, #4C9193,#63AB6B,#99D066); */
+    /* background-color: #53A35C; */
     flex-wrap: wrap;
 
 }
@@ -112,8 +121,8 @@ font-family: 'Roboto', sans-serif; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
 
 
 }
@@ -125,25 +134,26 @@ font-family: 'Roboto', sans-serif; */
 .benefactors-link {
     display: flex;
     justify-content: center;
-    color: aliceblue;
-    border: 1px solid #f8f7eebf;
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 30px 20px 30px 20px;
-    font-size: 16.5px;
-    font-weight: 100;
-    letter-spacing: 2px;
-    width: 160px;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    margin-right: 15px;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    /* width: 190px; */
+    text-transform: uppercase;
+    /* border-left: 1px solid white;
+    border-right: 1px solid white; */
 }
 .help-dropdown {
     color: #0D3E3E;
 }
 .cfamily-help {
-    color: aliceblue;
-    font-size: 25px;
+    color: white;
+    font-size: 18px;
     letter-spacing: 2px;
+    padding: 10px 3px;
 }
 
 /* ---------------------------------nav-third----------------------------------- */
@@ -184,7 +194,6 @@ font-family: 'Roboto', sans-serif; */
 ------------------------------------hover-----------------------------------------
 
 .logo-link:hover,
-.cfamily-help:hover,
 .shop-icon-link:hover,
 .cart-icon-link:hover,
 .username:hover,
@@ -194,8 +203,9 @@ font-family: 'Roboto', sans-serif; */
 .fa-arrow-right-from-bracket:hover,
 .fa-caret-left:hover,
 .fa-caret-right:hover{
+    
+    color: #99D066;
 
-    color: #53A35C;
     
     
 }
@@ -206,8 +216,9 @@ font-family: 'Roboto', sans-serif; */
 .create-charitable-treks-link:hover,
 .create-charity-races-link:hover,
 .create-benefactors-link:hover {
-    border: 1px solid rgb(0, 131, 17);
-    color: rgb(0, 131, 17);
+
+    background-color: #3B874D;
+
     
     
 }
@@ -217,8 +228,11 @@ font-family: 'Roboto', sans-serif; */
 .charitable-treks-link:hover,
 .charity-races-link:hover,
 .benefactors-link:hover {
-    color: rgb(148, 255, 121);
-    border: 1px solid rgb(148, 255, 121);
+    /* background-image: linear-gradient(180deg, #60A968, #57AB6C, #52A666,#4A9C5F,#459459, #3B874D); */
+    background-color: #ffffff1a;
+    /* color: #3B874D; */
+    color: white;
+  
 
     
     
@@ -259,7 +273,7 @@ main {
     border: none;
     outline: none;
     background-color: inherit;
-    padding: 0px;
+    /* padding: 0px; */
     font-weight: 400;
 
 }
@@ -271,8 +285,8 @@ main {
     backdrop-filter: blur(10px);
     /* text-shadow: 1px 1px 2px #0D3E3E; */
     z-index: 1;
-    /* background-color: #0d3e3e7e; */
-    border-radius: 10px;
+    background-color: white;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -287,14 +301,25 @@ main {
     color: #53A35C;
     font-size: 20px;
     letter-spacing: 1.5px;
+    text-shadow: 0px 0px 1px white;
+
+
+
+}
+.dropdown-content a i{
+
+    text-shadow: 1px 1px 1px gray;
 
 
 
 }
 .dropdown-content a:hover {
-    color: rgb(148, 255, 121);
+    color: #99D066;
     border-radius: 10px;
     z-index: 1;
+}
+.dropdown-content a i:hover {
+    text-shadow: 0px 0px 1px gray;
 }
 
 .dropdown:hover .dropdown-content {
@@ -306,19 +331,15 @@ main {
     text-decoration: none;
     display: block;
     text-align: left;
-    color: aliceblue;
-    font-size: 20px;
+    color: #53A35C;
+    font-size: 16px;
     letter-spacing: 1.5px;
+    font-weight: 400;
 
 }
-.dropdown-content p {
-    color: aliceblue;
-    font-family: 'Poiret One', cursive;
-    font-size: 14.5px;
-    letter-spacing: 2px;
-}
+
 .dropdown-content p:hover {
-    color: rgb(148, 255, 121);
+    color: #99D066;
     border-radius: 10px;
     z-index: 1;
 }

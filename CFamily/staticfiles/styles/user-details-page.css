@@ -9,13 +9,13 @@ font-family: 'Roboto', sans-serif; */
     align-items: center;
     flex-wrap: wrap;
     align-content: center;
-    backdrop-filter: blur(100px);
-    background-color: rgba(255, 255, 255, 0.288);
+    /* backdrop-filter: blur(100px); */
+    /* background-color: rgba(255, 255, 255, 0.288); */
     height: 100%;
     min-height: 825px;
     width: 100%;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.253);
-    border-top: 2px solid rgba(255, 255, 255, 0.253);
+    /* border-bottom: 2px solid rgba(255, 255, 255, 0.253);
+    border-top: 2px solid rgba(255, 255, 255, 0.253); */
 
 }
 
@@ -23,7 +23,7 @@ font-family: 'Roboto', sans-serif; */
 .container-user-details-content {
     display: flex;
     flex-direction: row;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: white;
     border-radius: 25px;
     box-shadow: 0px 0px 10px 3px #0d3e3e42;
     font-family: 'Roboto', sans-serif;
@@ -49,6 +49,7 @@ font-family: 'Roboto', sans-serif; */
     object-fit: cover;
     background-size: contain;
     margin-top: 50px;
+    
 
 
 }
@@ -160,7 +161,7 @@ font-family: 'Roboto', sans-serif; */
 .user-details-content-cover:before {
     content: "";
     display: block;
-    position: fixed;
+    position: absolute;
     width: 450px;
     height: 700px;
     background-image: url("../images/rianne-zuur-PoxFTU7_QKo-unsplash.jpg");
@@ -173,7 +174,7 @@ font-family: 'Roboto', sans-serif; */
 
 .user-details-content-cover::after {
     content: "";
-    position: fixed;
+    position: absolute;
     backdrop-filter: blur(5px);
     width: 400px;
     height: 650px;

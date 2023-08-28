@@ -4,9 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "index.css";
 
-
-@import "donations-medications-list.css";
-
 @import "user-login-register-page.css";
 @import "user-details-page.css";
 @import "user-edit-page.css";
@@ -16,10 +13,8 @@
 @import "password-reset-confirm.css";
 
 
-@import "donation-dashboard-lists-page.css";
-@import "donation-create-page.css";
+@import "donation-create-edit-page.css";
 @import "donation-delete-page.css";
-@import "donation-edit-page.css";
 @import "donation-details-page.css";
 
 @import "campaign-create.css";
@@ -31,8 +26,8 @@
 @import "styles-of-all-lists.css";
 @import "details-page-styles.css";
 @import "styles-of-all-donations-lists.css";
-@import "";
-@import "";
+@import "change-password.css";
+@import "donation-create-money.css";
 @import "";
 
 
