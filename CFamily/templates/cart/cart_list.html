@@ -1,0 +1,21 @@
+{% extends 'base/index.html' %}
+{% block content %}
+    <main class="main-shopping-cart">
+        <section>
+            <h1>Your Cart</h1>
+            <ul>
+                {% for cart_item in cart_items %}
+                    <li>
+                        <img class="" src="{{ cart_item.donation.image.url }}" alt="{{ cart_item.donation.title }}">
+                        {{ cart_item.quantity }} x {{ cart_item.donation.title }}
+                        <a href="{% url 'cart_update' cart_item.pk %}">Edit</a>
+                        <a href="{% url 'cart_delete' cart_item.pk %}">Delete</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'donation_list' %}">Browse Donations</a>
+{#            <a href="{% url 'payment' %}">Continue to Payment</a>#}
+        </section>
+    </main>
+{% endblock %}
+

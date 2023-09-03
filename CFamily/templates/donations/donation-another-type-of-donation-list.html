@@ -30,13 +30,12 @@
 
 
                     <div class="donation-actions">
-                        <input class="quantity-input" type="number" name="quantity" value="1" min="1">
-                        <button class="add-to-cart-button" type="submit">Add to Cart</button>
-                        {# <form method="post" action="{% url 'add_to_cart' donation.pk %}">#}
-                        {# {% csrf_token %}#}
-                        {# <input class="quantity-input" type="number" name="quantity" value="1" min="1">#}
-                        {# <button class="add-to-cart-button" type="submit">Add to Cart</button>#}
-                        {# </form>#}
+
+                        <form method="post" action="{% url 'add_to_cart' donation.pk %}">
+                            {% csrf_token %}
+                            <input class="quantity-input" type="number" name="quantity" value="1" min="1">
+                            <button class="add-to-cart-button" type="submit">Add to Cart</button>
+                        </form>
 
                     </div>
                     {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}

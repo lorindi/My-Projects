@@ -7,7 +7,8 @@ from donations.views import DonationCreateView, DonationEditView, DonationDelete
 urlpatterns = [
     path('', DonationListView.as_view(), name='donation_list'),
     path('support_for_research/', DonationSupportForResearchListView.as_view(), name='donation_support_for_research'),
-    path('psychological_support/', DonationPsychologicalSupportListView.as_view(), name='donation_psychological_support'),
+    path('psychological_support/', DonationPsychologicalSupportListView.as_view(),
+         name='donation_psychological_support'),
     path('medications/', DonationMedicationsListView.as_view(), name='donation_medications'),
     path('medical-equipment/', DonationMedicalEquipmentListView.as_view(), name='donation_medical_equipment'),
     path('another_type/', DonationAnotherTypeListView.as_view(), name='donation_another_type'),

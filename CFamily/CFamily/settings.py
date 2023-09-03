@@ -1,14 +1,11 @@
-
 import os
 from pathlib import Path
 
 from django.urls import reverse_lazy
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-7kin)avha4w46!3dou2)0cfd$bx2d&jhsud9^o&(is9wsync4v'
-
 
 DEBUG = True
 
@@ -24,6 +21,10 @@ INSTALLED_APPS = [
     'users',
     'common',
     'donations',
+    'cart',
+    'app_react',
+    'rest_framework',
+    'corsheaders',
 
 ]
 
@@ -35,8 +36,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
 
+]
+REST_FRAMEWORK = {"DEFAULT_PERMISSION_CLASSES": [
+    "rest_framework.permissions.AllowAny"]}
+
+CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'CFamily.urls'
 
 TEMPLATES = [

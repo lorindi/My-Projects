@@ -1,0 +1,14 @@
+{% extends 'base/index.html' %}
+{% block content %}
+    <main class="main-shopping-cart">
+        <section>
+            <h1>Edit Cart Item</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Update</button>
+            </form>
+            <a href="{% url 'cart_list' %}">Back to Cart</a>
+        </section>
+    </main>
+{% endblock %}
