@@ -1,0 +1,321 @@
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Tenor Sans', sans-serif;
+font-family: 'Wix Madefor Display', sans-serif; */
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-image: linear-gradient(25deg, #517F57, #517F57, #517F57, #F8F7EE, #12523bd0, #0D3E3E, #0D3E3E);
+
+}
+
+.body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: -350px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/lungs1.png");
+    background-size: 700px 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* ----------------------------------nav-first------------------------------------ */
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Poiret One', cursive;
+    align-items: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
+.logo-link {
+    color: #0D3E3E;
+    font-size: 40px;
+    text-shadow: 1px 1px 2px aliceblue;
+    font-weight: 700;
+}
+
+.user-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.shop-link,
+.cart-link {
+    margin-right: 25px;
+}
+
+.shop-icon-link,
+.cart-icon-link,
+.username {
+
+    color: aliceblue;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+
+}
+
+.signin-button {
+    color: aliceblue;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+}
+
+
+.fa-heart,
+.fa-cart-shopping,
+.fa-user,
+.fa-arrow-right-from-bracket {
+    font-size: 20px;
+    margin-right: 5px;
+}
+/* ---------------------------------nav-second----------------------------------- */
+.user-nav-links{
+    display: flex;
+    width: 100%;
+    background-color: #f8f7ee3b;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 250px;
+    background: linear-gradient(to right,  #3a6e5ded, #517F57);
+    flex-wrap: wrap;
+
+}
+
+.main-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+
+}
+.projects-link,
+.initiatives-link,
+.events-link,
+.charitable-treks-link,
+.charity-races-link,
+.benefactors-link {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    border: 1px solid #f8f7eebf;
+    font-family: 'Poiret One', cursive;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 30px 20px 30px 20px;
+    font-size: 16.5px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    width: 160px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.help-dropdown {
+    color: #0D3E3E;
+}
+.cfamily-help {
+    color: aliceblue;
+    font-family: 'Poiret One', cursive;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+/* ---------------------------------nav-third----------------------------------- */
+.admin-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.create-donation-link,
+.create-projects-link,
+.create-initiatives-link,
+.create-events-link, 
+.create-charitable-treks-link,
+.create-charity-races-link,
+.create-benefactors-link {
+    display: flex;
+    justify-content: center;
+    color: #0D3E3E;
+    border: 1px solid #0D3E3E;
+    background-color: #f8f7eeaa;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 30px 20px 30px 20px;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    width: 180px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-style: italic;
+    text-shadow: none;
+
+
+}
+------------------------------------hover-----------------------------------------
+
+.logo-link:hover,
+.cfamily-help:hover,
+.shop-icon-link:hover,
+.cart-icon-link:hover,
+.username:hover,
+.fa-heart:hover,
+.fa-cart-shopping:hover,
+.fa-user:hover,
+.fa-arrow-right-from-bracket:hover,
+.fa-caret-left:hover,
+.fa-caret-right:hover{
+
+    color: rgb(148, 255, 121);
+    
+    
+}
+.create-donation-link:hover,
+.create-projects-link:hover,
+.create-initiatives-link:hover,
+.create-events-link:hover, 
+.create-charitable-treks-link:hover,
+.create-charity-races-link:hover,
+.create-benefactors-link:hover {
+    border: 1px solid rgb(0, 131, 17);
+    color: rgb(0, 131, 17);
+    
+    
+}
+.projects-link:hover,
+.initiatives-link:hover,
+.events-link:hover,
+.charitable-treks-link:hover,
+.charity-races-link:hover,
+.benefactors-link:hover {
+    color: rgb(148, 255, 121);
+    border: 1px solid rgb(148, 255, 121);
+
+    
+    
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.footer-text,
+.powered-by-text {
+    color: aliceblue;
+    font-size: 22px;
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 1px;
+}
+/* ------------------------------------------------------------------------- */
+.dropbtn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: 0px;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 0px;
+    backdrop-filter: blur(10px);
+    text-shadow: 1px 1px 2px #0D3E3E;
+    z-index: 1;
+    background-color: #0d3e3e7e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.dropdown-content a {
+    float: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: aliceblue;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+
+
+
+}
+.dropdown-content a:hover {
+    color: rgb(148, 255, 121);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content p {
+    float: none;
+    padding: 7px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: aliceblue;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+
+}
+.dropdown-content p {
+    color: aliceblue;
+    font-family: 'Poiret One', cursive;
+    font-size: 14.5px;
+    letter-spacing: 2px;
+}
+.dropdown-content p:hover {
+    color: rgb(148, 255, 121);
+    border-radius: 10px;
+    z-index: 1;
+}

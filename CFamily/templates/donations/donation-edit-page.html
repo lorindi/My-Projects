@@ -1,0 +1,14 @@
+{% extends 'base/index.html' %}
+{% block content %}
+    <main class="main-donations-create-edit-card">
+        <section class="container-donation-create-edit-card">
+            <h2 class="donation-create-edit-card-title">Edit Donation</h2>
+            <form class="donation-create-edit-card-form" method="post" action="{% url 'donation_edit' object.pk %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <button class="donation-create-edit-card-button" type="submit">Save Changes</button>
+            </form>
+        </section>
+    </main>
+
+{% endblock %}

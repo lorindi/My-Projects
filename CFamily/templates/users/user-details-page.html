@@ -1,0 +1,89 @@
+{% extends 'base/index.html' %}
+{% block content %}{% load static %}
+
+<main class="main-users-content">
+    <section class="container-user-details">
+
+
+
+        <div class="container-user-details-content">
+            <div class="user-details-content-img-and-links">
+                {% if not object.profile_picture %}
+                <img src="{% static 'images/user-profile-picture.png' %}" alt="{{ object.username }}">
+
+                {% else %}
+                <img src="{{ object.profile_picture.url }}" alt="{{ object.username }}">
+                {% endif %}
+                <div>
+                    <a class="user-edit" href="{% url 'user_edit' pk=object.pk %}">Edit Profile</a>
+
+                    <a class="user-change-password" href="{% url 'change_password' pk=object.pk %}">Change
+                        Password</a>
+                    <a class="user-delete" href="{% url 'user_delete' pk=object.pk %}">Delete Profile</a>
+                </div>
+            </div>
+
+
+            <div class="user-details-content-info user-details-content-cover">
+
+                <div class="current-details">
+                    <label>Username</label>
+
+                    <p class="information-user">{{ object.username|default:"Not specified" }}</p>
+                </div>
+                <div class="current-details">
+                    <label>Name</label>
+                    <p class="information-user">{{ object.get_name|default:"Not specified" }}</p>
+                </div>
+                <div class="current-details">
+                    <label>Email</label>
+                    <p class="information-user">{{ object.email|default:"Not specified" }}</p>
+                </div>
+                <div class="current-details">
+                    <label>Date of birth</label>
+                    <p class="information-user">{{ object.date_of_birth|default:"Not specified" }}</p>
+                </div>
+                <div class="current-details">
+                    <label>Gender</label>
+                    <p class="information-user">{{ object.gender|default:"Not specified" }}</p>
+                </div>
+                <div class="current-details">
+                    <label>Telephone</label>
+                    <p class="information-user">{{ object.telephone|default:"Not specified" }}</p>
+                </div>
+                <div class="current-details">
+                    <label>Side</label>
+                    <p class="information-user">{{ object.side|default:"Not specified" }}</p>
+                </div>
+                <div class="current-details">
+                    <label>City</label>
+                    <p class="information-user">{{ object.city|default:"Not specified" }}</p>
+                </div>
+                <div class="current-details">
+                    <label>Web sites</label>
+                    <p class="information-user">{{ object.link|default:"Not specified" }}</p>
+                </div>
+
+
+            </div>
+
+
+            <div class="user-details-content-events">
+                <h2>Registered Events</h2>
+                <ul>
+                    {% for registration in object.eventregistration_set.all %}
+                    <li>
+                        <p><strong>Event:</strong> {{ registration.event.title }}</p>
+                        <p><strong>Date:</strong> {{ registration.event.start_date }}</p>
+                        <p><strong>Time:</strong> {{ registration.event.start_hour }} - {{ registration.event.end_hour
+                            }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base/index.html' %}
+{% block content %}
+
+    <main>
+        <section class="medications-section">
+
+
+            {% for medication in medications %}
+                <div class="medications">
+                    <h1 class="medications-title">{{ medication.name }}</h1>
+                    <div>
+                        <img src="{{ medication.image.url }}" alt="{{ medication.name }}">
+                        <!-- <p class="medications-date-modified">{{ medication.date_modified }}</p> -->
+                        <p class="medications-description">{{ medication.description }}</p>
+                    </div>
+                    <p class="medications-donation-price">{{ medication.donation_price }}<span>lv</span></p>
+
+                    <form method="post" action="{% url 'add_to_cart' medication.pk %}">
+                        {% csrf_token %}
+                        <input type="number" name="quantity" value="1" min="1">
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                </div>
+            {% empty %}
+                <div class="empty">
+                    <p>No medical equipment available.</p>
+                </div>
+            {% endfor %}
+            {% if medications.has_other_pages %}
+                <div class="pagination">
+                <span class="step-links">
+                    {% if medications.has_previous %}
+                        <a href="?medications=1">&laquo; first</a>
+                        <a href="?medications={{ medications.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current-page">
+                        Page {{ medications.number }} of {{ medications.paginator.num_pages }}.
+                    </span>
+
+                    {% if medications_page.has_next %}
+                        <a href="?medications={{ medications.next_page_number }}">next</a>
+                        <a href="?medications={{ medications.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+                </div>
+            {% endif %}
+
+        </section>
+    </main>
+{% endblock %}
+
+
+{#{% extends 'base/base.html' %}#}
+{##}
+{#{% block content %}#}
+{#<h1>Donations</h1>#}
+{#<ul>#}
+{#  {% for donation in donations %}#}
+{#  <li>#}
+{#    {{ donation.name }}#}
+{#    <form method="post" action="{% url 'add_to_cart' donation.pk %}">#}
+{#      {% csrf_token %}#}
+{#      <input type="number" name="quantity" value="1" min="1">#}
+{#      <button type="submit">Add to Cart</button>#}
+{#    </form>#}
+{#  </li>#}
+{#  {% endfor %}#}
+{#</ul>#}
+{#{% endblock %}#}

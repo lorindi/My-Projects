@@ -1,0 +1,11 @@
+{% extends 'base/index.html' %}
+{% block content %}
+    <main class="main-shopping-cart">
+        <section>
+            <h1>Cart Item Details</h1>
+            <p>Item: {{ cart_item.donation.name }}</p>
+            <p>Quantity: {{ cart_item.quantity }}</p>
+            <a href="{% url 'cart_list' %}">Back to Cart</a>
+        </section>
+    </main>
+{% endblock %}
