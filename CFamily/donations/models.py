@@ -59,17 +59,3 @@ class Donations(models.Model):
         return self.title
 
 
-class MoneyDonation(models.Model):
-    user = models.ForeignKey(
-        UserProfile,
-        on_delete=models.CASCADE,
-    )
-    amount = models.PositiveIntegerField(
-        verbose_name='Donation Amount',
-        null=False,
-        blank=False,
-    )
-    creation_time = models.DateTimeField(auto_now_add=True, )
-
-    def __str__(self):
-        return f"{self.user.username} - {self.amount} lv"

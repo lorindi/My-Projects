@@ -4,22 +4,8 @@ from .models import Donations
 from mixins.mixins import GroupRequiredMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView
-from .models import MoneyDonation
 
 
-class DonationMoneyCreateView(LoginRequiredMixin, CreateView):
-    model = MoneyDonation
-    template_name = 'donations/donation-create-money.html'
-    fields = ['amount']
-
-    def form_valid(self, form):
-        user_profile = self.request.user
-        form.instance.user = user_profile
-        response = super().form_valid(form)
-        # Add logic to add the donation to the cart here
-        return response
-
-    success_url = reverse_lazy('donation_list')
 
 
 class DonationSupportForResearchListView(LoginRequiredMixin, ListView):
@@ -97,15 +83,15 @@ class DonationListView(LoginRequiredMixin, ListView):
     context_object_name = 'donations'
     template_name = 'donations/donation-list.html'
     paginate_by = 5
+    ordering = ['-creation_time']
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['search'] = self.request.GET.get('search', '')
-        # context['categories'] = Category.objects.all()
         return context
 
 
-class DonationCreateView(LoginRequiredMixin, CreateView):
+class DonationCreateView(GroupRequiredMixin, CreateView):
     allowed_groups = ['Admins']
     model = Donations
     template_name = 'donations/donation-create-page.html'

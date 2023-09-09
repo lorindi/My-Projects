@@ -22,6 +22,12 @@ INSTALLED_APPS = [
     'common',
     'donations',
     'cart',
+    'payments',
+    'benefactors',
+    'campaigns',
+    'initiatives',
+    'events',
+    'charitable_treks',
 
 
 ]

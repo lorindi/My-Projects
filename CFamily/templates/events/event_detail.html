@@ -1,0 +1,63 @@
+{% extends 'base/index.html' %}
+{% block content %}
+
+    <main class="main-details-content">
+        <section class="container-details">
+            <div>
+                <p>{{ event.participants }}</p>
+            </div>
+            <div>
+                <h1>{{ event.title }}</h1>
+                <img src="{{ event.cover_image.url }}" alt="{{ event.title }}">
+           
+                <p>{{ event.description }}</p>
+                
+                
+                
+
+            </div>
+            <div>
+                <p>Location: {{ event.location }}</p>
+                <p>Start Date: {{ event.start_date }}</p>
+                <p>Start Hour: {{ event.start_hour }}</p>
+                <p>End Date: {{ event.end_date }}</p>
+                <p>End Hour: {{ event.end_date }}</p>
+                
+            </div>
+            <div>
+                <p>{{ event.slide_presentation }}</p>
+                <p>{{ event.topics }}</p>
+                <p>{{ event.youtube_link }}</p>
+
+            </div>
+            
+            
+           
+
+            <div>
+                {% if request.user.is_authenticated %}
+                <form method="post" action="{% url 'event_register' event.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" {% if registered %}disabled{% endif %}>{% if registered %}Unregister{% else %}
+                        Register{% endif %}</button>
+
+                </form>
+
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <form method="post" action="{% url 'event_unregister' event.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" {% if not registered %}disabled{% endif %}>
+                        {% if not registered %}Not Registered{% else %}Unregister{% endif %}
+                    </button>
+                </form>
+            {% endif %}
+            </div>
+            {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
+                <a href="{% url 'event_update' event.pk %}">Edit</a>
+                <a href="{% url 'event_delete' event.pk %}">Delete</a>
+            {% endif %}
+        </section>
+    </main>
+
+{% endblock %}

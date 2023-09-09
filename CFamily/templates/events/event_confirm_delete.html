@@ -1,0 +1,14 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main>
+        <section>
+            <h1>Confirm Delete</h1>
+            <p>Are you sure you want to delete "{{ object.title }}"?</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit">Confirm</button>
+            </form>
+        </section>
+    </main>
+{% endblock %}

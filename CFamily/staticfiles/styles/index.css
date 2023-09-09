@@ -1,4 +1,3 @@
-
 /* font-family: 'Lato', sans-serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto', sans-serif; */
@@ -9,8 +8,8 @@ font-family: 'Roboto', sans-serif; */
     height: 100%;
     /* background-image: linear-gradient(25deg, #517F57, #517F57, #517F57, #F8F7EE, #12523bd0, #0D3E3E, #0D3E3E); */
     /* background-color: rgba(0, 0, 0, 0.486); */
-    
-   
+
+
 
 }
 
@@ -34,7 +33,27 @@ font-family: 'Roboto', sans-serif; */
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    /* height: 400px; */
+    /* background: linear-gradient(25deg, #3abec57c, #9abe5c79); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
+
+/* .header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/brian-erickson-CBHxASbfH4s-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+} */
 
 /* ----------------------------------nav-first------------------------------------ */
 .nav {
@@ -47,19 +66,17 @@ font-family: 'Roboto', sans-serif; */
     padding-top: 12px;
     padding-left: 100px;
     padding-right: 100px;
-    
+
 
 }
 
 .logo-link {
-    color: #3B874D;
-    font-size: 40px;
-    text-shadow: 2px 2px 1px white;
-    /* background-color: white; */
+    color: black;
+    font-size: 25px;
     font-weight: 400;
-    /* padding: 10px; */
-    /* border-radius: 50%; */
+    padding: 10px;
     letter-spacing: 0;
+    font-weight: 300;
 }
 
 .user-nav {
@@ -93,14 +110,16 @@ font-family: 'Roboto', sans-serif; */
 
 
 .fa-heart,
+.fa-shop,
 .fa-cart-shopping,
 .fa-user,
 .fa-arrow-right-from-bracket {
-    font-size: 16px;
+    font-size: 20px;
     margin-right: 5px;
 }
+
 /* ---------------------------------nav-second----------------------------------- */
-.user-nav-links{
+.user-nav-links {
     display: flex;
     width: 100%;
     background-color: #f8f7ee3b;
@@ -108,7 +127,7 @@ font-family: 'Roboto', sans-serif; */
     align-items: center;
     padding-left: 100px;
     padding-right: 250px;
-    background-image: linear-gradient(180deg, #459459,#4A9C5F,#52A666, #57AB6C, #60A968);
+    background-image: linear-gradient(180deg, #459459, #4A9C5F, #52A666, #57AB6C, #60A968);
     /* background-image: linear-gradient(180deg, #4D9F93,#6DB9AC,#85C59B, #A5D1AE, #B7D2A9); */
     /* background-image: linear-gradient(180deg, #347F79,#4EA195, #53A761,#82C49F,#99C800, #9DCD65, #B7D2A9); */
     /* background-image: linear-gradient(180deg, #4C9193,#63AB6B,#99D066); */
@@ -117,7 +136,7 @@ font-family: 'Roboto', sans-serif; */
 
 }
 
-.main-links{
+.main-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -126,6 +145,7 @@ font-family: 'Roboto', sans-serif; */
 
 
 }
+
 .projects-link,
 .initiatives-link,
 .events-link,
@@ -135,7 +155,7 @@ font-family: 'Roboto', sans-serif; */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     padding: 10px;
     margin-right: 15px;
     font-size: 17px;
@@ -146,9 +166,11 @@ font-family: 'Roboto', sans-serif; */
     /* border-left: 1px solid white;
     border-right: 1px solid white; */
 }
+
 .help-dropdown {
     color: #0D3E3E;
 }
+
 .cfamily-help {
     color: white;
     font-size: 18px;
@@ -167,7 +189,7 @@ font-family: 'Roboto', sans-serif; */
 .create-donation-link,
 .create-projects-link,
 .create-initiatives-link,
-.create-events-link, 
+.create-events-link,
 .create-charitable-treks-link,
 .create-charity-races-link,
 .create-benefactors-link {
@@ -191,9 +213,8 @@ font-family: 'Roboto', sans-serif; */
 
 
 }
-------------------------------------hover-----------------------------------------
 
-.logo-link:hover,
+------------------------------------hover----------------------------------------- .logo-link:hover,
 .shop-icon-link:hover,
 .cart-icon-link:hover,
 .username:hover,
@@ -202,26 +223,28 @@ font-family: 'Roboto', sans-serif; */
 .fa-user:hover,
 .fa-arrow-right-from-bracket:hover,
 .fa-caret-left:hover,
-.fa-caret-right:hover{
-    
+.fa-caret-right:hover {
+
     color: #99D066;
 
-    
-    
+
+
 }
+
 .create-donation-link:hover,
 .create-projects-link:hover,
 .create-initiatives-link:hover,
-.create-events-link:hover, 
+.create-events-link:hover,
 .create-charitable-treks-link:hover,
 .create-charity-races-link:hover,
 .create-benefactors-link:hover {
 
     background-color: #3B874D;
 
-    
-    
+
+
 }
+
 .projects-link:hover,
 .initiatives-link:hover,
 .events-link:hover,
@@ -232,10 +255,10 @@ font-family: 'Roboto', sans-serif; */
     background-color: #ffffff1a;
     /* color: #3B874D; */
     color: white;
-  
 
-    
-    
+
+
+
 }
 
 
@@ -268,6 +291,7 @@ main {
     letter-spacing: 1px;
     font-weight: 400;
 }
+
 /* ------------------------------------------------------------------------- */
 .dropbtn {
     border: none;
@@ -306,18 +330,21 @@ main {
 
 
 }
-.dropdown-content a i{
+
+.dropdown-content a i {
 
     text-shadow: 1px 1px 1px gray;
 
 
 
 }
+
 .dropdown-content a:hover {
     color: #99D066;
     border-radius: 10px;
     z-index: 1;
 }
+
 .dropdown-content a i:hover {
     text-shadow: 0px 0px 1px gray;
 }
@@ -325,6 +352,7 @@ main {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .dropdown-content p {
     float: none;
     padding: 7px;

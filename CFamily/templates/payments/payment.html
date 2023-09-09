@@ -1,0 +1,19 @@
+{% extends 'base/index.html' %}
+{% block content %}
+    <main>
+        <section>
+            <h1>Your Cart Items</h1>
+            <ul>
+                {% for item in cart_items %}
+                    <li>{{ item.donation.name }} - {{ item.quantity }} -
+                        {{ item.donation.donation_price }}</li>
+                {% endfor %}
+            </ul>
+            <p>Total Amount: {{ total_amount }}</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit">Process Payment</button>
+            </form>
+        </section>
+    </main>
+{% endblock %}

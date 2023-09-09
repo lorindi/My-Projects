@@ -1,0 +1,14 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main class="main-campaign-content">
+        <section class="container-campaign-create-form">
+            <h1 class="campaign-create-form-title">Edit Campaign</h1>
+            <form class="campaign-create-form" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <button class="campaign-create-form-button btn btn-primary" type="submit" class="btn btn-primary">Update Campaign</button>
+            </form>
+        </section>
+    </main>
+{% endblock %}

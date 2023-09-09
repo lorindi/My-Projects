@@ -1,0 +1,16 @@
+{% extends 'base/index.html' %}
+{% block content %}
+    <h1>Money Donation Details</h1>
+    <p>Title: {{ money_donation.title }}</p>
+    <p>Amount: {{ money_donation.amount }}</p>
+    <!-- Add more details as needed -->
+
+    {% if can_add_to_cart %}
+        <form method="post" action="{% url 'add_to_cart' donation.pk %}">
+            {% csrf_token %}
+            <button type="submit">Add to Cart</button>
+        </form>
+    {% else %}
+        <p>This money donation is already in your cart.</p>
+    {% endif %}
+{% endblock %}
