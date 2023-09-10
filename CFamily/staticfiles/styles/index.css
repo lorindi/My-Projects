@@ -6,6 +6,7 @@ font-family: 'Roboto', sans-serif; */
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    /* background-color: rgb(218, 218, 218); */
     /* background-image: linear-gradient(25deg, #517F57, #517F57, #517F57, #F8F7EE, #12523bd0, #0D3E3E, #0D3E3E); */
     /* background-color: rgba(0, 0, 0, 0.486); */
 
@@ -13,7 +14,7 @@ font-family: 'Roboto', sans-serif; */
 
 }
 
-.body:before {
+/* .body:before {
     content: "";
     display: block;
     position: fixed;
@@ -27,7 +28,7 @@ font-family: 'Roboto', sans-serif; */
     background-repeat: no-repeat;
     z-index: -1;
     opacity: 1;
-}
+} */
 
 .header {
     display: flex;
@@ -36,9 +37,9 @@ font-family: 'Roboto', sans-serif; */
     width: 100%;
     /* height: 400px; */
     /* background: linear-gradient(25deg, #3abec57c, #9abe5c79); */
-    background-size: cover;
+    /* background-size: cover;
     background-position: center;
-    position: relative;
+    position: relative; */
 }
 
 /* .header::before {
@@ -252,9 +253,9 @@ font-family: 'Roboto', sans-serif; */
 .charity-races-link:hover,
 .benefactors-link:hover {
     /* background-image: linear-gradient(180deg, #60A968, #57AB6C, #52A666,#4A9C5F,#459459, #3B874D); */
-    background-color: #ffffff1a;
+    background-color: #ececec57;
     /* color: #3B874D; */
-    color: white;
+    color: #53A35C;
 
 
 
