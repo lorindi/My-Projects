@@ -24,7 +24,7 @@ font-family: 'Roboto', sans-serif; */
     display: flex;
     flex-direction: row;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px 3px #0d3e3e42;
     font-family: 'Roboto', sans-serif;
 
@@ -165,7 +165,7 @@ font-family: 'Roboto', sans-serif; */
     width: 450px;
     height: 700px;
     background-image: url("../images/rianne-zuur-PoxFTU7_QKo-unsplash.jpg");
-    border-radius: 30px;
+    border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
@@ -202,7 +202,7 @@ font-family: 'Roboto', sans-serif; */
     position: fixed;
 
     background-image: url("../images/nature-treks-events.png");
-    border-radius: 30px;
+    border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
