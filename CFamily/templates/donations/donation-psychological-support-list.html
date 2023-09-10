@@ -22,43 +22,28 @@
                         <p class="donation-description"><i
                                 class="fa-solid fa-quote-left"></i>{{ donation.description|slice:"30" }}</p>
                     {% endif %}
-                    <p class="donation-price"><span>lv</span>{{ donation.donation_price }}</p>
-
-
-                    {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
-                        <div class="donation-info">
-                            <p class="donation-creator">{{ donation.creator }}</p>
-                            <p class="donation-creation-time">{{ donation.creation_time }}</p>
-                            <p class="donation-date-modified"> {{ donation.date_modified }}</p>
-                        </div>
-                    {% endif %}
-
+                    <div class="donation-price-details">
+                        <p class="donation-price"><span>lv</span>{{ donation.donation_price }}</p>
+                        <a class="details-link" href="{% url 'donation_details' donation.pk %}"><i class="fa-solid fa-angles-right"></i></a>
+                    </div>
 
 
                     <div class="donation-actions">
-                        <input class="quantity-input" type="number" name="quantity" value="1" min="1">
-                        <button class="add-to-cart-button" type="submit">Add to Cart</button>
-                        {# <form method="post" action="{% url 'add_to_cart' donation.pk %}">#}
-                        {# {% csrf_token %}#}
-                        {# <input class="quantity-input" type="number" name="quantity" value="1" min="1">#}
-                        {# <button class="add-to-cart-button" type="submit">Add to Cart</button>#}
-                        {# </form>#}
+
+                        <form method="post" action="{% url 'add_to_cart' donation.pk %}">
+                            {% csrf_token %}
+                            <input class="quantity-input" type="number" name="quantity" value="1" min="1">
+                            <button class="add-to-cart-button" type="submit">Add to Cart</button>
+                        </form>
 
                     </div>
-                    {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
 
-                        <div class="admin-actions">
-                            <a class="details-link" href="{% url 'donation_details' donation.pk %}">Details</a>
-                            <a class="edit-link" href="{% url 'donation_edit' donation.pk %}">Edit</a>
-                            <a class="delete-link" href="{% url 'donation_delete' donation.pk %}">Delete</a>
-                        </div>
-                    {% endif %}
 
                 </div>
             {% endfor %}
 
         </section>
-        {% if psychological_support.has_other_pages %}
+        {% if psychological_support|length > 0 %}
             <div class="pagination">
                 {% if page_obj.has_previous %}
                     <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}"><i

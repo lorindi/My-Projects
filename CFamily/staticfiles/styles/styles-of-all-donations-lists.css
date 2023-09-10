@@ -2,28 +2,27 @@
 font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto', sans-serif; */
 .main-donations-cards-content {
-    backdrop-filter: blur(5px); 
-    /* background-color: white; */
+    justify-content: space-evenly;
     height: 100%;
     min-height: 835px;
     width: 100%;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.253);
-    border-top: 2px solid rgba(255, 255, 255, 0.253);
+
 }
 .container-donations-cards {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    gap: 30px;
+    margin-top: 50px;
 }
 .donation-item {
     box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.459);
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
     border-radius: 5px;
     overflow: hidden;
     width: 270px;
-    height: 550px;
+    height: 500px;
     justify-content: space-between;
     align-items: center;
 }
@@ -51,15 +50,16 @@ font-family: 'Roboto', sans-serif; */
     width: auto;
     padding-left: 10px;
     padding-right: 10px;
-    
-    
-
-   
 }
 .fa-quote-left {
     color: #429656;
     margin-right: 5px;
     font-size: 10px;
+}
+.donation-price-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .donation-price {
     display: flex;
@@ -67,48 +67,27 @@ font-family: 'Roboto', sans-serif; */
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     font-weight: 100;
-    width: 250px;
+    width: 200px;
+    margin-left: 12px;
 }
 .donation-price span{
     color: #429656;
     font-weight: 300;
     font-family: 'Lato', sans-serif;
 }
-.donation-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.fa-angles-right {
+    border: 1px solid #429656;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #429656;
+    margin-right: 5px;
 }
-
-
 .donation-actions {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 250px;
     
-}
-.donation-creator {
-    color: #429656;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    text-transform: lowercase;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    width: 250px;
-    letter-spacing: 1.5px;
-
-}
-.donation-creation-time, .donation-date-modified {
-    color: grey;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    width: 250px;
-    letter-spacing: 1.5px;
 }
 .quantity-input {
     width: 250px;
@@ -133,28 +112,10 @@ font-family: 'Roboto', sans-serif; */
     text-transform: uppercase;
     border: none;
 }
-.admin-actions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 5px;
-    justify-content: space-between;
-    align-items: center;
-    width: 250px;
+
+.pagination{
+    /* margin-top: 50px; */
 }
 
-.details-link, .edit-link, .delete-link {
-    display: flex;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    width: 75px;
-    border-radius: 5px;
-    color: white;
-    background-color: #429656;
-    padding: 5px 10px;
-    letter-spacing: 1.5px;
-    font-weight: 500;
-    font-size: 13px;
-    text-transform: uppercase;
-    
-}
+
+

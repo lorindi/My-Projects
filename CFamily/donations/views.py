@@ -82,7 +82,7 @@ class DonationListView(LoginRequiredMixin, ListView):
     model = Donations
     context_object_name = 'donations'
     template_name = 'donations/donation-list.html'
-    paginate_by = 5
+    paginate_by = 4
     ordering = ['-creation_time']
 
     def get_context_data(self, *args, **kwargs):

@@ -212,7 +212,6 @@ font-family: 'Roboto', sans-serif; */
     font-style: italic;
     text-shadow: none;
 
-
 }
 
 ------------------------------------hover----------------------------------------- .logo-link:hover,
@@ -227,9 +226,6 @@ font-family: 'Roboto', sans-serif; */
 .fa-caret-right:hover {
 
     color: #99D066;
-
-
-
 }
 
 .create-donation-link:hover,
@@ -241,9 +237,6 @@ font-family: 'Roboto', sans-serif; */
 .create-benefactors-link:hover {
 
     background-color: #3B874D;
-
-
-
 }
 
 .projects-link:hover,
@@ -257,9 +250,6 @@ font-family: 'Roboto', sans-serif; */
     /* color: #3B874D; */
     color: #53A35C;
 
-
-
-
 }
 
 
@@ -268,7 +258,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 
 }
 
@@ -328,16 +317,10 @@ main {
     letter-spacing: 1.5px;
     text-shadow: 0px 0px 1px white;
 
-
-
 }
 
 .dropdown-content a i {
-
     text-shadow: 1px 1px 1px gray;
-
-
-
 }
 
 .dropdown-content a:hover {

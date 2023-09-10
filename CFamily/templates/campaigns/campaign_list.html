@@ -14,25 +14,27 @@
                     </li>
                 {% endfor %}
 
-                
 
             </ul>
-            <div class="pagination">
-                {% if page_obj.has_previous %}
-                    <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}"><i class="fa-solid fa-caret-left"></i></a>
-                {% else %}
-                    <a><i class="fa-solid fa-caret-left"></i></a>
-                {% endif %}
+            {% if campaigns|length > 0 %}
+                <div class="pagination">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}"><i
+                                class="fa-solid fa-caret-left"></i></a>
+                    {% else %}
+                        <a><i class="fa-solid fa-caret-left"></i></a>
+                    {% endif %}
 
-                {{ page_obj.number }} / {{ paginator.num_pages }}
+                    {{ page_obj.number }} / {{ paginator.num_pages }}
 
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}&search={{ search }}"><i class="fa-solid fa-caret-right"></i></a>
-                {% else %}
-                    <a><i class="fa-solid fa-caret-right"></i></a>
-                {% endif %}
-            </div>
-
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}&search={{ search }}"><i
+                                class="fa-solid fa-caret-right"></i></a>
+                    {% else %}
+                        <a><i class="fa-solid fa-caret-right"></i></a>
+                    {% endif %}
+                </div>
+            {% endif %}
         </section>
     </main>
 {% endblock %}

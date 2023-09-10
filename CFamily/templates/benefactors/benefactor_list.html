@@ -11,27 +11,31 @@
                             <img class="card-list-element-img" src="{{ benefactor.image.url }}"
                                  alt="{{ benefactor.name }}">
                         {% endif %}
-{#                        <img class="card-list-element-img" src="{{ benefactor.benefactor_image.url }}" alt="{{ benefactor.name_benefactor }}">#}
+
                         <h1 class="card-list-element-title">{{ benefactor.name }}</h1>
                         <a href="{% url 'benefactor_detail' benefactor.pk %}">SEE MORE</a>
                     </li>
                 {% endfor %}
             </ul>
-            <div class="pagination">
-                {% if page_obj.has_previous %}
-                    <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}"><i class="fa-solid fa-caret-left"></i></a>
-                {% else %}
-                    <a><i class="fa-solid fa-caret-left"></i></a>
-                {% endif %}
+            {% if benefactors|length > 0 %}
+                <div class="pagination">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}"><i
+                                class="fa-solid fa-caret-left"></i></a>
+                    {% else %}
+                        <a><i class="fa-solid fa-caret-left"></i></a>
+                    {% endif %}
 
-                {{ page_obj.number }} / {{ paginator.num_pages }}
+                    {{ page_obj.number }} / {{ paginator.num_pages }}
 
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}&search={{ search }}"><i class="fa-solid fa-caret-right"></i></a>
-                {% else %}
-                    <a><i class="fa-solid fa-caret-right"></i></a>
-                {% endif %}
-            </div>
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}&search={{ search }}"><i
+                                class="fa-solid fa-caret-right"></i></a>
+                    {% else %}
+                        <a><i class="fa-solid fa-caret-right"></i></a>
+                    {% endif %}
+                </div>
+            {% endif %}
         </section>
     </main>
 {% endblock %}
