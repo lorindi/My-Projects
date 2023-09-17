@@ -11,8 +11,10 @@ font-family: 'Roboto', sans-serif; */
 .container-donations-cards {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
     margin-top: 50px;
 }
 .donation-item {
@@ -114,7 +116,9 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .pagination{
-    /* margin-top: 50px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 

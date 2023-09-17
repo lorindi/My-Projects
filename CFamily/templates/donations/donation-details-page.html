@@ -5,29 +5,34 @@
             <div class="content-first-donation-details">
                 <h1 class="donation-details-title">{{ object.title }}</h1>
                 <img class="donation-details-image" src="{{ object.image.url }}" alt="{{ object.title }}">
-                {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
-                    <div class="donation-info">
-                        <p class="donation-creator">{{ object.creator }}</p>
-                        <p class="donation-creation-time">{{ object.creation_time }}</p>
-                        <p class="donation-date-modified"> {{ object.date_modified }}</p>
-                    </div>
-                {% endif %}
+
                 {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
 
                     <div class="admin-actions">
-                        <a class="edit-link" href="{% url 'donation_edit' object.pk %}">Edit</a>
-                        <a class="delete-link" href="{% url 'donation_delete' object.pk %}">Delete</a>
+                        <div class="donation-info">
+                            <p class="donation-creator">Creator: <span>{{ object.creator }}</span></p>
+                            <p class="donation-creation-time">Created on: <span>{{ object.creation_time }}</span></p>
+                            <p class="donation-date-modified">Change: <span>{{ object.date_modified }}</span></p>
+                        </div>
+                        <div>
+                            <a class="edit-link" href="{% url 'donation_edit' object.pk %}">Edit</a>
+                            <a class="delete-link" href="{% url 'donation_delete' object.pk %}">Delete</a>
+                        </div>
                     </div>
                 {% endif %}
 
 
             </div>
             <div class="content-second-donation-details">
-                <p class="donation-details-description"> {{ object.description }}</p>
+
+                <p class="donation-details-description">{{ object.description }}</p>
+
+
+
                 <div class="second-donation-details">
 
 
-                    <form method="post" action="{% url 'add_to_cart' object.pk %}">
+                    <form  class="second-donation-details-form" method="post" action="{% url 'add_to_cart' object.pk %}">
                         {% csrf_token %}
                         <input class="quantity-input" type="number" name="quantity" value="1" min="1">
                         <button class="add-to-cart-button" type="submit">Add to Cart</button>

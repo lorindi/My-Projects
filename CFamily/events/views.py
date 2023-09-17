@@ -10,7 +10,7 @@ from .models import Event, EventRegistration
 from mixins.mixins import GroupRequiredMixin  # Импортирайте GroupRequiredMixin от вашия mixins.py
 
 
-class EventListView(ListView):
+class EventListView(LoginRequiredMixin, ListView):
     model = Event
     template_name = 'events/event_list.html'
     context_object_name = 'events'
