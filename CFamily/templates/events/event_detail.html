@@ -30,10 +30,6 @@
                 <p>{{ event.youtube_link }}</p>
 
             </div>
-            
-            
-           
-
             <div>
                 {% if request.user.is_authenticated %}
                 <form method="post" action="{% url 'event_register' event.pk %}">

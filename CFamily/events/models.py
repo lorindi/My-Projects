@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
+from users.models import UserProfile
+
 UserModel = get_user_model()
 
 class Event(models.Model):
@@ -18,6 +20,7 @@ class Event(models.Model):
     contact_information = models.TextField()
     youtube_link = models.URLField(null=True, blank=True)
     participants = models.ManyToManyField(UserModel, through='EventRegistration')
+
 
 
     def __str__(self):

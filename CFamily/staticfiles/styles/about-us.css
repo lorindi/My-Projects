@@ -70,10 +70,16 @@
     justify-content: center;
     font-size: 45px;
     font-weight: 300;
-    min-height: 150px;
+    min-height: 200px;
     width: 100%;
-}
+    border: none;
+    background-color: white;
 
+}
+.cystic-fibrosis-dropdown-content {
+    display: none;
+
+}
 .cystic-fibrosis-details {
     display: flex;
     flex-direction: row;
