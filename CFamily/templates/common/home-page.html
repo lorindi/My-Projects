@@ -43,7 +43,7 @@
 
         </section>
         <section class="cystic-fibrosis-section">
-            <button class="cystic-fibrosis-title">CYSTIC FIBROSIS</button>
+            <button class="cystic-fibrosis-title">CYSTIC FIBROSIS?</button>
             <div class="cystic-fibrosis-dropdown-content">
                 <div class="cystic-fibrosis-details">
 
@@ -143,6 +143,19 @@
 
         </section>
         <section>
+            <ul class="cards-lists" role="list">
+                {% for benefactor in benefactors %}
+                    <li class="card-list-element">
+                        {% if benefactor.image %}
+                            <img class="card-list-element-img" src="{{ benefactor.image.url }}"
+                                 alt="{{ benefactor.name }}">
+                        {% endif %}
+
+                        <h1 class="card-list-element-title">{{ benefactor.name }}</h1>
+                        <a href="{% url 'benefactor_detail' benefactor.pk %}">SEE MORE</a>
+                    </li>
+                {% endfor %}
+            </ul>
 
         </section>
         <script src="{% static 'js/script.js' %}"></script>

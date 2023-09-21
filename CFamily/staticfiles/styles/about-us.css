@@ -2,17 +2,37 @@
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
+    position: relative;
+    width: 100%;
+    /* background: linear-gradient(25deg, #3abec57c, #9abe5c79); */
+    margin: 0px 0px 20px 20px;
+    position: relative;
 
 }
+
 
 .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 250px;
+    height: 300px;
     justify-content: center;
     
+    
 }
+/* .header-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/brian-erickson-CBHxASbfH4s-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+} */
 
 .header-title {
     font-size: 35px;
@@ -69,11 +89,17 @@
     align-items: center;
     justify-content: center;
     font-size: 45px;
-    font-weight: 300;
+    font-weight: 200;
     min-height: 200px;
     width: 100%;
     border: none;
     background-color: white;
+    font-style: italic;
+
+}
+.cystic-fibrosis-title:hover {
+    color: #53A35C;
+
 
 }
 .cystic-fibrosis-dropdown-content {
