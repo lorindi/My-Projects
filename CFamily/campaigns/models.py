@@ -14,6 +14,7 @@ class Campaign(models.Model):
     end_date = models.DateField()
     creation_time = models.DateTimeField(auto_now_add=True, )
     youtube_link = models.URLField(null=True, blank=True)
+
     creator = models.ForeignKey(
         UserProfile,
         on_delete=models.CASCADE,

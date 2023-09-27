@@ -11,4 +11,5 @@ urlpatterns = [
     path('<int:pk>/delete/', CampaignDeleteView.as_view(), name='campaign_delete'),
     path('campaign/<int:pk>/support/success/', CampaignSupportView.as_view(), name='campaign_success'),
 
+
 ]

@@ -6,6 +6,8 @@ from mixins.mixins import GroupRequiredMixin
 
 class BenefactorListView(ListView):
     model = Benefactor
+    # template_name = 'common/home-page.html'
+
     template_name = 'benefactors/benefactor_list.html'
     context_object_name = 'benefactors'
     paginate_by = 1
