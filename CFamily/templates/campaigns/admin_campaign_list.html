@@ -1,0 +1,51 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main class="main-admin-content">
+        <section>
+            <h1>Admin Campaign List</h1>
+            <table>
+                <thead>
+                <tr>
+                    <th>Campaign Title</th>
+                    <th>Registered Users</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for campaign in campaigns %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td> <!-- Добавяме този ред за номерация -->
+                        <td>{{ campaign.title }}</td>
+                        <td>
+                            {% for registration in registrations %}
+                                {% if registration.campaign == campaign %}
+                                    {{ registration.user.username }}{% if not forloop.last %}, {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {% if campaigns|length > 0 %}
+                <div class="pagination">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}"><i
+                                class="fa-solid fa-caret-left"></i></a>
+                    {% else %}
+                        <a><i class="fa-solid fa-caret-left"></i></a>
+                    {% endif %}
+
+                    {{ page_obj.number }} / {{ paginator.num_pages }}
+
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}&search={{ search }}"><i
+                                class="fa-solid fa-caret-right"></i></a>
+                    {% else %}
+                        <a><i class="fa-solid fa-caret-right"></i></a>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </section>
+    </main>
+{% endblock %}
