@@ -1,4 +1,5 @@
 {% extends 'base/index.html' %}
+{% load static %}
 
 {% block content %}
     <main class="main-details-content">
@@ -18,14 +19,48 @@
                 <iframe width="560" height="315" src="{{ initiative.youtube_link }}" frameborder="0"
                         allowfullscreen></iframe>
             {% endif %}
+
             <div>
+                {% if user_type == 'patient' %}
+                    {% if user_already_registered %}
+                        <p>already_registered</p>
+                    {% else %}
+
+                        <button id="registerButton" class="btn btn-primary">Register for Initiative</button>
+
+                        <div id="registerModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h2 class="initiative-register-form-title">Register for Initiative</h2>
+                                <form method="post" action="{% url 'initiative_register' initiative.pk %}"
+                                      enctype="multipart/form-data" class="initiative-register-form">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <button type="submit" class="btn btn-primary">Register</button>
+                                </form>
+                                <div id="thankYouModal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close">&times;</span>
+                                        <h2 class="initiative-register-form-title">Thank You for Your Support!</h2>
+                                        <p>Your support for "{{ initiative.title }}" has been registered.</p>
+                                        <a href="{% url 'initiative_detail' initiative.pk %}" class="btn btn-primary">Back
+                                            to Initiative</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endif %}
+                {% endif %}
+
                 {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
                     <a href="{% url 'initiative_update' initiative.pk %}">Edit</a>
                     <a href="{% url 'initiative_delete' initiative.pk %}">Delete</a>
-                    {#                    <a href="{% url 'event_update' initiative.pk %}">Edit</a>#}
-                    {#                    <a href="{% url 'event_delete' initiative.pk %}">Delete</a>#}
+
                 {% endif %}
             </div>
+            <script src="{% static 'js/initiatives/registerInitiative.js' %}"></script>
+            <script src="{% static 'js/initiatives/thankYouForYourSupportInitiative.js' %}"></script>
         </section>
     </main>
 {% endblock %}

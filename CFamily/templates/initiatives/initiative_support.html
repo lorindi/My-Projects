@@ -1,0 +1,11 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    <main class="main-initiative-content">
+        <section>
+            <h1>Thank You for Your Support!</h1>
+            <p>Your support for "{{ campaign.title }}" has been registered.</p>
+            <a href="{% url 'initiative_detail' initiative.pk %}" class="btn btn-primary">Back to Campaign</a>
+        </section>
+    </main>
+{% endblock %}

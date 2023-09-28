@@ -67,9 +67,9 @@
                 </div>
 
 
-                <div>
+                <div class="user-info-content-event-info">
                     <div class="user-details-content-events">
-                        <h2>Registered Events</h2>
+                        <h2>Events</h2>
                         <ul>
                             {% for registration in object.eventregistration_set.all %}
                                 <li>
@@ -82,12 +82,12 @@
                         </ul>
                     </div>
                     <div class="user-details-content-campaigns">
-                        <h2>Registered Campaigns</h2>
+                        <h2>Campaigns</h2>
                         <ul>
                             {% for registration in object.campaignregistration_set.all %}
                                 <li>
                                     <p><strong>Campaign:</strong> {{ registration.campaign.title }}</p>
-                                    <p><strong>Description:</strong> {{ registration.campaign.description }}</p>
+                                 
                                     <!-- Добавете други полета на кампанията, които искате да визуализирате -->
                                 </li>
                             {% empty %}
