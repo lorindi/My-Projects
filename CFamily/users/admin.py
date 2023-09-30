@@ -9,7 +9,7 @@ class UserProfileAdmin(admin.ModelAdmin):
     search_fields = ('username', 'email', 'first_name', 'last_name')
     fieldsets = (
         ('Personal Information', {
-            'fields': ('username', 'email', 'first_name', 'last_name', 'date_of_birth', 'gender')
+            'fields': ('username', 'email', 'first_name', 'last_name', 'date_of_birth', 'gender', 'type_user')
         }),
         ('Contact Information', {
             'fields': ('telephone', 'city', 'link')

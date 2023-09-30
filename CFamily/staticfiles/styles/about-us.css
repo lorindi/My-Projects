@@ -15,40 +15,70 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 300px;
+    height: 200px;
     justify-content: center;
-    
-    
+
+
 }
-/* .header-section:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../images/brian-erickson-CBHxASbfH4s-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    z-index: -1;
-} */
+
 
 .header-title {
     font-size: 35px;
     font-weight: 300;
     margin-bottom: 15px;
 }
+
 .header-description {
     font-size: 18px;
     margin-bottom: 15px;
 }
-.support-button{
-    padding: 7px 10px;
-    background-color: #53A35C;
+
+.support-button {
     color: white;
+    padding: 7px 10px;
     border-radius: 5px;
 }
+
+.about-us-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.about-us-list {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap
+}
+
+.about-us-list-element {
+    /* background: linear-gradient(5deg, #3abec57c, #9abe5c79); */
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+/* .first-element {
+    background-color: #b7d2a9ce;
+}
+.second-element {
+    background-color: #84c4a077;
+}
+.third-element {
+    background-color: #51a39734;
+} */
 .description-section {
     display: flex;
     flex-direction: row;
@@ -93,19 +123,15 @@
     min-height: 200px;
     width: 100%;
     border: none;
-    background-color: white;
     font-style: italic;
 
 }
-.cystic-fibrosis-title:hover {
-    color: #53A35C;
 
-
-}
 .cystic-fibrosis-dropdown-content {
     display: none;
 
 }
+
 .cystic-fibrosis-details {
     display: flex;
     flex-direction: row;
@@ -257,7 +283,7 @@
     border: 1px solid gray;
     padding: 5px 10px;
     border-radius: 3px;
-    
+
 }
 
 .cystic-fibrosis-facts {

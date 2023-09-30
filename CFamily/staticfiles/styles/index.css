@@ -72,7 +72,7 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .logo-link {
-    color: black;
+    /* color: black; */
     font-size: 25px;
     font-weight: 400;
     padding: 10px;
@@ -96,14 +96,14 @@ font-family: 'Roboto', sans-serif; */
 .cart-icon-link,
 .username {
     /* text-shadow: 1px 1px 1px white; */
-    color: #53A35C;
+    /* color: #53A35C; */
     font-size: 20px;
     letter-spacing: 1.5px;
 
 }
 
 .signin-button {
-    color: #53A35C;
+    /* color: #53A35C; */
     font-size: 30px;
     letter-spacing: 1.5px;
     text-shadow: 1px 1px 1px white;
@@ -123,7 +123,7 @@ font-family: 'Roboto', sans-serif; */
 .user-nav-links {
     display: flex;
     width: 100%;
-    background-color: #f8f7ee3b;
+    /* background-color: #f8f7ee3b; */
     justify-content: space-around;
     align-items: center;
     padding-left: 100px;
@@ -156,7 +156,7 @@ font-family: 'Roboto', sans-serif; */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    /* color: black; */
     padding: 10px;
     margin-right: 15px;
     font-size: 17px;
@@ -169,11 +169,11 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .help-dropdown {
-    color: #0D3E3E;
+    /* color: #0D3E3E; */
 }
 
 .cfamily-help {
-    color: white;
+    /* color: white; */
     font-size: 18px;
     letter-spacing: 2px;
     padding: 10px 3px;
@@ -196,13 +196,13 @@ font-family: 'Roboto', sans-serif; */
 .create-benefactors-link {
     display: flex;
     justify-content: center;
-    color: #0D3E3E;
-    border: 1px solid #0D3E3E;
-    background-color: #f8f7eeaa;
+    /* color: #0D3E3E; */
+    /* border: 1px solid #0D3E3E; */
+    /* background-color: #f8f7eeaa; */
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
     margin-right: 10px;
-    border-radius: 30px 20px 30px 20px;
+    /* border-radius: 30px 20px 30px 20px; */
     font-size: 14px;
     font-weight: 100;
     letter-spacing: 1px;
@@ -214,43 +214,8 @@ font-family: 'Roboto', sans-serif; */
 
 }
 
-------------------------------------hover----------------------------------------- .logo-link:hover,
-.shop-icon-link:hover,
-.cart-icon-link:hover,
-.username:hover,
-.fa-heart:hover,
-.fa-cart-shopping:hover,
-.fa-user:hover,
-.fa-arrow-right-from-bracket:hover,
-.fa-caret-left:hover,
-.fa-caret-right:hover {
 
-    color: #99D066;
-}
 
-.create-donation-link:hover,
-.create-projects-link:hover,
-.create-initiatives-link:hover,
-.create-events-link:hover,
-.create-charitable-treks-link:hover,
-.create-charity-races-link:hover,
-.create-benefactors-link:hover {
-
-    background-color: #3B874D;
-}
-
-.projects-link:hover,
-.initiatives-link:hover,
-.events-link:hover,
-.charitable-treks-link:hover,
-.charity-races-link:hover,
-.benefactors-link:hover {
-    /* background-image: linear-gradient(180deg, #60A968, #57AB6C, #52A666,#4A9C5F,#459459, #3B874D); */
-    background-color: #ececec57;
-    /* color: #3B874D; */
-    color: #53A35C;
-
-}
 
 
 main {
@@ -276,7 +241,7 @@ main {
 
 .footer-text,
 .powered-by-text {
-    color: #2D693B;
+    /* color: #2D693B; */
     font-size: 20px;
     letter-spacing: 1px;
     font-weight: 400;
@@ -299,7 +264,7 @@ main {
     backdrop-filter: blur(10px);
     /* text-shadow: 1px 1px 2px #0D3E3E; */
     z-index: 1;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 5px;
     overflow: hidden;
 }
@@ -312,7 +277,7 @@ main {
     text-decoration: none;
     display: block;
     text-align: left;
-    color: #53A35C;
+    /* color: #53A35C; */
     font-size: 16px;
     letter-spacing: 1.5px;
     text-shadow: 0px 0px 1px white;
@@ -324,7 +289,7 @@ main {
 }
 
 .dropdown-content a:hover {
-    color: #99D066;
+    /* color: #99D066; */
     border-radius: 10px;
     z-index: 1;
 }
@@ -343,7 +308,7 @@ main {
     text-decoration: none;
     display: block;
     text-align: left;
-    color: #53A35C;
+    /* color: #53A35C; */
     font-size: 16px;
     letter-spacing: 1.5px;
     font-weight: 400;
@@ -351,7 +316,7 @@ main {
 }
 
 .dropdown-content p:hover {
-    color: #99D066;
+    /* color: #99D066; */
     border-radius: 10px;
     z-index: 1;
 }

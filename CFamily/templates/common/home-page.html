@@ -1,150 +1,175 @@
 {% extends 'base/index.html' %}
 {% block content %}
-    {% load static %}
+{% load static %}
 
 
-    <main>
-        <section class="header-section">
-            <!-- <img class="header-image" src="{% static 'images/brian-erickson-CBHxASbfH4s-unsplash.jpg' %}" alt=""> -->
-            <div class="header-content">
-                <h1 class="header-title">Bring Happy Smiles!</h1>
-                <p class="header-description">Visit our donation store and help CFamily overcome challenges</p>
-                {% if request.user.is_authenticated %}
-                    <a class="support-button" href="{% url 'donation_list' %}">Support Us</a>
-                {% else %}
-                    <a class="support-button" href="{% url 'user_register' %}">Join Us</a>
-                {% endif %}
-            </div>
-        </section>
-        <section class="description-section">
-            <img src="{% static 'images/pngwing.com (10).png' %}" alt="">
-            <div>
-                <p class="description-paragraph">CFamily is a unique community where parents and patients affected by
-                    cystic
-                    fibrosis find support and
-                    solidarity.</p>
-                <p class="description-paragraph">Members of CFamily interact to provide practical assistance and support
-                    in
-                    their daily lives, creating a
-                    strong bond and building a reliable and understanding collective.
-                </p>
-                <p class="description-paragraph">They witness the significance of shared experience and emotional
-                    support, which
-                    have a profound impact on the
-                    quality of life and the fight against cystic fibrosis.
-                </p>
-                <p class="description-paragraph">They are fighting this debilitating condition but require donations to
-                    afford
-                    expensive medications and
-                    equipment to maintain their health.
-                </p>
-                <p class="description-paragraph">The donations from people will greatly assist them in their battle.</p>
-            </div>
+<main>
+    <section class="header-section">
+        <!-- <img class="header-image" src="{% static 'images/brian-erickson-CBHxASbfH4s-unsplash.jpg' %}" alt=""> -->
+        <div class="header-content">
+            <h1 class="header-title">Bring Happy Smiles!</h1>
+            <p class="header-description">Visit our donation store and help CFamily overcome challenges</p>
+            {% if request.user.is_authenticated %}
+            <a class="support-button" href="{% url 'donation_list' %}">Support Us</a>
+            {% else %}
+            <a class="support-button" href="{% url 'user_register' %}">Join Us</a>
+            {% endif %}
+        </div>
+    </section>
+    <section class="about-us-section">
+      
+        <ul role="list" class="about-us-list">
+            <li class="about-us-list-element first-element ">
+                <h3>About us</h3>
+                <p>Cfamily is an association consisting of medical professionals, relatives of patients and patients
+                    affected by the disease cystic fibrosis.</p>
+            </li>
+            <li class="about-us-list-element second-element">
+                <h3>Our mission</h3>
+                <p>Our mission is to provide a future and a high quality of life, psychological and health support.</p>
+            </li>
+            <li class="about-us-list-element third-element">
+                <h3>Our aim</h3>
+                <p>Our main goal is to make a research discovery and develop a genetic treatment for cystic fibrosis.</p>
+            </li>
+     
+        </ul>
 
-        </section>
-        <section class="cystic-fibrosis-section">
-            <button class="cystic-fibrosis-title">CYSTIC FIBROSIS?</button>
-            <div class="cystic-fibrosis-dropdown-content">
-                <div class="cystic-fibrosis-details">
+    </section>
+    
+    <section class="cystic-fibrosis-section">
+        <button class="cystic-fibrosis-title">CYSTIC FIBROSIS?</button>
+        <div class="cystic-fibrosis-dropdown-content">
+            <div class="cystic-fibrosis-details">
 
-                    <div class="cystic-fibrosis-what">
-                        <h2 class="cystic-fibrosis-subtitle">WHAT</h2>
+                <div class="cystic-fibrosis-what">
+                    <h2 class="cystic-fibrosis-subtitle">WHAT</h2>
 
-                        <div>
-                            <p class="cystic-fibrosis-description">AN AUTOSOMAL RECESSIVE GENETIC DISORDER </p>
-                            <p class="cystic-fibrosis-description">THAT INVOLVES
-                                ABNORMAL
-                                TRANSPORT OF</p>
-                            <p class="cystic-fibrosis-description">CHLORIDE AND SODIUM
-                                ACROSS THE CELL</p>
-                            <p class="cystic-fibrosis-description">MEMBRANE CAUSING A THICK
-                                MUCUS</p>
-                            <p class="cystic-fibrosis-description">TO BUILD UP</p>
-                        </div>
-
+                    <div>
+                        <p class="cystic-fibrosis-description">AN AUTOSOMAL RECESSIVE GENETIC DISORDER </p>
+                        <p class="cystic-fibrosis-description">THAT INVOLVES
+                            ABNORMAL
+                            TRANSPORT OF</p>
+                        <p class="cystic-fibrosis-description">CHLORIDE AND SODIUM
+                            ACROSS THE CELL</p>
+                        <p class="cystic-fibrosis-description">MEMBRANE CAUSING A THICK
+                            MUCUS</p>
+                        <p class="cystic-fibrosis-description">TO BUILD UP</p>
                     </div>
-                    <div class="cystic-fibrosis-affects">
-                        <h2 class="cystic-fibrosis-subtitle">AFFECTS</h2>
-                        <div class="cystic-fibrosis-organs">
-                            <div class="cystic-fibrosis-organ">
-                                <img class="cystic-fibrosis-organ-lungs-image"
-                                     src="{% static 'images/organs/pngwing.com (7).png' %}" alt="">
-                                <h3 class="cystic-fibrosis-organ-title">LUNGS</h3>
-                            </div>
-                            <div class="cystic-fibrosis-organ">
-                                <img class="cystic-fibrosis-organ-pancreas-image"
-                                     src="{% static 'images/organs/pngwing.com (9).png' %}" alt="">
-                                <h3 class="cystic-fibrosis-organ-title">PANCREAS</h3>
-                            </div>
-                            <div class="cystic-fibrosis-organ">
-                                <img class="cystic-fibrosis-organ-liver-image"
-                                     src="{% static 'images/organs/pngwing.com (4).png' %}" alt="">
-                                <h3 class="cystic-fibrosis-organ-title">LIVER</h3>
-                            </div>
-                            <div class="cystic-fibrosis-organ">
-                                <img class="cystic-fibrosis-organ-intestine-image"
-                                     src="{% static 'images/organs/pngwing.com (8).png' %}" alt="">
-                                <h3 class="cystic-fibrosis-organ-title">INTESTINE</h3>
-                            </div>
+
+                </div>
+                <div class="cystic-fibrosis-affects">
+                    <h2 class="cystic-fibrosis-subtitle">AFFECTS</h2>
+                    <div class="cystic-fibrosis-organs">
+                        <div class="cystic-fibrosis-organ">
+                            <img class="cystic-fibrosis-organ-lungs-image"
+                                src="{% static 'images/organs/pngwing.com (7).png' %}" alt="">
+                            <h3 class="cystic-fibrosis-organ-title">LUNGS</h3>
+                        </div>
+                        <div class="cystic-fibrosis-organ">
+                            <img class="cystic-fibrosis-organ-pancreas-image"
+                                src="{% static 'images/organs/pngwing.com (9).png' %}" alt="">
+                            <h3 class="cystic-fibrosis-organ-title">PANCREAS</h3>
+                        </div>
+                        <div class="cystic-fibrosis-organ">
+                            <img class="cystic-fibrosis-organ-liver-image"
+                                src="{% static 'images/organs/pngwing.com (4).png' %}" alt="">
+                            <h3 class="cystic-fibrosis-organ-title">LIVER</h3>
+                        </div>
+                        <div class="cystic-fibrosis-organ">
+                            <img class="cystic-fibrosis-organ-intestine-image"
+                                src="{% static 'images/organs/pngwing.com (8).png' %}" alt="">
+                            <h3 class="cystic-fibrosis-organ-title">INTESTINE</h3>
                         </div>
                     </div>
                 </div>
-                <div class="cystic-fibrosis-symptoms">
-                    <div class="cystic-fibrosis-symptoms-info">
-                        <h2 class="cystic-fibrosis-subtitle">SYMPTOMS</h2>
+            </div>
+            <div class="cystic-fibrosis-symptoms">
+                <div class="cystic-fibrosis-symptoms-info">
+                    <h2 class="cystic-fibrosis-subtitle">SYMPTOMS</h2>
 
-                        <ul class="cystic-fibrosis-symptoms-list" role="list">
-                            <li class="cystic-fibrosis-symptom">DIFFICULTY BREATHING</li>
-                            <li class="cystic-fibrosis-symptom">PERSISTENT COUGH</li>
-                            <li class="cystic-fibrosis-symptom">POOR GROWTH</li>
-                            <li class="cystic-fibrosis-symptom">LUNG AND SINUS</li>
-                            <li class="cystic-fibrosis-symptom">INFERTILITY</li>
-                            <li class="cystic-fibrosis-symptom">BOWEL ISSUES</li>
-                            <li class="cystic-fibrosis-symptom">DIABETES</li>
+                    <ul class="cystic-fibrosis-symptoms-list" role="list">
+                        <li class="cystic-fibrosis-symptom">DIFFICULTY BREATHING</li>
+                        <li class="cystic-fibrosis-symptom">PERSISTENT COUGH</li>
+                        <li class="cystic-fibrosis-symptom">POOR GROWTH</li>
+                        <li class="cystic-fibrosis-symptom">LUNG AND SINUS</li>
+                        <li class="cystic-fibrosis-symptom">INFERTILITY</li>
+                        <li class="cystic-fibrosis-symptom">BOWEL ISSUES</li>
+                        <li class="cystic-fibrosis-symptom">DIABETES</li>
 
-                        </ul>
+                    </ul>
 
 
-                    </div>
-                    <div class="cystic-fibrosis-cause-info">
-                        <h2 class="cystic-fibrosis-subtitle">CAUSED BY</h2>
-                        <p class="cystic-fibrosis-cause">MUTATIONS IN THE GENE ENCODING FOR THE CFTR PROTEIN</p>
-                    </div>
                 </div>
-                <div class="cystic-fibrosis-facts">
-                    <div class="cystic-fibrosis-facts-info">
-                        <h2 class="cystic-fibrosis-subtitle">DID YOU KNOW?</h2>
-                        <ul class="cystic-fibrosis-facts-list">
-                            <li class="cystic-fibrosis-fact">DIFFERENT MUTATIONS IN THE CTFR GENE CAN CAUSE DIFFERENT
-                                SYMPTOMS
-                            </li>
-                            <li class="cystic-fibrosis-fact">THANKS TO GENETIC SCREENING AT BIRTH, MOST CHILDREN ARE
-                                DIAGNOSED
-                                BEFORE THE AGE OF TWO
-                            </li>
-                            <li class="cystic-fibrosis-fact">ADVANCED WITH CF WILL GO ON TO LIVE FULFILLING LIVES, INTO
-                                THEIR
-                                LATE 305 AND BEYOND
-                            </li>
-
-                        </ul>
-                    </div>
-                    <div class="cystic-fibrosis-cftr-info">
-                        <h2 class="cystic-fibrosis-subtitle">WHAT is CFTR ?</h2>
-                        <p class="cystic-fibrosis-cftr">Regulates sweat, digestive fluids, and mucus Controls the
-                            movement
-                            of
-                            chloride and sodium through
-                            cell membranes.</p>
-                    </div>
+                <div class="cystic-fibrosis-cause-info">
+                    <h2 class="cystic-fibrosis-subtitle">CAUSED BY</h2>
+                    <p class="cystic-fibrosis-cause">MUTATIONS IN THE GENE ENCODING FOR THE CFTR PROTEIN</p>
                 </div>
             </div>
+            <div class="cystic-fibrosis-facts">
+                <div class="cystic-fibrosis-facts-info">
+                    <h2 class="cystic-fibrosis-subtitle">DID YOU KNOW?</h2>
+                    <ul class="cystic-fibrosis-facts-list">
+                        <li class="cystic-fibrosis-fact">DIFFERENT MUTATIONS IN THE CTFR GENE CAN CAUSE DIFFERENT
+                            SYMPTOMS
+                        </li>
+                        <li class="cystic-fibrosis-fact">THANKS TO GENETIC SCREENING AT BIRTH, MOST CHILDREN ARE
+                            DIAGNOSED
+                            BEFORE THE AGE OF TWO
+                        </li>
+                        <li class="cystic-fibrosis-fact">ADVANCED WITH CF WILL GO ON TO LIVE FULFILLING LIVES, INTO
+                            THEIR
+                            LATE 305 AND BEYOND
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="cystic-fibrosis-cftr-info">
+                    <h2 class="cystic-fibrosis-subtitle">WHAT is CFTR ?</h2>
+                    <p class="cystic-fibrosis-cftr">Regulates sweat, digestive fluids, and mucus Controls the
+                        movement
+                        of
+                        chloride and sodium through
+                        cell membranes.</p>
+                </div>
+            </div>
+        </div>
 
 
-        </section>
+    </section>
 
-        <script src="{% static 'js/script.js' %}"></script>
-    </main>
+    
+    
+    <!-- <section class="description-section">
+
+        <div>
+            <p class="description-paragraph">CFamily is a unique community where parents and patients affected by
+                cystic
+                fibrosis find support and
+                solidarity.</p>
+            <p class="description-paragraph">Members of CFamily interact to provide practical assistance and support
+                in
+                their daily lives, creating a
+                strong bond and building a reliable and understanding collective.
+            </p>
+            <p class="description-paragraph">They witness the significance of shared experience and emotional
+                support, which
+                have a profound impact on the
+                quality of life and the fight against cystic fibrosis.
+            </p>
+            <p class="description-paragraph">They are fighting this debilitating condition but require donations to
+                afford
+                expensive medications and
+                equipment to maintain their health.
+            </p>
+            <p class="description-paragraph">The donations from people will greatly assist them in their battle.</p>
+        </div>
+
+    </section> -->
+    
+
+    <script src="{% static 'js/script.js' %}"></script>
+</main>
 
 
 {% endblock %}

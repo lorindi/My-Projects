@@ -1,0 +1,88 @@
+.body {
+    background-color: lightgrey;
+}
+
+
+.support-button,
+.add-to-cart-button,
+.edit-link,
+.delete-link {
+
+    background-color: gray;
+
+}
+
+.fa-shop,
+.fa-cart-shopping,
+.fa-user,
+.fa-arrow-right-from-bracket,
+.fa-heart,
+.fa-caret-down {
+
+    color: gray;
+
+}
+
+.projects-link:hover,
+.initiatives-link:hover,
+.events-link:hover,
+.charitable-treks-link:hover,
+.charity-races-link:hover,
+.benefactors-link:hover {
+
+    background-color: #ececec9a;
+
+    color: black;
+
+}
+
+
+
+.cystic-fibrosis-title {
+    background-color: lightgrey;
+}
+
+
+
+.about-us-section {
+    background-color: rgba(128, 128, 128, 0.5);
+
+}
+
+
+
+.about-us-list-element,
+.cystic-fibrosis-section {
+    background-color: rgba(255, 255, 255, 0.514);
+
+}
+
+.shop-icon-link:hover,
+.cart-icon-link:hover,
+.username:hover,
+.fa-heart:hover,
+.fa-cart-shopping:hover,
+.fa-user:hover,
+.fa-arrow-right-from-bracket:hover,
+.fa-caret-left:hover,
+.fa-caret-right:hover,
+.fa-shop:hover {
+
+    color: white;
+}
+
+.create-donation-link:hover,
+.create-projects-link:hover,
+.create-initiatives-link:hover,
+.create-events-link:hover,
+.create-charitable-treks-link:hover,
+.create-charity-races-link:hover,
+.create-benefactors-link:hover {
+    background-color: rgba(255, 255, 255, 0.514);
+}
+
+.cystic-fibrosis-title:hover {
+    color: grey;
+
+
+}
