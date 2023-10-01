@@ -1,11 +1,13 @@
+/* -------------------------------header-section------------------------------------------ */
+
 .header-section {
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.37);
     /* background: linear-gradient(25deg, #3abec57c, #9abe5c79); */
-    margin: 0px 0px 20px 20px;
     position: relative;
 
 }
@@ -15,103 +17,76 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 200px;
+    height: 450px;
     justify-content: center;
 
 
+
+}
+
+.header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/brian-erickson-CBHxASbfH4s-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    filter: grayscale();
+    z-index: -1;
 }
 
 
 .header-title {
-    font-size: 35px;
-    font-weight: 300;
-    margin-bottom: 15px;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 1px black;
 }
 
 .header-description {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 23px;
+    margin-bottom: 40px;
+    font-weight: 500;
 }
 
 .support-button {
-    color: white;
-    padding: 7px 10px;
-    border-radius: 5px;
-}
-
-.about-us-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 400px;
-    font-family: 'Montserrat', sans-serif;
-
-}
-
-.about-us-list {
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-    flex-wrap: wrap
-}
-
-.about-us-list-element {
-    /* background: linear-gradient(5deg, #3abec57c, #9abe5c79); */
-    width: 250px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    justify-content: space-around;
-    border-radius: 5px;
-}
-
-/* .first-element {
-    background-color: #b7d2a9ce;
-}
-.second-element {
-    background-color: #84c4a077;
-}
-.third-element {
-    background-color: #51a39734;
-} */
-.description-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-family: 'Montserrat', sans-serif;
-    align-items: center;
-    justify-content: space-evenly;
-    min-height: 350px;
-    width: 100%;
-}
-
-.description-section img {
-    height: 350px;
-}
-
-.description-section div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 350px;
-}
-
-.description-section div p {
-    width: 700px;
-    font-size: 16.5px;
+    font-size: 20px;
     font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 5px;
+    letter-spacing: 2px;
 }
+/* -------------------------------header-section------------------------------------------ */
+
+/* -------------------------------cystic-fibrosis-section------------------------------------------ */
 
 .cystic-fibrosis-section {
+  
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
+    position: relative;
+}
+
+.cystic-fibrosis-dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/pngwing.com.png');
+    background-size: 45%;
+    background-position: bottom;
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    filter: grayscale();
+    z-index: -1;
 }
 
 .cystic-fibrosis-title {
@@ -120,7 +95,7 @@
     justify-content: center;
     font-size: 45px;
     font-weight: 200;
-    min-height: 200px;
+    min-height: 150px;
     width: 100%;
     border: none;
     font-style: italic;
@@ -206,12 +181,13 @@
     background-position: center;
     object-fit: cover;
     background-size: contain;
+    filter: grayscale(80%);
 
 }
 
 .cystic-fibrosis-organ-pancreas-image {
     width: 118px;
-
+    filter: grayscale(80%);
 
 }
 
@@ -222,7 +198,7 @@
     background-position: center;
     object-fit: cover;
     background-size: contain;
-
+    filter: grayscale(80%);
 
 
 
@@ -235,7 +211,7 @@
     background-position: center;
     object-fit: cover;
     background-size: contain;
-
+    filter: grayscale(80%);
 }
 
 .cystic-fibrosis-symptoms {
@@ -318,3 +294,200 @@
     width: 550px;
     font-size: 16.5px;
 }
+/* -------------------------------cystic-fibrosis-section------------------------------------------ */
+
+
+/* -------------------------------about-us-section------------------------------------------ */
+
+.about-us-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 450px;
+    font-family: 'Montserrat', sans-serif;
+   
+
+
+}
+
+.container {
+    padding: 50px 0px 40px 0px;
+    box-shadow: 0px -5px 20px rgba(211, 211, 211, 0.493);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    gap: 70px;
+    justify-content: center;
+
+}
+
+.container:hover>.card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card {
+    width: 225px;
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    /* transition: transform 1000ms; */
+    transform-style: preserve-3d;
+}
+
+.card-first {
+    transition: transform 1000ms;
+}
+
+.card-second {
+    transition: transform 2500ms;
+}
+
+.card-third {
+    transition: transform 1000ms;
+}
+
+.card-fourth {
+    transition: transform 2500ms;
+}
+.front-title {
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px black;
+}
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.452);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+/* .front {
+    background-image: url(https://source.unsplash.com/random/350x500);
+} */
+
+
+.front-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.479);
+
+
+}
+.front-first::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/annie-spratt-MChSQHxGZrQ-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    border-radius: 5px;
+    filter: grayscale();
+}
+.front-second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.479);
+}
+.front-second::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/ux-indonesia-qC2n6RQU4Vw-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    border-radius: 5px;
+    filter: grayscale();
+}
+
+.front-third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.479);
+}
+.front-third::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/dushawn-jovic-lTweu1Y0UWI-unsplash.jpg');
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
+    border-radius: 5px;
+    filter: grayscale();
+}
+.front-fourth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.479);
+}
+.front-fourth::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/national-cancer-institute-vRbPz2qWkaA-unsplash.jpg');
+    background-size: cover;
+    background-position: left;
+    z-index: -1;
+    border-radius: 5px;
+    filter: grayscale();
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+ 
+
+}
+.back p {
+    display: flex;
+    font-size: 18px;
+    line-height: 45px;
+    font-weight: 500;
+
+}
+.card-first>.back>p {
+    font-size: 16px;
+    line-height: 35px;
+}
+/* -------------------------------about-us-section------------------------------------------ */

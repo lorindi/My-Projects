@@ -1,9 +1,68 @@
-.body {
+/* -----------------------------------------------------home-page-------------------------------------------------------------- */
+.header-title {
+    color: white;
+}
+
+.header-description {
+    color: white;
+}
+
+.support-button {
     background-color: lightgrey;
+    color: black;
 }
 
 
-.support-button,
+
+.header-content {
+    box-shadow: inset 0px -30px 20px 0px white;
+
+}
+
+
+
+
+
+.about-us-list-element {
+    background-color: gray;
+
+}
+.cystic-fibrosis-title {
+    background-color: white;
+    
+}
+
+.cystic-fibrosis-title:hover {
+    color: grey;
+
+
+}
+
+.cystic-fibrosis-dropdown-content {
+    background-color: white;
+    z-index: -1;
+}
+/* -----------------------------------------------------home-page-------------------------------------------------------------- */
+/* -----------------------------------------------------cards-back-------------------------------------------------------------- */
+.back {
+
+    background-color: lightgrey;
+
+
+}
+.back p {
+
+    color: black;
+
+    text-shadow: 1px 1px 3px white;
+}
+/* -----------------------------------------------------cards-back-------------------------------------------------------------- */
+.body {
+    background-color: white;
+}
+
+
+
 .add-to-cart-button,
 .edit-link,
 .delete-link {
@@ -36,27 +95,6 @@
 
 }
 
-
-
-.cystic-fibrosis-title {
-    background-color: lightgrey;
-}
-
-
-
-.about-us-section {
-    background-color: rgba(128, 128, 128, 0.5);
-
-}
-
-
-
-.about-us-list-element,
-.cystic-fibrosis-section {
-    background-color: rgba(255, 255, 255, 0.514);
-
-}
-
 .shop-icon-link:hover,
 .cart-icon-link:hover,
 .username:hover,
@@ -79,10 +117,4 @@
 .create-charity-races-link:hover,
 .create-benefactors-link:hover {
     background-color: rgba(255, 255, 255, 0.514);
-}
-
-.cystic-fibrosis-title:hover {
-    color: grey;
-
-
 }
