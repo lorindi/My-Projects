@@ -30,7 +30,6 @@
     width: 270px;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
     overflow: hidden;
@@ -44,14 +43,13 @@
 .card-list-element a {
     display: flex;
     border: 1px solid #0D3E3E;
-    border-radius: 7px;
     color: black;
     font-size: 16px;
     letter-spacing: 2px;
     padding: 5px 10px;
     font-weight: bolder;
     margin-bottom: 10px;
-    width: 260px;
+    width: 250px;
     align-items: center;
     justify-content: center;
 }

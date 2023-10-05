@@ -1,0 +1,17 @@
+.support-button,
+.cystic-fibrosis-symptom,
+.card,
+.projects-link,
+.initiatives-link,
+.events-link,
+.charitable-treks-link,
+.charity-races-link,
+.benefactors-link,
+.card-list-element,
+.donation-item, 
+.add-to-cart-button,
+.fa-angles-right,
+.quantity-input,
+.card-list-element a {
+    border-radius: 3px;
+}
