@@ -10,7 +10,7 @@ from django.views import View
 from .models import Campaign, CampaignRegistration
 
 
-class AdminCampaignListView(ListView):
+class AdminCampaignListView(LoginRequiredMixin, ListView):
     template_name = 'campaigns/admin_campaign_list.html'
     model = Campaign
     context_object_name = 'campaigns'
@@ -25,7 +25,7 @@ class AdminCampaignListView(ListView):
         return context
 
 
-class CampaignRegisterView(View):
+class CampaignRegisterView(LoginRequiredMixin, View):
     template_name = 'campaigns/campaign_register.html'
 
     def get(self, request, pk):
@@ -44,7 +44,7 @@ class CampaignRegisterView(View):
         return redirect('campaign_success', pk=campaign.pk)
 
 
-class CampaignUnregisterView(View):
+class CampaignUnregisterView(LoginRequiredMixin, View):
     def get(self, request, pk):
         campaign = get_object_or_404(Campaign, pk=pk)
         user = request.user
@@ -59,7 +59,7 @@ class CampaignUnregisterView(View):
         return redirect('campaign_detail', pk=campaign.pk)
 
 
-class CampaignListView(ListView):
+class CampaignListView(LoginRequiredMixin, ListView):
     model = Campaign
     template_name = 'campaigns/campaign_list.html'
     context_object_name = 'campaigns'
@@ -83,10 +83,29 @@ class CampaignDetailView(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['user_type'] = self.request.user.type_user.lower() if self.request.user.is_authenticated else ''
+        user = self.request.user
+
+        # Проверка дали потребителят е аутентикиран и има атрибут type_user
+        if user.is_authenticated and hasattr(user, 'type_user') and user.type_user is not None:
+            # Проверка дали потребителят е Patient или Parent of a patient
+            if user.type_user.lower() in ['patient', 'parent of a patient']:
+                context['user_can_register'] = True
+            else:
+                context['user_can_register'] = False
+        else:
+            context['user_can_register'] = False
+
+        # Останалата част на кода остава непроменена
         context['user_already_registered'] = CampaignRegistration.objects.filter(campaign=context['campaign'],
-                                                                                 user=self.request.user).exists()
+                                                                                 user=user).exists()
         return context
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['user_type'] = self.request.user.type_user.lower() if self.request.user.is_authenticated else ''
+    #     context['user_already_registered'] = CampaignRegistration.objects.filter(campaign=context['campaign'],
+    #                                                                              user=self.request.user).exists()
+    #     return context
 
     def post(self, request, pk):
         return redirect('campaign_detail', pk=pk)

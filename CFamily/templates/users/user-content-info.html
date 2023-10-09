@@ -1,0 +1,50 @@
+{% extends 'users/user-details-page.html' %}
+{% block profile_details_content %}
+<div class="user-details-content-info">
+
+    <div class="user-details-section-current-info">
+        <div class="current-details">
+            <span class="span">Username</span>
+
+            <p class="information-user">{{ object.username|default:"Not specified" }}</p>
+        </div>
+        <div class="current-details">
+            <span class="span">Name</span>
+            <p class="information-user">{{ object.get_name|default:"Not specified" }}</p>
+        </div>
+        <div class="current-details">
+            <span class="span">Email</span>
+            <p class="information-user">{{ object.email|default:"Not specified" }}</p>
+        </div>
+        <div class="current-details">
+            <span class="span">Date of birth</span>
+            <p class="information-user">{{ object.date_of_birth|default:"Not specified" }}</p>
+        </div>
+    </div>
+
+    <div class="user-details-section-current-info">
+        <div class="current-details">
+            <span class="span">Gender</span>
+            <p class="information-user">{{ object.gender|default:"Not specified" }}</p>
+        </div>
+        <div class="current-details">
+            <span class="span">Telephone</span>
+            <p class="information-user">{{ object.telephone|default:"Not specified" }}</p>
+        </div>
+        <div class="current-details">
+            <span class="span">Country</span>
+            <p class="information-user">{{ object.side|default:"Not specified" }}</p>
+        </div>
+        <div class="current-details">
+            <span class="span">City</span>
+            <p class="information-user">{{ object.city|default:"Not specified" }}</p>
+        </div>
+    </div>
+    <div class="user-details-section-current-info">
+        <div class="current-details">
+            <span class="span">Web sites</span>
+            <p class="information-user">{{ object.link|default:"Not specified" }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

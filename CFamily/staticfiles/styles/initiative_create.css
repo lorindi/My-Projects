@@ -1,17 +1,10 @@
 .container-initiative-create-form {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid #0D3E3E; */
-    backdrop-filter: blur(10px);
-    text-shadow: 1px 1px 2px #0D3E3E;
-    background-color: #0d3e3e50;
-    box-shadow: 1px 1px 5px 1px #F8F7EE;
-    color: aliceblue;
     width: 450px;
     height: 580px;
     align-items: center;
     justify-content: center;
-    border-radius: 10%;
     font-family: 'Wix Madefor Display', sans-serif;
 }
 
@@ -36,9 +29,6 @@
 }
 .initiative-create-form-button {
     width: 280px;
-    background-color: #ffffff7d;
-    border-radius: 10px;
-    color: #0D3E3E;
     font-family: 'Wix Madefor Display', sans-serif;
     font-size: 18px;
     letter-spacing: 2px;

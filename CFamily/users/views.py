@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model, login
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import generic
@@ -31,12 +32,30 @@ class UserLogOut(LogoutView):
     next_page = reverse_lazy('homepage')
 
 
-class UserDetailsView(generic.DetailView):
+class UserDetailsView(LoginRequiredMixin, generic.DetailView):
     template_name = 'users/user-details-page.html'
     model = UserModel
 
+class UserDetailsContentInfoView(LoginRequiredMixin, generic.DetailView):
+    template_name = 'users/user-content-info.html'
+    model = UserModel
 
-class UserEditView(generic.UpdateView):
+# class UserDetailsContentCampaignsView(LoginRequiredMixin, generic.DetailView):
+#     template_name = 'users/user-content-campaigns.html'
+#     model = UserModel
+
+class UserDetailsContentCampaignsView(LoginRequiredMixin, generic.ListView):
+    template_name = 'users/user-content-campaigns.html'
+    model = UserModel
+    paginate_by = 8
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['search'] = self.request.GET.get('search', '')
+        # context['categories'] = Category.objects.all()
+        return context
+
+class UserEditView(LoginRequiredMixin, generic.UpdateView):
     model = UserModel
     template_name = 'users/user-edit-page.html'
     fields = ['username',
@@ -66,7 +85,7 @@ class UserEditView(generic.UpdateView):
         return super().form_valid(form)
 
 
-class UserDeleteView(generic.DeleteView):
+class UserDeleteView(LoginRequiredMixin, generic.DeleteView):
     template_name = 'users/user-delete-page.html'
     model = UserModel
     next_page = reverse_lazy('homepage')
@@ -79,7 +98,7 @@ class UserDeleteView(generic.DeleteView):
         return redirect('homepage')
 
 
-class ChangeAccPasswordView(PasswordChangeView):
+class ChangeAccPasswordView(LoginRequiredMixin, PasswordChangeView):
     form_class = PasswordChangeForm
     success_url = reverse_lazy("password_change_done")
     template_name = "user_passwords/change_password.html"

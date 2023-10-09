@@ -16,7 +16,6 @@ font-family: 'Roboto', sans-serif; */
     height: 580px;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     color: #53A35C;
 
@@ -117,7 +116,6 @@ input::placeholder {
 #id_link,
 #id_city {
     background-color: rgba(255, 255, 255, 0.267);
-    border-radius: 5px;
     padding: 5px 10px;
     letter-spacing: 1px;
     width: 250px;
@@ -133,7 +131,6 @@ input::placeholder {
     background-color: #53a35cc0;
     border: none;
     color: white;
-    border-radius: 5px;
     font-size: 20px;
     letter-spacing: 3px;
     padding: 5px;

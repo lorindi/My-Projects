@@ -25,7 +25,7 @@
 
             <div>
 
-                {% if user_type == 'patient' or user_type == 'parent of a patient' %}
+                {% if user_can_register %}
                     {% if user_already_registered %}
                         <a href="{% url 'campaign_unregister' campaign.pk %}" class="btn btn-danger">Unregister</a>
                     {% else %}

@@ -1,13 +1,18 @@
 from django.urls import path
 
 from users.views import UserRegisterView, UserLogin, UserLogOut, UserDetailsView, UserEditView, UserDeleteView, \
-    ChangeAccPasswordView, PassChanged, PasswordReset, PasswordResetDone, PasswordResetConfirm, PasswordResetComplete
+    ChangeAccPasswordView, PassChanged, PasswordReset, PasswordResetDone, PasswordResetConfirm, PasswordResetComplete, \
+    UserDetailsContentInfoView, UserDetailsContentCampaignsView
 
 urlpatterns = [
     path('register/', UserRegisterView.as_view(), name='user_register'),
     path('login/', UserLogin.as_view(), name='user_login'),
     path('logout/', UserLogOut.as_view(), name='user_logout'),
     path('details/<int:pk>/', UserDetailsView.as_view(), name='user_details'),
+
+    path('details/<int:pk>/info/', UserDetailsContentInfoView.as_view(), name='user_content_info'),
+    path('details/<int:pk>/recorded-campaigns/', UserDetailsContentCampaignsView.as_view(), name='user_content_campaigns'),
+
     path('edit/<int:pk>/', UserEditView.as_view(), name='user_edit'),
     path('delete/<int:pk>/', UserDeleteView.as_view(), name='user_delete'),
 

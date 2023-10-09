@@ -283,15 +283,16 @@
     flex-wrap: wrap;
     min-height: 250px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     font-weight: 400;
+    font-size: 16px;
 }
 
 .cystic-fibrosis-facts-info {
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 550px;
     margin-top: 10px;
 }
@@ -303,6 +304,7 @@
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 30px;
+    font-size: 18px;
 }
 
 .cystic-fibrosis-cftr {
@@ -336,7 +338,7 @@
     width: 100%;
     flex-wrap: wrap;
     perspective: 1000px;
-    gap: 70px;
+    gap: 80px;
     justify-content: center;
 
 }
@@ -388,7 +390,7 @@
 
 .intro-description {
     display: flex;
-    font-size: 19px;
+    font-size: 16px;
     margin: 14px;
     visibility: hidden;
     opacity: 0;
@@ -400,7 +402,8 @@
 }
 
 .about-us-description {
-    font-size: 17px;
+    font-weight: 450;
+    font-size: 13.5px;
 }
 
 .card:hover {
@@ -411,10 +414,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 350px;
+    height: 220px;
     bottom: 0px;
-    background-color: rgba(255, 255, 255, 0.733);
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.774);
+    backdrop-filter: blur(7px);
 }
 
 .card:hover .intro-description {

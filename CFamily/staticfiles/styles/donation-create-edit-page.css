@@ -3,22 +3,15 @@
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    border: 2px solid #53a35c7a;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    /* text-shadow: 1px 1px 2px #0D3E3E; */
-    box-shadow: 0px 0px 10px 1px #011b0054;
-    color: aliceblue;
+    /* backdrop-filter: blur(5px); */
     padding: 10px;
     min-width: 25%;
-    /* max-width: 75%; */
     width: auto;
     height: auto;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
-    color: #53A35C;
+
 
 }
 
@@ -79,14 +72,12 @@
 #id_name_benefactor,
 #id_contact_email,
 #id_contact_phone {
-    background-color: rgba(255, 255, 255, 0.267);
-    border-radius: 5px;
+
+
     padding: 5px 10px;
     letter-spacing: 1px;
     font-size: 15.5px;
-    color: #53a35c;
     font-style: italic;
-    border: 2px solid #53a35c7a;
     font-weight: 500;
     width: 300px;
 
@@ -100,10 +91,8 @@
 
 .donation-create-edit-card-button {
     width: 300px;
-    background-color: #53a35cc0;
+
     border: none;
-    color: white;
-    border-radius: 5px;
     font-size: 20px;
     letter-spacing: 3px;
     padding: 5px;

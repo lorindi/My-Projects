@@ -1,221 +1,185 @@
 /* font-family: 'Lato', sans-serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto', sans-serif; */
-
+/* --------------------------------header------------------------------------ */
 .container-user-details {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
-    /* backdrop-filter: blur(100px); */
-    /* background-color: rgba(255, 255, 255, 0.288); */
-    height: 100%;
-    min-height: 825px;
+    font-family: 'Montserrat', sans-serif;
     width: 100%;
-    /* border-bottom: 2px solid rgba(255, 255, 255, 0.253);
-    border-top: 2px solid rgba(255, 255, 255, 0.253); */
+    min-height: 855px;
+}
+
+
+.user-details-content-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.user-details-cover-photo {
+    width: 100%;
+    object-fit: cover;
+    height: 225px;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    filter: grayscale();
+}
+
+.user-details-basic-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: -100px;
+}
+
+.user-details-fullname {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.user-details-profile-picture {
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------header------------------------------------ */
+/* --------------------------------nav------------------------------------ */
+
+.user-details-content-navigation {
+    display: flex;
+    width: 100%;
+    height: 170px;
+    align-items: flex-end;
 
 }
 
-/* ------------------------------------------------------------ */
-.container-user-details-content {
+.user-details-navigation {
     display: flex;
     flex-direction: row;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 3px #0d3e3e42;
-    font-family: 'Roboto', sans-serif;
-
-}
-
-.user-details-content-img-and-links {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     justify-content: space-around;
-    align-items: center;
-    height: 700px;
-    width: 350px;
-
+    padding: 7px 0px 7px 0px;
 
 }
 
-.user-details-content-img-and-links img {
-    width: 230px;
-    height: 230px;
-    border-radius: 100%;
-    background-position: center;
-    object-fit: cover;
-    background-size: contain;
-    margin-top: 50px;
-
-
-
-}
-
-.user-details-content-img-and-links div {
+.list-links {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 30%;
-    justify-content: space-evenly;
-    font-size: 16px;
+    flex-direction: row;
+    gap: 20px;
 
 }
 
-.user-details-content-img-and-links div .user-edit {
-    padding: 10px 48.5935px;
-    background-color: #7bc239c5;
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 2px;
-    font-weight: 400;
-    border-radius: 5px;
-    z-index: 1;
-    font-size: 16px;
-
-}
-
-.user-details-content-img-and-links div .user-change-password {
-    padding: 10px 19.1px;
-    background-color: #53a35ce8;
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 2px;
-    font-weight: 400;
-    border-radius: 5px;
-    z-index: 1;
-    font-size: 16px;
-}
-
-.user-details-content-img-and-links div .user-delete {
-    padding: 10px 35.02px;
-    background-color: #016366b4;
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 2px;
-    font-weight: 400;
-    border-radius: 5px;
-    z-index: 1;
-    font-size: 16px;
-}
-
-/* ------------------------------------------------------------ */
-
+/* --------------------------------nav------------------------------------ */
+/* --------------------------------INFO------------------------------------ */
 .user-details-content-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 460px;
+    position: relative;
+    padding: 20px;
+}
+
+.user-details-content-info::before {
+    content: '';
+    position: absolute;
+    width: 66%;
+    min-height: 400px;
+    height: 90%;
+    z-index: 0;
+}
+
+.user-details-section-current-info {
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    align-content: center;
     flex-wrap: wrap;
-    width: 450px;
-    height: 700px;
-    overflow: hidden;
-
+    width: 66%;
+    z-index: 1;
 }
 
 .current-details {
-    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.current-details:nth-child(1) {
-    margin-top: 20px;
+    width: 180px;
+    padding: 10px;
 
 }
 
-.current-details:nth-last-child(1) {
-    margin-bottom: 20px;
-
-}
-
-.current-details label {
-
-    color: aliceblue;
+.span {
+    padding-bottom: 5px;
+    font-size: 16px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+.information-user {
+    display: flex;
+    justify-content: center;
+    width: 180px;
     font-size: 15px;
-    margin-bottom: 3px;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 2px;
-    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
-.current-details p {
-
-    color: white;
-    width: 200px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.473);
-    padding-bottom: 3px;
+/* --------------------------------INFO------------------------------------ */
+/* --------------------------------Campaigns------------------------------------ */
+.user-details-content-campaigns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 460px;
+    position: relative;
+    padding: 20px;
+}
+.user-details-list-campaigns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.user-details-campaign-element{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.493);
+    background-color: white;
+    overflow: hidden;
+}
+.user-details-campaign-element>article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+.user-details-title{
+    overflow-wrap: anywhere;
+}
+.user-details-button{
     font-size: 14px;
-    font-weight: 300;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 2px;
 }
-
-.user-details-content-cover:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 450px;
-    height: 700px;
-    background-image: url("../images/rianne-zuur-PoxFTU7_QKo-unsplash.jpg");
-    border-radius: 10px;
+.user-details-img{
+    width: 150px;
+    height: 150px;
     background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-    border-radius: 15px;
-}
+    object-fit: cover;
+    background-size: contain;
 
-.user-details-content-cover::after {
-    content: "";
-    position: absolute;
-    backdrop-filter: blur(5px);
-    width: 400px;
-    height: 650px;
-    z-index: 1;
-    background-color: #0d3e3e36;
-    border-radius: 5px;
-
-}
-
-/* --------------------------------------------------------------------- */
-.user-info-content-event-info{
-    display: flex;
-    flex-direction: column;
-    height: 700px;
-    width: 300px;
-
-}
-.user-details-content-events {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* border: 1px solid white; */
     
-
 }
-.user-details-content-campaigns{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* .user-details-content-events:before {
-    content: "";
-    display: block;
-    position: fixed;
-
-    background-image: url("../images/nature-treks-events.png");
-    border-radius: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-    border-radius: 30px;
-
-} */
+/* --------------------------------Campaigns------------------------------------ */

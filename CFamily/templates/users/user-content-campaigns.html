@@ -1,0 +1,43 @@
+{% extends 'users/user-details-page.html' %}
+{% block profile_details_content %}
+    <div class="user-details-content-campaigns">
+
+        <ul role="list" class="user-details-list-campaigns">
+            {% for registration in user.campaignregistration_set.all %}
+                <li class="user-details-campaign-element">
+                    <img class="user-details-img" src="{{ registration.campaign.image.url }}"
+                         alt="{{ campaign.title }}">
+                    <article>
+                        <p class="user-details-title">{{ registration.campaign.title }}</p>
+                        <a class="user-details-button" href="{% url 'campaign_detail' registration.campaign.pk %}">SEE MORE</a>
+                    </article>
+
+
+                </li>
+            {% empty %}
+                <li>No registered campaigns.</li>
+            {% endfor %}
+        </ul>
+        {% if user.campaignregistration_set.all|length > 0 %}
+            <div class="user-details-pagination">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}"><i
+                            class="fa-solid fa-caret-left"></i></a>
+                {% else %}
+                    <a><i class="fa-solid fa-caret-left"></i></a>
+                {% endif %}
+
+                {{ page_obj.number }} / {{ paginator.num_pages }}
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}&search={{ search }}"><i
+                            class="fa-solid fa-caret-right"></i></a>
+                {% else %}
+                    <a><i class="fa-solid fa-caret-right"></i></a>
+                {% endif %}
+            </div>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

@@ -1,9 +1,8 @@
-{% extends 'base/index.html' %}
-{% block content %}
-{% load static %}
+{% extends 'users/user-details-page.html' %}
+{% block profile_details_content %}
 
 <main class="main-users-content">
-    <section class="container-user-edit-form">
+    <div class="container-user-edit-form">
         <h1>Edit profile</h1>
    
         
@@ -14,7 +13,7 @@
                 <button type="submit" class="edit-button">Edit</button>
             </form>
             
-    </section>
+    </div>
 </main>
 
 {% endblock %}
