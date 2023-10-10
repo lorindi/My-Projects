@@ -3,11 +3,12 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import generic
-
 from django.contrib.auth.forms import PasswordChangeForm, PasswordResetForm, SetPasswordForm
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView, \
     PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
+from django.core.paginator import Paginator, Page
 
+from campaigns.models import CampaignRegistration
 from users.forms import UserRegisterForm
 
 UserModel = get_user_model()
@@ -36,24 +37,62 @@ class UserDetailsView(LoginRequiredMixin, generic.DetailView):
     template_name = 'users/user-details-page.html'
     model = UserModel
 
+
 class UserDetailsContentInfoView(LoginRequiredMixin, generic.DetailView):
     template_name = 'users/user-content-info.html'
     model = UserModel
+
 
 # class UserDetailsContentCampaignsView(LoginRequiredMixin, generic.DetailView):
 #     template_name = 'users/user-content-campaigns.html'
 #     model = UserModel
 
-class UserDetailsContentCampaignsView(LoginRequiredMixin, generic.ListView):
+class UserDetailsContentCampaignsView(LoginRequiredMixin, generic.DetailView):
     template_name = 'users/user-content-campaigns.html'
     model = UserModel
-    paginate_by = 8
-
+    #
+    # paginate_by = 1
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['search'] = self.request.GET.get('search', '')
-        # context['categories'] = Category.objects.all()
+        user_campaigns = self.get_user_campaigns()
+
+
+        # Определете броя на елементите на страница
+        items_per_page = 8  # Променете този брой според вашите нужди
+
+        # Създайте Paginator обект
+        paginator = Paginator(user_campaigns, items_per_page)
+
+        # Вземете номера на текущата страница от query параметъра 'page'
+        page_number = self.request.GET.get('page')
+
+        # Вземете обект за текущата страница
+        page = paginator.get_page(page_number)
+
+        context['user_campaigns'] = page  # Подайте обекта на текущата страница на шаблона
         return context
+
+    # def get_context_data(self, *args, **kwargs):
+    #     context = super().get_context_data(*args, **kwargs)
+    #     context['search'] = self.request.GET.get('search', '')
+    #     context['user_campaigns'] = self.get_user_campaigns()
+    #     return context
+
+    def get_user_campaigns(self):
+        user = self.request.user
+        # user_campaigns = CampaignRegistration.objects.filter(user=user).select_related('campaign')
+        user_campaigns = CampaignRegistration.objects.filter(user=user).select_related('campaign').order_by(
+            '-registration_date')
+
+        return user_campaigns
+
+    # def get_context_data(self, *args, **kwargs):
+    #     context = super().get_context_data(*args, **kwargs)
+    #     context['search'] = self.request.GET.get('search', '')
+    #     # context['categories'] = Category.objects.all()
+    #     return context
+
 
 class UserEditView(LoginRequiredMixin, generic.UpdateView):
     model = UserModel

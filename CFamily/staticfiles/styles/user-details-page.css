@@ -26,7 +26,8 @@ font-family: 'Roboto', sans-serif; */
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    filter: grayscale();
+    filter: grayscale(100%);
+    opacity: 0.8;
 }
 
 .user-details-basic-information {
@@ -43,10 +44,16 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .user-details-profile-picture {
-    width: 150px;
-    border: 1px solid black;
+
+    /* border: 1px solid black; */
     border-radius: 100%;
     margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+    filter: grayscale();
 }
 
 /* --------------------------------header------------------------------------ */

@@ -3,13 +3,14 @@
     <div class="user-details-content-campaigns">
 
         <ul role="list" class="user-details-list-campaigns">
-            {% for registration in user.campaignregistration_set.all %}
+            {% for registration in user_campaigns %}
                 <li class="user-details-campaign-element">
                     <img class="user-details-img" src="{{ registration.campaign.image.url }}"
                          alt="{{ campaign.title }}">
                     <article>
                         <p class="user-details-title">{{ registration.campaign.title }}</p>
-                        <a class="user-details-button" href="{% url 'campaign_detail' registration.campaign.pk %}">SEE MORE</a>
+                        <a class="user-details-button" href="{% url 'campaign_detail' registration.campaign.pk %}">SEE
+                            MORE</a>
                     </article>
 
 
@@ -18,25 +19,45 @@
                 <li>No registered campaigns.</li>
             {% endfor %}
         </ul>
-        {% if user.campaignregistration_set.all|length > 0 %}
-            <div class="user-details-pagination">
-                {% if page_obj.has_previous %}
-                    <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}"><i
-                            class="fa-solid fa-caret-left"></i></a>
-                {% else %}
-                    <a><i class="fa-solid fa-caret-left"></i></a>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if user_campaigns.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ user_campaigns.previous_page_number }}">previous</a>
                 {% endif %}
 
-                {{ page_obj.number }} / {{ paginator.num_pages }}
+                <span class="current-page">
+                    Page {{ user_campaigns.number }} of {{ user_campaigns.paginator.num_pages }}.
+                </span>
 
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}&search={{ search }}"><i
-                            class="fa-solid fa-caret-right"></i></a>
-                {% else %}
-                    <a><i class="fa-solid fa-caret-right"></i></a>
+                {% if user_campaigns.has_next %}
+                    <a href="?page={{ user_campaigns.next_page_number }}">next</a>
+                    <a href="?page={{ user_campaigns.paginator.num_pages }}">last &raquo;</a>
                 {% endif %}
-            </div>
-        {% endif %}
+            </span>
+        </div>
+
+
+{#                {% if user_campaigns|length > 0 %}#}
+{#                    <div class="user-details-pagination">#}
+{#                        {% if page_obj.has_previous %}#}
+{#                            <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}"><i#}
+{#                                    class="fa-solid fa-caret-left"></i></a>#}
+{#                        {% else %}#}
+{#                            <a><i class="fa-solid fa-caret-left"></i></a>#}
+{#                        {% endif %}#}
+{##}
+{#                        {{ page_obj.number }} / {{ paginator.num_pages }}#}
+{##}
+{#                        {% if page_obj.has_next %}#}
+{#                            <a href="?page={{ page_obj.next_page_number }}&search={{ search }}"><i#}
+{#                                    class="fa-solid fa-caret-right"></i></a>#}
+{#                        {% else %}#}
+{#                            <a><i class="fa-solid fa-caret-right"></i></a>#}
+{#                        {% endif %}#}
+{#                    </div>#}
+{#                {% endif %}#}
 
     </div>
 

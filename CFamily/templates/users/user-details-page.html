@@ -28,6 +28,7 @@
                     <div class="user-details-links list-links">
 
                         <a href="{% url 'user_content_info' pk=request.user.pk %}">Information</a>
+{#                        <a href="{% url 'user_content_campaigns' pk=request.user.pk %}">Campaigns</a>#}
                         {% if object.type_user == 'Parent of a patient' or object.type_user == 'Patient' %}
                             <a href="{% url 'user_content_campaigns' pk=request.user.pk %}">Campaigns</a>
                         {% endif %}
