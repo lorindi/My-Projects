@@ -63,7 +63,7 @@ class CampaignListView(LoginRequiredMixin, ListView):
     model = Campaign
     template_name = 'campaigns/campaign_list.html'
     context_object_name = 'campaigns'
-    paginate_by = 2
+    paginate_by = 4
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -100,12 +100,6 @@ class CampaignDetailView(LoginRequiredMixin, DetailView):
                                                                                  user=user).exists()
         return context
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['user_type'] = self.request.user.type_user.lower() if self.request.user.is_authenticated else ''
-    #     context['user_already_registered'] = CampaignRegistration.objects.filter(campaign=context['campaign'],
-    #                                                                              user=self.request.user).exists()
-    #     return context
 
     def post(self, request, pk):
         return redirect('campaign_detail', pk=pk)

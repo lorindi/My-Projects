@@ -3,17 +3,17 @@
 
     <main class="main-details-content">
         <section class="container-details">
+
+
             <div>
-                <p>{{ event.participants }}</p>
+                <p>{{ event.organizers }}</p>
+                <img src="{{ event.cover_image.url }}" alt="{{ event.title }}">
             </div>
             <div>
+
                 <h1>{{ event.title }}</h1>
-                <img src="{{ event.cover_image.url }}" alt="{{ event.title }}">
-           
                 <p>{{ event.description }}</p>
-                
-                
-                
+
 
             </div>
             <div>
@@ -22,32 +22,33 @@
                 <p>Start Hour: {{ event.start_hour }}</p>
                 <p>End Date: {{ event.end_date }}</p>
                 <p>End Hour: {{ event.end_date }}</p>
-                
+
             </div>
             <div>
                 <p>{{ event.slide_presentation }}</p>
                 <p>{{ event.topics }}</p>
-                <p>{{ event.youtube_link }}</p>
+                {#                <p>{{ event.youtube_link }}</p>#}
 
             </div>
             <div>
                 {% if request.user.is_authenticated %}
-                <form method="post" action="{% url 'event_register' event.pk %}">
-                    {% csrf_token %}
-                    <button type="submit" {% if registered %}disabled{% endif %}>{% if registered %}Unregister{% else %}
-                        Register{% endif %}</button>
+                    <form method="post" action="{% url 'event_register' event.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" {% if registered %}disabled{% endif %}>{% if registered %}
+                            Unregister{% else %}
+                            Register{% endif %}</button>
 
-                </form>
+                    </form>
 
-            {% endif %}
-            {% if request.user.is_authenticated %}
-                <form method="post" action="{% url 'event_unregister' event.pk %}">
-                    {% csrf_token %}
-                    <button type="submit" {% if not registered %}disabled{% endif %}>
-                        {% if not registered %}Not Registered{% else %}Unregister{% endif %}
-                    </button>
-                </form>
-            {% endif %}
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                    <form method="post" action="{% url 'event_unregister' event.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" {% if not registered %}disabled{% endif %}>
+                            {% if not registered %}Not Registered{% else %}Unregister{% endif %}
+                        </button>
+                    </form>
+                {% endif %}
             </div>
             {% if request.user.is_authenticated and request.user.is_superuser or request.user.is_authenticated and request.user.is_staff %}
                 <a href="{% url 'event_update' event.pk %}">Edit</a>

@@ -20,6 +20,7 @@ class Event(models.Model):
     contact_information = models.TextField()
     youtube_link = models.URLField(null=True, blank=True)
     participants = models.ManyToManyField(UserModel, through='EventRegistration')
+    creation_time = models.DateTimeField(auto_now_add=True, )
 
 
 

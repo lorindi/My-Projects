@@ -16,6 +16,10 @@ class EventListView(LoginRequiredMixin, ListView):
     context_object_name = 'events'
     paginate_by = 5
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.order_by('-creation_time')
+
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['search'] = self.request.GET.get('search', '')

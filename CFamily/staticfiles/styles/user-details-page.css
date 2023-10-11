@@ -141,8 +141,8 @@ font-family: 'Roboto', sans-serif; */
 }
 
 /* --------------------------------INFO------------------------------------ */
-/* --------------------------------Campaigns------------------------------------ */
-.user-details-content-campaigns {
+/* --------------------------------Campaigns-Initiatives------------------------------------ */
+.user-details-content-campaigns, .user-details-content-initiatives, .user-details-content-events {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,20 +152,20 @@ font-family: 'Roboto', sans-serif; */
     position: relative;
     padding: 20px;
 }
-.user-details-list-campaigns {
+.user-details-list-campaigns, .user-details-list-initiatives, .user-details-list-events {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
 }
-.user-details-campaign-element{
+.user-details-campaign-element, .user-details-initiative-element, .user-details-event-element{
     display: flex;
     flex-direction: row;
-    box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.493);
+    box-shadow: -1px -1px 5px 1px rgba(211, 211, 211, 0.486);
     background-color: white;
     overflow: hidden;
 }
-.user-details-campaign-element>article{
+.user-details-campaign-element>article, .user-details-initiative-element>article, .user-details-event-element>article{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -189,4 +189,4 @@ font-family: 'Roboto', sans-serif; */
 
     
 }
-/* --------------------------------Campaigns------------------------------------ */
+/* --------------------------------Campaigns-Initiatives------------------------------------ */

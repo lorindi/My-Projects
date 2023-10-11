@@ -1,0 +1,44 @@
+{% extends 'users/user-details-page.html' %}
+{% block profile_details_content %}
+    <div class="user-details-content-initiatives">
+
+        <ul role="list" class="user-details-list-initiatives">
+            {% for registration in user_initiatives %}
+                <li class="user-details-initiative-element">
+                    <img class="user-details-img" src="{{ registration.initiative.image.url }}"
+                         alt="{{ initiative.title }}">
+                    <article>
+                        <p class="user-details-title">{{ registration.initiative.title }}</p>
+                        <a class="user-details-button" href="{% url 'initiative_detail' registration.initiative.pk %}">SEE
+                            MORE</a>
+                    </article>
+
+
+                </li>
+            {% empty %}
+                <li>No registered campaigns.</li>
+            {% endfor %}
+        </ul>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if user_initiatives.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ user_initiatives.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current-page">
+                    Page {{ user_initiatives.number }} of {{ user_initiatives.paginator.num_pages }}.
+                </span>
+
+                {% if user_initiatives.has_next %}
+                    <a href="?page={{ user_initiatives.next_page_number }}">next</a>
+                    <a href="?page={{ user_initiatives.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+
+
+    </div>
+
+{% endblock %}

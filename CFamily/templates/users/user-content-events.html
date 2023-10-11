@@ -1,0 +1,43 @@
+{% extends 'users/user-details-page.html' %}
+{% block profile_details_content %}
+
+    <div class="user-details-content-events">
+
+
+        <ul role="list" class="user-details-list-events">
+            {% for registration in object.eventregistration_set.all %}
+                <li class="user-details-event-element">
+                    <img class="user-details-img" src="{{ registration.event.cover_image.url }}"
+                         alt="{{ event.title }}">
+                    <article>
+                        <p class="user-details-title">{{ registration.event.title }}</p>
+                        <a class="user-details-button" href="{% url 'event_detail' registration.event.pk %}">SEE
+                            MORE</a>
+                    </article>
+                </li>
+            {% empty %}
+                <li>No registered events.</li>
+            {% endfor %}
+        </ul>
+        <div class="pagination">
+            <span class="step-links">
+                {% if object.eventregistration_set.all.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ object.eventregistration_set.all.previous_page_number }}">previous</a>
+                {% endif %}
+    
+                <span class="current-page">
+                    Page {{ object.eventregistration_set.all.number }} of {{ object.eventregistration_set.all.paginator.num_pages }}.
+                </span>
+    
+                {% if object.eventregistration_set.all.has_next %}
+                    <a href="?page={{ object.eventregistration_set.all.next_page_number }}">next</a>
+                    <a href="?page={{ object.eventregistration_set.all.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+
+    </div>
+    
+
+{% endblock %}

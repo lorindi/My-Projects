@@ -9,6 +9,8 @@ from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView,
 from django.core.paginator import Paginator, Page
 
 from campaigns.models import CampaignRegistration
+from events.models import EventRegistration
+from initiatives.models import InitiativeRegistration
 from users.forms import UserRegisterForm
 
 UserModel = get_user_model()
@@ -43,23 +45,17 @@ class UserDetailsContentInfoView(LoginRequiredMixin, generic.DetailView):
     model = UserModel
 
 
-# class UserDetailsContentCampaignsView(LoginRequiredMixin, generic.DetailView):
-#     template_name = 'users/user-content-campaigns.html'
-#     model = UserModel
-
 class UserDetailsContentCampaignsView(LoginRequiredMixin, generic.DetailView):
     template_name = 'users/user-content-campaigns.html'
     model = UserModel
-    #
-    # paginate_by = 1
+
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['search'] = self.request.GET.get('search', '')
         user_campaigns = self.get_user_campaigns()
 
-
         # Определете броя на елементите на страница
-        items_per_page = 8  # Променете този брой според вашите нужди
+        items_per_page = 4  # Променете този брой според вашите нужди
 
         # Създайте Paginator обект
         paginator = Paginator(user_campaigns, items_per_page)
@@ -73,12 +69,6 @@ class UserDetailsContentCampaignsView(LoginRequiredMixin, generic.DetailView):
         context['user_campaigns'] = page  # Подайте обекта на текущата страница на шаблона
         return context
 
-    # def get_context_data(self, *args, **kwargs):
-    #     context = super().get_context_data(*args, **kwargs)
-    #     context['search'] = self.request.GET.get('search', '')
-    #     context['user_campaigns'] = self.get_user_campaigns()
-    #     return context
-
     def get_user_campaigns(self):
         user = self.request.user
         # user_campaigns = CampaignRegistration.objects.filter(user=user).select_related('campaign')
@@ -87,11 +77,69 @@ class UserDetailsContentCampaignsView(LoginRequiredMixin, generic.DetailView):
 
         return user_campaigns
 
-    # def get_context_data(self, *args, **kwargs):
-    #     context = super().get_context_data(*args, **kwargs)
-    #     context['search'] = self.request.GET.get('search', '')
-    #     # context['categories'] = Category.objects.all()
-    #     return context
+
+class UserDetailsContentInitiativesView(LoginRequiredMixin, generic.DetailView):
+    template_name = 'users/user-content-initiatives.html'
+    model = UserModel
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['search'] = self.request.GET.get('search', '')
+        user_initiatives = self.get_user_initiatives()
+
+        # Определете броя на елементите на страница
+        items_per_page = 4  # Променете този брой според вашите нужди
+
+        # Създайте Paginator обект
+        paginator = Paginator(user_initiatives, items_per_page)
+
+        # Вземете номера на текущата страница от query параметъра 'page'
+        page_number = self.request.GET.get('page')
+
+        # Вземете обект за текущата страница
+        page = paginator.get_page(page_number)
+
+        context['user_initiatives'] = page  # Подайте обекта на текущата страница на шаблона
+        return context
+
+    def get_user_initiatives(self):
+        user = self.request.user
+        user_initiatives = InitiativeRegistration.objects.filter(user=user).select_related('initiative').order_by(
+            '-registration_date')
+
+        return user_initiatives
+
+
+class UserDetailsContentEventsView(LoginRequiredMixin, generic.DetailView):
+    template_name = 'users/user-content-events.html'
+    model = UserModel
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['search'] = self.request.GET.get('search', '')
+        user_events = self.get_user_events()
+
+        # Определете броя на елементите на страница
+        items_per_page = 4  # Променете този брой според вашите нужди
+
+        # Създайте Paginator обект
+        paginator = Paginator(user_events, items_per_page)
+
+        # Вземете номера на текущата страница от query параметъра 'page'
+        page_number = self.request.GET.get('page')
+
+        # Вземете обект за текущата страница
+        page = paginator.get_page(page_number)
+
+        context['user_events'] = page  # Подайте обекта на текущата страница на шаблона
+        return context
+
+    def get_user_events(self):
+        user = self.request.user
+        user_events = EventRegistration.objects.filter(user=user).select_related('event').order_by(
+            '-registration_date')
+
+        return user_events
 
 
 class UserEditView(LoginRequiredMixin, generic.UpdateView):

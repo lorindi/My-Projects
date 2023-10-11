@@ -21,7 +21,7 @@
             {% endif %}
 
             <div>
-                {% if user_type == 'patient' %}
+                {% if user_can_register %}
                     {% if user_already_registered %}
                         <p>already_registered</p>
                     {% else %}

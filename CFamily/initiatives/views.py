@@ -43,7 +43,7 @@ class InitiativeListView(ListView):
     model = Initiative
     template_name = 'initiatives/initiative_list.html'
     context_object_name = 'initiatives'
-    paginate_by = 1
+    paginate_by = 4
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -56,24 +56,43 @@ class InitiativeListView(ListView):
         return context
 
 
-class InitiativeDetailView(DetailView):
+class InitiativeDetailView(LoginRequiredMixin, DetailView):
     model = Initiative
     template_name = 'initiatives/initiative_detail.html'
     context_object_name = 'initiative'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['user_type'] = self.request.user.type_user.lower() if self.request.user.is_authenticated else ''
+        user = self.request.user
+
+        # Проверка дали потребителят е аутентикиран и има атрибут type_user
+        if user.is_authenticated and hasattr(user, 'type_user') and user.type_user is not None:
+            # Проверка дали потребителят е Patient или Parent of a patient
+            if user.type_user.lower() in ['patient']:
+                context['user_can_register'] = True
+            else:
+                context['user_can_register'] = False
+        else:
+            context['user_can_register'] = False
+
+        # Останалата част на кода остава непроменена
         context['user_already_registered'] = InitiativeRegistration.objects.filter(initiative=context['initiative'],
-                                                                                 user=self.request.user).exists()
+                                                                                 user=user).exists()
         return context
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['user_type'] = self.request.user.type_user.lower() if self.request.user.is_authenticated else ''
+    #     context['user_already_registered'] = InitiativeRegistration.objects.filter(initiative=context['initiative'],
+    #                                                                              user=self.request.user).exists()
+    #     return context
 
     def post(self, request, pk):
         return redirect('initiative_detail', pk=pk)
 
 
 class InitiativeCreateView(GroupRequiredMixin, CreateView):
-    allowed_groups = ['Admins']
+    allowed_groups = ['Admins', 'Staff']
     model = Initiative
     template_name = 'initiatives/initiative_create.html'
     fields = ['title', 'description', 'purpose', 'image', 'target_amount', 'start_date', 'youtube_link']

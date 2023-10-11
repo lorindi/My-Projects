@@ -2,7 +2,7 @@ from django.urls import path, include
 
 from users.views import UserRegisterView, UserLogin, UserLogOut, UserDetailsView, UserEditView, UserDeleteView, \
     ChangeAccPasswordView, PassChanged, PasswordReset, PasswordResetDone, PasswordResetConfirm, PasswordResetComplete, \
-    UserDetailsContentInfoView, UserDetailsContentCampaignsView
+    UserDetailsContentInfoView, UserDetailsContentCampaignsView, UserDetailsContentInitiativesView, UserDetailsContentEventsView
 
 urlpatterns = [
     path('register/', UserRegisterView.as_view(), name='user_register'),
@@ -10,8 +10,10 @@ urlpatterns = [
     path('logout/', UserLogOut.as_view(), name='user_logout'),
     path('details/<int:pk>/', include([
         path('', UserDetailsView.as_view(), name='user_details'),
-        path('info/', UserDetailsContentInfoView.as_view(), name='user_content_info'),
+        path('information/', UserDetailsContentInfoView.as_view(), name='user_content_info'),
         path('recorded-campaigns/', UserDetailsContentCampaignsView.as_view(), name='user_content_campaigns'),
+        path('recorded-initiatives/', UserDetailsContentInitiativesView.as_view(), name='user_content_initiatives'),
+        path('recorded-events/', UserDetailsContentEventsView.as_view(), name='user_content_events'),
     ])),
     # path('details/<int:pk>/', UserDetailsView.as_view(), name='user_details'),
     #
