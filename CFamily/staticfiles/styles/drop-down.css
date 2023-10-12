@@ -1,0 +1,52 @@
+.dropbtn {}
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    overflow-wrap: anywhere;
+    left: -34px;
+}
+
+
+.dropdown-content a {
+    float: none;
+    padding: 7px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 170px;
+    border-top: 1px solid lightgrey;
+    font-weight: 500;
+    color: black;
+    
+
+
+}
+.dropdown-content>h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 5px;
+
+
+}
+
+.dropdown-content a:hover {
+
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

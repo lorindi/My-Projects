@@ -1,3 +1,34 @@
+/* -----------------------------------------------------index.html-------------------------------------------------------------- */
+
+
+
+.body {
+    background-color: white;
+}
+
+
+/* ---------------navigation-icon-buttons------------------ */
+
+
+.fa-table,
+.fa-square-plus,
+.fa-earth-americas,
+.fa-book,
+.fa-shop,
+.fa-cart-shopping,
+.fa-user,
+.fa-arrow-right-from-bracket,
+.fa-heart,
+.fa-caret-down {
+
+    color: gray;
+
+}
+/* ---------------navigation-icon-buttons------------------ */
+
+
+
+
 /* -----------------------------------------------------home-page-------------------------------------------------------------- */
 .header-title {
     color: white;
@@ -101,65 +132,3 @@
 /* --------------------------------Campaigns-Initiatives------------------------------------ */
 
 /* -----------------------------------------------------user-details-------------------------------------------------------------- */
-
-.body {
-    background-color: white;
-}
-
-
-
-.add-to-cart-button,
-.edit-link,
-.delete-link {
-
-    background-color: gray;
-
-}
-
-.fa-shop,
-.fa-cart-shopping,
-.fa-user,
-.fa-arrow-right-from-bracket,
-.fa-heart,
-.fa-caret-down {
-
-    color: gray;
-
-}
-
-.projects-link:hover,
-.initiatives-link:hover,
-.events-link:hover,
-.charitable-treks-link:hover,
-.charity-races-link:hover,
-.benefactors-link:hover {
-
-    background-color: #ececec9a;
-
-    color: black;
-
-}
-
-.shop-icon-link:hover,
-.cart-icon-link:hover,
-.username:hover,
-.fa-heart:hover,
-.fa-cart-shopping:hover,
-.fa-user:hover,
-.fa-arrow-right-from-bracket:hover,
-.fa-caret-left:hover,
-.fa-caret-right:hover,
-.fa-shop:hover {
-
-    color: white;
-}
-
-.create-donation-link:hover,
-.create-projects-link:hover,
-.create-initiatives-link:hover,
-.create-events-link:hover,
-.create-charitable-treks-link:hover,
-.create-charity-races-link:hover,
-.create-benefactors-link:hover {
-    background-color: rgba(255, 255, 255, 0.514);
-}

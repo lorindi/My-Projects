@@ -41,10 +41,9 @@
 #id_gender,
 #id_telephone,
 #id_type_user,
-#id_side, 
+#id_side,
 #id_link,
-#id_city
-#id_youtube_link,
+#id_city #id_youtube_link,
 #id_target_amount,
 #id_start_date,
 #id_end_date,
@@ -64,6 +63,14 @@
 #id_contact_email,
 #id_contact_phone,
 #id_city,
-.user-details-campaign-element {
+.user-details-campaign-element,
+.news-links,
+.shop-links,
+.events-links,
+.books-links,
+.tables-links,
+.new-events-links,
+.user-links,
+.cart-link {
     border-radius: 3px;
 }
