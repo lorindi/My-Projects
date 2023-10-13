@@ -1,41 +1,49 @@
-.dropbtn {}
-.dropdown {
-    position: relative;
-}
 .dropdown-content {
     display: none;
     position: absolute;
-    z-index: 1;
+    width: 100%;
     background-color: white;
-    overflow-wrap: anywhere;
-    left: -34px;
+    width: calc(100vw - 10rem);
+    left: 5rem;
+    z-index: 1;
+    padding: 20px;
+    min-height: 200px;
+    box-shadow: 0px 0px 3px 0px lightgrey;
+
 }
 
+.dropdown-content>ul {
+    display: flex;
+    flex-direction: row;
+    /* gap: 30px; */
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+}
+.dropdown-content>ul>li {
+   
+}
 
 .dropdown-content a {
-    float: none;
-    padding: 7px 10px;
     text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 1px;
-    text-transform: uppercase;
-    width: 170px;
-    border-top: 1px solid lightgrey;
     font-weight: 500;
     color: black;
-    
-
-
+    padding-bottom: 3px;
+    border-bottom: 2px solid lightgrey;
 }
+
 .dropdown-content>h3 {
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 1px;
     padding: 5px;
 
@@ -43,10 +51,59 @@
 }
 
 .dropdown-content a:hover {
-
     z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+@media(width <=320px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    .dropdown-content {
+        width: calc(100vw - 2rem);
+        left: 1rem;
+        min-height: 300px;
+
+    }
+
+    .dropdown-content>ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .dropdown-content>ul>li {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 2px solid lightgrey;
+        padding-bottom: 5px;
+        display: flex;
+    
+    }
+    .dropdown-content a {
+        
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+        padding-bottom: 3px;
+        border: none;
+        padding: 0px;
+    }
+
+    .dropdown-content>h3 {
+       
+        font-size: 17px;
+        letter-spacing: 0.5px;
+       
+
+
+    }
+
 }

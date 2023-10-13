@@ -26,7 +26,9 @@
                     <button class="news-links dropbtn"><i class="fa-solid fa-earth-americas"></i></button>
                     <div class="dropdown-content">
                         <h3>News</h3>
-                        <a href="#">p</a>
+                        <ul role="list">
+                        <li><a href="#">p</a></li>
+                    </ul>
 
                     </div>
                 </div>
@@ -34,22 +36,24 @@
                     <button class="shop-links dropbtn"><i class="fa-solid fa-shop"></i></button>
                     <div class="dropdown-content">
                         <h3>Charity shop</h3>
+                        <ul role="list">
+                            <li><a class="donations-link" href="{% url 'donation_list' %}">
+                                All donations</a></li>
+                            <li><a class="donation-medications-link" href="{% url 'donation_support_for_research' %}">
+                                Support for research</a></li>
 
-                        <a class="donations-link" href="{% url 'donation_list' %}">
-                            All donations</a>
-                        <a class="donation-medications-link" href="{% url 'donation_support_for_research' %}">
-                            Support for research</a>
+                            <li><a class="donation-medications-link" href="{% url 'donation_psychological_support' %}">
+                                Psychological support</a></li>
 
-                        <a class="donation-medications-link" href="{% url 'donation_psychological_support' %}">
-                            Psychological support</a>
+                            <li><a class="donation-medications-link" href="{% url 'donation_medications' %}">
+                                Donation medications</a></li>
+                            <li><a class="donations-medical-equipment-link"
+                                   href="{% url 'donation_medical_equipment' %}">
+                                Donation medical equipment</a></li>
 
-                        <a class="donation-medications-link" href="{% url 'donation_medications' %}">
-                            Donation medications</a>
-                        <a class="donations-medical-equipment-link" href="{% url 'donation_medical_equipment' %}">
-                            Donation medical equipment</a>
-
-                        <a class="donation-medications-link" href="{% url 'donation_another_type' %}">
-                            Another type</a>
+                            <li><a class="donation-medications-link" href="{% url 'donation_another_type' %}">
+                                Another type</a></li>
+                        </ul>
 
 
                     </div>
@@ -58,26 +62,32 @@
                     <button class="events-links dropbtn"><i class="fas fa-heart"></i></button>
                     <div class="dropdown-content">
                         <h3>Events</h3>
-                        <a class="projects-link" href="{% url 'campaign_list' %}">Campaigns</a>
-                        <a class="initiatives-link" href="{% url 'initiative_list' %}">Initiatives</a>
-                        <a class="events-link" href="{% url 'event_list' %}">Conferences</a>
-                        <a class="charitable-treks-link" href="{% url 'charitable_trek_list' %}">Charitable treks</a>
-                        <a class="benefactors-link" href="{% url 'benefactor_list' %}">Benefactors</a>
+                        <ul role="list">
+                            <li>
+                                <a class="projects-link" href="{% url 'campaign_list' %}">Campaigns</a>
+
+                            </li>
+                            <li><a class="initiatives-link" href="{% url 'initiative_list' %}">Initiatives</a></li>
+                            <li><a class="events-link" href="{% url 'event_list' %}">Conferences</a></li>
+                            <li><a class="charitable-treks-link" href="{% url 'charitable_trek_list' %}">Charitable
+                                treks</a></li>
+                            <li><a class="benefactors-link" href="{% url 'benefactor_list' %}">Benefactors</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="books dropdown">
                     <button class="books-links dropbtn"><i class="fa-solid fa-book"></i></button>
                     <div class="dropdown-content">
                         <h3>Patient Stories</h3>
-                        <a href="#">p</a>
-                        <a href="#">p</a>
+                        <ul role="list">
+                            <li><a href="#">p</a></li>
+                            <li><a href="#">p</a></li>
+
+                        </ul>
                     </div>
                 </div>
 
-                
 
-
-                
             </div>
             <div class="sub-navigation">
 
@@ -87,8 +97,11 @@
                         <button class="tables-links dropbtn"><i class="fa-solid fa-table"></i></button>
                         <div class="dropdown-content">
                             <h3>Tables</h3>
-                            <a href="{% url 'admin_campaign_list' %}">Campaigns</a>
-                            <a href="{% url 'admin_initiative_list' %}">Initiatives</a>
+                            <ul role="list">
+
+                                <li><a href="{% url 'admin_campaign_list' %}">Campaigns</a></li>
+                                <li><a href="{% url 'admin_initiative_list' %}">Initiatives</a></li>
+                            </ul>
 
                         </div>
                     </div>
@@ -96,13 +109,18 @@
                         <button class="new-events-links dropbtn"><i class="fa-solid fa-square-plus"></i></button>
                         <div class="dropdown-content">
                             <h3>Create a new</h3>
-                            <a class="create-donation-link" href="{% url 'donation_create' %}">Donation</a>
-                            <a class="create-projects-link" href="{% url 'campaign_create' %}">Campaign</a>
-                            <a class="create-initiatives-link" href="{% url 'initiative_create' %}">Initiative</a>
-                            <a class="create-events-link" href="{% url 'event_create' %}">Conference</a>
-                            <a class="create-charitable-treks-link" href="{% url 'charitable_trek_create' %}">Charity
-                                hike</a>
-                            <a class="create-benefactors-link" href="{% url 'benefactor_create' %}">Benefactor</a>
+                            <ul role="list">
+                                <li><a class="create-donation-link" href="{% url 'donation_create' %}">Donation</a></li>
+                                <li><a class="create-projects-link" href="{% url 'campaign_create' %}">Campaign</a></li>
+                                <li><a class="create-initiatives-link"
+                                       href="{% url 'initiative_create' %}">Initiative</a></li>
+                                <li><a class="create-events-link" href="{% url 'event_create' %}">Conference</a></li>
+                                <li><a class="create-charitable-treks-link" href="{% url 'charitable_trek_create' %}">Charity
+                                    hike</a></li>
+                                <li><a class="create-benefactors-link"
+                                       href="{% url 'benefactor_create' %}">Benefactor</a></li>
+
+                            </ul>
 
                         </div>
                     </div>
@@ -115,13 +133,15 @@
                     </a>
                 </div>
                 <div class="user-dropdown dropdown">
-                    <button class="user-links dropbtn"><i class="fa-solid fa-user"></i><i
-                            class="fa fa-caret-down"></i></button>
+                    <button class="user-links dropbtn"><i class="fa-solid fa-user"></i></button>
                     <div class="dropdown-content">
                         <h3>Profile</h3>
-                        <a class="profile-details-link" href="{% url 'user_details' pk=request.user.pk %}">Details</a>
-                        <a class="logout-link" href="{% url 'user_logout' %}">Log
-                            out</a>
+                        <ul role="list">
+
+                            <li><a class="profile-details-link" href="{% url 'user_details' pk=request.user.pk %}">Details</a>
+                            </li>
+                            <li><a class="logout-link" href="{% url 'user_logout' %}">Log out</a></li>
+                        </ul>
                     </div>
 
                 </div>

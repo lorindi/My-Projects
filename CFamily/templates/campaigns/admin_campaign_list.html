@@ -2,28 +2,49 @@
 
 {% block content %}
     <main class="main-admin-content">
-        <section>
+        <section class="container-content-table">
             <h1>Admin Campaign List</h1>
             <table>
                 <thead>
                 <tr>
+                    <th>Number</th>
                     <th>Campaign Title</th>
-                    <th>Registered Users</th>
+                    <th>User Picture</th>
+                    <th>Username</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Registration Date</th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for campaign in campaigns %}
                     <tr>
-                        <td>{{ forloop.counter }}</td> <!-- Добавяме този ред за номерация -->
+                        <td>{{ forloop.counter }}</td>
                         <td>{{ campaign.title }}</td>
-                        <td>
-                            {% for registration in registrations %}
-                                {% if registration.campaign == campaign %}
-                                    {{ registration.user.username }}{% if not forloop.last %}, {% endif %}
-                                {% endif %}
-                            {% endfor %}
-                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
+                    {% for registration in registrations %}
+                        {% if registration.campaign == campaign %}
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                {% if registration.user.profile_picture %}
+                                    <td><img src="{{ registration.user.profile_picture.url }}"
+                                             alt="{{ registration.user.username }}"></td>
+                                {% else %}
+                                    <td>No Picture Available</td>
+                                {% endif %}
+                                <td>{{ registration.user.username }}</td>
+                                <td>{{ registration.user.telephone }}</td>
+                                <td>{{ registration.user.email }}</td>
+                                <td>{{ registration.registration_date }}</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
                 </tbody>
             </table>
@@ -35,9 +56,7 @@
                     {% else %}
                         <a><i class="fa-solid fa-caret-left"></i></a>
                     {% endif %}
-
                     {{ page_obj.number }} / {{ paginator.num_pages }}
-
                     {% if page_obj.has_next %}
                         <a href="?page={{ page_obj.next_page_number }}&search={{ search }}"><i
                                 class="fa-solid fa-caret-right"></i></a>

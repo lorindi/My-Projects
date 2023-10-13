@@ -64,7 +64,6 @@ font-family: 'Roboto', sans-serif; */
 .new-events-links,
 .user-links {
     height: 45px;
-    width: 100px;
     border: none;
     background-color: white;
 
@@ -76,9 +75,11 @@ font-family: 'Roboto', sans-serif; */
     justify-content: center;
     align-items: center;
     height: 45px;
-    width: 100px;
+
+
 
 }
+
 .cart-link:hover,
 .news-links:hover,
 .shop-links:hover,
@@ -89,8 +90,9 @@ font-family: 'Roboto', sans-serif; */
 .user-links:hover {
 
     background-color: #F1F2F4;
- 
+
 }
+
 .cart-link:active,
 .news-links:active,
 .shop-links:active,
@@ -101,28 +103,46 @@ font-family: 'Roboto', sans-serif; */
 .user-links:active {
 
     /* border-bottom: 3px solid black; */
- 
+
 }
+
 .fa-table,
 .fa-square-plus,
 .fa-shop,
 .fa-cart-shopping,
-.fa-user,
-.fa-arrow-right-from-bracket .fa-caret-down {
-
+.fa-arrow-right-from-bracket {
+    padding: 5px 30px;
     font-size: 25px;
 
 }
 
+.fa-user {
+    font-size: 25px;
+
+    padding-left: 20px;
+}
+
+.fa-caret-down {
+    font-size: 25px;
+    padding-right: 20px;
+
+}
+
 .fa-earth-americas {
+    padding: 5px 30px;
+
     font-size: 27.5px;
 }
 
 .fa-heart {
+    padding: 5px 30px;
+
     font-size: 30px;
 }
 
 .fa-book {
+    padding: 5px 30px;
+
     font-size: 27px;
 }
 
@@ -162,4 +182,70 @@ main {
     * {
         overflow-x: hidden;
     }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15%;
+        padding-right: 5px;
+    }
+
+    .logo-link {
+        font-size: 14px;
+        padding: 0px;
+    }
+
+    .fa-table,
+    .fa-square-plus,
+    .fa-shop,
+    .fa-cart-shopping,
+    .fa-arrow-right-from-bracket {
+        padding: 0px;
+        font-size: 18px;
+    }
+
+    .fa-user {
+        padding: 0px;
+
+        font-size: 18px;
+    }
+
+    .fa-caret-down {
+        padding: 0px;
+
+        font-size: 18px;
+    }
+
+    .fa-earth-americas {
+        padding: 0px;
+
+        font-size: 18px;
+    }
+
+    .fa-heart {
+        padding: 0px;
+
+        font-size: 18px;
+    }
+
+    .fa-book {
+        padding: 0px;
+
+        font-size: 18px;
+    }
+
+    .sub-navigation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 38%;
+        justify-content: space-around;
+    }
+
 }

@@ -1,0 +1,45 @@
+.container-content-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+thead,tbody{
+    width: 100%;
+}
+tbody>tr {
+    height: 70px;
+}
+tbody>tr:nth-child(1)>td:nth-child(1){
+    width: 10px;
+}
+th, td {
+    width: 100%;
+    padding: 10px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    border: 1px solid white;
+    background-color: lightgrey;
+
+    font-weight: bold;
+}
+td {
+    border: 1px solid white;
+    background-color: #f2f2f2;
+}
+td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
