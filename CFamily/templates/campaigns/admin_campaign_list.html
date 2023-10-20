@@ -3,17 +3,18 @@
 {% block content %}
     <main class="main-admin-content">
         <section class="container-content-table">
-            <h1>Admin Campaign List</h1>
+            <h1>Saved campaigns</h1>
             <table>
                 <thead>
                 <tr>
-                    <th>Number</th>
-                    <th>Campaign Title</th>
-                    <th>User Picture</th>
+                    <th>№</th>
+                    <th>Campaign</th>
+                    <th>Name</th>
                     <th>Username</th>
                     <th>Phone</th>
                     <th>Email</th>
                     <th>Registration Date</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -32,12 +33,13 @@
                             <tr>
                                 <td></td>
                                 <td></td>
-                                {% if registration.user.profile_picture %}
-                                    <td><img src="{{ registration.user.profile_picture.url }}"
-                                             alt="{{ registration.user.username }}"></td>
-                                {% else %}
-                                    <td>No Picture Available</td>
-                                {% endif %}
+                                {#                                {% if registration.user.profile_picture %}#}
+                                {#                                    <td><img src="{{ registration.user.profile_picture.url }}"#}
+                                {#                                             alt="{{ registration.user.username }}"></td>#}
+                                {#                                {% else %}#}
+                                {#                                    <td>No Picture Available</td>#}
+                                {#                                {% endif %}#}
+                                <td>{{ registration.user.get_name }}</td>
                                 <td>{{ registration.user.username }}</td>
                                 <td>{{ registration.user.telephone }}</td>
                                 <td>{{ registration.user.email }}</td>

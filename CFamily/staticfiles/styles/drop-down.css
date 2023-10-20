@@ -3,8 +3,8 @@
     position: absolute;
     width: 100%;
     background-color: white;
-    width: calc(100vw - 10rem);
-    left: 5rem;
+    width: calc(100vw - 5rem);
+    left: 2rem;
     z-index: 1;
     padding: 20px;
     min-height: 200px;
@@ -24,16 +24,17 @@
 
 }
 .dropdown-content>ul>li {
-   
+   padding-bottom: 15px;
+   padding-right: 20px;
 }
 
 .dropdown-content a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 1px;
     font-weight: 500;
     color: black;
-    padding-bottom: 3px;
+    padding-bottom: 5px;
     border-bottom: 2px solid lightgrey;
 }
 
@@ -43,7 +44,7 @@
     justify-content: center;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 1px;
     padding: 5px;
 
