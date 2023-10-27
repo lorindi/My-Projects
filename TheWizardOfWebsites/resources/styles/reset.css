@@ -4,12 +4,11 @@
 *::after {
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
-ul {
-  padding-left: 0;
-}
+
 /* Remove default margin */
 body,
 h1,
@@ -24,10 +23,13 @@ dd {
   margin: 0;
 }
 
+
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  /* padding: 0px; */
 }
 
 /* Set core root defaults */
@@ -60,6 +62,9 @@ button,
 textarea,
 select {
   font: inherit;
+}
+ul {
+  padding-left: 0px;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

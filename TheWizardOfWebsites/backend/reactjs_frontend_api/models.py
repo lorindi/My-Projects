@@ -10,8 +10,6 @@ def phone_validator(value):
 
 
 class Profile(models.Model):
-    id = models.CharField(primary_key=True, default='', max_length=400, )
-
     username = models.CharField(
         max_length=50,
         unique=True,
