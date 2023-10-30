@@ -1,0 +1,109 @@
+/* ----------------------------------about-us-------------------------------------- */
+.whole-team {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .first-section {
+    background-color: #F2E9DE;
+}
+.second-section {
+    background-color: #FFC1B4;
+
+}
+.third-section {
+    background-color: #98E2C6;
+
+} */
+.part-team {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    height: 101vh;
+}
+
+.part-team:nth-child(2) {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.part-team-img {
+    width: 550px;
+    height: 550px;
+    border-radius: 100%;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.part-team-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+    font-weight: 400;
+}
+
+.part-team-description {
+    width: 600px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+}
+
+.about>span {
+    width: 600px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+}
+
+.part-team-info {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.info-link {
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+    /* color: black;
+    background-color: white; */
+    /* width: 150px;
+    padding: 10px; */
+    /* border: 3px solid rgba(128, 128, 128, 0.689); */
+}
+
+.fa-circle-info {
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.718);
+}
+.fa-github {
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.718);
+
+
+}
+.fa-certificate {
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.718);
+
+}

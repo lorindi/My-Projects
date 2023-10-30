@@ -1,0 +1,124 @@
+/* ------------form-animate--------------*/
+.forms {
+    width: 320px;
+    margin-bottom: 20px;
+    background-color: black;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    padding: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+}
+
+
+.forms-input {
+    width: 320px;
+    color: #00dfc593;
+    background: rgb(30, 36, 46);
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-size: 16.5px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* .forms-input::placeholder {
+    padding-left: 50px;
+
+} */
+
+.forms:before {
+    position: absolute;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: calc(100% + 0px);
+    width: calc(100% + 0px);
+    border-radius: 10px;
+    background: linear-gradient(45deg, #B2E87F, #99DF7E, #7FD97D, #80D797, #80D5AB, #7FD4BE, #7FD3D5, #7FD1EA, #80D1FF, #83C7F6, #86C0F1, #88B7E7, #8AB0DE, #8EA8D7, #8FA0D1, #A19BCF, #A19BCF, #8FA0D1, #8EA8D7, #8AB0DE, #88B7E7, #86C0F1, #83C7F6, #80D1FF, #7FD1EA, #7FD3D5, #7FD4BE, #80D5AB, #80D797, #7FD97D, #99DF7E, #B2E87F);
+    /* background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8); */
+    z-index: 1;
+    opacity: 0.8;
+    background-size: 400%;
+    filter: blur(1px);
+    transition: opacity .3s ease-in-out;
+    animation: ani 20s linear infinite;
+
+}
+
+.forms:hover:before {
+    opacity: 1;
+    filter: blur(5px);
+}
+
+.forms:focus-within:before {
+    opacity: 1;
+    filter: blur(9px);
+}
+
+@keyframes ani {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 400% 0;
+    }
+}
+
+/* ------------form-animate--------------*/
+/* ------------form-text-animate--------------*/
+
+.input-box {
+    position: relative;
+}
+
+.input-box input {
+    background: #1b2d3f;
+    outline: none;
+    /* padding-left: 20px; */
+    
+
+}
+
+.input-box span {
+    position: absolute;
+    left: 20px;
+    top: 9.5px;
+    pointer-events: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.25);
+    z-index: 1;
+    transition: 0.5s;
+    
+}
+
+.input-box input:valid~span,
+.input-box input:focus~span {
+    color: #00dfc4;
+
+    top: 2.5px;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.6rem;
+    background-color: #1d2b3a;
+    padding: 0px 5px;
+    border-radius: 3px;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    letter-spacing: 0.2em;
+    z-index: 1;
+}
+
+/* ------------form-text-animate--------------*/

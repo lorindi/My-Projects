@@ -1,0 +1,107 @@
+
+/* -----------------------------------Header------------------------------------ */
+
+.light.navigation {
+    background-color: white;
+}
+
+.light.link {
+    color: black;
+
+}
+/* -----------------------------------Home-page------------------------------------ */
+
+.light.information-section {
+    background-color: #f6b02d66;
+
+
+}
+
+.light.team-section {
+    background-color: #a3d368e5;
+}
+
+.light.team-title {
+    border-bottom: 5px solid white;
+
+}
+
+.light.team-link {
+    color: black;
+    background-color: white;
+    border: 5px solid white;
+
+}
+
+.light.team-link:hover {
+    border: 5px solid white;
+    background-color: #a3d368;
+}
+
+.light.contacts-info {
+    background-color: #63d3ffbb;
+
+}
+
+.light.content-contacts {
+    border: 5px dotted white;
+
+}
+
+.light.contact>a>p {
+    color: black;
+
+}
+
+
+/* --------------------------------------------About-us------------------------------------------------- */
+.light.first-section {
+    background-color: #F2E9DE;
+    
+}
+.light.second-section {
+    background-color: #FFC1B4;
+    
+}
+.light.third-section {
+    background-color: #98E2C6;
+}
+.light.info-link {
+
+}
+/* -------------------------------------------------------------------------- */
+.light {
+    
+}
+.light {
+    
+}
+.light {
+    
+}
+.light {
+    
+}
+.light {
+    
+}
+.light {
+    
+}
+.light {
+    
+}
+.light {
+    
+}
+
+/* -------------------------------footer-------------------------------- */
+.light.footer {
+    background-color: white;
+
+}
+
+.light.footer>p {
+    color: black;
+
+}

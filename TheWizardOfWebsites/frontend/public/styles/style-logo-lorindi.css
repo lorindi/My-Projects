@@ -1,0 +1,23 @@
+.authentication-page-header h1{
+
+    background-color: #1abc9c;
+    /* set the background color */
+    color: #fff;
+    /* set the font color */
+    font-size: 24px;
+    /* set the font size */
+    font-weight: bold;
+    /* set the font weight */
+    text-align: center;
+    /* center the text */
+    width: 150px;
+    /* set the width of the logo */
+    height: 150px;
+    /* set the height of the logo */
+    border-radius: 50%;
+    /* create a circle */
+    line-height: 150px;
+    /* vertically center the text */
+    margin: 0 auto;
+    /* center the logo horizontally */
+}
