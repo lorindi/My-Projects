@@ -1,17 +1,18 @@
+import { NavLink } from "react-router-dom";
 import { Link } from 'react-router-dom'
-
+import styles from './Home.module.css'
 export const Home = () => {
   return (
     <>
-      <section className="information-section light">
+      <section className={`${styles.informationSection} ${styles.dark}`}>
         <img
-          className="information-img"
-          src="/images/john-schnobrich-2FPjlAyMQTA-unsplash.jpg"
+          className={styles.informationImg}
+          src="../../../src/components/Home/pngwing.com (1).png"
           alt=""
         />
-        <div className="content-info">
-          <h1 className="info-title">Hi!</h1>
-          <p className="info-description">
+        <div className={styles.contentInfo}>
+          <h1 className={`${styles.infoTitle} ${styles.dark}`}>Welcome to LorinDi!</h1>
+          <p className={`${styles.infoDescription} ${styles.dark}`}>
             Our team is a collective of passionate and creative professionals
             united by a common goal - to create the most modern and functional
             websites using the best technologies. Our mission is to provide you
@@ -24,59 +25,67 @@ export const Home = () => {
           </p>
         </div>
       </section>
-      <section className="team-section light">
-        <div className="content-team">
-          <h1 className="team-title light">Meet Our Team</h1>
-          <p className="team-description">
+      <section className= {`${styles.teamSection} ${styles.dark}`}>
+        <div className= {styles.contentTeam}>
+          <h1 className= {`${styles.teamTitle} ${styles.dark}`}>Meet Our Team</h1>
+          <p className= {styles.teamDescription}>
             Learn more about the talented individuals behind our projects.
           </p>
-          <Link className="team-link light" to="/about-us">Meet the Team</Link>
+          <Link className= {`${styles.teamLink} ${styles.dark}`} to="/about-us">Meet the Team</Link>
    
         </div>
-        <img src="/images/pngwing.com.png" alt="" />
+        <img src="../../../src/components/Home/pngwing.com (2).png" alt="" />
       </section>
 
-      <section className="contacts-info light">
+      <section className={`${styles.contactsInfo} ${styles.dark}`}>
         <h1></h1>
-        <div className="content-contacts light">
-          <ul role="list" className="contacts-list">
-            <li className="contact">
-              <a href="">
+        <div className={`${styles.contentContacts} ${styles.dark}`}>
+          <ul role="list" className={styles.contactsList}>
+            <li className={styles.contact}>
+              <NavLink to="" style={({ isActive }) => ({
+            color: isActive ? "lightblue" : "lightgreen",
+          })}>
                 <img
                   src="/images/pngwing.com (1).png"
                   alt=""
                 />
                 <p>***@gmail.com</p>
-              </a>
+              </NavLink>
             </li>
-            <li className="contact">
-              <a href="">
+            <li className={styles.contact}>
+              <NavLink to="" style={({ isActive }) => ({
+            color: isActive ? "lightblue" : "lightgreen",
+          })}>
                 <img
                   src="/images/pngwing.com (3).png"
                   alt=""
                 />
                 <p>Team</p>
-              </a>
+              </NavLink>
             </li>
           </ul>
-          <ul role="list" className="contacts-list">
-            <li className="contact">
-              <a href="">
+          <ul role="list" className={styles.contactsList}>
+            <li className={styles.contact}>
+              <NavLink to="" style={({ isActive }) => ({
+            color: isActive ? "lightblue" : "lightgreen",
+          })}>
                 <img
                   src="/images/pngwing.com (4).png"
                   alt=""
                 />
                 <p>Team</p>
-              </a>
+              </NavLink>
             </li>
-            <li className="contact">
-              <a href="">
+            <li className={styles.contact}>
+              <NavLink to="" style={({ isActive }) => ({
+            color: isActive ? "lightblue" : "lightgreen",
+          })}>
                 <img
                   src="/images/pngwing.com (2).png"
                   alt=""
                 />
                 <p>0812345678</p>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

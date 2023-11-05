@@ -1,8 +1,10 @@
+import styles from './Footer.module.css'
+
 export const Footer = () => {
   return (
-    <footer className="footer">
-      <p className="footer-text">© Lora Mitova.</p>
-      <p className="footer-text"> All rights reserved.</p>
+    <footer className={styles.footer}>
+      <p className={styles.footerText}>© Lora Mitova.</p>
+      <p className={styles.footerText}> All rights reserved.</p>
     </footer>
   );
 };

@@ -1,14 +1,5 @@
 
-/* -----------------------------------Header------------------------------------ */
 
-.light.navigation {
-    background-color: white;
-}
-
-.light.link {
-    color: black;
-
-}
 /* -----------------------------------Home-page------------------------------------ */
 
 .light.information-section {
@@ -54,46 +45,78 @@
 }
 
 
-/* --------------------------------------------About-us------------------------------------------------- */
-.light.first-section {
-    background-color: #F2E9DE;
-    
-}
-.light.second-section {
-    background-color: #FFC1B4;
-    
-}
-.light.third-section {
-    background-color: #98E2C6;
-}
-.light.info-link {
+
+
+/* ----------------------------------login-register-form---------------------------------------- */
+.light.button {
+    background-color: rgb(255, 255, 255);
+    color: black;
 
 }
-/* -------------------------------------------------------------------------- */
-.light {
-    
+
+.light.button:before {
+    opacity: 1;
 }
-.light {
-    
+
+.light.block {
+    background: white;
+
+
 }
-.light {
-    
+
+.light.forms {
+    /* background-color: black; */
+
+
 }
-.light {
-    
+
+.light.forms-input {
+    color: black;
+    background: rgb(255, 255, 255);
+
+    background-color: white;
+    border: 2px solid white;
 }
-.light {
-    
+
+.light.forms:before {
+    /* background: none; */
+    /* background-color: rgba(255, 255, 255, 0.753); */
 }
-.light {
-    
+
+.light.input-box input {
+    background: none;
+
 }
-.light {
-    
+
+.light.input-box span {
+    color: black;
 }
-.light {
-    
+
+.light.input-box input:valid~span,  .light.input-box input:focus~span{
+    color: black;
+    background-color: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
 }
+
+.light.register-page-form-subtitle>h3 {
+    color: rgba(0, 0, 0, 0.474);
+}
+
+.light.register-page-form-authentication-header-login span a, .light.register-page-form-authentication-header-register span a {
+    color: #ADB3B5;
+}
+
+.light {}
+
+.light {}
+
+.light {}
+
+.light {}
+
+.light {}
 
 /* -------------------------------footer-------------------------------- */
 .light.footer {

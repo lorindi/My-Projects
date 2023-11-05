@@ -1,0 +1,254 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* ------------------------------main------------------------------ */
+
+.informationSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    /* background-color: #a3d368e5; */
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.informationImg {
+    width: 500px;
+    height: 500px;
+    /* border-radius: 100%; */
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+}
+
+.contentInfo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+}
+
+.infoTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.infoDescription {
+
+    width: 600px;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-indent: 1em;
+    text-align: justify;
+    line-height: 32px;
+
+}
+
+.teamSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: #a3d368e5; */
+    height: 70vh;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.contentTeam {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    gap: 60px;
+    padding-left: 50px;
+}
+
+.teamTitle {
+    color: rgba(255, 255, 255, 0.746);
+
+    font-size: 63px;
+    font-weight: 400;
+    /* border-bottom: 5px solid white; */
+}
+
+.teamDescription {
+    font-size: 23px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: 600px;
+    color: rgba(255, 255, 255, 0.508);
+
+}
+
+.teamLink {
+    padding: 10px 20px;
+    /* color: black; */
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    /* background-color: white;
+    border: 5px solid white; */
+    letter-spacing: 1px;
+    border-radius: 5px;
+
+
+}
+
+.teamSection>img {
+    width: 500px;
+    height: 500px;
+    /* background-color: rgba(0, 0, 0, 0.083); */
+    border-radius: 3px;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+    padding: 30px;
+    border: 1px solid rgba(173, 216, 230, 0.252);
+
+}
+.teamSection>img:hover {
+
+    border: 1px solid lightgreen;
+
+}
+
+/* .team-link:hover {
+    border: 5px solid white;
+    background-color: #a3d368;
+
+
+} */
+
+.contactsInfo {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #63d3ff81; */
+    height: 101vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+
+
+}
+
+.contentContacts {
+    display: flex;
+    flex-direction: column;
+    /* border: 5px dotted white; */
+    padding: 50px;
+    width: 1230px;
+
+}
+
+.contactsList {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 30px 30px 30px 80px;
+}
+
+.contact>a {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact>a>img {
+    width: 50px;
+}
+
+.contact>a>p {
+    font-size: 25px;
+    /* color: black; */
+}
+
+
+/* -----------------------------------Home-page------------------------------------ */
+
+.dark.informationSection {
+    background-color: #1b2d3f;
+    /* background-color: #f6b02d66; */
+    /* background-color: #f2e9debd; */
+
+
+
+}
+.dark.infoTitle{
+    color: rgba(255, 255, 255, 0.679);
+
+}
+.dark.infoDescription {
+    color: rgba(255, 255, 255, 0.486);
+
+}
+
+.dark.teamSection {
+    background-color: #1b2d3f;
+    /* background-color: #a3d368e5;
+    background-color: #f2e9debd; */
+
+}
+
+.dark.teamTitle {
+    background-color: #1b2d3f;
+    color: rgba(255, 255, 255, 0.737);
+
+    /* border-bottom: 5px solid white; */
+
+}
+
+.dark.teamLink {
+    color: black;
+    background-color: lightblue;
+    border: 5px solid #1b2d3f; 
+
+}
+
+.dark.teamLink:hover {
+    border: 5px solid lightgreen;
+    background-color: #1b2d3f;
+color: rgba(255, 255, 255, 0.668);
+    /* background-color: #a3d368; */
+    /* background-color: #f2e9debd; */
+
+}
+
+.dark.contactsInfo {
+    /* background-color: #63d3ffbb; */
+    /* background-color: #f2e9debd; */
+    background-color: #1b2d3f;
+
+
+
+}
+
+.dark.contentContacts {
+    border: 5px dotted rgba(255, 255, 255, 0.486);
+
+
+}
+
+.dark.contact>a>p {
+    /* color: black; */
+  color: rgba(255, 255, 255, 0.531);
+
+
+}
