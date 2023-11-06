@@ -40,10 +40,19 @@
 }
 
 .span {
+    color: rgba(240, 248, 255, 0.752);
     padding-bottom: 5px;
     font-size: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+.currentDetails>p {
+    color: lightgreen;
+    padding-bottom: 5px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+
 }
 
 .informationUser {

@@ -24,7 +24,7 @@ export const Header = () => {
           <li className={styles.navBarEl}>
             <NavLink className={styles.link} style={({ isActive }) => ({
             color: isActive ? "lightblue" : "lightgreen",
-          })} to="#">
+          })} to="/application">
               Application
             </NavLink>
           </li>

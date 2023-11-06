@@ -1,0 +1,106 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+.containerCreateForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.createForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    width: 900px;
+    padding: 10px;
+    border: 1px solid lightblue;
+    position: relative;
+    border-radius: 5px;
+}
+.createForm > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    align-items: center;
+    /* height: 100px; */
+
+}
+
+.createSiteLabel {
+    color: rgba(255, 255, 255, 0.791);
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+
+}
+.createSiteInput {
+    padding: 5px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: #1B2D3F;
+    border: 2px solid rgba(173, 216, 230, 0.498);
+    color: white;
+    letter-spacing: 1.5px;
+
+}
+.createSiteTextarea {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: #1B2D3F;
+    border: 2px solid rgba(173, 216, 230, 0.498);
+    color: white;
+    letter-spacing: 1.5px;
+
+}
+.createSiteButton {
+    display: block;
+    width: 300px;
+    height: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    border: 3px solid rgba(240, 248, 255, 0.531);
+    background-color: rgba(240, 248, 255, 0.531);
+    border-radius: 5px;
+
+
+}
+
+.createSiteInput:hover {
+    box-shadow: 0px 0px 10px 1px rgba(173, 216, 230, 0.474);
+
+}
+
+.createSiteInput:active {
+    box-shadow: 0px 0px 10px 1px lightblue;
+
+}
+
+.createSiteButton:hover {
+    border: 3px solid rgba(240, 248, 255, 0.531);
+    background-color: #1B2D3F;
+    color: rgba(240, 248, 255, 0.531);
+
+
+
+}
+.createSiteButton:active {
+    border: 3px solid lightgreen;
+    background-color: #1B2D3F;
+    color: lightgreen;
+
+
+}

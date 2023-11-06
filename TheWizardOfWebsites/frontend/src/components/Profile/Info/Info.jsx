@@ -19,7 +19,7 @@ export const Info = () => {
         </div>
         <div className={styles.currentDetails}>
           <span className={styles.span}>Date of birth</span>
-          <p className={styles.informationUser}></p>
+          <p className={styles.informationUser}>fff</p>
         </div>
       </div>
 

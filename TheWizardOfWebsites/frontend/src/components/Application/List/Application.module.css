@@ -1,0 +1,136 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+.listCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    min-height: 85vh;
+    font-family: 'Montserrat', sans-serif;
+    flex-wrap: wrap;
+
+}
+.contentCard {
+    display: flex;
+    flex-direction: column;
+    /* width: 200px; */
+    /* height: 350px; */
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 180px;
+    padding: 15px;
+
+}
+.cardImg {
+    width: 200px;
+    height: 180px;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+    opacity: 0.7;
+}
+.cardTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgba(240, 248, 255, 0.485);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+}
+.cardMoreInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardDescription {
+    overflow-wrap: anywhere;
+    font-size: 14px;
+    height: 40px;
+    overflow: hidden;
+    padding: 0px 10px;
+    color: rgba(240, 248, 255, 0.485);
+    letter-spacing: 0.5px;
+}
+.cardPrice {
+    color: rgba(240, 248, 255, 0.485);
+    margin-top: 5px;
+}
+.cardPrice>span {
+   color: lightblue;
+}
+.cardButton {
+    display: flex;
+    text-transform: uppercase;
+    width: 95%;
+    border-radius: 5px;
+    background-color: #1B2D3F;
+    border: 1px solid #1B2D3F;
+    color: rgba(240, 248, 255, 0.531);
+    border: 1px solid rgba(240, 248, 255, 0.531);
+    padding: 3px ;
+    justify-content: center;
+    align-items: center;
+}
+.cardButton:hover {
+    border: 1px solid lightgreen;
+    background-color: #1B2D3F;
+    color: rgba(240, 248, 255, 0.531);
+
+
+
+}
+.cardButton:active {
+    color: lightgreen !important;
+box-shadow: 0px 0px 5px 1px lightgreen;
+
+
+}
+.contentCard:hover {
+    border: 1px solid lightgreen;
+box-shadow: 0px 0px 10px 1px rgba(144, 238, 144, 0.243);
+
+}
+.contentCard:hover .cardTitle {
+    color: lightgreen;
+
+}
+
+.contentCard:hover .cardPrice>span {
+    color: lightgreen;
+ }
+
+ .contentCard:hover .cardPrice {
+    color: lightblue;
+}
+
+.contentCard:hover .cardButton {
+    color: lightgreen;
+}
+
+.contentCard:hover .cardDescription {
+
+    color: rgba(173, 216, 230, 0.738);
+
+}
+
+.contentCard:hover .cardImg {
+    opacity: 1;
+}

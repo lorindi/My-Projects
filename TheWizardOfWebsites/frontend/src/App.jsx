@@ -8,7 +8,11 @@ import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import {Profile} from "./components/Profile/Profile"
-import {Info} from "./components/Profile/Info/Info"
+import { Application } from "./components/Application/List/Application";
+import { CreateForm } from "./components/Application/CreateForm/CreateForm";
+import { EditForm } from "./components/Application/EditForm/EditForm";
+import {Details} from './components/Application/Details/Details'
+
 // import { useEffect } from 'react';
 // import "./App.css";
 
@@ -24,10 +28,12 @@ function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/profile/*" element={<Profile />} /> */}
-          <Route path="/profile/*" element={<Profile />}>
-            <Route path="info" element={<Info />} /> {/* Добавете този маршрут */}
-          </Route>
+          <Route path="/profile/*" element={<Profile />}/>
+          <Route path="/application/create-site" element={<CreateForm />}/>
+          <Route path="/application/edit-site" element={<EditForm />}/>
+          <Route path="/application/details" element={<Details />}/>
+
+          <Route path="/application/*" element={<Application />}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/about-us" element={<AboutUs />} />
