@@ -1,39 +1,68 @@
-import styles from './Login.module.css'
+import styles from "./Login.module.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Contexts } from "../../contexts/Contexts";
+import { useForm } from "../../hooks/useForm";
+
+const LoginFormKeys = {
+  username: "username",
+  password: "password",
+};
 
 export const Login = () => {
-  return (
-    
-    <div className={`${styles.content}`}>
-      <section className={`${styles.authenticationPage} ${styles.loginPage } ${styles.pageWrapper}`}>
-        {/* <header className="authentication-page-header"></header> */}
+  const { onLoginSubmit } = useContext(Contexts);
+  const { values, changeHandler, } = useForm(
+    {
+      [LoginFormKeys.username]: "",
+      [LoginFormKeys.password]: "",
+    },
+    onLoginSubmit
+  );
 
-        <section className={`${styles.loginPageFormAuthentication} ${styles.loginPageForm} ${styles.block} ${styles.glow} `}>
-          <header className={`${styles.loginPageFormAuthenticationHeader} ${styles.loginPageForm}`}>
+  return (
+    <div className={`${styles.content}`}>
+      <section
+        className={`${styles.authenticationPage} ${styles.loginPage} ${styles.pageWrapper}`}
+      >
+        <section
+          className={`${styles.loginPageFormAuthentication} ${styles.loginPageForm} ${styles.block} ${styles.glow} `}
+        >
+          <header
+            className={`${styles.loginPageFormAuthenticationHeader} ${styles.loginPageForm}`}
+          >
             <article className={styles.loginPageFormAuthenticationHeaderLogin}>
               <span>
                 <Link to="/login">Login</Link>
               </span>
             </article>
-            <article className={styles.loginPageFormAuthenticationHeaderRegister}>
+            <article
+              className={styles.loginPageFormAuthenticationHeaderRegister}
+            >
               <span>
                 <Link to="/register">Register</Link>
               </span>
             </article>
           </header>
-          <article className={`${styles.loginPageFormSubtitle} ${styles.loginPageForm}`}>
+          <article
+            className={`${styles.loginPageFormSubtitle} ${styles.loginPageForm}`}
+          >
             <h3 className="">Welcome to LorinDi!</h3>
             <p>Its time to begin our daring adventure.</p>
           </article>
-          <form action="" className={`${styles.loginPageFormContent} `}>
+          <form
+            onSubmit={onLoginSubmit}
+            className={`${styles.loginPageFormContent} `}
+          >
             <div className={styles.sectionUsernameEmailPassword}>
               <div className={` ${styles.forms} ${styles.inputBox} `}>
                 <input
                   className={`${styles.formsInput} `}
                   type="text"
                   id="username"
-                  name="username"
-                  required="required"
+                  name={LoginFormKeys.username}
+                  value={values[LoginFormKeys.username]}
+                  onChange={changeHandler}
+                  // required="required"
                 />
                 <span>Username</span>
               </div>
@@ -43,8 +72,10 @@ export const Login = () => {
                   className={`${styles.formsInput} `}
                   type="text"
                   id="password"
-                  name="password"
-                  required="required"
+                  name={LoginFormKeys.password}
+                  value={values[LoginFormKeys.password]}
+                  onChange={changeHandler}
+                  // required="required"
                 />
                 <span>Password</span>
               </div>
@@ -62,8 +93,6 @@ export const Login = () => {
               </div>
             </div>
           </form>
-
-
         </section>
       </section>
     </div>

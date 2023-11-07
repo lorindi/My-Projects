@@ -49,7 +49,7 @@ export const CreateForm = () => {
           />
         </div>
 
-        <button className={styles.createSiteButton}>Create</button>
+        <input type="submit" className={styles.createSiteButton} value="Create"/>
       </form>
     </div>
   );
