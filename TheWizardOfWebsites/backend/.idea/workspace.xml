@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13c0d0a3-6430-4a57-a0bd-6292645a80fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/api/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs_frontend_api/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs_frontend_api/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs_frontend_api/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs_frontend_api/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs_frontend_api/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs_frontend_api/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs_frontend_api/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs_frontend_api/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs_frontend_api/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs_frontend_api/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/CreateForm/CreateForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/CreateForm/CreateForm.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/Details/Details.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/Details/Details.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/EditForm/EditForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/EditForm/EditForm.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/List/Application.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/List/Application.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/List/john-schnobrich-2FPjlAyMQTA-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Profile/EditForm/EditForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Profile/EditForm/EditForm.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Profile/Info/Info.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Profile/Info/Info.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/animation-design-button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/animation-design-form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/animation-design-input.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/google.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/login-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/register-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/style-logo-lorindi.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/styles-login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/registration-form/unnamed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/john-schnobrich-2FPjlAyMQTA-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/pngwing.com (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/pngwing.com (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/pngwing.com (3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/pngwing.com (4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/pngwing.com (5).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/pngwing.com (6).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/pngwing.com (8).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/pngwing.com (9).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/pngwing.com(7).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/images/pngwing.com.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/js/descriptionAnimation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/styles/about-us.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/styles/home-page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/styles/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/staticfiles/styles/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/templates/about-us/about-us.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/templates/home-page/index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2Xzq2UHjZp8IvmWiZdOmElDFYBF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="backend" type="Python.DjangoServer" factoryName="Django server">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="backend.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13c0d0a3-6430-4a57-a0bd-6292645a80fb" name="Changes" comment="" />
+      <created>1699642051316</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699642051316</updated>
+      <workItem from="1699642099101" duration="6197000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

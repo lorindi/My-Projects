@@ -1,8 +1,8 @@
 import styles from "./Profile.module.css";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { Info } from "./Info/Info";
-import {EditForm} from "./EditForm/EditForm"
+import { Info } from "./ProfileInfo/Info";
+import {EditForm} from "./ProfileEditForm/EditForm"
 export const Profile = () => {
   const [showInfo, setShowInfo] = useState(false);
   const [showEditForm, setShowEditForm] = useState(false)
