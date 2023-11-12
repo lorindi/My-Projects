@@ -13,6 +13,7 @@ import { CreateForm } from "./components/Application/ApplicationCreateForm/Creat
 import { EditForm } from "./components/Application/ApplicationEditForm/EditForm";
 import { Details } from "./components/Application/ApplicationDetailsCard/Details";
 import { useEffect, useState } from "react";
+import { NotFound } from "./components/NotFound/NotFound";
 
 function App() {
   const [data, setData] = useState([]);
@@ -44,16 +45,21 @@ function App() {
         <Header />
         <main className="main">
           <Routes>
+            <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
-            <Route path="/profile/*" element={<Profile />} />
-            <Route path="/application/create-site" element={<CreateForm />} />
-            <Route path="/application/edit-site" element={<EditForm />} />
-            <Route path="/application/details" element={<Details />} />
-            <Route path="/application/*" element={<Application />} />
             <Route path="/login" element={<Login />} />
             {/* onLoginSubmit={onLoginSubmit} */}
             <Route path="/register" element={<Register />} />
+            
+            <Route path="/profile/*" element={<Profile />} />
             <Route path="/about-us" element={<AboutUs />} />
+
+            <Route path="/application" element={<Application />}/>
+            <Route path="/application/details" element={<Details />}>
+              <Route path="edit-site" element={<EditForm />} />
+            </Route>
+  
+            <Route path="/application/create-site" element={<CreateForm />} />
           </Routes>
         </main>
         <Footer />

@@ -5,6 +5,8 @@
     width: 100%;
     min-height: 855px;
     align-items: center;
+    background-color: #1B2D3F;
+
 }
 
 
@@ -83,7 +85,8 @@
     width: 100%;
     justify-content: space-around;
     padding: 7px 0px 7px 0px;
-    border: 2px solid rgba(255, 255, 255, 0.269);
+    border-top: 2px solid rgba(255, 255, 255, 0.269);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.269);
 
 
 }

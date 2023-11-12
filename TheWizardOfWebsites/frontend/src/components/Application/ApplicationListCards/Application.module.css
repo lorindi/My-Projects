@@ -10,9 +10,11 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
-    min-height: 85vh;
+    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
     flex-wrap: wrap;
+    background-color: #1B2D3F;
+
 
 }
 .contentCard {
@@ -26,6 +28,7 @@
     overflow: hidden;
 }
 .cardInfo {
+    background-color: #1B2D3F;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,6 +84,7 @@
     text-transform: uppercase;
     width: 95%;
     border-radius: 5px;
+
     background-color: #1B2D3F;
     border: 1px solid #1B2D3F;
     color: rgba(240, 248, 255, 0.531);
@@ -90,7 +94,7 @@
     align-items: center;
 }
 .cardButton:hover {
-    border: 1px solid lightgreen;
+    border: 1px solid lightblue;
     background-color: #1B2D3F;
     color: rgba(240, 248, 255, 0.531);
 
@@ -98,23 +102,23 @@
 
 }
 .cardButton:active {
-    color: lightgreen !important;
-box-shadow: 0px 0px 5px 1px lightgreen;
+    color: lightblue !important;
+box-shadow: 0px 0px 5px 1px lightblue;
 
 
 }
 .contentCard:hover {
-    border: 1px solid lightgreen;
+    border: 1px solid lightblue;
 box-shadow: 0px 0px 10px 1px rgba(144, 238, 144, 0.243);
 
 }
 .contentCard:hover .cardTitle {
-    color: lightgreen;
+    color: lightblue;
 
 }
 
 .contentCard:hover .cardPrice>span {
-    color: lightgreen;
+    color: lightblue;
  }
 
  .contentCard:hover .cardPrice {
@@ -122,7 +126,7 @@ box-shadow: 0px 0px 10px 1px rgba(144, 238, 144, 0.243);
 }
 
 .contentCard:hover .cardButton {
-    color: lightgreen;
+    color: lightblue;
 }
 
 .contentCard:hover .cardDescription {

@@ -14,13 +14,13 @@ export const Header = () => {
               Home
             </NavLink>
           </li>
-          <li className={styles.navBarEl}>
+          {/* <li className={styles.navBarEl}>
             <NavLink className={styles.link} style={({ isActive }) => ({
             color: isActive ? "lightblue" : "lightgreen",
           })} to="/about-us">
               About us
             </NavLink>
-          </li>
+          </li> */}
           <li className={styles.navBarEl}>
             <NavLink className={styles.link} style={({ isActive }) => ({
             color: isActive ? "lightblue" : "lightgreen",
@@ -39,16 +39,16 @@ export const Header = () => {
             <NavLink className={styles.link} style={({ isActive }) => ({
             color: isActive ? "lightblue" : "lightgreen",
           })} to="/login">
-              Log in
+              Sing in
             </NavLink>
           </li>
-          <li className={styles.navBarEl}>
+          {/* <li className={styles.navBarEl}>
             <NavLink className={styles.link} style={({ isActive }) => ({
             color: isActive ? "lightblue" : "lightgreen",
           })} to="/register">
               Register
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

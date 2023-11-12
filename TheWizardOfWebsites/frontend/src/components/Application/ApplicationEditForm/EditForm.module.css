@@ -22,7 +22,7 @@
     height: 500px;
     width: 900px;
     padding: 10px;
-    border: 1px solid lightblue;
+    /* border: 1px solid lightblue; */
     position: relative;
     border-radius: 5px;
 }

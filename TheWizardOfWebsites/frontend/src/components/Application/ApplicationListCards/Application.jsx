@@ -1,8 +1,7 @@
 import styles from "./Application.module.css";
 // import { Details } from "../Details/Details";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 export const Application = () => {
- 
   return (
     <div className={styles.listCards}>
       <div className={styles.contentCard}>
@@ -21,7 +20,7 @@ export const Application = () => {
               1010 <span>lv.</span>
             </p>
           </div>
-          <Link to='/application/details' className={styles.cardButton}>
+          <Link to="details" className={styles.cardButton}>
             More
           </Link>
         </div>
