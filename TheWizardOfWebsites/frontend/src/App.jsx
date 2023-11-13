@@ -12,28 +12,28 @@ import { Application } from "./components/Application/ApplicationListCards/Appli
 import { CreateForm } from "./components/Application/ApplicationCreateForm/CreateForm";
 import { EditForm } from "./components/Application/ApplicationEditForm/EditForm";
 import { Details } from "./components/Application/ApplicationDetailsCard/Details";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { NotFound } from "./components/NotFound/NotFound";
 
 function App() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    async function fetchData() {
-      console.log(import.meta.env.VITE_API_URL);
-      try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}`);
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        console.log(result);
-        setData(result);
-      } catch (error) {
-        console.log("Error fetching data:", error);
-      }
-    }
-    fetchData();
-  }, []);
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     console.log(import.meta.env.VITE_API_URL);
+  //     try {
+  //       const response = await fetch(`${import.meta.env.VITE_API_URL}`);
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       const result = await response.json();
+  //       console.log(result);
+  //       setData(result);
+  //     } catch (error) {
+  //       console.log("Error fetching data:", error);
+  //     }
+  //   }
+  //   fetchData();
+  // }, []);
 
   const onLoginSubmit = async (data) => {
     console.log(data);

@@ -117,12 +117,13 @@
     object-fit: cover;
     background-size: contain;
     padding: 30px;
-    border: 1px solid rgba(173, 216, 230, 0.252);
+    border: 3px solid rgba(173, 216, 230, 0.252);
 
 }
+
 .teamSection>img:hover {
 
-    border: 1px solid lightgreen;
+    border: 3px solid lightgreen;
 
 }
 
@@ -191,10 +192,12 @@
 
 
 }
-.dark.infoTitle{
+
+.dark.infoTitle {
     color: rgba(255, 255, 255, 0.679);
 
 }
+
 .dark.infoDescription {
     color: rgba(255, 255, 255, 0.486);
 
@@ -218,14 +221,14 @@
 .dark.teamLink {
     color: black;
     background-color: lightblue;
-    border: 5px solid #1b2d3f; 
+    border: 5px solid #1b2d3f;
 
 }
 
 .dark.teamLink:hover {
     border: 5px solid lightgreen;
     background-color: #1b2d3f;
-color: rgba(255, 255, 255, 0.668);
+    color: rgba(255, 255, 255, 0.668);
     /* background-color: #a3d368; */
     /* background-color: #f2e9debd; */
 
@@ -248,7 +251,7 @@ color: rgba(255, 255, 255, 0.668);
 
 .dark.contact>a>p {
     /* color: black; */
-  color: rgba(255, 255, 255, 0.531);
+    color: rgba(255, 255, 255, 0.531);
 
 
 }
