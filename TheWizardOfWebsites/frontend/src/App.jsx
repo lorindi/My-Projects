@@ -50,19 +50,14 @@ function App() {
             <Route path="/login" element={<Login />} />
             {/* onLoginSubmit={onLoginSubmit} */}
             <Route path="/register" element={<Register />} />
-            
             <Route path="/profile/*" element={<Profile />} />
             <Route path="/about-us" element={<AboutUs />} />
-
-            <Route path="/sites" element={<ListSites />}/>
+            <Route path="/sites" element={<ListSites />} />
             <Route path="/site/details" element={<Details />}>
               <Route path="edit" element={<EditForm />} />
-              <Route path="del" element={<EditForm />} />
-              <Route path="sign-up" element={<EditForm />} />
-
-
+              {/* <Route path="del" element={<EditForm />} />
+              <Route path="sign-up" element={<EditForm />} /> */}
             </Route>
-  
             <Route path="/site/create" element={<CreateForm />} />
           </Routes>
         </main>
