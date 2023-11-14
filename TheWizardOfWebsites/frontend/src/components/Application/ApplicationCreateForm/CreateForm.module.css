@@ -22,7 +22,7 @@
     height: 500px;
     width: 900px;
     padding: 10px;
-    border: 1px solid lightblue;
+    /* border: 1px solid lightblue; */
     position: relative;
     border-radius: 5px;
 }
@@ -37,6 +37,10 @@
 }
 
 .createSiteLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: rgba(255, 255, 255, 0.791);
     text-transform: uppercase;
     font-size: 16px;

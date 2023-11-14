@@ -8,7 +8,7 @@ import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { Profile } from "./components/Profile/Profile";
-import { Application } from "./components/Application/ApplicationListCards/Application";
+import { ListSites } from "./components/Application/ApplicationListSites/ListSites";
 import { CreateForm } from "./components/Application/ApplicationCreateForm/CreateForm";
 import { EditForm } from "./components/Application/ApplicationEditForm/EditForm";
 import { Details } from "./components/Application/ApplicationDetailsCard/Details";
@@ -54,12 +54,16 @@ function App() {
             <Route path="/profile/*" element={<Profile />} />
             <Route path="/about-us" element={<AboutUs />} />
 
-            <Route path="/application" element={<Application />}/>
-            <Route path="/application/details" element={<Details />}>
-              <Route path="edit-site" element={<EditForm />} />
+            <Route path="/sites" element={<ListSites />}/>
+            <Route path="/site/details" element={<Details />}>
+              <Route path="edit" element={<EditForm />} />
+              <Route path="del" element={<EditForm />} />
+              <Route path="sign-up" element={<EditForm />} />
+
+
             </Route>
   
-            <Route path="/application/create-site" element={<CreateForm />} />
+            <Route path="/site/create" element={<CreateForm />} />
           </Routes>
         </main>
         <Footer />

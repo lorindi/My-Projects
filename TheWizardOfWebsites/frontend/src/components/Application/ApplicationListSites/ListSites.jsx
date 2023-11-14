@@ -1,13 +1,13 @@
-import styles from "./Application.module.css";
+import styles from "./ListSites.module.css";
 // import { Details } from "../Details/Details";
 import { Link } from "react-router-dom";
-export const Application = () => {
+export const ListSites = () => {
   return (
     <div className={styles.listCards}>
       <div className={styles.contentCard}>
         <img
           className={styles.cardImg}
-          src="../../../../src/components/Application/ApplicationListCards/john-schnobrich-2FPjlAyMQTA-unsplash.jpg"
+          src="../../../../src/components/Application/ApplicationListSites/john-schnobrich-2FPjlAyMQTA-unsplash.jpg"
           alt=""
         />
         <div className={styles.cardInfo}>
@@ -20,7 +20,7 @@ export const Application = () => {
               1010 <span>lv.</span>
             </p>
           </div>
-          <Link to="details" className={styles.cardButton}>
+          <Link to="/site/details" className={styles.cardButton}>
             More
           </Link>
         </div>

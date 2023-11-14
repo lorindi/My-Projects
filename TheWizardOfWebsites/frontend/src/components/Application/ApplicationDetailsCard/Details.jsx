@@ -6,9 +6,9 @@ export const Details = () => {
       <h1 className={styles.detailTitle}>Title</h1>
       <p className={styles.detailDescription}>Description</p>
       <div className={styles.detailLinks}>
-        <Link to="edit-site" className={styles.detailLink}>Edit</Link>
-        <Link to="delete" className={styles.detailLink}>Delete</Link>
-        <Link to="sing-up" className={styles.detailLink}>Sing Up</Link>
+        <Link to="edit" className={styles.detailLink}>Edit</Link>
+        <button className={styles.detailLink}>Delete</button>
+        <button className={styles.detailLink}>Sing Up</button>
       </div>
       <Outlet/>
     </div>)
