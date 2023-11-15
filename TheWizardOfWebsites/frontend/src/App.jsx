@@ -1,19 +1,19 @@
 // import { useState } from 'react'
 import { Contexts } from "./contexts/Contexts";
+import { NotFound } from "./components/NotFound/NotFound";
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
 import { Home } from "./components/Home/Home";
 import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { Profile } from "./components/Profile/Profile";
+import { Footer } from "./components/Footer/Footer";
 import { List } from "./components/Application/List/List";
 import { Create } from "./components/Application/Create/Create";
 import { Edit } from "./components/Application/Edit/Edit";
 import { Details } from "./components/Application/Details/Details";
 // import { useEffect, useState } from "react";
-import { NotFound } from "./components/NotFound/NotFound";
 
 function App() {
   // const [data, setData] = useState([]);
