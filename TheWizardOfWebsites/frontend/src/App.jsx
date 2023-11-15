@@ -58,7 +58,7 @@ function App() {
               {/* <Route path="del" element={<Edit />} />
               <Route path="sign-up" element={<Edit />} /> */}
             </Route>
-            <Route path="/site/create" element={<Create/>} />
+            <Route path="/sites/create" element={<Create/>} />
           </Routes>
         </main>
         <Footer />

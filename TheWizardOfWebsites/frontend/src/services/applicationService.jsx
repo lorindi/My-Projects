@@ -1,5 +1,9 @@
 const baseUrl = 'http://localhost:3030/jsonstore'
 
+export const getAll = async () => {
+    
+}
+
 export const create = async (siteData) => {
     const response = await fetch(`${baseUrl}/sites`, {
         method: "POST",

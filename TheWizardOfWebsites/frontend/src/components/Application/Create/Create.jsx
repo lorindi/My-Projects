@@ -4,17 +4,21 @@ import styles from "./Create.module.css";
 import * as siteService from "../../../services/applicationService";
 // const baseUrl = "http://localhost:8000";
 
-
 export const Create = () => {
-  const navigate = useNavigate()
-const createSiteSubmitHandler = async (e) => {
-  e.preventDefault()
-  const siteData = Object.fromEntries(new FormData(e.currentTarget))
-  await siteService.create(siteData)
-  navigate('/sites')
-}
+  const navigate = useNavigate();
+  
+  const createSiteSubmitHandler = async (e) => {
+    e.preventDefault();
 
+    const siteData = Object.fromEntries(new FormData(e.currentTarget));
 
+    try {
+      await siteService.create(siteData);
+      navigate("/sites");
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   // const [formData, setFormData] = useState({
   //   image: null,
@@ -40,13 +44,14 @@ const createSiteSubmitHandler = async (e) => {
 
   return (
     <div className={styles.containerCreateForm}>
-      <form 
-      // onSubmit={handleSubmit} 
-      // className={styles.createForm} 
-      onSubmit={createSiteSubmitHandler} 
-
-      method="post" action="" 
-      encType="multipart/form-data">
+      <form
+        // onSubmit={handleSubmit}
+        // className={styles.createForm}
+        onSubmit={createSiteSubmitHandler}
+        method="post"
+        action=""
+        encType="multipart/form-data"
+      >
         <div>
           <label htmlFor="image" className={styles.createSiteLabel}>
             Image
@@ -119,4 +124,3 @@ const createSiteSubmitHandler = async (e) => {
     </div>
   );
 };
-

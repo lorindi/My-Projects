@@ -1,7 +1,13 @@
 import styles from "./List.module.css";
 // import { Details } from "../Details/Details";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import * as siteService from "../../../services/applicationService";
 export const List = () => {
+  useEffect(() => {
+    siteService.getAll();
+  }, []);
+
   return (
     <div className={styles.listCards}>
       <div className={styles.contentCard}>
