@@ -1,36 +1,52 @@
-import { useState } from "react";
-// import { useHistory } from "react-router-dom";
+// import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Create.module.css";
-
+import * as siteService from "../../../services/applicationService";
 // const baseUrl = "http://localhost:8000";
 
 
 export const Create = () => {
-  const [formData, setFormData] = useState({
-    image: null,
-    title: "",
-    price: "",
-    shortDescription: "",
-    description: "",
-  });
+  const navigate = useNavigate()
+const createSiteSubmitHandler = async (e) => {
+  e.preventDefault()
+  const siteData = Object.fromEntries(new FormData(e.currentTarget))
+  await siteService.create(siteData)
+  navigate('/sites')
+}
 
-  // const history = useHistory();
 
-  const handleChange = (e) => {
-    const { name, value, type, files } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: type === "file" ? files[0] : value,
-    }));
-  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-  };
+  // const [formData, setFormData] = useState({
+  //   image: null,
+  //   title: "",
+  //   price: "",
+  //   shortDescription: "",
+  //   description: "",
+  // });
+
+  // // const history = useHistory();
+
+  // const handleChange = (e) => {
+  //   const { name, value, type, files } = e.target;
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [name]: type === "file" ? files[0] : value,
+  //   }));
+  // };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  // };
 
   return (
     <div className={styles.containerCreateForm}>
-      <form onSubmit={handleSubmit} className={styles.createForm} method="post" action="" encType="multipart/form-data">
+      <form 
+      // onSubmit={handleSubmit} 
+      // className={styles.createForm} 
+      onSubmit={createSiteSubmitHandler} 
+
+      method="post" action="" 
+      encType="multipart/form-data">
         <div>
           <label htmlFor="image" className={styles.createSiteLabel}>
             Image
@@ -38,9 +54,9 @@ export const Create = () => {
           <input
             type="file"
             accept="image/*"
-            className={styles.createSiteInput}
             name="image"
-            onChange={handleChange}
+            // className={styles.createSiteInput}
+            // onChange={handleChange}
           />
         </div>
         <div>
@@ -51,8 +67,8 @@ export const Create = () => {
             type="text"
             name="title"
             className={styles.createSiteInput}
-            value={formData.title}
-            onChange={handleChange}
+            // value={formData.title}
+            // onChange={handleChange}
           />
         </div>
 
@@ -64,8 +80,8 @@ export const Create = () => {
             type="text"
             name="price"
             className={styles.createSiteInput}
-            value={formData.price}
-            onChange={handleChange}
+            // value={formData.price}
+            // onChange={handleChange}
           />
         </div>
         <div>
@@ -76,8 +92,8 @@ export const Create = () => {
             type="text"
             name="shortDescription"
             className={styles.createSiteInput}
-            value={formData.shortDescription}
-            onChange={handleChange}
+            // value={formData.shortDescription}
+            // onChange={handleChange}
           />
         </div>
         <div>
@@ -89,8 +105,8 @@ export const Create = () => {
             rows="4"
             cols="50"
             className={styles.createSiteTextarea}
-            value={formData.description}
-            onChange={handleChange}
+            // value={formData.description}
+            // onChange={handleChange}
           />
         </div>
 
