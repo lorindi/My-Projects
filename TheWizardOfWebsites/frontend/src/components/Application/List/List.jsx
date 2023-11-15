@@ -1,20 +1,24 @@
 import styles from "./List.module.css";
 // import { Details } from "../Details/Details";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import * as siteService from "../../../services/applicationService";
+import { Item } from "../Item/Item";
 export const List = () => {
-  const [sites, setSites] = useState([])
-
+  const [sites, setSites] = useState([]);
 
   useEffect(() => {
-    siteService.getAll()
-    .then(result => setSites(result))
+    siteService.getAll().then((result) => setSites(result));
   }, []);
-console.log(sites);
+
   return (
     <div className={styles.listCards}>
-      <div className={styles.contentCard}>
+      {sites.map((site) => (
+        <Item key={site._id} {...site} />
+      ))}
+      {sites.length === 0 && (
+        <h1 className={styles.noArticles}>No articles yet</h1>
+      )}
+      {/* <div className={styles.contentCard}>
         <img
           className={styles.cardImg}
           src="../../../../src/components/Application/List/john-schnobrich-2FPjlAyMQTA-unsplash.jpg"
@@ -34,7 +38,7 @@ console.log(sites);
             More
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
