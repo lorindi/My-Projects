@@ -8,10 +8,10 @@ import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { Profile } from "./components/Profile/Profile";
-import { ListSites } from "./components/Application/ApplicationListSites/ListSites";
-import { CreateForm } from "./components/Application/ApplicationCreateForm/CreateForm";
-import { EditForm } from "./components/Application/ApplicationEditForm/EditForm";
-import { Details } from "./components/Application/ApplicationDetailsCard/Details";
+import { List } from "./components/Application/List/List";
+import { Create } from "./components/Application/Create/Create";
+import { Edit } from "./components/Application/Edit/Edit";
+import { Details } from "./components/Application/Details/Details";
 // import { useEffect, useState } from "react";
 import { NotFound } from "./components/NotFound/NotFound";
 
@@ -52,13 +52,13 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/profile/*" element={<Profile />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/sites" element={<ListSites />} />
+            <Route path="/sites" element={<List />} />
             <Route path="/site/details" element={<Details />}>
-              <Route path="edit" element={<EditForm />} />
-              {/* <Route path="del" element={<EditForm />} />
-              <Route path="sign-up" element={<EditForm />} /> */}
+              <Route path="edit" element={<Edit />} />
+              {/* <Route path="del" element={<Edit />} />
+              <Route path="sign-up" element={<Edit />} /> */}
             </Route>
-            <Route path="/site/create" element={<CreateForm />} />
+            <Route path="/site/create" element={<Create/>} />
           </Routes>
         </main>
         <Footer />

@@ -1,13 +1,13 @@
-import styles from "./ListSites.module.css";
+import styles from "./List.module.css";
 // import { Details } from "../Details/Details";
 import { Link } from "react-router-dom";
-export const ListSites = () => {
+export const List = () => {
   return (
     <div className={styles.listCards}>
       <div className={styles.contentCard}>
         <img
           className={styles.cardImg}
-          src="../../../../src/components/Application/ApplicationListSites/john-schnobrich-2FPjlAyMQTA-unsplash.jpg"
+          src="../../../../src/components/Application/List/john-schnobrich-2FPjlAyMQTA-unsplash.jpg"
           alt=""
         />
         <div className={styles.cardInfo}>

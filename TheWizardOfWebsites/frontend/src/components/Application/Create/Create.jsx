@@ -1,11 +1,11 @@
 import { useState } from "react";
 // import { useHistory } from "react-router-dom";
-import styles from "./CreateForm.module.css";
+import styles from "./Create.module.css";
 
 // const baseUrl = "http://localhost:8000";
 
 
-export const CreateForm = () => {
+export const Create = () => {
   const [formData, setFormData] = useState({
     image: null,
     title: "",

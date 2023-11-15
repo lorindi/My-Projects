@@ -1,6 +1,6 @@
-import styles from "./EditForm.module.css";
+import styles from "./Edit.module.css";
 // import { useState } from "react";
-export const EditForm = () => {
+export const Edit = () => {
   return (
     <div className={styles.containerEditForm}>
       <form className={styles.editForm} method="post" action="">
