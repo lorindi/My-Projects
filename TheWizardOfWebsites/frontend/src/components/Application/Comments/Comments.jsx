@@ -1,6 +1,6 @@
 
 
-export const Comments = ({addCommentHandle}) => {
+export const Comments = () => {
   return (
     <div>
       <div>
@@ -8,7 +8,6 @@ export const Comments = ({addCommentHandle}) => {
 
         <div>
           <ul role="list"></ul>
-          {comments.map}
         </div>
 
 
