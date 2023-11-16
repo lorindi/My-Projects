@@ -31,6 +31,7 @@ export const Details = () => {
       formData.get("comment")
     );
     console.log(newComment);
+    console.log("addCommentHandler reference:", addCommentHandler);
   };
   return (
     <div className={styles.containerDetail}>
@@ -52,7 +53,7 @@ export const Details = () => {
 
       </div>
 
-      {showComments && <Comments  addCommentHandler={addCommentHandler} />  }
+      {showComments && <Comments  addCommentHandler={addCommentHandler} comments={comments} setComments={setComments}/>  }
       {showEdit && <Edit />  }
     </div>
   );

@@ -1,20 +1,20 @@
-
-
 export const Comments = () => {
+
+
   return (
     <div>
       <div>
         <h3>Comments</h3>
 
         <div>
-          <ul role="list"></ul>
+          <ul role="list">
+    
+          </ul>
         </div>
-
-
       </div>
       <div>
         <label htmlFor=""></label>
-        <form action="">
+        <form  action="">
           <input type="text" name="username" placeholder="username" />
           <textarea
             name="comment"

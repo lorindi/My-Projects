@@ -14,6 +14,13 @@ const request = async (method, url, data) => {
     ...buildOptions(data),
     method,
   });
+
+  // console.log("Response text:", await response.text());
+  // if (!response.ok) {
+  //   throw new Error(`Request failed with status: ${response.status}`);
+  // }
+
+
   const result = await response.json();
   return result;
 };
