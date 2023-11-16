@@ -13,7 +13,7 @@ export const Comments = ({ comments, setComments, addCommentHandler }) => {
               </li>
             ))}
           </ul>
-          {comments.lenght === 0 && <p>No comments</p>}
+          {comments.length === 0 && <p>No comments</p>}
         </div>
       </div>
       <div>
