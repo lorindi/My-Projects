@@ -1,13 +1,34 @@
-import { Link, Outlet } from "react-router-dom";
 
 
-export const Comments = () => {
-    return (
+export const Comments = ({addCommentHandle}) => {
+  return (
+    <div>
+      <div>
+        <h3>Comments</h3>
+
         <div>
-        <Link to="add">add</Link>
-        <h1>Lora</h1>
-        <Outlet />
-
+          <ul role="list"></ul>
+          {comments.map}
         </div>
-    )
-}
+
+
+      </div>
+      <div>
+        <label htmlFor=""></label>
+        <form action="">
+          <input type="text" name="username" placeholder="username" />
+          <textarea
+            name="comment"
+            placeholder="Comment..."
+            id=""
+            cols="30"
+            rows="10"
+          >
+            aaaaaaaaaaaa
+          </textarea>
+          <input type="submit" value="Add comment" />
+        </form>
+      </div>
+    </div>
+  );
+};
