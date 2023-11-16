@@ -30,6 +30,7 @@ export const Details = () => {
       formData.get("username"),
       formData.get("comment")
     );
+    setComments(state => [...state, newComment])
     console.log(newComment);
     console.log("addCommentHandler reference:", addCommentHandler);
   };
