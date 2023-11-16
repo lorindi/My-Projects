@@ -18,7 +18,7 @@ export const Details = () => {
 
   useEffect(() => {
     siteService.getOne(id).then((site) => setSite(site));
-    commentService.getAll().then((data) => setComments(data));
+    commentService.getAll(id).then((data) => setComments(data));
   }, [id]);
 
   const addCommentHandler = async (e) => {
