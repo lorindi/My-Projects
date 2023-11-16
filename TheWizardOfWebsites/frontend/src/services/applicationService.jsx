@@ -1,4 +1,4 @@
-import * as request  from "../components/lib/requester";
+import * as request  from "../lib/requester";
 
 const baseUrl = "http://localhost:3030/jsonstore/sites";
 

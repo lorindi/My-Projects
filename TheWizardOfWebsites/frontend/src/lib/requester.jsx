@@ -2,7 +2,7 @@ const buildOptions = (data) => {
   const options = {};
   if (data) {
     options.body = JSON.stringify(data);
-    options.header = {
+    options.headers = {
       "content-type": "application/json",
     };
   }

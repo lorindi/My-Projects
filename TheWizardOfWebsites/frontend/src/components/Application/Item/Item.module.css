@@ -12,7 +12,7 @@
     background-color: #1B2D3F;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 200px;
     height: 180px;

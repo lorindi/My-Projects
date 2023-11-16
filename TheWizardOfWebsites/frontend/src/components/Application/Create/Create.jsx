@@ -57,8 +57,8 @@ export const Create = () => {
             Image
           </label>
           <input
-            type="file"
-            accept="image/*"
+            type="text"
+            // accept="image/*"
             name="image"
             // className={styles.createSiteInput}
             // onChange={handleChange}

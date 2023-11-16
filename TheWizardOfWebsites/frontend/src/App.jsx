@@ -13,6 +13,8 @@ import { List } from "./components/Application/List/List";
 import { Create } from "./components/Application/Create/Create";
 import { Edit } from "./components/Application/Edit/Edit";
 import { Details } from "./components/Application/Details/Details";
+import { Comments } from "./components/Application/Comments/Comments";
+import { AddComments } from "./components/Application/AddComments/AddComments";
 // import { useEffect, useState } from "react";
 
 function App() {
@@ -55,10 +57,14 @@ function App() {
             <Route path="/sites" element={<List />} />
             <Route path="/sites/:id/details" element={<Details />}>
               <Route path="edit" element={<Edit />} />
+              <Route path="comments" element={<Comments />}>
+                <Route path="add" element={<AddComments />} />
+              </Route>
+
               {/* <Route path="del" element={<Edit />} />
               <Route path="sign-up" element={<Edit />} /> */}
             </Route>
-            <Route path="/sites/create" element={<Create/>} />
+            <Route path="/sites/create" element={<Create />} />
           </Routes>
         </main>
         <Footer />
