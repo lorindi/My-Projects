@@ -1,0 +1,109 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+
+.containerDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1b2d3f;
+    padding: 30px;
+    min-height: 1000px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.contentDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.detailImage {
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+    border: 1px solid rgba(0, 255, 255, 0.484);
+    padding: 10px;
+    /* filter: grayscale(100%); */
+    margin: 100px 20px 20px 20px;
+}
+
+.detailsInfo {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.detailTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 400;
+    color: #adb3b5e6;
+    letter-spacing: 1.5px;
+
+
+}
+
+.detailDescription {
+    width: 800px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-indent: 3em;
+    text-align: justify;
+    line-height: 35px;
+    color: #adb3b5e6;
+    overflow-wrap: anywhere;
+}
+
+.detailLinks {
+    display: flex;
+    gap: 30px;
+    margin: 20px 20px 100px 20px;
+
+}
+
+.detailLink {
+    display: flex;
+    text-transform: uppercase;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #1B2D3F;
+    border: 1px solid #1B2D3F;
+    color: rgba(240, 248, 255, 0.531);
+    border: 1px solid rgba(240, 248, 255, 0.531);
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailLink:hover {
+    border: 1px solid lightblue;
+    background-color: #1B2D3F;
+    color: rgba(240, 248, 255, 0.531);
+
+
+
+}
+
+.detailLink:active {
+    color: lightblue !important;
+    box-shadow: 0px 0px 5px 1px lightblue;
+
+}

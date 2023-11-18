@@ -255,10 +255,10 @@
     position: absolute;
     left: -2px;
     top: -2px;
-    background: linear-gradient(45deg, #C9F07F, #B2E87F, #99DF7E, #7FD97D, #80D797, #80D5AB, #7FD4BE, #7FD3D5, #7FD1EA, #80D1FF, #83C7F6, #86C0F1, #88B7E7, #8AB0DE, #8EA8D7, #8FA0D1, #A19BCF, #B495D2, #C491D2, #D48BD1, #C491D2, #B495D2, #A19BCF, #8FA0D1, #8EA8D7, #8AB0DE, #88B7E7, #86C0F1, #83C7F6, #80D1FF, #7FD1EA, #7FD3D5, #7FD4BE, #80D5AB, #80D797, #7FD97D, #99DF7E, #B2E87F, #C9F07F);
-    /* background: linear-gradient(45deg, #effc68, #fd8536, #00ff66, #32A6D9,
+    /* background: linear-gradient(45deg, #C9F07F, #B2E87F, #99DF7E, #7FD97D, #80D797, #80D5AB, #7FD4BE, #7FD3D5, #7FD1EA, #80D1FF, #83C7F6, #86C0F1, #88B7E7, #8AB0DE, #8EA8D7, #8FA0D1, #A19BCF, #B495D2, #C491D2, #D48BD1, #C491D2, #B495D2, #A19BCF, #8FA0D1, #8EA8D7, #8AB0DE, #88B7E7, #86C0F1, #83C7F6, #80D1FF, #7FD1EA, #7FD3D5, #7FD4BE, #80D5AB, #80D797, #7FD97D, #99DF7E, #B2E87F, #C9F07F);
+    background: linear-gradient(45deg, #effc68, #fd8536, #00ff66, #32A6D9,
             #fd0dfd, #fc4ab5, #6E0DD0, #f36d4c, #099fff); */
-    /* background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8); */
+    background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8);
     /* background: linear-gradient(45deg, #C9F07F,#B2E87F,#99DF7E,#7FD97D,#80D797,#80D5AB,#7FD4BE,#7FD3D5,#7FD1EA
     ,#80D1FF,#83C7F6,#86C0F1,#88B7E7,#8AB0DE,#8EA8D7,#8FA0D1,#A19BCF,#B495D2,#C491D2,#D48BD1,#C491D2,#B495D2,#A19BCF,#8FA0D1,#8EA8D7,#8AB0DE
     ,#88B7E7,#86C0F1,#83C7F6,#80D1FF,#7FD1EA,#7FD3D5,#7FD4BE,#80D5AB,#80D797,#7FD97D,#99DF7E,#B2E87F,#C9F07F); */
@@ -267,8 +267,8 @@
     width: calc(100% + 5px);
     height: calc(100% + 5px);
     z-index: -1;
-    opacity: 1;
-    filter: blur(1px);
+    opacity: 0.5;
+    filter: blur(10px);
     border-radius: 14px;
     animation: animate 50s linear infinite;
 }
@@ -338,12 +338,12 @@
     height: calc(100% + 3px);
     width: calc(100% + 3px);
     border-radius: 10px;
-    background: linear-gradient(45deg, #B2E87F, #99DF7E, #7FD97D, #80D797, #80D5AB, #7FD4BE, #7FD3D5, #7FD1EA, #80D1FF, #83C7F6, #86C0F1, #88B7E7, #8AB0DE, #8EA8D7, #8FA0D1, #A19BCF, #A19BCF, #8FA0D1, #8EA8D7, #8AB0DE, #88B7E7, #86C0F1, #83C7F6, #80D1FF, #7FD1EA, #7FD3D5, #7FD4BE, #80D5AB, #80D797, #7FD97D, #99DF7E, #B2E87F);
-    /* background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8); */
+    /* background: linear-gradient(45deg, #B2E87F, #99DF7E, #7FD97D, #80D797, #80D5AB, #7FD4BE, #7FD3D5, #7FD1EA, #80D1FF, #83C7F6, #86C0F1, #88B7E7, #8AB0DE, #8EA8D7, #8FA0D1, #A19BCF, #A19BCF, #8FA0D1, #8EA8D7, #8AB0DE, #88B7E7, #86C0F1, #83C7F6, #80D1FF, #7FD1EA, #7FD3D5, #7FD4BE, #80D5AB, #80D797, #7FD97D, #99DF7E, #B2E87F); */
+    background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8);
     z-index: 1;
     opacity: 0.6;
     background-size: 400%;
-    filter: blur(1px);
+    filter: blur(5px);
     transition: opacity .3s ease-in-out;
     animation: ani 20s linear infinite;
 
@@ -449,12 +449,12 @@
     height: calc(100% + 10px);
     width: calc(100% + 10px);
     border-radius: 10px;
-    background: linear-gradient(45deg, #C9F07F, #B2E87F, #99DF7E, #7FD97D, #80D797, #80D5AB, #7FD4BE, #7FD3D5, #7FD1EA, #80D1FF, #83C7F6, #86C0F1, #88B7E7, #8AB0DE, #8EA8D7, #8FA0D1, #A19BCF, #B495D2, #C491D2, #D48BD1, #C491D2, #B495D2, #A19BCF, #8FA0D1, #8EA8D7, #8AB0DE, #88B7E7, #86C0F1, #83C7F6, #80D1FF, #7FD1EA, #7FD3D5, #7FD4BE, #80D5AB, #80D797, #7FD97D, #99DF7E, #B2E87F, #C9F07F);
+    /* background: linear-gradient(45deg, #C9F07F, #B2E87F, #99DF7E, #7FD97D, #80D797, #80D5AB, #7FD4BE, #7FD3D5, #7FD1EA, #80D1FF, #83C7F6, #86C0F1, #88B7E7, #8AB0DE, #8EA8D7, #8FA0D1, #A19BCF, #B495D2, #C491D2, #D48BD1, #C491D2, #B495D2, #A19BCF, #8FA0D1, #8EA8D7, #8AB0DE, #88B7E7, #86C0F1, #83C7F6, #80D1FF, #7FD1EA, #7FD3D5, #7FD4BE, #80D5AB, #80D797, #7FD97D, #99DF7E, #B2E87F, #C9F07F); */
     /* background: linear-gradient(45deg, #BBEBA8,#ABE5A8,#ABE4BA,#AAE3C7,#A9E3D4,#A8E2E3,#ABE1F2,#A9DFFE,#AEDCFB,#AFD6F3,#AFD5F5,#B0CFEE,#B2CBE9,#B4C3E4,#B4C2E0,#C1BDE1,#CBB9DF,#D8B6DF,#D8B6DF,#CBB9DF,#C1BDE1,#B4C2E0,#B4C3E4,#B2CBE9,#B0CFEE,#AFD5F5,#AFD6F3,#AEDCFB,#A9DFFE,#ABE1F2,#A8E2E3,#A9E3D4,#AAE3C7,#ABE4BA,#ABE5A8,#BBEBA8); */
-    /* background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8); */
+    background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8);
     background-size: 400%;
     z-index: -1;
-    opacity: 0.7;
+    opacity: 0.5;
     filter: blur(7px);
     transition: opacity .3s ease-in-out;
     animation: anima 20s linear infinite;
@@ -462,7 +462,7 @@
 
 .button:hover:before {
     opacity: 0.8;
-    filter: blur(12px);
+    filter: blur(10px);
 }
 
 .button:hover:active:before {

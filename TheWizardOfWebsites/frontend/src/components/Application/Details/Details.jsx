@@ -7,7 +7,6 @@ import * as commentService from "../../../services/commentService";
 import { Comments } from "../Comments/Comments";
 import { Edit } from "../Edit/Edit";
 
-
 export const Details = () => {
   const [showComments, setShowComments] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
@@ -30,32 +29,55 @@ export const Details = () => {
       formData.get("username"),
       formData.get("comment")
     );
-    setComments(state => [...state, newComment])
+    setComments((state) => [...state, newComment]);
     console.log(newComment);
     console.log("addCommentHandler reference:", addCommentHandler);
   };
   return (
-    <div className={styles.containerDetail}>
-      <div>
-        <img src={site.image} alt={site.title} />
-        <h1 className={styles.detailTitle}>{site.title}</h1>
-        <p className={styles.detailDescription}>{site.description}</p>
+    <div className={styles.containerDetails}>
+      <div className={styles.contentDetails}>
+        <img className={styles.detailImage} src={site.image} alt={site.title} />
+        <div className={styles.detailsInfo}>
+          <h1 className={styles.detailTitle}>{site.title}</h1>
+          <p className={styles.detailDescription}>{site.description}</p>
+        </div>
         <div className={styles.detailLinks}>
-          <Link to="edit" onClick={() => {setShowEdit(true); setShowComments(false);}} className={styles.detailLink}>
-            Edit
-          </Link>
-          <Link to="comments" onClick={() => {setShowComments(true); setShowEdit(false);}} className={styles.detailLink}>
+          
+          <Link
+            to="comments"
+            onClick={() => {
+              setShowComments(true);
+              setShowEdit(false);
+            }}
+            className={styles.detailLink}
+          >
             Comments
           </Link>
-          <button className={styles.detailLink}>Delete</button>
           <button className={styles.detailLink}>Sing Up</button>
-        </div>
-          {/* <Outlet /> */}
 
+          <Link
+            to="edit"
+            onClick={() => {
+              setShowEdit(true);
+              setShowComments(false);
+            }}
+            className={styles.detailLink}
+          >
+            Edit
+          </Link>
+          <button className={styles.detailLink}>Delete</button>
+        </div>
+        {/* <Outlet /> */}
       </div>
 
-      {showComments && <Comments  addCommentHandler={addCommentHandler} comments={comments} setComments={setComments}/>  }
-      {showEdit && <Edit />  }
+      {showComments && (
+        <Comments
+          addCommentHandler={addCommentHandler}
+          comments={comments}
+          setComments={setComments}
+        />
+      )}
+      {showEdit && <Edit />}
     </div>
   );
 };

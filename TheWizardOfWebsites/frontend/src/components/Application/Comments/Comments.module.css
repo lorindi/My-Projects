@@ -1,0 +1,159 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.containerComments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 1000px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.478);
+
+}
+
+.contentComments {
+    /* box-shadow: 0px 0px 50px 1px rgba(173, 216, 230, 0.25); */
+    padding: 30px;
+    border-radius: 10px;
+    min-width: 700px;
+}
+
+.commentsTitle {
+    color: rgba(255, 255, 255, 0.77);
+    font-size: 40px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+
+}
+
+.commentsList {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.commentsListElement {
+    background-color: #162431;
+    margin: 0px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 700px;
+    min-height: 70px;
+}
+
+.comment {
+    color: lightblue;
+    margin: 5px 20px 5px 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+
+
+}
+
+.commentsCommentDescriptionLikes {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+
+
+}
+
+.commentsUsername,
+.commentsLikes {
+    font-size: 12.5px;
+    letter-spacing: 1px;
+}
+
+.containerAddComments {
+    width: 700px;
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #1B2D3F;
+    border: 2px solid rgba(173, 216, 230, 0.498);
+    color: white;
+    letter-spacing: 1.5px;
+    margin: 20px 50px 20px 50px;
+
+}
+
+.containerAddComments:hover {
+    box-shadow: 0px 0px 10px 1px rgba(173, 216, 230, 0.474);
+
+}
+
+.containerAddComments:active {
+    box-shadow: 0px 0px 10px 1px lightblue;
+
+}
+
+
+.addCommentsForm {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    align-items: flex-end;
+
+}
+.addCommentsFormDiv {
+    display: flex;
+    width: 100%;
+}
+.addCommentsFormUsername {
+    width: 30%;
+    background-color: #1B2D3F;
+    border: none;
+    height: 30px;
+}
+.addCommentsFormTextarea {
+    width: 70%;
+    background-color: #1B2D3F;
+    border: none;
+    border-left: 1px solid lightblue;
+    border-right: 1px solid lightblue;
+
+    height: 30px;
+
+}
+
+
+.addCommentsFormButton {
+    height: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #1B2D3F;
+    box-shadow: ;
+    border: none;
+    color: rgba(240, 248, 255, 0.531);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+
+.addCommentsFormButton:hover {
+    border: none;
+    background-color: #1B2D3F;
+    color: lightblue;
+}
+.addCommentsFormButton:active {
+    background-color: #1B2D3F;
+    color: lightgreen;
+    border: none;
+}
