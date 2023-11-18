@@ -100,7 +100,6 @@
 
 }
 
-
 .addCommentsForm {
     display: flex;
     flex-direction: row;
@@ -109,27 +108,28 @@
     align-items: flex-end;
 
 }
+
 .addCommentsFormDiv {
     display: flex;
     width: 100%;
 }
+
 .addCommentsFormUsername {
     width: 30%;
     background-color: #1B2D3F;
     border: none;
     height: 30px;
 }
+
 .addCommentsFormTextarea {
     width: 70%;
     background-color: #1B2D3F;
     border: none;
     border-left: 1px solid lightblue;
     border-right: 1px solid lightblue;
-
     height: 30px;
 
 }
-
 
 .addCommentsFormButton {
     height: 30px;
@@ -144,13 +144,12 @@
     margin-left: 10px;
 }
 
-
-
 .addCommentsFormButton:hover {
     border: none;
     background-color: #1B2D3F;
     color: lightblue;
 }
+
 .addCommentsFormButton:active {
     background-color: #1B2D3F;
     color: lightgreen;
