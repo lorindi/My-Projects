@@ -83,7 +83,7 @@
     padding: 5px;
     border-radius: 10px;
     background-color: #1B2D3F;
-    border: 1px solid rgba(173, 216, 230, 0.498);
+    border: 2px solid rgba(173, 216, 230, 0.498);
     color: white;
     letter-spacing: 1.5px;
     margin: 20px 50px 20px 50px;
@@ -95,10 +95,7 @@
 
 }
 
-.containerAddComments:active {
-    box-shadow: 0px 0px 10px 1px lightblue;
 
-}
 
 .addCommentsForm {
     display: flex;
@@ -125,9 +122,10 @@
     width: 70%;
     background-color: #1B2D3F;
     border: none;
-    border-left: 1px solid lightblue;
-    border-right: 1px solid lightblue;
+    border-left: 1px solid rgba(173, 216, 230, 0.493);
+    border-right: 1px solid rgba(173, 216, 230, 0.469);
     height: 30px;
+    color: lightblue;
 
 }
 

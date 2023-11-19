@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import styles from "./Details.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import * as siteService from "../../../services/applicationService";
 import * as commentService from "../../../services/commentService";
@@ -43,28 +43,36 @@ export const Details = () => {
         </div>
         <div className={styles.detailLinks}>
           
-          <Link
+          <NavLink
             to="comments"
             onClick={() => {
               setShowComments(true);
               setShowEdit(false);
             }}
             className={styles.detailLink}
+            style={({ isActive }) => ({
+            color: isActive ? "lightgreen" : "lightblue",
+            border: isActive ? "1px solid lightgreen" : "1px solid lightblue"
+          })}
           >
             Comments
-          </Link>
+          </NavLink>
           <button className={styles.detailLink}>Sing Up</button>
 
-          <Link
+          <NavLink
             to="edit"
             onClick={() => {
               setShowEdit(true);
               setShowComments(false);
             }}
             className={styles.detailLink}
+            style={({ isActive }) => ({
+            color: isActive ? "lightgreen" : "lightblue",
+            border: isActive ? "1px solid lightgreen" : "1px solid lightblue"
+          })}
           >
             Edit
-          </Link>
+          </NavLink>
           <button className={styles.detailLink}>Delete</button>
         </div>
         {/* <Outlet /> */}

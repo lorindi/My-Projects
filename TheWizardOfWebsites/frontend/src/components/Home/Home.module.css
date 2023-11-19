@@ -112,18 +112,18 @@
     width: 500px;
     height: 500px;
     /* background-color: rgba(0, 0, 0, 0.083); */
-    border-radius: 3px;
+    border-radius: 5px;
     background-position: center;
     object-fit: cover;
     background-size: contain;
     padding: 30px;
-    border: 3px solid rgba(173, 216, 230, 0.252);
+    border: 3px solid rgba(173, 216, 230, 0.475);
 
 }
 
 .teamSection>img:hover {
 
-    border: 3px solid lightgreen;
+    border: 3px solid rgba(144, 238, 144, 0.702);
 
 }
 
@@ -220,15 +220,21 @@
 
 .dark.teamLink {
     color: black;
+    border: 3px solid lightblue;
+
     background-color: lightblue;
-    border: 5px solid #1b2d3f;
 
 }
-
 .dark.teamLink:hover {
-    border: 5px solid lightgreen;
+    color: black;
+    border: 3px solid lightgreen;
+    background-color: lightgreen;
+
+}
+.dark.teamLink:active {
+    border: 3px solid lightgreen;
     background-color: #1b2d3f;
-    color: rgba(255, 255, 255, 0.668);
+    color: lightgreen;
     /* background-color: #a3d368; */
     /* background-color: #f2e9debd; */
 
