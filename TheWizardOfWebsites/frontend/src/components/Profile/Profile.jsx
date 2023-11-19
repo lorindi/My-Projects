@@ -29,7 +29,7 @@ export const Profile = () => {
               <NavLink
                 to="/profile/info"
                 style={({ isActive }) => ({
-                  color: isActive ? "lightblue" : "lightgreen",
+                  color: isActive ? "lightgreen" : "lightblue",
                 })}
                 onClick={() => {setShowInfo(true); setShowEditForm(false);}}
               >
@@ -50,7 +50,7 @@ export const Profile = () => {
               <NavLink 
               to="/profile/edit" 
               className={styles.userEdit} 
-              style={({ isActive }) => ({color: isActive ? "lightblue" : "lightgreen"})}
+              style={({ isActive }) => ({color: isActive ? "lightgreen" : "lightblue"})}
               onClick={() => {setShowEditForm(true); setShowInfo(false);}}
               
               >

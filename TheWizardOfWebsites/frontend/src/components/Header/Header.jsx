@@ -9,7 +9,7 @@ export const Header = () => {
         <ul className={styles.navBar} role="list">
           <li className={styles.navBarEl}>
             <NavLink className={styles.link} style={({ isActive }) => ({
-            color: isActive ? "lightblue" : "lightgreen",
+            color: isActive ? "lightgreen" : "lightblue",
           })} to="/">
               Home
             </NavLink>
@@ -23,21 +23,21 @@ export const Header = () => {
           </li> */}
           <li className={styles.navBarEl}>
             <NavLink className={styles.link} style={({ isActive }) => ({
-            color: isActive ? "lightblue" : "lightgreen",
+            color: isActive ? "lightgreen" : "lightblue",
           })} to="/sites">
               Sites
             </NavLink>
           </li>
           <li className={styles.navBarEl}>
             <NavLink className={styles.link} style={({ isActive }) => ({
-            color: isActive ? "lightblue" : "lightgreen",
+            color: isActive ? "lightgreen" : "lightblue",
           })} to="/profile">
               Profile
             </NavLink>
           </li>
           <li className={styles.navBarEl}>
             <NavLink className={styles.link} style={({ isActive }) => ({
-            color: isActive ? "lightblue" : "lightgreen",
+            color: isActive ? "lightgreen" : "lightblue",
           })} to="/login">
               Sign in
             </NavLink>
