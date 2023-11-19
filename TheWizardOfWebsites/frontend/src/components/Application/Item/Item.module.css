@@ -1,32 +1,47 @@
+.containerCard {
+    perspective: 1000px;
+
+}
+
 .contentCard {
     display: flex;
     flex-direction: column;
     /* width: 200px; */
     /* height: 350px; */
-    border: 1px solid lightblue;
+    border: 2px solid rgba(173, 216, 230, 0.244);
     border-radius: 5px;
     justify-content: space-between;
-    overflow: hidden;
+    /* overflow: hidden; */
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+
+
+
+}
+.cardImg {
+    width: 225px;
+    height: 200px;
+    padding: 10px;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+    opacity: 0.7;
+    border-radius: 8%;
 }
 .cardInfo {
     background-color: #1B2D3F;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 200px;
-    height: 180px;
+    width: 225px;
+    height: 150px;
     padding: 15px;
 
 }
-.cardImg {
-    width: 200px;
-    height: 180px;
-    background-position: center;
-    object-fit: cover;
-    background-size: contain;
-    opacity: 0.7;
-}
+
+
+
 .cardTitle {
     display: flex;
     flex-direction: row;
@@ -38,12 +53,9 @@
     text-transform: uppercase;
 
 }
-.cardMoreInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
+
+
 .cardDescription {
     overflow-wrap: anywhere;
     font-size: 14px;
@@ -53,69 +65,48 @@
     color: rgba(240, 248, 255, 0.485);
     letter-spacing: 0.5px;
 }
+
 .cardPrice {
     color: rgba(240, 248, 255, 0.485);
     margin-top: 5px;
 }
+
 .cardPrice>span {
-   color: lightblue;
-}
-.cardButton {
-    display: flex;
-    text-transform: uppercase;
-    width: 95%;
-    border-radius: 5px;
-
-    background-color: #1B2D3F;
-    border: 1px solid #1B2D3F;
-    color: rgba(240, 248, 255, 0.531);
-    border: 1px solid rgba(240, 248, 255, 0.531);
-    padding: 3px ;
-    justify-content: center;
-    align-items: center;
-}
-.cardButton:hover {
-    border: 1px solid lightblue;
-    background-color: #1B2D3F;
-    color: rgba(240, 248, 255, 0.531);
-
-
-
-}
-.cardButton:active {
-    color: lightblue !important;
-box-shadow: 0px 0px 5px 1px lightblue;
-
-
+    color: lightblue;
 }
 .contentCard:hover {
-    border: 1px solid lightblue;
-box-shadow: 0px 0px 10px 1px rgba(144, 238, 144, 0.243);
-
-}
-.contentCard:hover .cardTitle {
-    color: lightblue;
-
+    border: 2px solid rgba(173, 216, 230, 0.482);
+    box-shadow: -20px 0px 50px 0px rgba(173, 216, 230, 0.48);
+    transform: rotateY(20deg) rotateX(5deg);
 }
 
 .contentCard:hover .cardPrice>span {
     color: lightblue;
- }
-
- .contentCard:hover .cardPrice {
-    color: lightblue;
 }
 
-.contentCard:hover .cardButton {
+.contentCard:hover .cardPrice {
     color: lightblue;
 }
 
 .contentCard:hover .cardDescription {
-
-    color: rgba(173, 216, 230, 0.738);
-
+    color: rgba(173, 216, 230, 0.895);
 }
 
 .contentCard:hover .cardImg {
-    opacity: 1;
+    opacity: 0.8;
 }
+
+.contentCard:active.contentCard:hover  {
+    border: 2px solid rgba(144, 238, 144, 0.516);
+    box-shadow: -20px 0px 50px 0px rgba(144, 238, 144, 0.492);
+}
+
+.contentCard:active.contentCard:hover .cardTitle {
+    color: rgba(144, 238, 144, 0.737);
+
+}
+.contentCard:active.contentCard:hover .cardPrice>span  {
+    color: lightgreen;
+
+}
+

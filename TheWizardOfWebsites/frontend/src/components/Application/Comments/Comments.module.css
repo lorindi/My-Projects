@@ -77,13 +77,13 @@
 }
 
 .containerAddComments {
-    width: 700px;
+    min-width: 700px;
     align-items: center;
     display: flex;
     padding: 5px;
     border-radius: 10px;
     background-color: #1B2D3F;
-    border: 2px solid rgba(173, 216, 230, 0.498);
+    border: 1px solid rgba(173, 216, 230, 0.498);
     color: white;
     letter-spacing: 1.5px;
     margin: 20px 50px 20px 50px;

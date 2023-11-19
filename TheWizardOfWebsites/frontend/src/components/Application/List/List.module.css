@@ -10,15 +10,16 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 125px;
     padding: 100px;
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
     flex-wrap: wrap;
     background-color: #1B2D3F;
-
+   
 
 }
+
 /* .contentCard {
     display: flex;
     flex-direction: column;
