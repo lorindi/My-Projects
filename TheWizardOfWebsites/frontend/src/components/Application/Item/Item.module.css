@@ -8,7 +8,7 @@
     flex-direction: column;
     /* width: 200px; */
     /* height: 350px; */
-    border: 2px solid rgba(173, 216, 230, 0.244);
+    border: 2px solid rgba(173, 216, 230, 0.623);
     border-radius: 5px;
     justify-content: space-between;
     /* overflow: hidden; */
@@ -47,7 +47,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: rgba(240, 248, 255, 0.485);
+    color: rgba(173, 216, 230, 0.796);
     font-weight: 500;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -62,7 +62,7 @@
     height: 40px;
     overflow: hidden;
     padding: 0px 10px;
-    color: rgba(240, 248, 255, 0.485);
+    color: rgba(173, 216, 230, 0.91);
     letter-spacing: 0.5px;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .contentCard:hover .cardDescription {
-    color: rgba(173, 216, 230, 0.895);
+    color: rgb(173, 216, 230);
 }
 
 .contentCard:hover .cardImg {

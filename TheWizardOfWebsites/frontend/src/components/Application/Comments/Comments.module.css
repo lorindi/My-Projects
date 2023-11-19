@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 1000px;
+    /* min-height: 1000px; */
     font-family: 'Montserrat', sans-serif;
     color: rgba(255, 255, 255, 0.478);
 
@@ -20,7 +20,15 @@
     border-radius: 10px;
     min-width: 700px;
 }
-
+.commentsNoComments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 20px;
+    font-size: 20px;
+}
 .commentsTitle {
     color: rgba(255, 255, 255, 0.77);
     font-size: 40px;
@@ -49,6 +57,7 @@
     border-radius: 10px;
     width: 700px;
     min-height: 70px;
+    padding: 20px 10px;
 }
 
 .comment {
@@ -57,6 +66,7 @@
     font-size: 14px;
     letter-spacing: 1px;
     overflow-wrap: anywhere;
+    text-align: justify;
 
 
 }
@@ -116,6 +126,8 @@
     background-color: #1B2D3F;
     border: none;
     height: 30px;
+    color: lightblue;
+
 }
 
 .addCommentsFormTextarea {
