@@ -11,7 +11,7 @@ const LoginFormKeys = {
 
 export const Login = () => {
   const { onLoginSubmit } = useContext(Contexts);
-  const { values, changeHandler, } = useForm(
+  const { values, onChange, onSubmit} = useForm(
     {
       [LoginFormKeys.username]: "",
       [LoginFormKeys.password]: "",
@@ -50,7 +50,7 @@ export const Login = () => {
             <p>Its time to begin our daring adventure.</p>
           </article>
           <form
-            onSubmit={onLoginSubmit}
+            onSubmit={onSubmit}
             className={`${styles.loginPageFormContent} `}
           >
             <div className={styles.sectionUsernameEmailPassword}>
@@ -61,7 +61,7 @@ export const Login = () => {
                   id="username"
                   name={LoginFormKeys.username}
                   value={values[LoginFormKeys.username]}
-                  onChange={changeHandler}
+                  onChange={onChange}
                   // required="required"
                 />
                 <span>Username</span>
@@ -74,7 +74,7 @@ export const Login = () => {
                   id="password"
                   name={LoginFormKeys.password}
                   value={values[LoginFormKeys.password]}
-                  onChange={changeHandler}
+                  onChange={onChange}
                   // required="required"
                 />
                 <span>Password</span>
