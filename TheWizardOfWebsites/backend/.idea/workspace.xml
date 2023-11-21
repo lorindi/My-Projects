@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13c0d0a3-6430-4a57-a0bd-6292645a80fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/Comments/Comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Application/Comments/Comments.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Application/Details/Details.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Application/Details/Details.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/services/commentService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/commentService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Login/Login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +87,7 @@
       <workItem from="1699885753638" duration="2308000" />
       <workItem from="1700121176455" duration="76000" />
       <workItem from="1700152212290" duration="418000" />
+      <workItem from="1700589951213" duration="1407000" />
     </task>
     <servers />
   </component>

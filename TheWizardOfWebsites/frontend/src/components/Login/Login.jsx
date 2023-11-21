@@ -5,18 +5,18 @@ import { Contexts } from "../../contexts/Contexts";
 import { useForm } from "../../hooks/useForm";
 
 const LoginFormKeys = {
-  username: "username",
+  email: "email",
   password: "password",
 };
 
 export const Login = () => {
   const { onLoginSubmit } = useContext(Contexts);
-  const { values, onChange, onSubmit} = useForm(
+  const { values, onChange, onSubmit} = useForm( onLoginSubmit,
     {
-      [LoginFormKeys.username]: "",
+      [LoginFormKeys.email]: "",
       [LoginFormKeys.password]: "",
     },
-    onLoginSubmit
+
   );
 
   return (
@@ -58,19 +58,19 @@ export const Login = () => {
                 <input
                   className={`${styles.formsInput} `}
                   type="text"
-                  id="username"
-                  name={LoginFormKeys.username}
-                  value={values[LoginFormKeys.username]}
+                  id="email"
+                  name={LoginFormKeys.email}
+                  value={values[LoginFormKeys.email]}
                   onChange={onChange}
                   // required="required"
                 />
-                <span>Username</span>
+                <span>Email</span>
               </div>
 
               <div className={`${styles.forms} ${styles.inputBox} `}>
                 <input
                   className={`${styles.formsInput} `}
-                  type="text"
+                  type="password"
                   id="password"
                   name={LoginFormKeys.password}
                   value={values[LoginFormKeys.password]}

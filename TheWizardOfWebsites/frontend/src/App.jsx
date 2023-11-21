@@ -1,7 +1,13 @@
-// import { useState } from 'react'
+import { useState } from 'react'
+
+import { Routes, Route, useNavigate } from "react-router-dom";
+
+import * as authService from './services/authService'
 import { Contexts } from "./contexts/Contexts";
+import Path from './components/paths';
+
+
 import { NotFound } from "./components/NotFound/NotFound";
-import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
 import { Login } from "./components/Login/Login";
@@ -17,27 +23,14 @@ import { Details } from "./components/Application/Details/Details";
 // import { useEffect, useState } from "react";
 
 function App() {
-  // const [data, setData] = useState([]);
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     console.log(import.meta.env.VITE_API_URL);
-  //     try {
-  //       const response = await fetch(`${import.meta.env.VITE_API_URL}`);
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       const result = await response.json();
-  //       console.log(result);
-  //       setData(result);
-  //     } catch (error) {
-  //       console.log("Error fetching data:", error);
-  //     }
-  //   }
-  //   fetchData();
-  // }, []);
+  const navigate = useNavigate()
+const [auth, setAuth] = useState({})
 
-  const onLoginSubmit = async (data) => {
-    console.log(data);
+  const onLoginSubmit = async (values) => {
+    const result = await authService.login(values.email, values.password);
+    setAuth(result)
+    navigate(Path.Home)
+    
   };
 
   return (
@@ -49,7 +42,6 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            {/* onLoginSubmit={onLoginSubmit} */}
             <Route path="/register" element={<Register />} />
             <Route path="/profile/*" element={<Profile />} />
             <Route path="/about-us" element={<AboutUs />} />
