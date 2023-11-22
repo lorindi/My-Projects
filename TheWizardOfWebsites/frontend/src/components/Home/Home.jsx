@@ -12,7 +12,7 @@ export const Home = () => {
         />
         <div className={styles.contentInfo}>
           <h1 className={`${styles.infoTitle} ${styles.dark}`}>
-            Welcome to LorinDi!
+            Welcome to Web Crafters!
           </h1>
           <p className={`${styles.infoDescription} ${styles.dark}`}>
             Our team is a collective of passionate and creative professionals
