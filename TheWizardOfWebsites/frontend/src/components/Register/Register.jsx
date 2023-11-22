@@ -1,42 +1,27 @@
 import { Link } from "react-router-dom";
 import styles from "./Register.module.css";
-import { useState } from "react";
+// import { useState } from "react";
 
-// import { Contexts } from '../../contexts/Contexts'
-// import { useContext } from 'react';
+import { Contexts } from '../../contexts/Contexts'
+import { useContext } from 'react';
+import { useForm } from "../../hooks/useForm";
+
+const RegisterFormsKeys = {
+  Email: "email",
+  Password: "password",
+  ConfirmPassword: "confirm-password",
+
+}
 export const Register = () => {
-  // const {} = useContext(Contexts)
+  const { registerSubmitHandler } = useContext(Contexts)
+  const {values, onChange, onSubmit} = useForm(registerSubmitHandler, {
+    [RegisterFormsKeys.Email]: '',
+    [RegisterFormsKeys.Password]: '',
+    [RegisterFormsKeys.ConfirmPassword]: '',
 
-  const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
-    termsAccepted: false,
-    privacyPolicyAccepted: false,
-  });
+  })
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((state) => ({
-      ...state,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
 
-  const resetFormHandler = () => {
-    setFormData({
-      username: "",
-      email: "",
-      password: "",
-      termsAccepted: false,
-      privacyPolicyAccepted: false,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    resetFormHandler(); 
-  };
   return (
     <div className={`${styles.content} ${styles.regular}`}>
       <section
@@ -70,27 +55,27 @@ export const Register = () => {
             <p>Its time to begin our daring adventure.</p>
           </article>
 
-          <form action="" onSubmit={handleSubmit} className={`${styles.registerPageFormContent}`}>
+          <form action="" onSubmit={onSubmit} className={`${styles.registerPageFormContent}`}>
           <div className={`${styles.sectionUsernameEmailPassword}`}>
-            <div className={`${styles.forms} ${styles.inputBox}`}>
+            {/* <div className={`${styles.forms} ${styles.inputBox}`}>
               <input
                 className={styles.formsInput}
                 type="text"
                 id="username"
                 name="username"
                 value={formData.username}
-                onChange={handleChange}
+                onChange={onChange}
               />
               <span>Username</span>
-            </div>
+            </div> */}
             <div className={`${styles.forms} ${styles.inputBox}`}>
               <input
                 className={styles.formsInput}
                 type="text"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
+                value={values[RegisterFormsKeys.email]}
+                onChange={onChange}
               />
               <span>Email</span>
             </div>
@@ -100,8 +85,19 @@ export const Register = () => {
                 type="password"
                 id="password"
                 name="password"
-                value={formData.password}
-                onChange={handleChange}
+                value={values[RegisterFormsKeys.Password]}
+                onChange={onChange}
+              />
+              <span>Confirm Password</span>
+            </div>
+            <div className={`${styles.forms} ${styles.inputBox}`}>
+              <input
+                className={styles.formsInput}
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                value={values[RegisterFormsKeys.ConfirmPassword]}
+                onChange={onChange}
               />
               <span>Password</span>
             </div>
@@ -113,8 +109,8 @@ export const Register = () => {
                   type="checkbox"
                   id="termsAccepted"
                   name="termsAccepted"
-                  checked={formData.termsAccepted}
-                  onChange={handleChange}
+                  // checked={formData.termsAccepted}
+                  // onChange={onChange}
                 />
                 <label htmlFor="termsAccepted">
                   <span>
@@ -129,8 +125,8 @@ export const Register = () => {
                   type="checkbox"
                   id="privacyPolicyAccepted"
                   name="privacyPolicyAccepted"
-                  checked={formData.privacyPolicyAccepted}
-                  onChange={handleChange}
+                  // checked={formData.privacyPolicyAccepted}
+                  // onChange={onChange}
                 />
                 <label htmlFor="privacyPolicyAccepted">
                   <span>
