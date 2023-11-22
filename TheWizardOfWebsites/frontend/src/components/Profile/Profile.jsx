@@ -1,9 +1,13 @@
+import { useContext } from "react";
+import { Contexts } from "../../contexts/Contexts";
 import styles from "./Profile.module.css";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Info } from "./ProfileInfo/Info";
 import {EditForm} from "./ProfileEditForm/EditForm"
 export const Profile = () => {
+  const { username } = useContext(Contexts);
+
   const [showInfo, setShowInfo] = useState(false);
   const [showEditForm, setShowEditForm] = useState(false)
   return (
@@ -19,8 +23,7 @@ export const Profile = () => {
               className={styles.userDetailsProfilePicture}
               src="../../../src/components/Profile/pngwing.com (8).png"
             />
-            <h2 className={styles.userDetailsFullname}>Lora</h2>
-            <p className={styles.userDetailsUsername}>lorindi</p>
+            <h4 className={styles.userDetailsUsername}>{username}</h4>
           </div>
         </div>
         <div className={styles.userDetailsContentNavigation}>
