@@ -31,16 +31,18 @@ function App() {
     navigate(Path.Home);
   };
 
-const registerSubmitHandler = async (values) => {
-console.log(values);
-}
+  const registerSubmitHandler = async (values) => {
+    const result = await authService.register(values.email, values.password);
+    setAuth(result);
+    navigate(Path.Home);
+  };
 
   const values = {
     registerSubmitHandler,
     onLoginSubmit,
-    username: auth.username,
+    username: auth.username || auth.email,
     email: auth.email,
-    isAuthenticated: !!auth.username,
+    isAuthenticated: !!auth.email,
   };
   return (
     <Contexts.Provider value={values}>

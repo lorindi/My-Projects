@@ -102,7 +102,7 @@ export const Register = () => {
               <span>Password</span>
             </div>
           </div>
-          <div className={styles.registerPageFormContentAdditionalConditions}>
+          {/* <div className={styles.registerPageFormContentAdditionalConditions}>
             <article>
               <div>
                 <input
@@ -135,7 +135,7 @@ export const Register = () => {
                 </label>
               </div>
             </article>
-          </div>
+          </div> */}
           <div className={styles.buttonSection}>
             <div className={styles.button}>
               <label htmlFor=""></label>
