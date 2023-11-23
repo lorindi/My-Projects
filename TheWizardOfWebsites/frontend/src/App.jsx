@@ -11,6 +11,7 @@ import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
 import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
+import { Logout } from "./components/Logout/Logout";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { Profile } from "./components/Profile/Profile";
 import { Footer } from "./components/Footer/Footer";
@@ -23,25 +24,42 @@ import { Details } from "./components/Application/Details/Details";
 
 function App() {
   const navigate = useNavigate();
-  const [auth, setAuth] = useState({});
+  const [auth, setAuth] = useState(() => {
+    localStorage.removeItem('accessToken')
+    return {}
+  });
 
   const onLoginSubmit = async (values) => {
     const result = await authService.login(values.email, values.password);
     setAuth(result);
+
+    localStorage.setItem("accessToken", result.accessToken);
     navigate(Path.Home);
   };
 
   const registerSubmitHandler = async (values) => {
     const result = await authService.register(values.email, values.password);
+
+    localStorage.setItem("accessToken", result.accessToken);
+
     setAuth(result);
     navigate(Path.Home);
+  };
+
+  const logoutHandler = () => {
+    setAuth({});
+    localStorage.removeItem
+    // navigate(Path.Home)
   };
 
   const values = {
     registerSubmitHandler,
     onLoginSubmit,
+    logoutHandler,
     username: auth.username || auth.email,
     email: auth.email,
+    // isAuthenticated: !!auth.accessToken,
+
     isAuthenticated: !!auth.email,
   };
   return (
@@ -57,14 +75,9 @@ function App() {
             <Route path="/profile/*" element={<Profile />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/sites" element={<List />} />
-            <Route path="/sites/:id/details/*" element={<Details />}>
-              {/* <Route path="edit" element={<Edit />} />
-              <Route path="comments" element={<Comments />}/> */}
-
-              {/* <Route path="del" element={<Edit />} />
-              <Route path="sign-up" element={<Edit />} /> */}
-            </Route>
+            <Route path="/sites/:id/details/*" element={<Details />} />
             <Route path="/sites/create" element={<Create />} />
+            <Route path={Path.Logout} element={<Logout />} />
           </Routes>
         </main>
         <Footer />

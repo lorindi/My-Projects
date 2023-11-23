@@ -48,7 +48,7 @@ export const Header = () => {
           {isAuthenticated && (
             <li className={styles.navBarEl}>
               <NavLink
-                className={styles.link}
+                className={`${styles.link} ${styles.dropbtn}`}
                 style={({ isActive }) => ({
                   color: isActive ? "lightgreen" : "lightblue",
                 })}
@@ -56,6 +56,15 @@ export const Header = () => {
               >
                 {username}
               </NavLink>
+              <div className={styles.dropdownContent}>
+                <NavLink
+                  className={styles.link}
+                
+                  to="/logout"
+                >
+                  Logout
+                </NavLink>
+              </div>
             </li>
           )}
           {!isAuthenticated && (

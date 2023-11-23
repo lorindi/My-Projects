@@ -47,3 +47,35 @@
     color: black;
 
 }
+
+.navBarEl {
+    position: relative;
+
+}
+
+.dropdownContent {
+    position: absolute;
+    display: none;
+    padding: 5px;
+    background-color: #1B2D3F;
+
+
+}
+
+.dropdownContent>a {
+    font-size: 16px;
+    text-transform: lowercase;
+    color: lightblue;
+
+
+}
+.dropdownContent>a:hover {
+    color: lightgreen;
+
+
+}
+
+.navBarEl:hover .dropdownContent {
+    display: block;
+
+}
