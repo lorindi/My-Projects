@@ -9,14 +9,12 @@ export const getAll = async (id) => {
     load: `owner=_ownerId:users`,
   });
   const result = await request.get(`${baseUrl}?${query}`)
-  // return result.filter(comment => comment.id == id)
   return result
 } 
 
-export const create = async (id, username, text) => {
+export const create = async (id, text) => {
   const newComment = await request.post(baseUrl, {
     id,
-    // username,
     text,
   });
   return newComment

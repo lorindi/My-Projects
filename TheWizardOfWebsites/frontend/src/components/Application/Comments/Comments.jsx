@@ -1,6 +1,9 @@
 import styles from "./Comments.module.css";
+import { Contexts } from "../../../contexts/Contexts";
+import { useContext } from "react";
 
 export const Comments = ({ comments, setComments, addCommentHandler }) => {
+  const { email } = useContext(Contexts);
   return (
     <div className={styles.containerComments}>
       <div className={styles.contentComments}>
@@ -9,12 +12,12 @@ export const Comments = ({ comments, setComments, addCommentHandler }) => {
 
           <div>
             <ul className={styles.commentsList} role="list">
-              {comments.map(({ _id, text, author}) => (
+              {comments.map(({ _id, text }) => (
                 <li className={styles.commentsListElement} key={_id}>
                   <p className={styles.comment}>{text}</p>
 
                   <div className={styles.commentsCommentDescriptionLikes}>
-                    <p className={styles.commentsUsername}>{author ? author.email : 'Unknown'}</p>
+                    <p className={styles.commentsUsername}>{email}</p>
                     <p className={styles.commentsLikes}>Likes</p>
                   </div>
                 </li>
@@ -28,10 +31,18 @@ export const Comments = ({ comments, setComments, addCommentHandler }) => {
         <div className={styles.containerAddComments}>
           <form className={styles.addCommentsForm} onSubmit={addCommentHandler}>
             <div className={styles.addCommentsFormDiv}>
-            {/* <input className={styles.addCommentsFormUsername} type="text" name="username" placeholder="Username" /> */}
-            <textarea className={styles.addCommentsFormTextarea} name="comment" placeholder="Comment..."></textarea>
+              {/* <input className={styles.addCommentsFormUsername} type="text" name="username" placeholder="Username" /> */}
+              <textarea
+                className={styles.addCommentsFormTextarea}
+                name="comment"
+                placeholder="Comment..."
+              ></textarea>
             </div>
-            <input className={styles.addCommentsFormButton} type="submit" value="Add comment" />
+            <input
+              className={styles.addCommentsFormButton}
+              type="submit"
+              value="Add comment"
+            />
           </form>
         </div>
       </div>

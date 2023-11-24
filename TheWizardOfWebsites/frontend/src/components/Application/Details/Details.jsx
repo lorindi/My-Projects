@@ -29,12 +29,10 @@ export const Details = () => {
 
     const newComment = await commentService.create(
       id,
-      // formData.get("username"),
       formData.get("comment"),
     );
     setComments((state) => [...state, {...newComment, author: {email}}]);
-    // console.log(newComment);
-    // console.log("addCommentHandler reference:", addCommentHandler);
+
   };
   return (
     <div className={styles.containerDetails}>
