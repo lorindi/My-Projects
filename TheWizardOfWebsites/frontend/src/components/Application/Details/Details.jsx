@@ -1,13 +1,16 @@
 import { useParams } from "react-router-dom";
 import styles from "./Details.module.css";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import * as siteService from "../../../services/applicationService";
 import * as commentService from "../../../services/commentService";
 import { Comments } from "../Comments/Comments";
+// import { useContext } from "react";
+import { Contexts } from "../../../contexts/Contexts";
 import { Edit } from "../Edit/Edit";
 
 export const Details = () => {
+  const {email} = useContext(Contexts)
   const [showComments, setShowComments] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
 
@@ -26,12 +29,12 @@ export const Details = () => {
 
     const newComment = await commentService.create(
       id,
-      formData.get("username"),
-      formData.get("comment")
+      // formData.get("username"),
+      formData.get("comment"),
     );
-    setComments((state) => [...state, newComment]);
-    console.log(newComment);
-    console.log("addCommentHandler reference:", addCommentHandler);
+    setComments((state) => [...state, {...newComment, author: {email}}]);
+    // console.log(newComment);
+    // console.log("addCommentHandler reference:", addCommentHandler);
   };
   return (
     <div className={styles.containerDetails}>
@@ -83,6 +86,7 @@ export const Details = () => {
           addCommentHandler={addCommentHandler}
           comments={comments}
           setComments={setComments}
+          email={email}
         />
       )}
       {showEdit && <Edit />}
