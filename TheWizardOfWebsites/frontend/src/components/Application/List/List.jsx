@@ -7,7 +7,11 @@ export const List = () => {
   const [sites, setSites] = useState([]);
 
   useEffect(() => {
-    siteService.getAll().then((result) => setSites(result));
+    siteService.getAll()
+    .then((result) => setSites(result))
+    .catch(err => {
+      console.log(err)
+    })
   }, []);
 
   return (

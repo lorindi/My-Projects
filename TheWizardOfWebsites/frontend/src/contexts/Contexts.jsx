@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import * as authService from "../services/authService";
 import { useNavigate } from "react-router-dom";
 import Path from "../components/paths";
+import PropTypes from "prop-types";
 
 export const Contexts = createContext();
 
@@ -41,12 +42,16 @@ export const AuthProvider = ({ children }) => {
     logoutHandler,
     username: auth.username || auth.email,
     email: auth.email,
-    // isAuthenticated: !!auth.accessToken,
+    isAuthenticated: !!auth.accessToken,
 
-    isAuthenticated: !!auth.email,
+    // isAuthenticated: !!auth.email,
   };
   return (
   <Contexts.Provider value={values}>
-    {children}
-  </Contexts.Provider>);
+        {children}
+  </Contexts.Provider>
+  )
+};
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
