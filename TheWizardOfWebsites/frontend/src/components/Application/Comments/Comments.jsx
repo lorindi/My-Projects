@@ -2,7 +2,7 @@ import styles from "./Comments.module.css";
 import { Contexts } from "../../../contexts/Contexts";
 import { useContext } from "react";
 
-export const Comments = ({ comments, setComments, addCommentHandler }) => {
+export const Comments = ({ addCommentHandler, comments }) => {
   const { email } = useContext(Contexts);
   return (
     <div className={styles.containerComments}>

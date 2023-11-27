@@ -1,17 +1,15 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
 import * as authService from "../services/authService";
 import { useNavigate } from "react-router-dom";
 import Path from "../components/paths";
 import PropTypes from "prop-types";
+import { usePersistedState } from "../hooks/usePersistedState";
 
 export const Contexts = createContext();
 
 export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
-  const [auth, setAuth] = useState(() => {
-    localStorage.removeItem("accessToken");
-    return {};
-  });
+  const [auth, setAuth] = usePersistedState("auth", {});
 
   const onLoginSubmit = async (values) => {
     const result = await authService.login(values.email, values.password);
@@ -32,8 +30,8 @@ export const AuthProvider = ({ children }) => {
 
   const logoutHandler = () => {
     setAuth({});
-    localStorage.removeItem;
-    // navigate(Path.Home)
+    localStorage.removeItem("accessToken");
+    navigate(Path.Home);
   };
 
   const values = {
@@ -42,15 +40,14 @@ export const AuthProvider = ({ children }) => {
     logoutHandler,
     username: auth.username || auth.email,
     email: auth.email,
+    userId: auth._id,
     isAuthenticated: !!auth.accessToken,
-
-    // isAuthenticated: !!auth.email,
   };
   return (
-  <Contexts.Provider value={values}>
-        {children}
-  </Contexts.Provider>
-  )
+    <Contexts.Provider value={values}>
+      {children}
+    </Contexts.Provider>
+    );
 };
 AuthProvider.propTypes = {
   children: PropTypes.node.isRequired,
