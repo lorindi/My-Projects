@@ -2,8 +2,11 @@ import styles from "./Comments.module.css";
 import { Contexts } from "../../../contexts/Contexts";
 import { useContext } from "react";
 
-export const Comments = ({ addCommentHandler, comments }) => {
+export const Comments = ({ addCommentHandler, comments, values, onChange, onSubmit }) => {
   const { email } = useContext(Contexts);
+  // const { values, onChange, onSubmit } = useForm(addCommentHandler, {
+  //   comment: "",
+  // });
   return (
     <div className={styles.containerComments}>
       <div className={styles.contentComments}>
@@ -29,12 +32,13 @@ export const Comments = ({ addCommentHandler, comments }) => {
           </div>
         </div>
         <div className={styles.containerAddComments}>
-          <form className={styles.addCommentsForm} onSubmit={addCommentHandler}>
+          <form className={styles.addCommentsForm} onSubmit={onSubmit}>
             <div className={styles.addCommentsFormDiv}>
-              {/* <input className={styles.addCommentsFormUsername} type="text" name="username" placeholder="Username" /> */}
               <textarea
                 className={styles.addCommentsFormTextarea}
                 name="comment"
+                value={values.comment}
+                onChange={onChange}
                 placeholder="Comment..."
               ></textarea>
             </div>
