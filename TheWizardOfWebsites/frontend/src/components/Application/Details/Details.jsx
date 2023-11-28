@@ -7,12 +7,10 @@ import * as commentService from "../../../services/commentService";
 import { Comments } from "../Comments/Comments";
 import { Contexts } from "../../../contexts/Contexts";
 import { Edit } from "../Edit/Edit";
-import reducer from "./commentReducer"
-import useForm from "../../../hooks/useForm";
-
+import reducer from "./commentReducer";
 
 export const Details = () => {
-  const { email } = useContext(Contexts);
+  const { email, userId } = useContext(Contexts);
   const [site, setSite] = useState({});
   const [comments, dispatch] = useReducer(reducer, []);
   const { id } = useParams();
@@ -33,13 +31,12 @@ export const Details = () => {
   const addCommentHandler = async (values) => {
     const newComment = await commentService.create(id, values.comment);
     newComment.author = { email };
-    dispatch({ 
-      type: "ADD_COMMENT", 
-      resultComments: newComment });
+    dispatch({
+      type: "ADD_COMMENT",
+      resultComments: newComment,
+    });
   };
-  const { values, onChange, onSubmit } = useForm(addCommentHandler, {
-    comment: "",
-  });
+  const isOwner = userId === site._ownerId;
   return (
     <div className={styles.containerDetails}>
       <div className={styles.contentDetails}>
@@ -59,34 +56,36 @@ export const Details = () => {
             style={({ isActive }) => ({
               color: isActive ? "lightgreen" : "lightblue",
               border: isActive ? "1px solid lightgreen" : "1px solid lightblue",
-            })}>
+            })}
+          >
             Comments
           </NavLink>
-          <button className={styles.detailLink}>Sing Up</button>
-          <NavLink
-            to="edit"
-            onClick={() => {
-              setShowEdit(true);
-              setShowComments(false)}}
-            className={styles.detailLink}
-            style={({ isActive }) => ({
-              color: isActive ? "lightgreen" : "lightblue",
-              border: isActive ? "1px solid lightgreen" : "1px solid lightblue",
-            })} > Edit
-          </NavLink>
-          <button className={styles.detailLink}>Delete</button>
+
+       
+              <NavLink
+                to="edit-site"
+                onClick={() => {
+                  setShowEdit(true);
+                  setShowComments(false);
+                }}
+                className={styles.detailLink}
+                style={({ isActive }) => ({
+                  color: isActive ? "lightgreen" : "lightblue",
+                  border: isActive
+                    ? "1px solid lightgreen"
+                    : "1px solid lightblue",
+                })}
+              >
+                {" "}
+                Edit
+              </NavLink>
+              <button className={styles.detailLink}>Delete</button>
+     
         </div>
       </div>
 
       {showComments && (
-        <Comments
-          addCommentHandler={addCommentHandler}
-          comments={comments}
-          values={values}
-          onChange={onChange}
-          onSubmit={onSubmit}
-        
-        />
+        <Comments addCommentHandler={addCommentHandler} comments={comments} isOwner={isOwner}/>
       )}
       {showEdit && <Edit />}
     </div>

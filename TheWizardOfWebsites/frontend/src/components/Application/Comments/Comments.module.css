@@ -42,7 +42,7 @@
 
 .commentsList {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -50,16 +50,18 @@
 
 }
 
-.commentsListElement {
+.commentsListElement:nth-last-child(-n+3) {
     background-color: #162431;
     margin: 0px;
     margin: 10px;
     border-radius: 10px;
     width: 700px;
     min-height: 70px;
-    padding: 20px 10px;
+    padding: 10px 5px;
 }
-
+.commentsListElement:not(:nth-last-child(-n+3)) {
+    display: none;
+}
 .comment {
     color: lightblue;
     margin: 5px 20px 5px 20px;
@@ -121,17 +123,17 @@
     width: 100%;
 }
 
-.addCommentsFormUsername {
+/* .addCommentsFormUsername {
     width: 30%;
     background-color: #1B2D3F;
     border: none;
     height: 30px;
     color: lightblue;
 
-}
+} */
 
 .addCommentsFormTextarea {
-    width: 70%;
+    width: 100%;
     background-color: #1B2D3F;
     border: none;
     border-left: 1px solid rgba(173, 216, 230, 0.493);
