@@ -69,17 +69,23 @@
     overflow-wrap: anywhere;
 }
 
-.detailLinks {
+.buttonLinks {
     display: flex;
+    flex-direction: column;
     gap: 50px;
-    margin: 20px 20px 100px 20px;
+    /* margin: 20px 20px 100px 20px; */
+    position: fixed;
+    right: 30px;
+    top: 350px;
+    font-family: 'Montserrat', sans-serif;
+
 
 }
 
 .detailLink {
     display: flex;
     text-transform: uppercase;
-    width: 150px;
+    width: 100px;
     border-radius: 5px;
     background-color: #1B2D3F;
     color: lightblue;
@@ -88,6 +94,7 @@
     justify-content: center;
     align-items: center;
     letter-spacing: 1.5px;
+    font-size: 12px;
 }
 
 .detailLink:hover {
@@ -100,3 +107,178 @@
     box-shadow: 0px 0px 20px 1px lightgreen;
     border: 1px solid lightgreen;
 }
+
+
+
+.containerComments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 1000px; */
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.478);
+    background-color: #1b2d3f;
+
+}
+
+.contentComments {
+    /* box-shadow: 0px 0px 50px 1px rgba(173, 216, 230, 0.25); */
+    padding: 30px;
+    border-radius: 10px;
+    min-width: 700px;
+}
+.commentsNoComments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 20px;
+    font-size: 20px;
+}
+.commentsTitle {
+    color: rgba(255, 255, 255, 0.77);
+    font-size: 40px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+
+}
+
+.commentsList {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.commentsListElement:nth-last-child(-n+3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #162431;
+    margin: 0px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 1050px;
+    min-height: 150px;
+    padding: 10px 5px;
+}
+.commentsListElement:not(:nth-last-child(-n+3)) {
+    display: none;
+}
+.comment {
+    color: lightblue;
+    margin: 5px 20px 5px 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+    text-align: justify;
+
+
+}
+
+.commentsCommentDescriptionLikes {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 10px 20px 10px 20px;
+    text-transform: uppercase;
+ 
+
+
+}
+
+.commentsUsername,
+.commentsLikes {
+    font-size: 12.5px;
+    letter-spacing: 2px;
+}
+
+.containerAddComments {
+    min-width: 1050px;
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #1B2D3F;
+    border: 2px solid rgba(173, 216, 230, 0.498);
+    color: white;
+    letter-spacing: 1.5px;
+    margin: 20px 50px 20px 50px;
+
+}
+
+.containerAddComments:hover {
+    box-shadow: 0px 0px 10px 1px rgba(173, 216, 230, 0.474);
+
+}
+
+
+
+.addCommentsForm {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    align-items: flex-end;
+
+}
+
+.addCommentsFormDiv {
+    display: flex;
+    width: 100%;
+}
+
+/* .addCommentsFormUsername {
+    width: 30%;
+    background-color: #1B2D3F;
+    border: none;
+    height: 30px;
+    color: lightblue;
+
+} */
+
+.addCommentsFormTextarea {
+    width: 100%;
+    background-color: #1B2D3F;
+    border: none;
+    border-left: 1px solid rgba(173, 216, 230, 0.493);
+    border-right: 1px solid rgba(173, 216, 230, 0.469);
+    height: 30px;
+    color: lightblue;
+
+}
+
+.addCommentsFormButton {
+    height: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #1B2D3F;
+    border: none;
+    color: rgba(240, 248, 255, 0.531);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.addCommentsFormButton:hover {
+    border: none;
+    background-color: #1B2D3F;
+    color: lightblue;
+}
+
+.addCommentsFormButton:active {
+    background-color: #1B2D3F;
+    color: lightgreen;
+    border: none;
+}
+

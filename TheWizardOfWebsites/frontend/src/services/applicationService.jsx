@@ -16,3 +16,7 @@ export const create = async (siteData) => {
   const result = await request.post(baseUrl, siteData);
   return result;
 };
+export const edit = async (id, siteData) => {
+  const result = await request.put(`${baseUrl}/${id}`, siteData);
+  return result;
+};

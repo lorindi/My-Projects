@@ -15,6 +15,7 @@ import { Footer } from "./components/Footer/Footer";
 import { List } from "./components/Application/List/List";
 import { Create } from "./components/Application/Create/Create";
 import { Details } from "./components/Application/Details/Details";
+import { Edit } from "./components/Application/Edit/Edit";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/sites" element={<List />} />
             <Route path="/sites/:id/details/*" element={<Details />} />
+            <Route path={Path.SiteEdit} element={<Edit />} />
             <Route path="/sites/create" element={<Create />} />
             <Route path={Path.Logout} element={<Logout />} />
           </Routes>
