@@ -2,7 +2,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Edit.module.css";
 import { useEffect, useState } from "react";
 import * as siteService from "../../../services/applicationService";
-import { useForm } from "../../../hooks/useForm";
 
 export const Edit = () => {
   const navigate = useNavigate();
@@ -21,7 +20,9 @@ export const Edit = () => {
     });
   }, [id]);
 
-  const editSiteSubmitHandler = async (values) => {
+  const editSiteSubmitHandler = async (e) => {
+    e.preventDefault();
+    const values = Object.fromEntries(new FormData(e.currentTarget));
     try {
       await siteService.edit(id, values);
       navigate("/sites");
@@ -29,13 +30,17 @@ export const Edit = () => {
       console.log(err);
     }
   };
-
-  const { values, onChange, onSubmit } = useForm(editSiteSubmitHandler, site);
+  const onChange = (e) => {
+    setSite((state) => ({
+      ...state,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <div className={styles.containerEditForm}>
       <form
-        onSubmit={onSubmit}
+        onSubmit={editSiteSubmitHandler}
         className={styles.editForm}
         method="post"
         action=""
@@ -47,9 +52,9 @@ export const Edit = () => {
           <input
             type="text"
             name="image"
-            value={values.image}
-            className={styles.editSiteInput}
+            value={site.image}
             onChange={onChange}
+            className={styles.editSiteInput}
           />
         </div>
         <div>
@@ -59,9 +64,9 @@ export const Edit = () => {
           <input
             type="text"
             name="title"
-            value={values.title}
-            className={styles.editSiteInput}
+            value={site.title}
             onChange={onChange}
+            className={styles.editSiteInput}
           />
         </div>
 
@@ -72,9 +77,8 @@ export const Edit = () => {
           <input
             type="text"
             name="price"
-            value={values.price}
+            value={site.price}
             className={styles.editSiteInput}
-            onChange={onChange}
           />
         </div>
         <div>
@@ -84,9 +88,9 @@ export const Edit = () => {
           <input
             type="text"
             name="shortDescription"
-            value={values.shortDescription}
-            className={styles.editSiteInput}
+            value={site.shortDescription}
             onChange={onChange}
+            className={styles.editSiteInput}
           />
         </div>
         <div>
@@ -95,11 +99,11 @@ export const Edit = () => {
           </label>
           <textarea
             name="description"
-            value={values.description}
+            value={site.description}
+            onChange={onChange}
             rows="4"
             cols="50"
             className={styles.editSiteTextarea}
-            onChange={onChange}
           />
         </div>
 

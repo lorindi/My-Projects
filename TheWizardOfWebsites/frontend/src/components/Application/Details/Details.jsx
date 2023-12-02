@@ -1,10 +1,9 @@
-import {  useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Details.module.css";
 import { NavLink } from "react-router-dom";
 import {
   useContext,
   useEffect,
-  useMemo,
   useReducer,
   useRef,
   useState,
@@ -18,7 +17,7 @@ import { pathToUrl } from "../../../utils/pathUtils";
 import Path from "../../paths";
 
 export const Details = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { email, userId } = useContext(Contexts);
   const [site, setSite] = useState({});
   const [comments, dispatch] = useReducer(reducer, []);
@@ -35,14 +34,16 @@ export const Details = () => {
     });
   }, [id]);
 
-  const deleteButtonClickHandler = async() => {
-    const hasConfirmed = confirm(`Are you sure you wants to delete ${site.title}`)
+  const deleteButtonClickHandler = async () => {
+    const hasConfirmed = confirm(
+      `Are you sure you wants to delete ${site.title}`
+    );
 
     if (hasConfirmed) {
-      await siteService.del(id)
-      navigate('/sites')
+      await siteService.del(id);
+      navigate("/sites");
     }
-  }
+  };
 
   const addCommentHandler = async (values) => {
     const newComment = await commentService.create(id, values.comment);
@@ -55,16 +56,16 @@ export const Details = () => {
   };
   const isOwner = userId === site._ownerId;
 
-  const initialValues = useMemo(
-    () => ({
-      comments: "",
-    }),
-    []
-  );
-  const { values, onChange, onSubmit } = useForm(
-    addCommentHandler,
-    initialValues
-  );
+  // const initialValues = useMemo(
+  //   () => ({
+  //     comments: "",
+  //   }),
+  //   []
+  // );
+
+  const { values, onChange, onSubmit } = useForm(addCommentHandler, {
+    comments: "",
+  });
   // if (Math.random() < 0.5) {
   //   throw new Error("Game details error");
   // }
@@ -98,9 +99,10 @@ export const Details = () => {
             >
               Edit
             </NavLink>
-            <button 
-            className={styles.detailLink} 
-            onClick={deleteButtonClickHandler}>
+            <button
+              className={styles.detailLink}
+              onClick={deleteButtonClickHandler}
+            >
               Delete
             </button>
             {/* <NavLink
