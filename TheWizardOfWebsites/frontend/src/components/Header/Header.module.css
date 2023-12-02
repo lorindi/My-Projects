@@ -36,9 +36,11 @@
     letter-spacing: 2px;
     font-weight: 500;
 }
+
 .elImg {
     width: 200px;
 }
+
 .navBarElements {
     display: flex;
     flex-direction: row;
@@ -46,6 +48,23 @@
     flex-wrap: wrap;
 
 }
+
+.linkButton,
+.dropdownEmail {
+    background-color: #1B2D3F;
+    border: none;
+    color: lightblue;
+}
+
+.linkButton:active,
+.dropdownEmail:active {
+    color: lightgreen;
+}
+
+.dropdownEmail {
+    padding-bottom: 10px;
+}
+
 /* -----------------------------------light------------------------------------ */
 
 .dark.navigation {
@@ -78,8 +97,11 @@
 
 
 }
+
 .dropdownContent>a:hover {
     color: lightgreen;
+
+
 
 
 }
@@ -87,4 +109,33 @@
 .navBarEl:hover .dropdownContent {
     display: block;
 
+}
+
+@media(width <=320px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navBarElements {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        align-items: center;
+    }
+
+    .link {
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
 }

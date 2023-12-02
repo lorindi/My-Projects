@@ -113,13 +113,10 @@
 .teamSection>img {
     width: 700px;
     height: 700px;
-    /* background-color: rgba(0, 0, 0, 0.083); */
-    border-radius: 5px;
     background-position: center;
     object-fit: cover;
     background-size: contain;
     padding: 30px;
-    /* border: 3px solid rgba(173, 216, 230, 0.475); */
 
 }
 
@@ -128,33 +125,26 @@
 .contactsInfo {
     display: flex;
     flex-direction: column;
-    /* background-color: #63d3ff81; */
     height: 101vh;
     align-items: center;
     justify-content: center;
     width: 100%;
     font-family: 'Montserrat', sans-serif;
     flex-wrap: wrap;
-
-
-
-
 }
 
 .contentContacts {
     display: flex;
     flex-direction: column;
-    /* border: 5px dotted white; */
     padding: 50px;
-    width: 1230px;
+    width: 3000px;
 
 }
 
 .contactsList {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 30px;
-    padding: 30px 30px 30px 80px;
 }
 
 .contact>a {
@@ -218,12 +208,14 @@
     background-color: lightblue;
 
 }
+
 .dark.teamLink:hover {
     color: lightblue;
     border: 3px solid lightblue;
     background-color: #1b2d3f;
 
 }
+
 .dark.teamLink:active {
     border: 3px solid lightgreen;
     background-color: #1b2d3f;
@@ -242,15 +234,147 @@
 
 }
 
-.dark.contentContacts {
-    border: 5px dotted rgba(255, 255, 255, 0.486);
-
-
-}
+.dark.contentContacts {}
 
 .dark.contact>a>p {
     /* color: black; */
     color: rgba(255, 255, 255, 0.531);
 
 
+}
+
+@media(width <=320px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    .informationSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 50px;
+        flex-wrap: nowrap;
+        height: 60vh;
+
+
+    }
+
+    .informationImg {
+        width: 160px;
+        height: 160px;
+        transform: rotate(45deg);
+        margin-top: 20px;
+    }
+
+    .infoTitle {
+        width: 200px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .contentInfo {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+
+    }
+
+    .infoDescription {
+        height: 150px;
+        width: 200px;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        text-indent: 0px;
+        line-height: 15px;
+        text-indent: 2em;
+    }
+
+    .teamSection {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 450px;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    .contentTeam {
+        align-items: center;
+        height: 100%;
+        gap: 0px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+    }
+
+    .teamTitle {
+        font-size: 18px;
+        margin-bottom: 10px;
+
+    }
+
+    .teamDescription {
+        font-size: 10px;
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    .teamLink {
+        padding: 5px 10px;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .teamSection>img {
+        width: 250px;
+        height: 550px;
+        object-fit: inherit;
+        padding: 10px 30px 10px 30px;
+
+    }
+
+    .contactsInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+
+    }
+
+    .contactsImg {
+        width: 150px;
+    }
+
+    .contentContacts {
+
+        padding: 10px;
+        width: 300px;
+
+    }
+
+    .contactsList {
+ width: 100px;
+        gap: 20px;
+    }
+
+    .contact>a {
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact>a>img {
+        width: 20px;
+    }
+
+    .contact>a>p {
+        font-size: 15px;
+        /* color: black; */
+    }
 }

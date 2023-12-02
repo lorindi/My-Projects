@@ -6,16 +6,14 @@
 .contentCard {
     display: flex;
     flex-direction: column;
-    /* width: 200px; */
-    /* height: 350px; */
+    /* width: 200px;
+    height: 350px; */
     border: 2px solid rgba(173, 216, 230, 0.623);
     border-radius: 5px;
     justify-content: space-between;
     /* overflow: hidden; */
     transform-style: preserve-3d;
     transition: transform 0.5s;
-
-
 
 }
 .cardImg {
@@ -109,4 +107,15 @@
     color: lightgreen;
 
 }
-
+@media(width <=320px) {
+    * {
+        overflow-x: hidden;
+    }
+    .contentCard {
+        width: 225px;
+        height: 300px;
+  
+    
+    }
+    
+}

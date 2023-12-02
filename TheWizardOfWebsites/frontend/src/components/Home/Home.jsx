@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import styles from "./Home.module.css";
+import styles from "./Home.module.css" ;
 export const Home = () => {
   return (
     <>
@@ -44,7 +44,7 @@ export const Home = () => {
       </section>
 
       <section className={`${styles.contactsInfo} ${styles.dark}`}>
-        <h1></h1>
+        <img className={styles.contactsImg} src="../../../src/components/Home/pngwing.com.png" alt="" />
         <div className={`${styles.contentContacts} ${styles.dark}`}>
           <ul role="list" className={styles.contactsList}>
             <li className={styles.contact}>
@@ -69,8 +69,6 @@ export const Home = () => {
                 <p>Team</p>
               </NavLink>
             </li>
-          </ul>
-          <ul role="list" className={styles.contactsList}>
             <li className={styles.contact}>
               <NavLink
                 to=""
@@ -94,6 +92,7 @@ export const Home = () => {
               </NavLink>
             </li>
           </ul>
+         
         </div>
       </section>
     </>

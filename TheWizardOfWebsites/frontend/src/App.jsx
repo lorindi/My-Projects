@@ -10,7 +10,6 @@ import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
 import { Logout } from "./components/Logout/Logout";
 import { AboutUs } from "./components/AboutUs/AboutUs";
-import { Profile } from "./components/Profile/Profile";
 import { Footer } from "./components/Footer/Footer";
 import { List } from "./components/Application/List/List";
 import { Create } from "./components/Application/Create/Create";
@@ -31,11 +30,9 @@ function App() {
               <Route path={Path.Home} element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/profile/*" element={<Profile />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/sites" element={<List />} />
               <Route path="/sites/:id/details/*" element={<Details />} />
-
               <Route element={<AuthGuard />}>
                 <Route path="/sites/create" element={<Create />} />
                 <Route path={Path.SiteEdit} element={<Edit />} />

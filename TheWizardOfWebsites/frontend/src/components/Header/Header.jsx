@@ -6,14 +6,13 @@ import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   const { isAuthenticated, username } = useContext(Contexts);
-  // const { email } = useContext(Contexts);
+  const { email } = useContext(Contexts);
 
   return (
     <header className={styles.header}>
       <nav className={`${styles.navigation} ${styles.dark}`}>
         {isAuthenticated && (
           <div className={styles.navBar}>
-
             <div className={styles.navBarEl}>
               <NavLink
                 className={styles.link}
@@ -26,9 +25,7 @@ export const Header = () => {
               </NavLink>
             </div>
 
-
             <div className={styles.navBarElements}>
-
               <div className={styles.navBarEl}>
                 <NavLink
                   className={styles.link}
@@ -55,16 +52,14 @@ export const Header = () => {
             </div>
 
             <div className={styles.navBarEl}>
-              <NavLink
-                className={`${styles.link} ${styles.dropbtn}`}
-                style={({ isActive }) => ({
-                  color: isActive ? "lightgreen" : "lightblue",
-                })}
-                to="/profile"
+              <button
+                className={`${styles.linkButton} ${styles.link} ${styles.dropbtn}`}
               >
                 {username}
-              </NavLink>
+              </button>
+
               <div className={styles.dropdownContent}>
+                <p className={styles.dropdownEmail}>{email}</p>
                 <NavLink className={styles.link} to="/logout">
                   Logout
                 </NavLink>
