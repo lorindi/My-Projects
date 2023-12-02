@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import styles from "./Details.module.css";
 import { NavLink } from "react-router-dom";
 import {
@@ -18,6 +18,7 @@ import { pathToUrl } from "../../../utils/pathUtils";
 import Path from "../../paths";
 
 export const Details = () => {
+  const navigate = useNavigate()
   const { email, userId } = useContext(Contexts);
   const [site, setSite] = useState({});
   const [comments, dispatch] = useReducer(reducer, []);
@@ -33,6 +34,15 @@ export const Details = () => {
       });
     });
   }, [id]);
+
+  const deleteButtonClickHandler = async() => {
+    const hasConfirmed = confirm(`Are you sure you wants to delete ${site.title}`)
+
+    if (hasConfirmed) {
+      await siteService.del(id)
+      navigate('/sites')
+    }
+  }
 
   const addCommentHandler = async (values) => {
     const newComment = await commentService.create(id, values.comment);
@@ -55,7 +65,9 @@ export const Details = () => {
     addCommentHandler,
     initialValues
   );
-
+  // if (Math.random() < 0.5) {
+  //   throw new Error("Game details error");
+  // }
   return (
     <>
       <section className={styles.buttonLinks}>
@@ -86,9 +98,13 @@ export const Details = () => {
             >
               Edit
             </NavLink>
-
-            <NavLink
-              to="/sites/:id/delete"
+            <button 
+            className={styles.detailLink} 
+            onClick={deleteButtonClickHandler}>
+              Delete
+            </button>
+            {/* <NavLink
+              to={pathToUrl(Path.SiteDelete, { id })}
               className={styles.detailLink}
               style={({ isActive }) => ({
                 color: isActive ? "lightgreen" : "lightblue",
@@ -98,7 +114,7 @@ export const Details = () => {
               })}
             >
               Delete
-            </NavLink>
+            </NavLink> */}
           </>
         )}
       </section>

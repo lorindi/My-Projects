@@ -16,30 +16,37 @@ import { List } from "./components/Application/List/List";
 import { Create } from "./components/Application/Create/Create";
 import { Details } from "./components/Application/Details/Details";
 import { Edit } from "./components/Application/Edit/Edit";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import AuthGuard from "./components/Guards/AuthGuard";
 
 function App() {
   return (
-    <AuthProvider>
-      <div id="box">
-        <Header />
-        <main className="main">
-          <Routes>
-            <Route path="*" element={<NotFound />} />
-            <Route path={Path.Home} element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/profile/*" element={<Profile />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/sites" element={<List />} />
-            <Route path="/sites/:id/details/*" element={<Details />} />
-            <Route path={Path.SiteEdit} element={<Edit />} />
-            <Route path="/sites/create" element={<Create />} />
-            <Route path={Path.Logout} element={<Logout />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <div id="box">
+          <Header />
+          <main className="main">
+            <Routes>
+              <Route path="*" element={<NotFound />} />
+              <Route path={Path.Home} element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/profile/*" element={<Profile />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/sites" element={<List />} />
+              <Route path="/sites/:id/details/*" element={<Details />} />
+
+              <Route element={<AuthGuard />}>
+                <Route path="/sites/create" element={<Create />} />
+                <Route path={Path.SiteEdit} element={<Edit />} />
+                <Route path={Path.Logout} element={<Logout />} />
+              </Route>
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }
 

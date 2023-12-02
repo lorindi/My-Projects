@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./Create.module.css";
 import * as siteService from "../../../services/applicationService";
-// const baseUrl = "http://localhost:8000";
+
 
 export const Create = () => {
   const navigate = useNavigate();

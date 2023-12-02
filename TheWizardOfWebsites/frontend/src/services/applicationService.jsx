@@ -20,3 +20,5 @@ export const edit = async (id, siteData) => {
   const result = await request.put(`${baseUrl}/${id}`, siteData);
   return result;
 };
+
+export const del = async (id) => request.del(`${baseUrl}/${id}`);

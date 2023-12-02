@@ -34,14 +34,14 @@
 }
 
 .partTeamImg {
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
   border-radius: 100%;
   background-position: center;
   object-fit: cover;
   background-size: contain;
   border: 2px solid rgba(173, 216, 230, 0.509);
-  padding: 20px;
+  padding: 10px;
   /* filter: grayscale(100%); */
   transform-style: preserve-3d;
   transition: transform 0.5s;
