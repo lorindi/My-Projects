@@ -6,60 +6,55 @@ import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   const { isAuthenticated, username } = useContext(Contexts);
+  // const { email } = useContext(Contexts);
+
   return (
     <header className={styles.header}>
       <nav className={`${styles.navigation} ${styles.dark}`}>
-        <ul className={styles.navBar} role="list">
-          <li className={styles.navBarEl}>
-            <NavLink
-              className={styles.link}
-              style={({ isActive }) => ({
-                color: isActive ? "lightgreen" : "lightblue",
-              })}
-              to="/"
-            >
-              Home
-            </NavLink>
-          </li>
-          {/* <li className={styles.navBarEl}>
-            <NavLink
-              className={styles.link}
-              style={({ isActive }) => ({
-                color: isActive ? "lightblue" : "lightgreen",
-              })}
-              to="/about-us"
-            >
-              About us
-            </NavLink>
-          </li> */}
-          {isAuthenticated && (
-            <li className={styles.navBarEl}>
+        {isAuthenticated && (
+          <div className={styles.navBar}>
+
+            <div className={styles.navBarEl}>
               <NavLink
                 className={styles.link}
                 style={({ isActive }) => ({
                   color: isActive ? "lightgreen" : "lightblue",
                 })}
-                to="/sites"
+                to="/"
               >
-                Sites
+                Web Crafters
               </NavLink>
-            </li>
-          )}
-          {isAuthenticated && (
-            <li className={styles.navBarEl}>
-              <NavLink
-                className={styles.link}
-                style={({ isActive }) => ({
-                  color: isActive ? "lightgreen" : "lightblue",
-                })}
-                to="/sites/create"
-              >
-                Create
-              </NavLink>
-            </li>
-          )}
-          {isAuthenticated && (
-            <li className={styles.navBarEl}>
+            </div>
+
+
+            <div className={styles.navBarElements}>
+
+              <div className={styles.navBarEl}>
+                <NavLink
+                  className={styles.link}
+                  style={({ isActive }) => ({
+                    color: isActive ? "lightgreen" : "lightblue",
+                  })}
+                  to="/sites"
+                >
+                  Sites
+                </NavLink>
+              </div>
+
+              <div className={styles.navBarEl}>
+                <NavLink
+                  className={styles.link}
+                  style={({ isActive }) => ({
+                    color: isActive ? "lightgreen" : "lightblue",
+                  })}
+                  to="/about-us"
+                >
+                  About us
+                </NavLink>
+              </div>
+            </div>
+
+            <div className={styles.navBarEl}>
               <NavLink
                 className={`${styles.link} ${styles.dropbtn}`}
                 style={({ isActive }) => ({
@@ -70,18 +65,28 @@ export const Header = () => {
                 {username}
               </NavLink>
               <div className={styles.dropdownContent}>
-                <NavLink
-                  className={styles.link}
-                
-                  to="/logout"
-                >
+                <NavLink className={styles.link} to="/logout">
                   Logout
                 </NavLink>
               </div>
-            </li>
-          )}
-          {!isAuthenticated && (
-            <li className={styles.navBarEl}>
+            </div>
+          </div>
+        )}
+        {!isAuthenticated && (
+          <div className={styles.navBar}>
+            <div className={styles.navBarEl}>
+              <NavLink
+                className={styles.link}
+                style={({ isActive }) => ({
+                  color: isActive ? "lightgreen" : "lightblue",
+                })}
+                to="/"
+              >
+                Web Crafters
+              </NavLink>
+            </div>
+
+            <div className={styles.navBarEl}>
               <NavLink
                 className={styles.link}
                 style={({ isActive }) => ({
@@ -91,17 +96,23 @@ export const Header = () => {
               >
                 Sign in
               </NavLink>
-            </li>
-          )}
+            </div>
+          </div>
+        )}
 
-          {/* <li className={styles.navBarEl}>
-            <NavLink className={styles.link} style={({ isActive }) => ({
-            color: isActive ? "lightblue" : "lightgreen",
-          })} to="/register">
-              Register
+        {/* {isAuthenticated && (
+          <div className={styles.navBarEl}>
+            <NavLink
+              className={styles.link}
+              style={({ isActive }) => ({
+                color: isActive ? "lightgreen" : "lightblue",
+              })}
+              to="/sites/create"
+            >
+              Create
             </NavLink>
-          </li> */}
-        </ul>
+          </div>
+        )} */}
       </nav>
     </header>
   );

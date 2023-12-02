@@ -41,6 +41,7 @@ export const Details = () => {
       type: "ADD_COMMENT",
       resultComments: newComment,
     });
+    values.comment = "";
   };
   const isOwner = userId === site._ownerId;
 

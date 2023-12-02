@@ -44,7 +44,7 @@ export const AboutUs = () => {
         >
           <img
             className={styles.partTeamImg}
-            src="../../../src/components/AboutUs/pngwing.com (8).png"
+            src="../../../src/components/AboutUs/Lora.jpg"
             alt=""
           />
           <div className={styles.about}>
@@ -54,23 +54,35 @@ export const AboutUs = () => {
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi/CVLora-Mitova/blob/main/Lora's%20Resume.pdf"
               >
-                <i className="fa-solid fa-circle-info" style={({color: "rgba(0, 255, 255, 0.484)"})} ></i>
+                <i
+                  className="fa-solid fa-circle-info"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
               <Link
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi"
               >
-                <i className="fa-brands fa-github" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-brands fa-github"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
               <Link
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi/Certificates-from-the-software-engineering-curriculum"
               >
-                <i className="fa-solid fa-certificate" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-solid fa-certificate"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
             </div>
 
-            <p className={`${styles.partTeamDescription} ${styles.dark}`} ref={descriptionRef}>
+            <p
+              className={`${styles.partTeamDescription} ${styles.dark}`}
+              ref={descriptionRef}
+            >
               Lora Mitova is a passionate and experienced technology expert with
               extensive knowledge of Python and JavaScript. She excels in
               programming and web application development. Furthermore, Lora
@@ -89,7 +101,7 @@ export const AboutUs = () => {
         >
           <img
             className={styles.partTeamImg}
-            src="../../../src/components/AboutUs/pngwing.com (8).png"
+            src="../../../src/components/AboutUs/Tonika.jpg"
             alt=""
           />
           <div className={styles.about}>
@@ -99,19 +111,28 @@ export const AboutUs = () => {
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi/CVLora-Mitova/blob/main/Lora's%20Resume.pdf"
               >
-                <i className="fa-solid fa-circle-info" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-solid fa-circle-info"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
               <Link
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi"
               >
-                <i className="fa-brands fa-github" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-brands fa-github"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
               <Link
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi/Certificates-from-the-software-engineering-curriculum"
               >
-                <i className="fa-solid fa-certificate" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-solid fa-certificate"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
             </div>
             <p className={styles.partTeamDescription}>
@@ -133,7 +154,7 @@ export const AboutUs = () => {
         >
           <img
             className={styles.partTeamImg}
-            src="../../../src/components/AboutUs/pngwing.com (8).png"
+            src="../../../src/components/AboutUs/Lily.jpg"
             alt=""
           />
           <div className={styles.about}>
@@ -143,19 +164,28 @@ export const AboutUs = () => {
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi/CVLora-Mitova/blob/main/Lora's%20Resume.pdf"
               >
-                <i className="fa-solid fa-circle-info" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-solid fa-circle-info"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
               <Link
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi"
               >
-                <i className="fa-brands fa-github" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-brands fa-github"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
               <Link
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi/Certificates-from-the-software-engineering-curriculum"
               >
-                <i className="fa-solid fa-certificate" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-solid fa-certificate"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
             </div>
             <p className={styles.partTeamDescription}>
@@ -172,11 +202,119 @@ export const AboutUs = () => {
           </div>
         </section>
         <section
+          className={`${styles.partTeam} ${styles.secondSection} ${styles.dark}`}
+        >
+          <img
+            className={styles.partTeamImg}
+            src="../../../src/components/AboutUs/Mariela.jpg"
+            alt=""
+          />
+          <div className={styles.about}>
+            <h1 className={`${styles.partTeamTitle} ${styles.dark}`}>Mariela</h1>
+            <div className={styles.partTeamInfo}>
+              <Link
+                className={`${styles.infoLink} ${styles.dark}`}
+                to="https://github.com/lorindi/CVLora-Mitova/blob/main/Lora's%20Resume.pdf"
+              >
+                <i
+                  className="fa-solid fa-circle-info"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
+              </Link>
+              <Link
+                className={`${styles.infoLink} ${styles.dark}`}
+                to="https://github.com/lorindi"
+              >
+                <i
+                  className="fa-brands fa-github"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
+              </Link>
+              <Link
+                className={`${styles.infoLink} ${styles.dark}`}
+                to="https://github.com/lorindi/Certificates-from-the-software-engineering-curriculum"
+              >
+                <i
+                  className="fa-solid fa-certificate"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
+              </Link>
+            </div>
+            <p className={styles.partTeamDescription}>
+              Mariela Nikolova is a versatile and resourceful IT enthusiast who
+              has traversed through the realms of C#, Java, and more. Her
+              hands-on experience includes crafting web applications using Java,
+              where access to resources from Fundamentals in Java proved
+              invaluable, streamlining the understanding of web applications and
+              CRUD operations. Beyond the realms of Java, Mariela has delved
+              into the dynamic world of JavaScript, navigating its intricacies,
+              while also venturing into the realm of WordPress, showcasing a
+              continuous pursuit of knowledge and adaptation to evolving
+              technologies.
+            </p>
+            <span className={styles.text}></span>
+          </div>
+        </section>
+        <section
+          className={`${styles.partTeam} ${styles.secondSection} ${styles.dark}`}
+        >
+          <img
+            className={styles.partTeamImg}
+            src="../../../src/components/AboutUs/Nikola.JPG"
+            alt=""
+          />
+          <div className={styles.about}>
+            <h1 className={`${styles.partTeamTitle} ${styles.dark}`}>Nikola</h1>
+            <div className={styles.partTeamInfo}>
+              <Link
+                className={`${styles.infoLink} ${styles.dark}`}
+                to="https://github.com/lorindi/CVLora-Mitova/blob/main/Lora's%20Resume.pdf"
+              >
+                <i
+                  className="fa-solid fa-circle-info"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
+              </Link>
+              <Link
+                className={`${styles.infoLink} ${styles.dark}`}
+                to="https://github.com/lorindi"
+              >
+                <i
+                  className="fa-brands fa-github"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
+              </Link>
+              <Link
+                className={`${styles.infoLink} ${styles.dark}`}
+                to="https://github.com/lorindi/Certificates-from-the-software-engineering-curriculum"
+              >
+                <i
+                  className="fa-solid fa-certificate"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
+              </Link>
+            </div>
+            <p className={styles.partTeamDescription}>
+              Nikola Hadzhiev is a dedicated and skilled IT professional who has
+              delved into the realms of C# and JavaScript, showcasing
+              proficiency in both languages. His previous experience as a junior
+              automation developer using UiPath and C# has equipped him with
+              practical skills in streamlining workflows. Currently focusing on
+              cloud technology development, Nikola is navigating the
+              complexities of distributed systems, mastering the interplay
+              between server and client components. As he advances in his cloud
+              technology journey, Nikola s determination and adaptability
+              position him as a promising force in the evolving landscape of IT.
+            </p>
+            <span className={styles.text}></span>
+          </div>
+        </section>
+        <section
           className={`${styles.partTeam} ${styles.thirdSection} ${styles.dark}`}
         >
           <img
             className={styles.partTeamImg}
-            src="/images/pngwing.com (9).png"
+            src="../../../src/components/AboutUs/pngwing.com (9).png"
             alt=""
           />
           <div className={styles.about}>
@@ -186,19 +324,28 @@ export const AboutUs = () => {
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi/CVLora-Mitova/blob/main/Lora's%20Resume.pdf"
               >
-                <i className="fa-solid fa-circle-info" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-solid fa-circle-info"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
               <Link
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi"
               >
-                <i className="fa-brands fa-github" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-brands fa-github"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
               <Link
                 className={`${styles.infoLink} ${styles.dark}`}
                 to="https://github.com/lorindi/Certificates-from-the-software-engineering-curriculum"
               >
-                <i className="fa-solid fa-certificate" style={({color: "rgba(0, 255, 255, 0.484)"})}></i>
+                <i
+                  className="fa-solid fa-certificate"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
               </Link>
             </div>
             <p className={styles.partTeamDescription} id="animated-text">

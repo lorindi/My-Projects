@@ -85,16 +85,17 @@
 .detailLink {
     display: flex;
     text-transform: uppercase;
-    width: 100px;
+    /* width: 100px; */
     border-radius: 5px;
     background-color: #1B2D3F;
     color: lightblue;
     border: 1px solid lightblue;
-    padding: 5px;
+    padding: 5px 10px;
     justify-content: center;
     align-items: center;
     letter-spacing: 1.5px;
-    font-size: 12px;
+    font-size: 18px;
+
 }
 
 .detailLink:hover {

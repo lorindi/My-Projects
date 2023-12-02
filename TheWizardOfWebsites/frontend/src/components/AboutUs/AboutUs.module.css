@@ -24,25 +24,36 @@
 
 } */
 .partTeam {
-
+  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 80px;
-  height: 90vh;
+  gap: 100px;
+  min-height: 90vh;
 }
 
 .partTeamImg {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   border-radius: 100%;
   background-position: center;
   object-fit: cover;
   background-size: contain;
-  border: 1px solid rgba(0, 255, 255, 0.484);
+  border: 2px solid rgba(173, 216, 230, 0.509);
   padding: 20px;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  opacity: 0.8;
+
+}
+
+.partTeamImg:hover {
+  transform: rotateY(15deg) rotateX(5deg);
+  border: 2px solid rgba(173, 216, 230, 0.753);
+  box-shadow: -20px 0px 50px 0px rgba(173, 216, 230, 0.753);
+  opacity: 1;
 
 }
 
@@ -58,19 +69,17 @@
   justify-content: center;
   font-size: 65px;
   font-weight: 400;
+  
 }
 
 .partTeamDescription {
-  width: 700px;
-  font-size: 20px;
+  max-width: 750px;
+  font-size: 21px;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   text-indent: 3em;
   text-align: justify;
-  line-height: 35px;
-  /* display: flex; */
-  /* font-style: italic; */
-
+  line-height: 40px;
 
 }
 
@@ -127,7 +136,7 @@
 
 
 :root {
-  --bg-color: #F0F1F2;
+  --bg-color: #1B2D3F;
   --typewriterSpeed: 6s;
   --typewriterCharacters: 24;
 }
@@ -161,7 +170,7 @@
 
 .partTeamTitle::after {
   width: 0.125em;
-  background: black;
+  background: lightblue;
   animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards,
     blink 750ms steps(var(--typewriterCharacters)) infinite;
 }
