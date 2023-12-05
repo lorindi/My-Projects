@@ -23,21 +23,21 @@ Project Screenshots:
 
 # A guest has access to:
 
-* Home page
-* About us page
-* Login page
-* Register page
+    * Home page
+    * About us page
+    * Login page
+    * Register page
 
 # An authenticated user (Web Crafter) has access to:
 
-* Sites page
-      * Create a site
-      * Editing the site
-      * Delete the site
-      * Create a comment on the site
-      * Delete a comment on the site
-* Profile
-      * Log out of your account
+    * Sites page
+    * Create a site
+    * Editing the site
+    * Delete the site
+    * Create a comment on the site
+    * Delete a comment on the site
+    * Profile
+    * Log out of your account
 
 ######################################################################################
 
@@ -52,9 +52,8 @@ Project Screenshots:
 ######################################################################################
 
 # Run Backend Server:
-    *Open the terminal in the "server" folder and run:
+    * Open the terminal in the "server" folder and run:
 
-        cd .\server\ -> node .\server.js
-
-        The server is listening at 
-        http://localhost:3030/
+        * cd .\server\ -> node .\server.js
+        * The server is listening at 
+        * http://localhost:3030/
