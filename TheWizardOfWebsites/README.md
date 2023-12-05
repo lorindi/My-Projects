@@ -13,7 +13,7 @@ Project Screenshots:
 
 <h2>💻 Built with</h2>
 
-# Technologies used in the project:
+Technologies used in the project:
 
 *   HTML, CSS, JavaScript
 *   React
@@ -21,14 +21,14 @@ Project Screenshots:
 *   General Requirements:
 *   The main part includes a sites (dashboard) for managing websites.
 
-# A guest has access to:
+A guest has access to:
 
     * Home page
     * About us page
     * Login page
     * Register page
 
-# An authenticated user (Web Crafter) has access to:
+An authenticated user (Web Crafter) has access to:
 
     * Sites page
     * Create a site
