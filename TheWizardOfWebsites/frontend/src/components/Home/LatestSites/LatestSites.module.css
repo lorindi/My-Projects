@@ -1,0 +1,38 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+.cardLatestSite {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(173, 216, 230, 0.623);
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    align-items: center;
+    width: 190px;
+    height: 204px;
+    overflow: hidden;
+
+}
+
+.latestSiteImg {
+    width: 180px;
+    height: 150px;
+    padding: 10px;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+    opacity: 0.7;
+    border-radius: 8%;
+}
+.latestSiteTitle {
+    font-size: 16px;
+    padding: 15px 5px 15px 5px;
+    color: lightblue;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}

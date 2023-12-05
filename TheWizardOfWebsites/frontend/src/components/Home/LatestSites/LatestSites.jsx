@@ -2,25 +2,19 @@
 
 import { NavLink } from "react-router-dom";
 import { pathToUrl } from "../../../utils/pathUtils";
-import  Path  from "../../paths";
-import styles from './LatestSites.module.css'
-export const LatestSites = ({
-    _id,
-    image,
-    title,
-}) => {
+import Path from "../../paths";
+import styles from "./LatestSites.module.css";
+export const LatestSites = ({ _id, image, title }) => {
   return (
-    <div className={styles.containerLatestSites}>
-      <div className={styles.currentLatestSite}>
-        <img src={image} alt="" />
-        <div>
-          <h4>{title}</h4>
- 
-        </div>
-        <NavLink className={styles.link} to={pathToUrl(Path.SiteDetails, {id: _id})}>
-          Details
-        </NavLink>
+    <NavLink
+      className={styles.containerLatestSites}
+      to={pathToUrl(Path.SiteDetails, { id: _id })}
+    >
+      <div className={styles.cardLatestSite}>
+        <img className={styles.latestSiteImg} src={image} alt="image" />
+
+        <h4 className={styles.latestSiteTitle}>{title}</h4>
       </div>
-    </div>
+    </NavLink>
   );
 };

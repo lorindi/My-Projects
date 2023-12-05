@@ -64,10 +64,6 @@ export const Details = () => {
           onClick={() =>
             commentsSectionRef.current.scrollIntoView({ behavior: "smooth" })
           }
-          style={({ isActive }) => ({
-            color: isActive ? "lightgreen" : "lightblue",
-            border: isActive ? "1px solid lightgreen" : "1px solid lightblue",
-          })}
         >
           Comments
         </NavLink>
@@ -77,12 +73,6 @@ export const Details = () => {
               to={pathToUrl(Path.SiteEdit, { id })}
               // to={`/sites/${id}/edit`}
               className={styles.detailLink}
-              style={({ isActive }) => ({
-                color: isActive ? "lightgreen" : "lightblue",
-                border: isActive
-                  ? "1px solid lightgreen"
-                  : "1px solid lightblue",
-              })}
             >
               Edit
             </NavLink>

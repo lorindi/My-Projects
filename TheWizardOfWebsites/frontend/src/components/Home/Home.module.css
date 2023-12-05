@@ -5,23 +5,30 @@
 
 
 /* ------------------------------main------------------------------ */
-
-.informationSection {
+.containerInformationSection{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contentInformationSection {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 150px;
     flex-wrap: wrap;
-    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 80px;
+
 
 }
 
 .informationImg {
-    width: 570px;
-    height: 570px;
-    /* border-radius: 100%; */
+    width: 450px;
+    height: 450px;
     background-position: center;
     object-fit: cover;
     background-size: contain;
@@ -30,7 +37,7 @@
 .contentInfo {
     display: flex;
     flex-direction: column;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 
 }
 
@@ -39,15 +46,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 47px;
+    font-size: 45px;
     font-weight: 400;
     margin-bottom: 20px;
 }
 
 .infoDescription {
 
-    width: 650px;
-    font-size: 22px;
+    width: 600px;
+    font-size: 17.5px;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-indent: 1em;
@@ -55,16 +62,30 @@
     line-height: 32px;
 
 }
+.latestSites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 30%;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+
+}
+
 
 .teamSection {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     /* background-color: #a3d368e5; */
-    min-height: 70vh;
+    min-height: 80vh;
     font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    gap: 70px;
+    padding-top: 100px;
+
 
 }
 
@@ -74,24 +95,23 @@
     align-items: flex-start;
     justify-content: center;
     height: 100%;
-    gap: 90px;
+    gap: 70px;
     padding-left: 50px;
     margin-bottom: 50px;
+    margin-left: 100px;
 }
 
 .teamTitle {
     color: rgba(255, 255, 255, 0.746);
-
-    font-size: 78px;
+    font-size: 64px;
     font-weight: 200;
-    /* border-bottom: 5px solid white; */
 }
 
 .teamDescription {
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 1px;
     font-weight: 400;
-    width: 600px;
+    width: 500px;
     color: rgba(255, 255, 255, 0.508);
 
 }
@@ -100,7 +120,7 @@
     padding: 10px 20px;
     /* color: black; */
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     /* background-color: white;
     border: 5px solid white; */
@@ -111,8 +131,8 @@
 }
 
 .teamSection>img {
-    width: 700px;
-    height: 700px;
+    width: 625px;
+    height: 625px;
     background-position: center;
     object-fit: cover;
     background-size: contain;
@@ -131,6 +151,7 @@
     font-family: 'Montserrat', sans-serif;
     flex-wrap: wrap;
     height: 100vh;
+
 
 }
 
@@ -177,6 +198,8 @@
     opacity: 0.8;
     padding: 20px;
     border-radius: 100%;
+    margin-left: 70px;
+
 }
 
 /* -----------------------------------Home-page------------------------------------ */
@@ -248,13 +271,50 @@
 
 }
 
-.dark.contentContacts {}
-
 .dark.contact>a>p {
     /* color: black; */
     color: rgba(255, 255, 255, 0.531);
 
 
+}
+
+.homePageLinks {
+    position: fixed;
+    left: 50px;
+    top: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    z-index: 1;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.homePageLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(173, 216, 230, 0.625);
+    letter-spacing: 2px;
+    font-size: 14px;
+    border: 3px solid #142331;
+    background-color: #1b2d3f;
+    padding: 5px 50px;
+    border-radius: 5px;
+    width: 110px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.homePageLink:hover {
+    color: lightblue;
+}
+
+.homePageLink:active {
+    color: lightgreen;
 }
 
 @media(width <=320px) {
@@ -268,7 +328,7 @@
         justify-content: space-evenly;
         gap: 50px;
         flex-wrap: nowrap;
-       min-height: 70vh;
+        min-height: 70vh;
 
 
     }

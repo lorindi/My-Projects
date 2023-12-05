@@ -1,16 +1,77 @@
 import styles from "./AboutUs.module.css";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 export const AboutUs = () => {
   const descriptionRef = useRef(null);
   const span = useRef(null);
-
+  const lora = useRef(null);
+  const tonika = useRef(null);
+  const lilly = useRef(null);
+  const mariela = useRef(null);
+  const nikola = useRef(null);
+  const viktor = useRef(null);
+  const plamen = useRef(null);
 
   return (
     <>
       <div className={styles.wholeTeam}>
+        <article className={styles.wholeTeamLinks}>
+          <NavLink
+            className={styles.nameLink}
+            onClick={() => lora.current.scrollIntoView({ behavior: "smooth" })}
+          >
+            Lora
+          </NavLink>
+          <NavLink
+            className={styles.nameLink}
+            onClick={() =>
+              tonika.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Tonika
+          </NavLink>
+          <NavLink
+            className={styles.nameLink}
+            onClick={() => lilly.current.scrollIntoView({ behavior: "smooth" })}
+          >
+            Lilly
+          </NavLink>
+          <NavLink
+            className={styles.nameLink}
+            onClick={() =>
+              mariela.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Mariela
+          </NavLink>
+          <NavLink
+            className={styles.nameLink}
+            onClick={() =>
+              nikola.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Nikola
+          </NavLink>
+          <NavLink
+            className={styles.nameLink}
+            onClick={() =>
+              viktor.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Viktor
+          </NavLink>
+          <NavLink
+            className={styles.nameLink}
+            onClick={() =>
+              plamen.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Plamen
+          </NavLink>
+        </article>
         <section
           className={`${styles.partTeam} ${styles.firstSection} ${styles.dark}`}
+          ref={lora}
         >
           <img
             className={styles.partTeamImg}
@@ -67,6 +128,7 @@ export const AboutUs = () => {
           </div>
         </section>
         <section
+          ref={tonika}
           className={`${styles.partTeam} ${styles.secondSection} ${styles.dark}`}
         >
           <img
@@ -120,6 +182,7 @@ export const AboutUs = () => {
           </div>
         </section>
         <section
+          ref={lilly}
           className={`${styles.partTeam} ${styles.secondSection} ${styles.dark}`}
         >
           <img
@@ -128,7 +191,7 @@ export const AboutUs = () => {
             alt=""
           />
           <div className={styles.about}>
-            <h1 className={`${styles.partTeamTitle} ${styles.dark}`}>Lily</h1>
+            <h1 className={`${styles.partTeamTitle} ${styles.dark}`}>Lilly</h1>
             <div className={styles.partTeamInfo}>
               <Link
                 className={`${styles.infoLink} ${styles.dark}`}
@@ -159,12 +222,12 @@ export const AboutUs = () => {
               </Link>
             </div>
             <p className={styles.partTeamDescription}>
-              Lili Klecharova is a passionate expert in JavaScript technology,
+              Lilly Klecharova is a passionate expert in JavaScript technology,
               with extensive knowledge and experience in programming with this
               language. She stands out with her strong analytical skills and her
-              ability to solve complex tasks effortlessly using JavaScript. Lili
+              ability to solve complex tasks effortlessly using JavaScript. Lilly
               has rich experience in creating web applications and dynamic
-              websites, utilizing technologies like React and Node.js. With Lili
+              websites, utilizing technologies like React and Node.js. With Lilly
               Klecharova on board, every JavaScript-related development receives
               her expert touch and attention to detail.
             </p>
@@ -172,6 +235,7 @@ export const AboutUs = () => {
           </div>
         </section>
         <section
+          ref={mariela}
           className={`${styles.partTeam} ${styles.secondSection} ${styles.dark}`}
         >
           <img
@@ -228,6 +292,7 @@ export const AboutUs = () => {
           </div>
         </section>
         <section
+          ref={nikola}
           className={`${styles.partTeam} ${styles.secondSection} ${styles.dark}`}
         >
           <img
@@ -282,6 +347,7 @@ export const AboutUs = () => {
           </div>
         </section>
         <section
+          ref={viktor}
           className={`${styles.partTeam} ${styles.thirdSection} ${styles.dark}`}
         >
           <img
@@ -336,6 +402,7 @@ export const AboutUs = () => {
           </div>
         </section>
         <section
+          ref={plamen}
           className={`${styles.partTeam} ${styles.thirdSection} ${styles.dark}`}
         >
           <img

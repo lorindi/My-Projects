@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 export const Header = () => {
   const { isAuthenticated, username } = useContext(Contexts);
   const { email } = useContext(Contexts);
+  const displayName = email ? email.split('@')[0] : username;
 
   return (
     <header className={styles.header}>
@@ -55,7 +56,7 @@ export const Header = () => {
               <button
                 className={`${styles.linkButton} ${styles.link} ${styles.dropbtn}`}
               >
-                {username}
+                {displayName}
               </button>
 
               <div className={styles.dropdownContent}>

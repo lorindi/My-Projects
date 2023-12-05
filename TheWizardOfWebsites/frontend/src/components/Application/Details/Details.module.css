@@ -26,15 +26,12 @@
 }
 
 .detailImage {
-    width: 400px;
-    height: 400px;
-    border-radius: 100%;
+    width: 650px;
+    height: 650px;
     background-position: center;
     object-fit: cover;
     background-size: contain;
-    border: 1px solid rgba(0, 255, 255, 0.484);
     padding: 10px;
-    /* filter: grayscale(100%); */
     margin: 100px 20px 20px 20px;
 }
 
@@ -70,43 +67,44 @@
 }
 
 .buttonLinks {
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    left: 80px;
+    top: 350px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    /* margin: 20px 20px 100px 20px; */
-    position: fixed;
-    right: 30px;
-    top: 350px;
-    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    z-index: 1;
 
 
 }
 
 .detailLink {
     display: flex;
-    text-transform: uppercase;
-    /* width: 100px; */
-    border-radius: 5px;
-    background-color: #1B2D3F;
-    color: lightblue;
-    border: 1px solid lightblue;
-    padding: 5px 10px;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    letter-spacing: 1.5px;
-    font-size: 18px;
+    justify-content: center;
+    color: rgba(173, 216, 230, 0.625);
+    letter-spacing: 2px;
+    font-size: 17px;
+    border: 3px solid #142331;
+    padding: 5px 50px;
+    border-radius: 5px;
+    width: 135px;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: #1B2D3F;
 
 }
 
 .detailLink:hover {
-    border: 1px solid lightblue;
-    box-shadow: 0px 0px 12px 1px lightblue;
+    color: lightblue;
 }
 
 .detailLink:active {
-    color: lightgreen !important;
-    box-shadow: 0px 0px 20px 1px lightgreen;
-    border: 1px solid lightgreen;
+    color: lightgreen;
 }
 
 
@@ -124,11 +122,11 @@
 }
 
 .contentComments {
-    /* box-shadow: 0px 0px 50px 1px rgba(173, 216, 230, 0.25); */
     padding: 30px;
     border-radius: 10px;
     min-width: 700px;
 }
+
 .commentsNoComments {
     display: flex;
     flex-direction: row;
@@ -138,6 +136,7 @@
     padding: 20px;
     font-size: 20px;
 }
+
 .commentsTitle {
     color: rgba(255, 255, 255, 0.77);
     font-size: 40px;
@@ -172,9 +171,11 @@
     min-height: 150px;
     padding: 10px 5px;
 }
+
 .commentsListElement:not(:nth-last-child(-n+3)) {
     display: none;
 }
+
 .comment {
     color: lightblue;
     margin: 5px 20px 5px 20px;
@@ -192,7 +193,7 @@
     justify-content: flex-end;
     padding: 10px 20px 10px 20px;
     text-transform: uppercase;
- 
+
 
 
 }
@@ -282,4 +283,3 @@
     color: lightgreen;
     border: none;
 }
-
