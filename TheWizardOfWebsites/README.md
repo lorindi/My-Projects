@@ -39,7 +39,7 @@ Project Screenshots:
     * Profile
     * Log out of your account
 
-########################################################################################################
+###########################################################################################################
 
 # Run application:
     * Open the terminal in the "frontend" folder and run:
@@ -49,7 +49,7 @@ Project Screenshots:
         * `npm run dev`
         *  Which opens the app at http://localhost:5173 in your browser.
 
-########################################################################################################
+###########################################################################################################
 
 # Run Backend Server:
     * Open the terminal in the "server" folder and run:
@@ -57,3 +57,4 @@ Project Screenshots:
         * cd .\server\ -> node .\server.js
         * The server is listening at 
         * http://localhost:3030/
+Update Readme.md
