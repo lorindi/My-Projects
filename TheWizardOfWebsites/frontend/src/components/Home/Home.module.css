@@ -13,7 +13,7 @@
     align-items: center;
     gap: 100px;
     flex-wrap: wrap;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
 
 }
@@ -63,7 +63,7 @@
     align-items: center;
     flex-wrap: wrap;
     /* background-color: #a3d368e5; */
-    height: 70vh;
+    min-height: 70vh;
     font-family: 'Montserrat', sans-serif;
 
 }
@@ -124,25 +124,30 @@
 
 .contactsInfo {
     display: flex;
-    flex-direction: column;
-    height: 101vh;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     font-family: 'Montserrat', sans-serif;
     flex-wrap: wrap;
+    height: 100vh;
+
 }
 
 .contentContacts {
     display: flex;
     flex-direction: column;
     padding: 50px;
-    width: 3000px;
+    width: 500px;
+
+
 
 }
 
 .contactsList {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 30px;
 }
@@ -152,11 +157,13 @@
     flex-direction: row;
     width: 500px;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .contact>a>img {
     width: 50px;
+    filter: grayscale(100%);
+
 }
 
 .contact>a>p {
@@ -164,6 +171,13 @@
     /* color: black; */
 }
 
+.contactsImg {
+    background-color: rgba(240, 248, 255, 0.079);
+    width: 600px;
+    opacity: 0.8;
+    padding: 20px;
+    border-radius: 100%;
+}
 
 /* -----------------------------------Home-page------------------------------------ */
 
@@ -254,14 +268,14 @@
         justify-content: space-evenly;
         gap: 50px;
         flex-wrap: nowrap;
-        height: 60vh;
+       min-height: 70vh;
 
 
     }
 
     .informationImg {
-        width: 160px;
-        height: 160px;
+        width: 200px;
+        height: 200px;
         transform: rotate(45deg);
         margin-top: 20px;
     }
@@ -277,12 +291,12 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 0px;
-
+        align-items: center;
     }
 
     .infoDescription {
         height: 150px;
-        width: 200px;
+        width: 250px;
         font-size: 10px;
         font-weight: 400;
         letter-spacing: 0.3px;
@@ -293,18 +307,18 @@
 
     .teamSection {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
-        height: 450px;
+        height: 500px;
         font-family: 'Montserrat', sans-serif;
 
     }
 
     .contentTeam {
         align-items: center;
-        height: 100%;
+        min-height: 20vh;
         gap: 0px;
         padding-left: 0px;
         margin-bottom: 0px;
@@ -329,10 +343,11 @@
     }
 
     .teamSection>img {
-        width: 250px;
+        min-width: 250px;
         height: 550px;
         object-fit: inherit;
         padding: 10px 30px 10px 30px;
+
 
     }
 
@@ -341,23 +356,24 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: 400px;
+        height: 250px;
 
     }
 
     .contactsImg {
-        width: 150px;
+        display: none;
+
     }
 
     .contentContacts {
 
         padding: 10px;
-        width: 300px;
+        width: 200px;
 
     }
 
     .contactsList {
- width: 100px;
+        width: 300px;
         gap: 20px;
     }
 
@@ -371,6 +387,8 @@
 
     .contact>a>img {
         width: 20px;
+        filter: grayscale(100%);
+
     }
 
     .contact>a>p {

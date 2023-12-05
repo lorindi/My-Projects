@@ -210,7 +210,9 @@ export const AboutUs = () => {
             alt=""
           />
           <div className={styles.about}>
-            <h1 className={`${styles.partTeamTitle} ${styles.dark}`}>Mariela</h1>
+            <h1 className={`${styles.partTeamTitle} ${styles.dark}`}>
+              Mariela
+            </h1>
             <div className={styles.partTeamInfo}>
               <Link
                 className={`${styles.infoLink} ${styles.dark}`}
@@ -305,6 +307,60 @@ export const AboutUs = () => {
               between server and client components. As he advances in his cloud
               technology journey, Nikola s determination and adaptability
               position him as a promising force in the evolving landscape of IT.
+            </p>
+            <span className={styles.text}></span>
+          </div>
+        </section>
+        <section
+          className={`${styles.partTeam} ${styles.thirdSection} ${styles.dark}`}
+        >
+          <img
+            className={styles.partTeamImg}
+            src="../../../src/components/AboutUs/Viktor.jpg"
+            alt=""
+          />
+          <div className={styles.about}>
+            <h1 className={`${styles.partTeamTitle} ${styles.dark}`}>Viktor</h1>
+            <div className={styles.partTeamInfo}>
+              <Link
+                className={`${styles.infoLink} ${styles.dark}`}
+                to="https://github.com/lorindi/CVLora-Mitova/blob/main/Lora's%20Resume.pdf"
+              >
+                <i
+                  className="fa-solid fa-circle-info"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
+              </Link>
+              <Link
+                className={`${styles.infoLink} ${styles.dark}`}
+                to="https://github.com/lorindi"
+              >
+                <i
+                  className="fa-brands fa-github"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
+              </Link>
+              <Link
+                className={`${styles.infoLink} ${styles.dark}`}
+                to="https://github.com/lorindi/Certificates-from-the-software-engineering-curriculum"
+              >
+                <i
+                  className="fa-solid fa-certificate"
+                  style={{ color: "rgba(0, 255, 255, 0.484)" }}
+                ></i>
+              </Link>
+            </div>
+            <p className={styles.partTeamDescription} id="animated-text">
+              Viktor Mavrov is a proficient expert in Cisco networking, Windows
+              System Administration, Compromising Platforms, and System and
+              Network Compromising. His extensive knowledge and hands-on
+              experience make him a valuable asset in the realm of
+              cybersecurity. Viktor is actively engaged in training programs
+              focused on Open Source and Threat Intelligence, showcasing his
+              commitment to staying at the forefront of the ever-evolving
+              security landscape. With his expertise in diverse areas, Viktor
+              Mavrov plays a crucial role in enhancing cybersecurity practices
+              and defending against emerging threats.
             </p>
             <span className={styles.text}></span>
           </div>

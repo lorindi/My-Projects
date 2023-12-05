@@ -32,7 +32,7 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/sites" element={<List />} />
-              <Route path="/sites/:id/details/*" element={<Details />} />
+              <Route path={Path.SiteDetails} element={<Details />} />
               <Route element={<AuthGuard />}>
                 <Route path="/sites/create" element={<Create />} />
                 <Route path={Path.SiteEdit} element={<Edit />} />

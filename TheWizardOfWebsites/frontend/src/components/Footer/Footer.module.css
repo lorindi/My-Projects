@@ -22,3 +22,16 @@
     color: rgba(255, 255, 255, 0.507);
 
 }
+
+@media(width <=320px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    .footer>p {
+        font-size: 10px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.507);
+    
+    }
+}

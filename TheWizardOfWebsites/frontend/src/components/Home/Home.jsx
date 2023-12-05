@@ -1,7 +1,21 @@
+
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import styles from "./Home.module.css" ;
-export const Home = () => {
+import styles from "./Home.module.css";
+import * as siteService from "../../services/applicationService";
+import { useEffect, useState } from "react";
+import { LatestSites } from "./LatestSites/LatestSites";
+
+export const Home = (
+  { 
+  _id, accessToken, email 
+}
+) => {
+  const [latestSites, setLatestSites] = useState([]);
+
+  useEffect(() => {
+    siteService.getLatest().then((result) => setLatestSites(result));
+  }, []);
   return (
     <>
       <section className={`${styles.informationSection} ${styles.dark}`}>
@@ -27,6 +41,14 @@ export const Home = () => {
           </p>
         </div>
       </section>
+      <section className={styles.latestSites}>
+
+        {latestSites.map(site => <LatestSites key={_id}  {...site}/>)}
+
+        {!latestSites.length && (
+          <p className={styles.noArticles}>No sites yet</p>
+        )}
+      </section>
       <section className={`${styles.teamSection} ${styles.dark}`}>
         <div className={styles.contentTeam}>
           <h1 className={`${styles.teamTitle} ${styles.dark}`}>
@@ -38,13 +60,16 @@ export const Home = () => {
           <Link className={`${styles.teamLink} ${styles.dark}`} to="/about-us">
             Meet the Team
           </Link>
-        
         </div>
         <img src="../../../src/components/Home/pngwing.com (2).png" alt="" />
       </section>
 
       <section className={`${styles.contactsInfo} ${styles.dark}`}>
-        <img className={styles.contactsImg} src="../../../src/components/Home/pngwing.com.png" alt="" />
+        <img
+          className={styles.contactsImg}
+          src="../../../src/components/Home/pngwing.com (3).png"
+          alt=""
+        />
         <div className={`${styles.contentContacts} ${styles.dark}`}>
           <ul role="list" className={styles.contactsList}>
             <li className={styles.contact}>
@@ -92,7 +117,6 @@ export const Home = () => {
               </NavLink>
             </li>
           </ul>
-         
         </div>
       </section>
     </>

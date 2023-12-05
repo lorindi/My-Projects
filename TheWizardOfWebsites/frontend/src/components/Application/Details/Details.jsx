@@ -1,13 +1,7 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useContext, useEffect, useReducer, useRef, useState } from "react";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import styles from "./Details.module.css";
-import { NavLink } from "react-router-dom";
-import {
-  useContext,
-  useEffect,
-  useReducer,
-  useRef,
-  useState,
-} from "react";
+
 import * as siteService from "../../../services/applicationService";
 import * as commentService from "../../../services/commentService";
 import { Contexts } from "../../../contexts/Contexts";
@@ -47,7 +41,7 @@ export const Details = () => {
 
   const addCommentHandler = async (values) => {
     const newComment = await commentService.create(id, values.comment);
-    newComment.author = { email };
+    newComment.owner = { email };
     dispatch({
       type: "ADD_COMMENT",
       resultComments: newComment,
@@ -55,13 +49,6 @@ export const Details = () => {
     values.comment = "";
   };
   const isOwner = userId === site._ownerId;
-
-  // const initialValues = useMemo(
-  //   () => ({
-  //     comments: "",
-  //   }),
-  //   []
-  // );
 
   const { values, onChange, onSubmit } = useForm(addCommentHandler, {
     comments: "",
@@ -105,18 +92,6 @@ export const Details = () => {
             >
               Delete
             </button>
-            {/* <NavLink
-              to={pathToUrl(Path.SiteDelete, { id })}
-              className={styles.detailLink}
-              style={({ isActive }) => ({
-                color: isActive ? "lightgreen" : "lightblue",
-                border: isActive
-                  ? "1px solid lightgreen"
-                  : "1px solid lightblue",
-              })}
-            >
-              Delete
-            </NavLink> */}
           </>
         )}
       </section>
@@ -163,7 +138,7 @@ export const Details = () => {
 
             <div>
               <ul className={styles.commentsList} role="list">
-                {comments.map(({ _id, text }) => (
+                {comments.map(({ _id, text, owner: { email } }) => (
                   <li className={styles.commentsListElement} key={_id}>
                     <div>
                       <p className={styles.comment}>{text}</p>

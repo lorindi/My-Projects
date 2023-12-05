@@ -78,6 +78,7 @@ export const Edit = () => {
             type="text"
             name="price"
             value={site.price}
+            onChange={onChange}
             className={styles.editSiteInput}
           />
         </div>
