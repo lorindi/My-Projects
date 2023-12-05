@@ -43,7 +43,7 @@ export const Home = (
       </section>
       <section className={styles.latestSites}>
 
-        {latestSites.map(site => <LatestSites key={_id}  {...site}/>)}
+        {latestSites.map(site => <LatestSites key={site._id}  {...site}/>)}
 
         {!latestSites.length && (
           <p className={styles.noArticles}>No sites yet</p>
@@ -79,7 +79,7 @@ export const Home = (
                   color: isActive ? "lightblue" : "lightgreen",
                 })}
               >
-                <img src="/images/pngwing.com (1).png" alt="" />
+                <img src="../../../src/components/Home/Gmail.png" alt="" />
                 <p>***@gmail.com</p>
               </NavLink>
             </li>
@@ -90,7 +90,7 @@ export const Home = (
                   color: isActive ? "lightblue" : "lightgreen",
                 })}
               >
-                <img src="/images/pngwing.com (3).png" alt="" />
+                <img src="../../../src/components/Home/Instagram.png" alt="" />
                 <p>Team</p>
               </NavLink>
             </li>
@@ -101,7 +101,7 @@ export const Home = (
                   color: isActive ? "lightblue" : "lightgreen",
                 })}
               >
-                <img src="/images/pngwing.com (4).png" alt="" />
+                <img src="../../../src/components/Home/Facebook.png" alt="" />
                 <p>Team</p>
               </NavLink>
             </li>
@@ -112,7 +112,7 @@ export const Home = (
                   color: isActive ? "lightblue" : "lightgreen",
                 })}
               >
-                <img src="/images/pngwing.com (2).png" alt="" />
+                <img src="../../../src/components/Home/WhatsApp.png" alt="" />
                 <p>0812345678</p>
               </NavLink>
             </li>
