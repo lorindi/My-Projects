@@ -1,0 +1,60 @@
+React Project - Web Crafters
+Web Crafters is a Single Page Application (SPA) created using React for the Frontend and a custom backend server for the Backend.
+
+<h1 align="center" id="title">Web Crafters</h1>
+<p align="center"><img src="path/to/your/home-page-screenshot.png" alt="home-image" width="960"></p>
+
+<p id="description">Web Crafters is a platform that allows users to create descriptions for modern and functional websites. Authenticated users can manage their sites, while others can view site details, write a comment, and learn more about the team behind the projects.</p>
+
+Project Screenshots:
+
+<p align="center"><img src="path/to/your/footer-page-screenshot.png" alt="footer-page-project-screenshot" width="960" height="540/"></p>
+
+
+<h2>💻 Built with</h2>
+
+# Technologies used in the project:
+
+*   HTML, CSS, JavaScript
+*   React
+*   Node.js (custom backend server)
+*   General Requirements:
+*   The main part includes a sites (dashboard) for managing websites.
+
+# A guest has access to:
+
+* Home page
+* About us page
+* Login page
+* Register page
+
+# An authenticated user (Web Crafter) has access to:
+
+* Sites page
+      * Create a site
+      * Editing the site
+      * Delete the site
+      * Create a comment on the site
+      * Delete a comment on the site
+* Profile
+      * Log out of your account
+
+######################################################################################
+
+# Run application:
+    * Open the terminal in the "frontend" folder and run:
+
+        * `npm create vite .` (current folder)
+        * `npm install` (or `npm i`)
+        * `npm run dev`
+        *  Which opens the app at http://localhost:5173 in your browser.
+
+######################################################################################
+
+# Run Backend Server:
+    *Open the terminal in the "server" folder and run:
+
+        cd .\server\ -> node .\server.js
+
+        The server is listening at 
+        http://localhost:3030/

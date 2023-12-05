@@ -4,37 +4,7 @@ import { Link } from "react-router-dom";
 export const AboutUs = () => {
   const descriptionRef = useRef(null);
   const span = useRef(null);
-  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  // useEffect(() => {
-  //   if (descriptionRef.current && span.current) {
-  //     const description = descriptionRef.current.textContent;
-  //     const descriptionLength = description.length;
-  //     const descriptionElement = descriptionRef.current;
-  //     descriptionElement.style.display = "none";
-
-  //     if (currentIndex < descriptionLength) {
-  //       const currentChar = description[currentIndex];
-  //       span.current.textContent += currentChar;
-  //       setCurrentIndex(currentIndex + 1);
-  //     }
-  //   }
-  // }, [currentIndex]);
-
-  // useEffect(() => {
-  //   firstDescriptionRef.current.style.display = "none";
-  //   console.log(firstDescriptionRef.current.textContent.length);
-  // if (firstDescriptionRef.current) {
-  //   Добавете стилове към първия елемент
-  //   firstDescriptionRef.current.style.color = 'red';
-  //   При компонентът да се зареди, можем да извършим манипулации с референциите
-  //   if (firstDescriptionRef.current && secondDescriptionRef.current) {
-  //     Например, промяна на текста на първия елемент
-  //     firstDescriptionRef.current.textContent = 'Нов текст за първия елемент';
-  //     Например, добавяне на текст към втория елемент
-  //     secondDescriptionRef.current.textContent = 'Текст, добавен към втория елемент';
-  //   }
-  // }, []);
 
   return (
     <>
