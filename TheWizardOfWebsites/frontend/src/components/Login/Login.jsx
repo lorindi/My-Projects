@@ -10,15 +10,20 @@ const LoginFormKeys = {
 };
 
 export const Login = () => {
-  const { onLoginSubmit } = useContext(Contexts);
-  const { values, onChange, onSubmit} = useForm( onLoginSubmit,
+  const { onLoginSubmit, getError, clearError } = useContext(Contexts);
+
+  const { values, onChange, onSubmit } = useForm(
+    onLoginSubmit,
+
     {
       [LoginFormKeys.email]: "",
       [LoginFormKeys.password]: "",
-    },
-
+    }
   );
-
+  const handleInputChange = (e) => {
+    clearError();
+    onChange(e);
+  };
   return (
     <div className={`${styles.content}`}>
       <section
@@ -61,8 +66,9 @@ export const Login = () => {
                   id="email"
                   name={LoginFormKeys.email}
                   value={values[LoginFormKeys.email]}
-                  onChange={onChange}
-                  // required="required"
+                  onChange={handleInputChange}
+                  // onChange={onChange}
+                  required="required"
                 />
                 <span>Email</span>
               </div>
@@ -74,13 +80,16 @@ export const Login = () => {
                   id="password"
                   name={LoginFormKeys.password}
                   value={values[LoginFormKeys.password]}
-                  onChange={onChange}
-                  // required="required"
+                  onChange={handleInputChange}
+                  // onChange={onChange}
+                  required="required"
                 />
                 <span>Password</span>
-              </div>
-            </div>
 
+              </div>
+            {getError() && <p className={styles.loginError}>{getError()}</p>}
+
+            </div>
             <div className={styles.buttonSection}>
               <div className={`${styles.button} `}>
                 {/* <label htmlFor=""></label> */}

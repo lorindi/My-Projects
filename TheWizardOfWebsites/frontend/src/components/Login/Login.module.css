@@ -12,8 +12,7 @@
     justify-content: center;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
-    /* background-color: #1b2d3f; */
-  
+
 
 
 }
@@ -23,7 +22,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* height: 600px; */
     min-width: 310px;
     max-width: 450px;
 
@@ -38,9 +36,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* min-width: 310px;
-    max-width: 450px; */
-    /* height: 600px; */
+
 }
 
 .loginPageFormSubtitle {
@@ -68,9 +64,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 
 }
+
 /* -----------Header nav--------------*/
 .loginPageFormAuthenticationHeader {
     display: flex;
@@ -121,6 +118,7 @@
     height: 50%;
     justify-content: space-between;
     margin-bottom: 50px;
+
 }
 
 .sectionUsernameEmailPassword {
@@ -130,6 +128,7 @@
     height: 70%;
     justify-content: space-evenly;
     margin-bottom: 5px;
+
 }
 
 /* -----------Form--------------*/
@@ -141,22 +140,17 @@
 }
 
 .loginPageFormSubtitle h3 {
-    /* font-family: 'Barlow', sans-serif; */
     letter-spacing: 1.5px;
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 5px;
-
 }
 
 .loginPageFormSubtitle p {
-    /* font-family: 'Barlow', sans-serif; */
     font-size: 15px;
     letter-spacing: 1px;
     color: rgba(172, 219, 172, 0.75);
     font-weight: 500;
-
-
 }
 
 /* -----------Header h1 p--------------*/
@@ -167,7 +161,6 @@
     width: 320px;
     font-size: 14px;
     letter-spacing: 0.5px;
-
 }
 
 .loginPageFormContentAdditionalConditions span a {
@@ -190,8 +183,6 @@
     text-decoration: none;
     letter-spacing: 0.5px;
     font-size: 13px;
-
-
 }
 
 .loginPageFormAlreadyLogin span a {
@@ -201,7 +192,6 @@
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: 1px solid #508a85;
-
 }
 
 /* ==========externalLogin-google ==========*/
@@ -217,11 +207,9 @@
     box-shadow: 0px 0px 10px 3px #416677;
     align-items: center;
 
-
 }
 
 .externalLogin a img {
-
     width: 15px;
     height: 15px;
     margin-right: 10px;
@@ -255,14 +243,7 @@
     position: absolute;
     left: -2px;
     top: -2px;
-    /* background: linear-gradient(45deg, #C9F07F, #B2E87F, #99DF7E, #7FD97D, #80D797, #80D5AB, #7FD4BE, #7FD3D5, #7FD1EA, #80D1FF, #83C7F6, #86C0F1, #88B7E7, #8AB0DE, #8EA8D7, #8FA0D1, #A19BCF, #B495D2, #C491D2, #D48BD1, #C491D2, #B495D2, #A19BCF, #8FA0D1, #8EA8D7, #8AB0DE, #88B7E7, #86C0F1, #83C7F6, #80D1FF, #7FD1EA, #7FD3D5, #7FD4BE, #80D5AB, #80D797, #7FD97D, #99DF7E, #B2E87F, #C9F07F);
-    background: linear-gradient(45deg, #effc68, #fd8536, #00ff66, #32A6D9,
-            #fd0dfd, #fc4ab5, #6E0DD0, #f36d4c, #099fff); */
     background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8);
-    /* background: linear-gradient(45deg, #C9F07F,#B2E87F,#99DF7E,#7FD97D,#80D797,#80D5AB,#7FD4BE,#7FD3D5,#7FD1EA
-    ,#80D1FF,#83C7F6,#86C0F1,#88B7E7,#8AB0DE,#8EA8D7,#8FA0D1,#A19BCF,#B495D2,#C491D2,#D48BD1,#C491D2,#B495D2,#A19BCF,#8FA0D1,#8EA8D7,#8AB0DE
-    ,#88B7E7,#86C0F1,#83C7F6,#80D1FF,#7FD1EA,#7FD3D5,#7FD4BE,#80D5AB,#80D797,#7FD97D,#99DF7E,#B2E87F,#C9F07F); */
-    /* background: linear-gradient(45deg, #BBEBA8,#ABE5A8,#ABE4BA,#AAE3C7,#A9E3D4,#A8E2E3,#ABE1F2,#A9DFFE,#AEDCFB,#AFD6F3,#AFD5F5,#B0CFEE,#B2CBE9,#B4C3E4,#B4C2E0,#C1BDE1,#CBB9DF,#D8B6DF,#D8B6DF,#CBB9DF,#C1BDE1,#B4C2E0,#B4C3E4,#B2CBE9,#B0CFEE,#AFD5F5,#AFD6F3,#AEDCFB,#A9DFFE,#ABE1F2,#A8E2E3,#A9E3D4,#AAE3C7,#ABE4BA,#ABE5A8,#BBEBA8); */
     background-size: 400%;
     width: calc(100% + 5px);
     height: calc(100% + 5px);
@@ -325,10 +306,6 @@
     z-index: 1;
 }
 
-/* .formsInput::placeholder {
-    padding-left: 50px;
-
-} */
 
 .forms:before {
     content: '';
@@ -338,7 +315,6 @@
     height: calc(100% + 3px);
     width: calc(100% + 3px);
     border-radius: 10px;
-    /* background: linear-gradient(45deg, #B2E87F, #99DF7E, #7FD97D, #80D797, #80D5AB, #7FD4BE, #7FD3D5, #7FD1EA, #80D1FF, #83C7F6, #86C0F1, #88B7E7, #8AB0DE, #8EA8D7, #8FA0D1, #A19BCF, #A19BCF, #8FA0D1, #8EA8D7, #8AB0DE, #88B7E7, #86C0F1, #83C7F6, #80D1FF, #7FD1EA, #7FD3D5, #7FD4BE, #80D5AB, #80D797, #7FD97D, #99DF7E, #B2E87F); */
     background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8);
     z-index: 1;
     opacity: 0.6;
@@ -383,7 +359,6 @@
 .inputBox input {
     background: #1b2d3f;
     outline: none;
-    /* padding-left: 20px; */
 
 
 }
@@ -405,25 +380,29 @@
 .inputBox input:valid~span,
 .inputBox input:focus~span {
     color: #00dfc4;
-
     top: 0px;
     transform: translateX(10px) translateY(-7px);
     font-size: 0.7rem;
     background-color: #1d2b3a;
     padding: 0px 5px;
     border-radius: 3px;
-    /* border-left: 1px solid #00dfc4;
-    border-right: 1px solid #00dfc4; */
     letter-spacing: 0.15em;
     z-index: 1;
     font-weight: 500;
 }
 
 /* -----------Form-text-animate--------------*/
+.loginError {
+    color: rgba(0, 255, 255, 0.799);
+    position: absolute;
+    font-size: 14px;
+    left: 80px;
+    bottom: 180px;
+    width: 350px;
+}
 
 /* ----------------------------------------------------------BUTTON--------------------------------------------------------------------------------- */
 .button {
-    /* margin-top: 10px; */
     height: 45px;
     width: 170px;
     border: none;
@@ -436,8 +415,8 @@
     position: relative;
     z-index: 0;
     text-transform: uppercase;
-    font-weight: 500;
-    /* margin-bottom: 20px; */
+    font-weight: 400;
+    letter-spacing: 1.5px;
 }
 
 .button:before {
@@ -449,8 +428,6 @@
     height: calc(100% + 10px);
     width: calc(100% + 10px);
     border-radius: 10px;
-    /* background: linear-gradient(45deg, #C9F07F, #B2E87F, #99DF7E, #7FD97D, #80D797, #80D5AB, #7FD4BE, #7FD3D5, #7FD1EA, #80D1FF, #83C7F6, #86C0F1, #88B7E7, #8AB0DE, #8EA8D7, #8FA0D1, #A19BCF, #B495D2, #C491D2, #D48BD1, #C491D2, #B495D2, #A19BCF, #8FA0D1, #8EA8D7, #8AB0DE, #88B7E7, #86C0F1, #83C7F6, #80D1FF, #7FD1EA, #7FD3D5, #7FD4BE, #80D5AB, #80D797, #7FD97D, #99DF7E, #B2E87F, #C9F07F); */
-    /* background: linear-gradient(45deg, #BBEBA8,#ABE5A8,#ABE4BA,#AAE3C7,#A9E3D4,#A8E2E3,#ABE1F2,#A9DFFE,#AEDCFB,#AFD6F3,#AFD5F5,#B0CFEE,#B2CBE9,#B4C3E4,#B4C2E0,#C1BDE1,#CBB9DF,#D8B6DF,#D8B6DF,#CBB9DF,#C1BDE1,#B4C2E0,#B4C3E4,#B2CBE9,#B0CFEE,#AFD5F5,#AFD6F3,#AEDCFB,#A9DFFE,#ABE1F2,#A8E2E3,#A9E3D4,#AAE3C7,#ABE4BA,#ABE5A8,#BBEBA8); */
     background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8);
     background-size: 400%;
     z-index: -1;
@@ -469,13 +446,12 @@
     filter: blur(15px);
     opacity: 1;
 }
-.loginPageForm {
 
-}
-/* .button:hover:active {
+.button:hover:active {
     background: none;
-   
-} */
+    color: #1b2d3f;
+    font-weight: 600;
+}
 
 @keyframes anima {
     0% {
@@ -491,6 +467,3 @@
     }
 
 }
-
-
-
