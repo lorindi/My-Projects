@@ -11,10 +11,12 @@
     justify-content: space-between;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    overflow: hidden;
+    align-items: center;
 
 }
 .cardImg {
-    width: 225px;
+    width: 200px;
     height: 200px;
     padding: 10px;
     background-position: center;
@@ -22,6 +24,8 @@
     background-size: contain;
     opacity: 0.7;
     border-radius: 8%;
+    filter: grayscale(30%);
+
 }
 .cardInfo {
     background-color: #1B2D3F;

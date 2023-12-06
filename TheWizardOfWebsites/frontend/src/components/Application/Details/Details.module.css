@@ -26,13 +26,13 @@
 }
 
 .detailImage {
-    width: 650px;
-    height: 650px;
+    width: 550px;
+    height: 550px;
     background-position: center;
     object-fit: cover;
     background-size: contain;
     padding: 10px;
-    margin: 100px 20px 20px 20px;
+    margin: 150px 20px 20px 20px;
 }
 
 .detailsInfo {

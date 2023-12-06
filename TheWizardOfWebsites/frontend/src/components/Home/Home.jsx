@@ -12,6 +12,7 @@ export const Home = ({ _id, accessToken, email }) => {
   const [latestSites, setLatestSites] = useState([]);
   const { isAuthenticated } = useContext(Contexts);
 
+  const start = useRef(null);
   const info = useRef(null);
   const team = useRef(null);
   const contacts = useRef(null);
@@ -22,6 +23,14 @@ export const Home = ({ _id, accessToken, email }) => {
   return (
     <>
       <article className={styles.homePageLinks}>
+        {isAuthenticated && (
+          <NavLink
+            className={styles.homePageLink}
+            onClick={() => start.current.scrollIntoView({ behavior: "smooth" })}
+          >
+            Start
+          </NavLink>
+        )}
         <NavLink
           className={styles.homePageLink}
           onClick={() => info.current.scrollIntoView({ behavior: "smooth" })}
@@ -44,10 +53,56 @@ export const Home = ({ _id, accessToken, email }) => {
           Contacts
         </NavLink>
       </article>
-      <section ref={info} className={`${styles.containerInformationSection} ${styles.dark}`}>
-        <div
-          className={`${styles.contentInformationSection} ${styles.dark}`}
-        >
+
+      {isAuthenticated && (
+        <section ref={start} className={styles.containerLatestSites}>
+          <div className={styles.sitesInfo}>
+            <h1 className={`${styles.createSiteTitle} ${styles.dark}`}>
+              Create Your Unique Website!
+            </h1>
+
+            <p
+              className={`${styles.createSiteDescriptionFirst} ${styles.dark}`}
+            >
+              Share with us your vision and ideas, and we will turn them into
+              reality!
+            </p>
+            <p
+              className={`${styles.createSiteDescriptionSecond} ${styles.dark}`}
+            >
+              Start your web journey today!
+            </p>
+            <NavLink className={styles.linkLatestSites} to="/sites/create">
+              Get Started Now
+            </NavLink>
+          </div>
+          {latestSites.length >= 3 ? (
+            <div className={styles.latestSites}>
+              <div className={styles.currentLatestSites}>
+                {latestSites.map((site) => (
+                  <LatestSites key={site._id} {...site} />
+                ))}
+
+                {/* {!latestSites.length && (
+            <p className={styles.noArticles}>No sites yet</p>
+          )} */}
+              </div>
+            </div>
+          ) : (
+            <img
+              className={styles.elseImgLatestSites}
+              src="../../../src/components/Home/pngwing.com (6).png"
+              alt=""
+            />
+          )}
+        </section>
+      )}
+
+      <section
+        ref={info}
+        className={`${styles.containerInformationSection} ${styles.dark}`}
+      >
+        <div className={`${styles.contentInformationSection} ${styles.dark}`}>
           <img
             className={styles.informationImg}
             src="../../../src/components/Home/pngwing.com (1).png"
@@ -65,25 +120,12 @@ export const Home = ({ _id, accessToken, email }) => {
               seamlessly. With significant experience in web design and
               development, we blend elegant design with the latest innovations
               in web technologies to deliver websites that exceed our clients
-              expectations. 
+              expectations.
             </p>
           </div>
         </div>
-        {latestSites.length > 0 && isAuthenticated &&(
-          <div className={styles.latestSites}>
-            <h1>Sites</h1>
-            <div className={styles.currentLatestSites}>
-              {latestSites.map((site) => (
-                <LatestSites key={site._id} {...site} />
-              ))}
-
-              {/* {!latestSites.length && (
-            <p className={styles.noArticles}>No sites yet</p>
-          )} */}
-            </div>
-          </div>
-        )}
       </section>
+
       <section ref={team} className={`${styles.teamSection} ${styles.dark}`}>
         <div className={styles.contentTeam}>
           <h1 className={`${styles.teamTitle} ${styles.dark}`}>
