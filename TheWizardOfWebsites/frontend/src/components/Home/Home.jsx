@@ -7,6 +7,7 @@ import { LatestSites } from "./LatestSites/LatestSites";
 import { useContext } from "react";
 import { Contexts } from "../../contexts/Contexts";
 
+// eslint-disable-next-line react/prop-types, no-unused-vars
 export const Home = ({ _id, accessToken, email }) => {
   const [latestSites, setLatestSites] = useState([]);
   const { isAuthenticated } = useContext(Contexts);
@@ -64,9 +65,7 @@ export const Home = ({ _id, accessToken, email }) => {
               seamlessly. With significant experience in web design and
               development, we blend elegant design with the latest innovations
               in web technologies to deliver websites that exceed our clients
-              expectations. With us, you ll find a partnership that helps you
-              rise above the competition and achieve success in the online
-              world.
+              expectations. 
             </p>
           </div>
         </div>
