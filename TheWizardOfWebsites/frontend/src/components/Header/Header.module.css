@@ -8,14 +8,15 @@
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
-
+    background-color: #1B2D3F;
+    height: 50px;
 }
 
 .navigation {
     display: flex;
     width: 100%;
     z-index: 1;
-    padding: 15px;
+    background-color: #1B2D3F;
 
 }
 
@@ -26,13 +27,15 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 15px 100px;
+    position: fixed;
+    background-color: #1B2D3F;
+
 }
 
 .link {
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 23px;
     letter-spacing: 2px;
     font-weight: 500;
 }
