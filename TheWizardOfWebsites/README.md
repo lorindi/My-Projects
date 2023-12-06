@@ -12,6 +12,17 @@ Project Screenshots:
 <p align="center"><img src="./frontend/public/images/Readme/HomePage2.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/HomePage3.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/HomePage4.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<br/>
+<br/>
+<br/>
+
+# ABOUT US
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs1.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs2.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs3.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs4.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs5.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs6.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
 
 <h2>💻 Built with</h2>
 
