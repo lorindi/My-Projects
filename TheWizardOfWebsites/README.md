@@ -8,10 +8,10 @@ Web Crafters is a Single Page Application (SPA) created using React for the Fron
 
 Project Screenshots:
 # HOME PAGE
-<p align="center"><img src="./frontend/public/images/Readme/HomePage1.png" alt="footer-page-project-screenshot" width="960" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/HomePage2.png" alt="footer-page-project-screenshot" width="960" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/HomePage3.png" alt="footer-page-project-screenshot" width="960" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/HomePage4.png" alt="footer-page-project-screenshot" width="960" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/HomePage1.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/HomePage2.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/HomePage3.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/HomePage4.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
 
 <h2>💻 Built with</h2>
 
