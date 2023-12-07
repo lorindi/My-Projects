@@ -9,18 +9,14 @@ export const Item = ({ _id, image, title, price, shortDescription }) => {
 
         <div className={styles.cardInfo}>
        
-            <h4 className={styles.cardTitle}>{title}</h4>
+            <h4 className={styles.cardTitle}>{title.length > 13 ? `${title.slice(0, 13)}..` : title}</h4>
 
-            <p className={styles.cardDescription}>{shortDescription}</p>
+            <p className={styles.cardDescription}>{shortDescription.length > 40 ? `${shortDescription.slice(0,40)}..`: shortDescription}</p>
             <p className={styles.cardPrice}>
-              {price}
+              {price.length > 10 ? `${price.slice(0,10)}..`: price}
               <span>lv.</span>
             </p>
           </div>
-          {/* <Link to={`/sites/${_id}/details`} className={styles.cardButton}>
-            More
-          </Link> */}
-  
       </Link>
     </div>
   );

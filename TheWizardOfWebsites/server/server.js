@@ -1339,58 +1339,49 @@
     	}
     };
     var seedData = {
-    	recipes: {
-    		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Easy Lasagna",
-    			img: "assets/lasagna.jpg",
-    			ingredients: [
-    				"1 tbsp Ingredient 1",
-    				"2 cups Ingredient 2",
-    				"500 g  Ingredient 3",
-    				"25 g Ingredient 4"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551279012
-    		},
-    		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Grilled Duck Fillet",
-    			img: "assets/roast.jpg",
-    			ingredients: [
-    				"500 g  Ingredient 1",
-    				"3 tbsp Ingredient 2",
-    				"2 cups Ingredient 3"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551344360
-    		},
-    		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Roast Trout",
-    			img: "assets/fish.jpg",
-    			ingredients: [
-    				"4 cups Ingredient 1",
-    				"1 tbsp Ingredient 2",
-    				"1 tbsp Ingredient 3",
-    				"750 g  Ingredient 4",
-    				"25 g Ingredient 5"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551388703
-    		}
+    	sites: {
+            "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                image: "https://images.unsplash.com/photo-1591814468924-caf88d1232e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Recipe Hub",
+                price: "5000",
+                shortDescription: "The design of the recipe site should be incredibly beautiful, with a creative and unique layout.",
+                description: " It should have functionality like creating, deleting, and editing recipes. A search feature for recipes is essential, and the ability to delete recipes should also be included.",
+                _createdOn: 1701972091353,
+                _id: "894f61ad-7549-4983-b147-924bc6dc8df4"
+            },
+            "c44ed2c0-ef8f-4636-8716-3e17652ee46e": {
+                _ownerId: "63142366-5889-4785-8fb0-7fb403bc49b9",
+                image: "https://images.unsplash.com/photo-1639133694967-640f255f10fc?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "E-Commerce Store",
+                price: "8000",
+                shortDescription: "The store should provide convenience and efficiency for online sales, combined with a modern and appealing design",
+                description: "The site should support adding products to the cart, online payments, an admin panel for managing products and orders, and tracking order status functionality.",
+                _createdOn: 1701972091354,
+                _id: "d7adb2d2-3a1a-40bf-a3a8-9030857d204a"
+            },
+            "2a38f52b-f108-4ed6-8e5c-0b1c1c00c063": {
+                _ownerId: "66c50924-666e-4e28-b7be-d06d36ec5e1a",
+                image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Personal Blog",
+                price: "3000",
+                shortDescription: "The blog's design should be minimalist and easy to navigate, with a focus on content.",
+                description: "Users should be able to publish articles, comment, and share articles on social media. There should be a search functionality for articles and categories. The admin panel should provide easy content and comment management.",
+                _createdOn: 1701972091355,
+                _id: "4e26a4ab-713a-4dfe-a410-ac989f9d00f7"
+            },
+            "438eab8f-2542-4eb3-9164-50404d77ce5c": {
+                _ownerId: "8b6fbb05-64c9-43ea-8826-4e98886dfe6f",
+                image: "https://images.unsplash.com/photo-1569315095807-995e6e3ba320?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Online Restaurant Reservations",
+                price: "6000",
+                shortDescription: "The site should offer a convenient way for customers to make online reservations at a restaurant.",
+                description: "Users should choose a date and time for reservations, receive email confirmations, and view their upcoming reservations. The admin panel should allow managing availability and viewing a list of completed reservations.",
+                _createdOn: 1701972091356,
+                _id: "f710568f-2ff0-40ca-af1a-a94e9b47b027"
+            },
+
+    		
     	},
     	comments: {
     		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
