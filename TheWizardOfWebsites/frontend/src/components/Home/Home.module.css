@@ -406,34 +406,90 @@
     color: lightgreen;
 }
 
-/* -------------------------------------------------------RESPONSIVE--------------------------------------------------------------------- */
+/* -------------------------------------------------------RESPONSIVE-320-------------------------------------------------------------------- */
 @media(width <=320px) {
     * {
         overflow-x: hidden;
     }
 
-    .informationSection {
+    .homePageLinks {
+        display: none;
+    }
+
+    /* ------Latest-Sites--------- */
+
+    .elseImgLatestSites {
+        width: 250px;
+    }
+
+
+    .sitesInfo {
+        padding-top: 10px;
+    }
+
+    .createSiteTitle {
         display: flex;
+        justify-content: center;
+        font-size: 17px;
+        width: 320px;
+        padding-bottom: 10;
+
+    }
+
+    .createSiteDescriptionFirst {
+        font-size: 14px;
+        width: 270px;
+        padding: 0;
+
+    }
+
+    .createSiteDescriptionSecond {
+        font-size: 14px;
+        width: 320px;
+        padding: 0;
+
+    }
+
+    .linkLatestSites {
+        font-size: 12px;
+    }
+
+    .containerLatestSites {
+        min-height: 50vh;
+        width: 320px;
+    }
+
+    .latestSites {
+        padding-top: 10px;
+    }
+
+    .currentLatestSites {
         flex-direction: column;
-        justify-content: space-evenly;
-        gap: 50px;
         flex-wrap: nowrap;
-        min-height: 70vh;
+        gap: 25px;
+        padding: 0;
+    }
 
-
+    /* ----------Info------------ */
+    .contentInformationSection {
+        display: flex;
+        flex-direction: column-reverse;
+        align-content: center;
+        height: 620px;
+        gap: 50px;
     }
 
     .informationImg {
         width: 200px;
         height: 200px;
-        transform: rotate(45deg);
-        margin-top: 20px;
+        transform: rotate(90deg);
+        margin: 0;
     }
 
     .infoTitle {
         width: 200px;
         font-size: 16px;
-        margin-bottom: 20px;
+        margin: 20px 0px;
         text-align: center;
     }
 
@@ -445,25 +501,19 @@
     }
 
     .infoDescription {
-        height: 150px;
+        height: 280px;
         width: 250px;
-        font-size: 10px;
+        font-size: 12px;
         font-weight: 400;
-        letter-spacing: 0.3px;
-        text-indent: 0px;
-        line-height: 15px;
+        letter-spacing: 0.5px;
+        line-height: 20px;
         text-indent: 2em;
     }
 
+    /* ----------Team------------- */
     .teamSection {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        height: 500px;
-        font-family: 'Montserrat', sans-serif;
-
+        padding: 0px;
+        min-height: 150px;
     }
 
     .contentTeam {
@@ -475,37 +525,31 @@
     }
 
     .teamTitle {
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: 10px;
-
+        letter-spacing: 1px;
     }
 
     .teamDescription {
-        font-size: 10px;
-        width: 200px;
+        font-size: 12px;
+        width: 250px;
         margin-bottom: 10px;
+        text-align: center;
     }
 
     .teamLink {
         padding: 5px 10px;
-        font-size: 10px;
+        font-size: 12px;
         font-weight: 600;
     }
 
     .teamSection>img {
-        min-width: 250px;
-        height: 550px;
-        object-fit: inherit;
-        padding: 10px 30px 10px 30px;
+        display: none;
 
 
     }
 
     .contactsInfo {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         height: 250px;
 
     }
@@ -538,11 +582,606 @@
     .contact>a>img {
         width: 20px;
         filter: grayscale(100%);
-
     }
 
     .contact>a>p {
         font-size: 15px;
         /* color: black; */
+    }
+}
+
+/* -------------------------------------------------------RESPONSIVE-600-------------------------------------------------------------------- */
+@media (min-width: 321px) and (max-width: 600px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    .homePageLinks {
+        display: none;
+
+    }
+
+    /* ----Latest-Sites------- */
+
+
+    .elseImgLatestSites {
+        width: 90%;
+
+    }
+
+
+    .sitesInfo {
+        padding-top: 10px;
+        display: flex;
+        width: 90%;
+
+
+    }
+
+    .createSiteTitle {
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        width: 90%;
+        padding-bottom: 10;
+        margin-top: 100px;
+        font-weight: 400;
+        text-align: center;
+
+    }
+
+    .createSiteDescriptionFirst {
+        font-size: 16px;
+        width: 90%;
+        padding: 0;
+        font-weight: 400;
+    }
+
+    .createSiteDescriptionSecond {
+        font-size: 15px;
+        width: 90%;
+        padding: 0;
+        font-weight: 400;
+    }
+
+    .linkLatestSites {
+        font-size: 12px;
+    }
+
+    .containerLatestSites {
+        min-height: 50vh;
+        width: 90%;
+        display: flex;
+        width: 100%;
+    }
+
+    .latestSites {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+
+
+    }
+
+    .currentLatestSites {
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 0;
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    /* --------Info------------ */
+    .contentInformationSection {
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        min-height: 900px;
+        gap: 30px;
+        width: 90%;
+    }
+
+    .informationImg {
+        /* rotate: 90deg; */
+        margin: 0;
+        max-width: 310px;
+        max-height: 310px;
+    }
+
+    .infoTitle {
+        font-size: 25px;
+        margin: 30px 0px 30px;
+        width: 80%;
+        min-height: 80px;
+    }
+
+    .contentInfo {
+        margin-bottom: 0px;
+        align-items: center;
+        min-height: 420px;
+        text-align: center;
+    }
+
+    .infoDescription {
+        height: 90%;
+        width: 85%;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        line-height: 25px;
+        text-indent: 3em;
+        text-align: justify;
+    }
+
+    /* ---------Team--------- */
+    .teamSection {
+        padding: 0px;
+        min-height: 150px;
+    }
+
+    .contentTeam {
+        align-items: center;
+        min-height: 20vh;
+        gap: 0px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+    }
+
+    .teamTitle {
+        font-size: 25px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .teamDescription {
+        font-size: 16px;
+        width: 350px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .teamLink {
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .teamSection>img {
+        display: none;
+    }
+
+    .contactsInfo {
+        height: 250px;
+    }
+
+    .contactsImg {
+        display: none;
+    }
+
+    .contentContacts {
+        /* height: 400px; */
+        padding: 0;
+    }
+
+    .contactsList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0px;
+        height: 200px;
+    }
+
+    .contact>a {
+        flex-direction: row;
+        width: 170px;
+        margin-left: 20px;
+        gap: 20px;
+    }
+
+    .contact>a>img {
+        width: 30px;
+    }
+
+    .contact>a>p {
+        font-size: 15px;
+    }
+}
+
+/* ---------------------------------------------800-------------------------------- */
+@media screen and (min-width: 601px) and (max-width: 800px) {
+
+    * {
+        overflow-x: hidden;
+    }
+
+    .homePageLinks {
+        display: none;
+
+    }
+
+    /* ----Latest-Sites------- */
+
+
+    .elseImgLatestSites {
+        width: 70%;
+    }
+
+    .sitesInfo {
+        padding-top: 20px;
+    }
+
+    .createSiteTitle {
+        display: flex;
+        justify-content: center;
+        font-size: 32px;
+        width: 100%;
+        padding-bottom: 10;
+        margin-top: 100px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .createSiteDescriptionFirst {
+        font-size: 18px;
+        width: 350px;
+        padding: 0;
+        padding-bottom: 10px;
+        font-weight: 400;
+    }
+
+    .createSiteDescriptionSecond {
+        font-size: 16px;
+        width: 450px;
+        padding: 0;
+        padding-bottom: 10px;
+        font-weight: 400;
+    }
+
+    .linkLatestSites {
+        font-size: 16px;
+
+    }
+
+    .containerLatestSites {
+        min-height: 50vh;
+        width: 100%;
+        display: flex;
+        width: 100%;
+    }
+
+    .latestSites {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+
+
+    }
+
+    .currentLatestSites {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    /* --------Info------------ */
+    .contentInformationSection {
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        min-height: 1000px;
+        gap: 50px;
+        justify-content: space-evenly;
+    }
+
+    .informationImg {
+        width: 400px;
+        height: 400px;
+        margin: 0;
+
+
+    }
+
+    .infoTitle {
+        font-size: 25px;
+        margin: 60px 0px 30px;
+    }
+
+    .contentInfo {
+        margin-bottom: 0px;
+        align-items: center;
+        height: 550px;
+        width: 90%;
+        padding-top: 50px;
+
+    }
+
+    .infoDescription {
+        min-height: 350px;
+        width: 70%;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        line-height: 30px;
+        text-indent: 3em;
+        text-align: justify;
+    }
+
+    /* ---------Team--------- */
+    .teamSection {
+        padding: 0px;
+        min-height: 150px;
+    }
+
+    .contentTeam {
+        align-items: center;
+        min-height: 20vh;
+        gap: 0px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        padding-top: 100px;
+    }
+
+    .teamTitle {
+        font-size: 40px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+
+    .teamDescription {
+        font-size: 18px;
+        width: 350px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .teamLink {
+        padding: 5px 10px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .teamSection>img {
+        width: 460px;
+        height: 460px;
+        padding: 0;
+    }
+
+    .contactsInfo {
+        height: 250px;
+    }
+
+    .contactsImg {
+        display: none;
+    }
+
+    .contactsList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .contact>a {
+        flex-direction: row;
+        width: 170px;
+        margin-left: 20px;
+    }
+
+    .contact>a>img {
+        width: 40px;
+    }
+
+    .contact>a>p {
+        font-size: 16px;
+    }
+}
+
+/* ------------------------------1024---------------------------------------- */
+@media only screen and (min-width: 800px) and (max-width: 1025px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    .homePageLinks {
+        left: 10px;
+        width: 95px
+
+    }
+
+    .homePageLink {
+        font-size: 12px;
+        width: 95px;
+        padding: 0;
+
+    }
+
+    /* ----Latest-Sites------- */
+
+
+    .elseImgLatestSites {
+        width: 50%;
+    }
+
+    .sitesInfo {
+        padding-top: 20px;
+    }
+
+    .createSiteTitle {
+        display: flex;
+        justify-content: center;
+        font-size: 32px;
+        width: 100%;
+        padding-bottom: 10;
+        margin-top: 100px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .createSiteDescriptionFirst {
+        font-size: 18px;
+        width: 350px;
+        padding: 0;
+        padding-bottom: 10px;
+        font-weight: 400;
+    }
+
+    .createSiteDescriptionSecond {
+        font-size: 16px;
+        width: 450px;
+        padding: 0;
+        padding-bottom: 10px;
+        font-weight: 400;
+    }
+
+    .linkLatestSites {
+        font-size: 16px;
+
+    }
+
+    .containerLatestSites {
+        min-height: 50vh;
+        width: 100%;
+        display: flex;
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .latestSites {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+
+
+    }
+
+    .currentLatestSites {
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+        padding: 130px 0px 100px 0px;
+    }
+
+    /* --------Info------------ */
+
+    .contentInformationSection {
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        height: 900px;
+        gap: 0px;
+        justify-content: space-evenly;
+        display: flex;
+        padding-bottom: 50px;
+    }
+
+    .informationImg {
+        width: 400px;
+        height: 400px;
+        margin: 0;
+        margin-top: 50px;
+
+
+    }
+
+    .infoTitle {
+        font-size: 25px;
+        margin: 60px 0px 30px;
+    }
+
+    .contentInfo {
+        margin-bottom: 0px;
+        align-items: center;
+        width: 90%;
+        padding: 0px;
+
+    }
+
+    .infoDescription {
+        min-height: 300px;
+        width: 70%;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        line-height: 30px;
+        text-indent: 3em;
+        text-align: justify;
+    }
+
+    /* ---------Team--------- */
+    .teamSection {
+        padding: 0px;
+        min-height: 150px;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contentTeam {
+        align-items: center;
+        min-height: 20vh;
+        gap: 0px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        padding-top: 100px;
+    }
+
+    .teamTitle {
+        font-size: 40px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+
+    }
+
+    .teamDescription {
+        font-size: 18px;
+        width: 350px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .teamLink {
+        padding: 5px 10px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .teamSection>img {
+        width: 460px;
+        height: 460px;
+        padding: 0;
+    }
+
+    .contactsInfo {
+        height: 350px;
+    }
+
+    .contactsImg {
+        display: none;
+    }
+
+    .contactsList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0;
+
+    }
+
+    .contact>a {
+        flex-direction: row;
+        width: 170px;
+        margin-left: 20px;
+    }
+
+    .contact>a>img {
+        width: 40px;
+    }
+
+    .contact>a>p {
+        font-size: 16px;
     }
 }
