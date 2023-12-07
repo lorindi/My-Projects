@@ -76,7 +76,7 @@ export const Home = ({ _id, accessToken, email }) => {
               Get Started Now
             </NavLink>
           </div>
-          {latestSites.length >= 3 ? (
+          {latestSites.length > 1 ? (
             <div className={styles.latestSites}>
               <div className={styles.currentLatestSites}>
                 {latestSites.map((site) => (

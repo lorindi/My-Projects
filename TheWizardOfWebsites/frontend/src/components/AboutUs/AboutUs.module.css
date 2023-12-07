@@ -80,7 +80,6 @@
   background-size: contain;
   border: 2px solid rgba(173, 216, 230, 0.509);
   padding: 10px;
-  /* filter: grayscale(100%); */
   transform-style: preserve-3d;
   transition: transform 0.5s;
   opacity: 0.8;
@@ -142,18 +141,6 @@
   padding: 10px 0px 10px 0px;
 }
 
-/* .infoLink {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    background-color: white;
-    width: 150px;
-    padding: 10px;
-    border: 3px solid rgba(128, 128, 128, 0.689);
-} */
-
 .fa-circle-info {
   font-size: 35px;
   color: rgba(0, 0, 0, 0.718);
@@ -162,27 +149,18 @@
 .fa-github {
   font-size: 35px;
   color: rgba(0, 0, 0, 0.718);
-
-
 }
 
 .fa-certificate {
   font-size: 35px;
   color: rgba(0, 0, 0, 0.718);
-
 }
-
-
-
-
 
 :root {
   --bg-color: #1B2D3F;
   --typewriterSpeed: 6s;
   --typewriterCharacters: 24;
 }
-
-
 
 .partTeamTitle {
   /* font-size: clamp(1rem, 3vw + 1rem, 4rem); */
@@ -273,3 +251,4 @@
 .partTeamDescription {
   color: #adb3b5e6;
 }
+/* ---------------------------------------------RESPONSIVE----------------------------------------------- */

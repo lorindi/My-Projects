@@ -44,9 +44,10 @@ export const Create = () => {
 
   return (
     <div className={styles.containerCreateForm}>
+    <h1>Create Site</h1>
       <form
         // onSubmit={handleSubmit}
-        // className={styles.createForm}
+        className={styles.createForm}
         onSubmit={createSiteSubmitHandler}
         method="post"
         action=""
@@ -60,7 +61,7 @@ export const Create = () => {
             type="text"
             // accept="image/*"
             name="image"
-            // className={styles.createSiteInput}
+            className={styles.createSiteInput}
             // onChange={handleChange}
           />
         </div>

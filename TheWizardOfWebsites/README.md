@@ -8,21 +8,30 @@ Web Crafters is a Single Page Application (SPA) created using React for the Fron
 
 Project Screenshots:
 # HOME PAGE
-<p align="center"><img src="./frontend/public/images/Readme/HomePage1.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/HomePage2.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/HomePage3.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/HomePage4.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/HomePage1.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/HomePage2.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/HomePage3.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/HomePage4.png"  width="1000" height="540/"></p>
 <br/>
 <br/>
 <br/>
 
 # ABOUT US
-<p align="center"><img src="./frontend/public/images/Readme/AboutUs1.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/AboutUs2.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/AboutUs3.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/AboutUs4.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/AboutUs5.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/AboutUs6.png" alt="footer-page-project-screenshot" width="970" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs1.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs2.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs3.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs4.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs5.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/AboutUs6.png"  width="1000" height="540/"></p>
+
+
+# CREATE SITE
+<p align="center"><img src="./frontend/public/images/Readme/CreateSite.png"  width="1000" height="540/"></p>
+
+
+
+
+
 
 <h2>💻 Built with</h2>
 
