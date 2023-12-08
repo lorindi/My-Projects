@@ -11,6 +11,8 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
   const [auth, setAuth] = usePersistedState("auth", {});
   const [error, setError] = useState(null);
+  const [fault, setFault] = useState(null);
+
   const onLoginSubmit = async (values) => {
     try {
       const result = await authService.login(values.email, values.password);
@@ -30,7 +32,16 @@ export const AuthProvider = ({ children }) => {
   // navigate(Path.Home);
 
   const registerSubmitHandler = async (values) => {
+    const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{1,5}\.[a-zA-Z]{1,5}$/;
+
+
     try {
+      // Validate email using regex
+      if (!emailRegex.test(values.email)) {
+        setFault("Invalid email format. Please enter a valid email address.");
+        return; // Stop registration if email is not valid
+      }
+
       const result = await authService.register(values.email, values.password);
 
       localStorage.setItem("accessToken", result.accessToken);
@@ -38,8 +49,19 @@ export const AuthProvider = ({ children }) => {
       navigate(Path.Home);
     } catch (error) {
       console.error("Registration failed:", error.message);
-      setError("Registration failed. Please try again.");
+      setFault("Registration failed. Please try again.");
     }
+    // try {
+    //   const result = await authService.register(values.email, values.password);
+
+    //   localStorage.setItem("accessToken", result.accessToken);
+    //   setAuth(result);
+    //   navigate(Path.Home);
+    // } catch (error) {
+    //   console.error("Registration failed:", error.message);
+    //   setFault("Registration failed. Please try again.");
+    //   return;
+    // }
   };
   // const result = await authService.register(values.email, values.password);
 
@@ -57,6 +79,9 @@ export const AuthProvider = ({ children }) => {
   const getError = () => error;
   const clearError = () => setError(null);
 
+  const getFault = () => fault;
+  const clearFault = () => setFault(null);
+
   const values = {
     registerSubmitHandler,
     onLoginSubmit,
@@ -67,6 +92,8 @@ export const AuthProvider = ({ children }) => {
     isAuthenticated: !!auth.accessToken,
     getError,
     clearError,
+    getFault,
+    clearFault,
   };
   return <Contexts.Provider value={values}>{children}</Contexts.Provider>;
 };

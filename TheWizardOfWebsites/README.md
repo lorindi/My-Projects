@@ -2,7 +2,6 @@ React Project - Web Crafters
 Web Crafters is a Single Page Application (SPA) created using React for the Frontend and a custom backend server for the Backend.
 
 <h1 align="center" id="title">Web Crafters</h1>
-<p align="center"><img src="path/to/your/home-page-screenshot.png" alt="home-image" width="960"></p>
 
 <p id="description">Web Crafters is a platform that allows users to create descriptions for modern and functional websites. Authenticated users can manage their sites, while others can view site details, write a comment, and learn more about the team behind the projects.</p>
 
@@ -23,7 +22,6 @@ Project Screenshots:
 # SITE DETAILS
 <p align="center"><img src="./frontend/public/images/Readme/SiteDetails1.png"  width="1000" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/SiteDetails2.png"  width="1000" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/SiteDetails3.png"  width="1000" height="540/"></p>
 
 
 # HOME PAGE
