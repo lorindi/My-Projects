@@ -28,6 +28,9 @@ Project Screenshots:
 # CREATE SITE
 <p align="center"><img src="./frontend/public/images/Readme/CreateSite.png"  width="1000" height="540/"></p>
 
+# SITES
+<p align="center"><img src="./frontend/public/images/Readme/Sites.png"  width="1000" height="540/"></p>
+
 
 
 
