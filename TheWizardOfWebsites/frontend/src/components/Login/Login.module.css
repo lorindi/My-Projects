@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 95vh;
     font-family: 'Montserrat', sans-serif;
 
 
@@ -243,7 +243,7 @@
     position: absolute;
     left: -2px;
     top: -2px;
-    background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, #72d572, #4cd1b8);
+    background: linear-gradient(45deg, #4cb8c4, #00dfc4, #4cd1b8, lightblue, #72d572, lightgreen);
     background-size: 400%;
     width: calc(100% + 5px);
     height: calc(100% + 5px);
@@ -379,7 +379,7 @@
 
 .inputBox input:valid~span,
 .inputBox input:focus~span {
-    color: #00dfc4;
+    color: lightblue;
     top: 0px;
     transform: translateX(10px) translateY(-7px);
     font-size: 0.7rem;

@@ -57,7 +57,7 @@
   color: lightblue;
 }
 .nameLink:active {
-  color: aqua;
+  color: lightgreen;
 }
 
 .partTeam {
@@ -99,6 +99,7 @@
 .about {
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .partTeamTitle {
@@ -111,8 +112,8 @@
 }
 
 .partTeamDescription {
-  max-width: 750px;
-  font-size: 20px;
+  max-width: 700px;
+  font-size: 18.5px;
   font-weight: 500;
   letter-spacing: 1px;
   text-indent: 3em;

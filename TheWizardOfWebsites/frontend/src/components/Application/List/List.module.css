@@ -36,6 +36,8 @@
     align-items: center;
     margin: 100px;
     gap: 3px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .paginationButtons {
@@ -43,6 +45,7 @@
     border: 2px solid rgba(0, 0, 0, 0.273);
     border-radius: 5px;
     color: rgba(173, 216, 230, 0.74);
+    width: 30px;
 }
 
 

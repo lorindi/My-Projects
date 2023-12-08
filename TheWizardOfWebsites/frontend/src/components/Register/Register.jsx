@@ -76,6 +76,7 @@ export const Register = () => {
                 name="email"
                 value={values[RegisterFormsKeys.email]}
                 onChange={onChange}
+                required="required"
               />
               <span>Email</span>
             </div>
@@ -87,6 +88,7 @@ export const Register = () => {
                 name="password"
                 value={values[RegisterFormsKeys.Password]}
                 onChange={onChange}
+                required="required"
               />
               <span>Confirm Password</span>
             </div>
@@ -98,44 +100,12 @@ export const Register = () => {
                 name="confirm-password"
                 value={values[RegisterFormsKeys.ConfirmPassword]}
                 onChange={onChange}
+                required="required"
               />
               <span>Password</span>
             </div>
           </div>
-          {/* <div className={styles.registerPageFormContentAdditionalConditions}>
-            <article>
-              <div>
-                <input
-                  type="checkbox"
-                  id="termsAccepted"
-                  name="termsAccepted"
-                  // checked={formData.termsAccepted}
-                  // onChange={onChange}
-                />
-                <label htmlFor="termsAccepted">
-                  <span>
-                    I accept the <a href="">terms and conditions</a> of LorinDi!
-                  </span>
-                </label>
-              </div>
-            </article>
-            <article>
-              <div>
-                <input
-                  type="checkbox"
-                  id="privacyPolicyAccepted"
-                  name="privacyPolicyAccepted"
-                  // checked={formData.privacyPolicyAccepted}
-                  // onChange={onChange}
-                />
-                <label htmlFor="privacyPolicyAccepted">
-                  <span>
-                    I accept LorinDis <a href="">privacy policy</a>.
-                  </span>
-                </label>
-              </div>
-            </article>
-          </div> */}
+   
           <div className={styles.buttonSection}>
             <div className={styles.button}>
               <label htmlFor=""></label>
@@ -151,7 +121,7 @@ export const Register = () => {
           <article className={styles.registerPageFormAlreadyRegistered}>
             <span>You are already registered ?</span>
             <span>
-              <a href="">Login</a>
+              <Link to="/login" >Login</Link>
             </span>
           </article>
         </section>

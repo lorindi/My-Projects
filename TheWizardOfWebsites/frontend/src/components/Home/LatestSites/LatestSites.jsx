@@ -13,7 +13,7 @@ export const LatestSites = ({ _id, image, title }) => {
       <div className={styles.cardLatestSite}>
         <img className={styles.latestSiteImg} src={image} alt="image" />
 
-        <h4 className={styles.latestSiteTitle}>{title}</h4>
+        <h4 className={styles.latestSiteTitle}>{title.length > 11 ? `${title.slice(0, 11)}..` : title}</h4>
       </div>
     </NavLink>
   );

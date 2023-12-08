@@ -7,8 +7,28 @@ Web Crafters is a Single Page Application (SPA) created using React for the Fron
 <p id="description">Web Crafters is a platform that allows users to create descriptions for modern and functional websites. Authenticated users can manage their sites, while others can view site details, write a comment, and learn more about the team behind the projects.</p>
 
 Project Screenshots:
+
+# LOGIN
+<p align="center"><img src="./frontend/public/images/Readme/Login.png"  width="1000" height="540/"></p>
+
+# REGISTER
+<p align="center"><img src="./frontend/public/images/Readme/Registration.png"  width="1000" height="540/"></p>
+
+# CREATE SITE
+<p align="center"><img src="./frontend/public/images/Readme/CreateSite.png"  width="1000" height="540/"></p>
+
+# SITES
+<p align="center"><img src="./frontend/public/images/Readme/Sites.png"  width="1000" height="540/"></p>
+
+# SITE DETAILS
+<p align="center"><img src="./frontend/public/images/Readme/SiteDetails1.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/SiteDetails2.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/SiteDetails3.png"  width="1000" height="540/"></p>
+
+
 # HOME PAGE
 <p align="center"><img src="./frontend/public/images/Readme/HomePage1.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/HomePage5.png"  width="1000" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/HomePage2.png"  width="1000" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/HomePage3.png"  width="1000" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/HomePage4.png"  width="1000" height="540/"></p>
@@ -23,18 +43,6 @@ Project Screenshots:
 <p align="center"><img src="./frontend/public/images/Readme/AboutUs4.png"  width="1000" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/AboutUs5.png"  width="1000" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/AboutUs6.png"  width="1000" height="540/"></p>
-
-
-# CREATE SITE
-<p align="center"><img src="./frontend/public/images/Readme/CreateSite.png"  width="1000" height="540/"></p>
-
-# SITES
-<p align="center"><img src="./frontend/public/images/Readme/Sites.png"  width="1000" height="540/"></p>
-
-
-
-
-
 
 <h2>💻 Built with</h2>
 

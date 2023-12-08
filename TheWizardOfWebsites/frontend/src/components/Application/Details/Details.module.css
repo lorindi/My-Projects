@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 
+.masterContainerDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .containerDetails {
     display: flex;
@@ -11,52 +16,71 @@
     justify-content: space-around;
     align-items: center;
     background-color: #1b2d3f;
-    padding: 30px;
-    min-height: 1000px;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 50px;
 }
 
 .contentDetails {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
 }
 
 .detailImage {
-    width: 550px;
-    height: 550px;
+    width: 900px;
+    height: 600px;
     background-position: center;
     object-fit: cover;
     background-size: contain;
     padding: 10px;
     margin: 150px 20px 20px 20px;
+    border-radius: 15px;
+    opacity: 0.9;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.467);
+    transition: 1s;
+
+}
+
+.detailImage:hover {
+    opacity: 1;
+    transition: 1s;
+    box-shadow: 0px 0px 50px 1px rgba(173, 216, 230, 0.226);
+
 }
 
 .detailsInfo {
-    min-height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     margin: 20px;
+    height: 100vh;
 }
 
 .detailTitle {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 40px;
     font-weight: 400;
     color: #adb3b5e6;
     letter-spacing: 1.5px;
+    padding-top: 100px;
+}
+
+.detailsDescriptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10%;
+    height: 100vh;
 }
 
 .detailDescription {
     width: 800px;
-    font-size: 18px;
+    font-size: 23px;
     font-weight: 500;
     letter-spacing: 1.5px;
     text-indent: 3em;
@@ -100,6 +124,7 @@
 }
 
 .detailLink:hover {
+    
     color: lightblue;
 }
 
@@ -113,18 +138,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    /* min-height: 1000px; */
+    justify-content: flex-start;
     font-family: 'Montserrat', sans-serif;
     color: rgba(255, 255, 255, 0.478);
     background-color: #1b2d3f;
-
+    padding-top: 100px;
+    height: 100vh;
+    position: relative;
 }
 
 .contentComments {
     padding: 30px;
     border-radius: 10px;
-    min-width: 700px;
+    /* min-width: 700px; */
 }
 
 .commentsNoComments {
@@ -134,7 +160,10 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
     padding: 20px;
-    font-size: 20px;
+    font-size: 35px;
+    position: absolute;
+    bottom: 40%;
+    left: 30%;
 }
 
 .commentsTitle {
@@ -167,9 +196,10 @@
     margin: 0px;
     margin: 10px;
     border-radius: 10px;
-    width: 1050px;
+    width: 900px;
     min-height: 150px;
     padding: 10px 5px;
+    /* font-size: 20px; */
 }
 
 .commentsListElement:not(:nth-last-child(-n+3)) {
@@ -205,7 +235,7 @@
 }
 
 .containerAddComments {
-    min-width: 1050px;
+    min-width: 900px;
     align-items: center;
     display: flex;
     padding: 5px;
