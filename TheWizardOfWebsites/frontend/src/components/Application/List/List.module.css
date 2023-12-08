@@ -9,6 +9,8 @@
     justify-content: center;
     align-items: center;
     min-height: 90vh;
+    padding: 100px 100px 0px 100px;
+
 }
 
 .listCards {
@@ -17,12 +19,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 125px;
-    padding: 30px 100px 0px 100px;
-    min-height: 90vh;
+    gap: 100px;
+    min-height: 70vh;
     font-family: 'Montserrat', sans-serif;
     flex-wrap: wrap;
     width: 90%;
+    /* padding: 50px; */
 
 
 }
@@ -32,7 +34,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 150px;
+    margin: 100px;
     gap: 3px;
 }
 

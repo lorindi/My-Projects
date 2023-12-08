@@ -1381,259 +1381,93 @@
                 _id: "f710568f-2ff0-40ca-af1a-a94e9b47b027"
             },
 
+
+            "be21805d-91d7-43fe-9066-ba1912586c0a": {
+                _ownerId: "bac47d26-a106-40f4-9b5a-4aadfbeb954b",
+                image: "https://images.unsplash.com/photo-1558017487-06bf9f82613a?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Fitness Tracker",
+                price: "4500",
+                shortDescription: " The fitness site should inspire users with a dynamic design, promoting a healthy lifestyle.",
+                description: " Users should be able to log daily workouts, track progress, set fitness goals, and share achievements on social media. An admin dashboard for managing user accounts and monitoring overall activity is essential.",
+                _createdOn: 1701972091357,
+                _id: "c462c55e-bada-4dd3-99ad-b1f8cc1118aa"
+            },
+            "36de7993-f318-45e2-a9b1-d1eef2b93cfd": {
+                _ownerId: "0740708d-4569-4fc1-8d0a-b142a0ff96d1",
+                image: "https://images.unsplash.com/photo-1642489216436-4c5075b34d53?q=80&w=2038&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Event Planning Hub",
+                price: "7000",
+                shortDescription: "An event planning site with a sophisticated and elegant design for seamless event coordination.",
+                description: "Users should create and manage events, send invitations, and receive RSVPs. The site should include a calendar view, a guest list feature, and an admin interface for overseeing all events.",
+                _createdOn: 1701972091358,
+                _id: "fe883829-6588-411a-a76c-540d867ed0f6"
+            },
+            "4cba78c0-4587-4462-beee-7d0d10d88b3e": {
+                _ownerId: "8b2a0f64-d3e1-422a-bc1f-7e0e3ff0c48f",
+                image: "https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Language Learning Platform",
+                price: "5500",
+                shortDescription: "The language learning site should be visually engaging and user-friendly to facilitate language acquisition.",
+                description: " Users should have access to language courses, interactive lessons, and quizzes. Progress tracking, achievements, and a discussion forum for learners can enhance the user experience.",
+                _createdOn: 1701972091359,
+                _id: "d2a4a01d-1338-47e9-b11a-5bfaeaac8c31"
+            },
+            "91cef5e1-6cbd-4855-aa9e-7fe4254eca62": {
+                _ownerId: "21d1d382-746b-4a00-bd23-7bfd308fd898",
+                image: "https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=2057&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Portfolio Showcase",
+                price: "3500",
+                shortDescription: "A site designed to showcase an individual's portfolio with a clean and professional look.",
+                description: "Users should upload and organize their work, write project descriptions, and customize the layout. The site should offer easy navigation and sharing options.",
+                _createdOn: 1701972091360,
+                _id: "d364c9e2-a85a-491e-9453-733732f11dd8"
+            },
+
+
+            "33ec8a76-4c9b-4ff3-83d7-196fec57c941": {
+                _ownerId: "5f6e71d3-a353-4e41-a4fc-42f9c7c6867e",
+                image: "https://images.unsplash.com/photo-1628102491629-778571d893a3?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "E-commerce Emporium",
+                price: "8000",
+                shortDescription: "An e-commerce site with a sleek design, prioritizing a seamless shopping experience.",
+                description: "Users should be able to browse products, add them to the cart, and complete secure transactions. Features like user accounts, product reviews, and a wish list would enhance the online shopping experience.",
+                _createdOn: 1701972091357,
+                _id: "1626e490-d691-4b7d-ab78-a3e9f5c2e65a"
+            },
+            "15a68b42-bd4a-459a-815f-70be366eda44": {
+                _ownerId: "2eaffe7d-33e9-44dc-80e5-9ce3c6f8eeb8",
+                image: "https://images.unsplash.com/photo-1480365501497-199581be0e66?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Travel Explorer",
+                price: "6000",
+                shortDescription: "A travel blog site with a vibrant design to inspire wanderlust and share travel experiences.",
+                description: "Users should write and publish travel articles, upload photos, and interact with a community of fellow travelers. A map feature to showcase visited locations and a comment section for each post would be valuable.",
+                _createdOn: 1701972091358,
+                _id: "59ec3582-a069-487c-ae43-14c26d5dcdc7"
+            },
+            "233abb1c-b4c1-4b5b-9c09-02747c76b78c": {
+                _ownerId: "c46959b5-47e0-48ab-9174-98e0e8210539",
+                image: "https://images.unsplash.com/photo-1603219527847-24c87f552a77?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Freelancer's Portfolio",
+                price: "4000",
+                shortDescription: "A portfolio site for freelancers to showcase their skills and attract potential clients.",
+                description: "Users can display their projects, highlight skills, and provide contact information. A clean, minimalist design with easy navigation is essential.",
+                _createdOn: 1701972091359,
+                _id: "e1185795-b4c2-4963-aace-257beaa96dab"
+            },
+            "9354429c-2562-4b4a-8662-f55f6932dd0f": {
+                _ownerId: "cd941daa-47a2-4711-9289-1011685cfc7e",
+                image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                title: "Real Estate Hub",
+                price: "9000",
+                shortDescription: "A real estate platform with a modern design for buying, selling, and renting properties.",
+                description: "Users can list properties, search for listings, and contact sellers or agents. A map view, virtual tours, and a mortgage calculator would add value.",
+                _createdOn: 1701972091360,
+                _id: "594afe26-0d94-4769-a3f6-64c33cda11cc"
+            },
+
     		
     	},
-    	comments: {
-    		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			content: "Great recipe!",
-    			recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
-    			_createdOn: 1614260681375,
-    			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    		}
-    	},
-    	records: {
-    		i01: {
-    			name: "John1",
-    			val: 1,
-    			_createdOn: 1613551388703
-    		},
-    		i02: {
-    			name: "John2",
-    			val: 1,
-    			_createdOn: 1613551388713
-    		},
-    		i03: {
-    			name: "John3",
-    			val: 2,
-    			_createdOn: 1613551388723
-    		},
-    		i04: {
-    			name: "John4",
-    			val: 2,
-    			_createdOn: 1613551388733
-    		},
-    		i05: {
-    			name: "John5",
-    			val: 2,
-    			_createdOn: 1613551388743
-    		},
-    		i06: {
-    			name: "John6",
-    			val: 3,
-    			_createdOn: 1613551388753
-    		},
-    		i07: {
-    			name: "John7",
-    			val: 3,
-    			_createdOn: 1613551388763
-    		},
-    		i08: {
-    			name: "John8",
-    			val: 2,
-    			_createdOn: 1613551388773
-    		},
-    		i09: {
-    			name: "John9",
-    			val: 3,
-    			_createdOn: 1613551388783
-    		},
-    		i10: {
-    			name: "John10",
-    			val: 1,
-    			_createdOn: 1613551388793
-    		}
-    	},
-    	catches: {
-    		"07f260f4-466c-4607-9a33-f7273b24f1b4": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			angler: "Paulo Admorim",
-    			weight: 636,
-    			species: "Atlantic Blue Marlin",
-    			location: "Vitoria, Brazil",
-    			bait: "trolled pink",
-    			captureTime: 80,
-    			_createdOn: 1614760714812,
-    			_id: "07f260f4-466c-4607-9a33-f7273b24f1b4"
-    		},
-    		"bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			angler: "John Does",
-    			weight: 554,
-    			species: "Atlantic Blue Marlin",
-    			location: "Buenos Aires, Argentina",
-    			bait: "trolled pink",
-    			captureTime: 120,
-    			_createdOn: 1614760782277,
-    			_id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d"
-    		}
-    	},
-    	furniture: {
-    	},
-    	orders: {
-    	},
-    	movies: {
-    		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Black Widow",
-    			description: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
-    			img: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
-    			_createdOn: 1614935055353,
-    			_id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
-    		},
-    		"143e5265-333e-4150-80e4-16b61de31aa0": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Wonder Woman 1984",
-    			description: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
-    			img: "https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg",
-    			_createdOn: 1614935181470,
-    			_id: "143e5265-333e-4150-80e4-16b61de31aa0"
-    		},
-    		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Top Gun 2",
-    			description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
-    			img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
-    			_createdOn: 1614935268135,
-    			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
-    		}
-    	},
-    	likes: {
-    	},
-    	ideas: {
-    		"833e0e57-71dc-42c0-b387-0ce0caf5225e": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Best Pilates Workout To Do At Home",
-    			description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima possimus eveniet ullam aspernatur corporis tempore quia nesciunt nostrum mollitia consequatur. At ducimus amet aliquid magnam nulla sed totam blanditiis ullam atque facilis corrupti quidem nisi iusto saepe, consectetur culpa possimus quos? Repellendus, dicta pariatur! Delectus, placeat debitis error dignissimos nesciunt magni possimus quo nulla, fuga corporis maxime minus nihil doloremque aliquam quia recusandae harum. Molestias dolorum recusandae commodi velit cum sapiente placeat alias rerum illum repudiandae? Suscipit tempore dolore autem, neque debitis quisquam molestias officia hic nesciunt? Obcaecati optio fugit blanditiis, explicabo odio at dicta asperiores distinctio expedita dolor est aperiam earum! Molestias sequi aliquid molestiae, voluptatum doloremque saepe dignissimos quidem quas harum quo. Eum nemo voluptatem hic corrupti officiis eaque et temporibus error totam numquam sequi nostrum assumenda eius voluptatibus quia sed vel, rerum, excepturi maxime? Pariatur, provident hic? Soluta corrupti aspernatur exercitationem vitae accusantium ut ullam dolor quod!",
-    			img: "./images/best-pilates-youtube-workouts-2__medium_4x3.jpg",
-    			_createdOn: 1615033373504,
-    			_id: "833e0e57-71dc-42c0-b387-0ce0caf5225e"
-    		},
-    		"247efaa7-8a3e-48a7-813f-b5bfdad0f46c": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "4 Eady DIY Idea To Try!",
-    			description: "Similique rem culpa nemo hic recusandae perspiciatis quidem, quia expedita, sapiente est itaque optio enim placeat voluptates sit, fugit dignissimos tenetur temporibus exercitationem in quis magni sunt vel. Corporis officiis ut sapiente exercitationem consectetur debitis suscipit laborum quo enim iusto, labore, quod quam libero aliquid accusantium! Voluptatum quos porro fugit soluta tempore praesentium ratione dolorum impedit sunt dolores quod labore laudantium beatae architecto perspiciatis natus cupiditate, iure quia aliquid, iusto modi esse!",
-    			img: "./images/brightideacropped.jpg",
-    			_createdOn: 1615033452480,
-    			_id: "247efaa7-8a3e-48a7-813f-b5bfdad0f46c"
-    		},
-    		"b8608c22-dd57-4b24-948e-b358f536b958": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Dinner Recipe",
-    			description: "Consectetur labore et corporis nihil, officiis tempora, hic ex commodi sit aspernatur ad minima? Voluptas nesciunt, blanditiis ex nulla incidunt facere tempora laborum ut aliquid beatae obcaecati quidem reprehenderit consequatur quis iure natus quia totam vel. Amet explicabo quidem repellat unde tempore et totam minima mollitia, adipisci vel autem, enim voluptatem quasi exercitationem dolor cum repudiandae dolores nostrum sit ullam atque dicta, tempora iusto eaque! Rerum debitis voluptate impedit corrupti quibusdam consequatur minima, earum asperiores soluta. A provident reiciendis voluptates et numquam totam eveniet! Dolorum corporis libero dicta laborum illum accusamus ullam?",
-    			img: "./images/dinner.jpg",
-    			_createdOn: 1615033491967,
-    			_id: "b8608c22-dd57-4b24-948e-b358f536b958"
-    		}
-    	},
-    	catalog: {
-    		"53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			make: "Table",
-    			model: "Swedish",
-    			year: 2015,
-    			description: "Medium table",
-    			price: 235,
-    			img: "./images/table.png",
-    			material: "Hardwood",
-    			_createdOn: 1615545143015,
-    			_id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
-    		},
-    		"f5929b5c-bca4-4026-8e6e-c09e73908f77": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			make: "Sofa",
-    			model: "ES-549-M",
-    			year: 2018,
-    			description: "Three-person sofa, blue",
-    			price: 1200,
-    			img: "./images/sofa.jpg",
-    			material: "Frame - steel, plastic; Upholstery - fabric",
-    			_createdOn: 1615545572296,
-    			_id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
-    		},
-    		"c7f51805-242b-45ed-ae3e-80b68605141b": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			make: "Chair",
-    			model: "Bright Dining Collection",
-    			year: 2017,
-    			description: "Dining chair",
-    			price: 180,
-    			img: "./images/chair.jpg",
-    			material: "Wood laminate; leather",
-    			_createdOn: 1615546332126,
-    			_id: "c7f51805-242b-45ed-ae3e-80b68605141b"
-    		}
-    	},
-    	teams: {
-    		"34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Storm Troopers",
-    			logoUrl: "/assets/atat.png",
-    			description: "These ARE the droids we're looking for",
-    			_createdOn: 1615737591748,
-    			_id: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1"
-    		},
-    		"dc888b1a-400f-47f3-9619-07607966feb8": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Team Rocket",
-    			logoUrl: "/assets/rocket.png",
-    			description: "Gotta catch 'em all!",
-    			_createdOn: 1615737655083,
-    			_id: "dc888b1a-400f-47f3-9619-07607966feb8"
-    		},
-    		"733fa9a1-26b6-490d-b299-21f120b2f53a": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Minions",
-    			logoUrl: "/assets/hydrant.png",
-    			description: "Friendly neighbourhood jelly beans, helping evil-doers succeed.",
-    			_createdOn: 1615737688036,
-    			_id: "733fa9a1-26b6-490d-b299-21f120b2f53a"
-    		}
-    	},
-    	members: {
-    		"cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    			status: "member",
-    			_createdOn: 1616236790262,
-    			_updatedOn: 1616236792930
-    		},
-    		"61a19986-3b86-4347-8ca4-8c074ed87591": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237188183,
-    			_updatedOn: 1616237189016
-    		},
-    		"8a03aa56-7a82-4a6b-9821-91349fbc552f": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			teamId: "733fa9a1-26b6-490d-b299-21f120b2f53a",
-    			status: "member",
-    			_createdOn: 1616237193355,
-    			_updatedOn: 1616237195145
-    		},
-    		"9be3ac7d-2c6e-4d74-b187-04105ab7e3d6": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237231299,
-    			_updatedOn: 1616237235713
-    		},
-    		"280b4a1a-d0f3-4639-aa54-6d9158365152": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237257265,
-    			_updatedOn: 1616237278248
-    		},
-    		"e797fa57-bf0a-4749-8028-72dba715e5f8": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    			status: "member",
-    			_createdOn: 1616237272948,
-    			_updatedOn: 1616237293676
-    		}
-    	}
+    	
     };
     var rules$1 = {
     	users: {

@@ -5,7 +5,7 @@ import { Item } from "../Item/Item";
 export const List = () => {
   const [sites, setSites] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 8;
+  const itemsPerPage = 4;
 
   useEffect(() => {
     siteService
