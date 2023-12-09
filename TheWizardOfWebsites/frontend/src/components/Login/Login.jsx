@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Contexts } from "../../contexts/Contexts";
 import { useForm } from "../../hooks/useForm";
+import { toast } from "react-toastify";
 
 const LoginFormKeys = {
   email: "email",
@@ -24,6 +25,18 @@ export const Login = () => {
     clearError();
     onChange(e);
   };
+
+  const showToastError = () => {
+    const errorMessage = getError();
+    if (errorMessage) {
+      toast.error(errorMessage, {
+        style: {
+          background: "#152534", 
+        },
+      });
+    }
+  };
+
   return (
     <div className={`${styles.content}`}>
       <section
@@ -55,7 +68,10 @@ export const Login = () => {
             <p>Its time to begin our daring adventure.</p>
           </article>
           <form
-            onSubmit={onSubmit}
+            onSubmit={(e) => {
+              onSubmit(e);
+              showToastError(); // Show toast error after form submission
+            }}
             className={`${styles.loginPageFormContent} `}
           >
             <div className={styles.sectionUsernameEmailPassword}>
@@ -85,10 +101,8 @@ export const Login = () => {
                   required="required"
                 />
                 <span>Password</span>
-
               </div>
-            {getError() && <p className={styles.loginError}>{getError()}</p>}
-
+              {getError() && <p className={styles.loginError}>{getError()}</p>}
             </div>
             <div className={styles.buttonSection}>
               <div className={`${styles.button} `}>

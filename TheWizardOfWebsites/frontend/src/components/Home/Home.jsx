@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { LatestSites } from "./LatestSites/LatestSites";
 import { useContext } from "react";
 import { Contexts } from "../../contexts/Contexts";
-
+import {Weather} from "./Weather/Weather"
 // eslint-disable-next-line react/prop-types, no-unused-vars
 export const Home = ({ _id, accessToken, email }) => {
   const [latestSites, setLatestSites] = useState([]);
@@ -145,11 +145,7 @@ export const Home = ({ _id, accessToken, email }) => {
         ref={contacts}
         className={`${styles.contactsInfo} ${styles.dark}`}
       >
-        <img
-          className={styles.contactsImg}
-          src="../../../src/components/Home/pngwing.com (3).png"
-          alt=""
-        />
+        <Weather/>
         <div className={`${styles.contentContacts} ${styles.dark}`}>
           <ul role="list" className={styles.contactsList}>
             <li className={styles.contact}>

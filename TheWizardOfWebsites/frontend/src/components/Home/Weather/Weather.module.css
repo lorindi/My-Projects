@@ -1,0 +1,133 @@
+.containerWeather {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 250px;
+  transition: 1s;
+
+}
+
+.formWeather {
+  margin-top: 145px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.formWeather button {
+  border: none;
+  padding: 0px 18px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  border: 2px solid #1b2d3f;
+  background-color: rgba(173, 216, 230, 0.744);
+  color: black;
+
+}
+
+.formWeather button:hover {
+  cursor: pointer;
+  scale: 1.05;
+  background-color: #1b2d3f;
+  color: lightblue;
+  border: 2px solid rgba(173, 216, 230, 0.495);
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.formWeather input {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1b2d3f;
+  border: 2px solid rgba(173, 216, 230, 0.475);
+  color: lightblue;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.weatherInfo {
+  display: flex;
+  text-align: center;
+  width: 850px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 40px;
+}
+
+.mapContainer {
+  display: flex;
+  position: relative;
+  width: 400px;
+  height: 250px;
+}
+
+.contentDataWeather {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 300px;
+  flex-wrap: wrap;
+  height: 250px;
+  ;
+
+}
+
+.contentDataWeather p {
+  color: rgb(217, 210, 210);
+  font-size: 18px;
+}
+
+.contentDataWeather h2 {
+  color: rgb(188, 188, 188);
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.contentDataWeather span {
+  color: lightblue;
+  font-size: 18px;
+
+}
+
+.marker {
+  width: 30px;
+  height: 42px;
+  background-image: url('https://static-00.iconduck.com/assets.00/map-marker-icon-1366x2048-7u371uwd.png');
+  background-size: cover;
+  z-index: 1;
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contentIframe {
+  width: 400px;
+  height: 250px;
+  border: 1px solid rgb(169, 168, 168);
+  border-radius: 5px;
+
+
+}
+
+.containerImageDefault {
+  width: 750px;
+
+}
+
+.imageDefault {
+  display: flex;
+  width: 400px;
+  height: 255px;
+  border-radius: 6px;
+  padding-top: 30px;
+  opacity: 0.7;
+}

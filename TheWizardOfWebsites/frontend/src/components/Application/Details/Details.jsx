@@ -17,7 +17,7 @@ export const Details = () => {
   const [comments, dispatch] = useReducer(reducer, []);
   const { id } = useParams();
   const commentsSectionRef = useRef(null);
-  const info = useRef(null)
+  const info = useRef(null);
 
   useEffect(() => {
     siteService.getOne(id).then(setSite);
@@ -57,14 +57,13 @@ export const Details = () => {
   // if (Math.random() < 0.5) {
   //   throw new Error("Game details error");
   // }
+
   return (
     <div className={styles.masterContainerDetails}>
       <section className={styles.buttonLinks}>
-      <NavLink
+        <NavLink
           className={styles.detailLink}
-          onClick={() =>
-            info.current.scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={() => info.current.scrollIntoView({ behavior: "smooth" })}
         >
           Info
         </NavLink>
@@ -96,7 +95,7 @@ export const Details = () => {
       </section>
 
       <section className={styles.containerDetails}>
-        <div  className={styles.contentDetails}>
+        <div className={styles.contentDetails}>
           <img
             className={styles.detailImage}
             src={site.image}

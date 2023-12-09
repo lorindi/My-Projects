@@ -17,6 +17,7 @@ import { Details } from "./components/Application/Details/Details";
 import { Edit } from "./components/Application/Edit/Edit";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import AuthGuard from "./components/Guards/AuthGuard";
+import { UnauthorizedGuard } from "./components/Guards/UnauthorizedGuard";
 
 function App() {
   return (
@@ -28,11 +29,16 @@ function App() {
             <Routes>
               <Route path="*" element={<NotFound />} />
               <Route path={Path.Home} element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
+
+              <Route element={<UnauthorizedGuard />}>
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+              </Route>
+
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/sites" element={<List />} />
               <Route path={Path.SiteDetails} element={<Details />} />
+
               <Route element={<AuthGuard />}>
                 <Route path="/sites/create" element={<Create />} />
                 <Route path={Path.SiteEdit} element={<Edit />} />

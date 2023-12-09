@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Register.module.css";
-// import { useState } from "react";
-
+import { toast } from "react-toastify";
 import { Contexts } from "../../contexts/Contexts";
 import { useContext } from "react";
 import { useForm } from "../../hooks/useForm";
@@ -21,7 +20,17 @@ export const Register = () => {
   const handleInputChange = (e) => {
     clearFault();
     onChange(e);
+  };
 
+  const showToastError = () => {
+    const errorMessage = getFault();
+    if (errorMessage) {
+      toast.error(errorMessage, {
+        style: {
+          background: "#152534",
+        },
+      });
+    }
   };
   return (
     <div className={`${styles.content} ${styles.regular}`}>
@@ -58,7 +67,10 @@ export const Register = () => {
 
           <form
             action=""
-            onSubmit={onSubmit}
+            onSubmit={(e) => {
+              showToastError();
+              onSubmit(e);
+            }}
             className={`${styles.registerPageFormContent}`}
           >
             <div className={`${styles.sectionUsernameEmailPassword}`}>
@@ -109,7 +121,9 @@ export const Register = () => {
                 />
                 <span>Password</span>
               </div>
-              {getFault() && <p className={styles.registerError}>{getFault()}</p>}
+              {getFault() && (
+                <p className={styles.registerError}>{getFault()}</p>
+              )}
             </div>
 
             <div className={styles.buttonSection}>

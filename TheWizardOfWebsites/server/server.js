@@ -1320,13 +1320,13 @@
     var protectedData = {
     	users: {
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
-    			email: "peter@abv.bg",
-    			username: "Peter",
+    			email: "lorindi@abv.bg",
+    			username: "Lora",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"847ec027-f659-4086-8032-5173e2f9c93a": {
-    			email: "george@abv.bg",
-    			username: "George",
+    			email: "peter@abv.bg",
+    			username: "Peter",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
@@ -1351,7 +1351,7 @@
                 _id: "894f61ad-7549-4983-b147-924bc6dc8df4"
             },
             "c44ed2c0-ef8f-4636-8716-3e17652ee46e": {
-                _ownerId: "63142366-5889-4785-8fb0-7fb403bc49b9",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 image: "https://images.unsplash.com/photo-1639133694967-640f255f10fc?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 title: "E-Commerce Store",
                 price: "8000",
@@ -1361,7 +1361,7 @@
                 _id: "d7adb2d2-3a1a-40bf-a3a8-9030857d204a"
             },
             "2a38f52b-f108-4ed6-8e5c-0b1c1c00c063": {
-                _ownerId: "66c50924-666e-4e28-b7be-d06d36ec5e1a",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 title: "Personal Blog",
                 price: "3000",
@@ -1371,7 +1371,7 @@
                 _id: "4e26a4ab-713a-4dfe-a410-ac989f9d00f7"
             },
             "438eab8f-2542-4eb3-9164-50404d77ce5c": {
-                _ownerId: "8b6fbb05-64c9-43ea-8826-4e98886dfe6f",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 image: "https://images.unsplash.com/photo-1569315095807-995e6e3ba320?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 title: "Online Restaurant Reservations",
                 price: "6000",
@@ -1383,7 +1383,7 @@
 
 
             "be21805d-91d7-43fe-9066-ba1912586c0a": {
-                _ownerId: "bac47d26-a106-40f4-9b5a-4aadfbeb954b",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
                 image: "https://images.unsplash.com/photo-1558017487-06bf9f82613a?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 title: "Fitness Tracker",
                 price: "4500",
@@ -1393,7 +1393,7 @@
                 _id: "c462c55e-bada-4dd3-99ad-b1f8cc1118aa"
             },
             "36de7993-f318-45e2-a9b1-d1eef2b93cfd": {
-                _ownerId: "0740708d-4569-4fc1-8d0a-b142a0ff96d1",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
                 image: "https://images.unsplash.com/photo-1642489216436-4c5075b34d53?q=80&w=2038&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 title: "Event Planning Hub",
                 price: "7000",
@@ -1403,7 +1403,7 @@
                 _id: "fe883829-6588-411a-a76c-540d867ed0f6"
             },
             "4cba78c0-4587-4462-beee-7d0d10d88b3e": {
-                _ownerId: "8b2a0f64-d3e1-422a-bc1f-7e0e3ff0c48f",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
                 image: "https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 title: "Language Learning Platform",
                 price: "5500",
@@ -1413,7 +1413,7 @@
                 _id: "d2a4a01d-1338-47e9-b11a-5bfaeaac8c31"
             },
             "91cef5e1-6cbd-4855-aa9e-7fe4254eca62": {
-                _ownerId: "21d1d382-746b-4a00-bd23-7bfd308fd898",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
                 image: "https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=2057&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 title: "Portfolio Showcase",
                 price: "3500",
@@ -1431,7 +1431,7 @@
                 price: "8000",
                 shortDescription: "An e-commerce site with a sleek design, prioritizing a seamless shopping experience.",
                 description: "Users should be able to browse products, add them to the cart, and complete secure transactions. Features like user accounts, product reviews, and a wish list would enhance the online shopping experience.",
-                _createdOn: 1701972091357,
+                _createdOn: 1701972091361,
                 _id: "1626e490-d691-4b7d-ab78-a3e9f5c2e65a"
             },
             "15a68b42-bd4a-459a-815f-70be366eda44": {
@@ -1441,7 +1441,7 @@
                 price: "6000",
                 shortDescription: "A travel blog site with a vibrant design to inspire wanderlust and share travel experiences.",
                 description: "Users should write and publish travel articles, upload photos, and interact with a community of fellow travelers. A map feature to showcase visited locations and a comment section for each post would be valuable.",
-                _createdOn: 1701972091358,
+                _createdOn: 1701972091362,
                 _id: "59ec3582-a069-487c-ae43-14c26d5dcdc7"
             },
             "233abb1c-b4c1-4b5b-9c09-02747c76b78c": {
@@ -1451,7 +1451,7 @@
                 price: "4000",
                 shortDescription: "A portfolio site for freelancers to showcase their skills and attract potential clients.",
                 description: "Users can display their projects, highlight skills, and provide contact information. A clean, minimalist design with easy navigation is essential.",
-                _createdOn: 1701972091359,
+                _createdOn: 1701972091363,
                 _id: "e1185795-b4c2-4963-aace-257beaa96dab"
             },
             "9354429c-2562-4b4a-8662-f55f6932dd0f": {
@@ -1461,7 +1461,7 @@
                 price: "9000",
                 shortDescription: "A real estate platform with a modern design for buying, selling, and renting properties.",
                 description: "Users can list properties, search for listings, and contact sellers or agents. A map view, virtual tours, and a mortgage calculator would add value.",
-                _createdOn: 1701972091360,
+                _createdOn: 1701972091364,
                 _id: "594afe26-0d94-4769-a3f6-64c33cda11cc"
             },
 
