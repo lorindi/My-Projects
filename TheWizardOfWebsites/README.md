@@ -19,6 +19,7 @@ Web Crafters is a Single Page Application (SPA) created using React for the Fron
 *   The main part includes a sites (dashboard) for managing websites.
 *   APIs:
     - Weather API: https://openweathermap.org/api
+*   Fontawesome
 
 # A guest has access to:
 
