@@ -71,21 +71,25 @@ Project Screenshots:
 <br/>
 <br/>
 <br/>
+
 # REGISTER
 <p align="center"><img src="./frontend/public/images/Readme/Registration.png"  width="1000" height="540/"></p>
 <br/>
 <br/>
 <br/>
+
 # CREATE SITE
 <p align="center"><img src="./frontend/public/images/Readme/CreateSite.png"  width="1000" height="540/"></p>
 <br/>
 <br/>
 <br/>
+
 # SITES
 <p align="center"><img src="./frontend/public/images/Readme/Sites.png"  width="1000" height="540/"></p>
 <br/>
 <br/>
 <br/>
+
 # SITE DETAILS
 <p align="center"><img src="./frontend/public/images/Readme/SiteDetails1.png"  width="1000" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/SiteDetails2.png"  width="1000" height="540/"></p>
