@@ -93,6 +93,9 @@ Project Screenshots:
 # SITE DETAILS
 <p align="center"><img src="./frontend/public/images/Readme/SiteDetails1.png"  width="1000" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/SiteDetails2.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/SiteDetails3.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/SiteDetails4.png"  width="1000" height="540/"></p>
+
 <br/>
 <br/>
 <br/>

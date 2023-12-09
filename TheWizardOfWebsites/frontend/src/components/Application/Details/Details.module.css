@@ -213,6 +213,7 @@
     letter-spacing: 1px;
     overflow-wrap: anywhere;
     text-align: justify;
+    width: 80%;
 
 
 }
@@ -312,4 +313,21 @@
     background-color: #1B2D3F;
     color: lightgreen;
     border: none;
+}
+
+.deleteCommentButton{
+    background-color: #162431;
+    border: none;
+}
+
+.contentCommentAndButton{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.faTrash {
+    color: rgba(173, 216, 230, 0.738);
+    padding: 10px 15px;
 }

@@ -19,4 +19,22 @@ export const create = async (id, text) => {
   });
   return newComment
 };
-// #1341
+
+export const del = async (id) => {
+
+  const token = localStorage.getItem("accessToken");
+  const deletedComment = await fetch(`${baseUrl}/${id}`, {
+      method: "DELETE",
+      headers: {
+          "Content-Type": "application/json",
+          "X-Authorization": token,
+      },
+  });
+
+  if (!deletedComment.ok) {
+      const error = await deletedComment.json();
+      throw new Error(`Error deleting comment: ${error.message}`);
+  }
+
+  return deletedComment.json();
+};

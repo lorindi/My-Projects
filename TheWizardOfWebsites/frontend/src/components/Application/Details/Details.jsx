@@ -1,7 +1,7 @@
 import { useContext, useEffect, useReducer, useRef, useState } from "react";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import styles from "./Details.module.css";
-
+import { toast } from "react-toastify";
 import * as siteService from "../../../services/applicationService";
 import * as commentService from "../../../services/commentService";
 import { Contexts } from "../../../contexts/Contexts";
@@ -9,7 +9,8 @@ import reducer from "./commentReducer";
 import { useForm } from "../../../hooks/useForm";
 import { pathToUrl } from "../../../utils/pathUtils";
 import Path from "../../paths";
-
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const Details = () => {
   const navigate = useNavigate();
   const { email, userId } = useContext(Contexts);
@@ -30,16 +31,23 @@ export const Details = () => {
   }, [id]);
 
   const deleteButtonClickHandler = async () => {
-    const hasConfirmed = confirm(
-      `Are you sure you wants to delete ${site.title}`
-    );
+    try {
+      const hasConfirmed = confirm(
+        `Are you sure you want to delete ${site.title}`
+      );
 
-    if (hasConfirmed) {
-      await siteService.del(id);
-      navigate("/sites");
+      if (hasConfirmed) {
+        await siteService.del(id);
+        navigate("/sites");
+      }
+    } catch (error) {
+      console.error("Error deleting site:", error);
+      toast.error(`Error deleting site: ${error.message}`, {
+        position: "top-center",
+        autoClose: 3000,
+      });
     }
   };
-
   const addCommentHandler = async (values) => {
     const newComment = await commentService.create(id, values.comment);
     newComment.owner = { email };
@@ -57,6 +65,41 @@ export const Details = () => {
   // if (Math.random() < 0.5) {
   //   throw new Error("Game details error");
   // }
+
+  const deleteButtonClickComment = async (id) => {
+    try {
+      const deleteCommentUserConfirmation = window.confirm(
+        `Are you sure you want to delete this comment?`
+      );
+
+      if (deleteCommentUserConfirmation) {
+        await commentService.del(id);
+
+        // Update the state using dispatch
+        dispatch({
+          type: "DELETE_COMMENT",
+          payload: id,
+        });
+
+        // Optional: Log the filtered comments
+        const filtered = comments.filter((c) => c._id !== id);
+        toast.success("Comment deleted successfully!", {
+          style: {
+            background: "#152534",
+          },
+        });
+        return filtered;
+      }
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+      toast.error(`Error deleting comment: ${error.message}`, {
+        style: {
+          background: "#152534",
+        },
+      });
+      throw Error(error);
+    }
+  };
 
   return (
     <div className={styles.masterContainerDetails}>
@@ -144,8 +187,14 @@ export const Details = () => {
               <ul className={styles.commentsList} role="list">
                 {comments.map(({ _id, text, owner: { email } }) => (
                   <li className={styles.commentsListElement} key={_id}>
-                    <div>
+                    <div className={styles.contentCommentAndButton}>
                       <p className={styles.comment}>{text}</p>
+                      <button
+                        onClick={() => deleteButtonClickComment(_id)}
+                        className={styles.deleteCommentButton}
+                      >
+                       <FontAwesomeIcon className={styles.faTrash} icon={faTrash} />
+                      </button>
                     </div>
 
                     <div className={styles.commentsCommentDescriptionLikes}>
