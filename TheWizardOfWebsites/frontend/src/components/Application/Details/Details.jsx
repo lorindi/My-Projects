@@ -9,8 +9,8 @@ import reducer from "./commentReducer";
 import { useForm } from "../../../hooks/useForm";
 import { pathToUrl } from "../../../utils/pathUtils";
 import Path from "../../paths";
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const Details = () => {
   const navigate = useNavigate();
   const { email, userId } = useContext(Contexts);
@@ -66,6 +66,27 @@ export const Details = () => {
   //   throw new Error("Game details error");
   // }
 
+  const validateComment = () => {
+    if (values.comment.length < 5) {
+      toast.error("Comment should be longer than 5 characters", {
+        style: {
+          background: "#152534",
+        },
+      });
+      return false;
+    }
+    return true;
+  };
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+
+    if (!validateComment()) {
+      return;
+    }
+
+    onSubmit(e);
+  };
   const deleteButtonClickComment = async (id) => {
     try {
       const deleteCommentUserConfirmation = window.confirm(
@@ -165,7 +186,10 @@ export const Details = () => {
         <div className={styles.contentComments}>
           <div className={styles.allComments}>
             <div className={styles.containerAddComments}>
-              <form className={styles.addCommentsForm} onSubmit={onSubmit}>
+              <form
+                className={styles.addCommentsForm}
+                onSubmit={onSubmitHandler}
+              >
                 <div className={styles.addCommentsFormDiv}>
                   <textarea
                     className={styles.addCommentsFormTextarea}
@@ -193,7 +217,10 @@ export const Details = () => {
                         onClick={() => deleteButtonClickComment(_id)}
                         className={styles.deleteCommentButton}
                       >
-                       <FontAwesomeIcon className={styles.faTrash} icon={faTrash} />
+                        <FontAwesomeIcon
+                          className={styles.faTrash}
+                          icon={faTrash}
+                        />
                       </button>
                     </div>
 

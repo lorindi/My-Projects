@@ -25,15 +25,15 @@ export const AuthProvider = ({ children }) => {
       setError("Login failed. Please check your credentials.");
     }
   };
-  // const result = await authService.login(values.email, values.password);
-  // setAuth(result);
 
-  // localStorage.setItem("accessToken", result.accessToken);
-  // navigate(Path.Home);
 
   const registerSubmitHandler = async (values) => {
-    const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{1,5}\.[a-zA-Z]{1,5}$/;
+    const emailRegex = /^[a-zA-Z0-9]+@.[a-zA-Z0-9]+\.[a-zA-Z0-9]+(?:\.[a-zA-Z]+)*$/;
 
+    if (values.password !== values['confirm-password']) {
+      setFault("Passwords do not match. Please enter matching passwords.");
+      return; // Спри регистрирането
+    }
 
     try {
       // Validate email using regex
@@ -51,25 +51,9 @@ export const AuthProvider = ({ children }) => {
       console.error("Registration failed:", error.message);
       setFault("Registration failed. Please try again.");
     }
-    // try {
-    //   const result = await authService.register(values.email, values.password);
-
-    //   localStorage.setItem("accessToken", result.accessToken);
-    //   setAuth(result);
-    //   navigate(Path.Home);
-    // } catch (error) {
-    //   console.error("Registration failed:", error.message);
-    //   setFault("Registration failed. Please try again.");
-    //   return;
-    // }
+  
   };
-  // const result = await authService.register(values.email, values.password);
 
-  // localStorage.setItem("accessToken", result.accessToken);
-
-  // setAuth(result);
-  // navigate(Path.Home);
-  // };
 
   const logoutHandler = () => {
     setAuth({});

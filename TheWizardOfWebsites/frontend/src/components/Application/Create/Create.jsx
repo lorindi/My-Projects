@@ -2,15 +2,54 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./Create.module.css";
 import * as siteService from "../../../services/applicationService";
-
+import { toast } from "react-toastify";
 
 export const Create = () => {
   const navigate = useNavigate();
-  
+
   const createSiteSubmitHandler = async (e) => {
     e.preventDefault();
 
     const siteData = Object.fromEntries(new FormData(e.currentTarget));
+    const isEmpty = Object.values(siteData).every(
+      (value) => value.trim() === ""
+    );
+
+    if (isEmpty) {
+      toast.error("All fields cannot be empty");
+      return;
+    }
+
+    // Проверка за image
+    if (!siteData.image.startsWith("https://")) {
+      toast.error("Image URL should start with 'https://'");
+      return;
+    }
+
+    // Проверка за title
+    if (siteData.title.length < 3) {
+      toast.error("Title should be at least 3 characters long");
+      return;
+    }
+
+    // Проверка за price
+    const parsedPrice = parseFloat(siteData.price);
+    if (isNaN(parsedPrice) || parsedPrice <= 0) {
+      toast.error("Price should be a number greater than 0");
+      return;
+    }
+
+    // Проверка за shortDescription
+    if (siteData.shortDescription.length < 3) {
+      toast.error("Short description should be at least 3 characters long");
+      return;
+    }
+
+    // Проверка за description
+    if (siteData.description.length < 3) {
+      toast.error("Description should be at least 3 characters long");
+      return;
+    }
 
     try {
       await siteService.create(siteData);
@@ -20,31 +59,9 @@ export const Create = () => {
     }
   };
 
-  // const [formData, setFormData] = useState({
-  //   image: null,
-  //   title: "",
-  //   price: "",
-  //   shortDescription: "",
-  //   description: "",
-  // });
-
-  // // const history = useHistory();
-
-  // const handleChange = (e) => {
-  //   const { name, value, type, files } = e.target;
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [name]: type === "file" ? files[0] : value,
-  //   }));
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  // };
-
   return (
     <div className={styles.containerCreateForm}>
-    <h1>Create Site</h1>
+      <h1>Create Site</h1>
       <form
         // onSubmit={handleSubmit}
         className={styles.createForm}
@@ -59,10 +76,8 @@ export const Create = () => {
           </label>
           <input
             type="text"
-            // accept="image/*"
             name="image"
             className={styles.createSiteInput}
-            // onChange={handleChange}
           />
         </div>
         <div>
@@ -73,8 +88,6 @@ export const Create = () => {
             type="text"
             name="title"
             className={styles.createSiteInput}
-            // value={formData.title}
-            // onChange={handleChange}
           />
         </div>
 
@@ -86,8 +99,7 @@ export const Create = () => {
             type="text"
             name="price"
             className={styles.createSiteInput}
-            // value={formData.price}
-            // onChange={handleChange}
+
           />
         </div>
         <div>
@@ -98,8 +110,7 @@ export const Create = () => {
             type="text"
             name="shortDescription"
             className={styles.createSiteInput}
-            // value={formData.shortDescription}
-            // onChange={handleChange}
+   
           />
         </div>
         <div>
@@ -111,8 +122,7 @@ export const Create = () => {
             rows="4"
             cols="50"
             className={styles.createSiteTextarea}
-            // value={formData.description}
-            // onChange={handleChange}
+    
           />
         </div>
 
