@@ -88,6 +88,7 @@ export const Edit = () => {
             value={site.image}
             onChange={onChange}
             className={styles.editSiteInput}
+            placeholder="Must start with https://"
           />
         </div>
         <div>
@@ -100,6 +101,8 @@ export const Edit = () => {
             value={site.title}
             onChange={onChange}
             className={styles.editSiteInput}
+            placeholder="At least three characters"
+
           />
         </div>
 
@@ -113,6 +116,8 @@ export const Edit = () => {
             value={site.price}
             onChange={onChange}
             className={styles.editSiteInput}
+            placeholder="Greater than zero"
+
           />
         </div>
         <div>
@@ -125,6 +130,7 @@ export const Edit = () => {
             value={site.shortDescription}
             onChange={onChange}
             className={styles.editSiteInput}
+            placeholder="At least five characters"
           />
         </div>
         <div>
@@ -138,6 +144,8 @@ export const Edit = () => {
             rows="4"
             cols="50"
             className={styles.editSiteTextarea}
+            placeholder="At least ten characters"
+
           />
         </div>
 
