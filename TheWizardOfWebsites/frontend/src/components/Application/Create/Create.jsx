@@ -40,14 +40,14 @@ export const Create = () => {
     }
 
     // Проверка за shortDescription
-    if (siteData.shortDescription.length < 3) {
-      toast.error("Short description should be at least 3 characters long");
+    if (siteData.shortDescription.length < 5) {
+      toast.error("Short description should be at least 5 characters long");
       return;
     }
 
     // Проверка за description
-    if (siteData.description.length < 3) {
-      toast.error("Description should be at least 3 characters long");
+    if (siteData.description.length < 10) {
+      toast.error("Description should be at least 10 characters long");
       return;
     }
 
@@ -78,6 +78,7 @@ export const Create = () => {
             type="text"
             name="image"
             className={styles.createSiteInput}
+            placeholder="Must start with https://"
           />
         </div>
         <div>
@@ -88,6 +89,7 @@ export const Create = () => {
             type="text"
             name="title"
             className={styles.createSiteInput}
+            placeholder="At least three characters"
           />
         </div>
 
@@ -99,7 +101,7 @@ export const Create = () => {
             type="text"
             name="price"
             className={styles.createSiteInput}
-
+            placeholder="Greater than zero"
           />
         </div>
         <div>
@@ -110,7 +112,7 @@ export const Create = () => {
             type="text"
             name="shortDescription"
             className={styles.createSiteInput}
-   
+            placeholder="At least five characters"
           />
         </div>
         <div>
@@ -122,7 +124,7 @@ export const Create = () => {
             rows="4"
             cols="50"
             className={styles.createSiteTextarea}
-    
+            placeholder="At least ten characters"
           />
         </div>
 

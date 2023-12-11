@@ -14,7 +14,7 @@
 
 }
 h1 {
-    margin-top: 100px;
+    margin-top: 70px;
     color: lightgreen;
     font-weight: 400;
     font-size: 35px;
@@ -77,6 +77,7 @@ h1 {
     border: 2px solid rgba(173, 216, 230, 0.498);
     color: white;
     letter-spacing: 1.5px;
+    padding: 10px;
     /* margin-bottom: 10px; */
 
 }

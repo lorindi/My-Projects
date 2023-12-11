@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Edit.module.css";
 import { useEffect, useState } from "react";
 import * as siteService from "../../../services/applicationService";
+import { toast } from "react-toastify";
 
 export const Edit = () => {
   const navigate = useNavigate();
@@ -23,6 +24,38 @@ export const Edit = () => {
   const editSiteSubmitHandler = async (e) => {
     e.preventDefault();
     const values = Object.fromEntries(new FormData(e.currentTarget));
+
+    // Проверка за image
+    if (!values.image.startsWith("https://")) {
+      toast.error("Image URL should start with 'https://'");
+      return;
+    }
+
+    // Проверка за title
+    if (values.title.length < 3) {
+      toast.error("Title should be at least 3 characters long");
+      return;
+    }
+
+    // Проверка за price
+    const parsedPrice = parseFloat(values.price);
+    if (isNaN(parsedPrice) || parsedPrice <= 0) {
+      toast.error("Price should be a number greater than 0");
+      return;
+    }
+
+    // Проверка за shortDescription
+    if (values.shortDescription.length < 5) {
+      toast.error("Short description should be at least 5 characters long");
+      return;
+    }
+
+    // Проверка за description
+    if (values.description.length < 10) {
+      toast.error("Description should be at least 10 characters long");
+      return;
+    }
+
     try {
       await siteService.edit(id, values);
       navigate("/sites");
