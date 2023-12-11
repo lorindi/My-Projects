@@ -16,38 +16,62 @@ export const Create = () => {
     );
 
     if (isEmpty) {
-      toast.error("All fields cannot be empty");
+      toast.error("All fields cannot be empty", {
+        style: {
+          background: "#152534", 
+        },
+      });
       return;
     }
 
     // Проверка за image
     if (!siteData.image.startsWith("https://")) {
-      toast.error("Image URL should start with 'https://'");
+      toast.error("Image URL should start with 'https://'", {
+        style: {
+          background: "#152534", 
+        },
+      });
       return;
     }
 
     // Проверка за title
     if (siteData.title.length < 3) {
-      toast.error("Title should be at least 3 characters long");
+      toast.error("Title should be at least 3 characters long", {
+        style: {
+          background: "#152534", 
+        },
+      });
       return;
     }
 
     // Проверка за price
     const parsedPrice = parseFloat(siteData.price);
     if (isNaN(parsedPrice) || parsedPrice <= 0) {
-      toast.error("Price should be a number greater than 0");
+      toast.error("Price should be a number greater than 0", {
+        style: {
+          background: "#152534", 
+        },
+      });
       return;
     }
 
     // Проверка за shortDescription
     if (siteData.shortDescription.length < 5) {
-      toast.error("Short description should be at least 5 characters long");
+      toast.error("Short description should be at least 5 characters long", {
+        style: {
+          background: "#152534",
+        },
+      });
       return;
     }
 
     // Проверка за description
     if (siteData.description.length < 10) {
-      toast.error("Description should be at least 10 characters long");
+      toast.error("Description should be at least 10 characters long", {
+        style: {
+          background: "#152534",
+        },
+      });
       return;
     }
 

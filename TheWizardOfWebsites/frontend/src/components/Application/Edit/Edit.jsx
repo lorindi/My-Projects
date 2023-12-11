@@ -27,32 +27,52 @@ export const Edit = () => {
 
     // Проверка за image
     if (!values.image.startsWith("https://")) {
-      toast.error("Image URL should start with 'https://'");
+      toast.error("Image URL should start with 'https://'", {
+        style: {
+          background: "#152534", 
+        },
+      });
       return;
     }
 
     // Проверка за title
     if (values.title.length < 3) {
-      toast.error("Title should be at least 3 characters long");
+      toast.error("Title should be at least 3 characters long", {
+        style: {
+          background: "#152534", 
+        },
+      });
       return;
     }
 
     // Проверка за price
     const parsedPrice = parseFloat(values.price);
     if (isNaN(parsedPrice) || parsedPrice <= 0) {
-      toast.error("Price should be a number greater than 0");
+      toast.error("Price should be a number greater than 0", {
+        style: {
+          background: "#152534", 
+        },
+      });
       return;
     }
 
     // Проверка за shortDescription
     if (values.shortDescription.length < 5) {
-      toast.error("Short description should be at least 5 characters long");
+      toast.error("Short description should be at least 5 characters long", {
+        style: {
+          background: "#152534", 
+        },
+      });
       return;
     }
 
     // Проверка за description
     if (values.description.length < 10) {
-      toast.error("Description should be at least 10 characters long");
+      toast.error("Description should be at least 10 characters long", {
+        style: {
+          background: "#152534", 
+        },
+      });
       return;
     }
 
@@ -72,6 +92,7 @@ export const Edit = () => {
 
   return (
     <div className={styles.containerEditForm}>
+    <h1>Edit Site</h1>
       <form
         onSubmit={editSiteSubmitHandler}
         className={styles.editForm}

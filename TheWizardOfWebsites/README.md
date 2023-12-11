@@ -85,6 +85,12 @@ Project Screenshots:
 <br/>
 <br/>
 
+# EDIT SITE
+<p align="center"><img src="./frontend/public/images/Readme/EditSite.png"  width="1000" height="540/"></p>
+<br/>
+<br/>
+<br/>
+
 # SITES
 <p align="center"><img src="./frontend/public/images/Readme/Sites.png"  width="1000" height="540/"></p>
 <br/>

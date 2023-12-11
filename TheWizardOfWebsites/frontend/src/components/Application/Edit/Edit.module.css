@@ -8,10 +8,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 88vh;
+    justify-content: space-evenly;
+    height: 90vh;
     font-family: 'Montserrat', sans-serif;
 
+}
+h1 {
+    margin-top: 70px;
+    color: lightblue;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 .editForm {
     display: flex;
@@ -20,8 +28,7 @@
     justify-content: space-evenly;
     align-items: center;
     height: 700px;
-    min-width: 900px;
-    /* border: 1px solid lightblue; */
+    width: 1100px;
     position: relative;
     border-radius: 5px;
 }
@@ -29,47 +36,58 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 300px;
+    width: 500px;
     align-items: center;
-    margin: 5px 50px;
-    /* height: 100px; */
 
 }
-
+.editForm>div:nth-child(5) {
+    margin-bottom: 20px;
+  
+  }
 .editSiteLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: rgba(255, 255, 255, 0.791);
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 20px;
 
 
 }
 .editSiteInput {
+    padding: 7px;
     width: 400px;
     border-radius: 5px;
     background-color: #1B2D3F;
     border: 2px solid rgba(173, 216, 230, 0.498);
-    color: white;
+    color: rgba(173, 216, 230, 0.807);
     letter-spacing: 1.5px;
-    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
 
 }
 .editSiteTextarea {
     width: 400px;
-    height: 420px;
+    height: 400px;
     border-radius: 5px;
     background-color: #1B2D3F;
     border: 2px solid rgba(173, 216, 230, 0.498);
-    color: white;
+    color: rgba(173, 216, 230, 0.807);
     letter-spacing: 1.5px;
     padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
 
 }
 .editSiteButton {
     display: block;
     width: 400px;
-    height: 40px;
+    height: 41px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 500;
@@ -77,6 +95,8 @@
     border: 3px solid rgba(240, 248, 255, 0.531);
     background-color: rgba(240, 248, 255, 0.531);
     border-radius: 5px;
+    margin: 20px 0px 25px 0px;
+
 
 
 }
