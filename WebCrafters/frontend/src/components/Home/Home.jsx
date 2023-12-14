@@ -7,6 +7,9 @@ import { LatestSites } from "./LatestSites/LatestSites";
 import { useContext } from "react";
 import { Contexts } from "../../contexts/Contexts";
 import {Weather} from "./Weather/Weather"
+import {Gmail} from "./Gmail/Gmail";
+import { faEnvelope, faMobile } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // eslint-disable-next-line react/prop-types, no-unused-vars
 export const Home = ({ _id, accessToken, email }) => {
   const [latestSites, setLatestSites] = useState([]);
@@ -155,7 +158,8 @@ export const Home = ({ _id, accessToken, email }) => {
                   color: isActive ? "lightblue" : "lightgreen",
                 })}
               >
-                <img src="../../../src/components/Home/Gmail.png" alt="" />
+                {/* <img src="../../../src/components/Home/Gmail.png" alt="" /> */}
+                <FontAwesomeIcon icon={faEnvelope}/>
                 <p>***@gmail.com</p>
               </NavLink>
             </li>
@@ -188,12 +192,13 @@ export const Home = ({ _id, accessToken, email }) => {
                   color: isActive ? "lightblue" : "lightgreen",
                 })}
               >
-                <img src="../../../src/components/Home/WhatsApp.png" alt="" />
+         <FontAwesomeIcon icon={faMobile} />
                 <p>0812345678</p>
               </NavLink>
             </li>
           </ul>
         </div>
+        <Gmail></Gmail>
       </section>
     </>
   );
