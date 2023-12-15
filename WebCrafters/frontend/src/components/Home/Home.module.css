@@ -256,7 +256,8 @@
     width: 100%;
     font-family: 'Montserrat', sans-serif;
     flex-wrap: wrap;
-    height: 95vh;
+    min-height: 75vh;
+
 
 }
 
@@ -267,46 +268,8 @@
 
 }
 
-.contactsList {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    flex-direction: column;
-    gap: 50px;
-    margin: 0;
-    height: 463px;
-    padding-top: 100px;
-}
-
-.contact {
-    width: 250px;
-}
-
-.contact>a {
-    display: flex;
-    flex-direction: row;
-    /* width: 500px; */
-    align-items: center;
-    gap: 20px;
-}
-
-.contact>a>img {
-    width: 30px;
-    filter: grayscale(100%);
-
-}
-
-.contact>a>p {
-    font-size: 25px;
-    /* color: black; */
-}
 
 
-
-.contactsImg:hover {
-    box-shadow: 0px 0px 100px 1px rgba(173, 216, 230, 0.225);
-    transition: 0.5s;
-}
 
 /* -----------------------------------DARK-COLORS------------------------------------ */
 
@@ -358,10 +321,10 @@
 
 }
 
-.dark.contactsInfo {
+/* .dark.contactsInfo {
     background-color: #1b2d3f;
 
-}
+} */
 
 .dark.contact>a>p {
     color: rgba(255, 255, 255, 0.531);
