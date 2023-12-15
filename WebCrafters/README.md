@@ -16,6 +16,7 @@ https://www.youtube.com/watch?v=qRL_dQfWIUQ&t=59s
 *   HTML, CSS 
 *   JavaScript
 *   Toastify
+*   EmailJS
 *   Node.js (custom backend server)
 *   General Requirements:
 *   The main part includes a sites (dashboard) for managing websites.
