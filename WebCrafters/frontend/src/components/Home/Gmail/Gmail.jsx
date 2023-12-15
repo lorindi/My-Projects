@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-
+import style from './Gmail.module.css'
 // https://www.youtube.com/watch?v=bMq2riFCF90
 // npm i @emailjs/browser
 // https://www.emailjs.com/docs/examples/reactjs/
@@ -54,6 +54,9 @@ export const Gmail = () => {
         (result) => {
           console.log(result.text);
           toast.success("Email sent successfully");
+          setToName("");
+          setFromName("");
+          setMessageText("");
         },
         (error) => {
           console.log(error.text);
@@ -63,34 +66,40 @@ export const Gmail = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
+    <form ref={form} onSubmit={sendEmail} className={style.gmailForm}>
       <div>
-        <label>Name</label>
+        {/* <label>Name</label> */}
         <input
+        className={style.gmailFormInput}
           type="text"
           name="to_name"
           value={toName}
           onChange={(e) => setToName(e.target.value)}
+          placeholder="Name"
         />
       </div>
       <div>
-        <label>Email</label>
+        {/* <label>Email</label> */}
         <input
+        className={style.gmailFormInput}
           type="email"
           name="from_name"
           value={fromName}
           onChange={(e) => setFromName(e.target.value)}
+          placeholder="Email"
         />
       </div>
       <div>
-        <label>Message</label>
+        {/* <label>Message</label> */}
         <textarea
+        className={style.gmailFormTextarea}
           name="message"
           value={messageText}
           onChange={(e) => setMessageText(e.target.value)}
+          placeholder="Message"
         />
       </div>
-      <input type="submit" value="Send" />
+      <input className={style.gmailFormButton} type="submit" value="Send" />
     </form>
   );
 };
