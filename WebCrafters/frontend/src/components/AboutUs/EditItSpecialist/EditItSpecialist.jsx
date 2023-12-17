@@ -1,29 +1,33 @@
-import styles from './EditItSpecialist.module.css'
-import { useNavigate } from "react-router-dom";
+import styles from "./EditItSpecialist.module.css";
+import { useNavigate, useParams } from "react-router-dom";
 import * as teamService from "../../../services/teamService";
 import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
 
 export const EditItSpecialist = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
+  const [team, setTeam] = useState({
+    image: "",
+    name: "",
+    description: "",
+  });
 
-  const EditItSpecialistSubmitHandler = async (e) => {
+  useEffect(() => {
+    teamService.getOne(id).then((result) => {
+      setTeam(result);
+    });
+  }, [id]);
+
+  const editItSpecialistSubmitHandler = async (e) => {
     e.preventDefault();
 
     const form = e.currentTarget;
     const teamData = Object.fromEntries(new FormData(form));
-    console.log("Team Data:", teamData);
+
     const isEmpty = Object.values(teamData).every(
       (value) => value.trim() === ""
     );
-
-    try {
-      await teamService.edit(teamData);
-      form.reset();
-      
-
-    } catch (err) {
-      console.log(err);
-    }
 
     if (isEmpty) {
       toast.error("All fields cannot be empty", {
@@ -62,19 +66,27 @@ export const EditItSpecialist = () => {
       return;
     }
     try {
-      await teamService.edit(teamData);
+      await teamService.edit(id, teamData); // Предаване на _id за идентификация на редактирания елемент
       navigate("/about-us");
     } catch (err) {
       console.log(err);
     }
   };
+
+  const onChange = (e) => {
+    setTeam((state) => ({
+      ...state,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   return (
     <div className={styles.containerItSpecialistEditForm}>
-      <h1>Create IT Specialist</h1>
+      <h1>Edit IT Specialist</h1>
       <form
         action=""
         className={styles.EditItSpecialistForm}
-        onSubmit={EditItSpecialistSubmitHandler}
+        onSubmit={editItSpecialistSubmitHandler}
         method="post"
       >
         <div>
@@ -86,6 +98,8 @@ export const EditItSpecialist = () => {
             name="image"
             className={styles.EditItSpecialistInput}
             placeholder="Must start with https://"
+            onChange={onChange}
+            value={team.image}
           />
         </div>
         <div>
@@ -97,13 +111,12 @@ export const EditItSpecialist = () => {
             name="name"
             className={styles.EditItSpecialistInput}
             placeholder="At least three characters"
+            onChange={onChange}
+            value={team.name}
           />
         </div>
         <div>
-          <label
-            htmlFor="description"
-            className={styles.EditItSpecialistLabel}
-          >
+          <label htmlFor="description" className={styles.EditItSpecialistLabel}>
             Description
           </label>
           <textarea
@@ -112,6 +125,8 @@ export const EditItSpecialist = () => {
             cols="50"
             className={styles.EditItSpecialistTextarea}
             placeholder="At least ten characters"
+            onChange={onChange}
+            value={team.description}
           />
         </div>
         <input

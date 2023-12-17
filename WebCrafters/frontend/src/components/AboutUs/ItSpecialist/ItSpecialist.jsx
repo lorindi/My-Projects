@@ -19,6 +19,7 @@ export const ItSpecialist = ({ _id, image, name, description, updateTeamData }) 
       if (hasConfirmed) {
         await teamService.del(_id);
         updateTeamData()
+        // navigate('/about-us');
       }
     } catch (error) {
       console.error("Error deleting team:", error);
@@ -36,11 +37,11 @@ export const ItSpecialist = ({ _id, image, name, description, updateTeamData }) 
       <div className={styles.about}>
         <h1 className={`${styles.partTeamTitle} ${styles.dark}`}>{name}</h1>
         <div className={styles.partTeamInfo}>
-          <Link
+        <Link
             className={`${styles.infoLink} ${styles.dark}`}
-            to={pathToUrl(Path.EditItSpecialist, { _id })}
+            to={pathToUrl(Path.EditItSpecialist, { id: _id })}
           >
-         <FontAwesomeIcon icon={faPenToSquare} />
+            <FontAwesomeIcon icon={faPenToSquare} />
           </Link>
           <button
             onClick={() => deleteItSpecialistButtonClickHandler()}

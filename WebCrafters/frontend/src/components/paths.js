@@ -4,6 +4,6 @@
   SiteEdit: '/sites/:id/edit',
   SiteDelete: '/sites/:id/delete',
   SiteDetails: '/sites/:id/details/*',
-  EditItSpecialist: '/about-us/edit-it-specialist',
+  EditItSpecialist: '/about-us/:id/edit-it-specialist',
 };
 export default Path

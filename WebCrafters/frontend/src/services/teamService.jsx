@@ -15,7 +15,6 @@ export const getOne = async (id) => {
 
 export const create = async (teamData) => {
   const result = await request.post(baseUrl, teamData);
-  console.log(result);
   return result;
 };
 export const edit = async (id, teamData) => {
