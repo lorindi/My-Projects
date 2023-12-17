@@ -1,14 +1,14 @@
 import styles from "./AboutUs.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CreateItSpecialist } from "./CreateItSpecialist/CreateItSpecialist";
 import * as teamService from "../../services/teamService";
 import { ItSpecialist } from "./ItSpecialist/ItSpecialist";
 import { OurTeam } from "./OurTeam/OurTeam";
-
+import { Contexts } from "../../contexts/Contexts";
 export const AboutUs = () => {
   const [team, setTeam] = useState({});
-
+  const { isAdmin } = useContext(Contexts);
   useEffect(() => {
     const fetchTeamData = async () => {
       try {
@@ -37,29 +37,38 @@ export const AboutUs = () => {
   return (
     <>
       <div className={styles.wholeTeam}>
-        <article className={styles.wholeTeamLinks}>
-          <NavLink
-            className={styles.nameLinkCreate}
-            onClick={() =>
-              create.current.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Create
-          </NavLink>
-        </article>
+        {isAdmin && (
+          <article className={styles.wholeTeamLinks}>
+            <NavLink
+              className={styles.nameLinkCreate}
+              onClick={() =>
+                create.current.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Create
+            </NavLink>
+          </article>
+        )}
+
         <OurTeam />
 
         {team.length > 0 && (
           <>
             {team.map((it) => (
-              <ItSpecialist updateTeamData={updateTeamData} key={it._id} {...it} />
+              <ItSpecialist
+                updateTeamData={updateTeamData}
+                key={it._id}
+                {...it}
+              />
             ))}
           </>
         )}
+        {isAdmin && (
         <div className={styles.contentCreateItSpecialist} ref={create}>
           {/* Pass the handler to the CreateItSpecialist component */}
           <CreateItSpecialist updateTeamData={updateTeamData} />
         </div>
+        )}
       </div>
     </>
   );

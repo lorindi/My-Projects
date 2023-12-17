@@ -74,6 +74,7 @@ export const AuthProvider = ({ children }) => {
     email: auth.email,
     userId: auth._id,
     isAuthenticated: !!auth.accessToken,
+    isAdmin: auth.username === 'Admin' ? true : false,
     getError,
     clearError,
     getFault,
