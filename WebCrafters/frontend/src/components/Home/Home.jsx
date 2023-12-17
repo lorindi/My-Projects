@@ -150,9 +150,9 @@ export const Home = ({ _id, accessToken, email }) => {
         <div>
           <Weather />
         </div>
-        <div>
+
           <Gmail />
-        </div>
+
       </section>
     </>
   );

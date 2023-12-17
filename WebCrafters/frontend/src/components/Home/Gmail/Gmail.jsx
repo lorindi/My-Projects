@@ -20,15 +20,27 @@ export const Gmail = () => {
 
   const validateForm = () => {
     if (!toName) {
-      toast.error("Please enter a name");
+      toast.error("Please enter a name", {
+        style: {
+          background: "#152534",
+        },
+      });
       return false;
     }
     if (!fromName) {
-      toast.error("Please enter an email");
+      toast.error("Please enter an email", {
+        style: {
+          background: "#152534",
+        },
+      });
       return false;
     }
     if (!messageText) {
-      toast.error("Please enter a message");
+      toast.error("Please enter a message", {
+        style: {
+          background: "#152534",
+        },
+      });
       return false;
     }
 

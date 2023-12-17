@@ -27,7 +27,7 @@
 .wholeTeamLinks {
   position: fixed;
   left: 80px;
-  top: 250px;
+  top: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +59,25 @@
 .nameLink:active {
   color: lightgreen;
 }
-
+.nameLinkCreate{
+  position: fixed;
+  bottom: 190px;
+  left: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(173, 216, 230, 0.625);
+  letter-spacing: 2px;
+  font-size: 17px;
+  border: 3px solid #142331;
+  padding: 5px 50px;
+  background-color: #1B2D3F;
+  border-radius: 5px;
+  width: 135px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
 .partTeam {
   flex-wrap: wrap;
   display: flex;
@@ -120,6 +138,7 @@
   text-align: justify;
   line-height: 40px;
   margin-right: 50px;
+  width: 700px;
 
 
 }

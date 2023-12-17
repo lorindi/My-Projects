@@ -13,6 +13,9 @@ import { AboutUs } from "./components/AboutUs/AboutUs";
 import { Footer } from "./components/Footer/Footer";
 import { List } from "./components/Application/List/List";
 import { Create } from "./components/Application/Create/Create";
+// import { CreateItSpecialist } from "./components/AboutUs/CreateItSpecialist/CreateItSpecialist";
+import { EditItSpecialist } from "./components/AboutUs/EditItSpecialist/EditItSpecialist";
+
 import { Details } from "./components/Application/Details/Details";
 import { Edit } from "./components/Application/Edit/Edit";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
@@ -40,6 +43,9 @@ function App() {
               <Route path={Path.SiteDetails} element={<Details />} />
 
               <Route element={<AuthGuard />}>
+                {/* <Route path={Path.CreateItSpecialist} element={<CreateItSpecialist />} /> */}
+                <Route path={Path.EditItSpecialist} element={<EditItSpecialist />} />
+
                 <Route path="/sites/create" element={<Create />} />
                 <Route path={Path.SiteEdit} element={<Edit />} />
                 <Route path={Path.Logout} element={<Logout />} />

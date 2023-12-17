@@ -39,7 +39,7 @@ export const Header = () => {
                 </NavLink>
               </div>
 
-              <div className={styles.navBarEl}>
+              {/* <div className={styles.navBarEl}>
                 <NavLink
                   className={styles.link}
                   style={({ isActive }) => ({
@@ -49,7 +49,7 @@ export const Header = () => {
                 >
                   About us
                 </NavLink>
-              </div>
+              </div> */}
             </div>
 
             <div className={styles.navBarEl}>

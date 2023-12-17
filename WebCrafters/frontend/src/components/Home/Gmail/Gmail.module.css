@@ -11,14 +11,26 @@
     padding: 10px;
     border-radius: 5px;
     background-color: #1b2d3f;
-
+    border: 2px solid rgba(173, 216, 230, 0.498);
+    color: rgba(173, 216, 230, 0.807);
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .gmailFormTextarea {
     width: 300px;
     height: 150px;
+    padding: 10px;
     border-radius: 5px;
     background-color: #1b2d3f;
+    border: 2px solid rgba(173, 216, 230, 0.498);
+    color: rgba(173, 216, 230, 0.807);
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
 
 }
 
@@ -34,4 +46,14 @@
     background-color: rgba(173, 216, 230, 0.744);
     color: black;
 
+
+
 }
+.gmailFormButton:hover {
+    cursor: pointer;
+    background-color: #1b2d3f;
+    color: lightblue;
+    border: 2px solid rgba(173, 216, 230, 0.495);
+    font-weight: 600;
+    transition: 0.5s;
+  }

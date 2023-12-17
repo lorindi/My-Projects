@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-evenly;
   transition: 1s;
 
 }
@@ -52,10 +52,11 @@
 .weatherInfo {
   display: flex;
   text-align: center;
-  width: 790px;
+  flex-direction: row;
+  /* width: 790px; */
   justify-content: space-between;
   align-items: flex-start;
-  padding-right: 60px;
+  /* padding-right: 60px; */
 }
 
 .mapContainer {
@@ -66,15 +67,14 @@
 }
 
 .contentDataWeather {
-
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   width: 300px;
   flex-wrap: wrap;
   height: 250px;
-  
+
 
 }
 
@@ -118,7 +118,8 @@
 }
 
 .containerImageDefault {
-  width: 750px;
+  min-width: 700px;
+  padding-right: 300px;
 
 }
 
@@ -129,4 +130,71 @@
   border-radius: 6px;
   padding-top: 30px;
   opacity: 0.7;
+
 }
+
+
+@media only screen and (max-width: 768px) {
+  .containerWeather {
+    width: 320px;
+    flex-direction: column;
+    min-height: 550px;
+    align-items: center;
+  }
+
+  .formWeather {
+    flex-direction: column;
+    width: 95%;
+    height: 100px;
+
+  }
+
+  .weatherInfo {
+    width: 100%;
+    align-self: center;
+    flex-direction: column;
+
+  }
+
+  .contentDataWeather {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .containerImageDefault {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    min-width: 100%;
+
+
+  }
+
+  .imageDefault {
+    display: flex;
+    width: 95%;
+    height: 255px;
+    border-radius: 6px;
+    padding-top: 30px;
+    opacity: 0.7;
+  }
+
+  .formWeather button {
+    padding: 5px;
+  }
+
+  .contentIframe {
+    width: 320px;
+    height: 250px;
+    border: 1px solid rgb(169, 168, 168);
+    border-radius: 5px;
+  }
+
+  .marker {
+    top: 41%;
+    left: 40%;
+  }
+}
+
+
