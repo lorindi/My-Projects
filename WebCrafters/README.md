@@ -134,7 +134,7 @@ Project Screenshots:
 # ABOUT US
 <p align="center"><img src="./frontend/public/images/Readme/DeleteItSpecialist.png"  width="1000" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/CreateItSpecialist.png"  width="1000" height="540/"></p>
-<p align="center"><img src="./frontend/public/images/Readme/EditITSpecialist.png"  width="1000" height="540/"></p>
+<p align="center"><img src="./frontend/public/images/Readme/EditItSpecialist.png"  width="1000" height="540/"></p>
 
 <p align="center"><img src="./frontend/public/images/Readme/AboutUs1.png"  width="1000" height="540/"></p>
 <p align="center"><img src="./frontend/public/images/Readme/AboutUs2.png"  width="1000" height="540/"></p>
