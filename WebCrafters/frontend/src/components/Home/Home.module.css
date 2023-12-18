@@ -148,7 +148,13 @@
     border: 3px solid rgba(173, 216, 230, 0.495);
     font-weight: 600;
     transition: 0.5s;
-
+}
+.linkLatestSites:active {
+    background-color: #1b2d3f;
+    color: lightgreen;
+    border: 3px solid rgba(144, 238, 144, 0.854);
+    font-weight: 600;
+    transition: 0.5s;
 }
 
 .containerLatestSites {
@@ -358,17 +364,26 @@
     background-color: #1b2d3f;
     padding: 5px 50px;
     border-radius: 5px;
-    width: 110px;
+    width: 135px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
+
 
 .homePageLink:hover {
     color: lightblue;
+    border: 3px solid rgba(173, 216, 230, 0.811);
+    font-weight: 600;
+
 }
 
 .homePageLink:active {
-    color: lightgreen;
+    color: #1B2D3F;
+    background-color: lightgreen;
+    border: 3px solid lightgreen;
+    font-weight: 800;
+
+
 }
 
 /* -------------------------------------------------------RESPONSIVE-320-------------------------------------------------------------------- */
@@ -694,8 +709,8 @@
 
 }
 
-/* ---------------------------------------------800-------------------------------- */
-@media screen and (min-width: 601px) and (max-width: 800px) {
+/* ----------------------------------------------------------------800------------------------------------------------------------------- */
+@media (min-width: 601px) and (max-width: 800px) {
 
     * {
         overflow-x: hidden;
@@ -866,8 +881,8 @@
     }
 }
 
-/* ------------------------------1024---------------------------------------- */
-@media only screen and (min-width: 800px) and (max-width: 1025px) {
+/* -----------------------------------------------------------1024---------------------------------------------------------------------- */
+@media (min-width: 800px) and (max-width: 1025px) {
     * {
         overflow-x: hidden;
     }
@@ -1055,12 +1070,12 @@
 
 }
 
-@media screen and (min-width: 1026px) and (max-width: 1194) {
-
+@media (min-width: 1026px) and (max-width: 1194) {
     .contactsInfo {
 
-        display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+        /* min-height: 700px; */
+        padding: 50px 0px 50px 0px;
     }
 }

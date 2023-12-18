@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from "./CreateItSpecialist.module.css";
 import { useNavigate } from "react-router-dom";
 import * as teamService from "../../../services/teamService";

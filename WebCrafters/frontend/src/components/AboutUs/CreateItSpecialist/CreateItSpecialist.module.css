@@ -9,10 +9,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 90vh;
+    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
-padding-bottom: 30px;
+    padding-bottom: 30px;
 }
+
 h1 {
     margin-bottom: 70px;
     color: lightblue;
@@ -21,6 +22,7 @@ h1 {
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
+
 .createItSpecialistForm {
     display: flex;
     flex-direction: column;
@@ -32,7 +34,8 @@ h1 {
     position: relative;
     border-radius: 5px;
 }
-.createItSpecialistForm > div {
+
+.createItSpecialistForm>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,10 +44,12 @@ h1 {
     /* height: 100px; */
 
 }
+
 .createItSpecialistForm>div:nth-child(5) {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 
 }
+
 .createItSpecialistLabel {
     display: flex;
     flex-direction: column;
@@ -59,6 +64,7 @@ h1 {
     font-weight: 500;
 
 }
+
 .createItSpecialistInput {
     padding: 10px;
     width: 800px;
@@ -71,6 +77,7 @@ h1 {
     font-size: 14px;
     font-weight: 500;
 }
+
 .createItSpecialistTextarea {
     width: 800px;
     height: 300px;
@@ -85,41 +92,45 @@ h1 {
     /* margin-bottom: 10px; */
 
 }
+
 .createItSpecialistButton {
     display: block;
     width: 800px;
     height: 41px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
-    border: 3px solid rgba(240, 248, 255, 0.531);
-    background-color: rgba(240, 248, 255, 0.531);
+    border: 3px solid rgba(173, 216, 230, 0.891);
+    background-color: rgba(173, 216, 230, 0.862);
     border-radius: 5px;
     margin: 20px 0px 25px 0px;
 
 
 }
 
-.createSiteInput:hover, .createSiteTextarea:hover {
+.createItSpecialistInput:hover,
+.createItSpecialistTextarea:hover {
     box-shadow: 0px 0px 10px 1px rgba(173, 216, 230, 0.474);
 
 }
 
-.createSiteInput:focus, .createSiteTextarea:focus {
+.createItSpecialistInput:focus,
+.createItSpecialistTextarea:focus {
     box-shadow: 0px 0px 15px 1px rgba(173, 216, 230, 0.767);
 
 }
 
-.createSiteButton:hover {
-    border: 3px solid rgba(240, 248, 255, 0.531);
+.createItSpecialistButton:hover {
+    border: 3px solid lightblue;
     background-color: #1B2D3F;
-    color: rgba(240, 248, 255, 0.531);
-
+    color: lightblue;
+    transition: 0.5s;
 
 
 }
-.createSiteButton:active {
+
+.createItSpecialistButton:active {
     border: 3px solid lightgreen;
     background-color: #1B2D3F;
     color: lightgreen;

@@ -27,6 +27,8 @@
 .cardLatestSite:active {
     box-shadow: 0px 0px 100px 1px rgba(144, 238, 144, 0.543);
 }
+
+
 .cardLatestSite:hover .latestSiteImg {
     opacity: 1;
 }

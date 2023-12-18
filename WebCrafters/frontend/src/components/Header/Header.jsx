@@ -52,7 +52,7 @@ export const Header = () => {
               </div> */}
             </div>
 
-            <div className={styles.navBarEl}>
+            <div className={`${styles.navBarEl} ${styles.navBarElButton}`}>
               <button
                 className={`${styles.linkButton} ${styles.link} ${styles.dropbtn}`}
               >

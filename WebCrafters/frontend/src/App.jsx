@@ -20,6 +20,8 @@ import { Details } from "./components/Application/Details/Details";
 import { Edit } from "./components/Application/Edit/Edit";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import AuthGuard from "./components/Guards/AuthGuard";
+import AdminGuard from "./components/Guards/AdminGuard";
+
 import { UnauthorizedGuard } from "./components/Guards/UnauthorizedGuard";
 
 function App() {
@@ -43,13 +45,18 @@ function App() {
               <Route path={Path.SiteDetails} element={<Details />} />
 
               <Route element={<AuthGuard />}>
-                {/* <Route path={Path.CreateItSpecialist} element={<CreateItSpecialist />} /> */}
-                <Route path={Path.EditItSpecialist} element={<EditItSpecialist />} />
-
                 <Route path="/sites/create" element={<Create />} />
                 <Route path={Path.SiteEdit} element={<Edit />} />
                 <Route path={Path.Logout} element={<Logout />} />
               </Route>
+
+              <Route element={<AdminGuard/>}>
+                <Route
+                  path={Path.EditItSpecialist}
+                  element={<EditItSpecialist />}
+                />
+              </Route>
+              
             </Routes>
           </main>
           <Footer />

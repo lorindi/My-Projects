@@ -13,34 +13,45 @@ https://www.youtube.com/watch?v=qRL_dQfWIUQ&t=59s
 # Technologies used in the project:
 
 *   React
-*   HTML, CSS 
 *   JavaScript
+*   HTML & CSS 
 *   Toastify
 *   EmailJS
-*   Node.js (custom backend server)
-*   General Requirements:
-*   The main part includes a sites (dashboard) for managing websites.
+*   Fontawesome
 *   APIs:
     - Weather API: https://openweathermap.org/api
-*   Fontawesome
+*   Node.js (custom backend server)
 
-# A guest has access to:
+# Guest has access to:
+      * Homepage
+      * Page About us
+      * Login page
+      * Registration page
 
-    * Home page
-    * About us page
-    * Login page
-    * Register page
+# Authenticated user has access to:
+     * Homepage
+      * Page About us
+      * Sites page
+      * Create a site
+      * Editing the site
+      * Delete the site
+      * Create a comment on the site
+      * Delete a comment on the site
+      * Logout
 
-# An authenticated user (Web Crafter) has access to:
-
-    * Sites page
-    * Create a site
-    * Editing the site
-    * Delete the site
-    * Create a comment on the site
-    * Delete a comment on the site
-    * Profile
-    * Log out of your account
+# Authenticated admin user has access to:
+      * Homepage
+      * Page About us
+      * Creating an IT specialist
+      * Editing by an IT professional
+      * Delete an IT professional
+      * Sites page
+      * Create a site
+      * Editing the site
+      * Delete the site
+      * Create a comment on the site
+      * Delete a comment on the site
+      * Logout
 
 ###########################################################################################################
 

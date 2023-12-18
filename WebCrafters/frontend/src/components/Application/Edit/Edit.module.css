@@ -90,10 +90,10 @@ h1 {
     height: 41px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
-    border: 3px solid rgba(240, 248, 255, 0.531);
-    background-color: rgba(240, 248, 255, 0.531);
+    border: 3px solid lightblue;
+    background-color: lightblue;
     border-radius: 5px;
     margin: 20px 0px 25px 0px;
 
@@ -101,7 +101,7 @@ h1 {
 
 }
 
-.editSiteInput:hover {
+.editSiteInput:hover, .editSiteTextarea:hover {
     box-shadow: 0px 0px 10px 1px rgba(173, 216, 230, 0.474);
 
 }
@@ -112,10 +112,10 @@ h1 {
 }
 
 .editSiteButton:hover {
-    border: 3px solid rgba(240, 248, 255, 0.531);
+    border: 3px solid lightblue;
     background-color: #1B2D3F;
-    color: rgba(240, 248, 255, 0.531);
-
+    color: lightblue;
+    transition: 0.5s;
 
 
 }

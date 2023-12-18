@@ -19,11 +19,11 @@
   border: none;
   padding: 0px 18px;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 5px;
-  border: 2px solid #1b2d3f;
+  border: 3px solid #1b2d3f;
   background-color: rgba(173, 216, 230, 0.744);
   color: black;
 
@@ -31,14 +31,20 @@
 
 .formWeather button:hover {
   cursor: pointer;
-  scale: 1.05;
   background-color: #1b2d3f;
   color: lightblue;
-  border: 2px solid rgba(173, 216, 230, 0.495);
+  border: 3px solid rgba(173, 216, 230, 0.495);
   font-weight: 600;
   transition: 0.5s;
 }
-
+.formWeather button:active {
+  cursor: pointer;
+  background-color: #1b2d3f;
+  color: lightgreen;
+  border: 3px solid rgba(144, 238, 144, 0.834);
+  font-weight: 600;
+  transition: 0.5s;
+}
 .formWeather input {
   padding: 10px;
   border-radius: 5px;
@@ -134,12 +140,13 @@
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1194px) {
   .containerWeather {
     width: 320px;
     flex-direction: column;
     min-height: 550px;
     align-items: center;
+
   }
 
   .formWeather {

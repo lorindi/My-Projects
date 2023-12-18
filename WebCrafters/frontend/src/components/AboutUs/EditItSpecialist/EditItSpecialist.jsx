@@ -85,45 +85,45 @@ export const EditItSpecialist = () => {
       <h1>Edit IT Specialist</h1>
       <form
         action=""
-        className={styles.EditItSpecialistForm}
+        className={styles.editItSpecialistForm}
         onSubmit={editItSpecialistSubmitHandler}
         method="post"
       >
         <div>
-          <label htmlFor="image" className={styles.EditItSpecialistLabel}>
+          <label htmlFor="image" className={styles.editItSpecialistLabel}>
             Image
           </label>
           <input
             type="text"
             name="image"
-            className={styles.EditItSpecialistInput}
+            className={styles.editItSpecialistInput}
             placeholder="Must start with https://"
             onChange={onChange}
             value={team.image}
           />
         </div>
         <div>
-          <label htmlFor="name" className={styles.EditItSpecialistLabel}>
+          <label htmlFor="name" className={styles.editItSpecialistLabel}>
             Name
           </label>
           <input
             type="text"
             name="name"
-            className={styles.EditItSpecialistInput}
+            className={styles.editItSpecialistInput}
             placeholder="At least three characters"
             onChange={onChange}
             value={team.name}
           />
         </div>
         <div>
-          <label htmlFor="description" className={styles.EditItSpecialistLabel}>
+          <label htmlFor="description" className={styles.editItSpecialistLabel}>
             Description
           </label>
           <textarea
             name="description"
             rows="4"
             cols="50"
-            className={styles.EditItSpecialistTextarea}
+            className={styles.editItSpecialistTextarea}
             placeholder="At least ten characters"
             onChange={onChange}
             value={team.description}
@@ -131,7 +131,7 @@ export const EditItSpecialist = () => {
         </div>
         <input
           type="submit"
-          className={styles.EditItSpecialistButton}
+          className={styles.editItSpecialistButton}
           value="Edit"
         />
       </form>

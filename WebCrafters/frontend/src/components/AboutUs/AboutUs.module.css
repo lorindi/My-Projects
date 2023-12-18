@@ -5,6 +5,14 @@
 
 
 /* ----------------------------------about-us-------------------------------------- */
+.faPenToSquare {
+  color: lightblue;
+}
+.deleteItSpecialistButton{
+  color: lightblue;
+background-color: #1B2D3F;
+border: none;
+}
 .wholeTeam {
   display: flex;
   flex-direction: column;
@@ -13,17 +21,6 @@
 
 }
 
-/* .first-section {
-    background-color: #F2E9DE;
-}
-.second-section {
-    background-color: #FFC1B4;
-
-}
-.third-section {
-    background-color: #98E2C6;
-
-} */
 .wholeTeamLinks {
   position: fixed;
   left: 80px;
@@ -50,18 +47,22 @@
   border-radius: 5px;
   width: 135px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .nameLink:hover {
   color: lightblue;
+  border: 3px solid rgba(173, 216, 230, 0.811);
 }
 .nameLink:active {
-  color: lightgreen;
+  color: #1B2D3F;
+  background-color: lightgreen;
+  border: 3px solid lightgreen;
+
 }
 .nameLinkCreate{
   position: fixed;
-  bottom: 190px;
+  bottom: 185px;
   left: 80px;
   display: flex;
   flex-direction: column;
@@ -78,6 +79,17 @@
   text-transform: uppercase;
   font-weight: 500;
 }
+
+.nameLinkCreate:hover {
+  color: lightblue;
+  border: 3px solid lightblue;
+}
+.nameLinkCreate:active {
+  color: lightgreen;
+  border: 3px solid lightgreen;
+
+}
+
 .partTeam {
   flex-wrap: wrap;
   display: flex;

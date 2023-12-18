@@ -42,7 +42,7 @@
     font-weight: 600;
     letter-spacing: 1px;
     border-radius: 5px;
-    border: 2px solid #1b2d3f;
+    border: 3px solid #1b2d3f;
     background-color: rgba(173, 216, 230, 0.744);
     color: black;
 
@@ -53,7 +53,16 @@
     cursor: pointer;
     background-color: #1b2d3f;
     color: lightblue;
-    border: 2px solid rgba(173, 216, 230, 0.495);
+    border: 3px solid rgba(173, 216, 230, 0.495);
+    font-weight: 600;
+    transition: 0.5s;
+  }
+
+  .gmailFormButton:active {
+    cursor: pointer;
+    background-color: #1b2d3f;
+    color: lightgreen;
+    border: 3px solid lightgreen;
     font-weight: 600;
     transition: 0.5s;
   }
