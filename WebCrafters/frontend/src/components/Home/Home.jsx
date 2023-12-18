@@ -8,7 +8,9 @@ import { useContext } from "react";
 import { Contexts } from "../../contexts/Contexts";
 import { Weather } from "./Weather/Weather";
 import { Gmail } from "./Gmail/Gmail";
-
+import infoImg from "./pngwing.com (1).png";
+import teamImg from "./pngwing.com (2).png";
+import latestImg from "./pngwing.com (3).png";
 // eslint-disable-next-line react/prop-types, no-unused-vars
 export const Home = ({ _id, accessToken, email }) => {
   const [latestSites, setLatestSites] = useState([]);
@@ -91,11 +93,7 @@ export const Home = ({ _id, accessToken, email }) => {
               </div>
             </div>
           ) : (
-            <img
-              className={styles.elseImgLatestSites}
-              src="../../../src/components/Home/pngwing.com (6).png"
-              alt=""
-            />
+            <img className={styles.elseImgLatestSites} src={latestImg} alt="" />
           )}
         </section>
       )}
@@ -105,11 +103,7 @@ export const Home = ({ _id, accessToken, email }) => {
         className={`${styles.containerInformationSection} ${styles.dark}`}
       >
         <div className={`${styles.contentInformationSection} ${styles.dark}`}>
-          <img
-            className={styles.informationImg}
-            src="../../../src/components/Home/pngwing.com (1).png"
-            alt=""
-          />
+          <img className={styles.informationImg} src={infoImg} alt="" />
           <div className={styles.contentInfo}>
             <h1 className={`${styles.infoTitle} ${styles.dark}`}>
               Welcome to Web Crafters!
@@ -140,7 +134,7 @@ export const Home = ({ _id, accessToken, email }) => {
             Meet the Team
           </Link>
         </div>
-        <img src="../../../src/components/Home/pngwing.com (2).png" alt="" />
+        <img src={teamImg} alt="" />
       </section>
 
       <section
@@ -151,8 +145,7 @@ export const Home = ({ _id, accessToken, email }) => {
           <Weather />
         </div>
 
-          <Gmail />
-
+        <Gmail />
       </section>
     </>
   );
