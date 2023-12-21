@@ -1,0 +1,17 @@
+https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+Peter
+Peter Johnson is a dedicated IT specialist with a strong foundation in programming languages such as Java and JavaScript. His expertise extends to database management and system architecture, enabling him to design and implement robust and scalable solutions. Peter's proficiency in troubleshooting and problem-solving makes him an asset in resolving complex technical issues. With a keen eye for detail and a passion for innovation, Peter is committed to delivering high-quality results and contributing to the success of web development projects.
+
+
+https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+Sara
+Sara Miller is a seasoned technology professional with a focus on front-end development and user interface design. Proficient in HTML, CSS, and JavaScript, Sara crafts engaging and intuitive web experiences. Her creativity shines through in her ability to design visually appealing layouts and interactive elements. Sara's collaborative approach and effective communication skills make her an essential team player. With a commitment to staying updated on industry trends, Sara brings a fresh perspective to every project, ensuring cutting-edge solutions and user-friendly interfaces.
+
+
+https://images.unsplash.com/photo-1520341280432-4749d4d7bcf9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+Alex
+Alex Reynolds is a results-driven IT specialist specializing in backend development and server-side technologies. With a strong background in Python and Node.js, Alex designs and implements efficient and scalable server architectures. His analytical mindset and attention to detail contribute to the development of robust and secure applications. Alex's dedication to optimizing code and improving performance results in streamlined and high-performing software solutions. With a passion for continuous learning, Alex stays ahead of technological advancements, making him a valuable asset to any web development team.
+
+https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+Emma
+Emma Turner is a dynamic IT professional with expertise in full-stack development and a focus on data-driven applications. Proficient in languages such as React and Python, Emma develops end-to-end solutions that seamlessly integrate front-end and back-end functionalities. Her ability to analyze user requirements and translate them into technical specifications ensures the delivery of tailored and effective software. Emma's commitment to writing clean and maintainable code reflects in the reliability and scalability of her applications. With a collaborative mindset, Emma thrives in team environments, contributing to the success of diverse web development projects.
