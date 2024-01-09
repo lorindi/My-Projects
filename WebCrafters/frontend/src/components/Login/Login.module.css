@@ -73,7 +73,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 
 
 
@@ -85,7 +85,7 @@
 .loginPageFormAuthenticationHeaderRegister span a {
     text-decoration: none;
     /* font-family: 'Barlow', sans-serif; */
-    color: #ADB3B5;
+    /* color: lightgray; */
     font-size: 25px;
     letter-spacing: 1.5px;
 
@@ -95,19 +95,12 @@
 .loginPageFormAuthenticationHeaderLogin,
 .loginPageFormAuthenticationHeaderRegister {
 
-    border-bottom: 2px solid rgba(142, 236, 142, 0.6);
+    /* border-bottom: 2px solid gray; */
 
-    padding-bottom: 15px;
-
-}
-
-.loginPageFormAuthenticationHeaderLogin:hover,
-.loginPageFormAuthenticationHeaderRegister:hover {
-    border-bottom: 2px solid rgba(142, 236, 142, 1);
-
-
+    padding-bottom: 20px;
 
 }
+
 
 /* -----------Form--------------*/
 

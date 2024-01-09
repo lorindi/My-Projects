@@ -6,9 +6,12 @@
     font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.411);
-    /* background: linear-gradient(25deg, #3abec57c, #9abe5c79); */
+    /* background-color: rgba(0, 0, 0, 0.245); */
+    background: linear-gradient(25deg, #a7cf6380, #3ecbd27d);
     position: relative;
+   
+
+
 
 }
 
@@ -18,6 +21,7 @@
     flex-direction: column;
     align-items: center;
     height: 350px;
+    height: 75vh;
     justify-content: center;
     
 
@@ -32,18 +36,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../images/brian-erickson-CBHxASbfH4s-unsplash.jpg');
+    background: url('../images/chermiti-mohamed-Mh3VpxeokRY-unsplash.jpg');
     background-size: cover;
     background-position: center;
+    opacity: 0.7;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    filter: grayscale();
+    /*filter: grayscale();*/
     z-index: -1;
 
 }
 
 
 .header-title {
-    font-size: 35px;
+    font-size: 50px;
     font-weight: 400;
     margin-bottom: 40px;
     text-shadow: 1px 1px 1px black;
@@ -88,9 +93,9 @@
     background: url('../images/pngwing.com.png');
     background-size: 45%;
     background-position: bottom;
-    opacity: 0.5;
+    opacity: 0.3;
     background-repeat: no-repeat;
-    filter: grayscale();
+    /* filter: grayscale(); */
     z-index: -1;
     perspective: 800px;
     animation: rotate 5s linear forwards;
@@ -199,13 +204,13 @@
     background-position: center;
     object-fit: cover;
     background-size: contain;
-    filter: grayscale(80%);
+    filter: grayscale(50%);
 
 }
 
 .cystic-fibrosis-organ-pancreas-image {
     width: 118px;
-    filter: grayscale(80%);
+    filter: grayscale(50%);
 
 }
 
@@ -216,7 +221,7 @@
     background-position: center;
     object-fit: cover;
     background-size: contain;
-    filter: grayscale(80%);
+    filter: grayscale(50%);
 
 
 
@@ -229,7 +234,7 @@
     background-position: center;
     object-fit: cover;
     background-size: contain;
-    filter: grayscale(80%);
+    filter: grayscale(50%);
 }
 
 .cystic-fibrosis-symptoms {
@@ -360,11 +365,13 @@
     height: 350px;
     width: 250px;
     transition: .5s;
-    filter: grayscale();
+    /* filter: grayscale(); */
     background-position: center;
     object-fit: cover;
     background-size: contain;
     opacity: 0.8;
+    /* background: linear-gradient(25deg, #a7cf6380, #3ecbd27d); */
+
 }
 
 .intro {
@@ -373,6 +380,8 @@
     width: 250px;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.705);
+    /* background: linear-gradient(25deg, #a7cf6380, #3ecbd27d); */
+
     color: black;
     bottom: 0px;
     box-sizing: border-box;
@@ -396,16 +405,20 @@
     margin: 14px;
     visibility: hidden;
     opacity: 0;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 2px;
     text-align: center;
+    /* text-align: justify; */
+    line-height: 32px;
+    
 
 
 }
 
 .about-us-description {
-    font-weight: 450;
+    font-weight: 600;
     font-size: 13.5px;
+
 }
 
 .card:hover {
@@ -416,9 +429,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 220px;
+    height: 350px;
     bottom: 0px;
     background-color: rgba(255, 255, 255, 0.774);
+    /* background: linear-gradient(25deg, #a7cf6380, #3ecbd27d); */
+
     backdrop-filter: blur(7px);
 }
 

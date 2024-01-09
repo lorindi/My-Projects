@@ -1,5 +1,5 @@
 import styles from "./Login.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { Contexts } from "../../contexts/Contexts";
 import { useForm } from "../../hooks/useForm";
@@ -50,14 +50,28 @@ export const Login = () => {
           >
             <article className={styles.loginPageFormAuthenticationHeaderLogin}>
               <span>
-                <Link to="/login">Login</Link>
+                <NavLink 
+                to="/login"
+                style={({ isActive }) => ({
+                  color: isActive ? "rgba(142, 236, 142, 1)" : "gray",
+                  borderBottom: isActive ? "2px solid rgba(142, 236, 142, 1)" : "2px solid gray",
+                  paddingBottom: "20px",
+                })}
+                >Login</NavLink>
               </span>
             </article>
             <article
               className={styles.loginPageFormAuthenticationHeaderRegister}
             >
               <span>
-                <Link to="/register">Register</Link>
+                <NavLink 
+                to="/register"
+                style={({ isActive }) => ({
+                  color: isActive ? "rgba(142, 236, 142, 1)" : "gray",
+                  borderBottom: isActive ? "2px solid rgba(142, 236, 142, 1)" : "2px solid gray",
+                  paddingBottom: "20px",
+                })}
+                >Register</NavLink>
               </span>
             </article>
           </header>

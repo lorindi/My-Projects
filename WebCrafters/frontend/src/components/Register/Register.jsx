@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import styles from "./Register.module.css";
 import { toast } from "react-toastify";
 import { Contexts } from "../../contexts/Contexts";
@@ -47,14 +47,34 @@ export const Register = () => {
               className={styles.registerPageFormAuthenticationHeaderLogin}
             >
               <span>
-                <Link to="/login">Login</Link>
+                <NavLink
+                  to="/login"
+                  style={({ isActive }) => ({
+                    color: isActive ? "rgba(142, 236, 142, 1)" : "gray",
+                    borderBottom: isActive ? "2px solid rgba(142, 236, 142, 1)" : "2px solid gray",
+                    paddingBottom: "20px",
+                  })}
+                >
+                  Login
+                </NavLink>
               </span>
             </article>
             <article
               className={`${styles.registerPageFormAuthenticationHeaderRegister}`}
             >
               <span>
-                <Link to="/register">Register</Link>
+                <NavLink
+                  to="/register"
+                  style={({ isActive }) => ({
+                    color: isActive ? "rgba(142, 236, 142, 1)" : "gray",
+                    borderBottom: isActive
+                      ? "2px solid rgba(142, 236, 142, 1)"
+                      : "2px solid gray",
+                    paddingBottom: "20px",
+                  })}
+                >
+                  Register
+                </NavLink>
               </span>
             </article>
           </header>
@@ -107,7 +127,8 @@ export const Register = () => {
                   onChange={handleInputChange}
                   required="required"
                 />
-                <span>Confirm Password</span>
+                <span>Password</span>
+
               </div>
               <div className={`${styles.forms} ${styles.inputBox}`}>
                 <input
@@ -119,7 +140,8 @@ export const Register = () => {
                   onChange={handleInputChange}
                   required="required"
                 />
-                <span>Password</span>
+                <span>Confirm Password</span>
+
               </div>
               {getFault() && (
                 <p className={styles.registerError}>{getFault()}</p>
