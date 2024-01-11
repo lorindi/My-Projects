@@ -71,6 +71,7 @@
 .tables-links,
 .new-events-links,
 .user-links,
-.cart-link {
-    border-radius: 3px;
+.cart-link,
+.cystic-fibrosis-links{
+    border-radius: 5px;
 }

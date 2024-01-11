@@ -1,14 +1,22 @@
+.main-donations-create-edit-card {
+    /* background: linear-gradient(25deg, #a7cf639d, #3ecbd2a9); */
+    min-height: 100vh;
+    width: 100%;
+}
+
 .container-donation-create-edit-card {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    /* margin-top: 25px;
+    margin-bottom: 25px; */
     display: flex;
     flex-direction: column;
     /* backdrop-filter: blur(5px); */
     padding: 10px;
-    min-width: 25%;
-    width: auto;
-    height: auto;
+    /* min-width: 25%; */
+    /* width: auto; */
+    /* height: auto; */
+    min-height: 100%;
     align-items: center;
+    width: 100%;
     justify-content: space-evenly;
     font-family: 'Montserrat', sans-serif;
 
@@ -24,9 +32,12 @@
 
 .donation-create-edit-card-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    width: 900px;
+    height: 600px;
+    flex-wrap: wrap;
 
 
 }
@@ -34,7 +45,7 @@
 .donation-create-edit-card-form div {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 350px;
     margin: 8px;
 
 
@@ -45,7 +56,7 @@
     font-size: 16px;
     letter-spacing: 1px;
     font-weight: 400;
-    width: 300px;
+    width: 350px;
 
 
 }
@@ -54,7 +65,7 @@
 #id_purpose,
 #id_topics,
 #id_contact_information {
-    min-height: 100px;
+    min-height: 200px;
 }
 
 #id_title,
@@ -74,12 +85,12 @@
 #id_contact_phone {
 
 
-    padding: 5px 10px;
-    letter-spacing: 1px;
+    padding: 10px 15px;
+    letter-spacing: 1.5px;
     font-size: 15.5px;
     font-style: italic;
     font-weight: 500;
-    width: 300px;
+    width: 350px;
 
 
 

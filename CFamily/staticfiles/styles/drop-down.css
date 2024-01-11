@@ -2,14 +2,15 @@
     display: none;
     position: absolute;
     width: 100%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    /* background-color: #F1F2F4; */
     width: calc(100vw - 5rem);
     left: 2rem;
     z-index: 1;
     padding: 20px;
     min-height: 200px;
     box-shadow: 0px 0px 3px 0px lightgrey;
-
+    backdrop-filter: blur(20px);
 }
 
 .dropdown-content>ul {
@@ -20,38 +21,71 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-
-
 }
+
 .dropdown-content>ul>li {
-   padding-bottom: 15px;
-   padding-right: 20px;
+    padding-bottom: 15px;
+    padding-right: 20px;
 }
 
 .dropdown-content a {
+    position: relative;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: 1px;
-    font-weight: 500;
-    color: black;
-    padding-bottom: 5px;
-    border-bottom: 2px solid lightgrey;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.552);
+    padding-bottom: 10px;
+    overflow: hidden;
 }
 
+.dropdown-content a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(25deg, #a7cf63e9, #3ecbd2e9);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover:after {
+    background: linear-gradient(25deg, #00d6e1, #90e400);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.dropdown-content a:hover {
+    background: linear-gradient(to right,#578a00, #008187);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: 0.5s;
+    cursor: pointer;
+}
 .dropdown-content>h3 {
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    font-weight: 500;
-    font-size: 25px;
+    font-weight: 600;
+    font-size: 28px;
     letter-spacing: 1px;
     padding: 5px;
-
+    margin-bottom: 20px;
+    /* background: -webkit-linear-gradient(#00d6e1, #90e400);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    background: linear-gradient(to right, #90e400, #a7cf63e9, #00d6e1, #3ecbd2e9);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  
 
 }
 
+
 .dropdown-content a:hover {
+    cursor: pointer;
     z-index: 1;
 }
 
@@ -85,10 +119,11 @@
         border-bottom: 2px solid lightgrey;
         padding-bottom: 5px;
         display: flex;
-    
+
     }
+
     .dropdown-content a {
-        
+
         text-decoration: none;
         font-size: 15px;
         letter-spacing: 0.5px;
@@ -99,10 +134,10 @@
     }
 
     .dropdown-content>h3 {
-       
+
         font-size: 17px;
         letter-spacing: 0.5px;
-       
+
 
 
     }

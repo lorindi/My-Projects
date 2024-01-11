@@ -6,7 +6,7 @@ font-family: 'Roboto', sans-serif; */
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
-    height: 100%;
+    min-height: 100vh;
 
 
 }
@@ -62,7 +62,8 @@ font-family: 'Roboto', sans-serif; */
 .books-links,
 .tables-links,
 .new-events-links,
-.user-links {
+.user-links,
+.cystic-fibrosis-links{
     height: 45px;
     border: none;
     background-color: white;
@@ -87,7 +88,8 @@ font-family: 'Roboto', sans-serif; */
 .books-links:hover,
 .tables-links:hover,
 .new-events-links:hover,
-.user-links:hover {
+.user-links:hover,
+.cystic-fibrosis-links:hover{
 
     background-color: #F1F2F4;
 
@@ -110,7 +112,8 @@ font-family: 'Roboto', sans-serif; */
 .fa-square-plus,
 .fa-shop,
 .fa-cart-shopping,
-.fa-arrow-right-from-bracket {
+.fa-arrow-right-from-bracket,
+.fa-circle-info{
     padding: 5px 30px;
     font-size: 25px;
 

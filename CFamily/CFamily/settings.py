@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'initiatives',
     'events',
     'charitable_treks',
+    'cystic_fibrosis',
 
 
 ]

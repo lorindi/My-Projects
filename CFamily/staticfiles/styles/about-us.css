@@ -9,24 +9,14 @@
     /* background-color: rgba(0, 0, 0, 0.245); */
     background: linear-gradient(25deg, #a7cf6380, #3ecbd27d);
     position: relative;
-   
-
-
-
 }
-
 
 .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 350px;
-    height: 75vh;
+    height: 95vh;
     justify-content: center;
-    
-
-
-
 }
 
 .header-section::before {
@@ -38,35 +28,34 @@
     bottom: 0;
     background: url('../images/chermiti-mohamed-Mh3VpxeokRY-unsplash.jpg');
     background-size: cover;
-    background-position: center;
-    opacity: 0.7;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background-position: top;
+    opacity: 1;
+    clip-path: polygon(0 30%, 90% 0, 100% 100%, 0 100%);
     /*filter: grayscale();*/
     z-index: -1;
-
 }
 
-
 .header-title {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 400;
     margin-bottom: 40px;
     text-shadow: 1px 1px 1px black;
 }
 
 .header-description {
-    font-size: 22px;
+    font-size: 30px;
     text-shadow: 1px 1px 1px black;
     margin-bottom: 40px;
     font-weight: 400;
 }
 
 .support-button {
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 500;
     padding: 7px 15px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-bottom: 280px;
 }
 
 /* -------------------------------header-section------------------------------------------ */
@@ -381,7 +370,6 @@
     position: absolute;
     background-color: rgba(255, 255, 255, 0.705);
     /* background: linear-gradient(25deg, #a7cf6380, #3ecbd27d); */
-
     color: black;
     bottom: 0px;
     box-sizing: border-box;
