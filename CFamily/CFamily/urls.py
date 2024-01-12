@@ -16,5 +16,5 @@ urlpatterns = [
     path('benefactor/', include('benefactors.urls')),
     path('initiative/', include('initiatives.urls')),
     path('treks/', include('charitable_treks.urls')),
-    path('cf/', include('cystic_fibrosis.urls'))
+    path('cf/', include('cystic_fibrosis.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

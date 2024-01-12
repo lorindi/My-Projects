@@ -32,31 +32,37 @@
 
                     </div>
                 </div>
-                <div class="books dropdown">
+                <div class="cf dropdown">
                     <button class="cystic-fibrosis-links dropbtn"><i class="fa-solid fa-circle-info"></i></button>
                     <div class="dropdown-content">
                         <h3>Cystic fibrosis?</h3>
-                        <ul role="list">
-                            <li><a href="#">How is CF diagnosed?</a></li>
-                            <li><a href="#">How is CF treated?</a></li>
-                            <li><a href="#">How does CF affect the body?</a></li>
-                            <li><a href="#">What are the causes of CF?</a></li>
-                            <li><a href="#">Frequently Asked Questions?</a></li>
-                            <li><a href="#">CF in fiction?</a></li>
-                            <li><a href="#">CF for teachers?</a></li>
-                            <li><a href="#">Life with CF?</a></li>
-                            <li><a href="#">Hobbies with CF?</a></li>
-                            <li><a href="#">Everyday life with CF?</a></li>
-                            <li><a href="#">Physical activity with CF?</a></li>
-                            <li><a href="#">Optimal nutrition in CF?</a></li>
-                            <li><a href="#">Career with CF?</a></li>
-                            <li><a href="#">Young people with CF?</a></li>
-                            <li><a href="#">Variety in treatment?</a></li>
-                            <li><a href="#">Parents and children with CF?</a></li>
-                            <li><a href="#">Psychological health with CF?</a></li>
-
-
-                        </ul>
+                        {{ items }}
+                        {% for cf_item in items %}
+                            <a href="#">{{ cf_item.title }}</a>
+                        {% endfor %}
+{#                        {% block cystic_fibrosis %}#}
+{#                        {% endblock %}#}
+{#                        <ul role="list">#}
+{#                            <li><a href="#">How is CF diagnosed?</a></li>#}
+{#                            <li><a href="#">How is CF treated?</a></li>#}
+{#                            <li><a href="#">How does CF affect the body?</a></li>#}
+{#                            <li><a href="#">What are the causes of CF?</a></li>#}
+{#                            <li><a href="#">Frequently Asked Questions?</a></li>#}
+{#                            <li><a href="#">CF in fiction?</a></li>#}
+{#                            <li><a href="#">CF for teachers?</a></li>#}
+{#                            <li><a href="#">Life with CF?</a></li>#}
+{#                            <li><a href="#">Hobbies with CF?</a></li>#}
+{#                            <li><a href="#">Everyday life with CF?</a></li>#}
+{#                            <li><a href="#">Physical activity with CF?</a></li>#}
+{#                            <li><a href="#">Optimal nutrition in CF?</a></li>#}
+{#                            <li><a href="#">Career with CF?</a></li>#}
+{#                            <li><a href="#">Young people with CF?</a></li>#}
+{#                            <li><a href="#">Variety in treatment?</a></li>#}
+{#                            <li><a href="#">Parents and children with CF?</a></li>#}
+{#                            <li><a href="#">Psychological health with CF?</a></li>#}
+{##}
+{##}
+{#                        </ul>#}
                     </div>
                 </div>
                 <div class="shop dropdown">
@@ -147,7 +153,8 @@
                                     hike</a></li>
                                 <li><a class="create-benefactors-link"
                                        href="{% url 'benefactor_create' %}">Benefactor</a></li>
-
+                                <li><a class="create-cf-link"
+                                       href="{% url 'cf_create' %}">CF</a></li>
                             </ul>
 
                         </div>

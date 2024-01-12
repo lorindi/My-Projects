@@ -1,0 +1,13 @@
+{% extends 'base/index.html' %}
+{% block content %}
+    <main class="main-cf-content">
+        <section class="container-cf-update-form">
+            <h1 class="cf-update-form-title">Edit CF</h1>
+            <form method="post" enctype="multipart/form-data" class="cf-update-form">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <button type="submit" class="cf-update-form-button btn btn-primary">Create CF</button>
+            </form>
+        </section>
+    </main>
+{% endblock %}
