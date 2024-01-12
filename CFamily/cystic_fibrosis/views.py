@@ -1,16 +1,20 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, ListView
-
 from cystic_fibrosis.models import CysticFibrosis
 from mixins.mixins import GroupRequiredMixin
 
-class CysticFibrosisHowIsCFDiagnosedListView(LoginRequiredMixin, ListView):
+class CysticFibrosisDiagnosedListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
-    template_name = 'cystic_fibrosis/cf_how_is_cf_diagnosed.html'
-    context_object_name = 'cf'
+    template_name = 'cystic_fibrosis/cf_diagnosed.html'
+    context_object_name = 'cf_diagnosed'
     queryset = CysticFibrosis.objects.filter(title='How is cystic fibrosis diagnosed?').order_by('-creation_time')
+
+class CysticFibrosisTreatListView(LoginRequiredMixin, ListView):
+    model = CysticFibrosis
+    template_name = 'cystic_fibrosis/cf_treatment.html'
+    context_object_name = 'cf'
+    queryset = CysticFibrosis.objects.filter(title='How is cystic fibrosis treated?').order_by('-creation_time')
 
 
 class CysticFibrosisListView(LoginRequiredMixin, ListView):
@@ -22,8 +26,8 @@ class CysticFibrosisListView(LoginRequiredMixin, ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['search'] = self.request.GET.get('search', '')
-        context['items'] = CysticFibrosis.objects.all()
-        print(context['items'])
+        # context['items'] = CysticFibrosis.objects.all()
+        # print(context['items'])
         return context
 
 
