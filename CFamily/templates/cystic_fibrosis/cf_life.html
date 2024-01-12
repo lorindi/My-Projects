@@ -1,0 +1,18 @@
+{% extends 'base/index.html' %}
+{% block content %}
+    <main class="main-cf-content">
+        <section class="container-list">
+            {% for cf in cf_life %}
+                <div class="cf-list">
+
+
+                    <img class="cover-cf-image" src="{{ cf.cover_image.url }}" alt="{{ cf.title }}">
+                    <h1 class="cf-title">{{ cf.title }}</h1>
+                    <p class="cf-description">{{ cf.description }}</p>
+
+
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+{% endblock %}

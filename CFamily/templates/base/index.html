@@ -27,8 +27,8 @@
                     <div class="dropdown-content">
                         <h3>News</h3>
                         <ul role="list">
-                        <li><a href="#">p</a></li>
-                    </ul>
+                            <li><a href="#">p</a></li>
+                        </ul>
 
                     </div>
                 </div>
@@ -36,27 +36,27 @@
                     <button class="cystic-fibrosis-links dropbtn"><i class="fa-solid fa-circle-info"></i></button>
                     <div class="dropdown-content">
                         <h3>Cystic fibrosis?</h3>
-{#                        {{ items }}#}
-{#                        {% for cf_item in items %}#}
-{#                            <a href="#">{{ cf_item.title }}</a>#}
-{#                        {% endfor %}#}
-{#                        {% block cystic_fibrosis %}#}
-{#                        {% endblock %}#}
+                        {#                        {{ items }}#}
+                        {#                        {% for cf_item in items %}#}
+                        {#                            <a href="#">{{ cf_item.title }}</a>#}
+                        {#                        {% endfor %}#}
+                        {#                        {% block cystic_fibrosis %}#}
+                        {#                        {% endblock %}#}
                         <ul role="list">
                             <li><a href="{% url 'cf_diagnosed' %}">How is CF diagnosed?</a></li>
-                            <li><a href={% url "cf_treatment" %}>How is CF treated?</a></li>
-                            <li><a href="#">How does CF affect the body?</a></li>
-                            <li><a href="#">What are the causes of CF?</a></li>
-                            <li><a href="#">Frequently Asked Questions?</a></li>
-                            <li><a href="#">CF in fiction?</a></li>
-                            <li><a href="#">CF for teachers?</a></li>
-                            <li><a href="#">Life with CF?</a></li>
-                            <li><a href="#">Hobbies with CF?</a></li>
-                            <li><a href="#">Everyday life with CF?</a></li>
-                            <li><a href="#">Physical activity with CF?</a></li>
-                            <li><a href="#">Optimal nutrition in CF?</a></li>
-                            <li><a href="#">Career with CF?</a></li>
-                            <li><a href="#">Young people with CF?</a></li>
+                            <li><a href="{% url "cf_treatment" %}">How is CF treated?</a></li>
+                            <li><a href="{% url "cf_affect_body" %}">How does CF affect the body?</a></li>
+                            <li><a href="{% url "cf_causes" %}">What are the causes of CF?</a></li>
+                            <li><a href="{% url "cf_questions" %}">Frequently Asked Questions?</a></li>
+                            <li><a href="{% url "cf_belles_lettres" %}">CF in fiction?</a></li>
+                            <li><a href="{% url "cf_for_teachers" %}">CF for teachers?</a></li>
+                            <li><a href="{% url "cf_life" %}">Life with CF?</a></li>
+                            <li><a href="{% url "cf_hobbies" %}">Hobbies with CF?</a></li>
+                            <li><a href="{% url "cf_everyday_life" %}">Everyday life with CF?</a></li>
+                            <li><a href="{% url "cf_physical_activity" %}">Physical activity with CF?</a></li>
+                            <li><a href="{% url "cf_nutrition" %}">Optimal nutrition in CF?</a></li>
+                            <li><a href="{% url "cf_career" %}">Career with CF?</a></li>
+                            <li><a href="{% url "cf_young_people" %}">Young people with CF?</a></li>
                             <li><a href="#">Variety in treatment?</a></li>
                             <li><a href="#">Parents and children with CF?</a></li>
                             <li><a href="#">Psychological health with CF?</a></li>
@@ -117,7 +117,6 @@
                         </ul>
                     </div>
                 </div>
-
 
 
             </div>
