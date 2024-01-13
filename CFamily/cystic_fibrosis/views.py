@@ -15,7 +15,7 @@ class CysticFibrosisDiagnosedListView(LoginRequiredMixin, ListView):
 class CysticFibrosisTreatListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
     template_name = 'cystic_fibrosis/cf_treatment.html'
-    context_object_name = 'cf'
+    context_object_name = 'cf_treatment'
     queryset = CysticFibrosis.objects.filter(title='How is cystic fibrosis treated?').order_by('-creation_time')
 
 
@@ -26,12 +26,14 @@ class CysticFibrosisAffectBodyListView(LoginRequiredMixin, ListView):
     queryset = CysticFibrosis.objects.filter(title='How does cystic fibrosis affect the body?').order_by(
         '-creation_time')
 
+
 class CysticFibrosisCausesListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
     template_name = 'cystic_fibrosis/cf_causes.html'
     context_object_name = 'cf_causes'
     queryset = CysticFibrosis.objects.filter(title='What are the causes of cystic fibrosis?').order_by(
         '-creation_time')
+
 
 class CysticFibrosisQuestionsListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
@@ -40,12 +42,14 @@ class CysticFibrosisQuestionsListView(LoginRequiredMixin, ListView):
     queryset = CysticFibrosis.objects.filter(title='Frequently Asked Questions?').order_by(
         '-creation_time')
 
+
 class CysticFibrosisBellesLettresListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
     template_name = 'cystic_fibrosis/cf_belles_lettres.html'
     context_object_name = 'cf_belles_lettres'
     queryset = CysticFibrosis.objects.filter(title='Cystic fibrosis in fiction?').order_by(
         '-creation_time')
+
 
 class CysticFibrosisForTeachersListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
@@ -54,12 +58,14 @@ class CysticFibrosisForTeachersListView(LoginRequiredMixin, ListView):
     queryset = CysticFibrosis.objects.filter(title='Cystic fibrosis for teachers?').order_by(
         '-creation_time')
 
+
 class CysticFibrosisLifeListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
     template_name = 'cystic_fibrosis/cf_life.html'
     context_object_name = 'cf_life'
     queryset = CysticFibrosis.objects.filter(title='Life with cystic fibrosis?').order_by(
         '-creation_time')
+
 
 class CysticFibrosisHobbiesListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
@@ -68,12 +74,14 @@ class CysticFibrosisHobbiesListView(LoginRequiredMixin, ListView):
     queryset = CysticFibrosis.objects.filter(title='Hobbies with cystic fibrosis?').order_by(
         '-creation_time')
 
+
 class CysticFibrosisEverydayLifeListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
     template_name = 'cystic_fibrosis/cf_everyday_life.html'
     context_object_name = 'cf_everyday_life'
     queryset = CysticFibrosis.objects.filter(title='Everyday life with cystic fibrosis?').order_by(
         '-creation_time')
+
 
 class CysticFibrosisPhysicalActivityListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
@@ -98,6 +106,7 @@ class CysticFibrosisCareerListView(LoginRequiredMixin, ListView):
     queryset = CysticFibrosis.objects.filter(title='Career with cystic fibrosis?').order_by(
         '-creation_time')
 
+
 class CysticFibrosisYoungPeopleListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
     template_name = 'cystic_fibrosis/cf_young_people.html'
@@ -105,19 +114,31 @@ class CysticFibrosisYoungPeopleListView(LoginRequiredMixin, ListView):
     queryset = CysticFibrosis.objects.filter(title='Young people with cystic fibrosis?').order_by(
         '-creation_time')
 
-# class CysticFibrosisCareerListView(LoginRequiredMixin, ListView):
-#     model = CysticFibrosis
-#     template_name = 'cystic_fibrosis/cf_career.html'
-#     context_object_name = 'cf_career'
-#     queryset = CysticFibrosis.objects.filter(title='Variety in treatment?').order_by(
-#         '-creation_time')
-#
-# class CysticFibrosisCareerListView(LoginRequiredMixin, ListView):
-#     model = CysticFibrosis
-#     template_name = 'cystic_fibrosis/cf_career.html'
-#     context_object_name = 'cf_career'
-#     queryset = CysticFibrosis.objects.filter(title='Parents and children with cystic fibrosis?').order_by(
-#         '-creation_time')
+
+class CysticFibrosisVarietyListView(LoginRequiredMixin, ListView):
+    model = CysticFibrosis
+    template_name = 'cystic_fibrosis/cf_variety.html'
+    context_object_name = 'cf_variety'
+    queryset = CysticFibrosis.objects.filter(title='Variety in treatment?').order_by(
+        '-creation_time')
+
+
+class CysticFibrosisParentsChildrenListView(LoginRequiredMixin, ListView):
+    model = CysticFibrosis
+    template_name = 'cystic_fibrosis/cf_parents_children.html'
+    context_object_name = 'cf_parents_children'
+    queryset = CysticFibrosis.objects.filter(title='Parents and children with cystic fibrosis?').order_by(
+        '-creation_time')
+
+
+class CysticFibrosisPsyHealthListView(LoginRequiredMixin, ListView):
+    model = CysticFibrosis
+    template_name = 'cystic_fibrosis/cf_psy_health.html'
+    context_object_name = 'cf_psy_health'
+    queryset = CysticFibrosis.objects.filter(title='Psychological health with cystic fibrosis?').order_by(
+        '-creation_time')
+
+
 class CysticFibrosisListView(LoginRequiredMixin, ListView):
     model = CysticFibrosis
     context_object_name = 'cf'
@@ -137,7 +158,53 @@ class CysticFibrosisCreateView(GroupRequiredMixin, CreateView):
     allowed_groups = ['Admins', 'Staff']
     model = CysticFibrosis
     template_name = 'cystic_fibrosis/cf_create.html'
-    fields = ['title', 'cover_image', 'description', 'image', 'youtube_link']
+    fields = ['title',
+              'cover_image',
+              'description',
+              'image',
+              'youtube_link',
+              'first_title_of_description',
+              'picture_of_the_first_description',
+              'first_description',
+
+              'second_title_of_description',
+              'picture_of_the_second_description',
+              'second_description',
+
+              'third_title_of_description',
+              'picture_of_the_third_description',
+              'third_description',
+
+              'fourth_title_of_description',
+              'picture_of_the_fourth_description',
+              'fourth_description',
+
+              'fifth_title_of_description',
+              'picture_of_the_fifth_description',
+              'fifth_description',
+
+              'sixth_title_of_description',
+              'picture_of_the_sixth_description',
+              'sixth_description',
+
+              'seventh_title_of_description',
+              'picture_of_the_seventh_description',
+              'seventh_description',
+
+              'eighth_title_of_description',
+              'picture_of_the_eighth_description',
+              'eighth_description',
+
+              'ninth_title_of_description',
+              'picture_of_the_ninth_description',
+              'ninth_description',
+
+              'tenth_title_of_description',
+              'picture_of_the_tenth_description',
+              'tenth_description',
+
+              ]
+
     success_url = reverse_lazy('cf_list')
 
     def form_valid(self, form):

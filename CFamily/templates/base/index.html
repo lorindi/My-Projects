@@ -36,12 +36,7 @@
                     <button class="cystic-fibrosis-links dropbtn"><i class="fa-solid fa-circle-info"></i></button>
                     <div class="dropdown-content">
                         <h3>Cystic fibrosis?</h3>
-                        {#                        {{ items }}#}
-                        {#                        {% for cf_item in items %}#}
-                        {#                            <a href="#">{{ cf_item.title }}</a>#}
-                        {#                        {% endfor %}#}
-                        {#                        {% block cystic_fibrosis %}#}
-                        {#                        {% endblock %}#}
+
                         <ul role="list">
                             <li><a href="{% url 'cf_diagnosed' %}">How is CF diagnosed?</a></li>
                             <li><a href="{% url "cf_treatment" %}">How is CF treated?</a></li>
@@ -57,38 +52,13 @@
                             <li><a href="{% url "cf_nutrition" %}">Optimal nutrition in CF?</a></li>
                             <li><a href="{% url "cf_career" %}">Career with CF?</a></li>
                             <li><a href="{% url "cf_young_people" %}">Young people with CF?</a></li>
-                            <li><a href="#">Variety in treatment?</a></li>
-                            <li><a href="#">Parents and children with CF?</a></li>
-                            <li><a href="#">Psychological health with CF?</a></li>
+                            <li><a href="{% url "cf_variety" %}">Variety in treatment?</a></li>
+                            <li><a href="{% url "cf_parents_children" %}">Parents and children with CF?</a></li>
+                            <li><a href="{% url "cf_psy_health" %}">Psychological health with CF?</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="shop dropdown">
-                    <button class="shop-links dropbtn"><i class="fa-solid fa-shop"></i></button>
-                    <div class="dropdown-content">
-                        <h3>Charity shop</h3>
-                        <ul role="list">
-                            <li><a class="donations-link" href="{% url 'donation_list' %}">
-                                All donations</a></li>
-                            <li><a class="donation-medications-link" href="{% url 'donation_support_for_research' %}">
-                                Support for research</a></li>
 
-                            <li><a class="donation-medications-link" href="{% url 'donation_psychological_support' %}">
-                                Psychological support</a></li>
-
-                            <li><a class="donation-medications-link" href="{% url 'donation_medications' %}">
-                                Donation medications</a></li>
-                            <li><a class="donations-medical-equipment-link"
-                                   href="{% url 'donation_medical_equipment' %}">
-                                Donation medical equipment</a></li>
-
-                            <li><a class="donation-medications-link" href="{% url 'donation_another_type' %}">
-                                Another type</a></li>
-                        </ul>
-
-
-                    </div>
-                </div>
                 <div class="events dropdown">
                     <button class="events-links dropbtn"><i class="fas fa-heart"></i></button>
                     <div class="dropdown-content">
@@ -159,6 +129,32 @@
 
 
                 {% endif %}
+                <div class="shop dropdown">
+                    <button class="shop-links dropbtn"><i class="fa-solid fa-shop"></i></button>
+                    <div class="dropdown-content">
+                        <h3>Charity shop</h3>
+                        <ul role="list">
+                            <li><a class="donations-link" href="{% url 'donation_list' %}">
+                                All donations</a></li>
+                            <li><a class="donation-medications-link" href="{% url 'donation_support_for_research' %}">
+                                Support for research</a></li>
+
+                            <li><a class="donation-medications-link" href="{% url 'donation_psychological_support' %}">
+                                Psychological support</a></li>
+
+                            <li><a class="donation-medications-link" href="{% url 'donation_medications' %}">
+                                Donation medications</a></li>
+                            <li><a class="donations-medical-equipment-link"
+                                   href="{% url 'donation_medical_equipment' %}">
+                                Donation medical equipment</a></li>
+
+                            <li><a class="donation-medications-link" href="{% url 'donation_another_type' %}">
+                                Another type</a></li>
+                        </ul>
+
+
+                    </div>
+                </div>
                 <div class="cart-link">
                     <a class="cart-icon-link" href="{% url 'cart_list' %}">
                         <i class="fa-solid fa-cart-shopping"></i>

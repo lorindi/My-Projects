@@ -2,7 +2,7 @@
 {% block content %}
     <main class="main-cf-content">
         <section class="container-list">
-            {% for cf in cf_treatment %}
+            {% for cf in cf_psy_health %}
                 <div class="cf-list">
 
 
@@ -12,8 +12,6 @@
 
 
                 </div>
-                    <a href="{% url 'cf_delete' pk=cf.pk%}">Delete</a>
-
             {% endfor %}
         </section>
     </main>
