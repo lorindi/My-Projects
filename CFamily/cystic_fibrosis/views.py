@@ -158,51 +158,37 @@ class CysticFibrosisCreateView(GroupRequiredMixin, CreateView):
     allowed_groups = ['Admins', 'Staff']
     model = CysticFibrosis
     template_name = 'cystic_fibrosis/cf_create.html'
-    fields = ['title',
+    fields = [
               'cover_image',
-              'description',
-              'image',
-              'youtube_link',
-              'first_title_of_description',
+              'title',
+
               'picture_of_the_first_description',
+              'first_title_of_description',
               'first_description',
 
-              'second_title_of_description',
               'picture_of_the_second_description',
+              'second_title_of_description',
               'second_description',
 
-              'third_title_of_description',
               'picture_of_the_third_description',
+              'third_title_of_description',
               'third_description',
 
-              'fourth_title_of_description',
               'picture_of_the_fourth_description',
+              'fourth_title_of_description',
               'fourth_description',
 
-              'fifth_title_of_description',
               'picture_of_the_fifth_description',
+              'fifth_title_of_description',
               'fifth_description',
 
-              'sixth_title_of_description',
               'picture_of_the_sixth_description',
+              'sixth_title_of_description',
               'sixth_description',
 
-              'seventh_title_of_description',
-              'picture_of_the_seventh_description',
-              'seventh_description',
-
-              'eighth_title_of_description',
-              'picture_of_the_eighth_description',
-              'eighth_description',
-
-              'ninth_title_of_description',
-              'picture_of_the_ninth_description',
-              'ninth_description',
-
-              'tenth_title_of_description',
-              'picture_of_the_tenth_description',
-              'tenth_description',
-
+              'image',
+              'description',
+              'youtube_link',
               ]
 
     success_url = reverse_lazy('cf_list')
@@ -216,7 +202,38 @@ class CysticFibrosisUpdateView(GroupRequiredMixin, UpdateView):
     allowed_groups = ['Admin', 'Staff']
     model = CysticFibrosis
     template_name = 'cystic_fibrosis/cf_update.html'
-    fields = ['title', 'cover_image', 'description', 'image', 'youtube_link']
+    fields = [
+        'cover_image',
+        'title',
+
+        'picture_of_the_first_description',
+        'first_title_of_description',
+        'first_description',
+
+        'picture_of_the_second_description',
+        'second_title_of_description',
+        'second_description',
+
+        'picture_of_the_third_description',
+        'third_title_of_description',
+        'third_description',
+
+        'picture_of_the_fourth_description',
+        'fourth_title_of_description',
+        'fourth_description',
+
+        'picture_of_the_fifth_description',
+        'fifth_title_of_description',
+        'fifth_description',
+
+        'picture_of_the_sixth_description',
+        'sixth_title_of_description',
+        'sixth_description',
+
+        'image',
+        'description',
+        'youtube_link',
+    ]
     success_url = reverse_lazy('cf_list')
 
 

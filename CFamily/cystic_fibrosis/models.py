@@ -53,73 +53,47 @@ class CysticFibrosis(models.Model):
 
     picture_of_the_first_description = models.ImageField(
         verbose_name='Image',
-        upload_to='cf/',
+        upload_to='picture_of_the_first_description/',
         blank=True,
         null=True,
     )
 
     picture_of_the_second_description = models.ImageField(
         verbose_name='Image',
-        upload_to='cf/',
+        upload_to='picture_of_the_second_description/',
         blank=True,
         null=True,
     )
 
     picture_of_the_third_description = models.ImageField(
         verbose_name='Image',
-        upload_to='cf/',
+        upload_to='picture_of_the_third_description/',
         blank=True,
         null=True,
     )
 
     picture_of_the_fourth_description = models.ImageField(
         verbose_name='Image',
-        upload_to='cf/',
+        upload_to='picture_of_the_fourth_description/',
         blank=True,
         null=True,
     )
 
     picture_of_the_fifth_description = models.ImageField(
         verbose_name='Image',
-        upload_to='cf/',
+        upload_to='picture_of_the_fifth_description/',
         blank=True,
         null=True,
     )
 
     picture_of_the_sixth_description = models.ImageField(
         verbose_name='Image',
-        upload_to='cf/',
+        upload_to='picture_of_the_sixth_description/',
         blank=True,
         null=True,
     )
 
-    picture_of_the_seventh_description = models.ImageField(
-        verbose_name='Image',
-        upload_to='cf/',
-        blank=True,
-        null=True,
-    )
 
-    picture_of_the_eighth_description = models.ImageField(
-        verbose_name='Image',
-        upload_to='cf/',
-        blank=True,
-        null=True,
-    )
-
-    picture_of_the_ninth_description = models.ImageField(
-        verbose_name='Image',
-        upload_to='cf/',
-        blank=True,
-        null=True,
-    )
-
-    picture_of_the_tenth_description = models.ImageField(
-        verbose_name='Image',
-        upload_to='cf/',
-        blank=True,
-        null=True,
-    )
 
     first_title_of_description = models.CharField(
         verbose_name='Title',
@@ -161,33 +135,7 @@ class CysticFibrosis(models.Model):
         null=True,
     )
 
-    seventh_title_of_description = models.CharField(
-        verbose_name='Title',
-        validators=[MinLengthValidator(5)],
-        blank=True,
-        null=True,
-    )
 
-    eighth_title_of_description = models.CharField(
-        verbose_name='Title',
-        validators=[MinLengthValidator(5)],
-        blank=True,
-        null=True,
-    )
-
-    ninth_title_of_description = models.CharField(
-        verbose_name='Title',
-        validators=[MinLengthValidator(5)],
-        blank=True,
-        null=True,
-    )
-
-    tenth_title_of_description = models.CharField(
-        verbose_name='Title',
-        validators=[MinLengthValidator(5)],
-        blank=True,
-        null=True,
-    )
 
     first_description = models.CharField(
         verbose_name='Description',
@@ -223,34 +171,6 @@ class CysticFibrosis(models.Model):
     )
 
     sixth_description = models.CharField(
-        verbose_name='Description',
-        validators=[MinLengthValidator(5)],
-        blank=True,
-        null=True,
-    )
-
-    seventh_description = models.CharField(
-        verbose_name='Description',
-        validators=[MinLengthValidator(5)],
-        blank=True,
-        null=True,
-    )
-
-    eighth_description = models.CharField(
-        verbose_name='Description',
-        validators=[MinLengthValidator(5)],
-        blank=True,
-        null=True,
-    )
-
-    ninth_description = models.CharField(
-        verbose_name='Description',
-        validators=[MinLengthValidator(5)],
-        blank=True,
-        null=True,
-    )
-
-    tenth_description = models.CharField(
         verbose_name='Description',
         validators=[MinLengthValidator(5)],
         blank=True,

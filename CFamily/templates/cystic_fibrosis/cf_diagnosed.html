@@ -10,10 +10,50 @@
                             <h1 class="cf-title">{{ cf.title }}</h1>
                         </div>
                         <div class="cf-description">
+
+                            <div class="content-more-for-cf">
+                                {% if cf.picture_of_the_first_description %}
+                                    <img src="{{ cf.picture_of_the_first_description.url }}" alt="">
+                                {% endif %}
+                                {% if cf.first_title_of_description and cf.first_description %}
+                                    <div>
+                                        <h4>{{ cf.first_title_of_description }}</h4>
+                                        <p>{{ cf.first_description }}</p>
+                                    </div>
+                                {% endif %}
+
+                            </div>
+                            <div class="content-more-for-cf">
+                                <img src="" alt="">
+                                <div><h4>{{ cf.second_title_of_description }}</h4>
+                                    <p>{{ cf.second_description }}</p></div>
+                            </div>
+                            <div class="content-more-for-cf">
+                                <img src="" alt="">
+                                <div><h4>{{ cf.third_title_of_description }}</h4>
+                                    <p>{{ cf.third_description }}</p></div>
+                            </div>
+                            <div class="content-more-for-cf">
+                                <img src="" alt="">
+                                <div><h4>{{ cf.fourth_title_of_description }}</h4>
+                                    <p>{{ cf.fourth_description }}</p></div>
+                            </div>
+                            <div class="content-more-for-cf">
+                                <img src="" alt="">
+                                <div><h4>{{ cf.fifth_title_of_description }}</h4>
+                                    <p>{{ cf.fifth_description }}</p></div>
+                            </div>
+                            <div class="content-more-for-cf">
+                                <img src="" alt="">
+                                <div><h4>{{ cf.sixth_title_of_description }}</h4>
+                                    <p>{{ cf.sixth_description }}</p></div>
+                            </div>
+
                             <p class="description">{{ cf.description }}</p>
                         </div>
                     </div>
                     <a href="{% url 'cf_delete' pk=cf.pk %}">Delete</a>
+                    <a href="{% url 'cf_update' pk=cf.pk %}">Edit</a>
                 {% endfor %}
             </section>
         {% else %}
