@@ -2,47 +2,62 @@
 {% block content %}
     <main class="main-cf-content">
         {% if cf_diagnosed %}
-            <section class="container-details-list">
+            <section class="container-cf-details">
                 {% for cf in cf_diagnosed %}
-                    <div class="content-cf">
-                        <div class="content-cover">
+                    <div class="content-cf-details">
+                        <div class="content-cover-image-and-title">
                             <img class="cover-cf-image" src="{{ cf.cover_image.url }}" alt="{{ cf.title }}">
-                            <h1 class="cf-title">{{ cf.title }}</h1>
+                            <h1 class="cover-cf-title">{{ cf.title }}</h1>
                         </div>
-                        <div class="cf-description">
+                        <div class="cf-info-description">
 
-                            <div class="content-more-for-cf">
-                                {% if cf.picture_of_the_first_description %}
-                                    <img src="{{ cf.picture_of_the_first_description.url }}" alt="">
-                                {% endif %}
-                                {% if cf.first_title_of_description and cf.first_description %}
-                                    <div>
-                                        <h4>{{ cf.first_title_of_description }}</h4>
-                                        <p>{{ cf.first_description }}</p>
+                            <div class="first-info-section">
+                                <div class="card-more-for-cf">
+                                    {#                                {% if cf.picture_of_the_first_description %}#}
+                                    <div class="top-part-of-card">
+                                        <img class="picture-of-the-first-description"
+                                             src="{{ cf.picture_of_the_first_description.url }}" alt="">
                                     </div>
-                                {% endif %}
+                                    {#                                {% endif %}#}
+                                    {#                                {% if cf.first_title_of_description and cf.first_description %}#}
+                                    <div class="bottom-part-of-card">
+                                        <h4 class="cf-title">{{ cf.first_title_of_description }}</h4>
+                                        <p class="cf-description">{{ cf.first_description }}</p>
+                                    </div>
+                                    {#                                {% endif %}#}
+
+                                </div>
+                                <div class="card-more-for-cf">
+                                    <div class="top-part-of-card">
+                                        <img class="picture-of-the-first-description" src="" alt="">
+                                    </div>
+                                    <div class="bottom-part-of-card"><h4
+                                            class="cf-title">{{ cf.second_title_of_description }}</h4>
+                                        <p class="cf-description">{{ cf.second_description }}</p></div>
+                                </div>
+                                <div class="card-more-for-cf">
+                                    <div class="top-part-of-card">
+                                        <img class="picture-of-the-first-description" src="" alt=""></div>
+                                    <div class="bottom-part-of-card"><h4 h4
+                                                                         class="cf-title">{{ cf.third_title_of_description }}</h4>
+                                        <p class="cf-description">{{ cf.third_description }}</p></div>
+                                </div>
 
                             </div>
-                            <div class="content-more-for-cf">
-                                <img src="" alt="">
-                                <div><h4>{{ cf.second_title_of_description }}</h4>
-                                    <p>{{ cf.second_description }}</p></div>
+                            <div class="second-info-section">
+                                <div class="card-more-for-cf">
+                                    <div class="top-part-of-card">
+                                        <img src="" alt=""></div>
+                                    <div><h4>{{ cf.fourth_title_of_description }}</h4>
+                                        <p>{{ cf.fourth_description }}</p></div>
+                                </div>
+                                <div class="content-more-for-cf">
+                                    <img src="" alt="">
+                                    <div><h4>{{ cf.fifth_title_of_description }}</h4>
+                                        <p>{{ cf.fifth_description }}</p></div>
+                                </div>
                             </div>
-                            <div class="content-more-for-cf">
-                                <img src="" alt="">
-                                <div><h4>{{ cf.third_title_of_description }}</h4>
-                                    <p>{{ cf.third_description }}</p></div>
-                            </div>
-                            <div class="content-more-for-cf">
-                                <img src="" alt="">
-                                <div><h4>{{ cf.fourth_title_of_description }}</h4>
-                                    <p>{{ cf.fourth_description }}</p></div>
-                            </div>
-                            <div class="content-more-for-cf">
-                                <img src="" alt="">
-                                <div><h4>{{ cf.fifth_title_of_description }}</h4>
-                                    <p>{{ cf.fifth_description }}</p></div>
-                            </div>
+                            
                             <div class="content-more-for-cf">
                                 <img src="" alt="">
                                 <div><h4>{{ cf.sixth_title_of_description }}</h4>
