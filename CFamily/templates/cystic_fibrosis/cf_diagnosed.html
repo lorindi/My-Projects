@@ -10,61 +10,85 @@
                             <h1 class="cover-cf-title">{{ cf.title }}</h1>
                         </div>
                         <div class="cf-info-description">
+                            <div class="main-info-section">
+                                <img class="cf-basic-img" src="{{ cf.image.url }}" alt="">
+                                <p class="cf-basic-description">{{ cf.description }}</p>
+
+                            </div>
 
                             <div class="first-info-section">
-                                <div class="card-more-for-cf">
-                                    {#                                {% if cf.picture_of_the_first_description %}#}
-                                    <div class="top-part-of-card">
-                                        <img class="picture-of-the-first-description"
-                                             src="{{ cf.picture_of_the_first_description.url }}" alt="">
-                                    </div>
-                                    {#                                {% endif %}#}
-                                    {#                                {% if cf.first_title_of_description and cf.first_description %}#}
-                                    <div class="bottom-part-of-card">
-                                        <h4 class="cf-title">{{ cf.first_title_of_description }}</h4>
-                                        <p class="cf-description">{{ cf.first_description }}</p>
-                                    </div>
-                                    {#                                {% endif %}#}
+                                {% if cf.picture_of_the_first_description and  cf.first_title_of_description and cf.first_description %}
 
-                                </div>
-                                <div class="card-more-for-cf">
-                                    <div class="top-part-of-card">
-                                        <img class="picture-of-the-first-description" src="" alt="">
-                                    </div>
-                                    <div class="bottom-part-of-card"><h4
-                                            class="cf-title">{{ cf.second_title_of_description }}</h4>
-                                        <p class="cf-description">{{ cf.second_description }}</p></div>
-                                </div>
-                                <div class="card-more-for-cf">
-                                    <div class="top-part-of-card">
-                                        <img class="picture-of-the-first-description" src="" alt=""></div>
-                                    <div class="bottom-part-of-card"><h4 h4
-                                                                         class="cf-title">{{ cf.third_title_of_description }}</h4>
-                                        <p class="cf-description">{{ cf.third_description }}</p></div>
-                                </div>
+                                    <div class="card-more-for-cf">
+                                        <div class="top-part-of-card">
+                                            <img class="cf-card-img"
+                                                 src="{{ cf.picture_of_the_first_description.url }}" alt="">
+                                        </div>
+                                        <div class="bottom-part-of-card">
+                                            <h4 class="cf-card-title">{{ cf.first_title_of_description }}</h4>
+                                            <p class="cf-card-description">{{ cf.first_description }}</p>
+                                        </div>
 
-                            </div>
-                            <div class="second-info-section">
-                                <div class="card-more-for-cf">
-                                    <div class="top-part-of-card">
-                                        <img src="" alt=""></div>
-                                    <div><h4>{{ cf.fourth_title_of_description }}</h4>
-                                        <p>{{ cf.fourth_description }}</p></div>
-                                </div>
-                                <div class="content-more-for-cf">
-                                    <img src="" alt="">
-                                    <div><h4>{{ cf.fifth_title_of_description }}</h4>
-                                        <p>{{ cf.fifth_description }}</p></div>
-                                </div>
+                                    </div>
+                                {% endif %}
+
+                                {% if cf.picture_of_the_second_description and  cf.second_title_of_description and cf.second_description %}
+                                    <div class="card-more-for-cf">
+                                        <div class="top-part-of-card">
+                                            <img class="cf-card-img"
+                                                 src="{{ cf.picture_of_the_second_description.url }}"
+                                                 alt="{{ cf.title }}">
+                                        </div>
+                                        <div class="bottom-part-of-card">
+                                            <h4 class="cf-card-title">{{ cf.second_title_of_description }}</h4>
+                                            <p class="cf-card-description">{{ cf.second_description }}</p>
+                                        </div>
+                                    </div>
+                                {% endif %}
+
+                                {% if cf.picture_of_the_third_description and cf.third_title_of_description and cf.third_description %}
+                                    <div class="card-more-for-cf">
+                                        <div class="top-part-of-card">
+                                            <img class="cf-card-img"
+                                                 src="{{ cf.picture_of_the_third_description.url }}" alt=""></div>
+                                        <div class="bottom-part-of-card">
+                                            <h4 class="cf-card-title">{{ cf.third_title_of_description }}</h4>
+                                            <p class="cf-card-description">{{ cf.third_description }}</p></div>
+                                    </div>
+                                {% endif %}
+
                             </div>
                             
-                            <div class="content-more-for-cf">
-                                <img src="" alt="">
-                                <div><h4>{{ cf.sixth_title_of_description }}</h4>
-                                    <p>{{ cf.sixth_description }}</p></div>
+
+                            <div class="second-info-section">
+                                <div class="content-more-for-cf">
+                                    <div class="info-for-cf-img">
+                                        <img class="cf-img" src="{{ cf.picture_of_the_fourth_description.url }}" alt="">
+                                    </div>
+                                    <div class="info-for-cf-description"><h4
+                                            class="cf-title">{{ cf.fourth_title_of_description }}</h4>
+                                        <p class="cf-description">{{ cf.fourth_description }}</p></div>
+                                </div>
+                                <div class="content-more-for-cf">
+                                    <div class="info-for-cf-description"><h4
+                                        class="cf-title">{{ cf.fifth_title_of_description }}</h4>
+                                    <p class="cf-description">{{ cf.fifth_description }}</p></div>
+                                    <div class="info-for-cf-img">
+                                        <img class="cf-img" src="{{ cf.picture_of_the_fifth_description.url }}" alt="">
+                                    </div>
+                                    
+                                </div>
+                                <div class="content-more-for-cf">
+                                    <div class="info-for-cf-img">
+                                    <img class="cf-img" src="{{ cf.picture_of_the_sixth_description.url }}" alt="">
+                                </div>
+                                <div class="info-for-cf-description"><h4 class="cf-title">{{ cf.sixth_title_of_description }}</h4>
+                                        <p class="cf-description">{{ cf.sixth_description }}</p></div>
+                                </div>
                             </div>
 
-                            <p class="description">{{ cf.description }}</p>
+                            
+
                         </div>
                     </div>
                     <a href="{% url 'cf_delete' pk=cf.pk %}">Delete</a>

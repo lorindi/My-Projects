@@ -1,5 +1,5 @@
 .container-cf-details {
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .content-cf-details {
@@ -35,7 +35,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.729);
+    background-color: rgba(255, 255, 255, 0.901);
     padding: 50px;
     font-size: 40px;
     font-weight: 400;
@@ -46,7 +46,7 @@
     border-image-slice: 1;
     outline: 10px solid rgba(255, 255, 255, 0.517);
     letter-spacing: 2px;
-    color: rgba(0, 0, 0, 0.757);
+    color: rgba(0, 0, 0, 0.848);
 }
 
 .cf-info-description {
@@ -59,16 +59,48 @@
 
 }
 
+/* -------------------------------BASIC-SECTION--------------------------------- */
+.main-info-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+}
+
+.cf-basic-img {
+    width: 450px;
+}
+
+.cf-basic-description {
+    width: 55rem;
+    padding: 70px;
+    font-size: 23px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-indent: 3em;
+    text-align: justify;
+    /* color: #00bac4; */
+    letter-spacing: 1.5px;
+    background: linear-gradient(to right, #477000, #006d73);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /* text-transform: uppercase; */
+}
+
+/* -------------------------------FIRST-SECTION--------------------------------- */
 .first-info-section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: white;
-    min-height: 800px;
-    gap: 120px;
+    background-color: #EAEAEA;
+    height: 100vh;
+    /* gap: 120px; */
     flex-wrap: wrap;
+    box-shadow: 0px 0px 100px 100px #EAEAEA;
+
 }
 
 .card-more-for-cf {
@@ -78,20 +110,21 @@
     justify-content: space-between;
     overflow: hidden;
     align-items: center;
-    width: 555px;
-    height: 555px;
+    width: 475px;
+    height: 570px;
     box-shadow: 0px 0px 50px 1px lightgray;
-    
+    margin: 30px;
+
 }
 
 .top-part-of-card {
-    background: linear-gradient(25deg, rgba(255, 182, 194, 0.637), #00f2ff9e, #a2ff0061);
+    background: linear-gradient(155deg, rgba(255, 182, 194, 0.637), #00f2ff9e, #a2ff0061);
 
 }
 
-.picture-of-the-first-description {
-    width: 555px;
-    height: 277px;
+.cf-card-img {
+    width: 475px;
+    height: 285px;
     /* padding: 10px; */
     background-position: center;
     object-fit: cover;
@@ -105,12 +138,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 277px;
+    height: 285px;
     padding: 15px;
     background-color: white;
 }
 
-.cf-title {
+.cf-card-title {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -121,17 +154,17 @@
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 600;
-    height: 20%;
-    margin: 10px;
+    height: 17%;
+    margin: 5px;
 }
 
-.cf-description {
+.cf-card-description {
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-indent: 2em;
     text-align: justify;
-    height: 80%;
+    height: 83%;
 }
 
 /* --------------------SECOND-SECTION-------------------------- */
@@ -140,4 +173,64 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    margin-top: 200px;
+}
+
+.content-more-for-cf {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.info-for-cf-img {
+    background: linear-gradient(155deg, rgba(255, 182, 194, 0.637), #00f2ff9e, #a2ff0061);
+    width: 50%;
+    min-width: 525px;
+
+}
+
+.cf-img {
+    width: 100%;
+    height: 500px;
+    /* padding: 10px; */
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+    opacity: 0.7;
+    min-width: 525px;
+}
+
+.info-for-cf-description {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 525px;
+
+}
+
+.cf-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 400;
+    /* margin-bottom: 20px; */
+}
+
+.cf-description {
+    width: 100%;
+    padding: 70px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-indent: 3em;
+    text-align: justify;
 }
