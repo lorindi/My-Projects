@@ -76,6 +76,13 @@
 .cover-cf-title,
 .card-more-for-cf,
 .cf-img,
-.cf-basic-img{
-    border-radius: 5px;
+.cf-basic-img,
+.content-card-cf-info,
+.info-for-cf-img,
+.cf-img-info,
+.cf-button,
+.content-update::before,
+.update-content-description,
+.content-update {
+    border-radius: 10px;
 }

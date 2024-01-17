@@ -1,5 +1,6 @@
 .container-cf-details {
     /* min-height: 100vh; */
+    position: relative;
 }
 
 .content-cf-details {
@@ -73,30 +74,28 @@
 }
 
 .cf-basic-description {
-    width: 55rem;
+    width: 50rem;
     padding: 70px;
-    font-size: 23px;
+    font-size: 21px;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-indent: 3em;
     text-align: justify;
-    /* color: #00bac4; */
+    color: black;
     letter-spacing: 1.5px;
-    background: linear-gradient(to right, #477000, #006d73);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    /* text-transform: uppercase; */
+    font-style: italic;
+
 }
 
-/* -------------------------------FIRST-SECTION--------------------------------- */
-.first-info-section {
+/* -------------------------------vertical-styles--------------------------------- */
+.cards-vertical-styles-section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
     background-color: #EAEAEA;
-    height: 100vh;
+    height: 85vh;
     /* gap: 120px; */
     flex-wrap: wrap;
     box-shadow: 0px 0px 100px 100px #EAEAEA;
@@ -167,14 +166,14 @@
     height: 83%;
 }
 
-/* --------------------SECOND-SECTION-------------------------- */
-.second-info-section {
+/* --------------------section-styles------------------------ */
+.section-styles {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    margin-top: 200px;
+    margin: 200px 170px 0px 170px;
 }
 
 .content-more-for-cf {
@@ -195,13 +194,14 @@
 
 .cf-img {
     width: 100%;
-    height: 500px;
+    height: 450px;
     /* padding: 10px; */
     background-position: center;
     object-fit: cover;
     background-size: contain;
     opacity: 0.7;
     min-width: 525px;
+    padding: 3px;
 }
 
 .info-for-cf-description {
@@ -231,6 +231,169 @@
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.5px;
+    text-indent: 3em;
+    text-align: justify;
+}
+
+/* -------------------------------horizontal-styles--------------------------------- */
+.cards-horizontal-styles-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+    width: 100%;
+
+
+}
+
+.content-card-cf-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: 2px solid rgba(0, 191, 255, 0.796);
+    overflow: hidden;
+    background: linear-gradient(155deg, rgba(255, 182, 194, 0.637), #00f2ff9e, #a2ff0061);
+    padding: 10px;
+    box-shadow: 0px 0px 150px 150px #eaeaeae6;
+    margin-top: 100px;
+
+
+}
+
+.information-cf-img {
+    background: linear-gradient(155deg, rgba(255, 182, 194, 0.637), #00f2ff9e, #a2ff0061);
+    overflow: hidden;
+
+}
+
+.cf-img-info {
+    width: 725px;
+    height: 500px;
+    /* padding: 10px; */
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+    opacity: 0.7;
+
+}
+
+.information-cf-description {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 725px;
+    padding: 30px;
+    height: 500px;
+    z-index: 1;
+    box-shadow: -10px 0px 15px 10px white;
+    background-color: white;
+
+}
+
+.cf-title-info {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.cf-description-info {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.admin-cf-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: fixed;
+    top: 350px;
+    left: 10px;
+
+}
+
+
+
+.cf-button {
+    background-image: linear-gradient(to right, #7BD674 0%, #33DCD1 51%, rgba(255, 177, 190, 0.865) 100%);
+    margin: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    width: 125px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-shadow: 0px 0px 2px black;
+    font-size: 18px;
+    border: 1px solid white;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.502);
+}
+
+.cf-button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ----------------------------------UPDATE-CONTENT-------------------------------- */
+.section-update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.content-update {
+    background: linear-gradient(25deg, #a2ff0061, #00f2ff9e, rgba(255, 177, 190, 0.865));
+    width: 75%;
+    height: 75%;
+}
+
+.content-update::before {
+    margin-top: 57.5px;
+    content: "";
+    position: absolute;
+    background: url('../images/aida-batres-_QxzSVWesm0-unsplash.jpg');
+    background-size: cover;
+    background-position: top;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: -1;
+    width: 72%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    /* Променено тук - вмъкната rotate(90deg) и променен ред на translate */
+    left: 50%;
+    top: 50%;
+}
+
+.update-content-description {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.901);
+    padding: 50px;
+    font-size: 23px;
+    font-weight: 400;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 20px 0 gray;
+    border: 3px solid;
+    border-image: linear-gradient(to right, rgba(255, 128, 149, 0.487), #00c4ceb5, #7ac10085);
+    border-image-slice: 1;
+    outline: 10px solid rgba(255, 255, 255, 0.517);
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.848);
     text-indent: 3em;
     text-align: justify;
 }
