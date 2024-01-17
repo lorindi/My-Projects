@@ -1,0 +1,4 @@
+# SECRET_KEY = 'django-insecure-7kin)avha4w46!3dou2)0cfd$bx2d&jhsud9^o&(is9wsync4v'
+# import secrets
+# new_secret_key = secrets.token_hex(32)
+# print(new_secret_key)
