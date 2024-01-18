@@ -139,19 +139,19 @@ class CysticFibrosisPsyHealthListView(LoginRequiredMixin, ListView):
         '-creation_time')
 
 
-class CysticFibrosisListView(LoginRequiredMixin, ListView):
-    model = CysticFibrosis
-    context_object_name = 'cf'
-    template_name = 'cystic_fibrosis/cf_list.html'
-
-    # items = CysticFibrosis.objects
-    # .filter(title='Psychological support').order_by('-creation_time')
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(*args, **kwargs)
-        context['search'] = self.request.GET.get('search', '')
-        # context['items'] = CysticFibrosis.objects.all()
-        # print(context['items'])
-        return context
+# class CysticFibrosisListView(LoginRequiredMixin, ListView):
+#     model = CysticFibrosis
+#     context_object_name = 'cf'
+#     template_name = 'cystic_fibrosis/cf_list.html'
+#
+#     # items = CysticFibrosis.objects
+#     # .filter(title='Psychological support').order_by('-creation_time')
+#     def get_context_data(self, *args, **kwargs):
+#         context = super().get_context_data(*args, **kwargs)
+#         context['search'] = self.request.GET.get('search', '')
+#         # context['items'] = CysticFibrosis.objects.all()
+#         # print(context['items'])
+#         return context
 
 
 class CysticFibrosisCreateView(GroupRequiredMixin, CreateView):
