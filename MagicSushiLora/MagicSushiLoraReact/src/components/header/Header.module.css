@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.navigation {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 7px 0px 7px 0px;
+
+
+}
+
+.link {
+    color: white;
+    text-transform: uppercase;
+    font-size: 23px;
+    letter-spacing: 1.5px;
+}
+
+nav,
+footer {
+    background-color: rgba(0, 0, 0, 0.508);
+    z-index: 1;
+}
