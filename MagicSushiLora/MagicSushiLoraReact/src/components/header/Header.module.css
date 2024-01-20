@@ -3,28 +3,47 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: black; */
 }
 
 .header {
     display: flex;
     flex-direction: column;
-    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.contentNavigations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 50px;
+
+
 }
 
 .navigation {
-    position: fixed;
-    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    background-color: #70B11C;
+    width: 100%;
+    flex-wrap: wrap;
+
+
+
 }
 
 .navBar {
     display: flex;
     flex-direction: row;
     gap: 50px;
-    margin: 7px 0px 7px 0px;
 
 
 }
@@ -34,10 +53,5 @@ body {
     text-transform: uppercase;
     font-size: 23px;
     letter-spacing: 1.5px;
-}
-
-nav,
-footer {
-    background-color: rgba(0, 0, 0, 0.508);
-    z-index: 1;
+    font-weight: 500;
 }

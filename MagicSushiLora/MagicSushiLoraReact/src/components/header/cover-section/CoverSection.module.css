@@ -1,0 +1,109 @@
+.coverSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.contentCoverInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 200px;
+
+}
+
+.coverTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.coverDescription {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    width: 900px;
+
+}
+
+.coverButton {
+    border-radius: 4px;
+    background-color: #70B11C;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.453);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 2px solid #70B11C;
+}
+
+.coverButton {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.coverButton:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    right: -20px;
+    transition: 0.5s;
+    font-size: 25px;
+    color: #70B11C;
+
+}
+
+.coverButton:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+    background-color: white;
+    color: #70B11C;
+
+
+}
+
+
+.coverButton:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+.contentCoverImage {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 50%;
+    padding: 0px 0px 50px 0px;
+
+}
+
+.coverImage {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
