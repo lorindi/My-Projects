@@ -12,7 +12,6 @@ class SushiUser(AbstractUser):
     REQUIRED_FIELDS = ['username']
 
     first_name = models.CharField(
-        # default='Not specified',
         max_length=150,
         null=True,
         blank=True,
