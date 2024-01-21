@@ -22,12 +22,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const registerSubmitHandler = async (values) => {
-    const respons = await axios.post(
-      "http://127.0.0.1:8000/api-users/register/",
-      values
-    );
-
-    console.log(respons);
+ 
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api-users/register/",
