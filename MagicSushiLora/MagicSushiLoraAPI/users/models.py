@@ -5,8 +5,17 @@ from django.contrib.auth.models import AbstractUser
 
 class SushiUser(AbstractUser):
     email = models.EmailField(
-        max_length=50,
         unique=True,
+        null=False,
+        blank=False,
+        error_messages={"unique": "Email is not unique."}
+     )
+    username = models.CharField(
+        max_length=255,
+        null=False,
+        blank=False,
+        unique=True,
+        error_messages={"unique": "Username is not unique."}
     )
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']

@@ -15,12 +15,10 @@ class SushiUserList(generics.ListAPIView):
     serializer_class = SushiUserSerializer
 
 
-
 class UserRegistration(APIView):
     permission_classes = [permissions.AllowAny]
 
     def post(self, request):
-        pdb.set_trace()  # Добавя breakpoint
         serializer = SushiUserSerializer(data=request.data)
         if serializer.is_valid():
             user = serializer.save()

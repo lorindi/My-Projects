@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   const onLoginSubmit = async (values) => {
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api-users/login",
+        "http://127.0.0.1:8000/api-users/login/",
         values
       );
       setAuth(response.data);
@@ -22,29 +22,27 @@ export const AuthProvider = ({ children }) => {
   };
 
   const registerSubmitHandler = async (values) => {
-    const response = await axios.post(
-      "http://127.0.0.1:8000/api-users/register",
+    const respons = await axios.post(
+      "http://127.0.0.1:8000/api-users/register/",
       values
     );
-    console.log(response);
+
+    console.log(respons);
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api-users/register",
+        "http://127.0.0.1:8000/api-users/register/",
         values
       );
-      console.log(response);
       setAuth(response.data);
       localStorage.setItem("accessToken", response.data.token);
     } catch (error) {
-      console.error("Axios request failed:", error);
-      console.error("Server response data:", error.response.data);
       setFault("Registration failed. Please try again.");
     }
   };
 
   const logoutHandler = async () => {
     try {
-      await axios.post("http://127.0.0.1:8000/api-users/logout");
+      await axios.post("http://127.0.0.1:8000/api-users/logout/");
       setAuth({});
       localStorage.removeItem("accessToken");
     } catch (error) {

@@ -5,8 +5,9 @@ export const Register = () => {
   const { registerSubmitHandler, getFault, clearFault } = useContext(Contexts);
   const [formData, setFormData] = useState({
     email: "",
+    username: "",
     password: "",
-    "confirm-password": "",
+    rePassword: "",
   });
 
   const handleSubmit = (e) => {
@@ -18,6 +19,14 @@ export const Register = () => {
     <div>
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
+      <div>
+          <label>Username:</label>
+          <input
+            type="text"
+            value={formData.username}
+            onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+          />
+        </div>
         <div>
           <label>Email:</label>
           <input
@@ -38,9 +47,9 @@ export const Register = () => {
           <label>Confirm Password:</label>
           <input
             type="password"
-            value={formData["confirm-password"]}
+            value={formData.rePassword}
             onChange={(e) =>
-              setFormData({ ...formData, "confirm-password": e.target.value })
+              setFormData({ ...formData, rePassword: e.target.value })
             }
           />
         </div>
