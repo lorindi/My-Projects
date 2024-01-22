@@ -1,15 +1,18 @@
+from django.contrib.auth.models import AbstractUser
 from django.core.validators import MinLengthValidator
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+
+# from users.manager import SushiUserManager
 
 
 class SushiUser(AbstractUser):
+    # objects = SushiUserManager()
     email = models.EmailField(
         unique=True,
         null=False,
         blank=False,
         error_messages={"unique": "Email is not unique."}
-     )
+    )
     username = models.CharField(
         max_length=255,
         null=False,
@@ -39,3 +42,6 @@ class SushiUser(AbstractUser):
         null=True,
         blank=True,
     )
+
+    def __str__(self):
+        return self.username

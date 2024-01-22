@@ -1,9 +1,16 @@
 from django.urls import path
-from .views import SushiUserList, UserRegistration, UserLogin, UserLogout
+
+from users.views import RegisterUserAPIView, LoginUserAPIView, UserLogoutView
 
 urlpatterns = [
-    path('', SushiUserList.as_view(), name='user-list'),
-    path('register/', UserRegistration.as_view(), name='user-registration'),
-    path('login/', UserLogin.as_view(), name='user-login'),
-    path('logout/', UserLogout.as_view(), name='user-logout'),
+    path('register/', RegisterUserAPIView.as_view(), name='register'),
+    path('login/', LoginUserAPIView.as_view(), name='login'),
+    path('logout/', UserLogoutView.as_view(), name='logout'),
 ]
+# from .views import RegisterView, LoginView, LogoutView
+#
+# urlpatterns = [
+#     path('register/', RegisterView.as_view(), name='register'),
+#     path('login/', LoginView.as_view(), name='login'),
+#     path('logout/', LogoutView.as_view(), name='logout'),
+# ]

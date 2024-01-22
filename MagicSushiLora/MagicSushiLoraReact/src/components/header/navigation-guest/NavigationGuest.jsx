@@ -7,7 +7,7 @@ export const NavigationGuest = () => {
     <nav className={styles.navigation}>
       <ul role="list" className={styles.navBar}>
         <li>
-          <Link className={styles.link} to="">
+          <Link className={styles.link} to="/login">
             Sign in
           </Link>
         </li>

@@ -9,9 +9,10 @@ export const AuthProvider = ({ children }) => {
   const [fault, setFault] = useState(null);
 
   const onLoginSubmit = async (values) => {
+    console.log(values);
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api-users/login/",
+        "http://127.0.0.1:8000/api/login/",
         values
       );
       setAuth(response.data);
@@ -22,10 +23,9 @@ export const AuthProvider = ({ children }) => {
   };
 
   const registerSubmitHandler = async (values) => {
- 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api-users/register/",
+        "http://127.0.0.1:8000/api/register/",
         values
       );
       setAuth(response.data);
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
 
   const logoutHandler = async () => {
     try {
-      await axios.post("http://127.0.0.1:8000/api-users/logout/");
+      await axios.post("http://127.0.0.1:8000/api/logout/");
       setAuth({});
       localStorage.removeItem("accessToken");
     } catch (error) {
@@ -61,3 +61,4 @@ export const AuthProvider = ({ children }) => {
 
   return <Contexts.Provider value={values}>{children}</Contexts.Provider>;
 };
+

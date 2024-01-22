@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "../Header.module.css";
+import { Logout } from "../../logout/Logout";
 export const NavigationWelcome = () => {
   return (
     <nav className={styles.navigation}>
@@ -23,6 +24,9 @@ export const NavigationWelcome = () => {
           <Link className={styles.link} to="">
             Profile
           </Link>
+        </li>
+        <li>
+          <Logout/>
         </li>
       </ul>
     </nav>
