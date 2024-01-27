@@ -4,19 +4,68 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    background-color: #45443E;
 
 }
 
-.contentFooterNavigation {
+.sectionInformationAboutUs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.informationAboutUs {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.908);
-    padding: 30px;
-    min-height: 225px;
+    height: 300px;
+    padding: 20px;
+}
+.workTimeList {
+    margin: 0;
+
+}
+.informationAboutUsTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #70B11C;
+    margin: 20px;
+    color: rgba(211, 211, 211, 0.753);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+}
+.workTimeListElement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.dayOfTheWeek {
+    margin: 0;
+    color: rgba(211, 211, 211, 0.753);
+    width: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.workTime {
+    color: rgba(211, 211, 211, 0.753);
+}
+/* --------------------------------------Footer-Navigation----------------------- */
+.contentFooterNavigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
     width: 100%;
+    border-top: 2px solid gray;
+
 
 }
 
@@ -36,13 +85,14 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    width: 100%;
+    /* width: 100%; */
 }
 
 .contentFooterLink {
     text-transform: uppercase;
     color: #70B11C;
     letter-spacing: 1.5px;
+    font-weight: 600;
 
 
 }
@@ -86,16 +136,19 @@
     width: 100%;
     padding: 5px;
     height: 50px;
-    background-color: #ffdd00e0;
+    background-color: #70B11C;
 
 }
+
 .rightsReservedText {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 2px;
 
 }
+
 .rightsReservedTextSpan {
-    color: #4b8400;
-    margin: 0px 20px 0px 20px;
+    color: white;
+    margin: 0px 30px 0px 30px;
     font-weight: 600;
 }
