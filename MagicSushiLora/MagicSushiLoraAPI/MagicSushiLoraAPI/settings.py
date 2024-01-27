@@ -32,9 +32,9 @@ INSTALLED_APPS = [
 ]
 AUTH_USER_MODEL = 'users.SushiUser'
 
-# AUTHENTICATION_BACKENDS = [
-#     'django.contrib.auth.backends.ModelBackend',
-# ]
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 
 MIDDLEWARE = [

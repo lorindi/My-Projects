@@ -4,7 +4,7 @@ import { Contexts } from "../../contexts/Contexts";
 export const Login = () => {
   const { onLoginSubmit, getError, clearError } = useContext(Contexts);
   const [formData, setFormData] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
@@ -18,11 +18,11 @@ export const Login = () => {
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Email:</label>
+          <label>Username:</label>
           <input
             type="text"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            value={formData.username}
+            onChange={(e) => setFormData({ ...formData, username: e.target.value })}
           />
         </div>
         <div>

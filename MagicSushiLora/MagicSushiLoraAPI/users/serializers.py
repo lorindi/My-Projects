@@ -9,7 +9,7 @@ UserModel = get_user_model()
 class CreateUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserModel
-        fields = ('username', 'password')
+        fields = ('email', 'username', 'password')
 
     # This hashes the password (Not save in plain-text in the DB)
     def create(self, validated_data):
@@ -39,3 +39,6 @@ class CreateUserSerializer(serializers.ModelSerializer):
         user_representation = super().to_representation(instance)
         user_representation.pop('password')
         return user_representation
+
+
+

@@ -4,6 +4,9 @@ from django.db import models
 
 
 class SushiUser(AbstractUser):
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+
     email = models.EmailField(
         unique=True,
         null=False,
@@ -17,8 +20,6 @@ class SushiUser(AbstractUser):
         unique=True,
         error_messages={"unique": "Username is not unique."}
     )
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
 
     first_name = models.CharField(
         max_length=150,

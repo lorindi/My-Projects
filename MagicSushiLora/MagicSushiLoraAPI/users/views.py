@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import AnonymousUser
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.response import Response
@@ -19,15 +20,17 @@ class RegisterApiView(generics.CreateAPIView):
 
 
 class LoginApiView(ObtainAuthToken):
+
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data, context={'request': request})
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data['user']
         token, created = Token.objects.get_or_create(user=user)
+        # user.update_last_login(None)
         return Response({
             'token': token.key,
             'user_id': user.pk,
-            'email': user.email
+            'email': user.email,
         })
 
 
@@ -40,5 +43,11 @@ class LogoutApiView(APIView):
 
     @staticmethod
     def __perform_logout(request):
-        request.user.auth_token.delete()
-        return Response({'message': 'user logged out'})
+        if not isinstance(request.user, AnonymousUser):
+            request.user.auth_token.delete()
+            return Response({'message': 'user logged out'})
+        else:
+            return Response({'message': 'user not authenticated'})
+    # def __perform_logout(request):
+    #     request.user.auth_token.delete()
+    #     return Response({'message': 'user logged out'})

@@ -8,11 +8,19 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [fault, setFault] = useState(null);
 
+
+  const axiosInstance = axios.create({
+    baseURL: "http://127.0.0.1:8000/api/",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+    },
+  });
+
   const onLoginSubmit = async (values) => {
-    console.log(values);
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/login/",
+      const response = await axiosInstance.post(
+        "auth/login/",
         values
       );
       setAuth(response.data);
@@ -23,9 +31,10 @@ export const AuthProvider = ({ children }) => {
   };
 
   const registerSubmitHandler = async (values) => {
+    console.log(values);
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/register/",
+      const response = await axiosInstance.post(
+        "auth/register/",
         values
       );
       setAuth(response.data);
@@ -37,13 +46,22 @@ export const AuthProvider = ({ children }) => {
 
   const logoutHandler = async () => {
     try {
-      await axios.post("http://127.0.0.1:8000/api/logout/");
+      await axiosInstance.post("auth/logout/");
       setAuth({});
       localStorage.removeItem("accessToken");
     } catch (error) {
       console.error("Logout failed:", error.message);
     }
   };
+  // const logoutHandler = async () => {
+  //   try {
+  //     await axios.post("http://127.0.0.1:8000/api/auth/logout/");
+  //     setAuth({});
+  //     localStorage.removeItem("accessToken");
+  //   } catch (error) {
+  //     console.error("Logout failed:", error.message);
+  //   }
+  // };
 
   const values = {
     registerSubmitHandler,
@@ -61,4 +79,3 @@ export const AuthProvider = ({ children }) => {
 
   return <Contexts.Provider value={values}>{children}</Contexts.Provider>;
 };
-
