@@ -11,12 +11,13 @@
     border-radius: 4px;
     letter-spacing: 1.5px;
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     background-color: #45443E;
-    border: 1px solid lightgray;
+    border: 1px solid gray;
     transition: all 0.3s ease-in-out 0s;
     box-shadow: 10px 10px 36px rgb(0,0,0,0.5), -13px -13px 23px rgba(255,255,255, 0.03);
+
 }
 
 .gmailFormTextarea {
@@ -25,10 +26,10 @@
     padding: 5px;
     border-radius: 4px;
     letter-spacing: 1.5px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     background-color: #45443E;
-    border: 1px solid lightgray;
+    border: 1px solid gray;
     transition: all 0.3s ease-in-out 0s;
     box-shadow: 10px 10px 36px rgb(0,0,0,0.5), -13px -13px 23px rgba(255,255,255, 0.03);
 
@@ -36,7 +37,7 @@
 .gmailFormInput:hover, .gmailFormTextarea:hover {
     background-color: transparent;
     box-shadow: 10px 10px 36px rgb(0,0,0,0.5), -13px -13px 23px rgba(255,255,255, 0.03), inset 14px 14px 70px rgb(0,0,0,0.2), inset -15px -15px 30px rgba(255,255,255, 0.04);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: white;
     color: white;
 
 }
@@ -45,27 +46,24 @@
     border: none;
     text-transform: uppercase;
     font-weight: 600;
-    background-color: #70B11C;
-    color: #99a9b5;
+    background-color: #70b11c7b;
     cursor: pointer;
     font-size: 14px;
     transition: all 0.5s;
     letter-spacing: 2px;
-    color: rgba(255,255,255,.5);
-    box-shadow: none;
     outline: none !important;
-    background-color: #1c1f2f;
     box-shadow: 3px 9px 16px rgb(0,0,0,0.4), -3px -3px 10px rgba(255,255,255, 0.06), inset 14px 14px 26px rgb(0,0,0,0.3), inset -3px -3px 15px rgba(255,255,255, 0.05);
     border-width: 1px 0px 0px 1px;
     border-style: solid;
-    border-color: #2e344d;
+    border-color: #2f4d2e;
     transition: all 0.3s ease-in-out 0s;
     padding: 3px;
+    color: white;
 
 }
 .gmailFormButton:hover {
     box-shadow: 0 0px 20px rgba(84, 1, 74, 0.7);
-    border-color: green;
-    background: linear-gradient(to right, rgba(255, 9, 9, 0.12941176470588237), #c000ffb5, rgba(255, 0, 94, 0.14));
+    border-color: #70B11C;
+    background: linear-gradient(to right, rgba(46, 255, 9, 0.129), #70B11C, rgba(0, 255, 26, 0.14));
     color: white;
 }
