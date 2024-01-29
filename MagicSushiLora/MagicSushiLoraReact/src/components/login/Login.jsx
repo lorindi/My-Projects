@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Contexts } from "../../contexts/Contexts";
-
+import styles from "./Login.module.css";
 export const Login = () => {
   const { onLoginSubmit, getError, clearError } = useContext(Contexts);
   const [formData, setFormData] = useState({
@@ -14,26 +14,36 @@ export const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
+    <>
+      <h2 className={styles.loginFormTitle}>Sign in</h2>
+      <form className={styles.loginForm} onSubmit={handleSubmit}>
+        <div className={styles.contentLoginForm}>
+          {/* <label className={styles.loginFormLabel}>Username</label> */}
           <input
+            placeholder="Username"
+            className={styles.loginFormInput}
             type="text"
             value={formData.username}
-            onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, username: e.target.value })
+            }
           />
         </div>
-        <div>
-          <label>Password:</label>
+        <div className={styles.contentLoginForm}>
+          {/* <label className={styles.loginFormLabel}>Password</label> */}
           <input
+            placeholder="Password"
+            className={styles.loginFormInput}
             type="password"
             value={formData.password}
-            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, password: e.target.value })
+            }
           />
         </div>
-        <button type="submit">Login</button>
+        <button className={styles.loginFormButton} type="submit">
+          Login
+        </button>
       </form>
       {getError() && (
         <div>
@@ -41,7 +51,6 @@ export const Login = () => {
           <button onClick={clearError}>Clear Error</button>
         </div>
       )}
-    </div>
+    </>
   );
 };
-
