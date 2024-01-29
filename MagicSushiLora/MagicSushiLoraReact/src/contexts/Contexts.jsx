@@ -53,15 +53,7 @@ export const AuthProvider = ({ children }) => {
       console.error("Logout failed:", error.message);
     }
   };
-  // const logoutHandler = async () => {
-  //   try {
-  //     await axios.post("http://127.0.0.1:8000/api/auth/logout/");
-  //     setAuth({});
-  //     localStorage.removeItem("accessToken");
-  //   } catch (error) {
-  //     console.error("Logout failed:", error.message);
-  //   }
-  // };
+ 
 
   const values = {
     registerSubmitHandler,
