@@ -1,0 +1,30 @@
+.sushiLogoWelcome {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+.navigationWelcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #70B11C;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.navBarWelcome {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.linkWelcome {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
