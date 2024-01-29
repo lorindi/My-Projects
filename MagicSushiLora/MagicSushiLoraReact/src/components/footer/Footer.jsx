@@ -56,6 +56,71 @@ export const Footer = () => {
         </div>
         <div className={styles.informationAboutUs}>
           <h4 className={styles.informationAboutUsTitle}>Our Gallery</h4>
+
+          <ul role="list" className={styles.magnificImages}>
+            <li>
+              <Link className={styles.magnificAnchor}>
+                <img
+                  src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80"
+                  alt=""
+                />
+              </Link>
+              <Link className={styles.magnificAnchor}>
+                <img
+                  src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80"
+                  alt=""
+                />
+              </Link>
+              <Link className={styles.magnificAnchor}>
+                <img
+                  src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80"
+                  alt=""
+                />
+              </Link>
+            </li>
+
+            <li>
+              <Link className={styles.magnificAnchor}>
+                <img
+                  src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80"
+                  alt=""
+                />
+              </Link>
+              <Link className={styles.magnificAnchor}>
+                <img
+                  src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80"
+                  alt=""
+                />
+              </Link>
+              <Link className={styles.magnificAnchor}>
+                <img
+                  src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80"
+                  alt=""
+                />
+              </Link>
+            </li>
+
+            <li>
+              <Link className={styles.magnificAnchor}>
+                <img
+                  src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80"
+                  alt=""
+                />
+              </Link>
+              <Link className={styles.magnificAnchor}>
+                <img
+                  src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80"
+                  alt=""
+                />
+              </Link>
+              <Link className={styles.magnificAnchor}>
+                <img
+                  src="https://images.unsplash.com/photo-1477239439998-839196943351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80"
+                  alt=""
+                />
+              </Link>
+            </li>
+          </ul>
         </div>
       </section>
       <section className={styles.contentFooterNavigation}>

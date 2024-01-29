@@ -16,6 +16,7 @@
     justify-content: space-evenly;
     padding: 20px;
 }
+
 .informationAboutUs {
     display: flex;
     flex-direction: column;
@@ -24,10 +25,12 @@
     height: 300px;
     padding: 20px;
 }
+
 .workTimeList {
     margin: 0;
 
 }
+
 .informationAboutUsTitle {
     display: flex;
     align-items: center;
@@ -40,11 +43,13 @@
     letter-spacing: 1.5px;
 
 }
+
 .workTimeListElement {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 .dayOfTheWeek {
     margin: 0;
     color: rgba(211, 211, 211, 0.753);
@@ -53,9 +58,31 @@
     text-transform: uppercase;
     font-weight: 500;
 }
+
 .workTime {
     color: rgba(211, 211, 211, 0.753);
 }
+
+/* ------------------------------------Gallery----------------------------------------------- */
+.magnificAnchor img {
+    border-radius: 4px;
+    width: 70px;
+    height: 70px;
+    padding: 3px;
+}
+
+.magnificImages {
+    padding: 0;
+    margin: 0;
+}
+
+.magnificImages li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
 /* --------------------------------------Footer-Navigation----------------------- */
 .contentFooterNavigation {
     display: flex;
