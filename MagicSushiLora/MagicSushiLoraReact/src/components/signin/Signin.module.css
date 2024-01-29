@@ -18,7 +18,7 @@
     width: 700px;
     height: 480px;
     /* background-color: green; */
-    border-radius: 4px;
+    border-radius: 50px;
     overflow: hidden;
     border: 2px solid green;
 
@@ -155,9 +155,9 @@
 .signInButtonNavigator {
     margin: 15px;
     border: none;
-    padding: 5px;
-    width: 125px;
-    border-radius: 4px;
+    padding: 10px 25px;
+    /* width: 125px; */
+    border-radius: 50px;
     letter-spacing: 2px;
     text-transform: uppercase;
     cursor: pointer;
