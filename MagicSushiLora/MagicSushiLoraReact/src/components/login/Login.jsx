@@ -14,7 +14,7 @@ export const Login = () => {
   };
 
   return (
-    <>
+    <div className={styles.signInContainer}>
       <h2 className={styles.loginFormTitle}>Sign in</h2>
       <form className={styles.loginForm} onSubmit={handleSubmit}>
         <div className={styles.contentLoginForm}>
@@ -51,6 +51,6 @@ export const Login = () => {
           <button onClick={clearError}>Clear Error</button>
         </div>
       )}
-    </>
+    </div>
   );
 };

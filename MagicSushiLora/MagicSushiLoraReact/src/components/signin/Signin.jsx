@@ -33,9 +33,9 @@ export const Signin = () => {
     <div className={styles.containerSignInSignUp}>
       <div className={styles.contentSignInSignUp}>
         {signIn && (
-          <div className={`${styles.signInContainer}`}>
+          <>
             <Login />
-          </div>
+          </>
         )}
 
         {coverSignIn && (
@@ -66,9 +66,9 @@ export const Signin = () => {
 
 
         {signUp && (
-          <div className={`${styles.signUpContainer}`}>
+          <>
             <Register />
-          </div>
+          </>
         )}
 
         {coverSignUp && (

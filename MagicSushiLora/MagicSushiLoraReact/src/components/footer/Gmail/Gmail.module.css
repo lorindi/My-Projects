@@ -30,7 +30,7 @@
     font-weight: 500;
     background-color: #45443E;
     border: 1px solid gray;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.05s ease-in-out 0s;
     box-shadow: 10px 10px 36px rgb(0,0,0,0.5), -13px -13px 23px rgba(255,255,255, 0.03);
 
 }

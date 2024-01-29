@@ -16,7 +16,7 @@ export const Register = () => {
   };
 
   return (
-    <>
+    <div className={styles.signUpContainer}>
       <h2 className={styles.registrationFormTitle}>Create Account</h2>
       <form className={styles.registrationForm} onSubmit={handleSubmit}>
         <div className={styles.contentRegistrationForm}>
@@ -77,6 +77,6 @@ export const Register = () => {
           <button onClick={clearFault}>Clear Fault</button>
         </div>
       )}
-    </>
+    </div>
   );
 };

@@ -161,13 +161,9 @@ export const Footer = () => {
         </div>
       </section>
       <section className={styles.contentRightsReserved}>
-        <p className={styles.rightsReservedText}>
-          © Copyright 2024
-          <span className={styles.rightsReservedTextSpan}>
-            Magic Sushi Lora
-          </span>
-          All rights reserved.
-        </p>
+        <p className={styles.rightsReservedText}>© Copyright 2024</p>
+        <p className={styles.rightsReservedTextSpan}>Magic Sushi Lora</p>
+        <p className={styles.rightsReservedText}>All rights reserved.</p>
       </section>
     </footer>
   );
