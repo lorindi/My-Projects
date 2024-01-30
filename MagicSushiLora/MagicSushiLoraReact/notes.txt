@@ -117,3 +117,96 @@ Axios връща JavaScript промиси, които улесняват обр
 
 
 
+#hook/usePersistedState
+
+import { useState } from "react";
+
+export const usePersistedState = (key, defaultValue) => {
+
+  // Използваме useState за създаване на състояние
+  const [state, setState] = useState(() => {
+
+    // Проверяваме дали има съхранено състояние в localStorage
+    const persistedState = localStorage.getItem(key);
+
+    // Ако има, връщаме го след парсване от JSON
+    if (persistedState) {
+      return JSON.parse(persistedState);
+    }
+
+    // Ако няма, връщаме стойността по подразбиране
+    return defaultValue;
+  });
+
+  // Функцията setPersistedState работи като setState, но и записва състоянието в localStorage
+  const setPersistedState = (value) => {
+    // Обновяваме състоянието
+    setState(value);
+
+    // Сериализираме новата стойност и я записваме в localStorage
+    let serializedValue;
+    if (typeof value === "function") {
+      // Ако стойността е функция, като например при използване на функционален setState
+      serializedValue = JSON.stringify(value(state));
+    } else {
+      serializedValue = JSON.stringify(value);
+    }
+
+    localStorage.setItem(key, serializedValue);
+  };
+
+  // Връщаме състоянието и функцията за обновяване на състоянието
+  return [state, setPersistedState];
+};
+
+Този код представлява кастомен хук (usePersistedState), който съчетава функционалността на хука за състояние (useState) 
+със съхранение в localStorage. Този хук е предназначен да създаде състояние, което се запазва в localStorage, така че 
+данните да останат налични дори след презареждане на страницата.
+
+
+
+
+
+TOASTIFY
+*npm install --save react-toastify
+https://fkhadra.github.io/react-toastify/introduction/
+
+In main.jsx import:
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+ <BrowserRouter>
+    <React.StrictMode>
+      <App />
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="light"
+        transition:Bounce
+      />
+    </React.StrictMode>
+  </BrowserRouter>
+
+  In the component: 
+  import { toast } from "react-toastify";
+  In the JSX:
+  toast.error("message error")
+
+
+
+
+GMAIL
+https://www.youtube.com/watch?v=bMq2riFCF90
+*npm i @emailjs/browser
+https://www.emailjs.com/docs/examples/reactjs/
+
+https://dashboard.emailjs.com/admin/account
+Email Services => Service ID
+Email Templates => Email Templates
+Account => API keys
