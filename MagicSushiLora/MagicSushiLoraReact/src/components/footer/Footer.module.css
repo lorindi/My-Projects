@@ -13,81 +13,16 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    justify-content: space-evenly;
-    padding: 20px;
-    flex-wrap: wrap;
-}
-
-.informationAboutUs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 300px;
-    flex-wrap: wrap;
-
-    padding: 20px;
-}
-
-.workTimeList {
-    margin: 0;
-
-}
-
-.informationAboutUsTitle {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    border-bottom: 2px solid #70B11C;
-    margin: 20px;
-    color: rgba(211, 211, 211, 0.753);
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-
-}
-
-.workTimeListElement {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.dayOfTheWeek {
-    margin: 0;
-    color: rgba(211, 211, 211, 0.753);
-    width: 50px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.workTime {
-    color: rgba(211, 211, 211, 0.753);
-}
-
-/* ------------------------------------Gallery----------------------------------------------- */
-.magnificAnchor img {
-    border-radius: 50px;
-    width: 70px;
-    height: 70px;
-    padding: 3px;
-}
-
-.magnificImages {
-    padding: 0;
-    margin: 0;
-}
-
-.magnificImages li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    padding: 20px 0px 30px 0px;
+    flex-wrap: wrap;
+    gap: 100px;
 }
 
 
 /* --------------------------------------Footer-Navigation----------------------- */
-.contentFooterNavigation {
+
+.sectionFooterNavigation {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -99,7 +34,6 @@
 
 
 }
-
 .footerNavigationTitle {
     font-family: "Monoton", sans-serif;
     font-weight: 400;
@@ -119,25 +53,22 @@
     /* width: 100%; */
 }
 
-.contentFooterLink {
+.footerButton {
     text-transform: uppercase;
     color: #70B11C;
-    letter-spacing: 1.5px;
+    letter-spacing: 3px;
     font-weight: 600;
+    background-color: #45443E;
+    border: none;
+    font-size: 18px;
 
 
 }
 
-.contentFooterLink:hover {
+.footerButton:hover {
     color: #FFDD00;
 }
 
-.contentFooterLink:not(:last-child):after {
-    content: "";
-    border-right: 3px solid white;
-    margin: 15px;
-
-}
 
 .contentFooterIcons {
     display: flex;
@@ -158,8 +89,7 @@
 
 
 }
-
-.contentRightsReserved {
+.sectionRightsReserved {
     display: flex;
     flex-direction: row;
     align-items: center;

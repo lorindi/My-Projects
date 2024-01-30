@@ -12,6 +12,7 @@
     letter-spacing: 1.5px;
     margin-bottom: 5px;
     font-size: 12px;
+    color: rgba(211, 211, 211, 0.753);
     font-weight: 500;
     background-color: #45443E;
     border: 1px solid gray;
@@ -28,6 +29,7 @@
     letter-spacing: 1.5px;
     font-size: 12px;
     font-weight: 500;
+    color: rgba(211, 211, 211, 0.753);
     background-color: #45443E;
     border: 1px solid gray;
     transition: all 0.05s ease-in-out 0s;
