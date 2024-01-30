@@ -1,21 +1,31 @@
 import { createContext, useState } from "react";
 import axios from "axios";
+import {usePersistedState} from '../hooks/usePersistedState';
 
 export const Contexts = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [auth, setAuth] = useState({});
+  
+  const [auth, setAuth] = usePersistedState("auth", {});
   const [error, setError] = useState(null);
   const [fault, setFault] = useState(null);
 
-
+  const initialToken = localStorage.getItem("accessToken");
   const axiosInstance = axios.create({
     baseURL: "http://127.0.0.1:8000/api/",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      Authorization: `Bearer ${initialToken}`,
     },
   });
+
+  // const axiosInstance = axios.create({
+  //   baseURL: "http://127.0.0.1:8000/api/",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //     Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+  //   },
+  // });
 
   const onLoginSubmit = async (values) => {
     try {
