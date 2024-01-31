@@ -52,7 +52,7 @@ export const Footer = () => {
       </section>
       <section className={styles.sectionRightsReserved}>
         <p className={styles.rightsReservedText}>© Copyright 2024</p>
-        <p className={styles.rightsReservedTextSpan}>Magic Sushi Lora</p>
+        <p className={styles.rightsReservedTextSpan}>Lora Mitova</p>
         <p className={styles.rightsReservedText}>All rights reserved.</p>
       </section>
     </footer>

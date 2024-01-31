@@ -49,8 +49,6 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
-    /* width: 100%; */
 }
 
 .footerButton {
@@ -113,4 +111,29 @@
     color: white;
     margin: 0px 30px 0px 30px;
     font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 18px;
+    text-shadow: 0px 0px 5px rgb(75, 75, 75);
+
+}
+@media (min-width: 300px) and (max-width: 600px) {
+    .footerNavigationTitle {
+        font-size: 16px;
+    }
+    .footerIcon {
+        font-size: 20px;
+    }
+    .footerNavigationTitle {
+   
+        margin-bottom: 10px;
+    }
+    
+    .contentFooterLinks {
+  
+        margin-bottom: 10px;
+
+    }
+    .sectionInformationAboutUs {
+        gap: 50px;
+    }
 }
