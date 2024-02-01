@@ -31,7 +31,7 @@
 - Users can browse all public recipes shared by other users.
 
 ### 2.Creating and Managing Personal Recipes:
-- Users can create their own recipes and list, edit or delete them.
+- Users can create their own recipes and edit, delete or view a list of them.
 
 ### 3.Viewing Sushi Gallery:
 - All users have access to the gallery, where they can browse various types of sushi.
