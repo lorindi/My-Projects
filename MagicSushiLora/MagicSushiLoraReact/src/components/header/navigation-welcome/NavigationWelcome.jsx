@@ -29,10 +29,13 @@ export const NavigationWelcome = () => {
             Recipes
           </Link>
           <Link className={styles.linkWelcome} to="">
-            Selection
+            Kinds
           </Link>
           <Link className={styles.linkWelcome} to="">
-            School
+            Blog
+          </Link>
+          <Link className={styles.linkWelcome} to="">
+            Courses
           </Link>
         </div>
         <div className={styles.contentNavBarWelcome}>
@@ -48,10 +51,8 @@ export const NavigationWelcome = () => {
             </Link>
             <div className={styles.dropdownLinks}>
               <div className={styles.dropdownLink}>
-              <Logout />
-
+                <Logout />
               </div>
-  
             </div>
           </div>
         </div>
@@ -94,18 +95,25 @@ export const NavigationWelcome = () => {
                 Sushi Recipes
               </Link>
               <Link
-                className={styles.downLinkMobile}
                 onClick={toggleDropdown}
+                className={styles.downLinkMobile}
                 to=""
               >
-                Sushi Selection
+                Sushi Kinds
               </Link>
               <Link
                 className={styles.downLinkMobile}
                 onClick={toggleDropdown}
                 to=""
               >
-                Sushi School
+                Sushi Blog
+              </Link>
+              <Link
+                className={styles.downLinkMobile}
+                onClick={toggleDropdown}
+                to=""
+              >
+                Sushi Courses
               </Link>
               <Link
                 onClick={toggleDropdown}
