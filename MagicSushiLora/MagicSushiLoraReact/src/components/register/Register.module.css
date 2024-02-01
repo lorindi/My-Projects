@@ -24,6 +24,7 @@
     align-items: center;
     width: 100%;
     font-weight: 400;
+    color: #70B11C;
 
 }
 
@@ -38,7 +39,7 @@
 
 .registrationFormInput {
     border: none;
-    border-bottom: 3px solid green;
+    border-bottom: 3px solid #70B11C;
     padding: 5px;
     width: 250px;
 }

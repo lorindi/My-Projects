@@ -20,6 +20,8 @@
     align-items: center;
     width: 100%;
     font-weight: 400;
+    color: #70B11C;
+
 }
 
 .loginForm {
@@ -38,7 +40,7 @@
 
 .loginFormInput {
     border: none;
-    border-bottom: 3px solid green;
+    border-bottom: 3px solid #70B11C;
     padding: 7px;
     width: 250px;
     color: black;

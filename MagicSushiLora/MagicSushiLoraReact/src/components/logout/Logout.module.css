@@ -1,11 +1,13 @@
 .logoutButton {
-    background-color: #70B11C;
+    background-color: white;
     border: none;
-    color: white;
+    color: #70B11C;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 1.5px;
     font-weight: 500;
+    cursor: pointer;
+
 }
 
 @media (min-width: 250px) and (max-width: 750px) {
@@ -22,6 +24,8 @@
         padding: 10px;
         border-bottom: 5px solid #70b11c3d;
         letter-spacing: 1.5;
+        cursor: pointer;
+
 
     }
 

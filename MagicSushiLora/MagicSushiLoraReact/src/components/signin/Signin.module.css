@@ -20,7 +20,8 @@
     /* background-color: green; */
     border-radius: 50px;
     overflow: hidden;
-    border: 2px solid green;
+    border: 3px solid #70b11c8e;
+    /* box-shadow: 0px 0px 10px 1px ; */
 
 }
 
