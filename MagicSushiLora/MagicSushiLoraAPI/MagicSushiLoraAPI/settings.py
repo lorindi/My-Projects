@@ -28,7 +28,13 @@ INSTALLED_APPS = [
 
     # Application apps
     'users',
-    'sushi',
+    'blog',
+    'kinds',
+    'recipes',
+    'courses',
+    'shop',
+    'cart',
+    'payment',
 ]
 AUTH_USER_MODEL = 'users.SushiUser'
 
