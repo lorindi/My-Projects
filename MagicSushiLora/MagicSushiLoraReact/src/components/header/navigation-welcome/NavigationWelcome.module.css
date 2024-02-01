@@ -10,12 +10,12 @@
 .navigationWelcome {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #70B11C;
     width: 100%;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
 }
 
 .navBarWelcome {
@@ -32,10 +32,59 @@
     font-weight: 500;
 }
 
+.contentNavBarWelcome {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    position: relative;
+
+}
+
+.dropdownButtonProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dropdownButtonProfile>svg {
+    color: white;
+
+}
+
+.dropdownLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: -45px;
+    background-color: #70B11C;
+    border: 2px solid #70B11C;
+    border-radius: 4px;
+    width: 100px;
+    cursor: pointer;
+    padding: 8px 0px 0px 0px;
+}
+
+.dropdownLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.dropdownButtonProfile:hover .dropdownLinks {
+    transition: opacity 0.1s ease;
+
+    display: flex;
+
+}
 
 /* -----------------------------------------MOBILE-NAVIGATION------------------------------------------------- */
 
-.navigationWelcomeMobile {
+.navigationMobile {
     position: relative;
     flex-direction: row;
     justify-content: space-around;
@@ -47,11 +96,11 @@
     display: none;
 }
 
-.contentDropDownButton {
+.contentDropDownButtonMobile {
     z-index: 10;
 }
 
-.dropdownButton {
+.dropdownButtonMobile {
     background-color: #70B11C;
     border: 2px solid white;
     border-radius: 100%;
@@ -59,17 +108,17 @@
 
 }
 
-.dropdownButtonIcon {
+.dropdownButtonIconMobile {
     color: white;
 }
 
 
-.dropdownButton:hover .dropdownButtonIcon,
-.dropdownButton:hover .dropdownButtonIcon svg {
+.dropdownButtonMobile:hover .dropdownButtonIconMobile,
+.dropdownButtonMobile:hover .dropdownButtonIconMobile svg {
     color: yellow;
 }
 
-.dropdown {
+.dropdownMobile {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -97,13 +146,13 @@
     }
 }
 
-.contentOnCloseButton {
+.contentOnCloseButtonMobile {
     display: flex;
     justify-content: flex-end;
 
 }
 
-.onCloseButton {
+.onCloseButtonMobile {
     color: #70B11C;
     background-color: white;
     border: none;
@@ -112,13 +161,13 @@
 
 }
 
-.onCloseButton:hover {
+.onCloseButtonMobile:hover {
     color: orange;
 
 
 }
 
-.downLinkWelcome {
+.downLinkMobile {
     display: flex;
     justify-content: center;
     color: #70B11C;
@@ -129,19 +178,25 @@
     border-bottom: 5px solid #70b11c3d;
 }
 
-.iconHome {
+.iconHomeMobile {
     font-size: 20px;
 }
 
-.downLinkWelcome:hover {
+.downLinkMobile:hover {
     color: orange;
 
 }
 
-
+.sushiLogoMobile {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
 
 @media (min-width: 250px) and (max-width: 750px) {
-    .navigationWelcomeMobile {
+    .navigationMobile {
         display: flex;
 
     }

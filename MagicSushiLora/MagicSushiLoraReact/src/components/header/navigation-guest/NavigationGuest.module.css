@@ -13,12 +13,15 @@
     background-color: #70B11C;
     width: 100%;
     flex-wrap: wrap;
+    padding: 10px 0px 10px 0px;
+
 }
 
 .navBarGuest {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    margin: 0;
 }
 
 .linkGuest {
