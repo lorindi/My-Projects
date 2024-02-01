@@ -12,9 +12,6 @@ from users.serializers import CreateUserSerializer
 UserModel = get_user_model()
 
 
-# print(UserModel)
-
-
 class RegisterApiView(generics.CreateAPIView):
     queryset = UserModel.objects.all()
     serializer_class = CreateUserSerializer
@@ -51,6 +48,4 @@ class LogoutApiView(APIView):
             return Response({'message': 'user logged out'})
         else:
             return Response({'message': 'user not authenticated'})
-    # def __perform_logout(request):
-    #     request.user.auth_token.delete()
-    #     return Response({'message': 'user logged out'})
+

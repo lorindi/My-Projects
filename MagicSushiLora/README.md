@@ -6,7 +6,7 @@
 # Features
 ### Recipes
 - MagicSushiLora allows every user to share their own sushi recipes. 
-- Using the Django Rest backend, users can easily add new recipes, edit them, or delete them.
+- Using the Django Rest backend, users can easily add new recipes, also edit or delete them.
 
 ### Sushi Gallery
 - The project includes a gallery where all users can browse various types of sushi. 
@@ -16,7 +16,7 @@
 - MagicSushiLora provides a dedicated learning application that informs users about different types of sushi. 
 - Here, they can learn more about the history, ingredients, and specifics of each type, accompanied by photos and additional information.
 
-### Sushi Ordering
+### Sushi Purchase Ordering
 - With a convenient sushi ordering application, users can quickly and easily select their favorite types of sushi and order them for home delivery. The process is intuitive and user-friendly.
 
 # Technologies
@@ -31,7 +31,7 @@
 - Users can browse all public recipes shared by other users.
 
 ### 2.Creating and Managing Personal Recipes:
-- Users can create their own recipes and edit or delete them.
+- Users can create their own recipes and list, edit or delete them.
 
 ### 3.Viewing Sushi Gallery:
 - All users have access to the gallery, where they can browse various types of sushi.
@@ -48,7 +48,7 @@
 - They can manage content in the gallery, including adding new photos and information.
 
 ### Managing Users:
-- Administrators have the right to view and manage user profiles, including their permissions.
+- They have couple of right to view and manage user profiles, including their permissions.
 
 ### Monitoring Orders:
 - Administrators can view and monitor user orders, ensuring smooth and efficient sushi delivery.

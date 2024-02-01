@@ -57,7 +57,7 @@
     justify-content: center;
     box-shadow: 0px -20px 50px 50px white;
     z-index: 1;
-
+    flex-wrap: wrap;
 }
 
 /* -------------------------------BASIC-SECTION--------------------------------- */
@@ -78,7 +78,6 @@
     padding: 70px;
     font-size: 21px;
     font-weight: 500;
-    letter-spacing: 0.5px;
     text-indent: 3em;
     text-align: justify;
     color: black;
@@ -148,7 +147,6 @@
     justify-content: center;
     align-items: center;
     color: rgba(0, 191, 255, 0.796);
-    font-weight: 500;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-size: 22px;
@@ -315,7 +313,6 @@
 }
 
 
-
 .cf-button {
     background-image: linear-gradient(to right, #7BD674 0%, #33DCD1 51%, rgba(255, 177, 190, 0.865) 100%);
     margin: 15px;
@@ -330,7 +327,6 @@
     width: 125px;
     letter-spacing: 2px;
     font-weight: 600;
-    text-shadow: 0px 0px 2px black;
     font-size: 18px;
     border: 1px solid white;
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.502);
@@ -363,7 +359,6 @@
     position: absolute;
     background: url('../images/aida-batres-_QxzSVWesm0-unsplash.jpg');
     background-size: cover;
-    background-position: top;
     object-fit: cover;
     background-size: cover;
     background-position: center;

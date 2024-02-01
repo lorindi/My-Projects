@@ -1,0 +1,215 @@
+-----------------------------------------------------USERS-MODEL------------------------------------------------------------------------
+
+from django.contrib.auth.models import AbstractUser
+from django.core.validators import MinLengthValidator
+from django.db import models
+
+Този код е част от Django уеб приложение и дефинира потребителски модел с име SushiUser, който наследява вградения Django модел AbstractUser.
+AbstractUser предоставя основна функционалност за управление на потребителите в уеб приложение, като например автентикация и разрешения.
+Кастомизираният модел SushiUser добавя някои допълнителни полета и настройки към вече вградените от AbstractUser.
+
+class SushiUser(AbstractUser):
+    is_active: Булево поле, което по подразбиране е зададено на True и показва дали потребителят е активен или не.
+    is_active = models.BooleanField(default=True)
+
+    is_staff: Булево поле, което по подразбиране е зададено на False и указва дали потребителят има достъп до административни функции в приложението.
+    is_staff = models.BooleanField(default=False)
+
+    email: Поле за електронна поща с уникалност и грешки за уникалност, което съобщава за неправилност, ако се опитате да регистрирате потребител със същия електронен адрес.
+    email = models.EmailField(
+        unique=True,
+        null=False,
+        blank=False,
+        error_messages={"unique": "Email is not unique."}
+    )
+
+    username: Поле за име с уникалност и грешки за уникалност, което съобщава за неправилност,
+    ако се опитате да регистрирате потребител със същото потребителско име.
+    username = models.CharField(
+        max_length=255,
+        null=False,
+        blank=False,
+        unique=True,
+        error_messages={"unique": "Username is not unique."}
+    )
+
+    first_name и last_name: Полета за първо и фамилно име на потребителя.
+    first_name = models.CharField(
+        max_length=150,
+        null=True,
+        blank=True,
+    )
+    last_name = models.CharField(
+        max_length=150,
+        null=True,
+        blank=True,
+    )
+
+    description: Текстово поле с валидатор, който изисква минимална дължина от 5 символа, представляващо описание на потребителя.
+    description = models.TextField(
+        validators=[MinLengthValidator(5)],
+        null=True,
+        blank=True,
+    )
+
+    profile_picture: URL поле, което може да съдържа връзка към профилната снимка на потребителя.
+    profile_picture = models.URLField(
+        null=True,
+        blank=True,
+    )
+
+
+    Методът __str__ е пренаписан, за да върне потребителското име при извикване на str() за инстанцията на класа,
+    което ползва username за идентификация.
+    def __str__(self):
+        return self.username
+
+-----------------------------------------------------USERS-VIEWS------------------------------------------------------------------------
+Използва се, за да вземе модела за потребител, който е конфигуриран в приложението, предоставено от AUTH_USER_MODEL в настройките на Django.
+from django.contrib.auth import get_user_model
+
+Взима вграденият модел за "анонимен потребител", който се използва, когато няма аутентикация.
+from django.contrib.auth.models import AnonymousUser
+
+Използва се за работа със времеви зони в Django.
+from django.utils import timezone
+
+Използва се за създаване и управление на токени за удостоверяване в REST framework.
+from rest_framework.authtoken.models import Token
+
+Използва се за извличане на токен при вход.
+from rest_framework.authtoken.views import ObtainAuthToken
+
+Клас за улесняване на създаването на HTTP отговори в REST framework.
+from rest_framework.response import Response
+
+Базов клас за създаване на API изгледи.
+from rest_framework.views import APIView
+
+Модул за генерични изгледи в REST framework.
+from rest_framework import generics
+
+Импортира сериализатор за създаване на потребител.
+from users.serializers import CreateUserSerializer
+
+Взема конфигурирания модел за потребител от AUTH_USER_MODEL.
+UserModel = get_user_model()
+
+
+Клас, който използва генеричен изглед за създаване (CreateAPIView) за регистрация на нови потребители. Възможно е използването на
+сериализатор CreateUserSerializer за валидация и създаване на потребител.
+class RegisterApiView(generics.CreateAPIView):
+    queryset = UserModel.objects.all()
+    serializer_class = CreateUserSerializer
+
+
+Клас, който наследява ObtainAuthToken, използван за вход на потребители. Предоставя допълнителна логика, като създаване или взимане на токен,
+обновяване на последно влизане и връщане на отговор с токен и информация за потребителя.
+class LoginApiView(ObtainAuthToken):
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data, context={'request': request})
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data['user']
+        token, created = Token.objects.get_or_create(user=user)
+        user.last_login = timezone.now()
+        user.save()
+        # user.update_last_login(None)
+        return Response({
+            'token': token.key,
+            'user_id': user.pk,
+            'email': user.email,
+        })
+
+Клас, който наследява APIView и предоставя изглед за излизане на потребителите. Проверява дали потребителят е аутентикиран и изтрива съответния токен,
+връщайки отговор със съобщение за успешно излизане или съобщение, че потребителят не е аутентикиран.
+class LogoutApiView(APIView):
+    def get(self, request, *args, **kwargs):
+        return self.__perform_logout(request)
+
+    def post(self, request, *args, **kwargs):
+        return self.__perform_logout(request)
+
+    @staticmethod
+    def __perform_logout(request):
+        if not isinstance(request.user, AnonymousUser):
+            request.user.auth_token.delete()
+            return Response({'message': 'user logged out'})
+        else:
+            return Response({'message': 'user not authenticated'})
+
+
+-----------------------------------------------------USERS-URLS------------------------------------------------------------------------
+Този код създава конфигурация на URL пътища (urlpatterns) за Django приложението, което включва API изгледи за регистрация, вход и изход на потребители.
+
+Импортира path функцията от django.urls, която се използва за дефиниране на пътища в Django приложение.
+from django.urls import path
+
+Импортира изгледите, които са дефинирани в предходния код (RegisterApiView, LoginApiView, LogoutApiView).
+from users.views import RegisterApiView, LoginApiView, LogoutApiView
+
+Създава списък с пътища (urlpatterns), където се конфигурират URL пътища за различните изгледи.
+urlpatterns = [
+
+    Дефинира път с регистриране на нов потребител. При посещение на този път се изпълнява изгледът RegisterApiView.as_view(),
+    който е отговорен за обработка на заявките за регистрация. Изгледът се нарича "register", и този идентификатор може да се
+    използва в шаблони или други части на приложението.
+    path('register/', RegisterApiView.as_view(), name='register'),
+
+    Дефинира път за вход на потребител. При посещение на този път се изпълнява изгледът LoginApiView.as_view(), отговорен за обработка на заявките за вход.
+    Изгледът се нарича "login".
+    path('login/', LoginApiView.as_view(), name='login'),
+
+    Дефинира път за изход на потребител. При посещение на този път се изпълнява изгледът LogoutApiView.as_view(), отговорен за обработка на заявките за изход.
+    Изгледът се нарича "logout".
+    path('logout/', LogoutApiView.as_view(), name='logout'),
+]
+Този списък с пътища трябва да се включи в главния urls.py файл на Django проекта, така че Django да знае за тези API пътища и да ги свърже със съответните изгледи при стартиране на приложението.
+
+
+-----------------------------------------------------USERS-SERIALIZERS------------------------------------------------------------------------
+Този код дефинира сериализатор в Django REST framework за създаване (регистриране) на нов потребител. Сериализаторът съдържа логика за валидация
+и обработка на паролата преди да бъде записана в базата данни, както и логика за премахване на паролата от отговора на заявките.
+
+from asyncio import exceptions
+from django.contrib.auth import get_user_model
+from rest_framework import serializers
+from django.contrib.auth import password_validation
+
+UserModel = get_user_model()
+
+
+class CreateUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserModel
+        fields = ('email', 'username', 'password')
+
+    # This hashes the password (Not save in plain-text in the DB)
+    def create(self, validated_data):
+        user = super().create(validated_data)
+
+        user.set_password(user.password)
+        user.save()
+
+        return user
+
+    def validate(self, data):
+        # Invoke password validators
+        user = UserModel(**data)
+        password = data.get('password')
+        errors = {}
+        try:
+            password_validation.validate_password(password, user)
+        except exceptions.ValidationError as e:
+            errors['password'] = list(e.messages)
+        if errors:
+            raise serializers.ValidationError(errors)
+        return super().validate(data)
+
+    # This removes password from the response
+    def to_representation(self, instance):
+        # return {}
+        user_representation = super().to_representation(instance)
+        user_representation.pop('password')
+        return user_representation
+
