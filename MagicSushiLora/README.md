@@ -48,13 +48,13 @@
 - They can manage content in the gallery, including adding new photos and information.
 
 ### Managing Users:
-- They have couple of right to view and manage user profiles, including their permissions.
+- Administrators have the rights to view and manage user profiles, including their permissions.
 
 ### Monitoring Orders:
 - Administrators can view and monitor user orders, ensuring smooth and efficient sushi delivery.
 
 ### Managing Content in the Learning Application:
-- Administrators have the right to add, edit, and delete information from the learning application.
+- Administrators have the rights to add, edit, and delete information from the learning application.
 
 ### System Configuration and Security:
 - Administrators can perform system configurations and ensure the security of the platform.
