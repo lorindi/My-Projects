@@ -171,19 +171,33 @@ urlpatterns = [
 Този код дефинира сериализатор в Django REST framework за създаване (регистриране) на нов потребител. Сериализаторът съдържа логика за валидация
 и обработка на паролата преди да бъде записана в базата данни, както и логика за премахване на паролата от отговора на заявките.
 
+Импортира модул за изключения от asyncio, което може да се използва за управление на асинхронни операции.
 from asyncio import exceptions
+
+Импортира функцията get_user_model за вземане на модела за потребител, конфигуриран в Django проекта.
 from django.contrib.auth import get_user_model
+
+Импортира модула за сериализатори от Django REST framework.
 from rest_framework import serializers
+
+Импортира модул за валидация на пароли в Django.
 from django.contrib.auth import password_validation
 
+Взема модела за потребител, който ще се използва за създаване на нов потребител.
 UserModel = get_user_model()
 
-
+Дефинира клас за сериализатор, който наследява от serializers.ModelSerializer.
+Този сериализатор ще се използва за валидация и обработка на данните, преди да се създаде нов потребител.
 class CreateUserSerializer(serializers.ModelSerializer):
+
+    Вложен клас, който дефинира метаинформацията за сериализатора. В този случай, указва, че моделът за потребител,
+    който ще се използва, е UserModel, и че трябва да бъдат включени полетата 'email', 'username' и 'password'.
     class Meta:
         model = UserModel
         fields = ('email', 'username', 'password')
 
+    Метод, който се използва за създаване на нов потребител. Преди запис, паролата се хешира чрез използване на метода set_password,
+    който осигурява коректното обработване на паролата, преди да бъде записана в базата данни.
     # This hashes the password (Not save in plain-text in the DB)
     def create(self, validated_data):
         user = super().create(validated_data)
@@ -193,6 +207,8 @@ class CreateUserSerializer(serializers.ModelSerializer):
 
         return user
 
+    Метод, който се използва за валидация на данните, преди да бъдат създадени. В този случай, извикват се вградените в Django функции
+    за валидация на пароли.
     def validate(self, data):
         # Invoke password validators
         user = UserModel(**data)
@@ -206,6 +222,8 @@ class CreateUserSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(errors)
         return super().validate(data)
 
+    Метод, който се използва за преобразуване на обекта в представление. В този случай, премахва полето 'password' от отговора, преди този отговор
+    да бъде върнат при извикване на API. Това осигурява, че паролата не се изпраща в отговора и не се показва в явен вид.
     # This removes password from the response
     def to_representation(self, instance):
         # return {}
@@ -213,3 +231,35 @@ class CreateUserSerializer(serializers.ModelSerializer):
         user_representation.pop('password')
         return user_representation
 
+-----------------------------------------------------USERS-ADMIN------------------------------------------------------------------------
+
+Импортира модула за административен панел в Django.
+from django.contrib import admin
+
+Импортира готовия администратор за модела на потребителите в Django, наречен UserAdmin.
+Този клас предоставя стандартни настройки и функционалности
+за управление на потребителите през административния интерфейс.
+from django.contrib.auth.admin import UserAdmin
+
+Импортира модела SushiUser, който е кастомизиран модел на потребител.
+from .models import SushiUser
+
+Създава кастомизиран администратор за потребителите, който наследява стандартния UserAdmin.
+Това позволява добавяне на допълнителни настройки или промени в стандартния администраторски интерфейс за потребители.
+class CustomUserAdmin(UserAdmin):
+
+    Задава модела, който ще бъде управляван от този администратор. В този случай, това е кастомизираният модел SushiUser.
+    model = SushiUser
+
+    Задава списък с полета, които ще бъдат показани в списъка с потребителите в администраторския интерфейс.
+    В този случай, това са 'username', 'email', 'first_name', 'last_name', 'is_staff' и 'is_active'.
+    list_display = ['username', 'email', 'first_name', 'last_name', 'is_staff', 'is_active']
+
+    Задава списък с полета, по които може да се търси в администраторския интерфейс.
+    В този случай, търсенето ще бъде възможно по 'username' и 'email'.
+    search_fields = ['username', 'email']
+
+Регистрира модела SushiUser в администраторския интерфейс и свързва го с кастомизирания администратор CustomUserAdmin.
+Така, когато отидете в администраторския интерфейс, ще можете да управлявате потребителите от модела SushiUser с допълнителни настройки,
+ както са определени в CustomUserAdmin.
+admin.site.register(SushiUser, CustomUserAdmin)
