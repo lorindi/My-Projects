@@ -5,10 +5,10 @@
 # Features
 ### 1. Campaigns
 - ***Create, Edit and Delete:***
-- Users can create, edit and delete cystic fibrosis-related fundraising campaigns.
+- Users can create, edit, and delete cystic fibrosis-related fundraising campaigns.
 ### 2. Events
 - ***Event Management:***
-- Ability to manage cystic fibrosis events such as conferences, deadlines, locations and details.
+- Ability to manage cystic fibrosis events such as conferences, deadlines, locations, and details.
 ### 3. News
 - ***Publish and Manage:***
 - Ability to publish and manage news related to the activities of the association.
