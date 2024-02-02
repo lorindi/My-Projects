@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import generics
 
-from users.serializers import CreateUserSerializer
+from users.serializers import CreateUserSerializer, UpdateUserSerializer
 
 UserModel = get_user_model()
 
@@ -49,3 +49,7 @@ class LogoutApiView(APIView):
         else:
             return Response({'message': 'user not authenticated'})
 
+
+class UpdateUserApiView(generics.RetrieveUpdateAPIView):
+    queryset = get_user_model().objects.all()
+    serializer_class = UpdateUserSerializer
