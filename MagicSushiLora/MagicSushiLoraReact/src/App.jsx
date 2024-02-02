@@ -1,12 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import { Header } from "./components/header/Header";
-import { Footer } from "./components/footer/Footer";
+import { Header } from "./components/layout/header/Header";
+import { Footer } from "./components/layout/footer/Footer";
 import { AuthProvider } from "./contexts/Contexts";
-import { Login } from "./components/login/Login";
-import { Register } from "./components/register/Register";
-import { Logout } from "./components/logout/Logout";
-import { Home } from "./components/home/Home";
-import { Signin } from "./components/signin/SignIn";
+import { Home } from "./components/pages/home/Home";
+
+import { Signin } from "./components/users/signin/Signin";
+import { Login } from "./components/users/login/Login";
+import { Register } from "./components/users/register/Register";
+import { Logout } from "./components//users/logout/Logout";
 // import { useMediaQuery } from 'react-responsive';
 import './App.css'
 import { useEffect, useState } from "react";
