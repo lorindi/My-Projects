@@ -1,56 +1,87 @@
 .containerHomePage {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+    justify-content: center;
+    /* padding: 50px 0px 50px 0px; */
+    /* min-height: 70vh; */
 }
-
-
-
-
-
-
-
-
-
-
 
 .sectionCover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    min-height: 550px;
+    overflow: hidden;
+
+}
+
+.contentCoverImage {
+    display: flex;
+    justify-content: center;
     align-items: center;
+
+}
+
+.coverImageLeft {
+    rotate: 90deg;
+    margin-bottom: 100px;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+
+}
+
+.coverImageRight {
+    rotate: 90deg;
+    margin-top: 100px;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+
+}
+
+.coverImageMobile {
+    margin-top: 100px;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+
+}
+
+.contentCoverImageMobile {
+    display: none;
+}
+.additionalImageMobile {
+    display: none;
+}
+.contentCoverInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
     width: 100%;
 
 }
 
-.contentCoverInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin-left: 200px;
-
-}
-
 .coverTitle {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
+    font-size: calc(12px + 1.5vw);
+    font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 30px;
+    text-align: center;
+    width: 80%;
+
 }
 
 .coverDescription {
-    font-size: 18px;
+    font-size: calc(13px + 0.5vw); 
     letter-spacing: 0.5px;
+    width: 80%;
     text-align: center;
-    width: 900px;
-
+    font-weight: 400;
 }
 
 .coverButton {
@@ -59,12 +90,15 @@
     border: none;
     color: #fff;
     text-align: center;
-    font-size: 16px;
+    font-size: calc(0.7rem + 0.2vw); 
     padding: 8px;
-    width: 200px;
+    /* width: 200px; */
+    /* width: calc(12vw + 100px); */
+    min-width: 150px;
+    width: 30%;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 36px;
+    /* margin: 36px; */
     box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.453);
     text-transform: uppercase;
     font-weight: 600;
@@ -87,7 +121,7 @@
     right: -20px;
     transition: 0.5s;
     font-size: 25px;
-    color: #70B11C;
+    color: orange;
 
 }
 
@@ -95,32 +129,37 @@
     padding-right: 24px;
     padding-left: 8px;
     background-color: white;
-    color: #70B11C;
-
+    color: orange;
+    border: 2px solid orange;
 
 }
-
 
 .coverButton:hover:after {
     opacity: 1;
     right: 10px;
 }
 
-.contentCoverImage {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 50%;
-    padding: 0px 0px 50px 0px;
+@media (min-width: 250px) and (max-width: 1090px) {
+    .contentCoverImageMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 
+    .contentCoverImage {
+        display: none;
+
+
+    }
+    .contentCoverInfo {
+        justify-content: center;
+        gap: 3rem;
+    
+    }
 }
-
-.coverImage {
-    width: 500px;
-    height: 400px;
-    object-fit: cover;
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+@media (min-width: 250px) and (max-width: 600px) {
+    .additionalImageMobile {
+        display: block;
+    }
 }
