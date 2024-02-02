@@ -231,10 +231,12 @@
 @media (min-width: 250px) and (max-width: 600px) {
     .additionalImageMobileLeft {
         display: block;
+        animation: slideInFromLeft 1s ease-out;
     }
 
     .additionalImageMobileRight {
         display: block;
+        animation: slideInFromRight 1s ease-out;
     }
 
     .contentCoverInfo {
