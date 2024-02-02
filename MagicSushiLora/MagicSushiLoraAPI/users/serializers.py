@@ -41,4 +41,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
         return user_representation
 
 
-
+class UpdateUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = get_user_model()
+        fields = ['username', 'email', 'first_name', 'last_name', 'description', 'profile_picture']
