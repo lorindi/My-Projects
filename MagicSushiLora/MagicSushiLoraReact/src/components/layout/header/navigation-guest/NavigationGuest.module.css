@@ -1,0 +1,48 @@
+.sushiLogoGuest {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+.navigationGuest {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #70B11C;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 10px 0px 10px 0px;
+
+}
+
+.navBarGuest {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 0;
+}
+
+.linkGuest {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+@media (min-width: 300px) and (max-width: 750px) {
+    .navBarGuest li:nth-child(1) {
+        display: none;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 3440px) {
+
+    .navBarGuest li:nth-child(2),
+    .navBarGuest li:nth-child(3) {
+        display: none;
+    }
+
+}

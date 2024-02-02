@@ -1,0 +1,98 @@
+/* .containerRegisterForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 480px;
+} */
+.signUpContainer {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 480px;
+    background-color: rgba(255, 255, 255, 0.789);
+}
+
+.registrationFormTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 400;
+    color: #70B11C;
+
+}
+
+.registrationForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.registrationFormInput {
+    border: none;
+    border-bottom: 3px solid #70B11C;
+    padding: 5px;
+    width: 250px;
+}
+
+.contentRegistrationForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registrationFormButton {
+    border: none;
+    padding: 5px;
+    width: 250px;
+    border-radius: 50px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #70B11C;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0px 3px 7px 1px gray;
+
+
+}
+.registrationFormButton:hover {
+    transition: 1s;
+    background-color: orange;
+    box-shadow: 0px 1px 1px 1px gray;
+}
+.registrationFormInput:hover {
+    cursor: pointer;
+    transition: 1s;
+    border-bottom: 3px solid orange;
+
+}
+.registrationFormInput:focus {
+    cursor: pointer;
+    transition: 1s;
+    border-bottom: 3px solid orange;
+
+}
+.registrationFormInput:active {
+    cursor: pointer;
+    transition: 1s;
+    border-bottom: 3px solid orange;
+
+}
+
+@media (min-width: 320px) and (max-width: 750px) {
+    .signUpContainer {
+        position: initial;
+        margin: auto; /* Оставяне на margin: auto за центриране в responsive режим */
+    }
+}
