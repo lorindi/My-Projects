@@ -9,6 +9,8 @@
     /* width: 280px;
     height: 315px; */
     padding: 10px;
+    animation: slideInFromLeft 1s ease-out;
+
 }
 
 .workTimeList {
@@ -37,7 +39,6 @@
     flex-direction: column;
     width: 250px;
     margin: 0;
-
 }
 .addressListElement:nth-child(1){
     margin-bottom: 10px;
@@ -98,4 +99,16 @@
     align-items: center;
 }
 
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
