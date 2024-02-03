@@ -1,40 +1,45 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Contexts } from "../../../contexts/Contexts";
 
-import { useParams } from "react-router-dom";
 export const Profile = () => {
-  const { id } = useParams();
-  const [user, setUser] = useState(null);
-  const { axiosInstance, initialToken } = useContext(Contexts);
+  const { axiosInstance, isAuthenticated, userId } = useContext(Contexts);
+  const [userData, setUserData] = useState(null);
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        console.log("Sending request with token:", initialToken);
-        const response = await axiosInstance.get(`auth/details/${id}/`);
-        setUser(response.data);
+        const response = await axiosInstance.get(`auth/details/${userId}/`);
+        setUserData(response.data);
       } catch (error) {
-        console.error("Error fetching user data:", error);
+        console.error("Error fetching user data:", error.message);
       }
     };
-  
-    fetchUserData();
-  }, [axiosInstance, id, initialToken]);
 
-  if (!user) {
-    return <div>Loading...</div>;
-  }
+    if (isAuthenticated) {
+      fetchUserData();
+    }
+  }, [axiosInstance, isAuthenticated, userId]);
 
   return (
     <div>
-      <h1>User Details</h1>
-      <p>ID: {user.id}</p>
-      <p>Username: {user.username}</p>
-      <p>Email: {user.email}</p>
-      <p>First Name: {user.first_name}</p>
-      <p>Last Name: {user.last_name}</p>
-      <p>Description: {user.description}</p>
-      {/* Add more fields as needed */}
+      {isAuthenticated ? (
+        <div>
+          <h2>User Profile</h2>
+          {userData ? (
+            <div>
+              <p>Username: {userData.username}</p>
+              <p>Email: {userData.email}</p>
+              <p>First Name: {userData.first_name}</p>
+              <p>Last Name: {userData.last_name}</p>
+              <img src={userData.profile_picture} alt="" />
+            </div>
+          ) : (
+            <p>Loading user data...</p>
+          )}
+        </div>
+      ) : (
+        <p>Please log in to view your profile.</p>
+      )}
     </div>
   );
 };
