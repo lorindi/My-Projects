@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 export const EditUser = () => {
-  const { pk } = useParams();
+  const { id } = useParams();
   const [userData, setUserData] = useState({
     username: '',
     email: '',
@@ -14,7 +14,7 @@ export const EditUser = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/auth/${pk}/update/`)
+    axios.get(`http://127.0.0.1:8000/api/auth/${id}/update/`)
       .then(response => {
         console.log(response.data);
         setUserData(response.data);
@@ -22,7 +22,7 @@ export const EditUser = () => {
       .catch(error => {
         console.error('Error fetching user data:', error);
       });
-  }, [pk]);
+  }, [id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,7 +36,7 @@ export const EditUser = () => {
     e.preventDefault();
 
     // Send a POST request with the updated user data
-    axios.post(`http://127.0.0.1:8000/api/auth/${pk}/update/`, userData)
+    axios.post(`http://127.0.0.1:8000/api/auth/${id}/update/`, userData)
       .then(response => {
         console.log('User data updated successfully:', response.data);
         // Optionally, you can redirect the user or perform other actions upon successful update

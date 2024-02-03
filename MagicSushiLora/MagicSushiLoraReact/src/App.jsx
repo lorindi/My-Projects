@@ -12,6 +12,7 @@ import { Logout } from "./components//users/logout/Logout";
 import './App.css'
 import { useEffect, useState } from "react";
 import { EditUser } from "./components/users/edit/EditUser";
+import { Profile } from "./components/users/profile/Profile";
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 750);
 
@@ -45,7 +46,9 @@ function App() {
               </>
             )}
             <Route path="/logout" element={<Logout />} />
-            <Route path="/edit/user/:pk" element={<EditUser />} />
+            <Route path="/edit/user/:id" element={<EditUser />} />
+            <Route path="/profile/:id" element={<Profile />} />
+
           </Routes>
         </main>
         <Footer />

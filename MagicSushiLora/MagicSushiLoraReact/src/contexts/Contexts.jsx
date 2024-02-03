@@ -5,7 +5,6 @@ import {usePersistedState} from '../hooks/usePersistedState';
 export const Contexts = createContext();
 
 export const AuthProvider = ({ children }) => {
-  
   const [auth, setAuth] = usePersistedState("auth", {});
   const [error, setError] = useState(null);
   const [fault, setFault] = useState(null);
@@ -55,8 +54,6 @@ export const AuthProvider = ({ children }) => {
       console.error("Logout failed:", error.message);
     }
   };
- 
-
   const values = {
     registerSubmitHandler,
     onLoginSubmit,
@@ -69,6 +66,7 @@ export const AuthProvider = ({ children }) => {
     clearError: () => setError(null),
     getFault: () => fault,
     clearFault: () => setFault(null),
+    
   };
 
   return <Contexts.Provider value={values}>{children}</Contexts.Provider>;
