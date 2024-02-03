@@ -66,6 +66,8 @@ export const AuthProvider = ({ children }) => {
     clearError: () => setError(null),
     getFault: () => fault,
     clearFault: () => setFault(null),
+    axiosInstance: axiosInstance, 
+    initialToken: initialToken,
     
   };
 
