@@ -72,10 +72,8 @@ class UpdateUserApiView(generics.RetrieveUpdateAPIView):
 
 
 class ProfileDetailsAPIView(generics.RetrieveUpdateAPIView):
-    authentication_classes = [TokenAuthentication]
     queryset = UserModel.objects.all()
     serializer_class = UserProfileSerializer
-    permission_classes = [IsAuthenticated]
 
     def get(self, request, pk):
         user = get_object_or_404(UserModel, pk=pk)
