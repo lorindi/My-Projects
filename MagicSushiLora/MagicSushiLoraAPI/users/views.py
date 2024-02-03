@@ -3,9 +3,10 @@ from django.contrib.auth.models import AnonymousUser
 from django.utils import timezone
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework import generics
+from rest_framework import generics, status
 
 from users.serializers import CreateUserSerializer, UpdateUserSerializer
 
@@ -53,3 +54,16 @@ class LogoutApiView(APIView):
 class UpdateUserApiView(generics.RetrieveUpdateAPIView):
     queryset = get_user_model().objects.all()
     serializer_class = UpdateUserSerializer
+
+    def get(self, request, pk):
+        user = get_object_or_404(UserModel, pk=pk)
+        serializer = UpdateUserSerializer(user)
+        return Response(serializer.data)
+
+    def post(self, request, pk):
+        user = get_object_or_404(UserModel, pk=pk)
+        serializer = UpdateUserSerializer(user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

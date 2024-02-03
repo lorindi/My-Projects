@@ -74,6 +74,7 @@
     align-items: center;
     gap: 20px;
     width: 100%;
+    padding: 30px 0px 30px 0px;
 
 }
 
@@ -121,16 +122,16 @@
 }
 
 .coverButton {
-    border-radius: 4px;
+    border-radius: 50px;
     background-color: #70B11C;
     border: none;
     color: #fff;
     text-align: center;
     font-size: calc(0.7rem + 0.2vw);
-    padding: 8px;
+    padding: 10px 5px;
     /* width: 200px; */
-    /* width: calc(12vw + 100px); */
-    min-width: 150px;
+    width: calc(13vw + 130px);
+    min-width: 130px;
     width: 30%;
     transition: all 0.5s;
     cursor: pointer;
@@ -209,29 +210,63 @@
         gap: 3rem;
 
     }
+    .coverButton {
+        border-radius: 50px;
+        margin: 10px;
+      width: 150px;
+    }
 }
 
 @media (min-width: 250px) and (max-width: 600px) {
+    .contentCoverImageMobileLeft {
+        display: flex;
+        min-height: 500px;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .contentCoverImageMobileRight {
+        display: flex;
+        min-height: 500px;
+        justify-content: space-evenly;
+        margin: 0;
+
+
+    }
+
     .additionalImageMobileLeft {
         display: flex;
         align-items: center;
         animation: slideInFromLeft 1s ease-out;
-        margin-top: 0px;
-
+        /* margin-top: 20px; */
     }
 
     .additionalImageMobileRight {
         display: flex;
         align-items: center;
         animation: slideInFromRight 1s ease-out;
-        margin-top: 0px;
-
+        /* margin-top: 20px; */
     }
 
     .contentCoverInfo {
         justify-content: center;
-        gap: 1.5rem;
+        gap: 1.3rem;
 
     }
-
+    .coverButton {
+        border-radius: 50px;
+        margin: 10px;
+      width: 100px;
+    }
+    .coverButton:after {
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        top: -4px;
+        right: -20px;
+        transition: 0.5s;
+        font-size: 25px;
+        color: orange;
+    
+    }
 }

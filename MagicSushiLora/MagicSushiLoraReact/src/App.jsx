@@ -11,6 +11,7 @@ import { Logout } from "./components//users/logout/Logout";
 // import { useMediaQuery } from 'react-responsive';
 import './App.css'
 import { useEffect, useState } from "react";
+import { EditUser } from "./components/users/edit/EditUser";
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 750);
 
@@ -44,6 +45,7 @@ function App() {
               </>
             )}
             <Route path="/logout" element={<Logout />} />
+            <Route path="/edit/user/:pk" element={<EditUser />} />
           </Routes>
         </main>
         <Footer />
