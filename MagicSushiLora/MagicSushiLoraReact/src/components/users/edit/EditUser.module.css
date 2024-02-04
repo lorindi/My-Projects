@@ -1,0 +1,64 @@
+.containerEditUserForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin: 15px;
+}
+
+.editUserFormInput {
+    margin: 10px;
+    padding: 7px;
+    width: 270px;
+    border: none;
+    border-bottom: 3px solid #70B11C;
+}
+.editUserFormInput:hover {
+    transition: 1s;
+    border-bottom: 3px solid orange;
+}
+.contentEditUserFormButton {
+    display: inline-block;
+
+   
+}
+.editUserFormButton {
+    margin-top: 15px;
+    margin-left: 20px;
+    border: none;
+    padding: 5px 0px;
+    width: 100px;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #70B11C;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.603);
+    font-size: 14px;
+    text-shadow: 0px 0px 3px rgb(0, 85, 0);
+    text-align: center;
+
+
+}
+
+.editUserFormButton:hover {
+    transition: 1s;
+    background-color: orange;
+    box-shadow: 0px 1px 1px 1px gray;
+}
+
+.editUserFormButton:focus {
+    cursor: pointer;
+    transition: 1s;
+    border-bottom: 3px solid orange;
+
+}
+
+.editUserFormButton:active {
+    cursor: pointer;
+    transition: 1s;
+    border-bottom: 3px solid orange;
+
+}
