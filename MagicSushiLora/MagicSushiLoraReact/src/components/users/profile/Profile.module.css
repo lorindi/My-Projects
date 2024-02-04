@@ -1,0 +1,115 @@
+/* font-family: "Alex Brush", cursive;
+font-weight: 400;
+font-style: normal; */
+
+.containerProfileDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.contentProfileDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilePicture {
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+    border-radius: 100%;
+    margin: 30px;
+    border: 3px dotted #70B11C;
+    padding: 10px;
+}
+
+.profileDetailFullName {
+    font-family: "Alex Brush", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 50px;
+}
+.profileDetailUsername{
+    font-style: italic;
+    font-weight: 600;
+    color: #70B11C;
+
+
+}
+.containerProfileEditUserForm {
+    position: relative;
+}
+
+.editProfileButton {
+    background-color: white;
+    border: 2px solid #70B11C;
+    border-radius: 50px;
+    color: #70B11C;
+    font-weight: 500;
+    letter-spacing: 3px;
+    padding: 3px 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.editProfileButton:hover {
+    transition: 1s;
+    border: 2px solid orange;
+    color: orange;
+
+}
+
+.cancelUserFormButton {
+    position: absolute;
+    top: 380px;
+    right: 55px;
+    margin-top: 15px;
+    border: none;
+    padding: 5px 0px;
+    width: 100px;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #70B11C;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.603);
+    font-size: 14px;
+    text-shadow: 0px 0px 3px rgb(0, 85, 0);
+    text-align: center;
+
+
+}
+
+.cancelUserFormButton:hover {
+    transition: 1s;
+    background-color: orange;
+    box-shadow: 0px 1px 1px 1px gray;
+}
+
+.cancelUserFormButton:focus {
+    cursor: pointer;
+    transition: 1s;
+    border-bottom: 3px solid orange;
+
+}
+
+.cancelUserFormButton:active {
+    cursor: pointer;
+    transition: 1s;
+    border-bottom: 3px solid orange;
+
+}

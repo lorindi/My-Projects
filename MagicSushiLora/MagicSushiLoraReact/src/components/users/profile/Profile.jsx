@@ -1,9 +1,12 @@
 import { useEffect, useState, useContext } from "react";
 import { Contexts } from "../../../contexts/Contexts";
-
+import styles from "./Profile.module.css";
+import { EditUser } from "../edit/EditUser";
 export const Profile = () => {
   const { axiosInstance, isAuthenticated, userId } = useContext(Contexts);
   const [userData, setUserData] = useState(null);
+  const [showEditForm, setShowEditForm] = useState(false);
+  // const [cancelEditForm, setCancelEditForm] = useState(false);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -21,25 +24,62 @@ export const Profile = () => {
   }, [axiosInstance, isAuthenticated, userId]);
 
   return (
-    <div>
+    <div className={styles.containerProfileDetails}>
       {isAuthenticated ? (
-        <div>
-          <h2>User Profile</h2>
+        <div className={styles.contentProfileDetails}>
           {userData ? (
-            <div>
-              <p>Username: {userData.username}</p>
-              <p>Email: {userData.email}</p>
-              <p>First Name: {userData.first_name}</p>
-              <p>Last Name: {userData.last_name}</p>
-              <img src={userData.profile_picture} alt="" />
-            </div>
+            <>
+              <div className={styles.contentDetailsProfilePicture}>
+                <img
+                  className={styles.profilePicture}
+                  src={userData.profile_picture}
+                  alt=""
+                />
+              </div>
+              {!showEditForm && (
+              <div className={styles.contentProfileDetailsInformation}>
+                <h1 className={styles.profileDetailFullName}>
+                  {userData.first_name} {userData.last_name}
+                </h1>
+                <p className={styles.profileDetailUsername}>
+                  {userData.username}
+                </p>
+                <p className={styles.profileDetailEmail}>{userData.email}
+                </p>
+                <button 
+                className={styles.editProfileButton}
+                onClick={() => setShowEditForm(!showEditForm)}
+                >Edit Profile</button>
+              </div>)}
+              {showEditForm && (
+              <div className={styles.containerProfileEditUserForm}>
+                <EditUser />
+                <button 
+                className={styles.cancelUserFormButton} 
+                onClick={() => setShowEditForm(!showEditForm)}
+
+                // onClick={() => setCancelEditForm(!cancelEditForm)}
+                >
+                  Cancel
+                </button>
+              </div>)}
+            </>
           ) : (
-            <p>Loading user data...</p>
+            <div className={styles.contentLoadingDetails}>
+              <p className={styles.loadingDetails}>Loading user data...</p>
+            </div>
           )}
         </div>
       ) : (
-        <p>Please log in to view your profile.</p>
+        <div className={styles.contentProfileDetailsLogin}>
+          <p className={styles.profileDetailsLogin}>
+            Please log in to view your profile.
+          </p>
+        </div>
       )}
+      <div className={styles.moreInformation}>
+        <p className={styles.moreInformationDescription}>Description</p>
+      </div>
     </div>
   );
 };
