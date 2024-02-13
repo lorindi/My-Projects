@@ -1,8 +1,11 @@
 from django.db import models
 from django.core.validators import MinLengthValidator, MinValueValidator
 
+from users.models import SushiUser
+
 
 class Recipe(models.Model):
+    image = models.URLField(null=True, blank=True)
     title = models.CharField(
         max_length=200,
         validators=[MinLengthValidator(3)],
@@ -52,22 +55,22 @@ class Recipe(models.Model):
     category = models.CharField(
         choices=CHOICES,
         validators=[MinLengthValidator(3)],
-        max_length=50,
+        max_length=100,
         null=False,
         blank=False,
     )
 
     ingredients_first = models.CharField(
-        null=True,
-        blank=True,
+        null=False,
+        blank=False,
     )
     ingredients_second = models.CharField(
-        null=True,
-        blank=True,
+        null=False,
+        blank=False,
     )
     ingredients_third = models.CharField(
-        null=True,
-        blank=True,
+        null=False,
+        blank=False,
     )
     ingredients_fourth = models.CharField(
         null=True,
@@ -130,6 +133,13 @@ class Recipe(models.Model):
 
     servings = models.CharField(
         validators=[MinValueValidator(1)],
+        null=False,
+        blank=False,
+    )
+    creation_time = models.DateTimeField(auto_now_add=True, )
+    creator = models.ForeignKey(
+        SushiUser,
+        on_delete=models.CASCADE,
     )
 
     def __str__(self):
