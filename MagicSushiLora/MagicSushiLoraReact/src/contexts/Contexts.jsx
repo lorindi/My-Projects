@@ -9,6 +9,8 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [fault, setFault] = useState(null);
 
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   const initialToken = localStorage.getItem("accessToken");
   const axiosInstance = axios.create({
     baseURL: "http://127.0.0.1:8000/api/",
@@ -54,6 +56,11 @@ export const AuthProvider = ({ children }) => {
       console.error("Logout failed:", error.message);
     }
   };
+
+  const toggleDarkMode = () => { 
+    setIsDarkMode(prevMode => !prevMode);
+  };
+
   const values = {
     registerSubmitHandler,
     onLoginSubmit,
@@ -69,6 +76,8 @@ export const AuthProvider = ({ children }) => {
     axiosInstance: axiosInstance, 
     initialToken: initialToken,
     
+    isDarkMode, 
+    toggleDarkMode 
   };
 
   return <Contexts.Provider value={values}>{children}</Contexts.Provider>;
