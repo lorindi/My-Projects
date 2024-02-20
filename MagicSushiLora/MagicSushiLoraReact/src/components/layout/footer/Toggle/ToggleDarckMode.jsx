@@ -1,9 +1,16 @@
-import styles from './ToggleDarckMode.module.css'
+import styles from "./ToggleDarkMode.module.css";
+import { useContext } from "react";
+import { Contexts } from "../../../../contexts/Contexts";
+export const ToggleDarkMode = () => {
+  const { isDarkMode, toggleDarkMode } = useContext(Contexts);
 
-export const ToggleDarckMode = () => {
+  const handleCheckboxChange = () => {
+    toggleDarkMode(); 
+  };
+
   return (
-    <label htmlFor="theme" className={styles.theme}>
-      <span className={styles.themeToggleWrap}>
+
+
         <input
           id="theme"
           className={styles.themeToggle}
@@ -11,20 +18,9 @@ export const ToggleDarckMode = () => {
           role="switch"
           name="theme"
           value="dark"
+          checked={isDarkMode}
+          onChange={handleCheckboxChange}
         />
-        <span className={styles.themeFill}></span>
-        <span className={styles.themeIcon}>
-          <span className={styles.themeIconPart}></span>
-          <span className={styles.themeIconPart}></span>
-          <span className={styles.themeIconPart}></span>
-          <span className={styles.themeIconPart}></span>
-          <span className={styles.themeIconPart}></span>
-          <span className={styles.themeIconPart}></span>
-          <span className={styles.themeIconPart}></span>
-          <span className={styles.themeIconPart}></span>
-          <span className={styles.themeIconPart}></span>
-        </span>
-      </span>
-    </label>
+
   );
 };

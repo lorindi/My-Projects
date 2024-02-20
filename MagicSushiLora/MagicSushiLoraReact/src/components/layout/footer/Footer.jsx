@@ -10,12 +10,14 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Footer.module.css";
 import { MoreInformation } from "./moreInformation/MoreInformation";
 import { useState } from "react";
+import { ToggleDarkMode } from "./Toggle/ToggleDarckMode";
 
 export const Footer = () => {
   const [showMoreInformation, setShowMoreInformation] = useState(false);
 
   return (
     <footer className={styles.footer}>
+    <ToggleDarkMode className/>
       {showMoreInformation && (
         <section className={styles.sectionInformationAboutUs}>
           <MoreInformation />

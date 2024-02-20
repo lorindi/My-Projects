@@ -8,12 +8,20 @@ import rightMobile from "../home/rightMobile.png";
 
 import sushirightImg from "../home/pngwing.com (8).png";
 import sushileftImg from "../home/leftImg.png";
-export const Home = () => {
-  return (
-    <div className={styles.containerHomePage}>
-      <section className={styles.sectionCover}>
 
-        <div className={styles.contentCoverImageMobileLeft}>
+import { useContext } from "react";
+import { Contexts } from "../../../contexts/Contexts";
+export const Home = () => {
+  const { isDarkMode } = useContext(Contexts);
+  return (
+    <div
+      className={`${styles.containerHomePage}`}
+      style={{ backgroundColor: isDarkMode ? "black" : "white" }}
+    >
+      <section className={styles.sectionCover}>
+        <div
+          className={`${styles.contentCoverImageMobileLeft}`}
+        >
           <img className={styles.coverImageMobile} src={leftImg} alt="" />
           <img
             className={styles.additionalImageMobileLeft}
@@ -27,13 +35,23 @@ export const Home = () => {
         </div>
 
         <div className={styles.contentCoverInfo}>
-          <h1 className={styles.coverTitle}>Discover the magic of sushi</h1>
-          <p className={styles.coverDescription}>
+          <h1
+            className={`${styles.coverTitle}`}
+            style={{ color: isDarkMode ? "white" : "black" }}
+          >
+            Discover the magic of sushi
+          </h1>
+          <p
+            className={styles.coverDescription}
+            style={{ color: isDarkMode ? "white" : "black" }}
+          >
             Welcome to the culinary oasis of Magic Sushi Lora - an interactive
             space for culinary enthusiasts to share, discover, and savor
             delightful sushi recipes.
           </p>
-          <Link className={styles.coverButton}>Get Started</Link>
+          <Link to="create-recipe/" className={styles.coverButton}>
+            Get Started
+          </Link>
         </div>
 
         <div className={styles.contentCoverImage}>
@@ -48,7 +66,6 @@ export const Home = () => {
             alt=""
           />
         </div>
-
       </section>
     </div>
   );

@@ -1,3 +1,4 @@
+
 .containerHomePage {
     display: flex;
     flex-direction: column;
@@ -210,10 +211,11 @@
         gap: 3rem;
 
     }
+
     .coverButton {
         border-radius: 50px;
         margin: 10px;
-      width: 150px;
+        width: 150px;
     }
 }
 
@@ -253,11 +255,13 @@
         gap: 1.3rem;
 
     }
+
     .coverButton {
         border-radius: 50px;
         margin: 10px;
-      width: 100px;
+        width: 100px;
     }
+
     .coverButton:after {
         content: '»';
         position: absolute;
@@ -267,6 +271,6 @@
         transition: 0.5s;
         font-size: 25px;
         color: orange;
-    
+
     }
 }
