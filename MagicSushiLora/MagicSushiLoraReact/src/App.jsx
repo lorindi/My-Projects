@@ -13,6 +13,7 @@ import './App.css'
 import { useEffect, useState } from "react";
 import { EditUser } from "./components/users/edit/EditUser";
 import { Profile } from "./components/users/profile/Profile";
+import CreateRecipe from "./components/recipes/create/Create";
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 750);
 
@@ -33,6 +34,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="create-recipe/" element={<CreateRecipe />} />
 
             {!isMobile && (
               <>

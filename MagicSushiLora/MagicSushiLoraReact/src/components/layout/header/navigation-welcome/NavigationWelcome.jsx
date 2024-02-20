@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import styles from "./NavigationWelcome.module.css";
 import { Logout } from "../../../users/logout/Logout";
 import { useState } from "react";
-// import { useContext } from "react";
+import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { Contexts } from "../../../../contexts/Contexts";
+import { Contexts } from "../../../../contexts/Contexts";
 
 import {
   faBars,
@@ -15,7 +15,7 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 export const NavigationWelcome = () => {
-  // const { userId } = useContext(Contexts);
+  const { userId } = useContext(Contexts);
   const [isDropdownVisible, setDropdownVisibility] = useState(false);
 
   const toggleDropdown = () => {
@@ -50,7 +50,7 @@ export const NavigationWelcome = () => {
             <FontAwesomeIcon icon={faCartShopping} />
           </Link>
           <div className={styles.dropdownButtonProfile}>
-            <Link className={styles.linkWelcome} to="/profile/:id">
+            <Link className={styles.linkWelcome} to={`/profile/${userId}`} >
               <FontAwesomeIcon icon={faUser} />
             </Link>
             <div className={styles.dropdownLinks}>

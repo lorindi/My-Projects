@@ -49,7 +49,6 @@ class Recipe(models.Model):
         ('shabu-shabu', 'shabu-shabu'),
         ('udon', 'udon'),
         ('soba', 'soba'),
-        ('yakitori', 'yakitori'),
     )
 
     category = models.CharField(
