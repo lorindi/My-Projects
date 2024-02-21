@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 import axios from "axios";
-import {usePersistedState} from '../hooks/usePersistedState';
+import { usePersistedState } from "../hooks/usePersistedState";
+import { useThemeState } from "../hooks/useThemeState";
 
 export const Contexts = createContext();
 
@@ -9,7 +10,8 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [fault, setFault] = useState(null);
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const initialTheme = localStorage.getItem("theme") || "light";
+  const [theme, setTheme] = useThemeState("theme", initialTheme);
 
   const initialToken = localStorage.getItem("accessToken");
   const axiosInstance = axios.create({
@@ -22,10 +24,7 @@ export const AuthProvider = ({ children }) => {
 
   const onLoginSubmit = async (values) => {
     try {
-      const response = await axiosInstance.post(
-        "auth/login/",
-        values
-      );
+      const response = await axiosInstance.post("auth/login/", values);
       setAuth(response.data);
       localStorage.setItem("accessToken", response.data.token);
     } catch (error) {
@@ -36,10 +35,7 @@ export const AuthProvider = ({ children }) => {
   const registerSubmitHandler = async (values) => {
     console.log(values);
     try {
-      const response = await axiosInstance.post(
-        "auth/register/",
-        values
-      );
+      const response = await axiosInstance.post("auth/register/", values);
       setAuth(response.data);
       localStorage.setItem("accessToken", response.data.token);
     } catch (error) {
@@ -57,10 +53,10 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const toggleDarkMode = () => { 
-    setIsDarkMode(prevMode => !prevMode);
-  };
 
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
   const values = {
     registerSubmitHandler,
     onLoginSubmit,
@@ -73,11 +69,11 @@ export const AuthProvider = ({ children }) => {
     clearError: () => setError(null),
     getFault: () => fault,
     clearFault: () => setFault(null),
-    axiosInstance: axiosInstance, 
+    axiosInstance: axiosInstance,
     initialToken: initialToken,
-    
-    isDarkMode, 
-    toggleDarkMode 
+    theme,
+    toggleTheme,
+
   };
 
   return <Contexts.Provider value={values}>{children}</Contexts.Provider>;
