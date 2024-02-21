@@ -1,8 +1,18 @@
+[data-theme='light'] {
+  --background-color: #eeeff3; /* Light theme background color */
+
+}
+
+[data-theme='dark'] {
+  --background-color: #000000; /* Dark theme background color */
+
+}
 body {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh; */
+  background-color: var(--background-color);
+
+  height: 100vh;
   font-family: 'Montserrat', sans-serif;
-  max-width: 1920px;
+  width: 100%;
+}
+#root{
 }
