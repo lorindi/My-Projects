@@ -11,12 +11,14 @@ import styles from "./Footer.module.css";
 import { MoreInformation } from "./moreInformation/MoreInformation";
 import { useState } from "react";
 import { ToggleDarkMode } from "./Toggle/ToggleDarckMode";
+import { useContext } from "react";
+import { Contexts } from "../../../contexts/Contexts";
 
 export const Footer = () => {
   const [showMoreInformation, setShowMoreInformation] = useState(false);
-
+  const { theme } = useContext(Contexts);
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} data-theme={theme}>
     <ToggleDarkMode className/>
       {showMoreInformation && (
         <section className={styles.sectionInformationAboutUs}>

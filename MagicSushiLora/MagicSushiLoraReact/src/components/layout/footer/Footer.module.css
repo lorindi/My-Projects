@@ -1,3 +1,17 @@
+[data-theme='light'] {
+    --background-color: #eeeff3; /* Light theme background color */
+    --text-color: #000000; /* Light theme text color */
+    --header-color: #2db583; /* Light theme header color */
+    --footer-color: #2db583; /* Light theme footer color */
+}
+
+[data-theme='dark'] {
+    --background-color: #000000; /* Dark theme background color */
+    --text-color: #ffffff; /* Dark theme text color */
+    --header-color: #3c3b3b; /* Dark theme header color */
+    --footer-color: #3c3b3b; /* Dark theme footer color */
+}
+
 .footer {
     display: flex;
     flex-direction: column;
