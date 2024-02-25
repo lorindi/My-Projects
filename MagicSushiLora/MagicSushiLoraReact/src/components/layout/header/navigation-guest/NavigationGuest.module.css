@@ -1,5 +1,28 @@
+[data-theme='light'] {
+    --navigation-background-color: white;
+    --links-icons-color-hover: orange;
+    --links-icons-color: #70B11C;
+    --dropdownLink: white;
+
+
+
+
+
+}
+
+[data-theme='dark'] {
+    --navigation-background-color: black;
+    --links-icons-color-hover: #70B11C;
+    --links-icons-color: white;
+    --dropdownLink: black;
+
+
+
+
+}
+
 .sushiLogoGuest {
-    color: white;
+    color: var(--links-icons-color);
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 1.5px;
@@ -10,7 +33,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #70B11C;
+    background-color: var(--navigation-background-color);
     width: 100%;
     flex-wrap: wrap;
     padding: 10px 0px 10px 0px;
@@ -25,11 +48,15 @@
 }
 
 .linkGuest {
-    color: white;
+    color: var(--links-icons-color);
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 1.5px;
     font-weight: 500;
+}
+.linkGuest:hover {
+    color: var(--links-icons-color-hover);
+
 }
 
 @media (min-width: 300px) and (max-width: 750px) {

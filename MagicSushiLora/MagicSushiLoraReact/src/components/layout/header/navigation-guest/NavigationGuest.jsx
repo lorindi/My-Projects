@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "./NavigationGuest.module.css";
-
+import {Contexts} from '../../../../contexts/Contexts'
+import { useContext } from "react";
 export const NavigationGuest = () => {
+  const {theme} = useContext(Contexts)
   return (
-    <nav className={styles.navigationGuest}>
+    <nav className={styles.navigationGuest} data-theme = {theme}>
       <Link to="" className={styles.sushiLogoGuest}>
         SushiLogo
       </Link>
