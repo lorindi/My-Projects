@@ -15,7 +15,7 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 export const NavigationWelcome = () => {
-  const { userId } = useContext(Contexts);
+  const { userId, theme } = useContext(Contexts);
   const [isDropdownVisible, setDropdownVisibility] = useState(false);
 
   const toggleDropdown = () => {
@@ -24,7 +24,7 @@ export const NavigationWelcome = () => {
 
   return (
     <>
-      <nav className={styles.navigationWelcome}>
+      <nav className={styles.navigationWelcome} data-theme={theme}>
         <Link to="" className={styles.sushiLogoWelcome}>
           Logo
         </Link>
