@@ -7,6 +7,7 @@ export const Login = () => {
     username: "",
     password: "",
   });
+  const { theme } = useContext(Contexts);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +15,7 @@ export const Login = () => {
   };
 
   return (
-    <div className={styles.signInContainer}>
+    <div className={styles.signInContainer} data-theme={theme}>
       <h2 className={styles.loginFormTitle}>Sign in</h2>
       <form className={styles.loginForm} onSubmit={handleSubmit}>
         <div className={styles.contentLoginForm}>
