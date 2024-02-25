@@ -1,3 +1,15 @@
+[data-theme='light'] {
+    --textColorTitle: #000000;
+    --textColorDescription: rgb(65, 65, 65);
+    --textButtonBackgroundColorHover: white;
+
+}
+
+[data-theme='dark'] {
+    --textColorTitle: #ffffffe5;
+    --textColorDescription: rgba(255, 255, 255, 0.521);
+    --textButtonBackgroundColorHover: black;
+}
 
 .containerHomePage {
     display: flex;
@@ -71,9 +83,10 @@
 .contentCoverInfo {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     width: 100%;
     padding: 30px 0px 30px 0px;
 
@@ -104,22 +117,24 @@
 }
 
 .coverTitle {
-    font-size: calc(12px + 1.5vw);
+    font-size: calc(12px + 1.3vw);
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 30px;
     text-align: center;
     width: 80%;
+    color: var(--textColorTitle);
 
 }
 
 .coverDescription {
-    font-size: calc(13px + 0.5vw);
+    font-size: calc(12px + 0.5vw);
     letter-spacing: 0.5px;
     width: 80%;
     text-align: center;
     font-weight: 400;
+    color: var(--textColorDescription);
+
 }
 
 .coverButton {
@@ -130,10 +145,9 @@
     text-align: center;
     font-size: calc(0.7rem + 0.2vw);
     padding: 10px 5px;
-    /* width: 200px; */
-    width: calc(13vw + 130px);
+    /* width: calc(13vw + 130px); */
     min-width: 130px;
-    width: 30%;
+    width: 20%;
     transition: all 0.5s;
     cursor: pointer;
     /* margin: 36px; */
@@ -166,7 +180,7 @@
 .coverButton:hover {
     padding-right: 24px;
     padding-left: 8px;
-    background-color: white;
+    background-color: var(--textButtonBackgroundColorHover);
     color: orange;
     border: 2px solid orange;
 
@@ -259,7 +273,7 @@
     .coverButton {
         border-radius: 50px;
         margin: 10px;
-        width: 100px;
+        /* width: 100px; */
     }
 
     .coverButton:after {

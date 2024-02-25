@@ -12,16 +12,11 @@ import sushileftImg from "../home/leftImg.png";
 import { useContext } from "react";
 import { Contexts } from "../../../contexts/Contexts";
 export const Home = () => {
-  const { isDarkMode } = useContext(Contexts);
+  const { theme } = useContext(Contexts);
   return (
-    <div
-      className={`${styles.containerHomePage}`}
-      style={{ backgroundColor: isDarkMode ? "black" : "white" }}
-    >
+    <div className={`${styles.containerHomePage}`} data-theme={theme}>
       <section className={styles.sectionCover}>
-        <div
-          className={`${styles.contentCoverImageMobileLeft}`}
-        >
+        <div className={`${styles.contentCoverImageMobileLeft}`}>
           <img className={styles.coverImageMobile} src={leftImg} alt="" />
           <img
             className={styles.additionalImageMobileLeft}
@@ -37,13 +32,11 @@ export const Home = () => {
         <div className={styles.contentCoverInfo}>
           <h1
             className={`${styles.coverTitle}`}
-            style={{ color: isDarkMode ? "white" : "black" }}
           >
             Discover the magic of sushi
           </h1>
           <p
             className={styles.coverDescription}
-            style={{ color: isDarkMode ? "white" : "black" }}
           >
             Welcome to the culinary oasis of Magic Sushi Lora - an interactive
             space for culinary enthusiasts to share, discover, and savor
