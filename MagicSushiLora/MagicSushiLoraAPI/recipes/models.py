@@ -131,7 +131,6 @@ class Recipe(models.Model):
     )
 
     servings = models.CharField(
-        validators=[MinValueValidator(1)],
         null=False,
         blank=False,
     )
