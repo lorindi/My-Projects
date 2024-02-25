@@ -27,16 +27,15 @@ export const ToggleDarkMode = () => {
     //   // onChange={handleCheckboxChange}
     // />
     <input
-        id="theme"
-        className={styles.themeToggle}
-        type="checkbox"
-        role="switch"
-        name="theme"
-        value={theme === 'dark' ? 'dark' : 'light'}
-        checked={theme === 'dark'}
-        onChange={handleThemeToggle}
-      />
+      data-theme={theme}
+      id="theme"
+      className={styles.themeToggle}
+      type="checkbox"
+      role="switch"
+      name="theme"
+      value={theme === "dark" ? "dark" : "light"}
+      checked={theme === "dark"}
+      onChange={handleThemeToggle}
+    />
   );
 };
-
-
