@@ -4,11 +4,14 @@ import styles from "./Signin.module.css";
 import { Login } from "../login/Login";
 import { Register } from "../register/Register";
 import coverPic from "../../sushiNet/olivia-oliver-design-gd8k67l8nEc-unsplash.jpg";
+import { useContext } from "react";
+import { Contexts } from "../../../contexts/Contexts";
 export const Signin = () => {
   const [signIn, setSignIn] = useState(true);
   const [signUp, setSignUp] = useState(false);
   const [coverSignIn, setCoverSignIn] = useState(true);
   const [coverSignUp, setCoverSignUp] = useState(false);
+  const { theme } = useContext(Contexts);
 
   const handleSignInButtonClick = () => {
     setTimeout(() => {
@@ -30,7 +33,8 @@ export const Signin = () => {
   };
 
   return (
-    <div className={styles.containerSignInSignUp}>
+    <div className={`${styles.containerSignInSignUp} `}
+    data-theme={theme}>
       <div className={styles.contentSignInSignUp}>
         {signIn && (
           <>

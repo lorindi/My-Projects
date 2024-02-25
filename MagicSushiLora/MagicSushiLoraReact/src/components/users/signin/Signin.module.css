@@ -1,3 +1,13 @@
+[data-theme='light'] {
+    --background-color: #eeeff3;
+
+}
+
+[data-theme='dark'] {
+    --background-color: #000000; 
+
+}
+
 /* -----------------------------------Sign-In-Sign-Up---------------------------------------- */
 .containerSignInSignUp {
     display: flex;
@@ -48,7 +58,7 @@
     align-items: center;
     width: 350px;
     height: 480px;
-    background-color: rgba(255, 255, 255, 0.789);
+    background-color: var(--background-color);
 }
 
 @keyframes slideIn {
