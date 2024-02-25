@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Contexts } from "../../../contexts/Contexts";
 import styles from "./Register.module.css";
 export const Register = () => {
+  const { theme } = useContext(Contexts);
+
   const { registerSubmitHandler, getFault, clearFault } = useContext(Contexts);
   const [formData, setFormData] = useState({
     email: "",
@@ -16,7 +18,7 @@ export const Register = () => {
   };
 
   return (
-    <div className={styles.signUpContainer}>
+    <div className={styles.signUpContainer} data-theme={theme}>
       <h2 className={styles.registrationFormTitle}>Create Account</h2>
       <form className={styles.registrationForm} onSubmit={handleSubmit}>
         <div className={styles.contentRegistrationForm}>
@@ -69,7 +71,9 @@ export const Register = () => {
             }
           />
         </div>
-        <button className={styles.registrationFormButton} type="submit">Register</button>
+        <button className={styles.registrationFormButton} type="submit">
+          Register
+        </button>
       </form>
       {getFault() && (
         <div>

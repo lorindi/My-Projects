@@ -1,3 +1,16 @@
+[data-theme='light'] {
+    --background-color: #eeeff3;
+    --box-shadow-color: gray;
+
+}
+
+[data-theme='dark'] {
+    --background-color: #000000;
+    --box-shadow-color: black;
+
+}
+
+
 /* .containerRegisterForm {
     display: flex;
     flex-direction: column;
@@ -15,7 +28,7 @@
     align-items: center;
     width: 350px;
     height: 480px;
-    background-color: rgba(255, 255, 255, 0.789);
+    background-color: var(--background-color);
 }
 
 .registrationFormTitle {
@@ -42,6 +55,11 @@
     border-bottom: 3px solid #70B11C;
     padding: 5px;
     width: 250px;
+    color: gray;
+    letter-spacing: 1px;
+    background-color: var(--background-color);
+
+
 }
 
 .contentRegistrationForm {
@@ -62,27 +80,31 @@
     background-color: #70B11C;
     font-weight: 600;
     color: white;
-    box-shadow: 0px 3px 7px 1px gray;
+    box-shadow: 0px 3px 7px 1px var(--box-shadow-color);
 
 
 }
+
 .registrationFormButton:hover {
     transition: 1s;
     background-color: orange;
-    box-shadow: 0px 1px 1px 1px gray;
+    box-shadow: 0px 1px 1px 1px var(--box-shadow-color);
 }
+
 .registrationFormInput:hover {
     cursor: pointer;
     transition: 1s;
     border-bottom: 3px solid orange;
 
 }
+
 .registrationFormInput:focus {
     cursor: pointer;
     transition: 1s;
     border-bottom: 3px solid orange;
 
 }
+
 .registrationFormInput:active {
     cursor: pointer;
     transition: 1s;
@@ -93,6 +115,7 @@
 @media (min-width: 320px) and (max-width: 750px) {
     .signUpContainer {
         position: initial;
-        margin: auto; /* Оставяне на margin: auto за центриране в responsive режим */
+        margin: auto;
+        /* Оставяне на margin: auto за центриране в responsive режим */
     }
 }
