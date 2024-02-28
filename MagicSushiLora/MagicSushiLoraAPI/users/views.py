@@ -1,4 +1,4 @@
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, login, logout
 from django.contrib.auth.models import AnonymousUser
 from django.utils import timezone
 from rest_framework.authtoken.models import Token
@@ -27,6 +27,8 @@ class LoginApiView(ObtainAuthToken):
         token, created = Token.objects.get_or_create(user=user)
         user.last_login = timezone.now()
         user.save()
+        login(request, user)
+        print(type(user))
         # user.update_last_login(None)
         return Response({
             'token': token.key,
@@ -40,6 +42,7 @@ class LogoutApiView(APIView):
         return self.__perform_logout(request)
 
     def post(self, request, *args, **kwargs):
+        logout(request)
         return self.__perform_logout(request)
 
     @staticmethod
@@ -67,6 +70,17 @@ class UpdateUserApiView(generics.RetrieveUpdateAPIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    # def patch(self, request, pk, *args, **kwargs):
+    #     image = get_object_by_pk(ImageModel, pk)
+    #     new_image_name = request.data.get("image_name", "").strip()
+    #
+    #     serializer = EditImageNameSerializer(image, data={"image_name": new_image_name})
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data, status=status.HTTP_200_OK)
+    #
+    #     return Response(serializer.errors, status=status.HTTP_304_NOT_MODIFIED)
 
 
 class ProfileDetailsAPIView(generics.RetrieveUpdateAPIView):
