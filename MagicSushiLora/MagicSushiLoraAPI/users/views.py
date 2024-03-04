@@ -27,7 +27,7 @@ class LoginApiView(ObtainAuthToken):
         token, created = Token.objects.get_or_create(user=user)
         user.last_login = timezone.now()
         user.save()
-        login(request, user)
+        login(self.request, user)
         print(type(user))
         # user.update_last_login(None)
         return Response({
