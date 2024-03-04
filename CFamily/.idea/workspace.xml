@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c433624-009f-4a2a-8444-3d31962738ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CFamily.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CFamily.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CFamily/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CFamily/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cystic_fibrosis/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cystic_fibrosis/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cystic_fibrosis/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cystic_fibrosis/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/styles/border-radius.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/styles/border-radius.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/styles/cf-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/styles/cf-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_affect_body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_affect_body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_diagnosed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_diagnosed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_questions.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_questions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_treatment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_treatment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cystic_fibrosis/cf_update.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2dE36dMcF38glwmfgJ4czzaZRgz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Django Server.Django.executor&quot;: &quot;Run&quot;,
+    &quot;Django Server.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Django" type="Python.DjangoServer" factoryName="Django server">
+      <module name="CFamily" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="CFamily.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (CFamily)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c433624-009f-4a2a-8444-3d31962738ad" name="Changes" comment="" />
+      <created>1709559239275</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709559239275</updated>
+      <workItem from="1709559245255" duration="835000" />
+      <workItem from="1709560099625" duration="14000" />
+      <workItem from="1709561628412" duration="4000" />
+      <workItem from="1709567506908" duration="17000" />
+      <workItem from="1709567588963" duration="546000" />
+      <workItem from="1709569983901" duration="2166000" />
+      <workItem from="1709572176242" duration="66000" />
+      <workItem from="1709572308584" duration="94000" />
+      <workItem from="1709572580760" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
