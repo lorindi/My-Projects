@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -85,19 +87,19 @@ select {
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 /* ---------------------Media-Queries-------------------------- */
 @media (min-width: 800px) {
-  html {
+  body {
       font-size: 14px;
   }
 }
 
 @media (min-width: 1024px) {
-  html {
+  body {
       font-size: 16px;
   }
 }
 
 @media (min-width: 1280px) {
-  html {
+  body {
       font-size: 18px;
   }
 }
