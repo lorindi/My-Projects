@@ -83,7 +83,10 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
+ul {
+  padding: 0;
+  /* margin: 0; */
+}
 /* html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 /* ---------------------Media-Queries-------------------------- */
