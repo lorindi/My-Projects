@@ -1,7 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
-
+/* ----------------------Reset---------------------------- */
 /* Box sizing rules */
 *,
 *::before,
@@ -83,3 +83,21 @@ select {
 
 /* html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+/* ---------------------Media-Queries-------------------------- */
+@media (min-width: 800px) {
+  html {
+      font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+      font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+      font-size: 18px;
+  }
+}
