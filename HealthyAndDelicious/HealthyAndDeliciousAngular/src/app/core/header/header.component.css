@@ -3,6 +3,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    padding: 10px;
+
 }
 
 .navigationGuest {
@@ -10,7 +12,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    gap: 655px;
+    padding: 10px;
+
 }
 
 .contentLinks {
@@ -24,7 +27,6 @@
     color: #8A5DEF;
     font-weight: 600;
     letter-spacing: 1.5px;
-    font-size: 20px;
 }
 
 .link:hover {
@@ -36,7 +38,6 @@
     color: #F45284;
     font-weight: 600;
     letter-spacing: 1.5px;
-    font-size: 20px;
     border: 2px solid #F45284;
     padding: 5px 10px;
     border-radius: 50px;
@@ -49,3 +50,91 @@
 
 
 }
+/* --------------------------------------Navigation-Mobile------------------------------------------ */
+.navigationMobile{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    padding: 10px;
+}
+
+.dropdownButtonMobile {
+    background-color: white;
+    border: 2px solid #8A5DEF;
+    border-radius: 100%;
+    padding: 5px 10px;
+    color: #8A5DEF;
+    font-weight: 600;
+}
+.contentDropdownMobile {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+    background-color: white;
+    left: 0;
+    top: 0;
+    border: 2px solid #8A5DEF;
+    padding: 10px;
+    width: 90%;
+    gap: 20px;
+    height: 800px;
+
+}
+.contentButtonDownButtonMobile:hover .contentDropdownMobile {
+    display: flex;
+}
+.linkMobile {
+    color: #8A5DEF;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+}
+
+.contentOnCloseButtonMobile {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.onCloseButtonMobile {
+    color: #8A5DEF;
+    background-color: white;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+
+}
+/* ---------------------Media-Queries-------------------------- */
+
+@media (min-width: 250px) and (max-width: 768px) {
+    .navigationMobile {
+        display: flex;
+
+    }
+
+    .navigationWelcome {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .link, .linkSignIn  {
+        font-size: 16px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .link, .linkSignIn  {
+        font-size: 18px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .link, .linkSignIn  {
+        font-size: 20px;
+    }
+  }
