@@ -6,7 +6,7 @@ a{
     align-items: center;
     width: 100%;
     color: white;
-    height: 40vh;
+    min-height: 40vh;
     background-color: #281B5B; /* fallback color */
     background-image: linear-gradient(15deg, #4D2CA1, #8A5DEF);
 }
@@ -22,20 +22,42 @@ a{
 .contentFooter{
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 80%;
   
 }
-.fa-map, .fa-phone, .fa-paper-plane, .fa-note-sticky, .fa-circle-info, .fa-square-instagram {
+.footerTitle {
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+}
+.fa-location-dot, .fa-map, .fa-phone, .fa-paper-plane, .fa-note-sticky, .fa-circle-info, .fa-square-instagram {
     color: #F45284;
     margin-right: 10px;
 } 
-/* .footerContacts, .footerLatestRecipes, .footerLatestRecipes, .footerInformation, .footerInstagram{
+.footerContacts, .footerLatestRecipes, .footerLatestRecipes, .footerInformation, .footerInstagram{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    height: 400px;
     width: 250px;
-} */
+}
 /* #FE59D7 */
+.instagramImages {
+    display: flex;
+    flex-wrap: wrap;
 
-.imgInstagram {
-    width: 300px;
+}
+.imgInsta {
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 10px;
+
 
 }
 .contentCopyright{
