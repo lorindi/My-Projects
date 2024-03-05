@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    height: 40vh;
+    background-color: #281B5B; /* fallback color */
+    background-image: linear-gradient(25deg, #281B5B, #4D2CA1);
+}
+.containerFooter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+}
+.contentFooter{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  
+}
+.contentCopyright{
+    display: flex;
+
+}
