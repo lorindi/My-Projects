@@ -1,16 +1,19 @@
-a{
+a {
     color: white;
 }
+
 .footer {
     display: flex;
     align-items: center;
     width: 100%;
     color: white;
     min-height: 700px;
-    background-color: #281B5B; /* fallback color */
+    background-color: #281B5B;
+    /* fallback color */
     background-image: linear-gradient(15deg, #4D2CA1, #8A5DEF);
 }
-.containerFooter{
+
+.containerFooter {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -19,28 +22,42 @@ a{
     min-height: 600px;
     padding: 10px;
 }
-.contentFooter{
+
+.contentFooter {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 80%;
-  
+
 }
+
 .footerTitle {
     font-weight: 500;
     letter-spacing: 1.5px;
     font-size: 23px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
-.fa-location-dot, .fa-map, .fa-phone, .fa-paper-plane, .fa-note-sticky, .fa-circle-info, .fa-square-instagram {
+
+.fa-location-dot,
+.fa-map,
+.fa-phone,
+.fa-paper-plane,
+.fa-note-sticky,
+.fa-circle-info,
+.fa-square-instagram {
     color: #F45284;
     margin: 10px 10px 10px 0px;
     padding: 10px;
     border: 1px solid #F45284;
     border-radius: 100%;
-} 
-.footerContacts, .footerLatestRecipes, .footerLatestRecipes, .footerInformation, .footerInstagram{
+}
+
+.footerContacts,
+.footerLatestRecipes,
+.footerLatestRecipes,
+.footerInformation,
+.footerInstagram {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -48,34 +65,58 @@ a{
     height: 400px;
     width: 300px;
 }
+
 .footerListAbout {
     font-size: 16px;
+    margin: 0;
 }
-.footerListAbout .footerListElementAbout:nth-child(1) .fa-location-dot{
+.footerListElementAbout {
+    margin-bottom: 20px;
+
+}
+.footerListAbout .footerListElementAbout:nth-child(1) .fa-location-dot {
     padding: 10px 12px;
 
 }
+
 .footerFormAbout {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 }
+
 .footerFormAboutInput {
     border-radius: 50px 0px 0px 50px;
-    background-color: #F45284;
     width: 200px;
     padding: 5px;
+    border: none;
+    height: 37px;
+
+
 }
+
 .footerFormAboutButton {
-    
+    background-color: white;
+    border: none;
+    height: 37px;
+    border-radius: 0px 50px 50px 0px;
+
+
 }
-/* #FE59D7 */
+
+.footerFormAboutButton .fa-paper-plane {
+    border: none;
+    padding: 0;
+
+}
+
 .instagramImages {
     display: flex;
     flex-wrap: wrap;
 
 }
+
 .imgInsta {
     background-position: center;
     object-fit: cover;
@@ -87,7 +128,8 @@ a{
 
 
 }
-.contentCopyright{
+
+.contentCopyright {
     display: flex;
 
 }
