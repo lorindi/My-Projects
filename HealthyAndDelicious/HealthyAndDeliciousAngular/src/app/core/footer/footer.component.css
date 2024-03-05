@@ -16,11 +16,12 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 600px;
+    min-height: 600px;
     padding: 10px;
 }
 .contentFooter{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 80%;
@@ -42,10 +43,32 @@ a{
 .footerContacts, .footerLatestRecipes, .footerLatestRecipes, .footerInformation, .footerInstagram{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    justify-content: flex-start;
+    margin: 30px;
     height: 400px;
     width: 300px;
+}
+.footerListAbout {
+    font-size: 16px;
+}
+.footerListAbout .footerListElementAbout:nth-child(1) .fa-location-dot{
+    padding: 10px 12px;
+
+}
+.footerFormAbout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.footerFormAboutInput {
+    border-radius: 50px 0px 0px 50px;
+    background-color: #F45284;
+    width: 200px;
+    padding: 5px;
+}
+.footerFormAboutButton {
+    
 }
 /* #FE59D7 */
 .instagramImages {
@@ -57,8 +80,8 @@ a{
     background-position: center;
     object-fit: cover;
     background-size: contain;
-    width: 100px;
-    height: 100px;
+    width: 115px;
+    height: 115px;
     padding: 5px;
     border-radius: 10px;
 
@@ -68,4 +91,3 @@ a{
     display: flex;
 
 }
-/* -------------------------------------footerContacts-------------------------------------------- */
