@@ -1,9 +1,10 @@
-.navigationWelcome{
+.navigationWelcome {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
+
 .navigationGuest {
     display: flex;
     flex-direction: row;
@@ -11,33 +12,39 @@
     justify-content: space-around;
     gap: 655px;
 }
-.contentLinks{
+
+.contentLinks {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 40px;
 }
+
 .link {
     color: #8A5DEF;
     font-weight: 600;
     letter-spacing: 1.5px;
     font-size: 20px;
 }
+
 .link:hover {
-    color: #F45284 ;
+    color: #F45284;
 
 }
+
 .linkSignIn {
+    color: #F45284;
     font-weight: 600;
     letter-spacing: 1.5px;
     font-size: 20px;
-    border: 2px solid #8A5DEF;
+    border: 2px solid #F45284;
     padding: 5px 10px;
     border-radius: 50px;
 }
+
 .linkSignIn:hover {
-    background-color: #F45284 ;
-    border: 2px solid #F45284;
+    background-color: #8A5DEF;
+    border: 2px solid #8A5DEF;
     color: white;
 
 
