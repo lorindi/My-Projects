@@ -1,3 +1,6 @@
+a{
+    color: white;
+}
 .footer {
     display: flex;
     align-items: center;
@@ -5,7 +8,7 @@
     color: white;
     height: 40vh;
     background-color: #281B5B; /* fallback color */
-    background-image: linear-gradient(25deg, #281B5B, #4D2CA1);
+    background-image: linear-gradient(15deg, #4D2CA1, #8A5DEF);
 }
 .containerFooter{
     width: 100%;
@@ -22,11 +25,19 @@
     width: 100%;
   
 }
-
-
+.fa-map, .fa-phone, .fa-paper-plane, .fa-note-sticky, .fa-circle-info, .fa-square-instagram {
+    color: #F45284;
+    margin-right: 10px;
+} 
+/* .footerContacts, .footerLatestRecipes, .footerLatestRecipes, .footerInformation, .footerInstagram{
+    width: 250px;
+} */
 /* #FE59D7 */
 
+.imgInstagram {
+    width: 300px;
 
+}
 .contentCopyright{
     display: flex;
 
