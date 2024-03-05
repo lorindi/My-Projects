@@ -1,0 +1,44 @@
+.navigationWelcome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.navigationGuest {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 655px;
+}
+.contentLinks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+.link {
+    color: #8A5DEF;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+.link:hover {
+    color: #F45284 ;
+
+}
+.linkSignIn {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    border: 2px solid #8A5DEF;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.linkSignIn:hover {
+    background-color: #F45284 ;
+    border: 2px solid #F45284;
+    color: white;
+
+
+}
