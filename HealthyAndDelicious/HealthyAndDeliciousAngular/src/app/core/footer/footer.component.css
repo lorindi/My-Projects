@@ -1,3 +1,5 @@
+
+
 a {
     color: white;
 }
@@ -7,35 +9,32 @@ a {
     align-items: center;
     width: 100%;
     color: white;
-    min-height: 700px;
-    background-color: #281B5B;
-    /* fallback color */
-    background-image: linear-gradient(15deg, #4D2CA1, #8A5DEF);
+    min-height: 600px;
+    background-color: #3D4452;
 }
 
-.containerFooter {
+.container-footer {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    min-height: 600px;
     padding: 10px;
 }
 
-.contentFooter {
+.content-footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     width: 80%;
 
 }
 
-.footerTitle {
-    font-weight: 500;
+.main-titles-footer {
+    font-weight: 400;
     letter-spacing: 1.5px;
-    font-size: 23px;
+    font-size: 25px;
     margin-bottom: 30px;
 }
 
@@ -46,14 +45,17 @@ a {
 .fa-note-sticky,
 .fa-circle-info,
 .fa-square-instagram {
-    color: #F45284;
+    color: orange;
     margin: 10px 10px 10px 0px;
     padding: 10px;
-    border: 1px solid #F45284;
+    border: 1px solid orange;
     border-radius: 100%;
 }
+.fa-calendar{
+    color: orange;
+}
 
-.footerContacts,
+.contacts-footer,
 .footerLatestRecipes,
 .footerLatestRecipes,
 .footerInformation,
@@ -61,62 +63,76 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
     margin: 30px;
-    height: 400px;
+    min-height: 100px;
     width: 300px;
 }
 
-.footerListAbout {
+.list-about-footer {
     font-size: 16px;
     margin: 0;
 }
 
-.footerListElementAbout {
+.list-element-about-footer {
     margin-bottom: 20px;
 
 }
 
-.footerListAbout .footerListElementAbout:nth-child(1) .fa-location-dot {
+.list-about-footer .list-element-about-footer:nth-child(1) .fa-location-dot {
     padding: 10px 12px;
 
 }
 
-.footerFormAbout {
+.form-about-footer {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    border: 1px solid white;
+    border-radius: 50px;
+
+
 }
 
-.footerFormAboutInput {
+.input-form-about-footer {
     border-radius: 50px 0px 0px 50px;
     width: 200px;
     padding: 5px;
     border: none;
-    height: 37px;
+    height: 40px;
+    background-color: #3D4452;
 
 
 }
 
-.footerFormAboutButton {
+.button-form-about-footer {
     background-color: white;
+    background-color: #3D4452;
     border: none;
-    height: 37px;
+    height: 40px;
     border-radius: 0px 50px 50px 0px;
 
-
 }
 
-.footerFormAboutButton .fa-paper-plane {
-    border: none;
-    padding: 0;
+.fa-regular-fa-paper-plane {
+    margin: 0;
+    color: white;
+    border: 2px solid orange;
+    background-color: orange;
+    padding: 8px;
 
+}
+.button-form-about-footer:hover  .fa-paper-plane{
+    background-color: #3D4452;
+    border-radius: none;
+    color: orange;
 }
 
 .footerLatestRecipesCard {
     display: flex;
     flex-direction: row;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 250px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -157,13 +173,14 @@ a {
 .footerLatestRecipesCardInfoData {
     font-size: 12px;
     overflow: hidden;
-
     overflow-wrap: anywhere;
 
 }
 .instagramImages {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+
 
 }
 
@@ -172,7 +189,7 @@ a {
     object-fit: cover;
     background-size: contain;
     width: 80px;
-    height: 90px;
+    height: 115px;
     padding: 5px;
     border-radius: 10px;
 
@@ -181,5 +198,11 @@ a {
 
 .contentCopyright {
     display: flex;
+    border-top: 2px solid rgba(255, 255, 255, 0.26);
+    width: 75%;
+    margin: 20px;
+    justify-content: space-between;
+    padding: 20px;
+
 
 }
