@@ -24,28 +24,29 @@
 }
 
 .link {
-    color: #8A5DEF;
-    font-weight: 600;
+    color: orange;
+    font-weight: 400;
     letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .link:hover {
-    color: #F45284;
+    color: rgba(255, 0, 0, 0.637);
 
 }
 
 .linkSignIn {
-    color: #F45284;
-    font-weight: 600;
+    color: rgba(255, 0, 0, 0.637);
+    font-weight: 500;
     letter-spacing: 1.5px;
-    border: 2px solid #F45284;
+    border: 2px solid rgba(255, 0, 0, 0.637);
     padding: 5px 10px;
     border-radius: 50px;
 }
 
 .linkSignIn:hover {
-    background-color: #8A5DEF;
-    border: 2px solid #8A5DEF;
+    background-color: orange;
+    border: 2px solid orange;
     color: white;
 
 
@@ -62,11 +63,11 @@
 
 .dropdownButtonMobile {
     background-color: white;
-    border: 2px solid #8A5DEF;
+    border: 2px solid orange;
     border-radius: 100%;
     padding: 5px 10px;
-    color: #8A5DEF;
-    font-weight: 600;
+    color: orange;
+    font-weight: 400;
 }
 .contentDropdownMobile {
     position: absolute;
@@ -77,7 +78,7 @@
     background-color: white;
     left: 0;
     top: 0;
-    border: 2px solid #8A5DEF;
+    border: 2px solid orange;
     padding: 10px;
     width: 90%;
     gap: 20px;
@@ -88,8 +89,8 @@
     display: flex;
 }
 .linkMobile {
-    color: #8A5DEF;
-    font-weight: 600;
+    color: orange;
+    font-weight: 400;
     letter-spacing: 1.5px;
     font-size: 16px;
 }
@@ -101,7 +102,7 @@
 }
 
 .onCloseButtonMobile {
-    color: #8A5DEF;
+    color: orange;
     background-color: white;
     border: none;
     font-size: 18px;
