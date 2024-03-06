@@ -1,5 +1,3 @@
-
-
 a {
     color: white;
 }
@@ -36,6 +34,7 @@ a {
     letter-spacing: 1.5px;
     font-size: 25px;
     margin-bottom: 30px;
+
 }
 
 .fa-location-dot,
@@ -51,15 +50,15 @@ a {
     border: 1px solid orange;
     border-radius: 100%;
 }
-.fa-calendar{
+
+.fa-calendar {
     color: orange;
 }
 
 .contacts-footer,
-.footerLatestRecipes,
-.footerLatestRecipes,
-.footerInformation,
-.footerInstagram {
+.latest-recipes-footer,
+.information-footer,
+.instagram-footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -70,12 +69,14 @@ a {
 }
 
 .list-about-footer {
-    font-size: 16px;
+    /* font-size: 14px; */
     margin: 0;
 }
 
 .list-element-about-footer {
     margin-bottom: 20px;
+    font-style: italic;
+
 
 }
 
@@ -123,13 +124,15 @@ a {
     padding: 8px;
 
 }
-.button-form-about-footer:hover  .fa-paper-plane{
+
+.button-form-about-footer:hover .fa-paper-plane {
     background-color: #3D4452;
     border-radius: none;
     color: orange;
 }
 
-.footerLatestRecipesCard {
+/* ---------------------Latest-Recipes-------------------------- */
+.card-latest-recipes-footer {
     display: flex;
     flex-direction: row;
     /* border: 1px solid white; */
@@ -137,7 +140,8 @@ a {
     border-radius: 10px;
     margin-bottom: 20px;
 }
-.footerLatestRecipesCardImg {
+
+.img-card-latest-recipes-footer {
     background-position: center;
     object-fit: cover;
     background-size: contain;
@@ -146,37 +150,70 @@ a {
     padding: 5px;
     border-radius: 10px;
 }
-.footerLatestRecipesCardInfo {
+
+.info-card-latest-recipes-footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     margin: 0;
-    padding:  5px;
+    padding: 5px;
     height: 125px;
-    
+
 
 }
-.footerLatestRecipesCardInfoTitle {
-    font-weight: 600;
+
+.info-title-card-latest-recipes-footer {
+    font-weight: 500;
     letter-spacing: 1px;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0;
+    color: orange;
+    /* overflow-wrap: anywhere; */
+    overflow: hidden;
+    height: 30px;
+    width: 120px;
+    font-family: "Alex Brush", cursive;
+
+
+
 }
-.footerLatestRecipesCardInfoDescription {
+
+.info-description-card-latest-recipes-footer {
     font-size: 12px;
     overflow: hidden;
     overflow-wrap: anywhere;
     height: 55px;
-    
+    width: 120px;
+
+
 }
-.footerLatestRecipesCardInfoData {
+
+.info-data-card-latest-recipes-footer {
     font-size: 12px;
     overflow: hidden;
     overflow-wrap: anywhere;
 
 }
-.instagramImages {
+
+.information-list-footer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+
+.information-list-element-footer {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid orange;
+}
+
+.instagram-images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -184,7 +221,7 @@ a {
 
 }
 
-.imgInsta {
+.insta-img {
     background-position: center;
     object-fit: cover;
     background-size: contain;
@@ -196,13 +233,31 @@ a {
 
 }
 
-.contentCopyright {
+.content-copy-right {
     display: flex;
     border-top: 2px solid rgba(255, 255, 255, 0.26);
     width: 75%;
     margin: 20px;
     justify-content: space-between;
     padding: 20px;
+    flex-wrap: wrap;
 
+
+
+}
+
+.copyright-info {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 300;
+    font-style: italic;
+
+}
+
+.copyright-info a {
+    color: orange;
+    font-family: "Alex Brush", cursive;
+    font-size: 20px;
+    font-weight: 500;
 
 }
