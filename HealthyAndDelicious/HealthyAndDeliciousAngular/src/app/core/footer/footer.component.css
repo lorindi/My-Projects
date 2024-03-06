@@ -66,6 +66,7 @@ a {
     margin: 30px;
     min-height: 100px;
     width: 300px;
+    animation: slide-in-from-left 1s ease-out; 
 }
 
 .list-about-footer {
@@ -212,6 +213,10 @@ a {
     letter-spacing: 1.5px;
     border-bottom: 1px solid orange;
 }
+.information-list-element-footer:hover {
+
+border-bottom: 1px solid rgba(255, 0, 0, 0.637);;
+}
 
 .instagram-images {
     display: flex;
@@ -241,6 +246,7 @@ a {
     justify-content: space-between;
     padding: 20px;
     flex-wrap: wrap;
+    animation: slide-in-from-left 1s ease-out; 
 
 
 
@@ -260,4 +266,15 @@ a {
     font-size: 20px;
     font-weight: 500;
 
+}
+@keyframes slide-in-from-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
