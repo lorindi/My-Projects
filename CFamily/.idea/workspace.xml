@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5c433624-009f-4a2a-8444-3d31962738ad" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
@@ -121,6 +122,7 @@
       <workItem from="1709572580760" duration="10000" />
       <workItem from="1709572864838" duration="114000" />
       <workItem from="1709573102549" duration="9000" />
+      <workItem from="1709801280418" duration="152000" />
     </task>
     <servers />
   </component>
