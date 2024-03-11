@@ -17,11 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include([
         path('auth/', include('users.urls')),
+        path('donation/', include('donations.urls')),
+        path('cart/', include('cart.urls')),
+        path('payment/', include('payments.urls')),
+        path('event/', include('events.urls')),
+        path('campaign/', include('campaigns.urls')),
+        path('benefactor/', include('benefactors.urls')),
+        path('initiative/', include('initiatives.urls')),
+        path('treks/', include('charitable_treks.urls')),
+        path('cf/', include('cystic_fibrosis.urls')),
+        path('news/', include('news.urls')),
+        path('stories/', include('stories.urls')),
 
     ])),
 ]
