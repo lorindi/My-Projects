@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',
+    'users.apps.UsersConfig',
+    'users',
+
+
 ]
 # AUTH_USER_MODEL = 'users.SushiUser'
 
