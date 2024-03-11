@@ -235,7 +235,6 @@ border-bottom: 1px solid rgba(255, 0, 0, 0.637);;
     padding: 5px;
     border-radius: 10px;
 
-
 }
 
 .content-copy-right {
@@ -247,9 +246,6 @@ border-bottom: 1px solid rgba(255, 0, 0, 0.637);;
     padding: 20px;
     flex-wrap: wrap;
     animation: slide-in-from-left 1s ease-out; 
-
-
-
 }
 
 .copyright-info {
@@ -258,6 +254,7 @@ border-bottom: 1px solid rgba(255, 0, 0, 0.637);;
     font-weight: 300;
     font-style: italic;
 
+    
 }
 
 .copyright-info a {
