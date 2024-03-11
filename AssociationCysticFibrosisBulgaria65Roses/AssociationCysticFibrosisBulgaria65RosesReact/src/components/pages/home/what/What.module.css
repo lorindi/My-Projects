@@ -1,6 +1,6 @@
-/* -------------------------------cystic-fibrosis-section------------------------------------------ */
+/* -------------------------------cysticFibrosis-section------------------------------------------ */
 
-.cystic-fibrosis-section {
+.cysticFibrosisSection {
 
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     position: relative;
 }
 
-.cystic-fibrosis-dropdown-content::before {
+.cysticFibrosisDropdownContent::before {
     content: "";
     position: absolute;
     top: 0;
@@ -37,7 +37,7 @@
         }
     }
 
-.cystic-fibrosis-title {
+.cysticFibrosisTitle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,12 +50,12 @@
 
 }
 
-.cystic-fibrosis-dropdown-content {
+.cysticFibrosisDropdownContent {
     display: none;
 
 }
 
-.cystic-fibrosis-details {
+.cysticFibrosisDetails {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -65,7 +65,7 @@
     width: 100%;
 }
 
-.cystic-fibrosis-what {
+.cysticFibrosisWhat {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -73,21 +73,21 @@
     margin-top: 10px;
 }
 
-.cystic-fibrosis-what div {
+.cysticFibrosisWhat div {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
 
-.cystic-fibrosis-description {
+.cysticFibrosisDescription {
     font-size: 16.5px;
     font-weight: 400;
 
 
 }
 
-.cystic-fibrosis-affects {
+.cysticFibrosisAffects {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -96,7 +96,7 @@
     padding-left: 60px;
 }
 
-.cystic-fibrosis-subtitle {
+.cysticFibrosisSubtitle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,14 +104,14 @@
     font-weight: 300;
 }
 
-.cystic-fibrosis-organs {
+.cysticFibrosisOrgans {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-.cystic-fibrosis-organ {
+.cysticFibrosisOrgan {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,12 +119,12 @@
     height: 200px;
 }
 
-.cystic-fibrosis-organ-title {
+.cysticFibrosisOrganTitle {
     font-size: 18px;
     font-weight: 500;
 }
 
-.cystic-fibrosis-organ-lungs-image {
+.cysticFibrosisOrganLungsImage {
     width: 120px;
     height: 110px;
     border-radius: 100%;
@@ -135,13 +135,13 @@
 
 }
 
-.cystic-fibrosis-organ-pancreas-image {
+.cysticFibrosisOrganPancreasImage {
     width: 118px;
     filter: grayscale(50%);
 
 }
 
-.cystic-fibrosis-organ-liver-image {
+.cysticFibrosisOrganLiverImage {
     width: 120px;
     height: 110px;
     border-radius: 100%;
@@ -154,7 +154,7 @@
 
 }
 
-.cystic-fibrosis-organ-intestine-image {
+.cysticFibrosisOrganIntestineImage {
     width: 120px;
     height: 110px;
     border-radius: 100%;
@@ -164,7 +164,7 @@
     filter: grayscale(50%);
 }
 
-.cystic-fibrosis-symptoms {
+.cysticFibrosisSymptoms {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -173,7 +173,7 @@
     min-height: 250px;
 }
 
-.cystic-fibrosis-symptoms-info {
+.cysticFibrosisSymptomsInfo {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -181,18 +181,18 @@
     margin-top: 10px;
 }
 
-.cystic-fibrosis-cause-info {
+.cysticFibrosisCauseInfo {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
 
 }
 
-.cystic-fibrosis-cause {
+.cysticFibrosisCause {
     font-size: 18px;
 }
 
-.cystic-fibrosis-symptoms-list {
+.cysticFibrosisSymptomsList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -204,14 +204,14 @@
 
 }
 
-.cystic-fibrosis-symptom {
+.cysticFibrosisSymptom {
     display: flex;
     border: 1px solid gray;
     padding: 5px 10px;
 
 }
 
-.cystic-fibrosis-facts {
+.cysticFibrosisFacts {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -222,7 +222,7 @@
     font-size: 16px;
 }
 
-.cystic-fibrosis-facts-info {
+.cysticFibrosisFactsInfo {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -231,7 +231,7 @@
     margin-top: 10px;
 }
 
-.cystic-fibrosis-cftr-info {
+.cysticFibrosisCftrInfo {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -241,9 +241,9 @@
     font-size: 18px;
 }
 
-.cystic-fibrosis-cftr {
+.cysticFibrosisCftr {
     width: 550px;
     font-size: 16.5px;
 }
 
-/* -------------------------------cystic-fibrosis-section------------------------------------------ */
+/* -------------------------------cysticFibrosis-section------------------------------------------ */
