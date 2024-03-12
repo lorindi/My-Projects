@@ -1,0 +1,16 @@
+.error-container {
+    position: relative;
+    height: 95vh;
+}
+
+.error-image {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    top: 70px;
+    left: 500px;
+    width: 900px;
+    height: 800px;
+}
