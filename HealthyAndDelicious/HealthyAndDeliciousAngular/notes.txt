@@ -1,4 +1,27 @@
-ng add @angular/material
+*ng g m core
+*ng g c core/header
+*ng g c core/footer
+
+*ng g m pages
+*ng g c pages/home
+*ng g c pages/about-us
+*ng g c pages/contacts
+
+*ng g m auth
+*ng g c auth/login
+*ng g c auth/register
+*ng g c auth/logout
+*ng g c auth/profile
+*ng g c auth/profile-edit
+*ng g c auth/profile-delete
+
+*ng g m recipes
+*ng g c recipes/create
+*ng g c recipes/edit
+*ng g c recipes/delete
+*ng g c recipes/dashboard
+
+*ng add @angular/material
 import {MatIconModule} from '@angular/material/icon';
 imports: [
     CommonModule, MatIconModule, 
@@ -22,3 +45,6 @@ UPDATE angular.json (3162 bytes)
 UPDATE src/index.html (594 bytes)
 UPDATE src/styles.css (181 bytes)
 PS D:\Programming\My-Projects\HealthyAndDelicious\HealthyAndDeliciousAngular> 
+
+
+
