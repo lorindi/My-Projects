@@ -6,6 +6,7 @@
 *ng g c pages/home
 *ng g c pages/about-us
 *ng g c pages/contacts
+*ng g c pages/error
 
 *ng g m auth
 *ng g c auth/login
