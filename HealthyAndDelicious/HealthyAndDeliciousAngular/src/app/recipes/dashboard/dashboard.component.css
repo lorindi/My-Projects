@@ -1,0 +1,82 @@
+.container-dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.container-dashboard:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-image: url("./kawin-harasai-4PZN7fIqX3w-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+opacity: 0.2;
+
+
+}
+.content-dashboard-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff7c;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+
+}
+.dashboard-img {
+    width: 200px;
+    height: 180px;
+    background-position: center;
+    object-fit: cover;
+    background-size: contain;
+}
+.dashboard-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.dashboard-information-description {
+    overflow-wrap: anywhere;
+    font-size: 14px;
+    height: 40px;
+    overflow: hidden;
+    padding: 0px 10px;
+    letter-spacing: 0.5px;
+}
+.dashboard-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    width: 90%;
+}
+.dashboard-button:hover {
+    background-color: #0056b3;
+}
