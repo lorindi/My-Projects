@@ -21,6 +21,7 @@
 *ng g c recipes/edit
 *ng g c recipes/delete
 *ng g c recipes/dashboard
+*ng g c recipes/details
 
 *ng add @angular/material
 import {MatIconModule} from '@angular/material/icon';
