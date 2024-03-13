@@ -72,7 +72,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around
+    ;
     max-height: 600px;
     min-width: 250px;
     min-height: 400px;
