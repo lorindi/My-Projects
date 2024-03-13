@@ -3,7 +3,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 30px 30px white;
+
 
 }
 
@@ -12,7 +15,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 30px 30px white;
 
 }
 
@@ -24,10 +29,11 @@
 }
 
 .link {
-    color: orange;
+    color: rgb(255, 166, 0);
     font-weight: 500;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    text-shadow: 1px 1px 10px white;
 }
 
 .link:hover {
@@ -58,7 +64,9 @@
     align-items: center;
     justify-content: space-around;
     position: relative;
-    padding: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 30px 30px white;
 }
 
 .dropdownButtonMobile {
