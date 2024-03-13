@@ -18,7 +18,8 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.4;
+
 
 
 }
@@ -37,7 +38,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #ffffff7c;
+    background: white;
     backdrop-filter: blur(10px);
     border-radius: 5px;
     overflow: hidden;
@@ -49,7 +50,7 @@
 .dashboard-img {
     width: 180px;
     height: 160px;
-    padding: 10px;
+    margin:  10px;
     background-position: center;
     object-fit: cover;
     background-size: contain;
