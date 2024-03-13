@@ -3,9 +3,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    min-height: 70vh;
+    margin: 50px 0px;
 }
-.container-contacts:before {
+
+/* .container-contacts:before {
     content: "";
     position: absolute;
     top: 0px;
@@ -20,63 +22,85 @@
     opacity: 0.4;
 
 
-}
-.container {
+} */
+.content-contacts {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    min-width: 900px;
-    min-height: 600px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px 1px rgba(119, 136, 153, 0.719);
-    
+    /* box-shadow: 0px 0px 20px 1px rgba(119, 136, 153, 0.719); */
+    gap: 200px;
+
 
 }
-h1 {
+
+.contact-info-title {
     text-align: center;
 }
-.contact-info {
-    margin-top: 20px;
-    text-align: center;
-}
-.contact-info p {
-    margin: 10px 0;
-    text-align: center;
-}
-form {
+.content-contacts-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    max-height: 600px;
-    width: 90%;
-    margin-top: 20px;
+    justify-content: space-between;
+    height: 350px;
+    
 }
-label {
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
+    height: 200px;
+
+}
+
+.contact-info>p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.content-contacts-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-height: 600px;
+    min-width: 250px;
+    min-height: 400px;
+}
+
+.content-contacts-form>label {
     display: block;
     margin-bottom: 5px;
     text-align: center;
     margin-top: 20px;
 }
-input[type="text"],
-input[type="email"],
-textarea {
-   
+
+.content-contacts-form>input[type="text"],
+.content-contacts-form>input[type="email"],
+.content-contacts-form>textarea {
+
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-textarea {
+
+.content-contacts-form>textarea {
     height: 100px;
 }
-input[type="submit"] {
+
+.content-contacts-form>input[type="submit"] {
     width: 100%;
     background-color: orange;
     color: #fff;
@@ -86,6 +110,7 @@ input[type="submit"] {
     border-radius: 5px;
 
 }
-input[type="submit"]:hover {
+
+.content-contacts-form>input[type="submit"]:hover {
     background-color: #FF5D5D;
 }
