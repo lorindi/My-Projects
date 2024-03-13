@@ -112,8 +112,12 @@
     background-color: orange;
     color: white;
     letter-spacing: 1.5px;
+    border-radius: 5px;
 }
+.about-recipe-link:hover {
+    background-color: #FF5D5D;
 
+}
 .about-recipe-img {
     height: 400px;
 
