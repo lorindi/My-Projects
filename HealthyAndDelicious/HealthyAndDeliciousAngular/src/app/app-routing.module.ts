@@ -10,6 +10,7 @@ import { RecipesModule } from './recipes/recipes.module';
 import { DashboardComponent } from './recipes/dashboard/dashboard.component';
 import { CreateComponent } from './recipes/create/create.component';
 import { EditComponent } from './recipes/edit/edit.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 
 const routes: Routes = [
@@ -64,6 +65,8 @@ const routes: Routes = [
     component: EditComponent,
 
   },
+  { path: '**', redirectTo: '/404' },
+  { path: '404', component: ErrorComponent },
 ];
 
 @NgModule({
