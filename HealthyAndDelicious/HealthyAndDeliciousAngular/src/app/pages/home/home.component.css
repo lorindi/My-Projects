@@ -1,7 +1,7 @@
 .cover {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 95vh;
     /* background-color: rgba(0, 0, 0, 0.137); */
     /* position: relative; */
 }
@@ -16,7 +16,7 @@
     transform: translate(-50%, -50%);
     align-items: center;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.623);
+    background-color: rgba(255, 255, 255, 0.884);
     padding: 20px;
     /* max-width: 80%;  */
     border-radius: 10px;
@@ -25,6 +25,8 @@
     height: 50%;
     font-size: 40px;
     backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 20px 1px rgba(119, 136, 153, 0.719);
+
 
 
 
@@ -162,6 +164,7 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.4;
+
 
 }
