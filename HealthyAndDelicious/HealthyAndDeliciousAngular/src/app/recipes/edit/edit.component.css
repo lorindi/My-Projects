@@ -67,7 +67,7 @@
 .edit-recipe-input,
 .edit-recipe-textarea {
     border: 1px solid #ccc;
-    width: 300px;
+    width: 350px;
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
@@ -78,7 +78,7 @@
 
 
 .edit-recipe-button {
-    width: 300px;
+    width: 350px;
     padding: 12px;
     background-color: orange;
     color: #fff;
