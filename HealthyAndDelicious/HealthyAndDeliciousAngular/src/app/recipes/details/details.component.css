@@ -1,73 +1,69 @@
 .container-recipe {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
-
 }
 
 .recipe {
-    width: 100%;
-    margin: 0 auto;
+    max-width: 900px;
+    background-color: #fff;
     padding: 20px;
-    /* border: 1px solid #ccc; */
-    border-radius: 5px;
-    background-color: white;
-    padding: 10px;
-    margin: 150px;
-}
-
-.recipe-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* text-align: center; */
-    margin-bottom: 20px;
+    border-radius: 8px;
+    margin: 80px 0px 80px 0px;
+    min-height: 100px;
 }
 
 .recipe-title {
-    font-size: 24px;
     color: #333;
+    text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .recipe-image {
-    width: 900px;
-    height: 500px;
-    margin: 10px;
-    background-position: center;
-    object-fit: cover;
-    background-size: contain;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-description {
-    font-size: 16px;
     color: #666;
-    margin-bottom: 20px;
-}
-
-.ingredient-list { display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.ingredient {
+    text-align: center;
+    overflow-wrap: anywhere;
+    height: 100%;
     font-size: 16px;
+
+}
+
+.ingredient-list {
+    margin-top: 20px;
+    overflow-wrap: anywhere;
+
+}
+
+.ingredient-list h2,
+.instruction-list h2 {
     color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    overflow-wrap: anywhere;
+
 }
 
-.instruction-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+.ingredient-list ul,
+.instruction-list ol {
+    margin-top: 10px;
+    padding-left: 20px;
 }
 
-.instruction {
+.ingredient-list li,
+.instruction-list li {
+    color: #666;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
     font-size: 16px;
-    color: #333;
+
 }
