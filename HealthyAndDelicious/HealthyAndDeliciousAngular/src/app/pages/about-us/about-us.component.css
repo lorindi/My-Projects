@@ -1,11 +1,12 @@
-.container-about-section {
+.container-about-us-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 90vh;
 }
-.container-about-section:before {
+
+.container-about-us-section:before {
     content: "";
     position: absolute;
     top: 0px;
@@ -19,33 +20,52 @@
     z-index: -1;
     opacity: 0.4;
 
-
-}
-.about-section {
-    margin: 50px auto; 
-    width: 900px; 
-    padding: 30px;
-    background-color: white; 
-    border-radius: 10px; 
-    box-shadow: 0px 0px 20px 1px rgba(119, 136, 153, 0.719);
-
 }
 
-.about-section h1 {
+.content-about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.829);
+}
+
+.about-us-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 453px;
+    width: 850px;
+    /* padding: 30px; */
+    border-radius: 10px;
+
+}
+
+.about-us-section-title {
     font-size: 2.5em;
     color: #333;
 }
 
-.about-section p {
-    font-size: 1.3em;
-    line-height: 1.6;
-    color: #666; 
+.about-us-section-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-align: justify;
+
 }
+.about-us-section-description-first{
+    text-indent: 5em;
+
+}
+
 @media screen and (max-width: 930px) {
-    .about-section {
-
-        width: 90%; 
-
-    
+    .about-us-section {
+        width: 90%;
+    }
+    .about-us-section-title {
+margin-top: 50px;
     }
 }
