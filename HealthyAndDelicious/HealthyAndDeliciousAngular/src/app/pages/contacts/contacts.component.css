@@ -31,7 +31,8 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    background-color: #ffffffd5;
+    background: #ffffffbb;
+    backdrop-filter: blur(5px);
     border-radius: 5px;
     border-radius: 10px;
     gap: 200px;
