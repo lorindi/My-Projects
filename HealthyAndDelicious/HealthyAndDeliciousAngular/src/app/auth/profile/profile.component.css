@@ -22,33 +22,68 @@
 
 }
 
+
+
 .profile-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #ffffffde;
+    min-height: 453px;
+
 }
 
-h1 {
+.profile-container>h1 {
     text-align: center;
-    color: #333;
+    color: orange;
+    letter-spacing: 1.5px;
 }
 
 .profile-details {
     margin-top: 20px;
 }
 
-.profile-details ul {
+.profile-details>ul {
     list-style: none;
     padding: 0;
 }
 
-.profile-details li {
-    margin-bottom: 10px;
+.profile-details>ul>li {
+    margin-bottom: 20px;
 }
 
-.profile-details label {
-    font-weight: bold;
+.profile-details>ul>li>label {
+    font-weight: 400;
+    margin-right: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    
 }
+.profile-details>ul>li>span {
+  color: orange;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+    
+}
+
+
+.profile-edit-btn{
+    width: 270px;
+    padding: 12px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.profile-edit-btn:hover {
+    background-color: #FF5D5D;
+}
+
