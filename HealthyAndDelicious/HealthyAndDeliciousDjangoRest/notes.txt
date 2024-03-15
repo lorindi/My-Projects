@@ -1,0 +1,7 @@
+pip install django-environ
+pip install python-dotenv
+pip install djangorestframework
+pip install django-cors-headers
+pip install psycopg2
+pip freeze > requirements.txt
+pip install -r requirements.txt
