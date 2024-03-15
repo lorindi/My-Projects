@@ -1,11 +1,18 @@
 <div class="login-section">
-    <form action="submit.php" method="post" class="login-form">
+    <form action="submit.php" method="post" class="login-form" #form="ngForm" (ngSubmit)="login(form)">
         <label for="username" class="login-form-label">Username</label>
-        <input type="text" id="username" name="username" class="login-form-input" required>
+        <input ngModel #inputUsername="ngModel" type="text" id="username" name="username"
+            class="login-form-input login-form-input-error" required="" >
 
         <label for="password" class="login-form-label">Password</label>
-        <input type="password" id="password" name="password" class="login-form-input" required>
+        <input ngModel #inputPassword="ngModel" type="password" id="password" name="password"
+            class="login-form-input login-form-input-error" required="" >
+        <!-- {{inputUsername.errors?.['required'] | json }} -->
 
-        <input type="submit" value="Log in" class="login-form-button">
+        <ng-container *ngIf="inputUsername.touched" class="login-form-input-error">
+            <p class="error" *ngIf="inputUsername.errors?.['required']">Username is required!</p>
+            <p class="error" *ngIf="inputPassword.errors?.['required']">Password required!</p>
+        </ng-container>
+        <button class="login-form-button">Log in</button>
     </form>
 </div>
