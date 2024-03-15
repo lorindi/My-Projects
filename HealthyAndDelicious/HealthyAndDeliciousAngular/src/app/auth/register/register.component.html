@@ -4,14 +4,18 @@
         <input type="text" id="username" name="username" class="input-register-form" required>
 
         <label for="email" class="label-register-form">Email</label>
-        <input type="email" id="email" name="email" class="input-register-form" required>
+        <input ngModel #inputEmail="ngModel"  type="email" id="email" name="email" class="input-register-form" required [appEmail]="['bg', 'com']">
 
         <label for="password" class="label-register-form">Password</label>
         <input type="password" id="password" name="password" class="input-register-form" required>
 
         <label for="confirm_password" class="label-register-form">Password</label>
         <input type="password" id="confirm_password" name="confirm_password" class="input-register-form" required>
+        <ng-container *ngIf="inputEmail.touched" class="login-form-input-error">
+            <p class="error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+            <p class="error" *ngIf="inputEmail.errors?.['emailValidator']">Email is not valid!!</p>
 
+        </ng-container>
         <input type="submit" value="Registration" class="button-register-form">
     </form>
 </div>
