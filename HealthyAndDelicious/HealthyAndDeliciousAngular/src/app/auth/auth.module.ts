@@ -6,8 +6,9 @@ import { LogoutComponent } from './logout/logout.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { ProfileDeleteComponent } from './profile-delete/profile-delete.component';
-
-
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,10 +17,8 @@ import { ProfileDeleteComponent } from './profile-delete/profile-delete.componen
     LogoutComponent,
     ProfileComponent,
     ProfileEditComponent,
-    ProfileDeleteComponent
+    ProfileDeleteComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule,RouterModule, FormsModule, SharedModule],
 })
-export class AuthModule { }
+export class AuthModule {}
