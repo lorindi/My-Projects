@@ -90,3 +90,11 @@
     font-size: 20px;
     position: absolute;
 }
+
+.login-form-input {
+    background-color: orange;
+}
+.login-form-input-error {
+    background-color: red !important;
+
+}
