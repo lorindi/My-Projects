@@ -6,7 +6,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { ProfileDeleteComponent } from './profile-delete/profile-delete.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 
@@ -19,6 +19,12 @@ import { SharedModule } from '../shared/shared.module';
     ProfileEditComponent,
     ProfileDeleteComponent,
   ],
-  imports: [CommonModule,RouterModule, FormsModule, SharedModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
 export class AuthModule {}
