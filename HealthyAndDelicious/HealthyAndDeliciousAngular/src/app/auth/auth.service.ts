@@ -1,11 +1,20 @@
 import { JsonPipe } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { UserForAuth } from '../types/user';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  // apiUrl = 'http://localhost:8000/api';
+
+  // constructor(private http: HttpClient) {}
+
+  // registerUser(userData: any) {
+  //   return this.http.post(`${this.apiUrl}/register/`, userData);
+  // }
+
   user: UserForAuth | undefined;
   // isLogged = false;
   USER_KEY = '[user]';
