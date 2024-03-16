@@ -1,52 +1,36 @@
 <div class="container-create-recipe">
-    <form class="create-recipe-form" method="post" action="">
-      <div>
-        <label for="image" class="create-recipe-label">
-          Image
-        </label>
-        <input
-          type="text"
-          class="create-recipe-input"
-          name="image"
-          placeholder="Upload image"
-        />
-      </div>
-      <div>
-        <label for="title" class="create-recipe-label">
-          Title
-        </label>
-        <input
-          type="text"
-          name="title"
-          placeholder="Enter recipe title"
-          class="create-recipe-input"
-        />
-      </div>
-  
-      <div>
-        <label for="description" class="create-recipe-label">
-          Description
-        </label>
-        <textarea
-          name="description"
-          rows="4" cols="50"
-          placeholder="Enter recipe description"
-          class="create-recipe-textarea"
-        ></textarea>
-      </div>
-  
-      <div>
-        <label for="ingredients" class="create-recipe-label">
-          Ingredients
-        </label>
-        <textarea
-          name="ingredients"
-          rows="4" cols="50"
-          placeholder="Enter recipe ingredients"
-          class="create-recipe-textarea"
-        ></textarea>
-      </div>
-  
-      <button type="submit" class="create-recipe-button">Create</button>
-    </form>
-  </div>
+  <form class="create-recipe-form" #form="ngForm" (ngSubmit)="addRecipe(form)">
+    <div>
+      <label for="image" class="create-recipe-label">
+        Image
+      </label>
+      <input ngModel #inputRecipeName="ngModel" required minlength="3" type="text" class="create-recipe-input"
+        name="image" placeholder="Upload image" />
+    </div>
+    <div>
+      <label for="title" class="create-recipe-label">
+        Title
+      </label>
+      <input ngModel #inputRecipeName="ngModel" required minlength="3" type="text" name="title"
+        placeholder="Enter recipe title" class="create-recipe-input" />
+    </div>
+
+    <div>
+      <label for="description" class="create-recipe-label">
+        Description
+      </label>
+      <textarea ngModel #textareaPostText required minlength="3" name="description" rows="4" cols="50"
+        placeholder="Enter recipe description" class="create-recipe-textarea"></textarea>
+    </div>
+
+    <div>
+      <label for="ingredients" class="create-recipe-label">
+        Ingredients
+      </label>
+      <textarea ngModel #textareaPostText required minlength="3" name="ingredients" rows="4" cols="50"
+        placeholder="Enter recipe ingredients" class="create-recipe-textarea"></textarea>
+    </div>
+
+    <button (click)="addRecipe(form)" type="submit" class="create-recipe-button">Create</button>
+  </form>
+</div>
