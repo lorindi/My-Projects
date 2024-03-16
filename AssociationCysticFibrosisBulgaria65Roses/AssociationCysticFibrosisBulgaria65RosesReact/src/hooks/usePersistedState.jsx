@@ -48,3 +48,10 @@ export const usePersistedState = (key, defaultValue) => {
 //     return [state, setPersistedState];: Функцията usePersistedState връща масив, съдържащ текущата
 // стойност на състоянието (state) и функцията за нейното обновяване (setPersistedState).
 // Този масив може да бъде деструктуриран при използването на usePersistedState в компонентите на React.
+
+
+
+// JSON.parse() е вградена функция в JavaScript, която преобразува JSON низ в обект или масив, като разбира JSON формата и връща съответния JavaScript обект или масив.
+//  В случая, persistedState вероятно е низ, който е възстановен от localStorage, като JSON формат. 
+//  Следователно JSON.parse(persistedState) преобразува този низ обратно в обект или масив, който е представен в този JSON низ. 
+//  Така че този ред е връщане на състоянието, което е предишно запазено в localStorage и което сега се използва в компонента.
