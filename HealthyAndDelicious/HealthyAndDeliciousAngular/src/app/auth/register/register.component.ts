@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { EMAIL_DOMAINS } from 'src/app/constants';
-import { emailValidator } from 'src/app/shared/utils/email-validator';
-import { matchPasswordsValidator } from 'src/app/shared/utils/match-passwords.validator';
-import { AuthService } from '../auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { emailValidator } from '../../validators/validator';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+import { handleError } from 'src/app/error/error.Handler';
+import { passwordValidator } from 'src/app/validators/validator';
 
 @Component({
   selector: 'app-register',
@@ -12,26 +13,47 @@ import { AuthService } from '../auth.service';
 })
 
 export class RegisterComponent {
-  domains = EMAIL_DOMAINS;
-  form = this.fb.group({
-    //controls
-    username: ['', [Validators.required, Validators.minLength(3)]],
-    email: ['', [Validators.required, emailValidator(EMAIL_DOMAINS)]],
-    passGroup: this.fb.group(
-      {
-        password: ['', Validators.required],
-        rePassword: ['', Validators.required],
-      },
-      { validators: [matchPasswordsValidator('password', 'rePassword')] }
-    ),
-  });
+  form!: FormGroup;
+  errors: string | undefined = undefined;
+  isLoading: boolean = false;
 
-  constructor(private fb: FormBuilder) {}
-
-  register(): void {
-    if (this.form.invalid) {
-      return;
-    }
-    console.log(this.form.value);
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
+    this.form = this.fb.group({
+      username: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(10)]],
+      email: ['', [Validators.required, emailValidator]],
+      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]],
+      rePass: ['', [Validators.required, passwordValidator]],
+    });
   }
+
+  convertToBase64(file: any){
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () => {
+        resolve(fileReader.result)
+      }
+
+      fileReader.onerror = (error) => {
+        reject(error)
+      }
+    })
+  }
+
+  async register(){
+    this.isLoading = true;
+
+    this.authService.register(this.form.value).subscribe({
+      next: () => {
+        this.isLoading = false;
+        this.router.navigate(['/']);
+      },
+      error: (err) => {
+        this.isLoading = false;
+        this.errors = handleError(err.error?.error)
+      }
+    })
+  }
+
 }
