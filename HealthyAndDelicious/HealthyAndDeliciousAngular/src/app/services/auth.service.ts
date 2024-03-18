@@ -9,6 +9,7 @@ import { Observable, of } from 'rxjs';
 import { IUser } from '../types/user';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
+import { PersistedStateService } from './persisted-state.service';
 const API_URL = environment.apiUrl;
 
 @Injectable({
@@ -17,7 +18,7 @@ const API_URL = environment.apiUrl;
 export class AuthService {
   user: null | IUser | undefined;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router, private persistedStateService: PersistedStateService) {}
 
   get isLogged(): boolean {
     return !!this.user;
