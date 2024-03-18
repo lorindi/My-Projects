@@ -21,18 +21,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
-    // canActivate: [AuthGuard],
-    // data: {
-    //   guest: true,
-    // },
   },
   {
     path: 'login',
     component: LoginComponent,
-    // canActivate: [AuthGuard],
-    // data: {
-    //   guest: true,
-    // },
   },
   {
     path: 'about-us',
