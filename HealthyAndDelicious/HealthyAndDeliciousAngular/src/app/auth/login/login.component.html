@@ -1,17 +1,22 @@
 <div class="login-section">
     <form class="login-form" #form="ngForm" (ngSubmit)="login(form)">
         <label for="username" class="login-form-label">Username</label>
-        <input ngModel #inputUsername="ngModel" type="text" id="username" name="username"
-            class="login-form-input login-form-input-error" required>
+        <input ngModel #username="ngModel" required type="text" name="username"
+            class="login-form-input login-form-input-error">
 
         <label for="password" class="login-form-label">Password</label>
-        <input ngModel #inputPassword="ngModel" type="password" id="password" name="password"
+        <input ngModel #password="ngModel" minlength="6" required type="password" name="password"
             class="login-form-input login-form-input-error" required minlength="5">
-     
-        <ng-container *ngIf="inputPassword.touched" class="login-form-input-error">
-            <p class="error" *ngIf="inputPassword.errors?.['required']">Password is required!</p>
-            <p class="error" *ngIf="inputPassword.errors?.['minlength']">Password must be at 5 characters!!</p>
+
+        <ng-container *ngIf="password.touched">
+            <p class="error" *ngIf="password.errors?.['required']">Password is required!</p>
+            <p class="error" *ngIf="password.errors?.['minlength']">Password should have more than 6 characters!</p>
         </ng-container>
+
+        <ng-container *ngIf="errors">
+            <p class="mainerror">{{errors}}</p>
+        </ng-container>
+        
         <button [disabled]="form.invalid" [style]="{backgroundColor: form.invalid ? 'lightgray' : 'orange'}"
             class="login-form-button">Login</button>
     </form>
