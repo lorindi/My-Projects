@@ -1,21 +1,12 @@
-import { Post } from "./post";
-
-export interface User {
-  themes: string[];
-  posts:  Post[];
-  _id: string;
-  tel: string;
-  email: string;
+export interface IUser {
+  id: number;
+  accessToken: string,
   username: string;
-  password: string;
-  created_at: string;
-  updatedAt: string;
-  __v: number;
-}
-export interface UserForAuth {
-  firstName: string;
   email: string;
-  phoneNumber: string;
-  password: string;
-  id: string;
+  first_name: string;
+  last_name: string;
+  description: string;
+  profile_picture: string;
+  is_active: boolean;
+  is_staff: boolean;
 }
