@@ -1,6 +1,8 @@
 from django.contrib.auth import get_user_model, login, logout
 from django.contrib.auth.models import AnonymousUser
 from django.utils import timezone
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.generics import get_object_or_404
@@ -31,17 +33,42 @@ class LoginApiView(ObtainAuthToken):
         print(type(user))
         # user.update_last_login(None)
         return Response({
+            # 'token': token.key,
+            # 'user_id': user.pk,
+            # 'email': user.email,
             'token': token.key,
-            'user_id': user.pk,
-            'email': user.email,
+            'user': {
+                'id': user.pk,
+                'email': user.email}
         })
 
 
+# class LogoutApiView(APIView):
+#     def get(self, request, *args, **kwargs):
+#         return self.__perform_logout(request)
+#
+#     def post(self, request, *args, **kwargs):
+#         logout(request)
+#         return self.__perform_logout(request)
+#
+#     @staticmethod
+#     def __perform_logout(request):
+#         if not isinstance(request.user, AnonymousUser):
+#             request.user.auth_token.delete()
+#             return Response({'message': 'user logged out'})
+#         else:
+#             return Response({'message': 'user not authenticated'})
+
+@method_decorator(csrf_exempt, name='dispatch')
 class LogoutApiView(APIView):
     def get(self, request, *args, **kwargs):
         return self.__perform_logout(request)
 
     def post(self, request, *args, **kwargs):
+        logout(request)
+        return self.__perform_logout(request)
+
+    def delete(self, request, *args, **kwargs):
         logout(request)
         return self.__perform_logout(request)
 
@@ -70,7 +97,6 @@ class UpdateUserApiView(generics.RetrieveUpdateAPIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 
 class ProfileDetailsAPIView(generics.RetrieveUpdateAPIView):
