@@ -1,10 +1,6 @@
-import {
-  HttpClient,
-  HttpErrorResponse,
-  HttpHeaders,
-} from '@angular/common/http'; // Импорт на HttpErrorResponse
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, tap } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { IUser } from '../types/user';
 import { environment } from '../../environments/environment';
@@ -35,7 +31,7 @@ export class AuthService {
     return this.user$$.asObservable().pipe(
       filter((user: IUser | undefined) => !!user),
       // Преобразуване на типа, за да уверите TypeScript
-      map((user: IUser | undefined) => user as IUser) 
+      map((user: IUser | undefined) => user as IUser)
     );
   }
   getToken(): string | null {
@@ -56,7 +52,8 @@ export class AuthService {
 
   private authenticateWithToken(token: string) {
     // Send request to server to authenticate using the token
-    this.http.get<IUser>(`${API_URL}/auth/profile/`, { headers: this.getHeaders() })
+    this.http
+      .get<IUser>(`${API_URL}/auth/profile/`, { headers: this.getHeaders() })
       .subscribe({
         next: (user: IUser) => {
           this.user$$.next(user);
@@ -66,13 +63,13 @@ export class AuthService {
           // Clear token and reset user if authentication fails
           localStorage.removeItem('token');
           this.user = null;
-        }
+        },
       });
   }
 
-
   login(username: string, password: string): Observable<any> {
-    return this.http.post<any>(`${API_URL}/auth/login/`, { username, password })
+    return this.http
+      .post<any>(`${API_URL}/auth/login/`, { username, password })
       .pipe(
         tap((response) => {
           if (response && response.token) {
