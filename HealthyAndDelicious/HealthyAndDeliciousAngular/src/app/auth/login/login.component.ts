@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { HttpErrorResponse } from '@angular/common/http'; // Импортиране на HttpErrorResponse
+import { HttpErrorResponse } from '@angular/common/http'; 
 import { handleError } from 'src/app/error/error.Handler';
 
 @Component({
@@ -25,7 +25,7 @@ export class LoginComponent {
         this.isLoading = false;
         this.router.navigate(['/'])
       },
-      error: (err: HttpErrorResponse) => {
+      error: ( err: HttpErrorResponse) => {
         this.isLoading = false; 
         this.errors = handleError(err); 
       }
