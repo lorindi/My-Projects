@@ -50,4 +50,4 @@ class UpdateUserSerializer(serializers.ModelSerializer):
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = get_user_model()
-        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'description', 'profile_picture']
+        fields = ('id', 'username', 'email', 'first_name', 'last_name', 'description', 'profile_picture')
