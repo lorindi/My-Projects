@@ -11,37 +11,54 @@ import { passwordValidator } from 'src/app/validators/validator';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
 })
-
 export class RegisterComponent {
   form!: FormGroup;
   errors: string | undefined = undefined;
   isLoading: boolean = false;
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
     this.form = this.fb.group({
-      username: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(10)]],
+      username: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(4),
+          Validators.maxLength(10),
+        ],
+      ],
       email: ['', [Validators.required, emailValidator]],
-      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]],
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(6),
+          Validators.maxLength(12),
+        ],
+      ],
       rePass: ['', [Validators.required, passwordValidator]],
     });
   }
 
-  convertToBase64(file: any){
+  convertToBase64(file: any) {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader();
       fileReader.readAsDataURL(file);
 
       fileReader.onload = () => {
-        resolve(fileReader.result)
-      }
+        resolve(fileReader.result);
+      };
 
       fileReader.onerror = (error) => {
-        reject(error)
-      }
-    })
+        reject(error);
+      };
+    });
   }
 
-  async register(){
+  async register() {
     this.isLoading = true;
 
     this.authService.register(this.form.value).subscribe({
@@ -51,9 +68,8 @@ export class RegisterComponent {
       },
       error: (err) => {
         this.isLoading = false;
-        this.errors = handleError(err.error?.error)
-      }
-    })
+        this.errors = handleError(err.error?.error);
+      },
+    });
   }
-
 }
