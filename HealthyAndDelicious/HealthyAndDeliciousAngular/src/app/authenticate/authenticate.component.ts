@@ -14,27 +14,29 @@ export class AuthenticateComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    // Проверка дали вече имаме логнат потребител
-    if (this.authService.isLogged) {
-      // Вземане на данните за логнатия потребител
-      this.authService.getUser().subscribe((user) => {
-        this.user = user;
-        this.isAuthenticating = false;
-      });
-    } else {
-      // Ако няма логнат потребител, правим заявка за вход
-      this.authService.getProfile().subscribe({
-        next: (user: IUser) => {
+    setTimeout(() => {
+      // Проверка дали вече имаме логнат потребител
+      if (this.authService.isLogged) {
+        // Вземане на данните за логнатия потребител
+        this.authService.getUser().subscribe((user) => {
           this.user = user;
           this.isAuthenticating = false;
-        },
-        error: () => {
-          this.isAuthenticating = false;
-        },
-        complete: () => {
-          this.isAuthenticating = false;
-        },
-      });
-    }
+        });
+      } else {
+        // Ако няма логнат потребител, правим заявка за вход
+        this.authService.getProfile().subscribe({
+          next: (user: IUser) => {
+            this.user = user;
+            this.isAuthenticating = false;
+          },
+          error: () => {
+            this.isAuthenticating = false;
+          },
+          complete: () => {
+            this.isAuthenticating = false;
+          },
+        });
+      }
+    }, 3000);
   }
 }
