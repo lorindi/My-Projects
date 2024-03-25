@@ -6,11 +6,12 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.generics import get_object_or_404
-from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import generics, status
-
 from users.serializers import CreateUserSerializer, UpdateUserSerializer, UserProfileSerializer
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 
 UserModel = get_user_model()
 
@@ -29,35 +30,16 @@ class LoginApiView(ObtainAuthToken):
         token, created = Token.objects.get_or_create(user=user)
         user.last_login = timezone.now()
         user.save()
-        login(self.request, user)
-        print(type(user))
-        # user.update_last_login(None)
+        login(request, user)
+
         return Response({
-            # 'token': token.key,
-            # 'user_id': user.pk,
-            # 'email': user.email,
+
             'token': token.key,
             'user': {
                 'id': user.pk,
                 'email': user.email}
         })
 
-
-# class LogoutApiView(APIView):
-#     def get(self, request, *args, **kwargs):
-#         return self.__perform_logout(request)
-#
-#     def post(self, request, *args, **kwargs):
-#         logout(request)
-#         return self.__perform_logout(request)
-#
-#     @staticmethod
-#     def __perform_logout(request):
-#         if not isinstance(request.user, AnonymousUser):
-#             request.user.auth_token.delete()
-#             return Response({'message': 'user logged out'})
-#         else:
-#             return Response({'message': 'user not authenticated'})
 
 @method_decorator(csrf_exempt, name='dispatch')
 class LogoutApiView(APIView):
@@ -107,3 +89,11 @@ class ProfileDetailsAPIView(generics.RetrieveUpdateAPIView):
         user = get_object_or_404(UserModel, pk=pk)
         serializer = UpdateUserSerializer(user)
         return Response(serializer.data)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def profile(request):
+    user = request.user
+    serializer = UserProfileSerializer(user)
+    return Response(serializer.data)
