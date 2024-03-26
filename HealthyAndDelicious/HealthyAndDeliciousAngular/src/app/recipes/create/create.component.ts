@@ -8,7 +8,7 @@ import { RecipesService } from '../../services/recipes.service';
   styleUrls: ['./create.component.css'],
 })
 export class CreateComponent {
-  constructor(private recipesService: RecipesService) {}
+  constructor() {}
   addRecipe(form: NgForm) {
     if (form.invalid) {
       return;
