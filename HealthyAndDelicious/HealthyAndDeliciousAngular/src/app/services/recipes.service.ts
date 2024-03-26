@@ -7,7 +7,7 @@ import { IRecipe } from '../types/recipe';
 @Injectable({
   providedIn: 'root',
 })
-export class ApiService {
+export class RecipesService {
   constructor(private http: HttpClient) {}
 
   //   THEMES
