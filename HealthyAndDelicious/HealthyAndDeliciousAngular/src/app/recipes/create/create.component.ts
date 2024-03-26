@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ApiService } from 'src/app/api.service';
+import { RecipesService } from '../../services/recipes.service';
 
 @Component({
   selector: 'app-create',
@@ -8,7 +8,7 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./create.component.css'],
 })
 export class CreateComponent {
-  constructor(private apiService: ApiService) {}
+  constructor(private recipesService: RecipesService) {}
   addRecipe(form: NgForm) {
     if (form.invalid) {
       return;
