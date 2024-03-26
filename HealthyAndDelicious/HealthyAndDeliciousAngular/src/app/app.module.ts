@@ -11,9 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RecipesModule } from './recipes/recipes.module';
 import { AuthModule } from './auth/auth.module';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
-  declarations: [AppComponent, AuthenticateComponent],
+  declarations: [AppComponent, AuthenticateComponent, ErrorComponent],
   imports: [
     BrowserModule,
     CoreModule,
