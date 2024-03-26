@@ -9,7 +9,7 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
 import { DashboardComponent } from './recipes/dashboard/dashboard.component';
 import { CreateComponent } from './recipes/create/create.component';
 import { EditComponent } from './recipes/edit/edit.component';
-import { ErrorComponent } from './pages/error/error.component';
+import { NotFoundErrorComponent } from './pages/not-found/not-found.component';
 import { DetailsComponent } from './recipes/details/details.component';
 
 const routes: Routes = [
@@ -56,7 +56,7 @@ const routes: Routes = [
     component: DetailsComponent,
   },
   { path: '**', redirectTo: '/404' },
-  { path: '404', component: ErrorComponent },
+  { path: '404', component: NotFoundErrorComponent},
 ];
 
 @NgModule({
