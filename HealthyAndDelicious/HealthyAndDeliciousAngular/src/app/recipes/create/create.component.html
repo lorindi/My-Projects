@@ -4,13 +4,19 @@
       <label for="image" class="create-recipe-label">
         Image
       </label>
-      <input ngModel #inputImage="ngModel" required minlength="3" type="url" class="create-recipe-input" name="image"
+      <input ngModel #inputImage="ngModel" required minlength="30" type="url" class="create-recipe-input" name="image"
         placeholder="Upload image" [pattern]="'https://.*'" />
-      <ng-container *ngIf="inputImage.errors && inputImage.errors['pattern']">
-        <div class="error-message">
+      <ng-container *ngIf=" inputImage.touched || inputImage.errors && inputImage.errors['pattern']">
+        <p class="error-message" *ngIf="inputImage.errors?.['required']">Image is required!</p>
+        <p class="error-message" *ngIf="inputImage.errors?.['pattern']">
           Image URL should start with 'https://'
-        </div>
+        </p>
+        <p class="error-message" *ngIf="inputImage.errors?.['minlength']">
+          Image URL must be at least 30 characters long
+        </p>
       </ng-container>
+
+
     </div>
     <div>
       <label for="title" class="create-recipe-label">
@@ -18,6 +24,13 @@
       </label>
       <input ngModel #inputTitle="ngModel" required minlength="3" type="text" name="title"
         placeholder="Enter recipe title" class="create-recipe-input" />
+
+      <ng-container *ngIf=" inputTitle.touched && inputTitle.errors ">
+        <p class="error-message" *ngIf="inputTitle.errors?.['required']">Title is required!</p>
+        <p class="error-message" *ngIf="inputTitle.errors?.['minlength']">
+          Title should be at least 3 characters long
+        </p>
+      </ng-container>
     </div>
 
     <div>
