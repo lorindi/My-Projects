@@ -4,14 +4,19 @@
       <label for="image" class="create-recipe-label">
         Image
       </label>
-      <input ngModel #inputRecipeName="ngModel" required minlength="3" type="text" class="create-recipe-input"
-        name="image" placeholder="Upload image" />
+      <input ngModel #inputImage="ngModel" required minlength="3" type="url" class="create-recipe-input" name="image"
+        placeholder="Upload image" [pattern]="'https://.*'" />
+      <ng-container *ngIf="inputImage.errors && inputImage.errors['pattern']">
+        <div class="error-message">
+          Image URL should start with 'https://'
+        </div>
+      </ng-container>
     </div>
     <div>
       <label for="title" class="create-recipe-label">
         Title
       </label>
-      <input ngModel #inputRecipeName="ngModel" required minlength="3" type="text" name="title"
+      <input ngModel #inputTitle="ngModel" required minlength="3" type="text" name="title"
         placeholder="Enter recipe title" class="create-recipe-input" />
     </div>
 
@@ -19,7 +24,7 @@
       <label for="description" class="create-recipe-label">
         Description
       </label>
-      <textarea ngModel #textareaPostText required minlength="3" name="description" rows="4" cols="50"
+      <textarea ngModel #textareaDescription="ngModel" required minlength="3" name="description" rows="4" cols="50"
         placeholder="Enter recipe description" class="create-recipe-textarea"></textarea>
     </div>
 
@@ -27,8 +32,57 @@
       <label for="ingredients" class="create-recipe-label">
         Ingredients
       </label>
-      <textarea ngModel #textareaPostText required minlength="3" name="ingredients" rows="4" cols="50"
+      <textarea ngModel #textareaIngredients="ngModel" required minlength="3" name="ingredients" rows="4" cols="50"
         placeholder="Enter recipe ingredients" class="create-recipe-textarea"></textarea>
+    </div>
+
+    <div>
+      <label for="category" class="create-recipe-label">
+        Category
+      </label>
+      <select ngModel #inputCategory="ngModel" name="category" class="create-recipe-input">
+        <option value="">Select a category</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="snack">Snack</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="vegan">Vegan</option>
+        <option value="gluten_free">Gluten-Free</option>
+        <option value="dairy_free">Dairy-Free</option>
+        <option value="low_carb">Low Carb</option>
+        <option value="low_calorie">Low Calorie</option>
+        <option value="high_protein">High Protein</option>
+        <option value="pescatarian">Pescatarian</option>
+        <option value="keto">Keto</option>
+        <option value="paleo">Paleo</option>
+        <option value="mediterranean">Mediterranean</option>
+        <option value="whole30">Whole30</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="prep_time" class="create-recipe-label">
+        Prep Time
+      </label>
+      <input ngModel #inputPrepTime="ngModel" required minlength="3" type="text" name="prep_time"
+        placeholder="Enter prep time" class="create-recipe-input" />
+    </div>
+
+    <div>
+      <label for="cook_time" class="create-recipe-label">
+        Cook Time
+      </label>
+      <input ngModel #inputCookTime="ngModel" required minlength="3" type="text" name="cook_time"
+        placeholder="Enter cook time" class="create-recipe-input" />
+    </div>
+
+    <div>
+      <label for="servings" class="create-recipe-label">
+        Servings
+      </label>
+      <input ngModel #inputServings="ngModel" required minlength="1" type="number" name="servings"
+        placeholder="Enter servings" class="create-recipe-input" />
     </div>
 
     <button (click)="addRecipe(form)" type="submit" class="create-recipe-button">Create</button>
