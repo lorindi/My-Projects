@@ -3,25 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    min-height: 90vh;
 }
 
-.container-create-recipe:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-    background-image: url("/assets/brooke-lark-nTZOILVZuOg-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    opacity: 0.4;
 
-
-}
 
 .create-recipe-form {
     display: flex;
@@ -29,13 +14,32 @@
     justify-content: center;
     align-items: center;
     /* min-width: 350px; */
-    margin: 0 auto;
+    margin: 100px 0px;
     background: #ffffffbb;
     backdrop-filter: blur(5px);
-    padding: 20px;
+    padding: 50px;
     border-radius: 5px;
     box-shadow: 0px 0px 20px 1px rgba(119, 136, 153, 0.719);
     height: auto;
+    width: 65%;
+}
+
+.create-recipe-form:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/brooke-lark-nTZOILVZuOg-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    /* rotate: 90deg; */
+    z-index: -1;
+    opacity: 0.3;
+
+
 }
 
 .create-recipe-form>div {
@@ -43,7 +47,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* min-width: 300px; */
     margin-bottom: 10px;
 
 }
@@ -67,8 +70,8 @@
 .create-recipe-input,
 .create-recipe-textarea {
     border: 1px solid #ccc;
-    width: 350px;
-    padding: 8px;
+    width: 35vw;
+    padding: 15px;
     margin-bottom: 16px;
     box-sizing: border-box;
     letter-spacing: 1.5px;
@@ -78,7 +81,7 @@
 
 
 .create-recipe-button {
-    width: 350px;
+    width: 35vw;
     padding: 12px;
     background-color: orange;
     color: #fff;
@@ -95,7 +98,8 @@
     background-color: #FF5D5D;
 }
 
-@media screen and (max-width: 370px) {
+
+@media screen and (max-width: 768px) {
     .create-recipe-form {
         width: 90%;
     }
@@ -107,11 +111,12 @@
     .create-recipe-input,
     .create-recipe-textarea {
 
-        width: 95%;
+        width: 100%;
 
     }
+
     .create-recipe-button {
         width: 95%;
- 
+
     }
 }
