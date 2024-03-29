@@ -1,8 +1,13 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   font-family: 'Montserrat', sans-serif;
 }
+
 /* ----------------------Reset---------------------------- */
 /* Box sizing rules */
 *,
