@@ -14,7 +14,6 @@ const API_URL = environment.apiUrl;
 export class AuthService {
   user: null | IUser | undefined;
   private user$$ = new BehaviorSubject<IUser | undefined>(undefined);
-
   constructor(private http: HttpClient, private router: Router) {
     // Check for token in local storage on service initialization
     const token = localStorage.getItem('token');
@@ -32,6 +31,14 @@ export class AuthService {
       filter((user: IUser | undefined) => !!user),
       // Преобразуване на типа, за да уверите TypeScript
       map((user: IUser | undefined) => user as IUser)
+    );
+  }
+
+  getUserId(): Observable<number | undefined> {
+    return this.getUser().pipe(
+      map(user => user.id)
+    
+      
     );
   }
   getToken(): string | null {
@@ -75,6 +82,8 @@ export class AuthService {
           if (response && response.token) {
             localStorage.setItem('token', response.token);
             this.authenticateWithToken(response.token);
+            const userId = response.user.id;
+            console.log('Logged in user ID:', userId);
           }
         })
       );
@@ -95,4 +104,5 @@ export class AuthService {
         })
       );
   }
+ 
 }
