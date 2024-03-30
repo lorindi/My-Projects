@@ -1,8 +1,9 @@
-import { Injectable, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
+import { environment } from '../../environments/environment';
+import { IRecipe } from '../types/recipe';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ export class RecipesService {
 
   constructor(private http: HttpClient, private authService: AuthService) {}
 
-  addRecipe(recipeData: any): Observable<any> {
+  addRecipe(recipeData: IRecipe): Observable<any> {
     const authToken = this.authService.getToken();
 
     if (!authToken) {
