@@ -60,6 +60,8 @@
 - Administrators can perform system configurations and ensure the security of the platform.
 
 - This role model provides adequate access and control over the functionalities of MagicSushiLora, offering complete freedom for users and efficient management for administrators.
+![Home](./MagicSushiLoraReact/public/screenshots/Home%20page.png)
+![Log in](./MagicSushiLoraReact/public/screenshots/Login.png)
+![Register](./MagicSushiLoraReact/public/screenshots/Register.png)
+![Create recipe](./MagicSushiLoraReact/public/screenshots/Create%20recipe.png)
 
-![Sign in](./MagicSushiLoraReact/public/screenshots/Screenshot%202024-01-30%20100847.png)
-![Sign up](./MagicSushiLoraReact/public/screenshots/Screenshot%202024-01-30%20101229.png)
