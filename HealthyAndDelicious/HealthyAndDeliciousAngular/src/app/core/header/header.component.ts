@@ -8,6 +8,12 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+
+  isShow: boolean = false;
+
+  toggleIsShow() {
+    this.isShow = !this.isShow;
+  }
   constructor(private authService: AuthService, private router: Router) {}
 
   get isLogged(): boolean {
