@@ -32,13 +32,13 @@
 
     <nav *ngIf="isLogged" class="navigationMobile">
         <div class="contentLogoMobile">
-            <a class="logoMobile linkMobile" routerLink="/">H&D</a>
+            <a class="logoMobile linkMobile link" routerLink="/">H&D</a>
         </div>
         <div class="contentButtonDownButtonMobile">
-            <button class="dropdownButtonMobile"><i class="fa-solid fa-bars"></i></button>
-            <div class="contentDropdownMobile">
+            <button (click)="toggleIsShow()" class="dropdownButtonMobile"><i class="fa-solid fa-bars"></i></button>
+            <div *ngIf="isShow" class="contentDropdownMobile">
                 <div class="contentOnCloseButtonMobile">
-                    <button class="onCloseButtonMobile"><i class="fa-solid fa-x"></i></button>
+                    <button (click)="toggleIsShow()" class="onCloseButtonMobile"><i class="fa-solid fa-x"></i></button>
 
                 </div>
                 <a class="linkMobile" href=""><i class="fa-solid fa-house"></i></a>
