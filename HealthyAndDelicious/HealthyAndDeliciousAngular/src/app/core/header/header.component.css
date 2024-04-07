@@ -79,7 +79,10 @@
 }
 .contentDropdownMobile {
     position: absolute;
-    display: none;
+
+    /* Delete */
+    /* display: none; */ 
+
     flex-direction: column;
     text-align: center;
     z-index: 1;
