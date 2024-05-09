@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { categories } = require("./data");
-const skillsSchema = new mongoose.Schema({
 
+const skillSchema = new mongoose.Schema({
   icon: {
     type: String,
   },
@@ -24,5 +24,5 @@ const skillsSchema = new mongoose.Schema({
   },
 });
 
-const Skills = mongoose.model("Skills", skillsSchema);
-module.exports = Skills;
+const Skill = mongoose.model("Skill", skillSchema);
+module.exports = Skill;
