@@ -1,8 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-const mongoose = require("mongoose");
-const router = require("./router");
 
+const router = require("./router");
+const { auth } = require("./middlewares/authMiddleware");
+
+const mongoose = require("mongoose");
 const app = express();
 
 mongoose
@@ -14,6 +16,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(cors());
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Restful service");
+});
+
 app.use("/portfolio", router);
 
 app.listen(5000, () => {
