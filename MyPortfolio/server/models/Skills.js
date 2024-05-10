@@ -17,11 +17,14 @@ const skillSchema = new mongoose.Schema({
     required: [true, "Skill description is required"],
     minlength: 5,
   },
-  
   categories: {
     type: String,
     enum: categories,
   },
+  creator: {
+    type: mongoose.Types.ObjectId,
+    ref: 'User'
+  }
 });
 
 const Skill = mongoose.model("Skill", skillSchema);
