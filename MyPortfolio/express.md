@@ -155,8 +155,8 @@ resource => noun, plural, crud  => photos
     app.use(express.urlencoded({ extended: false }));
     app.use(express.json());
 
-    app.use(express.urlencoded({ extended: false }));: Този middleware се използва за обработка на данни, изпратени от HTML форми във формат URL-encoded. Когато използвате HTML форма, данните, които се изпращат през POST заявка, се кодират във формат, който съдържа ключ-стойност двойки, разделени със символи като "&". Този middleware анализира тези данни и ги прави достъпни в req.body на Express приложението. Параметърът { extended: false } указва дали Express трябва да използва библиотеката qs или не за обработка на данните. При стойност false, Express използва вградената библиотека на Node.js querystring за анализ на данните.
-    app.use(express.json());: Този middleware се използва за обработка на данни в JSON формат, изпратени чрез HTTP заявки. Когато клиент изпраща JSON обект в тялото на заявката, този middleware анализира JSON данните и ги прави достъпни в req.body на Express приложението. Това позволява на Express да работи с JSON данни по лесен за използване начин.
+app.use(express.urlencoded({ extended: false }));: Този middleware се използва за обработка на данни, изпратени от HTML форми във формат URL-encoded. Когато използвате HTML форма, данните, които се изпращат през POST заявка, се кодират във формат, който съдържа ключ-стойност двойки, разделени със символи като "&". Този middleware анализира тези данни и ги прави достъпни в req.body на Express приложението. Параметърът { extended: false } указва дали Express трябва да използва библиотеката qs или не за обработка на данните. При стойност false, Express използва вградената библиотека на Node.js querystring за анализ на данните.
+app.use(express.json());: Този middleware се използва за обработка на данни в JSON формат, изпратени чрез HTTP заявки. Когато клиент изпраща JSON обект в тялото на заявката, този middleware анализира JSON данните и ги прави достъпни в req.body на Express приложението. Това позволява на Express да работи с JSON данни по лесен за използване начин.
 
 ## 7. Cross-Origin Resource Sharing (CORS) Middleware Setup
 #### index.js 
