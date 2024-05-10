@@ -12,7 +12,6 @@ const workSchema = new mongoose.Schema({
   image: {
     type: String,
     required: true,
-
   },
   technologies: {
     type: [String],
@@ -21,6 +20,10 @@ const workSchema = new mongoose.Schema({
   createdAt: {
     type: String,
     required: true,
+  },
+  creator: {
+    type: mongoose.Types.ObjectId,
+    ref: "User",
   },
 });
 
