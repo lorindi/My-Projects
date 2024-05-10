@@ -158,8 +158,15 @@ resource => noun, plural, crud  => photos
     app.use(express.urlencoded({ extended: false }));: Този middleware се използва за обработка на данни, изпратени от HTML форми във формат URL-encoded. Когато използвате HTML форма, данните, които се изпращат през POST заявка, се кодират във формат, който съдържа ключ-стойност двойки, разделени със символи като "&". Този middleware анализира тези данни и ги прави достъпни в req.body на Express приложението. Параметърът { extended: false } указва дали Express трябва да използва библиотеката qs или не за обработка на данните. При стойност false, Express използва вградената библиотека на Node.js querystring за анализ на данните.
     app.use(express.json());: Този middleware се използва за обработка на данни в JSON формат, изпратени чрез HTTP заявки. Когато клиент изпраща JSON обект в тялото на заявката, този middleware анализира JSON данните и ги прави достъпни в req.body на Express приложението. Това позволява на Express да работи с JSON данни по лесен за използване начин.
 
+## 7. Cross-Origin Resource Sharing (CORS) Middleware Setup
+#### index.js 
+    const cors = require("cors");
+    app.use(cors());
+    
+CORS (Cross-Origin Resource Sharing) е важен механизъм, който позволява уебсайтове да поискват ресурси от други домейни, като предотвратява потенциални сигурностни заплахи. 
+В контекста на Express, използването на CORS middleware позволява или ограничава достъпа до ресурсите на приложението от различни домейни, като добавя специални HTTP хедъри към заявките и отговорите. Това е от съществено значение за сигурността и функционалността на уеб приложенията, като гарантира контролиран достъп до данните и предотвратява възможни атаки като Cross-Site Request Forgery (CSRF).
 
-## 7. Create user account routes (registration, login, logout)
+## 8. Create user account routes (registration, login, logout)
 #### userController.js
     const router = require("express").Router();
     const userManager = require("../managers/userManager");
