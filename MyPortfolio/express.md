@@ -252,6 +252,7 @@ CORS (Cross-Origin Resource Sharing) е важен механизъм, койт�
     module.exports = router;
 
 ## 11. Adding Auth Middleware: Implementing middleware for JWT token authentication, ensuring secure access to protected routes.
+####  Add middlewares folder in server folder in it create authMiddleware.js
     const jwt = require("jsonwebtoken");
 
     exports.auth = (req, res, next) => {
