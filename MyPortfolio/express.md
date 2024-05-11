@@ -70,6 +70,7 @@ resource => noun, plural, crud  => photos
     const mongoose = require("mongoose");
     const userSchema = new mongoose.Schema({
         image: {
+            type: String,
             required: true,
         },
         email: {
@@ -284,3 +285,5 @@ CORS (Cross-Origin Resource Sharing) е важен механизъм, койт�
 Този код е полезен за проверка на валидността на JWT токена и аутентикация на потребителите преди те да имат достъп до определени маршрути или действия в Express приложението.
 
 #### index.js 
+    const { auth } = require("./middlewares/authMiddleware");
+    app.use(auth)
