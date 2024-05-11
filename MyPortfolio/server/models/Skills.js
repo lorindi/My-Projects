@@ -4,6 +4,8 @@ const { categories } = require("./data");
 const skillSchema = new mongoose.Schema({
   icon: {
     type: String,
+    required: true,
+
   },
 
   name: {
