@@ -1,0 +1,47 @@
+/* ----------------------------------Header------------------------------------------- */
+
+.headerHome {
+    width: 100%;
+}
+
+.navigationHome {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+
+
+}
+
+.contentLogoHome {
+
+}
+
+.logo {}
+
+.logoImg {}
+
+.contentLinksHome {
+
+}
+
+.link {
+    margin-right: 30px;
+    color: white;
+}
+/* ----------------------------------Footer------------------------------------------- */
+.footerHome {
+    width: 100%;
+    background-color: palevioletred;
+    height: 200px;
+}
+.titleFooterHome {
+    font-size: 50px;
+    letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 30px;
+}
