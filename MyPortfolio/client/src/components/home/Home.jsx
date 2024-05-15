@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
+import { More } from "./more/More";
+import { Skills } from "./skills/skills/Skills";
+import { Works } from "./works/works/Works";
 // import Email from '../email/Email'
 export const Home = () => {
   return (
@@ -22,10 +25,19 @@ export const Home = () => {
         </nav>
       </header>
       <main>
+        <section>
+          <More />
+        </section>
+        <section>
+          <Skills />
+        </section>
+        <section>
+          <Works />
+        </section>
         {/* <Email/> */}
       </main>
       <footer className={styles.footerHome}>
-        <p className={styles.titleFooterHome}>Let's Talk</p>
+        <p className={styles.titleFooterHome}>Let`s Talk</p>
       </footer>
     </>
   );
