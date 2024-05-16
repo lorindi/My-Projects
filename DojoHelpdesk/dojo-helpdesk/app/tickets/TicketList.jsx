@@ -16,7 +16,7 @@ export default async function TicketList() {
         <div key={ticket.id} className="card my-5">
             <h3>{ticket.title}</h3>
             <p>{ticket.body.slice(0, 200)}...</p>
-             <div>{ticket.priority} priority</div>
+            <div className={`pill ${ticket.priority}`}>{ticket.priority} priority</div>
         </div>
     ))}
     {tickets.length === 0 && (
