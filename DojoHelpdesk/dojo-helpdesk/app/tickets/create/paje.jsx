@@ -1,10 +1,10 @@
-import CreateForm from "./CreateForm";
+import CreateForm from './CreateForm'
 
-export default function CreateTickets() {
+export default async function CreateTicket() {
   return (
-    <div>
-      <h2 className="text-primary text-center">Add a New Ticket</h2>
+    <main>
+      <h2 className="text-center">Open a New Ticket</h2>
       <CreateForm />
-    </div>
-  );
+    </main>
+  )
 }
