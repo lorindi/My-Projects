@@ -43,6 +43,9 @@ export default async function TicketDetails({ params }) {
         <div className={`pill ${ticket.priority}`}>
           {ticket.priority} priority
         </div>
+     <div>
+     
+     </div>
       </div>
     </main>
   )
