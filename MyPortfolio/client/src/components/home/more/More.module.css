@@ -57,11 +57,13 @@
 }
 
 .button {
-    color: palevioletred;
+    color: white;
     border: 2px solid palevioletred;
     border-radius: 5px;
     font-weight: 600;
     padding: 5px 15px;
+    background-color: palevioletred;
+
 }
 
 .faGithub,
