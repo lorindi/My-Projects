@@ -1,7 +1,7 @@
 import loraImg from "./1712476045876.png";
 import styles from "./More.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faGithub,
@@ -16,10 +16,14 @@ export const More = () => {
       <div className={styles.moreInfoContent}>
         <h1 className={styles.moreInfoTitle}>Hello, I`m Lora Mitova</h1>
         <h4 className={styles.moreInfoDev}>Web Developer</h4>
-        <p className={styles.moreInfoDescription}>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p className={styles.moreInfoDescription}>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
         <div className={styles.buttonsContent}>
           <button className={styles.button}>Hire Me</button>
-          <button className={styles.button}>Resume <FontAwesomeIcon icon={faDownload} /></button>
+          <button className={styles.button}>
+            Resume <FontAwesomeIcon icon={faDownload} />
+          </button>
         </div>
         <div>
           <Link>
