@@ -1,0 +1,36 @@
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    max-width: 1336px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+
+    span {
+      font-weight: bolder;
+    }
+
+    .social {
+      display: flex;
+      gap: 30px;
+
+      a {
+        color: #fff;
+        font-size: 30px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #1da1f2;
+        }
+
+        .fa-icon {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
