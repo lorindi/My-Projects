@@ -19,12 +19,12 @@
       gap: 30px;
 
       a {
-        color: #fff;
-        font-size: 30px;
+        color: rgba(0, 0, 0, 0.519);
+        font-size: 25px;
         transition: color 0.3s;
 
         &:hover {
-          color: #1da1f2;
+          color: rgba(128, 0, 128, 0.502);
         }
 
         .fa-icon {
