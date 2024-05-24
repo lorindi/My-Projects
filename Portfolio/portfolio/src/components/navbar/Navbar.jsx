@@ -21,7 +21,7 @@ export const Navbar = () => {
           transition={{ duration: 0.5 }}
           className={styles.logoTitle}
         >
-          Lama Dev
+          Lorindi Dev
         </motion.span>
         <div className={styles.social}>
           <a href="">
