@@ -1,4 +1,5 @@
 import styles from "./app.module.scss";
+import { Heroine } from "./components/heroine/Heroine";
 import { Navbar } from "./components/navbar/Navbar";
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <div>
         <section id="Homepage">
           <Navbar />
+          <Heroine/>
         </section>
         <section id="Services">Parallax</section>
         <section>Services</section>
