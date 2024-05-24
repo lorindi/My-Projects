@@ -1,18 +1,96 @@
 .heroine {
   height: calc(100vh - 100px);
-  background: linear-gradient(180deg, #0c0c1d, #111132);
+  background: linear-gradient(180deg, white, #5900861e);
   overflow: hidden;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  gap: 75px;
+  padding-bottom: 80px;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 250px;
+    z-index: 1;
+
+
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 50px;
+
+      h2 {
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 10px;
+        font-size: 28px;
+        color: #bf7fbf;
+      }
+
+      h1 {
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        font-size: 50px;
+        color: #7b7b7b;
+        width: 440px;
+      }
+
+      .buttons {
+        button {
+          padding: 12px;
+          border: 2px solid #bf7fbf;
+          border-radius: 10px;
+          background-color: transparent;
+          color: #7b7b7b;
+          margin-right: 20px;
+          cursor: pointer;
+          letter-spacing: 1px;
+          font-weight: 600;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .scrollImg {
+      width: 30px;
+      height: 30px;
+      margin-top: 15px;
+      background-position: center;
+      object-fit: cover;
+      background-size: contain;
+      opacity: 0.7;
+    }
+  }
+
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 45vh;
+    bottom: -105px;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.515);
+    width: 50%;
+    z-index: 0;
+    font-weight: 700;
+  }
 
   .imageContainer {
-    height: 100px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    z-index: 1;
 
     img {
-      height: 300px;
-      width: 300px;
+      width: 400px;
+      height: 400px;
+      padding: 10px;
+      background-position: center;
+      object-fit: cover;
+      background-size: contain;
+      opacity: 0.75;
+      border-radius: 100%;
     }
   }
 }
