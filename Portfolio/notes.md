@@ -3,3 +3,5 @@
 *npm install sass
 *npm run dev
 *npm install framer-motion
+
+figma => create svg
