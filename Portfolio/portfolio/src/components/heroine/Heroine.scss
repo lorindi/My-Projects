@@ -1,0 +1,18 @@
+.heroine {
+  height: calc(100vh - 100px);
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  overflow: hidden;
+  position: relative;
+
+  .imageContainer {
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      height: 300px;
+      width: 300px;
+    }
+  }
+}
