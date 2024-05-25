@@ -40,8 +40,9 @@
     position: fixed;
     top: 25px;
     left: 25px;
-    background-color: transparent;
+    background-color: white;
     border: none;
     cursor: pointer;
+    z-index: 5;
   }
 }
