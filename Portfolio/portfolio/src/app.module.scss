@@ -4,8 +4,10 @@ html {
 }
 body {
   font-family: "Montserrat", sans-serif;
-  // background-color: #0c0c1d;
+  background-color: #EBE1F0;
   color: lightgray;
+
+
 }
 
 * {
@@ -21,4 +23,5 @@ a {
 section {
   height: 100vh;
   scroll-snap-align: center;
+  width: 100%;
 }
