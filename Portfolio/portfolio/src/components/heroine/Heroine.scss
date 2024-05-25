@@ -44,7 +44,7 @@
         button {
           padding: 12px;
           border: 2px solid #bf7fbf;
-          border-radius: 10px;
+          border-radius: 50px;
           background-color: transparent;
           color: #7b7b7b;
           margin-right: 20px;
@@ -69,13 +69,13 @@
 
   .slidingTextContainer {
     position: absolute;
-    font-size: 45vh;
-    bottom: -105px;
+    font-size: 35vh;
+    bottom: -85px;
     white-space: nowrap;
     color: rgba(255, 255, 255, 0.515);
     width: 50%;
     z-index: 0;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .imageContainer {
