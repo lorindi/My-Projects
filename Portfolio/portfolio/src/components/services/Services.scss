@@ -60,6 +60,8 @@
     display: flex;
     max-width: 1366px;
     margin: auto;
+    margin-bottom: 30px;
+    gap: 30px;
 
     .box {
       padding: 50px;
@@ -68,12 +70,14 @@
       flex-direction: column;
       justify-content: space-between;
       color: gray;
+      border-radius: 15px;
 
       button {
         padding: 10px;
         background-color: #99c2f5;
         border: none;
         cursor: pointer;
+        border-radius: 50px;
       }
     }
   }
