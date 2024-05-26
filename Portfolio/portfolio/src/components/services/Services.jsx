@@ -1,30 +1,57 @@
 import "./Services.scss";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import {useRef} from "react"
+const variants = {
+  initial: {
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 export const Services = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
   return (
-    <div className="services">
-      <div className="textContainer">
+    <motion.div
+      className="services"
+      variants={variants}
+      initial="initial"
+      //   whileInView="animate"
+      ref={ref}
+      animate={isInView && "animate"}
+    >
+      <motion.div className="textContainer" variants={variants}>
         <p>
           I focus helping your brand grow <br />
           and move forward
         </p>
         <hr />
-      </div>
-      <div className="titleContainer">
+      </motion.div>
+      <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="" alt="" />
           <h1>
-            <b>Unique</b> Ideas
+            <motion.b whileHover={{color:"black"}}>Unique</motion.b> Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <b>For Your</b> Business.
+            <motion.b whileHover={{color:"black"}}>For Your</motion.b> Business.
           </h1>
           <button>What we do?</button>
         </div>
-      </div>
-      <div className="listContainer">
+      </motion.div>
+      <motion.div className="listContainer" variants={variants}>
         <motion.div
           className="box"
           whileHover={{ background: "white", color: "gray" }}
@@ -61,7 +88,7 @@ export const Services = () => {
           </p>
           <button>Go</button>
         </motion.div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
