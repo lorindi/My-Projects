@@ -41,12 +41,12 @@ export const Services = () => {
         <div className="title">
           <img src="" alt="" />
           <h1>
-            <motion.b whileHover={{color:"black"}}>Unique</motion.b> Ideas
+            <motion.b whileHover={{color:"#98C1F4"}}>Unique</motion.b> Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color:"black"}}>For Your</motion.b> Business.
+            <motion.b whileHover={{color:"#98C1F4"}}>For Your</motion.b> Business.
           </h1>
           <button>What we do?</button>
         </div>
