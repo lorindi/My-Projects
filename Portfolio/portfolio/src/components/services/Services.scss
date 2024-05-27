@@ -12,9 +12,9 @@
     gap: 20px;
 
     p {
-      font-weight: 200;
+      font-weight: 300;
       font-size: 20px;
-      color: gray;
+      color: rgb(0, 0, 0);
       text-align: right;
     }
 
@@ -29,11 +29,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #7b7b7b;
 
     .title {
       display: flex;
       align-items: center;
       gap: 20px;
+      color: #7b7b7b;
+
       img {
         width: 300px;
         height: 100px;
@@ -70,7 +73,7 @@
       flex-direction: column;
       justify-content: space-between;
       color: gray;
-      border-radius: 15px;
+      border-radius: 50px;
 
       button {
         padding: 10px;
