@@ -13,14 +13,25 @@
     gap: 40px;
 
     h1 {
-        font-size: 100px;
-        list-style: 88px;
+      font-size: 100px;
+      list-style: 88px;
     }
     span {
-        font-weight: 400;
+      font-weight: 400;
     }
   }
   .formContainer {
     flex: 1;
+  }
+}
+
+.formContainer {
+  position: relative;
+
+  .phoneSvg {
+    position: absolute;
+    margin: auto;
+    stroke: #C08BF2;
+    z-index: -1;
   }
 }
