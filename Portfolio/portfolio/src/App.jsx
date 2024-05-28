@@ -1,4 +1,5 @@
 import styles from "./app.module.scss";
+import { Contact } from "./components/contact/Contact";
 import { Heroine } from "./components/heroine/Heroine";
 import { Navbar } from "./components/navbar/Navbar";
 import { Parallax } from "./components/parallax/Parallax";
@@ -24,8 +25,9 @@ function App() {
         <section>
           <Portfolio />
         </section>
-
-        <section id="Contact">Contact</section>
+        <section id="Contact">
+          <Contact />
+        </section>
       </div>
     </>
   );
