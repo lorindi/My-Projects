@@ -1,4 +1,4 @@
-import styles from "./app.module.scss";
+import "./app.scss";
 import { Contact } from "./components/contact/Contact";
 import { Cursor } from "./components/cursor/Cursor";
 import { Heroine } from "./components/heroine/Heroine";
@@ -15,21 +15,21 @@ function App() {
           <Navbar />
           <Heroine />
         </section>
-        <section id="Services">
+        {/* <section id="Services">
           <Parallax type="services" />
-        </section>
-        <section>
+        </section> */}
+        {/* <section>
           <Services />
-        </section>
-        <section id="Portfolio">
+        </section> */}
+        {/* <section id="Portfolio">
           <Parallax type="portfolio" />
-        </section>
-        <section>
+        </section> */}
+        {/* <section>
           <Portfolio />
-        </section>
-        <section id="Contact">
+        </section> */}
+        {/* <section id="Contact">
           <Contact />
-        </section>
+        </section> */}
       </div>
     </>
   );
