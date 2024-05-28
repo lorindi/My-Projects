@@ -1,6 +1,8 @@
 import "./Services.scss";
 import { motion, useInView } from "framer-motion";
 import {useRef} from "react"
+import serviceImg from './Screenshot 2024-05-28 121853.png'
+
 const variants = {
   initial: {
     x: -500,
@@ -39,7 +41,7 @@ export const Services = () => {
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="" alt="" />
+          <img src={serviceImg} alt="" />
           <h1>
             <motion.b whileHover={{color:"#98C1F4"}}>Unique</motion.b> Ideas
           </h1>
