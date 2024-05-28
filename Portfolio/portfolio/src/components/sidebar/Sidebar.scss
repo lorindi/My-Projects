@@ -5,6 +5,7 @@
   justify-content: center;
   background-color: white;
   color: black;
+  z-index: 10;
 
   .bg {
     position: fixed;
@@ -13,7 +14,6 @@
     bottom: 0;
     width: 400px;
     background: white;
-    
 
     .links {
       position: absolute;
@@ -25,10 +25,8 @@
       justify-content: center;
       gap: 30px;
 
-
       a {
         font-size: 28px;
-
       }
     }
   }
@@ -43,6 +41,6 @@
     background-color: white;
     border: none;
     cursor: pointer;
-    z-index: 5;
+    z-index: 10;
   }
 }
