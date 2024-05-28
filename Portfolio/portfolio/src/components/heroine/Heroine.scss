@@ -14,6 +14,10 @@
   padding-bottom: 80px;
   width: 100%;
 
+  @include mobile {
+    padding-bottom: 20px;
+
+  }
 
   .wrapper {
     display: flex;
@@ -23,11 +27,25 @@
     height: 250px;
     z-index: 1;
 
+    @include mobile {
+     
+      align-items: center;
+      text-align: center;
+    }
+
     .textContainer {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 50px;
+
+      @include mobile {
+        min-height: 70%;
+        width: 95%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+      }
 
       h2 {
         text-transform: uppercase;
@@ -35,6 +53,12 @@
         letter-spacing: 10px;
         font-size: 28px;
         color: #bf7fbf;
+
+        @include mobile {
+          font-size: 25px;
+          letter-spacing: 5px;
+
+        }
       }
 
       h1 {
@@ -43,9 +67,20 @@
         font-size: 50px;
         color: #7b7b7b;
         width: 440px;
+
+        @include mobile {
+          font-size: 30px;
+          width: 100%;
+        }
       }
 
       .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+
         button {
           padding: 12px;
           border: 2px solid #bf7fbf;
@@ -69,19 +104,24 @@
       object-fit: cover;
       background-size: contain;
       opacity: 0.5;
+
+      @include mobile {
+       position: absolute;
+       bottom: 300px;
+      }
+      
     }
   }
 
   .slidingTextContainer {
     position: absolute;
-    font-size: 35vh;
-    bottom: -85px;
+    font-size: 50vh;
+    bottom: -120px;
     white-space: nowrap;
     color: rgba(255, 255, 255, 0.515);
     width: 50%;
     z-index: 0;
-    font-weight: 600;
-    // overflow: hidden;
+    font-weight: bold;
   }
 
   .imageContainer {
@@ -96,6 +136,12 @@
       background-size: contain;
       opacity: 0.8;
       border-radius: 100%;
+
+      @include mobile {
+        height: 320px;
+        width: 320px;
+        margin-top: 30px;
+      }
     }
   }
 }
