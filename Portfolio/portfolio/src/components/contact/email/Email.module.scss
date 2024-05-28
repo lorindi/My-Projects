@@ -5,78 +5,74 @@
   justify-content: center;
 
   .gmailFormInput {
-    width: 200px;
-    padding: 5px;
+    width: 550px;
+    padding: 15px;
     border-radius: 4px;
     letter-spacing: 1.5px;
-    margin-bottom: 5px;
-    font-size: 12px;
-    color: rgba(211, 211, 211, 0.753);
+    margin-top: 30px;
+    font-size: 16px;
     font-weight: 500;
-    background-color: #45443e;
+    background-color: initial;
     border: 1px solid gray;
     transition: all 0.3s ease-in-out 0s;
-    box-shadow: 10px 10px 36px rgb(0, 0, 0, 0.5),
-      -13px -13px 23px rgba(255, 255, 255, 0.03);
+    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.5),
+      -7px -7px 12px rgba(255, 255, 255, 0.03);
   }
 
   .gmailFormTextarea {
-    width: 200px;
-    height: 100px;
-    padding: 5px;
+    width: 550px;
+    height: 200px;
+    padding: 15px;
     border-radius: 4px;
     letter-spacing: 1.5px;
-    font-size: 12px;
+    margin-top: 30px;
+    font-size: 16px;
     font-weight: 500;
     color: rgba(211, 211, 211, 0.753);
-    background-color: #45443e;
+    background-color: initial;
     border: 1px solid gray;
     transition: all 0.05s ease-in-out 0s;
-    box-shadow: 10px 10px 36px rgb(0, 0, 0, 0.5),
+    box-shadow: 5px 5px 17px rgb(0, 0, 0, 0.5),
       -13px -13px 23px rgba(255, 255, 255, 0.03);
   }
   .gmailFormInput:hover,
   .gmailFormTextarea:hover {
     background-color: transparent;
-    box-shadow: 10px 10px 36px rgb(0, 0, 0, 0.5),
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.058),
       -13px -13px 23px rgba(255, 255, 255, 0.03),
-      inset 14px 14px 70px rgb(0, 0, 0, 0.2),
-      inset -15px -15px 30px rgba(255, 255, 255, 0.04);
+      inset 4px 4px 13px rgb(0, 0, 0, 0.2),
+      inset -7px -7px 15px rgba(255, 255, 255, 0.04);
     border-color: white;
     color: white;
   }
   .gmailFormButton {
+    width: 550px;
+    padding: 10px;
     border-radius: 4px;
     border: none;
     text-transform: uppercase;
     font-weight: 600;
-    background-color: #70b11c7b;
+    background-color: #a289f3;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 0.5s;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     outline: none !important;
-    box-shadow: 3px 9px 16px rgb(0, 0, 0, 0.4),
-      -3px -3px 10px rgba(255, 255, 255, 0.06),
-      inset 14px 14px 26px rgb(0, 0, 0, 0.3),
-      inset -3px -3px 15px rgba(255, 255, 255, 0.05);
+    box-shadow: 1px 3px 8px rgb(0, 0, 0, 0.4),
+      -3px -3px 7px rgba(255, 255, 255, 0.06),
+      inset 3px 3px 7px rgba(0, 0, 0, 0.095),
+      inset -1px -1px 7px rgba(255, 255, 255, 0.05);
     border-width: 1px 0px 0px 1px;
     border-style: solid;
-    border-color: #2f4d2e;
+    border-color: #2f4d2e7a;
     transition: all 0.3s ease-in-out 0s;
-    padding: 3px;
     color: white;
-    width: 200px;
+    margin-top: 30px;
   }
   .gmailFormButton:hover {
     box-shadow: 0 0px 20px rgba(84, 1, 74, 0.7);
-    border-color: #70b11c;
-    background: linear-gradient(
-      to right,
-      rgba(46, 255, 9, 0.129),
-      #70b11c,
-      rgba(0, 255, 26, 0.14)
-    );
+    border-color: inherit;
+    background: linear-gradient(to right, #bb60f1, #98bef3, #9488f1);
     color: white;
   }
 }
