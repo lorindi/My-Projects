@@ -1,5 +1,12 @@
 import "./Contact.scss";
 import { Email } from "./email/Email";
+import { motion } from "framer-motion";
+
+const variants = {
+  initial: {
+    y: 500,
+  },
+};
 
 export const Contact = () => {
   return (
@@ -12,7 +19,7 @@ export const Contact = () => {
         </div>
         <div className="item">
           <h2 className="address">Address</h2>
-          <span>Hello street Sofia</span>
+          <span>Sofia</span>
         </div>
         <div className="item">
           <h2>Phone</h2>
