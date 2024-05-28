@@ -1,5 +1,6 @@
 import styles from "./app.module.scss";
 import { Contact } from "./components/contact/Contact";
+import { Cursor } from "./components/cursor/Cursor";
 import { Heroine } from "./components/heroine/Heroine";
 import { Navbar } from "./components/navbar/Navbar";
 import { Parallax } from "./components/parallax/Parallax";
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <div>
+        <Cursor/>
         <section id="Homepage">
           <Navbar />
           <Heroine />
