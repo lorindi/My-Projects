@@ -15,9 +15,9 @@ function App() {
           <Navbar />
           <Heroine />
         </section>
-        {/* <section id="Services">
+        <section id="Services">
           <Parallax type="services" />
-        </section> */}
+        </section>
         {/* <section>
           <Services />
         </section> */}
