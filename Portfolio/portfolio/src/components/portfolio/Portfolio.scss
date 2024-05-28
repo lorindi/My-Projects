@@ -1,5 +1,7 @@
 .portfolio {
   position: relative;
+  min-height: 400vh;
+ 
   .progress {
     position: sticky;
     top: 0;
@@ -12,55 +14,62 @@
     .progressBar {
       height: 10px;
       background-color: white;
+      border-radius: 100px;
     }
   }
 }
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+.portfolioContainer {
+ height: 100vh;
 
-  .wrapper {
-    max-width: 1366px;
-    height: 100%;
-    margin: auto;
+  .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-
-    .imageContainer {
-      flex: 1;
-      height: 50%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .textContainer {
-      flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  
+    .wrapper {
+      max-width: 1366px;
+      height: 100%;
+      margin: auto;
       display: flex;
-      flex-direction: column;
-      gap: 30;
-
-      h2 {
-        font-size: 72px;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+  
+      .imageContainer {
+        flex: 1;
+        height: 50%;
+        z-index: -1;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
-      p {
-        color: gray;
-        font-size: 20px;
-      }
-      button {
-        border: none;
-        border-radius: 50px;
-        padding: 10px;
-        width: 200px;
-        cursor: pointer;
+  
+      .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30;
+  
+        h2 {
+          font-size: 72px;
+        }
+        p {
+          color: gray;
+          font-size: 20px;
+        }
+        button {
+          border: none;
+          border-radius: 50px;
+          padding: 10px;
+          width: 200px;
+          cursor: pointer;
+        }
       }
     }
   }
