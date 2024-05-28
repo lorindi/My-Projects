@@ -25,13 +25,9 @@ section {
 }
 
 
-@mixin mobile {
-  @media (max-width: 320px) {
-    @content;
-  }
-}
 
-@mixin tablet {
+
+@mixin mobile {
   @media (max-width: 738px) {
     @content;
   }
