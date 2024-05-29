@@ -7,7 +7,7 @@
   justify-content: center;
   background-color: white;
   color: black;
-  z-index: 10;
+  z-index: 1000;
 
   .bg {
     position: fixed;
@@ -16,6 +16,7 @@
     bottom: 0;
     width: 400px;
     background: white;
+    z-index: 999;
 
     @include mobile {
       width: 320px;
@@ -50,6 +51,6 @@
     background-color: white;
     border: none;
     cursor: pointer;
-    z-index: 10;
+    z-index: 1000;
   }
 }
