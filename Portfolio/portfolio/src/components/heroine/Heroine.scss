@@ -13,6 +13,7 @@
   gap: 75px;
   padding-bottom: 80px;
   width: 100%;
+  position: relative;
 
   @include mobile {
     padding-bottom: 20px;
@@ -116,12 +117,15 @@
   .slidingTextContainer {
     position: absolute;
     font-size: 50vh;
-    bottom: -120px;
+    bottom: -95px;
     white-space: nowrap;
     color: rgba(255, 255, 255, 0.515);
     width: 50%;
     z-index: 0;
     font-weight: bold;
+
+    @include mobile {
+    }
   }
 
   .imageContainer {
