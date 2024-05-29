@@ -22,7 +22,7 @@
 
     @include mobile {
       text-align: center;
-      font-size: 53px;
+      font-size: 45px;
       width: 90%;
       margin-bottom: 350px;
     }
@@ -60,10 +60,10 @@
     z-index: 2;
 
     @include mobile {
-      height: 10%;
-      width: 10%;
+      height: 12%;
+      width: 12%;
       left: 30%;
-      top: 60%;
+      top: 50%;
       transform: translate(-50%, -50%);
     
     }
@@ -83,10 +83,10 @@
     z-index: 2;
 
     @include mobile {
-      height: 10%;
-      width: 10%;
+      height: 12%;
+      width: 12%;
       left: 60%;
-      top: 60%;
+      top: 50%;
       transform: translate(-50%, -50%);
     
     }
