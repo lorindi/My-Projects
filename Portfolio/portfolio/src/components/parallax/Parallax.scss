@@ -13,12 +13,17 @@
   h1 {
     font-size: 70px;
     margin-bottom: 50px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 3px;
     color: white;
     z-index: 4;
-    text-shadow: 0px 0px 5px #525B7F;
+    text-shadow: 0px 0px 5px #525b7f;
 
+    @include mobile {
+      text-align: center;
+      font-size: 53px;
+      width: 90%;
+    }
   }
 
   .mountains {
@@ -31,7 +36,13 @@
     opacity: 0.9;
     z-index: 3;
 
+    @include mobile {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
   }
+
   .firstPlanet {
     background-image: url("./pngwing.com\ \(6\).png");
     background-position: center;
@@ -45,6 +56,14 @@
     top: 150px;
     opacity: 1;
     z-index: 2;
+
+    @include mobile {
+      height: 30%;
+      width: 30%;
+      left: 55%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   .secondPlanet {
     background-image: url("./pngwing.com\ \(5\).png");
@@ -57,9 +76,16 @@
     position: absolute;
     right: 400px;
     top: 150px;
-    opacity: 0.6;
+    opacity: 1;
     z-index: 2;
 
+    @include mobile {
+      height: 30%;
+      width: 30%;
+      left: 15%;
+      top: 10%;
+      transform: translate(-50%, -50%);
+    }
   }
   .stars {
     background-image: url("./stars.png");
@@ -70,6 +96,5 @@
     position: absolute;
     opacity: 0.6;
     z-index: 1;
-
   }
 }
