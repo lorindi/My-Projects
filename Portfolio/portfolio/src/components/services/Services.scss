@@ -7,6 +7,12 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @include mobile {
+    align-self: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
   .textContainer {
     flex: 1;
     align-self: flex-end;
