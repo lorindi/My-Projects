@@ -12,7 +12,6 @@ export const Cursor = () => {
       window.removeEventListener("mousemove", mouseMove);
     };
   }, []);
-  console.log(position);
   return (
     <motion.div
       className="cursor"
