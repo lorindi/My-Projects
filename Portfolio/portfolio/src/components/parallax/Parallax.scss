@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   z-index: -1;
+ 
 
   h1 {
     font-size: 70px;
@@ -23,6 +24,7 @@
       text-align: center;
       font-size: 53px;
       width: 90%;
+      margin-bottom: 350px;
     }
   }
 
@@ -58,11 +60,12 @@
     z-index: 2;
 
     @include mobile {
-      height: 30%;
-      width: 30%;
-      left: 55%;
-      top: 50%;
+      height: 10%;
+      width: 10%;
+      left: 30%;
+      top: 60%;
       transform: translate(-50%, -50%);
+    
     }
   }
   .secondPlanet {
@@ -80,11 +83,12 @@
     z-index: 2;
 
     @include mobile {
-      height: 30%;
-      width: 30%;
-      left: 15%;
-      top: 10%;
+      height: 10%;
+      width: 10%;
+      left: 60%;
+      top: 60%;
       transform: translate(-50%, -50%);
+    
     }
   }
   .stars {
