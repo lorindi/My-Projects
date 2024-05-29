@@ -2,10 +2,10 @@
 // @include mobile {
 // }
 .services {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   @include mobile {
     align-self: center;
@@ -19,18 +19,29 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    @include mobile {
+      margin: 30px 0px 30px 0px;
+    }
 
     p {
       font-weight: 300;
       font-size: 20px;
       color: rgb(0, 0, 0);
       text-align: right;
+
+      @include mobile {
+        font-size: 15px;
+      }
     }
 
     hr {
       width: 500px;
       border: none;
       border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 50px;
+      }
     }
   }
   .titleContainer {
@@ -39,6 +50,11 @@
     flex-direction: column;
     align-items: center;
     color: #7b7b7b;
+    justify-content: center;
+    
+    @include mobile {
+      width: 100%;
+    }
 
     .title {
       display: flex;
@@ -46,15 +62,31 @@
       gap: 20px;
       color: #7b7b7b;
 
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
       img {
         width: 300px;
         height: 100px;
         border-radius: 50px;
         object-fit: cover;
+
+        @include mobile {
+          width: 200px;
+          height: 50px;
+        }
       }
       h1 {
         font-size: 96px;
         font-weight: 100;
+
+        @include mobile {
+          font-size: 36px;
+          font-weight: 200;
+        }
       }
       button {
         width: 300px;
@@ -64,6 +96,13 @@
         border: none;
         text-transform: uppercase;
         cursor: pointer;
+
+        @include mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+          margin-bottom: 25px;
+        }
       }
     }
   }
@@ -74,15 +113,32 @@
     margin: auto;
     margin-bottom: 30px;
     gap: 30px;
+    flex-direction: row;
+
+    @include mobile {
+      flex-direction: column;
+      width: 90%;
+    }
 
     .box {
-      padding: 50px;
+      padding: 20px 50px;
       border: 0.5px solid gray;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-evenly;
       color: gray;
       border-radius: 50px;
+
+      p {
+        letter-spacing: 1px;
+        font-size: 16px;
+        text-align: justify;
+
+        @include mobile {
+        letter-spacing: 1px;
+
+        }
+      }
 
       button {
         padding: 10px;
@@ -90,6 +146,10 @@
         border: none;
         cursor: pointer;
         border-radius: 50px;
+
+        @include mobile {
+          margin-top: 10px;
+        }
       }
     }
   }
