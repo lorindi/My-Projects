@@ -23,6 +23,7 @@ export const Contact = () => {
   const isInView = useInView(ref, { margin: "-100px" });
   return (
     <motion.div
+      ref={ref}
       className="contact"
       variants={variants}
       initial="initial"
@@ -52,8 +53,6 @@ export const Contact = () => {
           transition={{ delay: 3, duration: 1 }}
         >
           <svg
-            height="500px"
-            width="650px"
             version="1.1"
             id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
