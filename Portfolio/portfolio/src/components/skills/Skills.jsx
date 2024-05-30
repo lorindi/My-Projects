@@ -18,6 +18,27 @@ import sass from "./sass.png";
 // import tailwind from './tailwind.png'
 // import firebase from './firebase.png'
 import git from './git.png'
+
+const skills = [
+  { img: python, title: "Python" },
+  { img: javaScript, title: "Java Script" },
+  { img: typeScript, title: "Type Script" },
+  { img: django, title: "Django" },
+  { img: angular, title: "Angular" },
+  { img: next, title: "Next" },
+  { img: vue, title: "Vue" },
+  { img: react, title: "React" },
+  { img: postgre, title: "PostgreSQL" },
+  { img: my, title: "MySQL" },
+  { img: mongo, title: "MongoDB" },
+  { img: git, title: "Git" },
+  { img: html, title: "HTML" },
+  { img: css, title: "CSS" },
+  { img: sass, title: "SASS" },
+  // { img: tailwind, title: "Tailwind" },
+  // { img: firebase, title: "Firebase" }
+];
+
 const variants = {
   initial: { opacity: 0, y: 20 },
   animate: {
@@ -40,6 +61,8 @@ export const Skills = () => {
 
   return (
     <div className="skills">
+      <motion.h1 className="titleSkills">Skills</motion.h1>
+
       <motion.ul
         ref={ref}
         className="skillsList"
@@ -47,74 +70,17 @@ export const Skills = () => {
         animate={isInView ? "animate" : "initial"}
         variants={variants}
       >
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={python} alt="Python" />
-          <h2>Python</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={javaScript} alt="Java Script" />
-          <h2>Java Script</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={typeScript} alt="Type Script" />
-          <h2>Type Script</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={django} alt="Django" />
-          <h2>Django</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={angular} alt="Angular" />
-          <h2>Angular</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={next} alt="Next" />
-          <h2>Next</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={vue} alt="Vue" />
-          <h2>Vue</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={react} alt="React" />
-          <h2>React</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={postgre} alt="PostgreSQL" />
-          <h2>PostgreSQL</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={my} alt="MySQL" />
-          <h2>MySQL</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={mongo} alt="MongoDB" />
-          <h2>MongoDB</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={git} alt="Git" />
-          <h2>Git</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={html} alt="HTML" />
-          <h2>HTML</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={css} alt="CSS" />
-          <h2>CSS</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={sass} alt="SASS" />
-          <h2>SASS</h2>
-        </motion.li>
-        {/* <motion.li className="skill" variants={itemVariants}>
-          <img src={tailwind} alt="Tailwind" />
-          <h2>Tailwind</h2>
-        </motion.li>
-        <motion.li className="skill" variants={itemVariants}>
-          <img src={firebase} alt="Firebase" />
-          <h2>Firebase</h2>
-        </motion.li> */}
+        {skills.map((skill, index) => (
+          <motion.li
+            key={index}
+            className="skill"
+            variants={itemVariants}
+            whileHover={{ scale: 1.1, opacity: 0.8 }}
+          >
+            <img src={skill.img} alt={skill.title} />
+            <h2>{skill.title}</h2>
+          </motion.li>
+        ))}
       </motion.ul>
     </div>
   );
