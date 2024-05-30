@@ -6,11 +6,12 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Parallax } from "./components/parallax/Parallax";
 import { Portfolio } from "./components/portfolio/Portfolio";
 import { Services } from "./components/services/Services";
+import { Skills } from "./components/skills/Skills";
 function App() {
   return (
     <>
       <div>
-        <Cursor/>
+        <Cursor />
         <section id="Homepage">
           <Navbar />
           <Heroine />
@@ -26,6 +27,9 @@ function App() {
         </section>
         <section>
           <Portfolio />
+        </section>
+        <section id="Skills">
+          <Skills />
         </section>
         <section id="Contact">
           <Contact />
