@@ -15,7 +15,9 @@ import mongo from "./mongo.png";
 import css from "./css.png";
 import html from "./html.png";
 import sass from "./sass.png";
-
+// import tailwind from './tailwind.png'
+// import firebase from './firebase.png'
+import git from './git.png'
 const variants = {
   initial: { opacity: 0, y: 20 },
   animate: {
@@ -90,6 +92,10 @@ export const Skills = () => {
           <h2>MongoDB</h2>
         </motion.li>
         <motion.li className="skill" variants={itemVariants}>
+          <img src={git} alt="Git" />
+          <h2>Git</h2>
+        </motion.li>
+        <motion.li className="skill" variants={itemVariants}>
           <img src={html} alt="HTML" />
           <h2>HTML</h2>
         </motion.li>
@@ -101,6 +107,14 @@ export const Skills = () => {
           <img src={sass} alt="SASS" />
           <h2>SASS</h2>
         </motion.li>
+        {/* <motion.li className="skill" variants={itemVariants}>
+          <img src={tailwind} alt="Tailwind" />
+          <h2>Tailwind</h2>
+        </motion.li>
+        <motion.li className="skill" variants={itemVariants}>
+          <img src={firebase} alt="Firebase" />
+          <h2>Firebase</h2>
+        </motion.li> */}
       </motion.ul>
     </div>
   );
