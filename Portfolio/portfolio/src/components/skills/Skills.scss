@@ -10,6 +10,17 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
+  .titleSkills {
+    font-size: 50px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    
+    @include mobile {
+      font-size: 30px;
+
+    }
+  }
 
   .skillsList {
     display: flex;
@@ -17,36 +28,52 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    gap: 30px;
+    gap: 50px;
     height: 100%;
     padding: 50px;
-    width: 90%;
+    width: 80%;
 
     @include mobile {
-        padding: 20px;
-}
+      padding: 20px 0px;
+      width: 100%;
+      gap: 10px;
+    }
 
     .skill {
-        list-style: none;
-        width: 150px;
-        height: 150px;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px 5px lightgray;
+      list-style: none;
+      width: 150px;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 5px lightgray;
 
-        h2 {
-            font-weight: 500;
-            font-size: 18px;
-            margin-top: 10px ;
+      @include mobile {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-weight: 500;
+        font-size: 18px;
+        margin-top: 10px;
+        @include mobile {
+          font-size: 14px;
         }
-        img {
-            width: 100px;
-            height: 100px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+
+        @include mobile {
+          width: 50px;
+          height: 50px;
         }
+      }
     }
   }
 }
