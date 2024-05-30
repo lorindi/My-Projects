@@ -15,15 +15,17 @@ import mongo from "./mongo.png";
 import css from "./css.png";
 import html from "./html.png";
 import sass from "./sass.png";
-// import tailwind from './tailwind.png'
-// import firebase from './firebase.png'
+import tailwind from './tailwind.png'
+import firebase from './firebase.png'
 import git from './git.png'
+import express from './express.png'
 
 const skills = [
   { img: python, title: "Python" },
   { img: javaScript, title: "Java Script" },
   { img: typeScript, title: "Type Script" },
   { img: django, title: "Django" },
+  { img: express, title: "Express" },
   { img: angular, title: "Angular" },
   { img: next, title: "Next" },
   { img: vue, title: "Vue" },
@@ -35,8 +37,8 @@ const skills = [
   { img: html, title: "HTML" },
   { img: css, title: "CSS" },
   { img: sass, title: "SASS" },
-  // { img: tailwind, title: "Tailwind" },
-  // { img: firebase, title: "Firebase" }
+  { img: tailwind, title: "Tailwind" },
+  { img: firebase, title: "Firebase" }
 ];
 
 const variants = {
