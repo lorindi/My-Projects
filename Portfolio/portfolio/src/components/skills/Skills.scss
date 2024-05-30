@@ -1,0 +1,51 @@
+@import "../../app.scss";
+// @include mobile {
+// }
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+
+  .skillsList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 30px;
+    height: 100%;
+    padding: 50px;
+    width: 90%;
+
+    @include mobile {
+        padding: 20px;
+}
+
+    .skill {
+        list-style: none;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px lightgray;
+
+        h2 {
+            font-weight: 500;
+            font-size: 18px;
+            margin-top: 10px ;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+  }
+}
