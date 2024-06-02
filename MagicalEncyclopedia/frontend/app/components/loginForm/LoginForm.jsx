@@ -11,7 +11,7 @@ const LoginForm = () => {
           src="/images/peron.png"
           alt="Your Company"
         />
-        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+        <h2 className="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
           Sign in to your account
         </h2>
       </div>
