@@ -38,14 +38,14 @@ const Single = ({ item }) => {
     target: ref,
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const y = useTransform(scrollYProgress, [0, 1], [-350, 300]);
 
   return (
     <section className="portfolioContainer">
-      <div className="container">
+      <div className="container" >
         <div className="wrapper">
-          <div className="imageContainer"  >
-            <img src={item.img} alt={item.title} ref={ref} />
+          <div className="imageContainer"  ref={ref}>
+            <img src={item.img} alt={item.title}  />
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
