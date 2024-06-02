@@ -38,7 +38,7 @@ const Single = ({ item }) => {
     target: ref,
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-350, 300]);
+  const y = useTransform(scrollYProgress, [0, 1], [-1500, 1500]);
 
   return (
     <section className="portfolioContainer">
