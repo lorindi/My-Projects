@@ -20,6 +20,7 @@
 
     @include mobile {
       width: 320px;
+      height: 45%;
     }
 
     .links {
@@ -31,6 +32,10 @@
       align-items: center;
       justify-content: center;
       gap: 30px;
+
+      @include mobile {
+        // height: 60%;
+      }
 
       a {
         font-size: 32px;
