@@ -24,19 +24,19 @@ export const Navbar = () => {
           Lorindi Dev
         </motion.span>
         <div className="social">
-          <a href="">
+          <a href="https://github.com/lorindi">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="">
+          <a href="https://dribbble.com/loramitova">
             <FontAwesomeIcon icon={faBasketball} />
           </a>
-          <a href="">
+          <a href="https://www.facebook.com/profile.php?id=100073735856715">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/lo_mitova/">
             <FontAwesomeIcon icon={faSquareInstagram} />
           </a>
-          <a href="">
+          <a href="https://www.youtube.com/channel/UCwMI0P9V0GUqlRXJIgFgKMA">
             <FontAwesomeIcon icon={faSquareYoutube} />
           </a>
         </div>
