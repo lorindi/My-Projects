@@ -58,7 +58,7 @@ export const Heroine = () => {
             <motion.button variants={textVariants}>
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button id="Contact" variants={textVariants}>Contact Me</motion.button>
           </motion.div>
         </motion.div>
         <motion.img
