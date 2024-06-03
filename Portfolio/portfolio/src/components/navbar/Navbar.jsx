@@ -1,4 +1,4 @@
-import styles from "./navbar.module.scss";
+import "./Navbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -12,18 +12,18 @@ import { Sidebar } from "../sidebar/Sidebar";
 
 export const Navbar = () => {
   return (
-    <div className={styles.navbar}>
+    <div className="navbar">
       <Sidebar />
-      <div className={styles.wrapper}>
+      <div className="wrapper">
         <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1.5 }}
           transition={{ duration: 0.5 }}
-          className={styles.logoTitle}
+          className="logoTitle"
         >
           Lorindi Dev
         </motion.span>
-        <div className={styles.social}>
+        <div className="social">
           <a href="">
             <FontAwesomeIcon icon={faGithub} />
           </a>
