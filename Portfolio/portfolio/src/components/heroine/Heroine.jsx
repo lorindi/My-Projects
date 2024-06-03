@@ -2,7 +2,6 @@ import "./Heroine.scss";
 import loraImg from "./IMG_20231225_205932.jpg";
 import scrollImg from "./pngwing.com.png";
 import { motion } from "framer-motion";
-
 const textVariants = {
   initial: {
     x: -500,
@@ -55,10 +54,15 @@ export const Heroine = () => {
             Web developer and UI designer
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
-            </motion.button>
-            <motion.button id="Contact" variants={textVariants}>Contact Me</motion.button>
+            <a href="#Portfolio">
+              <motion.button variants={textVariants}>
+                See the Latest Works
+              </motion.button>
+            </a>
+
+            <a href="#Contact">
+              <motion.button variants={textVariants}>Contact Me</motion.button>
+            </a>
           </motion.div>
         </motion.div>
         <motion.img
@@ -69,7 +73,12 @@ export const Heroine = () => {
           alt=""
         />
       </div>
-      <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
+      <motion.div
+        className="slidingTextContainer"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
         Writer Content Creator Influencer
       </motion.div>
       <div className="imageContainer">
