@@ -15,10 +15,11 @@
     letter-spacing: 3px;
     font-weight: 400;
     margin-bottom: 30px;
-    
+
     @include mobile {
       font-size: 30px;
-
+      margin-bottom: 0px;
+      margin-top: 10px;
     }
   }
 
