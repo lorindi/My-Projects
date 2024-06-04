@@ -22,12 +22,15 @@
 
       @include mobile {
         display: none;
-    }
+      }
     }
 
     .social {
       display: flex;
       gap: 30px;
+      @include mobile {
+        gap: 20px;
+      }
 
       a {
         color: rgba(0, 0, 0, 0.519);
