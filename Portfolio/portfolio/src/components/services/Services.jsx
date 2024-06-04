@@ -39,12 +39,12 @@ export const Services = () => {
       </motion.div>
       <motion.div
         className="listContainer"
-        // initial={{ opacity: 0, x: -500 }}
-        // whileInView={{
-        //   opacity: 1,
-        //   x: 0,
-        //   transition: { staggerChildren: 0.1, duration: 2 },
-        // }}
+        initial={{ opacity: 0}}
+        whileInView={{
+          opacity: 1,
+         
+          transition: { staggerChildren: 0.1, duration: 2 },
+        }}
       >
         <motion.div
           className="box"
