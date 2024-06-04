@@ -108,6 +108,7 @@
           align-items: center;
           text-align: center;
           gap: 10px;
+          justify-content: flex-start;
         }
 
         h2 {
@@ -115,7 +116,7 @@
 
           @include mobile {
             font-size: 30px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
           }
         }
         p {
@@ -128,10 +129,9 @@
 
           @include mobile {
             line-height: normal;
-
             font-size: 14px;
             text-align: justify;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
           }
         }
         button {
