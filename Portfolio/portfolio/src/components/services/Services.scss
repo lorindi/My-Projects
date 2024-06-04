@@ -96,9 +96,12 @@
         border: none;
         text-transform: uppercase;
         cursor: pointer;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 20px;
 
         @include mobile {
-          font-size: 16px;
+          font-size: 14px;
           width: 150px;
           height: 50px;
           margin-bottom: 25px;
@@ -146,6 +149,9 @@
         border: none;
         cursor: pointer;
         border-radius: 50px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: white;
 
         @include mobile {
           margin-top: 10px;
