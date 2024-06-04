@@ -3,7 +3,7 @@
 // }
 
 .heroine {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -17,7 +17,6 @@
 
   @include mobile {
     padding-bottom: 20px;
-
   }
 
   .wrapper {
@@ -29,7 +28,6 @@
     z-index: 1;
 
     @include mobile {
-     
       align-items: center;
       text-align: center;
     }
@@ -58,7 +56,6 @@
         @include mobile {
           font-size: 25px;
           letter-spacing: 5px;
-
         }
       }
 
@@ -81,6 +78,10 @@
         gap: 20px;
         align-items: center;
         justify-content: center;
+
+        @include mobile {
+          flex-direction: column;
+        }
 
         button {
           padding: 12px;
@@ -107,10 +108,9 @@
       opacity: 0.5;
 
       @include mobile {
-       position: absolute;
-       bottom: 300px;
+        position: absolute;
+        bottom: 300px;
       }
-      
     }
   }
 
