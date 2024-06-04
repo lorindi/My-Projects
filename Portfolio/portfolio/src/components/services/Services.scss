@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  overflow: hidden;
 
   @include mobile {
     align-self: center;
