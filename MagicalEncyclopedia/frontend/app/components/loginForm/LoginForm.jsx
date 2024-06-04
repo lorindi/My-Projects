@@ -4,7 +4,7 @@ import * as React from "react";
 
 const LoginForm = () => {
   return (
-    <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-custom-image bg-cover bg-top h-screen">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           className="h-32 w-32 m-auto"
@@ -77,12 +77,12 @@ const LoginForm = () => {
         </form>
 
         <p className="mt-10 text-center text-sm text-gray-500">
-          Not a member?{" "}
+          You haven't registered yet.
           <a
-            href="#"
+            href="/register"
             className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
           >
-            Start a 14 day free trial
+            Register!
           </a>
         </p>
       </div>
