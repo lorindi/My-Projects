@@ -4,7 +4,7 @@ import * as React from "react";
 
 const LoginForm = () => {
   return (
-    <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-custom-image bg-cover bg-top h-screen">
+    <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-custom-image bg-cover bg-opacity-10 bg-top h-screen">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           className="h-32 w-32 m-auto"
