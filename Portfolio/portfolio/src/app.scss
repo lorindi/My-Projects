@@ -1,13 +1,6 @@
-@import "./app.scss";
-// @include mobile {
-// }
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-
-  @include mobile {
-    scroll-snap-type: none;
-}
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -30,9 +23,6 @@ section {
   scroll-snap-align: center;
   width: 100%;
 }
-
-
-
 
 @mixin mobile {
   @media (max-width: 738px) {
