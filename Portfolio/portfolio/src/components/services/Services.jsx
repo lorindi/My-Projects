@@ -5,7 +5,9 @@ import serviceImg from "./Screenshot 2024-05-28 121853.png";
 export const Services = () => {
   return (
     <motion.div className="services">
-      <motion.div className="textContainer">
+      <motion.div className="textContainer" initial={{opacity:0, x: 300}} animate={{opacity: 1, x: 0, transition: {
+        duration: 2
+      }}}>
         <p>
           I focus on helping your brand grow <br />
           and move forward
@@ -27,7 +29,7 @@ export const Services = () => {
           <button>What I do?</button>
         </div>
       </motion.div>
-      <motion.div className="listContainer">
+      <motion.div className="listContainer" initial={{opacity: 0, x: -500}} animate={{opacity: 1, x: 0, transition: { staggerChildren: 0.1, duration: 2}}}>
         <motion.div
           className="box"
           whileHover={{ background: "white", color: "gray" }}
