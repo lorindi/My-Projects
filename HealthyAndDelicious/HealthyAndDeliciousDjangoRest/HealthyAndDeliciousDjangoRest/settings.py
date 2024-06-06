@@ -1,14 +1,22 @@
+import environ
+
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-import os
-from dotenv import load_dotenv
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+environ.Env.read_env(BASE_DIR / '.env')
+# Security settings
+SECRET_KEY = env('SECRET_KEY')
+DEBUG = env.bool('DEBUG')
 
-load_dotenv()
-SECRET_KEY = os.getenv('SECRET_KEY')
+# import os
+# from dotenv import load_dotenv
+# load_dotenv()
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -29,15 +37,16 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework.authtoken',
 
-    "users",
-    "recipes",
+    # "users",
+    # "recipes",
+    "accounts",
 
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -74,7 +83,7 @@ WSGI_APPLICATION = 'HealthyAndDeliciousDjangoRest.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "healthy_and_delicious_db",
+        "NAME": "healthy_delicious_db",
         "USER": "postgres-user",
         "PASSWORD": "password",
         "HOST": "127.0.0.1",
@@ -109,4 +118,14 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'users.RecipeUser'
+# https://mailtrap.io/inboxes/2944213/messages
+# Email settings
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_USE_TLS = env.bool('EMAIL_USE_TLS')
+
+# AUTH_USER_MODEL = 'users.RecipeUser'
+AUTH_USER_MODEL = 'accounts.User'
