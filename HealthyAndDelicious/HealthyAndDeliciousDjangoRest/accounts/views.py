@@ -27,7 +27,7 @@ class UserRegisterView(GenericAPIView):
 
 class VerifyUserEmail(GenericAPIView):
     def post(self, request):
-        otpcode = request.data('otp')
+        otpcode = request.data.get('otp')
         try:
             user_code_obj = OneTimePassword.objects.get(code=otpcode)
             user = user_code_obj.user
@@ -39,7 +39,6 @@ class VerifyUserEmail(GenericAPIView):
                 }, status=status.HTTP_200_OK)
             return Response({
                 'message': f'Your account has already been verified!',
-
             }, status=status.HTTP_204_NO_CONTENT)
 
         except OneTimePassword.DoesNotExist:
