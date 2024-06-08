@@ -62,3 +62,8 @@ class TestAuthentication(GenericAPIView):
             'msg': 'its works'
         }
         return Response(data, status=status.HTTP_200_OK)
+
+
+# class PasswordResetRequestView(GenericAPIView):
+#     permission_classes = PasswordResetRequestSerializer
+
