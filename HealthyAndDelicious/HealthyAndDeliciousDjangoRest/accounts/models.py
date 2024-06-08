@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.core.validators import MinLengthValidator
 from django.utils.translation import gettext_lazy as _
 from .manager import UserManager
+from rest_framework_simplejwt.tokens import RefreshToken
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -56,7 +57,11 @@ class User(AbstractBaseUser, PermissionsMixin):
         return f'{self.first_name} {self.last_name}'
 
     def tokens(self):
-        pass
+        refresh = RefreshToken.for_user(self)
+        return {
+            'refresh': str(refresh),
+            'access': str(refresh.access_token)
+        }
 
 
 class OneTimePassword(models.Model):
