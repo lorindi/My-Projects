@@ -20,6 +20,7 @@ export default function Btn({
   const defaultClasses = `flex items-center font-medium tracking-wide justify-center px-5 py-3 mx-[15px] my-[5px] text-center ${
     fullWidth ? "w-full" : "w-fit"
   } ${variantClasses[variant]}`;
+  
   if (link) {
     return (
       <Link href={link} passHref>
