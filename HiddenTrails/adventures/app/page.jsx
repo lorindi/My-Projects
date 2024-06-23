@@ -1,22 +1,23 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Btn from "./components/buttons/Buttons";
-import InputField from './components/input-fields/InputFields';
-import { useState} from "react";
+import InputField from "./components/input-fields/InputFields";
+import { useState } from "react";
+import Search from "@/app/components/Search/Search";
 
 export default function Home() {
-  const [inputValue, setInputValue] = useState('');
-  const [inputError, setInputError] = useState('');
+  const [inputValue, setInputValue] = useState("");
+  const [inputError, setInputError] = useState("");
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
 
     // Example validation
     if (e.target.value.length < 3) {
-      setInputError('Input must be at least 3 characters long.');
+      setInputError("Input must be at least 3 characters long.");
     } else {
-      setInputError('');
+      setInputError("");
     }
   };
   return (
@@ -49,6 +50,8 @@ export default function Home() {
         hint="This is a hint"
         required={true}
       />
+
+      <Search variant="default" />
     </main>
   );
 }
