@@ -66,7 +66,7 @@ export default function InputField({
     <div className={`flex relative flex-col justify-center ${className}`}>
       <div className=" flex items-center mt-2">
         <input
-          className={`text-base border-b-4  bg-neutral-50 border-cyan-600 hover:border-cyan-700 
+          className={`text-base border-b-2 tracking-wide bg-neutral-50 border-cyan-600 hover:border-cyan-700 
             web:w-[400px] web:h-[60px] web:pl-[12px] 
             tablet:w-[400px] tablet:h-[60px] tablet:pl-[10px]
             phone:w-80 phone:h-12 phone:pl-[5px]
