@@ -77,7 +77,7 @@ const Search = ({ variant = "default", handleNavClose }) => {
   `;
 
   const buttonTabletNavigationSearchStyles = `
-    cursor-pointer  rounded-tr-[30px] rounded-br-[30px] flex items-center justify-center hover:transition-all hover:duration-700 hover:bg-cyan-700
+    cursor-pointer  rounded-tr-[30px] rounded-br-[30px] flex items-center justify-center bg-cyan-600 hover:transition-all hover:duration-700 hover:bg-cyan-700
     w-[36px] h-[36px]
   `;
   const svgDefaultStyles = `h-[24px] w-[24px] text-cyan-600 
