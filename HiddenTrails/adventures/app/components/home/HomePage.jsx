@@ -6,7 +6,7 @@ function HomePage() {
   return (
     <div className="flex flex-col items-center w-full min-h-screen">
       <div
-        className="absolute brightness-75 top-0 left-0 w-full h-full bg-custom-image bg-cover bg-top z-[-5]
+        className="absolute brightness-100 top-0 left-0 w-full h-full bg-custom-image bg-cover bg-top z-[-5]
       smallPhone:h-[222px] smallPhone:phone:h-none 
       phone:h-[245px]  phone:tablet:h-none 
       tablet:h-[554px]
