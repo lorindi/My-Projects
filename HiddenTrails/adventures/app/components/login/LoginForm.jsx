@@ -95,7 +95,7 @@ const LoginForm = () => {
         phone:w-80 phone:h-[43px] 
         "
         >
-          <Btn type="submit" variant="filled" text="Sign In" fullWidth />
+          <Btn type="submit" variant="filled" text="Login" fullWidth />
         </div>
       </form>
     </div>
