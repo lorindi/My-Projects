@@ -6,10 +6,13 @@ import { usePathname } from "next/navigation";
 export default function Web() {
   const pathname = usePathname();
 
+  const session = true;
+  const isAdmin = true;
+
   const signInButtonClass =
     pathname === "/"
       ? "h-11 px-4 py-3 justify-center items-center flex text-center font-medium text-gray-900 rounded-full border-2 border-neutral-50 bg-neutral-50"
-      : "h-11 px-4 py-3 justify-center items-center flex text-center font-medium bg-neutral text-gray-900 border-2 rounded-full border-blue-950";
+      : "flex items-center font-medium tracking-wide justify-center px-5 py-3 text-center border-2 border-cyan-600 rounded-full hover:border-cyan-700 hover:transition-all hover:duration-700 hover:text-cyan-700";
 
   return (
     <nav className="flex items-center w-full h-full justify-around">
@@ -21,40 +24,38 @@ export default function Web() {
       </Link>
 
       <div className="flex items-center">
-        <Btn
-          type="button"
-          variant="transparent"
-          text="Explore"
-          link="/explore"
-        />
-        <div className="mr-[30px]">
-          <Btn type="button" variant="transparent" text="Menu" link="/menu" />
-        </div>
         <Btn type="button" variant="transparent" text="Create" link="/create" />
+
+        <Btn type="button" variant="transparent" text="About" link="/about" />
+
         <Btn
           type="button"
           variant="transparent"
-          text="My tours"
-          link="/my-tours"
+          text="Contacts"
+          link="/contacts"
         />
-        <div>
-          <Btn type="button" variant="transparent" text="Menu" link="/menu" />
-        </div>
-        {/* <div className="mx-2.5">
-          <Button
-            variant="secondary-outlined"
+
+        <Btn
+          type="button"
+          variant="transparent"
+          text="My adventures"
+          link="/my-adventures"
+        />
+
+        <div className="mx-2.5">
+          <Btn
+            variant="outlined"
             text="Logout"
             type={"submit"}
-            onClick={logoutUser}
           />
-        </div> */}
+        </div>
 
         <div className="mx-2.5">
           <Btn
             type="button"
-            variant="outlined"
             text="Sign in"
             link="/login"
+            variant="outlined"
             className={signInButtonClass}
           />
         </div>
