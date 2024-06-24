@@ -6,6 +6,7 @@ import InputField from "./components/input-fields/InputFields";
 import { useState } from "react";
 import Search from "@/app/components/Search/Search";
 
+
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
   const [inputError, setInputError] = useState("");
