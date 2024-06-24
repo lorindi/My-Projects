@@ -7,14 +7,14 @@ import Mobile from "./mobile/Mobile";
 function Header() {
   return (
     <>
-      <header>
-        <Web className="hidden web:flex"/>
+      <header className="hidden web:flex w-full  items-center justify-center h-100px py-9">
+        <Web className=""/>
       </header>
-      <header>
-        <Tablet className="hidden tablet:flex web:hidden"/>
+      <header className="hidden tablet:flex web:hidden">
+        <Tablet />
       </header>
-      <header>
-        <Mobile className="tablet:hidden"/>
+      <header className="tablet:hidden">
+        <Mobile />
       </header>
     </>
   );
