@@ -5,6 +5,7 @@ import Btn from "./components/buttons/Buttons";
 import InputField from "./components/input-fields/InputFields";
 import { useState } from "react";
 import Search from "@/app/components/Search/Search";
+import HomePage from "./components/home/Home";
 
 
 export default function Home() {
@@ -23,6 +24,8 @@ export default function Home() {
   };
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
+      <HomePage/>
+
       <Btn type="button" variant="transparent" text="Explore" link="/explore" />
       <Btn type="button" variant="filled" text="Explore" link="/explore" />
       <Btn type="button" variant="outlined" text="Explore" link="/explore" />
