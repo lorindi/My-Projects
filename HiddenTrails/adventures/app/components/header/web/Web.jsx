@@ -20,7 +20,7 @@ export default function Web() {
         className="text-center text-gray-900 text-2xl font-medium font-['Inter Tight']"
         href="/"
       >
-        LOGO
+        LORINDI
       </Link>
 
       <div className="flex items-center">
