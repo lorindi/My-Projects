@@ -5,7 +5,7 @@ export default function Register() {
   return (
     <section className="flex relative items-center justify-center flex-col w-full bg-cover min-h-screen">
       <div
-        className="absolute top-0 left-0 w-full h-full brightness-75 bg-custom-image bg-cover bg-center z-[-5]
+        className="absolute top-0 left-0 w-full h-full brightness-100 bg-custom-image bg-cover bg-center z-[-5]
         smallPhone:max-h-[245px] smallPhone:phone:max-h-none 
         phone:max-h-[245px] phone:tablet:max-h-none 
         tablet:max-h-[554px] 
