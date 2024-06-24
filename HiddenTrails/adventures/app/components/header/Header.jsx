@@ -10,7 +10,7 @@ function Header() {
       <header className="hidden web:flex w-full  items-center justify-center h-100px py-9">
         <Web className=""/>
       </header>
-      <header className="hidden tablet:flex web:hidden">
+      <header className="hidden tablet:flex web:hidden items-center justify-center w-full h-100px">
         <Tablet />
       </header>
       <header className="tablet:hidden">
