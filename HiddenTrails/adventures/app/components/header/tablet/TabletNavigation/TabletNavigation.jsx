@@ -17,7 +17,7 @@ const TabletNavigation = ({ isAuthenticated, handleNavClose }) => {
         href="/"
         className="flex justify-center items-center text-center text-gray-900 font-medium text-2xl p-6"
       >
-        LOGO
+        LORINDI
       </Link>
 
       <Search variant="tabletNavigationSearch" handleNavClose={handleNavClose}/>
