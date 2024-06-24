@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Btn from "../../../buttons/Buttons";
-import Search from "@/app/components/Search/Search";
+import Search from "@/app/components/search/Search";
 
 const TabletNavigation = ({ isAuthenticated, handleNavClose }) => {
   const handleClick = () => {
