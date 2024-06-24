@@ -17,7 +17,7 @@ export default function Btn({
       "border-2 border-cyan-600 rounded-full hover:border-cyan-700 hover:transition-all hover:duration-700 hover:text-cyan-700",
     transparent: "bg-transparent hover:text-cyan-700 hover:duration-700",
   };
-  const defaultClasses = `flex items-center font-medium tracking-wide justify-center px-5 py-3 mx-[15px] my-[5px] text-center ${
+  const defaultClasses = `flex items-center font-medium tracking-wide justify-center px-5 py-3 text-center ${
     fullWidth ? "w-full" : "w-fit"
   } ${variantClasses[variant]}`;
   
