@@ -5,8 +5,6 @@ import * as React from "react";
 import InputField from "../input-fields/InputFields";
 
 const LoginForm = () => {
-  const handleEmailChange = (e) => setEmail(e.target.value);
-  const handlePasswordChange = (e) => setPassword(e.target.value);
 
   return (
     <div className="flex flex-col items-center justify-start  w-full">
@@ -73,7 +71,6 @@ const LoginForm = () => {
           label="Email Address"
           name="email"
           type="email"
-          onChange={handleEmailChange}
           placeholder="Email"
           required
         />
@@ -83,7 +80,6 @@ const LoginForm = () => {
           label="Password"
           name="password"
           type="password"
-          onChange={handlePasswordChange}
           placeholder="Password"
           required
         />
