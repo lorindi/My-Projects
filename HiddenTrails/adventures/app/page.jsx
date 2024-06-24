@@ -4,8 +4,8 @@ import Image from "next/image";
 import Btn from "./components/buttons/Buttons";
 import InputField from "./components/input-fields/InputFields";
 import { useState } from "react";
-import Search from "@/app/components/Search/Search";
-import HomePage from "./components/home/Home";
+import Search from "@/app/components/search/Search";
+import HomePage from "./components/home/HomePage";
 
 
 export default function Home() {
