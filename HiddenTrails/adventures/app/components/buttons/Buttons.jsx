@@ -12,7 +12,7 @@ export default function Btn({
 }) {
   const variantClasses = {
     filled:
-      "border rounded-full text-white bg-cyan-600 text-slate-200 hover:transition-all hover:duration-700 hover:bg-cyan-700",
+      "border-2 border-cyan-600 rounded-full text-white bg-cyan-600 text-slate-200 hover:transition-all hover:duration-700 hover:bg-cyan-700",
     outlined:
       "border-2 border-cyan-600 rounded-full hover:border-cyan-700 hover:transition-all hover:duration-700 hover:text-cyan-700",
     transparent: "bg-transparent hover:text-cyan-700 hover:duration-700",
