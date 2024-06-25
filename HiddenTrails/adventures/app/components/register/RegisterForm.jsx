@@ -22,8 +22,8 @@ const RegisterForm = () => {
       </h2>
       <form
         className="flex items-center justify-evenly flex-col bg-neutral-50 rounded-[5px] 
-        web:w-[582px] web:h-[826px] 
-        tablet:w-[582px] tablet:h-[798px] 
+        web:w-[582px] web:h-[776px] 
+        tablet:w-[582px] tablet:h-[776px] 
         phone:w-[361px] phone:min-h-[713px] 
         smallPhone:w-full smallPhone:min-h-[673px]"
       >
@@ -100,6 +100,8 @@ const RegisterForm = () => {
           label="Email Address"
           name="email"
           type="email"
+          placeholder="Email Address"
+          
           required
         />
 
@@ -108,6 +110,7 @@ const RegisterForm = () => {
           label="Name"
           name="name"
           type="text"
+          placeholder="Name"
           required
         />
 
@@ -116,6 +119,7 @@ const RegisterForm = () => {
           label="Password"
           name="password"
           type="password"
+          placeholder="Password"
           required
         />
 
@@ -124,6 +128,7 @@ const RegisterForm = () => {
           label="Repeat Password"
           name="repeatPassword"
           type="password"
+          placeholder="Repeat Password"
           required
         />
 
