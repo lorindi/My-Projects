@@ -11,7 +11,7 @@ export default function Web() {
 
   const signInButtonClass =
     pathname === "/"
-      ? "h-11 px-4 py-3 justify-center items-center flex text-center font-medium text-gray-900 rounded-full border-2 border-neutral-50 bg-neutral-50"
+      ? "px-5 py-3 justify-center items-center flex text-center font-medium text-gray-900 rounded-full border-2 border-neutral-50 bg-neutral-50"
       : "flex items-center font-medium tracking-wide justify-center px-5 py-3 text-center border-2 border-cyan-600 rounded-full hover:border-cyan-700 hover:transition-all hover:duration-700 hover:text-cyan-700";
 
   return (
