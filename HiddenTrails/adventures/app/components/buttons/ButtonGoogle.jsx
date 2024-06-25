@@ -17,7 +17,7 @@ function GoogleButton() {
   return (
     <button
       type="button"
-      className="w-full h-full bg-neutral-50 border border-stone-300 px-4 py-3 rounded-md justify-center items-center gap-2.5 inline-flex text-center text-base text-neutral-700 font-medium"
+      className="w-full h-full bg-neutral-50 border border-stone-300 px-4 py-3 rounded-full justify-center items-center gap-2.5 inline-flex text-center text-base text-neutral-700 font-medium"
       onClick={signInWithGoogle}
     >
       <svg
