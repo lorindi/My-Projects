@@ -48,8 +48,8 @@ const RegisterForm = () => {
       <form
         onSubmit={handleSubmit}
         className="flex items-center justify-evenly flex-col bg-neutral-50 w-full min-h-[673px] rounded-[5px] 
-          web:rounded-[50px] web:w-[582px] web:h-[776px] 
-          tablet:rounded-[20px] tablet:w-[582px] tablet:h-[776px] 
+          web:rounded-[10px] web:w-[582px] web:h-[776px] 
+          tablet:w-[582px] tablet:h-[776px] 
           phone:w-[361px] phone:min-h-[713px] 
           "
       >
