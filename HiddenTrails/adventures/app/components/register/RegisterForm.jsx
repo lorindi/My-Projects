@@ -414,7 +414,11 @@ const RegisterForm = () => {
           required
         />
        
-        <div className="web:w-[400px] web:h-[43px] tablet:w-[400px] tablet:h-[43px] phone:w-80 phone:h-[43px] smallPhone:w-72 smallPhone:h-[43px]">
+        <div className="
+        web:w-[400px] web:h-[43px] 
+        tablet:w-[400px] tablet:h-[43px] 
+        phone:w-80 phone:h-[43px] 
+        smallPhone:w-72 smallPhone:h-[43px]">
           <Btn type="submit" variant="filled" text="Register" fullWidth />
         </div>
         {error && <p className="text-red-500">{error.message}</p>}
