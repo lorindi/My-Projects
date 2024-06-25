@@ -1,11 +1,32 @@
 "use client";
 import Btn from "../buttons/Buttons";
-
 import * as React from "react";
 import InputField from "../input-fields/InputFields";
 
-const LoginForm = () => {
+import { useState } from "react";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "@/app/firebase/config";
+import { useRouter } from "next/navigation";
 
+const LoginForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+  const router = useRouter()
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const res = await signInWithEmailAndPassword(email, password);
+      console.log({ res });
+      sessionStorage.setItem('user', true)
+      setEmail('')
+      setPassword('')
+      router.push('/')
+    } catch (error) {
+      console.error("Login error:", error);
+    }
+  };
   return (
     <div className="flex flex-col items-center justify-start  w-full">
       <h2
@@ -23,6 +44,7 @@ const LoginForm = () => {
         tablet:w-[582px] tablet:min-h-[602px] 
         phone:w-[361px] phone:min-h-[441px] 
         "
+        onSubmit={handleSubmit}
       >
         <div
           className="
@@ -72,18 +94,20 @@ const LoginForm = () => {
           name="email"
           type="email"
           placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
-
         <InputField
           id="password"
           label="Password"
           name="password"
           type="password"
           placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           required
         />
-
         <div
           className="h-[43px] w-72
         web:w-[400px] web:h-[43px] 
@@ -93,6 +117,7 @@ const LoginForm = () => {
         >
           <Btn type="submit" variant="filled" text="Login" fullWidth />
         </div>
+        {/* {error && <p className="text-red-500">{error}</p>} */}
       </form>
     </div>
   );
