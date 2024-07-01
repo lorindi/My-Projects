@@ -6,6 +6,7 @@ import InputField from "./components/input-fields/InputFields";
 import { useState } from "react";
 import Search from "@/app/components/search/Search";
 import HomePage from "./components/home/HomePage";
+import Grid from "./components/grid-exercise/Grid";
 
 
 export default function Home() {
@@ -25,8 +26,9 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
       <HomePage/>
+      <Grid/>
 
-      <Btn type="button" variant="transparent" text="Explore" link="/explore" />
+      {/* <Btn type="button" variant="transparent" text="Explore" link="/explore" />
       <Btn type="button" variant="filled" text="Explore" link="/explore" />
       <Btn type="button" variant="outlined" text="Explore" link="/explore" />
 
@@ -55,7 +57,7 @@ export default function Home() {
         required={true}
       />
 
-      <Search variant="default" />
+      <Search variant="default" /> */}
     </main>
   );
 }
