@@ -35,3 +35,7 @@ REACT APP <-- (res) <-- EXPRESS API  <-- PRISMA <-- MONGODB
 Create on folder routes.js and inside it create auth.route.js and other.
 
 npm i bcrypt
+
+npm i prisma
+npx prisma init --datasource-provider mongodb
+npm i @prisma/client
