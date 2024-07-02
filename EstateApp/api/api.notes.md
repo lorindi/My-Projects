@@ -25,4 +25,4 @@ Create on folder routes.js and inside it create auth.route.js and other.
 npm i mongoose bcrypt jsonwebtoken
 npm install cors
 npm install validator
-
+npm i cookie-parser
