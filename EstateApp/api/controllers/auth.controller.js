@@ -5,9 +5,9 @@ import User from "../models/User.js";
 
 // Register function
 export const register = async (req, res) => {
-  const { name, email, password } = req.body;
-  console.log("register:", name, email, password);
   try {
+    const { name, email, password } = req.body;
+    console.log("register:", name, email, password);
     // Check if the user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -15,7 +15,7 @@ export const register = async (req, res) => {
     }
 
     // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password.trim(), 10);
 
     // Create a new user
     const newUser = new User({
@@ -42,20 +42,19 @@ export const register = async (req, res) => {
 
 // Login function with added logic
 export const login = async (req, res) => {
-  const { name, password } = req.body;
-
   try {
+    const { email, password } = req.body;
+    console.log('login:',email, password);
     // Check if the user exists
-    const user = await User.findOne({ name });
+    const user = await User.findOne({ email });
     if (!user) return res.status(401).json({ message: "User not found!" });
     // Check if the password is correct
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    const isPasswordValid = await bcrypt.compare(password.trim(), user.password);
 
     console.log(password, user.password);
-    console.log(await bcrypt.compare(password, user.password));
+    console.log(await bcrypt.compare(password.trim(), user.password));
 
-    if (!isPasswordValid)
-      return res.status(401).json({ message: "Invalid Credential" });
+    if (!isPasswordValid) return res.status(401).json({ message: "Invalid Credential" });
     // Generate cookie token and send to the user
     res.setHeader("Set-Cookie", "test=" + "myValue").json("success");
   } catch (err) {
