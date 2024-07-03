@@ -17,5 +17,6 @@
 *npm install axios
 *npm install --save react-toastify
 *npm i @emailjs/browser
-npm install framer-motion
+*npm install framer-motion
+*npm install sass
 1,02
