@@ -42,44 +42,65 @@ export const register = async (req, res) => {
 
 // Login function with added logic
 export const login = async (req, res) => {
-  const { email, password } = req.body;
-  console.log("login:", email, password);
+  const { name, password } = req.body;
 
   try {
     // Check if the user exists
-    const user = await User.findOne({ email });
-    if (!user) {
-      console.log("User does not exist");
-      return res.status(400).json({ message: "User does not exist" });
-    }
-
-    // Log the provided password and stored hashed password for debugging
-    console.log("Provided password:", password);
-    console.log("Stored hashed password:", user.password);
-
+    const user = await User.findOne({ name });
+    if (!user) return res.status(401).json({ message: "User not found!" });
     // Check if the password is correct
     const isPasswordValid = await bcrypt.compare(password, user.password);
-    console.log("Password comparison result:", isPasswordValid); // Debug statement
 
-    if (!isPasswordValid) {
-      console.log("Invalid password");
-      return res.status(400).json({ message: "Invalid password" });
-    }
+    console.log(password, user.password);
+    console.log(await bcrypt.compare(password, user.password));
 
-    // Generate a JWT token
-    const token = jwt.sign(
-      { userId: user._id, name: user.name, email: user.email },
-      JWT_SECRET, // Use a secure secret or store it in environment variables
-      { expiresIn: "1h" }
-    );
-
-    // Send the token as a cookie or in the response body
-    res.cookie("token", token, { httpOnly: true });
-    res.status(200).json({ message: "Login successful", token });
-  } catch (error) {
-    console.error("Login error:", error);
-    res.status(500).json({ message: "Server error" });
+    if (!isPasswordValid)
+      return res.status(401).json({ message: "Invalid Credential" });
+    // Generate cookie token and send to the user
+    res.setHeader("Set-Cookie", "test=" + "myValue").json("success");
+  } catch (err) {
+    console.error("Login error:", err);
+    res.status(500).json({ message: "Invalid Credentials!" });
   }
+
+  // const { email, password } = req.body;
+  // console.log("login:", email, password);
+
+  // try {
+  //   // Check if the user exists
+  //   const user = await User.findOne({ email });
+  //   if (!user) {
+  //     console.log("User does not exist");
+  //     return res.status(400).json({ message: "User does not exist" });
+  //   }
+
+  //   // Log the provided password and stored hashed password for debugging
+  //   console.log("Provided password:", password);
+  //   console.log("Stored hashed password:", user.password);
+
+  //   // Check if the password is correct
+  //   const isPasswordValid = await bcrypt.compare(password, user.password);
+  //   console.log("Password comparison result:", isPasswordValid); // Debug statement
+
+  //   if (!isPasswordValid) {
+  //     console.log("Invalid password");
+  //     return res.status(400).json({ message: "Invalid password" });
+  //   }
+
+  //   // Generate a JWT token
+  //   const token = jwt.sign(
+  //     { userId: user._id, name: user.name, email: user.email },
+  //     JWT_SECRET, // Use a secure secret or store it in environment variables
+  //     { expiresIn: "1h" }
+  //   );
+
+  //   // Send the token as a cookie or in the response body
+  //   res.cookie("token", token, { httpOnly: true });
+  //   res.status(200).json({ message: "Login successful", token });
+  // } catch (error) {
+  //   console.error("Login error:", error);
+  //   res.status(500).json({ message: "Server error" });
+  // }
 };
 
 // Logout function
