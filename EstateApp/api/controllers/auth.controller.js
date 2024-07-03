@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
-// import { JWT_SECRET } from "../constraints/constraints.js";
+import { JWT_SECRET_KEY } from "../constraints/constraints.js";
 
 // Register function
 export const register = async (req, res) => {
@@ -61,10 +61,21 @@ export const login = async (req, res) => {
 
     // Generate cookie token and send to the user
     // res.setHeader("Set-Cookie", "test=" + "myValue").json("success");
+
+    const age = 1000 * 60 * 60 * 24 * 7;
+
+    const token = jwt.sign(
+      {
+        id: user._id,
+      },
+      JWT_SECRET_KEY,
+      { expiresIn: age }
+    );
     res
-      .cookie("test2", "myValue2", {
+      .cookie("token", token, {
         httpOnly: true,
         // secure:true,
+        maxAge: age,
       })
       .status(200)
       .json({ message: "Login Successful" });
@@ -76,6 +87,5 @@ export const login = async (req, res) => {
 
 // Logout function
 export const logout = (req, res) => {
-  res.clearCookie("token");
-  res.status(200).json({ message: "Logout successful" });
+  res.clearCookie("token").status(200).json({ message: "Logout successful" });
 };
