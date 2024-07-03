@@ -45,17 +45,17 @@ export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     console.log("login:", email, password);
+
     // Check if the user exists
     const user = await User.findOne({ email });
     if (!user) return res.status(401).json({ message: "User not found!" });
+
     // Check if the password is correct
     const isPasswordValid = await bcrypt.compare(password.trim(), user.password);
-
     console.log(password, user.password);
     console.log(await bcrypt.compare(password, user.password));
-
-    if (!isPasswordValid)
-      return res.status(401).json({ message: "Invalid Credential" });
+    if (!isPasswordValid) return res.status(401).json({ message: "Invalid Credential" });
+    
     // Generate cookie token and send to the user
     res.setHeader("Set-Cookie", "test=" + "myValue").json("success");
   } catch (err) {
