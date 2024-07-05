@@ -1,0 +1,18 @@
+.homePage {
+  display: flex;
+  height: 100%;
+
+  .textContainer {
+    flex: 3;
+  }
+  .imgContainer {
+    flex: 2px;
+    background-color: #fcf5f3;
+
+    img {
+         width: 100%;
+        //  position: absolute;
+         right: 0;
+    }
+  }
+}
