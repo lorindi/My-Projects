@@ -1,8 +1,13 @@
-import './HomePage.scss'
+import "./HomePage.scss";
 function HomePage() {
   return (
-    <div>HomePage</div>
-  )
+    <div className="homePage">
+      <div className="textContainer">text</div>
+      <div className="imgContainer">
+        <img src="/bg.png" alt="" />
+      </div>
+    </div>
+  );
 }
 
-export default HomePage
+export default HomePage;
