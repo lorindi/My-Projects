@@ -19,4 +19,4 @@
 *npm i @emailjs/browser
 *npm install framer-motion
 *npm install sass
-1,02
+*npm install react-leaflet leaflet => https://react-leaflet.js.org/docs/start-installation/
