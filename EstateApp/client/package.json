@@ -17,8 +17,10 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "axios": "^1.7.2",
     "framer-motion": "^11.2.12",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.24.1",
     "react-toastify": "^10.0.5",
     "sass": "^1.77.6"
