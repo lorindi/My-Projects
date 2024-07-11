@@ -36,19 +36,23 @@
     justify-content: space-between;
     height: 64px;
     gap: 5px;
+    border-radius: 5px;
 
     @include sm {
       flex-direction: column;
       border: none;
+      border-radius: 0px;
     }
 
     input {
       border: none;
       padding: 0px 10px;
       width: 200px;
+      border-radius: 5px;
 
       @include lg {
         padding: 0px 5px;
+        border-radius: 0px;
 
         &:nth-child(2),
         &:nth-child(3) {
@@ -57,6 +61,7 @@
       }
       @include md {
         width: 200px;
+        border-radius: 0px;
 
         &:nth-child(2),
         &:nth-child(3) {
@@ -64,6 +69,7 @@
         }
       }
       @include sm {
+        border-radius: 0px;
         width: auto;
         &:nth-child(2),
         &:nth-child(3) {
@@ -78,8 +84,10 @@
       cursor: pointer;
       background-color: #fece51;
       flex: 1;
+      border-radius: 5px;
       @include sm {
         padding: 10px;
+        border-radius: 0px;
       }
 
       img {
