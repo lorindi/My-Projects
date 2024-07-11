@@ -7,10 +7,10 @@ function HomePage() {
         <div className="wrapper">
           <h1 className="title">Find Real & Estate Get Your Dream Place</h1>
           <p className="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ea
-            quasi odit, suscipit fuga modi doloremque fugiat amet quod
-            blanditiis sapiente voluptas, excepturi pariatur beatae expedita
-            vel, vero placeat aspernatur.
+            Discover your dream home with Find Real & Estate! Our premier real
+            estate platform connects you to the finest properties, tailored to
+            your needs. Browse listings, explore neighborhoods, and find expert
+            advice. Your perfect home is just a click away!
           </p>
           <SearchBar />
           <div className="boxes">
