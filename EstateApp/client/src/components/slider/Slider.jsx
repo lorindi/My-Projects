@@ -1,22 +1,25 @@
 import { useState } from "react";
 import "./Slider.scss";
-import ArrowLeftIcon from './svg/ArrowLeftIcon'
-import ArrowRightIcon from './svg/ArrowRightIcon'
-import CloseIcon from './svg/CloseIcon'
-
+import ArrowLeftIcon from "./svg/ArrowLeftIcon";
+import ArrowRightIcon from "./svg/ArrowRightIcon";
+import CloseIcon from "./svg/CloseIcon";
 
 function Slider({ images }) {
-
   const [imageIndex, setImageIndex] = useState(null);
 
   const changeSlide = (direction) => {
+    console.log("Change slide direction:", direction);
+
     if (direction === "left") {
+
+      // ? i0 === i0 = true => i3 : i-1
       if (imageIndex === 0) {
         setImageIndex(images.length - 1);
       } else {
         setImageIndex(imageIndex - 1);
       }
     } else {
+      // ? i3 === i4-1 = true  =>  i=0 : i+1
       if (imageIndex === images.length - 1) {
         setImageIndex(0);
       } else {
@@ -24,7 +27,6 @@ function Slider({ images }) {
       }
     }
   };
-
 
   return (
     <div className="slider">
@@ -40,7 +42,7 @@ function Slider({ images }) {
             <ArrowRightIcon />
           </div>
           <div className="close">
-            <CloseIcon  onClick={() => setImageIndex(null)} />
+            <CloseIcon onClick={() => setImageIndex(null)} />
           </div>
         </div>
       )}
