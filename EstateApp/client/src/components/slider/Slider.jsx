@@ -1,7 +1,14 @@
 import { useState } from "react";
 import "./Slider.scss";
+import ArrowLeftIcon from './svg/ArrowLeftIcon'
+import ArrowRightIcon from './svg/ArrowRightIcon'
+import CloseIcon from './svg/CloseIcon'
+
+
 function Slider({ images }) {
+
   const [imageIndex, setImageIndex] = useState(null);
+
   const changeSlide = (direction) => {
     if (direction === "left") {
       if (imageIndex === 0) {
@@ -17,63 +24,7 @@ function Slider({ images }) {
       }
     }
   };
-  const CloseIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      width="50"
-      height="50"
-      onClick={() => setImageIndex(null)}
-    >
-      <path
-        d="M6 6L18 18"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M6 18L18 6"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-  const ArrowLeftIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      width="50"
-      height="50"
-    >
-      <path
-        d="M12 4L4 12L12 20"
-        stroke="white"
-        strokeWidth="2"
-        fill="none"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
 
-  const ArrowRightIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      width="50"
-      height="50"
-    >
-      <path
-        d="M12 4L20 12L12 20"
-        stroke="white"
-        strokeWidth="2"
-        fill="none"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
 
   return (
     <div className="slider">
@@ -89,7 +40,7 @@ function Slider({ images }) {
             <ArrowRightIcon />
           </div>
           <div className="close">
-            <CloseIcon />
+            <CloseIcon  onClick={() => setImageIndex(null)} />
           </div>
         </div>
       )}
