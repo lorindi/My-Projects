@@ -26,9 +26,14 @@
 
       .title {
         font-size: 64px;
+        color: #2D9CDB;
         @include lg {
           font-size: 48px;
         }
+      }
+      .description{
+        color: #555;
+        letter-spacing: 0.5px;
       }
 
       .boxes {
