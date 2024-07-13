@@ -9,11 +9,10 @@ function Login() {
 
   const navigate = useNavigate();
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    serError("")
+    serError("");
 
     const formData = new FormData(e.target);
 
@@ -21,16 +20,15 @@ function Login() {
     const password = formData.get("password");
 
     try {
-      const res = await apiRequest.post(
-        "/auth/login",
-        {
-          email,
-          password,
-        }
-      );
-      navigate('/')
+      const res = await apiRequest.post("/auth/login", {
+        email,
+        password,
+      });
+      console.log(res);
+
+      navigate("/");
     } catch (err) {
-      serError(err.response.data.message )
+      serError(err.response.data.message);
       console.log(err);
     } finally {
       setIsLoading(false);
@@ -56,7 +54,7 @@ function Login() {
             placeholder="Password"
           />
           <button disabled={isLoading}>Login</button>
-          {error && (<span>{error}</span>)}
+          {error && <span>{error}</span>}
           <Link to="/register">{"Don't"} you have an account?</Link>
         </form>
       </div>
