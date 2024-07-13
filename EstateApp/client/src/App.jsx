@@ -4,6 +4,10 @@ import HomePage from "./components/routes/home/HomePage";
 import ListPage from "./components/routes/listPage/ListPage";
 import SinglePage from "./components/routes/singlePage/SinglePage";
 import ProfilePage from "./components/routes/profilePage/ProfilePage";
+import About from "./components/routes/about/About";
+import Contact from "./components/routes/contact/Contact";
+import Login from "./components/routes/login/Login";
+import Register from "./components/routes/register/Register";
 
 function App() {
   const router = createBrowserRouter([
