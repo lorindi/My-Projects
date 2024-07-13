@@ -71,6 +71,62 @@ function Chat() {
           <span>Lo Mitova</span>
           <p>Lorem ipsum dolor sit, amet...</p>
         </div>
+        <div className="message">
+          <img
+            src="https://avatars.githubusercontent.com/u/92224899?v=4"
+            alt=""
+          />
+          <span>Lo Mitova</span>
+          <p>Lorem ipsum dolor sit, amet...</p>
+        </div>
+        <div className="message">
+          <img
+            src="https://avatars.githubusercontent.com/u/92224899?v=4"
+            alt=""
+          />
+          <span>Lo Mitova</span>
+          <p>Lorem ipsum dolor sit, amet...</p>
+        </div>
+        <div className="message">
+          <img
+            src="https://avatars.githubusercontent.com/u/92224899?v=4"
+            alt=""
+          />
+          <span>Lo Mitova</span>
+          <p>Lorem ipsum dolor sit, amet...</p>
+        </div>
+        <div className="message">
+          <img
+            src="https://avatars.githubusercontent.com/u/92224899?v=4"
+            alt=""
+          />
+          <span>Lo Mitova</span>
+          <p>Lorem ipsum dolor sit, amet...</p>
+        </div>
+        <div className="message">
+          <img
+            src="https://avatars.githubusercontent.com/u/92224899?v=4"
+            alt=""
+          />
+          <span>Lo Mitova</span>
+          <p>Lorem ipsum dolor sit, amet...</p>
+        </div>
+        <div className="message">
+          <img
+            src="https://avatars.githubusercontent.com/u/92224899?v=4"
+            alt=""
+          />
+          <span>Lo Mitova</span>
+          <p>Lorem ipsum dolor sit, amet...</p>
+        </div>
+        <div className="message">
+          <img
+            src="https://avatars.githubusercontent.com/u/92224899?v=4"
+            alt=""
+          />
+          <span>Lo Mitova</span>
+          <p>Lorem ipsum dolor sit, amet...</p>
+        </div>
       </div>
       {close && (
         <div className="chatBox">
