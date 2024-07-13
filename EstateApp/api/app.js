@@ -17,8 +17,8 @@ mongoose
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(cookieParser())
-app.use(cors());
+app.use(cookieParser());
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 
 app.get("/", (req, res) => {
   res.send("Restful service");
@@ -28,6 +28,5 @@ app.use("/api/posts", postRoute);
 app.use("/api/auth", authRoute);
 
 app.listen(PORT, () => {
-  console.log(`Restful server is listening on port ${PORT}...`)
-
+  console.log(`Restful server is listening on port ${PORT}...`);
 });
