@@ -1,0 +1,24 @@
+// responsive.scss
+@mixin smallPhone {
+  @media (min-width: 320px) and (max-width:737px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: 738px) and (max-width:1023px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 1024px) and (max-width:1335px) {
+    @content;
+  }
+}
+
+@mixin web {
+  @media (min-width: 1336px) {
+    @content;
+  }
+}
