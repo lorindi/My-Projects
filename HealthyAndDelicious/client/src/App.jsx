@@ -10,11 +10,13 @@ import CreateAccount from "./routes/createAccount/CreateAccount";
 import Search from './components/search/Search'
 import Title from "./components/titles/Titles";
 import Description from "./components/description/Description";
+import Loader from "./components/loader/Loader";
 function App() {
   return (
     <div className="layout">
       <Header />
       <main className="main">
+        <Loader/>
       <Description>
         Това е примерно описание, което можеш да използваш навсякъде в приложението си.
       </Description>
