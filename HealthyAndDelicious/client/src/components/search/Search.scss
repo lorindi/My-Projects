@@ -1,0 +1,125 @@
+@import "../../responsive.scss";
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+
+  .searchWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+
+    @include smallPhone {
+      width: 288px;
+      height: 36px;
+    }
+
+    @include mobile {
+      width: 361px;
+      height: 36px;
+    }
+
+    @include tablet {
+      width: 590px;
+      height: 60px;
+    }
+
+    @include web {
+      width: 884px;
+      height: 60px;
+    }
+
+    .searchInput {
+      padding: 0 10px;
+      border-radius: 50px 0 0 50px;
+      border: 1px solid #d3d3d3;
+      background-color: #f5f5f5;
+
+
+      @include smallPhone {
+        width: 248px;
+        height: 36px;
+      }
+
+      @include mobile {
+        width: 321px;
+        height: 36px;
+      }
+
+      @include tablet {
+        width: 516px;
+        height: 60px;
+        opacity: 0.8;
+      }
+
+      @include web {
+        width: 810px;
+        height: 60px;
+        opacity: 0.8;
+      }
+    }
+
+    .searchButton {
+      cursor: pointer;
+      background-color: #1c3aa9;
+      border-radius: 0 50px 50px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 74px;
+      height: 60px;
+      border: none;
+
+      @include smallPhone {
+        width: 40px;
+        height: 36px;
+      }
+
+      @include tablet {
+        width: 74px;
+        height: 60px;
+      }
+
+      @include web {
+        width: 74px;
+        height: 60px;
+      }
+
+      @include mobile {
+        width: 40px;
+        height: 36px;
+      }
+
+      .searchIcon {
+        width: 40px;
+        height: 40px;
+
+        @include smallPhone {
+          width: 24px;
+          height: 24px;
+        }
+
+        @include tablet {
+          width: 40px;
+          height: 40px;
+        }
+
+        @include web {
+          width: 40px;
+          height: 40px;
+        }
+
+        @include mobile {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
