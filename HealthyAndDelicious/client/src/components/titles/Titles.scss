@@ -1,0 +1,94 @@
+// Titles.scss
+@import '../../responsive.scss';
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+
+  @include smallPhone {
+    font-size: 1.5rem;
+  }
+
+  @include mobile {
+    font-size: 2rem;
+  }
+
+  @include tablet {
+    font-size: 2.25rem;
+  }
+
+  @include web {
+    font-size: 2.5rem;
+  }
+}
+
+.subTitle {
+  font-size: 2rem;
+  font-weight: semi-bold;
+  color: #444;
+  margin-bottom: 0.75rem;
+
+  @include smallPhone {
+    font-size: 1.25rem;
+  }
+
+  @include mobile {
+    font-size: 1.75rem;
+  }
+
+  @include tablet {
+    font-size: 1.9rem;
+  }
+
+  @include web {
+    font-size: 2rem;
+  }
+}
+
+.tertiaryTitle {
+  font-size: 1.75rem;
+  font-weight: medium;
+  color: #555;
+  margin-bottom: 0.5rem;
+
+  @include smallPhone {
+    font-size: 1rem;
+  }
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+
+  @include tablet {
+    font-size: 1.65rem;
+  }
+
+  @include web {
+    font-size: 1.75rem;
+  }
+}
+
+.fourthTitle {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #666;
+  margin-bottom: 0.25rem;
+
+  @include smallPhone {
+    font-size: 0.9rem;
+  }
+
+  @include mobile {
+    font-size: 1.25rem;
+  }
+
+  @include tablet {
+    font-size: 1.4rem;
+  }
+
+  @include web {
+    font-size: 1.5rem;
+  }
+}
