@@ -1,8 +1,26 @@
 import Chat from "../../chat/Chat";
 import List from "../../list/List";
 import "./ProfilePage.scss";
+import apiRequest from "../../../lib/apiRequest";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../context/AuthContext";
 
 function ProfilePage() {
+  
+const {updateUser, currentUser} = useContext(AuthContext)
+
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await apiRequest.post("/auth/logout");
+      // localStorage.removeItem("user")
+      updateUser(null)
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div className="profilePage">
       <div className="details">
@@ -13,34 +31,34 @@ function ProfilePage() {
           </div>
           <div className="info">
             <span>
-              Avatar:{" "}
+              Avatar:
               <img
-                src="https://avatars.githubusercontent.com/u/92224899?v=4"
+                src={currentUser._doc.avatar || "/noavatar.png"}
                 alt=""
               />
             </span>
             <span>
-              Username: <b>Lo Mitova</b>
+              Name: <b>{currentUser._doc.name}</b>
             </span>
             <span>
-              E-mail: <b>loramitova9@gmail.com</b>
+              E-mail: <b>{currentUser._doc.email}</b>
             </span>
+            <button onClick={handleLogout}>Logout</button>
           </div>
           <div className="title">
             <h1>My List</h1>
             <button>Create New Post</button>
           </div>
-          <List/>
+          <List />
           <div className="title">
             <h1>Saved List</h1>
           </div>
-          <List/>
-
+          <List />
         </div>
       </div>
       <div className="chatContainer">
         <div className="wrapper">
-          <Chat/>
+          <Chat />
         </div>
       </div>
     </div>
