@@ -67,12 +67,14 @@ export const login = async (req, res) => {
     const token = jwt.sign(
       {
         id: user._id,
+        isAdmin: false,
       },
       JWT_SECRET_KEY,
       { expiresIn: age }
     );
 
     const { password: userPassword, ...userInfo } = user;
+    
     res
       .cookie("token", token, {
         httpOnly: true,
@@ -80,7 +82,9 @@ export const login = async (req, res) => {
         maxAge: age,
       })
       .status(200)
-      .json({ message: "Login Successful" });
+      // .json({ message: "Login Successful" });
+      .json(userInfo);
+
   } catch (err) {
     console.error("Login error:", err);
     res.status(500).json({ message: "Invalid Credentials!" });
