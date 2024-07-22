@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./login.scss";
 import { Link, useNavigate } from "react-router-dom";
 import apiRequest from "../../../lib/apiRequest";
+import { AuthContext } from "../../../context/AuthContext";
 
 function Login() {
   const [error, serError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { updateUser } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -24,11 +26,10 @@ function Login() {
         email,
         password,
       });
-      console.log(res);
-
+      updateUser(res.data);
       navigate("/");
     } catch (err) {
-      serError(err.response.data.message);
+      serError(err.response?.data?.message);
       console.log(err);
     } finally {
       setIsLoading(false);
