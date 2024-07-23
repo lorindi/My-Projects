@@ -74,7 +74,7 @@ export const login = async (req, res) => {
     );
 
     const { password: userPassword, ...userInfo } = user;
-    
+
     res
       .cookie("token", token, {
         httpOnly: true,
@@ -84,7 +84,6 @@ export const login = async (req, res) => {
       .status(200)
       // .json({ message: "Login Successful" });
       .json(userInfo);
-
   } catch (err) {
     console.error("Login error:", err);
     res.status(500).json({ message: "Invalid Credentials!" });
@@ -95,3 +94,5 @@ export const login = async (req, res) => {
 export const logout = (req, res) => {
   res.clearCookie("token").status(200).json({ message: "Logout successful" });
 };
+
+
