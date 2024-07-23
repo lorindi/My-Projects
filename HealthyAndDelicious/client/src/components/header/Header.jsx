@@ -5,12 +5,12 @@ import Mobile from "./mobile/Mobile";
 function Header() {
   return (
     <header className="header">
-      <div className="web">
+      {/* <div className="web">
         <Web />
       </div>
       <div className="tablet">
         <Tablet />
-      </div>
+      </div> */}
       <div className="mobile">
         <Mobile />
       </div>
