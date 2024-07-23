@@ -11,22 +11,25 @@ import Search from './components/search/Search'
 import Title from "./components/titles/Titles";
 import Description from "./components/description/Description";
 import Loader from "./components/loader/Loader";
+import AdminPanel from "./routes/adminPanel/AdminPanel";
 function App() {
   return (
     <div className="layout">
       <Header />
       <main className="main">
-        <Loader/>
+        {/* <Loader/>
       <Description>
         Това е примерно описание, което можеш да използваш навсякъде в приложението си.
-      </Description>
-        {/* <Routes>
+      </Description> */}
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/create-account" element={<CreateAccount />} />
-        </Routes> */}
+          <Route path="/admin" element={<AdminPanel/>} />
+
+        </Routes>
       </main>
       <Footer />
     </div>
