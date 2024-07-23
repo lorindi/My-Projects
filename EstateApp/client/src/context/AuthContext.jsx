@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 
-export const AuthContext = createContext();
+const AuthContext = createContext();
 
-export const AuthContextProvider = ({ children }) => {
+const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(() => {
     const user = localStorage.getItem("user");
     try {
@@ -21,8 +21,10 @@ export const AuthContextProvider = ({ children }) => {
   }, [currentUser]);
 
   return (
-    <AuthContext.Provider value={{ currentUser: currentUser, updateUser }}>
+    <AuthContext.Provider value={{ currentUser, updateUser }}>
       {children}
     </AuthContext.Provider>
   );
 };
+
+export { AuthContext, AuthContextProvider };
