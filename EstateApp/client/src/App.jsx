@@ -1,9 +1,11 @@
-import Layout from "./components/routes/layout/Layout";
+import { Layout, RequireAuth } from "./components/routes/layout/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/routes/homePage/HomePage";
 import ListPage from "./components/routes/listPage/ListPage";
 import SinglePage from "./components/routes/singlePage/SinglePage";
 import ProfilePage from "./components/routes/profilePage/ProfilePage";
+import ProfileUpdatePage from "./components/routes/profileUpdatePage/ProfileUpdatePage";
+
 import About from "./components/routes/about/About";
 import Contact from "./components/routes/contact/Contact";
 import Login from "./components/routes/login/Login";
@@ -27,17 +29,14 @@ function App() {
           path: "/:id",
           element: <SinglePage />,
         },
-        {
-          path: "/profile",
-          element: <ProfilePage />,
-        },
+
         {
           path: "/about",
           element: <About />,
         },
         {
           path: "/contact",
-          element: <Contact/>,
+          element: <Contact />,
         },
         {
           path: "/login",
@@ -46,6 +45,20 @@ function App() {
         {
           path: "/register",
           element: <Register />,
+        },
+      ],
+    },
+    {
+      path: "/",
+      element: <RequireAuth />,
+      children: [
+        {
+          path: "/profile",
+          element: <ProfilePage />,
+        },
+        {
+          path: "/profile/update",
+          element: <ProfileUpdatePage />,
         },
       ],
     },
