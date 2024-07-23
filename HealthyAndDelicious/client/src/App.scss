@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+a{
+  text-decoration: none;
+}
 body {
   display: flex;
   align-items: center;
@@ -34,6 +36,7 @@ body {
       max-width: 1336px;
 
       @include web {
+        background-color: rgba(0, 0, 255, 0.51);
         max-width: 1336px;
       }
       @include tablet {
@@ -43,6 +46,7 @@ body {
         max-width: 768px;
       }
       @include smallPhone {
+        background-color: palevioletred;
         max-width: 640px;
       }
 
