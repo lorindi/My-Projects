@@ -46,12 +46,12 @@
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
-      width: 80%;
+      width: 90%;
 
       .mainTitlesFooter {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         flex-wrap: wrap;
         font-weight: 400;
         letter-spacing: 1.5px;
@@ -241,8 +241,8 @@
 
     .contentCopyRight {
       display: flex;
-      border-top: 2px solid rgba(255, 255, 255, 0.26);
-      width: 80%;
+      border-top: 2px solid lightgray;
+      width: 85%;
       margin: 20px;
       justify-content: space-between;
       padding: 20px;
