@@ -20,8 +20,8 @@ function SignIn() {
     return null;
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const passwordError = validatePassword();
     if (passwordError) {
       setErrors(passwordError);
@@ -29,7 +29,7 @@ function SignIn() {
     }
   };
 
-  const handleBlur = (field) => (event) => {
+  const handleBlur = (field) => (e) => {
     setTouched({
       ...touched,
       [field]: true,
