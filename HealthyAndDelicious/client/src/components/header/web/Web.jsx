@@ -4,6 +4,7 @@ function Web() {
   return (
     <nav className="navigation">
       <div className="contentLogo">
+        <img src="/logo.png" alt=""  className="logo"/>
         <Link className="logoLink" to="/">
           Healthy Delicious
         </Link>
@@ -22,17 +23,18 @@ function Web() {
           Contacts
         </Link>
 
-        <Link className="linkSignIn" to="/sign-in">
-          Sign In
-        </Link>
-        <Link className="linkSignIn" to="/create-account">
-          Create Account
-        </Link>
+       
       </div>
       <div className="contentLinksIcon">
         <Link className="link" to="/profile">
           <i className="fa-solid fa-user"></i>Profile
         </Link>
+        {/* <Link className="linkSignIn" to="/sign-in">
+          Sign In
+        </Link>
+        <Link className="linkCreateAccount" to="/create-account">
+          Create Account
+        </Link> */}
       </div>
     </nav>
   );
