@@ -24,7 +24,6 @@ function App() {
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/create-account" element={<CreateAccount />} />
           <Route path="/create-recipe" element={<CreateRecipe />} />
-
           <Route path="/admin" element={<AdminPanel />} />
         </Routes>
       </main>
