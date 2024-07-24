@@ -1,0 +1,95 @@
+.signInSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60vh;
+    background-image: url("../../../public//bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.7;
+  }
+
+  .signInForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 450px;
+    margin: 0 auto;
+    background: #ffffff7c;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 1px rgba(119, 136, 153, 0.719);
+
+    .signInFormLabel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 20px;
+    }
+   
+
+    .signInFormInput {
+      font-size: 20px;
+      width: 90%;
+      padding: 16px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding-left: 30px;
+
+      .signInFormInputError {
+        border: 1px solid red;
+      }
+    }
+
+    .signInFormButton {
+      background-color: orange;
+      color: #fff;
+      padding: 10px 0px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 90%;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 20px;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+.inputContainer {
+  input {
+    position: relative;
+  }
+}
+
+.userIcon,
+.passwordIcon {
+  color: #e09429;
+  font-size: 20px;
+  position: absolute;
+}
+
+
