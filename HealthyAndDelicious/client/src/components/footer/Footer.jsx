@@ -1,10 +1,14 @@
 import "./Footer.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMap, faLocationDot, faPhone, faPaperPlane, faNoteSticky, faCalendar, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
+  const location = useLocation()
+  if (location.pathname === '/admin'){
+    return null
+  }
   return (
     <footer className="footer">
       <div className="containerFooter">
