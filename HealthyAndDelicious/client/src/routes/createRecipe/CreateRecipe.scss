@@ -1,0 +1,96 @@
+.containerCreateRecipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 115vh;
+  width: 100%;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 130vh;
+    background-image: url("../../../assets/brooke-lark-nTZOILVZuOg-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+  .createRecipeForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 350px;
+    background: #ffffffd7;
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 1px rgba(119, 136, 153, 0.719);
+    height: auto;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-bottom: 15px;
+
+      .createRecipeLabel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 5px 0px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      .createRecipeInput,
+      .createRecipeTextarea {
+        border: 1px solid #ccc;
+        width: 35vw;
+        padding: 10px;
+        box-sizing: border-box;
+        letter-spacing: 1.5px;
+        border-radius: 5px;
+
+        &.createRecipeInput {
+          font-size: 16px;
+        }
+      }
+      .errorMessage {
+        color: #ff5d5d;
+        font-size: 14px;
+        margin-top: 5px;
+        letter-spacing: 2px;
+      }
+    }
+    .createRecipeButton {
+      width: 35vw;
+      padding: 12px;
+      background-color: orange;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 20px;
+      letter-spacing: 3px;
+      font-weight: 400;
+
+      &:hover {
+        background-color: #ff5d5d;
+      }
+    }
+  }
+}
