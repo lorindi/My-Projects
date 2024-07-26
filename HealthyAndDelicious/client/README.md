@@ -10,6 +10,17 @@
 - [x] Separate HTML into components
 
 ## 2. Basic Components
-- [x] Install react-router-dom
-- [x] Setup react-router-dom
+- [x] Install react-router-dom 
+    - *npm i react-router-dom 
+- [x] Setup react-router-dom:
+    * In main.jsx add:
+     
+            import { BrowserRouter } from "react-router-dom";
+            <BrowserRouter>
+                <App />
+            </BrowserRouter> 
+
+            in App.jsx import:
+            import { Routes, Route } from 'react-router-dom'
+
 - [x] Add router in App.jsx
