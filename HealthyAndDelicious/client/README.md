@@ -20,7 +20,40 @@
                 <App />
             </BrowserRouter> 
 
-            in App.jsx import:
-            import { Routes, Route } from 'react-router-dom'
 
 - [x] Add router in App.jsx
+  
+    * inside App.jsx import:
+     
+            import { Routes, Route } from 'react-router-dom'
+            <Routes>
+                <Route path="*" element={<NotFound />} />
+                <Route path="/" element={<Home />} />
+            </Routes>
+- [x] Add links in the navigation`   
+## 3. Create Service Layer
+- [x] Service layer architecture
+- [x] Abstract requester
+## 4. Page Implementation
+- [x] auth
+- [x] profile
+- [x] list
+- [x] element details
+- [x] home
+- [x] contacts
+- [x] about
+
+
+
+
+
+*npm run lint
+*npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+*npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/react-fontawesome
+*npm install axios
+*npm install --save react-toastify
+*npm i @emailjs/browser
+*npm install framer-motion
+*npm install sass
+*npm install react-leaflet leaflet => https://react-leaflet.js.org/docs/start-installation/
+
