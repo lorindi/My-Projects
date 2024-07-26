@@ -1,12 +1,15 @@
 ## 1. Initialize Project
-* Initialize git repo
-* Add server
-* Add base vite react project as a client
-* CleanUp client
-* Add project resource
-* Separate HTML into components
+- [x] Initialize git repo
+- [x] Add server
+- [x] Add base vite react project as a client 
+    - *npm create vite . => React => JavaScript
+    - *npm install
+    - *npm run dev
+- [x] CleanUp client
+- [x] Add project resource
+- [x] Separate HTML into components
 
 ## 2. Basic Components
-* Install react-router-dom
-* Setup react-router-dom
-* Add router in App.jsx
+- [x] Install react-router-dom
+- [x] Setup react-router-dom
+- [x] Add router in App.jsx
