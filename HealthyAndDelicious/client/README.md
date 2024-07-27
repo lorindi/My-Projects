@@ -36,9 +36,12 @@
 - [x] Abstract requester
 ## 4. Page Implementation
 - [x] auth
-- [x] profile
+  - [x] admin
+  - [x] profile
 - [x] list
-- [x] element details
+  - [x] list item
+  - [x] item details
+- [x] comments
 - [x] home
 - [x] contacts
 - [x] about
@@ -47,13 +50,13 @@
 
 
 
-*npm run lint
-*npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
-*npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/react-fontawesome
-*npm install axios
-*npm install --save react-toastify
-*npm i @emailjs/browser
-*npm install framer-motion
-*npm install sass
-*npm install react-leaflet leaflet => https://react-leaflet.js.org/docs/start-installation/
+        *npm run lint
+        *npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+        *npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/react-fontawesome
+        *npm install axios
+        *npm install --save react-toastify
+        *npm i @emailjs/browser
+        *npm install framer-motion
+        *npm install sass
+        *npm install react-leaflet leaflet => https://react-leaflet.js.org/docs/start-installation/
 
