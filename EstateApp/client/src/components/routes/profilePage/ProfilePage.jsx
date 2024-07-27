@@ -3,18 +3,18 @@ import List from "../../list/List";
 import "./ProfilePage.scss";
 import apiRequest from "../../../lib/apiRequest";
 import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 
 function ProfilePage() {
   const { updateUser, currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (!currentUser) {
-  //     navigate("/login");
-  //   }
-  // }, [currentUser, navigate]);
+  useEffect(() => {
+    if (!currentUser) {
+      navigate("/login");
+    }
+  }, [currentUser, navigate]);
 
   const handleLogout = async () => {
     try {
@@ -27,7 +27,7 @@ function ProfilePage() {
   };
 
   return (
-    // currentUser && (
+    currentUser && (
     <div className="profilePage">
       <div className="details">
         <div className="wrapper">
@@ -67,7 +67,7 @@ function ProfilePage() {
         </div>
       </div>
     </div>
-    // )
+    )
   );
 }
 
