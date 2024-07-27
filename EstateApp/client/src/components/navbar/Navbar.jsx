@@ -20,8 +20,8 @@ function Navbar() {
       <div className="right">
         {currentUser ? (
           <div className="user">
-            <img src={currentUser._doc.avatar || "/noavatar.png"} alt="" />
-            <span>{currentUser._doc.name}</span>
+            <img src={currentUser.avatar || "/noavatar.png"} alt="" />
+            <span>{currentUser.name}</span>
             <Link className="profile" to="/profile">
               <div className="notification">3</div>
               <span>Profile</span>
