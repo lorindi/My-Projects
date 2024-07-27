@@ -9,7 +9,7 @@ function ProfileUpdatePage() {
   const { currentUser, updateUser } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [avatar, setAvatar] = useState([]);
-console.log(currentUser);
+  console.log(currentUser);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -23,10 +23,11 @@ console.log(currentUser);
         username,
         email,
         password,
-        avatar:avatar[0]
+        avatar: avatar[0],
       });
-      updateUser(res.data);
-      navigate("/profile");
+      // updateUser(res.data);
+      // navigate("/profile");
+      console.log(res);
     } catch (err) {
       console.log(err);
       setError(err.response.data.message);
@@ -65,7 +66,11 @@ console.log(currentUser);
         </form>
       </div>
       <div className="sideContainer">
-        <img src={avatar[0] || currentUser._doc.avatar || "/noavatar.jpg"} alt="" className="avatar" />
+        <img
+          src={avatar[0] || currentUser._doc.avatar || "/noavatar.jpg"}
+          alt=""
+          className="avatar"
+        />
         {/* <UploadWidget
           uwConfig={{
             cloudName: "lamadev",
