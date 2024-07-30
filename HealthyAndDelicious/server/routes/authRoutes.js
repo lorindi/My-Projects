@@ -4,6 +4,6 @@ const router = express.Router()
 
 router.use('/create-account', createAccount)
 router.use('/sign-in', signIn)
-router.use('logout', logout)
+router.use('/logout', logout)
 
 export default router
