@@ -57,6 +57,7 @@ export const updateUser = async (req, res) => {
     if (!updatedUser) {
       return res.status(404).json({ message: "User not found" });
     }
+    //** User update password */
 
     // Send success response with updated user data
     res.status(200).json(updatedUser);
