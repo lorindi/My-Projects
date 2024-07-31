@@ -68,7 +68,11 @@ const recipeSchema = new Schema({
     required: true,
     minlength: 1,
   },
-}, { timestamps: true });
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
 
 const Recipe = mongoose.model("Recipe", recipeSchema);
 
