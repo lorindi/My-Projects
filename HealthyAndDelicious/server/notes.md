@@ -5,8 +5,8 @@ Recipe App Development Plan with Express, JWT, Mongoose, and MongoDB
 # Step 1: Create a New Project
 
 * Create a project directory
-mkdir client
-cd client
+mkdir server
+cd server
 Initialize a new Node.js project
 
             npm init --yes
@@ -24,7 +24,7 @@ Initialize a new Node.js project
 
 * plaintext
 
-            client/
+            server/
             │
             ├── controllers/
             │   ├── authController.js
