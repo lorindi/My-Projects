@@ -17,6 +17,10 @@ app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 
 app.use("/api", router);
 
+app.get("/", (req, res) => {
+  res.send("Hello world");
+});
+
 app.listen(5000, () => {
   console.log("Restful server is listening on port 5000...");
 });
