@@ -18,7 +18,7 @@ app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use("/api", router);
 
 app.get("/", (req, res) => {
-  res.send("Hello world");
+  res.send("Restful service");
 });
 
 app.listen(5000, () => {
