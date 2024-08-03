@@ -3,7 +3,7 @@ import Recipe from "../models/Recipe.js";
 // List all recipes
 export const listRecipes = async (req, res) => {
   try {
-    const recipes = await Recipe.find().populate("ownerId", "name email"); // Populate ownerId with name and email
+    const recipes = await Recipe.find().populate("ownerId", "name email"); 
     res.status(200).json(recipes);
   } catch (err) {
     console.error("Error listing recipes:", err);
