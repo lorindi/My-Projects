@@ -3,7 +3,7 @@ import Recipe from "../models/Recipe.js";
 // List all recipes
 export const listRecipes = async (req, res) => {
   try {
-    const recipes = await Recipe.find().populate('ownerId', 'name email'); // Populate ownerId with name and email
+    const recipes = await Recipe.find().populate("ownerId", "name email"); // Populate ownerId with name and email
     res.status(200).json(recipes);
   } catch (err) {
     console.error("Error listing recipes:", err);
@@ -13,23 +13,39 @@ export const listRecipes = async (req, res) => {
 
 // List recipes by user
 export const listRecipesByUser = async (req, res) => {
-    try {
-      const { userId } = req.params; // Get userId from request parameters
-      const recipes = await Recipe.find({ ownerId: userId }).populate('ownerId', 'name email');
-      if (!recipes || recipes.length === 0) {
-        return res.status(404).json({ message: "No recipes found for this user" });
-      }
-      res.status(200).json(recipes);
-    } catch (err) {
-      console.error("Error listing user's recipes:", err);
-      res.status(500).json({ message: "Failed to list user's recipes" });
+  try {
+    
+    const { userId } = req.params; // Get userId from request parameters
+    const recipes = await Recipe.find({ ownerId: userId }).populate(
+      "ownerId",
+      "name email"
+    );
+    if (!recipes || recipes.length === 0) {
+      return res
+        .status(404)
+        .json({ message: "No recipes found for this user" });
     }
-  };
+    res.status(200).json(recipes);
+  } catch (err) {
+    console.error("Error listing user's recipes:", err);
+    res.status(500).json({ message: "Failed to list user's recipes" });
+  }
+};
 
 // Create a new recipe
 export const createRecipe = async (req, res) => {
   try {
-    const { images, title, description, ingredients, category, prepTime, cookTime, servings, ownerId } = req.body;
+    const {
+      images,
+      title,
+      description,
+      ingredients,
+      category,
+      prepTime,
+      cookTime,
+      servings,
+      ownerId,
+    } = req.body;
 
     const newRecipe = new Recipe({
       images,
@@ -42,7 +58,7 @@ export const createRecipe = async (req, res) => {
       servings,
       ownerId,
     });
- 
+
     const savedRecipe = await newRecipe.save();
     console.log(savedRecipe);
     res.status(201).json(savedRecipe);
@@ -58,7 +74,9 @@ export const updateRecipe = async (req, res) => {
     const { id } = req.params;
     const updates = req.body;
 
-    const updatedRecipe = await Recipe.findByIdAndUpdate(id, updates, { new: true });
+    const updatedRecipe = await Recipe.findByIdAndUpdate(id, updates, {
+      new: true,
+    });
     if (!updatedRecipe) {
       return res.status(404).json({ message: "Recipe not found" });
     }
@@ -92,7 +110,7 @@ export const detailsRecipe = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const recipe = await Recipe.findById(id).populate('ownerId', 'name email');
+    const recipe = await Recipe.findById(id).populate("ownerId", "name email");
     if (!recipe) {
       return res.status(404).json({ message: "Recipe not found" });
     }
