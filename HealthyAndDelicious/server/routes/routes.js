@@ -1,11 +1,11 @@
 import express from 'express'
 import authRoutes from './authRoutes.js'
-import recipeRoutes from './recipeRoutes.js'
+import recipesRoutes from './recipesRoutes.js'
 
 const router = express.Router()
 
 router.use('/auth', authRoutes)
-router.use('/recipe', recipeRoutes)
+router.use('/recipes', recipesRoutes)
 
 
 export default router
