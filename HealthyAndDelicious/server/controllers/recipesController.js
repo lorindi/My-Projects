@@ -3,7 +3,7 @@ import Recipe from "../models/Recipe.js";
 // List all recipes
 export const listRecipes = async (req, res) => {
   try {
-    const recipes = await Recipe.find().populate("ownerId", "name email"); 
+    const recipes = await Recipe.find().populate("ownerId", "name email avatar createdAt"); 
     res.status(200).json(recipes);
   } catch (err) {
     console.error("Error listing recipes:", err);
@@ -16,6 +16,7 @@ export const listRecipesByUser = async (req, res) => {
   try {
     
     const { userId } = req.params; // Get userId from request parameters
+    console.log(req);
     const recipes = await Recipe.find({ ownerId: userId }).populate(
       "ownerId",
       "name email"
@@ -72,6 +73,7 @@ export const createRecipe = async (req, res) => {
 export const updateRecipe = async (req, res) => {
   try {
     const { id } = req.params;
+    console.log(req.params.id);
     const updates = req.body;
 
     const updatedRecipe = await Recipe.findByIdAndUpdate(id, updates, {
