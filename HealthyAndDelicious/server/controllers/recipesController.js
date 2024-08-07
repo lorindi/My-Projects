@@ -62,7 +62,11 @@ export const createRecipe = async (req, res) => {
       servings,
       ownerId,
     });
-
+    if (!images || images.length < 4) {
+      return res
+        .status(400)
+        .json({ message: "A recipe must have at least 4 images!" });
+    }
     const savedRecipe = await newRecipe.save();
     console.log(savedRecipe);
     res.status(201).json(savedRecipe);
@@ -129,11 +133,12 @@ export const detailsRecipe = async (req, res) => {
 
 export const ingredientsInfo = (req, res) => {
   try {
-    const ingredients = Ingredient.find()
-    if (!ingredients) return res.status(404).json({message: "Not found ingredients"})
-    res.status(200).json(ingredients)
+    const ingredients = Ingredient.find();
+    if (!ingredients)
+      return res.status(404).json({ message: "Not found ingredients" });
+    res.status(200).json(ingredients);
   } catch (err) {
     console.log(err);
-    res.status(500).json({message: "Failed to view ingredients"})
+    res.status(500).json({ message: "Failed to view ingredients" });
   }
 };
