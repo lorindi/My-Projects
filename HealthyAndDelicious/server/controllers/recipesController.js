@@ -1,9 +1,13 @@
+import Ingredients from "../models/Ingredients.js";
 import Recipe from "../models/Recipe.js";
 
 // List all recipes
 export const listRecipes = async (req, res) => {
   try {
-    const recipes = await Recipe.find().populate("ownerId", "name email avatar createdAt"); 
+    const recipes = await Recipe.find().populate(
+      "ownerId",
+      "name email avatar createdAt"
+    );
     res.status(200).json(recipes);
   } catch (err) {
     console.error("Error listing recipes:", err);
@@ -14,7 +18,6 @@ export const listRecipes = async (req, res) => {
 // List recipes by user
 export const listRecipesByUser = async (req, res) => {
   try {
-    
     const { userId } = req.params; // Get userId from request parameters
     console.log(req);
     const recipes = await Recipe.find({ ownerId: userId }).populate(
@@ -121,5 +124,16 @@ export const detailsRecipe = async (req, res) => {
   } catch (err) {
     console.error("Error getting recipe details:", err);
     res.status(500).json({ message: "Failed to get recipe details" });
+  }
+};
+
+export const ingredientsInfo = (req, res) => {
+  try {
+    const ingredients = Ingredients.find()
+    if (!ingredients) return res.status(404).json({message: "Not found ingredients"})
+    res.status(200).json(ingredients)
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({message: "Failed to view ingredients"})
   }
 };
