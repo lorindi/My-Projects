@@ -10,6 +10,7 @@ import CreateAccount from "./routes/createAccount/CreateAccount";
 import AdminPanel from "./routes/adminPanel/AdminPanel";
 import NotFound from "./routes/notFound/NotFound";
 import CreateRecipe from "./routes/createRecipe/CreateRecipe";
+import RecipesList from "./components/recipesList/RecipesList";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path="/create-account" element={<CreateAccount />} />
           <Route path="/create-recipe" element={<CreateRecipe />} />
           <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/list" element={<RecipesList />} />
+
         </Routes>
       </main>
       <Footer />
