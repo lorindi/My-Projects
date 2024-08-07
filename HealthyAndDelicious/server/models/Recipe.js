@@ -81,6 +81,11 @@ const recipeSchema = new Schema({
     ref: "User",
     required: true,
   },
+  restaurantId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Restaurant',
+    default: null
+  },
   createdAt: {
     type: Date,
     default: Date.now,
