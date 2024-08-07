@@ -1,9 +1,10 @@
 .cover {
   display: flex;
   flex-direction: column;
-  height: 90vh;
-  /* background-color: rgba(0, 0, 0, 0.137); */
-  /* position: relative; */
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.137);
+  width: 100%;
+  position: relative;
 
   &:before {
     content: "";
