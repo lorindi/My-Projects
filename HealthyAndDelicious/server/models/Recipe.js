@@ -23,12 +23,20 @@ const recipeSchema = new Schema({
     minlength: 5,
     match: /\S{5,}/,
   },
-  ingredients: {
-    type: String,
-    required: true,
-    minlength: 3,
-    match: /\S{3,}/,
-  },
+  ingredients: [
+    {
+      name: {
+        type: String,
+        required: true,
+        minlength: 2,
+      },
+      quantity: {
+        type: String,
+        required: true,
+        minlength: 1,
+      },
+    },
+  ],
   category: {
     type: String,
     required: true,
@@ -70,7 +78,7 @@ const recipeSchema = new Schema({
   },
   ownerId: {
     type: Schema.Types.ObjectId,
-    ref: "User", 
+    ref: "User",
     required: true,
   },
   createdAt: {
