@@ -1,12 +1,40 @@
+@import "../../responsive.scss";
+
 .header {
   width: 100%;
   background-color: white;
   box-shadow: 0px 0px 30px 30px white;
   .web {
     width: 100%;
+
+    @include web {
+      display: flex;
+    }
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include smallPhone {
+      display: none;
+    }
   }
   .mobile {
     width: 100%;
     padding: 0px 10px;
+
+    @include mobile {
+      display: flex;
+    }
+    @include tablet {
+      display: flex;
+    }
+    @include smallPhone {
+      display: flex;
+    }
+    @include web {
+      display: none;
+    }
   }
 }
