@@ -26,7 +26,7 @@ export const restaurantSchema = mongoose.Schema({
     required: true,
   },
   createdAt: {
-    type: String,
+    type: Date,
     default: Date.now,
   },
 });
