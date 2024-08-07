@@ -6,6 +6,7 @@ import {
   updateRecipe,
   deleteRecipe,
   detailsRecipe,
+  ingredientsInfo,
 } from "../controllers/recipesController.js";
 
 const router = express.Router();
@@ -36,7 +37,7 @@ router.get("/list/:userId", listRecipesByUser);
 
 // Get details of a specific recipe
 router.get("/details/:id", detailsRecipe); 
-
+router.get("/ingredients", ingredientsInfo);
 
 
 
