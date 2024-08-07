@@ -7,9 +7,7 @@
   .web {
     width: 100%;
 
-    @include web {
-      display: flex;
-    }
+   
     @include mobile {
       display: none;
     }
@@ -24,15 +22,7 @@
     width: 100%;
     padding: 0px 10px;
 
-    @include mobile {
-      display: flex;
-    }
-    @include tablet {
-      display: flex;
-    }
-    @include smallPhone {
-      display: flex;
-    }
+  
     @include web {
       display: none;
     }
