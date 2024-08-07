@@ -4,7 +4,9 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.137);
   width: 100%;
+  position: relative;
 
   &:before {
     content: "";
