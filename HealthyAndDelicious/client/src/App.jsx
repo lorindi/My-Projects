@@ -26,7 +26,7 @@ function App() {
           <Route path="/create-account" element={<CreateAccount />} />
           <Route path="/create-recipe" element={<CreateRecipe />} />
           <Route path="/admin" element={<AdminPanel />} />
-          <Route path="/list" element={<RecipesList />} />
+          <Route path="/recipes" element={<RecipesList />} />
 
         </Routes>
       </main>
