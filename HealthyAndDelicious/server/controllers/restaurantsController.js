@@ -2,7 +2,7 @@ import Restaurant from "../models/Restaurant";
 
 export const createRestaurant = async (req, res) => {
   try {
-    const { name, location, address, latitude, longitude, createdAt, ownerId } =
+    const { name, location, address, latitude, longitude, ownerId } =
       req.body;
 
     const newRestaurant = new Restaurant({
@@ -11,9 +11,11 @@ export const createRestaurant = async (req, res) => {
       address,
       latitude,
       longitude,
-      createdAt,
       ownerId,
     });
+    if (!name || !location || !address || !latitude || !longitude || !ownerId) {
+      return res.status(400).json({ message: "All fields are required!" });
+    }
     const saveRestaurant = await newRestaurant.save();
     console.log(saveRestaurant);
     res.status(200).json(saveRestaurant);
