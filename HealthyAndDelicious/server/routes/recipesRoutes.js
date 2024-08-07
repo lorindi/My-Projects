@@ -37,6 +37,7 @@ router.get("/list/:userId", listRecipesByUser);
 
 // Get details of a specific recipe
 router.get("/details/:id", detailsRecipe); 
+
 router.get("/ingredients", ingredientsInfo);
 
 
