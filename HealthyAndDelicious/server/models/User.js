@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     minlength: 5,
     match:  /^[a-zA-Z0-9]+@.[a-zA-Z0-9]+\.[a-zA-Z0-9]+(?:\.[a-zA-Z]+)*$/,
+    unique: true,
   },
   name: {
     type: String,
