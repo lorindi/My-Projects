@@ -1,4 +1,4 @@
-import Ingredients from "../models/Ingredients.js";
+import Ingredient from "../models/Ingredient.js";
 import Recipe from "../models/Recipe.js";
 
 // List all recipes
@@ -129,7 +129,7 @@ export const detailsRecipe = async (req, res) => {
 
 export const ingredientsInfo = (req, res) => {
   try {
-    const ingredients = Ingredients.find()
+    const ingredients = Ingredient.find()
     if (!ingredients) return res.status(404).json({message: "Not found ingredients"})
     res.status(200).json(ingredients)
   } catch (err) {
