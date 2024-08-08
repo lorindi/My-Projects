@@ -8,6 +8,7 @@ import {
   addExistingRecipeToRestaurant,
   getRecipesForRestaurant
 } from "../controllers/restaurantsController.js";
+
 const router = express.Router();
 
 router.post("/create", createRestaurant);
