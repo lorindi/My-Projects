@@ -15,13 +15,11 @@ const recipeSchema = new Schema({
     type: String,
     required: true,
     minlength: 3,
-    match: /\S{3,}/,
   },
   description: {
     type: String,
     required: true,
     minlength: 5,
-    match: /\S{5,}/,
   },
   ingredients: [
     {
@@ -63,13 +61,11 @@ const recipeSchema = new Schema({
     type: String,
     required: true,
     minlength: 1,
-    match: /\S{1,}/,
   },
   cookTime: {
     type: String,
     required: true,
     minlength: 1,
-    match: /\S{1,}/,
   },
   servings: {
     type: String,
@@ -80,11 +76,6 @@ const recipeSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
     required: true,
-  },
-  restaurantId: {
-    type: Schema.Types.ObjectId,
-    ref: 'Restaurant',
-    default: null
   },
   createdAt: {
     type: Date,
