@@ -50,6 +50,7 @@ export const createRecipe = async (req, res) => {
       servings,
       ownerId,
     } = req.body;
+    console.log(req.body);
 
     const newRecipe = new Recipe({
       images,
@@ -70,6 +71,7 @@ export const createRecipe = async (req, res) => {
     const savedRecipe = await newRecipe.save();
     console.log(savedRecipe);
     res.status(201).json(savedRecipe);
+    mongoose.connection.close();
   } catch (err) {
     console.error("Error creating recipe:", err);
     res.status(500).json({ message: "Failed to create recipe" });
