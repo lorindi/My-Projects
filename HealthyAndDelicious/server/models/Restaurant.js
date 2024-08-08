@@ -25,6 +25,10 @@ const restaurantSchema = new Schema({
     type: Number,
     required: true,
   },
+  recipes: [{
+    type: Schema.Types.ObjectId,
+    ref: "Recipe",
+  }],
   ownerId: {
     type: Schema.ObjectId,
     ref: "User",
