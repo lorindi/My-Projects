@@ -63,15 +63,14 @@ export const createRecipe = async (req, res) => {
       servings,
       ownerId,
     });
-    if (!images || images.length < 4) {
-      return res
-        .status(400)
-        .json({ message: "A recipe must have at least 4 images!" });
-    }
+    // if (!images || images.length < 4) {
+    //   return res
+    //     .status(400)
+    //     .json({ message: "A recipe must have at least 4 images!" });
+    // }
     const savedRecipe = await newRecipe.save();
-    console.log(savedRecipe);
     res.status(201).json(savedRecipe);
-    mongoose.connection.close();
+    // mongoose.connection.close();
   } catch (err) {
     console.error("Error creating recipe:", err);
     res.status(500).json({ message: "Failed to create recipe" });
