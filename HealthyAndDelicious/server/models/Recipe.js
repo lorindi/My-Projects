@@ -3,12 +3,6 @@ import mongoose, { Schema } from "mongoose";
 const recipeSchema = new Schema({
   images: {
     type: [String],
-    validate: {
-      validator: function (v) {
-        return v.length >= 4;
-      },
-      message: (prop) => `A recipe must have at least 4 images!`,
-    },
     required: true,
   },
   title: {
