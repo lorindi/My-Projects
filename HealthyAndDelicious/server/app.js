@@ -3,11 +3,15 @@ import router from "./routes/routes.js";
 import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import { addDummyData } from "./utils/seedData.js";
 const app = express();
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/healthy-delicious-db")
-  .then(() => console.log("DB Connected"))
+  .then(() => {
+    console.log("DB Connected") 
+    addDummyData();
+  })
   .catch((err) => console.log(err));
 
 app.use(urlencoded({ extended: false }));
