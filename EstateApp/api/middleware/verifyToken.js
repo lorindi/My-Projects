@@ -1,5 +1,7 @@
 import jwt from "jsonwebtoken";
 import { JWT_SECRET_KEY } from "../constraints/constraints.js";
+
+
 export const verifyToken = (req, res, next) => {
   const token = req.cookies.token;
 
