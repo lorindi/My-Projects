@@ -9,25 +9,24 @@ function ProfileUpdatePage() {
   const { currentUser, updateUser } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [avatar, setAvatar] = useState([]);
-  console.log(currentUser);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
 
-    const { username, email, password } = Object.fromEntries(formData);
+    const { name, email, password } = Object.fromEntries(formData);
+    
 
     try {
-      const res = await apiRequest.put(`/users/${currentUser.id}`, {
-        username,
+      const res = await apiRequest.put(`/users/${currentUser._id}`, {
+        name,
         email,
         password,
         avatar: avatar[0],
       });
-      // updateUser(res.data);
-      // navigate("/profile");
-      console.log(res);
+      updateUser(res.data);
+      navigate("/profile");
     } catch (err) {
       console.log(err);
       setError(err.response.data.message);
@@ -40,12 +39,12 @@ function ProfileUpdatePage() {
         <form onSubmit={handleSubmit}>
           <h1>Update Profile</h1>
           <div className="item">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="name">Name</label>
             <input
-              id="username"
-              name="username"
+              id="name"
+              name="name"
               type="text"
-              defaultValue={currentUser._doc.name}
+              defaultValue={currentUser.name}
             />
           </div>
           <div className="item">
@@ -54,7 +53,7 @@ function ProfileUpdatePage() {
               id="email"
               name="email"
               type="email"
-              defaultValue={currentUser._doc.email}
+              defaultValue={currentUser.email}
             />
           </div>
           <div className="item">
@@ -67,7 +66,7 @@ function ProfileUpdatePage() {
       </div>
       <div className="sideContainer">
         <img
-          src={avatar[0] || currentUser._doc.avatar || "/noavatar.jpg"}
+          src={avatar[0] || currentUser.avatar || "/noavatar.png"}
           alt=""
           className="avatar"
         />
