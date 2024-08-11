@@ -9,6 +9,7 @@ import { AuthContext } from "../../../context/AuthContext";
 function ProfilePage() {
   const { updateUser, currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
+console.log(updateUser, currentUser );
 
   useEffect(() => {
     if (!currentUser) {
@@ -40,13 +41,13 @@ function ProfilePage() {
           <div className="info">
             <span>
               Avatar:
-              <img src={currentUser?._doc?.avatar || "/noavatar.png"} alt="" />
+              <img src={currentUser?.avatar || "/noavatar.png"} alt="" />
             </span>
             <span>
-              Name: <b>{currentUser?._doc?.name}</b>
+              Name: <b>{currentUser?.name}</b>
             </span>
             <span>
-              E-mail: <b>{currentUser?._doc?.email}</b>
+              E-mail: <b>{currentUser?.email}</b>
             </span>
             <button onClick={handleLogout}>Logout</button>
           </div>
