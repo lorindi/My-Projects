@@ -24,3 +24,4 @@
 https://cloudinary.com/documentation/react_integration
 https://cloudinary.com/documentation/react_image_and_video_upload
 https://console.cloudinary.com/settings/c-aaf39d3c68fb1202321e2f55554c5d/upload_presets/new
+https://console.cloudinary.com/settings/c-aaf39d3c68fb1202321e2f55554c5d/upload
