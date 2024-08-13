@@ -1,4 +1,4 @@
-import Post from "../models/Post";
+import Post from "../models/Post.js";
 
 export const getPosts = async (req, res) => {
   try {
@@ -12,13 +12,20 @@ export const getPosts = async (req, res) => {
 };
 export const getPost = async (req, res) => {
   const { id } = req.params;
-  try {
-    const posts = await Post.find(id).populate("ownerId", "name avatar");
 
-    res.status(200).json();
+  try {
+    const post = await Post.findById(id).populate("ownerId", "name avatar");
+
+    if (!post) {
+      return res.status(404).json({ message: "Post not found." });
+    }
+
+    res.status(200).json(post);
   } catch (err) {
     console.log(err);
-    res.status(500).json({ message: "Failed to get post" });
+    res
+      .status(500)
+      .json({ message: "Failed to retrieve post. Please try again." });
   }
 };
 export const addPost = async (req, res) => {
@@ -52,41 +59,46 @@ export const addPost = async (req, res) => {
       property,
       ownerId,
     });
-    const savedPost = newPost.save();
+    const savedPost = await newPost.save();
 
-    res
-      .status(200)
-      .json({ message: "Post created successfully", post: savedPost });
+    res.status(200).json(savedPost);
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Failed to create post" });
   }
 };
 export const updatePost = async (req, res) => {
-    const { id } = req.params;
-    const newPost = req.body;
+  const { id } = req.params;
+  const newPost = req.body;
   try {
-  
     const post = await Post.findByIdAndUpdate(id, newPost, { new: true });
     if (!post)
-      return res
-        .status(404)
-        .json({
-          message: "Oops! We couldn't find the post you want to update.",
-        });
-    res.status(200).json(post);
+      return res.status(404).json({
+        message: "The post you're trying to update couldn't be found.",
+      });
+    res.status(200).json({
+      message: "Post updated successfully.",
+      post,
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Failed to update post" });
   }
 };
 export const deletePosts = async (req, res) => {
-    const { id } = req.params;
   try {
-    const post = Post.findByIdAndDelete(id)
-    res.status(200).json();
+    const { id } = req.params;
+
+    const post = await Post.findByIdAndDelete(id);
+    if (!post)
+      return res.status(404).json({
+        message: "The post you're trying to delete couldn't be found.",
+      });
+    res.status(200).json({
+      message: "Post successfully deleted.",
+    });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ message: "Failed to delete post" });
+    res.status(500).json({ message: "Failed to delete the post." });
   }
 };
