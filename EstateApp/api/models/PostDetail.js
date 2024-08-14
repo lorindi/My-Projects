@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const postDetailSchema = new mongoose.Schema({
   desc: {
     type: String,
-    required: true,
+    // required: true,
   },
   utilities: {
     type: String,
