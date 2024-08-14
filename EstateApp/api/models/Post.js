@@ -4,15 +4,18 @@ const postSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
+    unique: true,
   },
   price: {
     type: Number,
     required: true,
   },
-  images: {
-    type: String,
-    required: true,
-  },
+  images: [
+    {
+      type: String,
+      required: true,
+    },
+  ],
   address: {
     type: String,
     required: true,
@@ -39,12 +42,12 @@ const postSchema = new mongoose.Schema({
   },
   type: {
     type: String,
-    enum: ['Property1', 'Property2'], 
+    enum: ["buy", "rent"],
     required: true,
   },
   property: {
     type: String,
-    enum: ['Property1', 'Property2'],
+    enum: ["apartment", "house", "condo", "land"],
     required: true,
   },
   createdAt: {
@@ -55,6 +58,10 @@ const postSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     required: true,
+  },
+  postDetail: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "PostDetail",
   },
 });
 const Post = mongoose.model("Post", postSchema);
