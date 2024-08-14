@@ -1,4 +1,5 @@
 import Post from "../models/Post.js";
+import PostDetail from "../models/PostDetail.js";
 
 export const getPosts = async (req, res) => {
   try {
@@ -29,44 +30,25 @@ export const getPost = async (req, res) => {
   }
 };
 export const addPost = async (req, res) => {
+  const { postData, postDetail } = req.body;
+  const userId = req.userId;
+
   try {
-    const {
-      title,
-      price,
-      images,
-      address,
-      city,
-      bedroom,
-      bathroom,
-      latitude,
-      longitude,
-      type,
-      property,
-      ownerId,
-    } = req.body;
+    const newPostDetail = await PostDetail.create(postDetail);
 
-    const newPost = new Post({
-      title,
-      price,
-      images,
-      address,
-      city,
-      bedroom,
-      bathroom,
-      latitude,
-      longitude,
-      type,
-      property,
-      ownerId,
+    const newPost = await Post.create({
+      ...postData,
+      ownerId: userId,
+      postDetail: newPostDetail._id,
     });
-    const savedPost = await newPost.save();
 
-    res.status(200).json(savedPost);
+    res.status(200).json(newPost);
   } catch (err) {
-    console.log(err);
+    console.error(err);
     res.status(500).json({ message: "Failed to create post" });
   }
 };
+
 export const updatePost = async (req, res) => {
   const { id } = req.params;
   const newPost = req.body;
