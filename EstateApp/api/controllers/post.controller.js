@@ -15,7 +15,7 @@ export const getPost = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const post = await Post.findById(id).populate("ownerId", "name avatar");
+    const post = await Post.findById(id).populate("ownerId postDetail", "email name avatar desc utilities pet income size school bus restaurant");
 
     if (!post) {
       return res.status(404).json({ message: "Post not found." });
