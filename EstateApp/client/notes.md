@@ -20,6 +20,7 @@
 *npm install framer-motion
 *npm install sass
 *npm install react-leaflet leaflet => https://react-leaflet.js.org/docs/start-installation/
+*npm install react-quill
 
 https://cloudinary.com/documentation/react_integration
 https://cloudinary.com/documentation/react_image_and_video_upload
