@@ -53,7 +53,7 @@ console.log(updateUser, currentUser );
           </div>
           <div className="title">
             <h1>My List</h1>
-            <button>Create New Post</button>
+            <Link to="/add">Create New Post</Link>
           </div>
           <List />
           <div className="title">
