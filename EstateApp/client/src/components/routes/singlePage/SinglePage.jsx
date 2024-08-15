@@ -1,29 +1,32 @@
 import Slider from "../../slider/Slider";
 import "./SinglePage.scss";
-import { singlePostData, userData } from "../../../lib/dummydata";
 import Map from "../../map/Map";
+import { useLoaderData } from "react-router-dom";
 function SinglePage() {
+  const post = useLoaderData();
+  console.log(post);
+  
   return (
     <div className="singlePage">
       <div className="details">
         <div className="wrapper">
-          <Slider images={singlePostData.images} />
+          <Slider images={post.images} />
           <div className="info">
             <div className="top">
               <div className="post">
-                <h1>{singlePostData.title}</h1>
+                <h1>{post.title}</h1>
                 <div className="address">
                   <img src="/pin.png" alt="" />
-                  <span>{singlePostData.address}</span>
+                  <span>{post.address}</span>
                 </div>
-                <div className="price">$ {singlePostData.price}</div>
+                <div className="price">$ {post.price}</div>
               </div>
               <div className="user">
-                <img src={userData.img} alt="" />
-                <span>{userData.name}</span>
+                <img src={post.user.img} alt="" />
+                <span>{post.user.name}</span>
               </div>
             </div>
-            <div className="bottom">{singlePostData.description}</div>
+            <div className="bottom">{post.postDetail}</div>
           </div>
         </div>
       </div>
@@ -100,7 +103,7 @@ function SinglePage() {
           <p className="title">Location</p>
 
           <div className="mapContainer">
-            <Map items={[singlePostData]} />
+            <Map items={[post]} />
           </div>
 
           <div className="buttons">
