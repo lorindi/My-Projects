@@ -26,7 +26,7 @@ function SinglePage() {
                 <span>{post.user.name}</span>
               </div>
             </div>
-            <div className="bottom">{post.postDetail}</div>
+            <div className="bottom">{post.postDetail.description}</div>
           </div>
         </div>
       </div>
@@ -123,3 +123,4 @@ function SinglePage() {
 }
 
 export default SinglePage;
+// 2.58
