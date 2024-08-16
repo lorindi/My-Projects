@@ -19,7 +19,9 @@ function Contact() {
             </p>
           </div>
         </div>
+        <div className="emailContainer">
         <Email />
+        </div>
       </div>
     </div>
   );
