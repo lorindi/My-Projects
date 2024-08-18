@@ -5,7 +5,7 @@ import { useLoaderData } from "react-router-dom";
 function SinglePage() {
   const post = useLoaderData();
   console.log(post);
-  
+
   return (
     <div className="singlePage">
       <div className="details">
@@ -22,11 +22,11 @@ function SinglePage() {
                 <div className="price">$ {post.price}</div>
               </div>
               <div className="user">
-                <img src={post.user.img} alt="" />
-                <span>{post.user.name}</span>
+                <img src={post.ownerId.avatar} alt="" />
+                <span>{post.ownerId.name}</span>
               </div>
             </div>
-            <div className="bottom">{post.postDetail.description}</div>
+            <div className="bottom">{post.postDetail.desc}</div>
           </div>
         </div>
       </div>
@@ -38,7 +38,11 @@ function SinglePage() {
               <img src="/utility.png" alt="" />
               <div className="featureText">
                 <span>Utilities</span>
-                <p>Renter is responsible</p>
+                {post.postDetail.utilities === "owner" ? (
+                  <p>Owner is responsible</p>
+                ) : (
+                  <p>Renter is responsible</p>
+                )}
               </div>
             </div>
 
@@ -46,15 +50,19 @@ function SinglePage() {
               <img src="/pet.png" alt="" />
               <div className="featureText">
                 <span>Pet</span>
-                <p>Pet Allowed</p>
+                {post.postDetail.pet === "allowed" ? (
+                  <p>Pet Allowed</p>
+                ) : (
+                  <p>Pet not Allowed</p>
+                )}
               </div>
             </div>
 
             <div className="feature">
               <img src="/fee.png" alt="" />
               <div className="featureText">
-                <span>Property Fees</span>
-                <p>Must have 3x the rent in total household income</p>
+                <span>Income Policy</span>
+                {post.postDetail.income}
               </div>
             </div>
           </div>
@@ -63,15 +71,16 @@ function SinglePage() {
           <div className="sizes">
             <div className="size">
               <img src="/size.png" alt="" />
-              <span>80 sqft</span>
+              {post.postDetail.size} sqft
+
             </div>
             <div className="size">
               <img src="/bedroom.png" alt="" />
-              <span>2 beds</span>
+              <span>{post.bedroom} beds</span>
             </div>
             <div className="size">
               <img src="/bathroom.png" alt="" />
-              <span>1 bathroom</span>
+              <span>{post.bathroom} baths</span>
             </div>
           </div>
 
@@ -81,21 +90,21 @@ function SinglePage() {
               <img src="/school.png" alt="" />
               <div className="featureText">
                 <span>School</span>
-                <p>250m away</p>
+                <p>{post.postDetail.school}m away</p>
               </div>
             </div>
             <div className="feature">
               <img src="/stop.png" alt="" />
               <div className="featureText">
                 <span>Bus Stop</span>
-                <p>100m away</p>
+                <p>{post.postDetail.bus}m away</p>
               </div>
             </div>
             <div className="feature">
               <img src="/restaurant.png" alt="" />
               <div className="featureText">
                 <span>Restaurant</span>
-                <p>200m away</p>
+                <p>{post.postDetail.restaurant}m away</p>
               </div>
             </div>
           </div>
@@ -123,4 +132,4 @@ function SinglePage() {
 }
 
 export default SinglePage;
-// 2.58
+
