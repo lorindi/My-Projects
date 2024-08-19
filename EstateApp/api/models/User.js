@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-    validate: [validator.isEmail, 'Invalid email'],
+    validate: [validator.isEmail, "Invalid email"],
   },
   name: {
     type: String,
@@ -23,6 +23,18 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: null,
   },
+  posts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Post",
+    },
+  ],
+  savedPosts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "SavedPost",
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now,
