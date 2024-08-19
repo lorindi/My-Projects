@@ -4,22 +4,27 @@ import PostDetail from "../models/PostDetail.js";
 export const getPosts = async (req, res) => {
   const query = req.query;
 
-
   try {
     const filter = {
       ...(query.city && { city: query.city }),
       ...(query.type && { type: query.type }),
       ...(query.property && { property: query.property }),
       ...(query.bedroom && { bedroom: parseInt(query.bedroom) }),
-      ...(query.minPrice || query.maxPrice ? { 
-        price: {
-          ...(query.minPrice && { $gte: parseFloat(query.minPrice) }),
-          ...(query.maxPrice && { $lte: parseFloat(query.maxPrice) })
-        }
-      } : {})
+      ...(query.minPrice || query.maxPrice
+        ? {
+            price: {
+              ...(query.minPrice && { $gte: parseFloat(query.minPrice) }),
+              ...(query.maxPrice && { $lte: parseFloat(query.maxPrice) }),
+            },
+          }
+        : {}),
     };
     const posts = await Post.find(filter);
-    res.status(200).json(posts);
+
+    // setTimeout(() => {
+      res.status(200).json(posts);
+    // }, 500);
+
   } catch (err) {
     console.error("Error fetching posts:", err);
     res.status(500).json({ message: "Failed to get posts" });
@@ -30,7 +35,10 @@ export const getPost = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const post = await Post.findById(id).populate("ownerId postDetail", "email name avatar desc utilities pet income size school bus restaurant");
+    const post = await Post.findById(id).populate(
+      "ownerId postDetail",
+      "email name avatar desc utilities pet income size school bus restaurant"
+    );
 
     if (!post) {
       return res.status(404).json({ message: "Post not found." });
