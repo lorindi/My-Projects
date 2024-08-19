@@ -1,3 +1,4 @@
+import SavedPost from "../models/SavedPost.js";
 import User from "../models/User.js";
 import bcrypt from "bcrypt";
 
@@ -64,5 +65,32 @@ export const deleteUser = async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Fail to delete user!" });
+  }
+};
+
+
+export const savePost = async (req, res) => {
+  const postId = req.body.postId;
+  const tokenUserId = req.userId;
+
+  try {
+    const savedPost = await SavedPost.findOne({
+      userId: tokenUserId,
+      postId: postId,
+    });
+
+    if (savedPost) {
+      await SavedPost.deleteOne({ _id: savedPost._id });
+      res.status(200).json({ message: "Post removed from saved list" });
+    } else {
+      await SavedPost.create({
+        userId: tokenUserId,
+        postId: postId,
+      });
+      res.status(200).json({ message: "Post saved" });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "Fail to save post!" });
   }
 };
