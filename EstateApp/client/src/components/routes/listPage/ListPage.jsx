@@ -1,13 +1,14 @@
-import "./ListPage.scss";
-import Filter from "../../filter/Filter";
-import Card from "../../card/Card";
-import Map from "../../map/Map";
-import { useLoaderData, Await } from "react-router-dom";
+import "./listPage.scss";
+import Filter from "../../../components/filter/Filter";
+import Card from "../../../components/card/Card";
+import Map from "../../../components/map/Map";
+import { Await, useLoaderData } from "react-router-dom";
 import { Suspense } from "react";
 
 function ListPage() {
   const data = useLoaderData();
-  console.log(data);
+  console.log('data:', data.postResponse);
+  
 
   return (
     <div className="listPage">
@@ -17,16 +18,12 @@ function ListPage() {
           <Suspense fallback={<p>Loading...</p>}>
             <Await
               resolve={data.postResponse}
-              errorElement={<p>Error loading package location</p>}
+              errorElement={<p>Error loading posts!</p>}
             >
               {(postResponse) =>
-                postResponse?.data?.length > 0 ? (
-                  postResponse.data.map((post) => (
-                    <Card key={post.id} item={post} />
-                  ))
-                ) : (
-                  <p>No posts available</p>
-                )
+                postResponse.data.map((post) => (
+                  <Card key={post.id} item={post} />
+                ))
               }
             </Await>
           </Suspense>
