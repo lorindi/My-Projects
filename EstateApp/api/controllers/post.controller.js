@@ -1,6 +1,8 @@
 import Post from "../models/Post.js";
 import PostDetail from "../models/PostDetail.js";
-
+import jwt from 'jsonwebtoken'
+import { JWT_SECRET_KEY } from "../constraints/constraints.js";
+import SavedPost from "../models/SavedPost.js"
 export const getPosts = async (req, res) => {
   const query = req.query;
 
@@ -31,6 +33,7 @@ export const getPosts = async (req, res) => {
   }
 };
 
+
 export const getPost = async (req, res) => {
   const { id } = req.params;
 
@@ -44,6 +47,20 @@ export const getPost = async (req, res) => {
       return res.status(404).json({ message: "Post not found." });
     }
 
+    // let userId;
+    // const token = req.cookie.token
+    // if (!token) {
+    //   userId = null
+    // } else {
+    //   jwt.verify(token, JWT_SECRET_KEY, async(err, payload)=>{
+    //     if (err) {
+    //       userId = null
+    //     }else {
+    //       userId = payload._id
+    //     }
+    //   })
+    // }
+    // const saved = await SavedPost
     res.status(200).json(post);
   } catch (err) {
     console.log(err);
@@ -52,6 +69,8 @@ export const getPost = async (req, res) => {
       .json({ message: "Failed to retrieve post. Please try again." });
   }
 };
+
+
 export const addPost = async (req, res) => {
   const { postData, postDetail } = req.body;
   const userId = req.userId;
