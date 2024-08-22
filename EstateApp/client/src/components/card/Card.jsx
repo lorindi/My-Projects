@@ -4,7 +4,7 @@ function Card({ item }) {
   const imageUrl = item?.images?.length > 0 ? item.images[0] : "/logo.png";
   return (
     <div className="card">
-      <Link to={`/${item.id}`} className="imageContainer">
+      <Link to={`/${item._id}`} className="imageContainer">
         <img src={imageUrl} alt={item.title || "Post image"} />
       </Link>
       <div className="textContainer">
