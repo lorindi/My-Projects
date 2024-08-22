@@ -3,6 +3,7 @@ import "./Map.scss";
 import "leaflet/dist/leaflet.css";
 import Pin from "../pin/Pin";
 function Map({ items }) {
+  
   return (
     <MapContainer
       center={
@@ -19,7 +20,7 @@ function Map({ items }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {items.map((item) => (
-        <Pin item={item} key={item.id} />
+        <Pin item={item} key={item._id} />
       ))}
     </MapContainer>
   );
