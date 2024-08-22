@@ -8,7 +8,7 @@ function Slider({ images }) {
   const [imageIndex, setImageIndex] = useState(null);
 
   const changeSlide = (direction) => {
-    console.log("Change slide direction:", direction);
+    // console.log("Change slide direction:", direction);
 
     if (direction === "left") {
 
