@@ -1,10 +1,10 @@
-import Slider from "../../slider/Slider";
+import Slider from "../../components/slider/Slider";
 import "./SinglePage.scss";
-import Map from "../../map/Map";
+import Map from "../../components/map/Map";
 import { redirect, useLoaderData } from "react-router-dom";
 import { useContext, useState } from "react";
-import apiRequest from "../../../lib/apiRequest";
-import { AuthContext } from "../../../context/AuthContext";
+import apiRequest from "../../lib/apiRequest";
+import { AuthContext } from "../../context/AuthContext";
 
 function SinglePage() {
   const post = useLoaderData();
