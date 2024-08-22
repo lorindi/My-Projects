@@ -1,11 +1,30 @@
 import Slider from "../../slider/Slider";
 import "./SinglePage.scss";
 import Map from "../../map/Map";
-import { useLoaderData } from "react-router-dom";
+import { redirect, useLoaderData } from "react-router-dom";
+import { useContext, useState } from "react";
+import apiRequest from "../../../lib/apiRequest";
+import { AuthContext } from "../../../context/AuthContext";
+
 function SinglePage() {
   const post = useLoaderData();
-  console.log(post);
+  const { currentUser } = useContext(AuthContext);
+  const [saved, setSaved] = useState(post.isSaved);
 
+  const handleSave = async (e) => {
+    //After react 19 update to use optimistic hook
+    setSaved((prev) => !prev);
+
+    if (!currentUser) {
+      redirect("/login");
+    }
+    try {
+      await apiRequest.post("/users/save", { postId: post._id });
+    } catch (err) {
+      console.log(err);
+      setSaved((prev) => !prev);
+    }
+  };
   return (
     <div className="singlePage">
       <div className="details">
@@ -72,7 +91,6 @@ function SinglePage() {
             <div className="size">
               <img src="/size.png" alt="" />
               {post.postDetail.size} sqft
-
             </div>
             <div className="size">
               <img src="/bedroom.png" alt="" />
@@ -120,9 +138,9 @@ function SinglePage() {
               <img src="/chat.png" alt="" />
               Send a Message
             </button>
-            <button>
+            <button onClick={handleSave} style={{backgroundColor: saved ? "#fece51" : "white"}}>
               <img src="/save.png" alt="" />
-              Save the Place
+              {saved ? "Place Saved" : "Save the Place"}
             </button>
           </div>
         </div>
@@ -132,4 +150,3 @@ function SinglePage() {
 }
 
 export default SinglePage;
-
