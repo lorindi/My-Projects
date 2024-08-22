@@ -1,8 +1,11 @@
 import Post from "../models/Post.js";
 import PostDetail from "../models/PostDetail.js";
-import jwt from 'jsonwebtoken'
+import jwt from "jsonwebtoken";
 import { JWT_SECRET_KEY } from "../constraints/constraints.js";
-import SavedPost from "../models/SavedPost.js"
+import SavedPost from "../models/SavedPost.js";
+
+
+
 export const getPosts = async (req, res) => {
   const query = req.query;
 
@@ -23,10 +26,9 @@ export const getPosts = async (req, res) => {
     };
     const posts = await Post.find(filter);
 
-    // setTimeout(() => {
+    setTimeout(() => {
       res.status(200).json(posts);
-    // }, 500);
-
+    }, 500);
   } catch (err) {
     console.error("Error fetching posts:", err);
     res.status(500).json({ message: "Failed to get posts" });
@@ -34,41 +36,51 @@ export const getPosts = async (req, res) => {
 };
 
 
+
 export const getPost = async (req, res) => {
   const { id } = req.params;
 
+  
+
   try {
+    // Find the post and populate related fields
     const post = await Post.findById(id).populate(
       "ownerId postDetail",
       "email name avatar desc utilities pet income size school bus restaurant"
     );
 
     if (!post) {
-      return res.status(404).json({ message: "Post not found." });
+      return res.status(404).json({ message: "Post not found" });
     }
 
-    // let userId;
-    // const token = req.cookie.token
-    // if (!token) {
-    //   userId = null
-    // } else {
-    //   jwt.verify(token, JWT_SECRET_KEY, async(err, payload)=>{
-    //     if (err) {
-    //       userId = null
-    //     }else {
-    //       userId = payload._id
-    //     }
-    //   })
-    // }
-    // const saved = await SavedPost
-    res.status(200).json(post);
+    // Check if the request contains a token
+    const token = req.cookies?.token;
+
+    if (token) {
+      jwt.verify(token, JWT_SECRET_KEY, async (err, payload) => {
+        if (!err && payload) {
+          // Check if the post is saved by the user
+          const saved = await SavedPost.findOne({
+            ownerId: payload.id,
+            postId: id,
+          });
+
+          return res.status(200).json({ ...post.toObject(), isSaved: !!saved });
+        }
+
+        // If token verification fails, return the post with isSaved as false
+        return res.status(200).json({ ...post.toObject(), isSaved: false });
+      });
+    } else {
+      // If no token, return the post with isSaved as false
+      return res.status(200).json({ ...post.toObject(), isSaved: false });
+    }
   } catch (err) {
-    console.log(err);
-    res
-      .status(500)
-      .json({ message: "Failed to retrieve post. Please try again." });
+    console.error(err);
+    res.status(500).json({ message: "Failed to get post" });
   }
 };
+
 
 
 export const addPost = async (req, res) => {
@@ -91,6 +103,8 @@ export const addPost = async (req, res) => {
   }
 };
 
+
+
 export const updatePost = async (req, res) => {
   const { id } = req.params;
   const newPost = req.body;
@@ -109,6 +123,9 @@ export const updatePost = async (req, res) => {
     res.status(500).json({ message: "Failed to update post" });
   }
 };
+
+
+
 export const deletePosts = async (req, res) => {
   try {
     const { id } = req.params;
