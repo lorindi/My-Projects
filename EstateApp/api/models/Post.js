@@ -63,7 +63,10 @@ const postSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "PostDetail",
   },
-  savedPosts: [{ type: mongoose.Schema.Types.ObjectId, ref: "SavedPost" }],
+  savedPosts: [{ 
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: "SavedPost" 
+  }],
 });
 const Post = mongoose.model("Post", postSchema);
 export default Post;
