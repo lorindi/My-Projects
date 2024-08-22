@@ -104,32 +104,6 @@ export const savePost = async (req, res) => {
   }
 };
 
-// export const savePost = async (req, res) => {
-//   const postId = req.body.postId;
-//   const tokenUserId = req.userId;
-
-//   try {
-//     const savedPost = await SavedPost.findOne({
-//       ownerId: tokenUserId,
-//       postId: postId,
-//     });
-
-//     if (savedPost) {
-//       await SavedPost.deleteOne({ _id: savedPost._id });
-//       res.status(200).json({ message: "Post removed from saved list" });
-//     } else {
-//       await SavedPost.create({
-//         ownerId: tokenUserId,
-//         postId: postId,
-//       });
-//       res.status(200).json({ message: "Post saved" });
-//     }
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json({ message: "Fail to save post!" });
-    
-//   }
-// };
 
 export const profilePosts = async (req, res) => {
   try {
