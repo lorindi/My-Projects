@@ -1,4 +1,4 @@
-import { Email } from "../../../components/email/Email";
+import { Email } from "../../components/email/Email";
 import "./Contact.scss";
 
 function Contact() {
