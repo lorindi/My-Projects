@@ -96,7 +96,7 @@ export const addPost = async (req, res) => {
       postDetail: newPostDetail._id,
     });
 
-    res.status(200).json(newPost);
+    res.status(200).json({message: "Successfully created on post", newPost});
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Failed to create post" });
