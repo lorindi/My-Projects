@@ -7,8 +7,6 @@ import { Suspense } from "react";
 
 function ListPage() {
   const data = useLoaderData();
-  console.log('data:', data.postResponse);
-  
 
   return (
     <div className="listPage">
@@ -22,7 +20,7 @@ function ListPage() {
             >
               {(postResponse) =>
                 postResponse.data.map((post) => (
-                  <Card key={post.id} item={post} />
+                  <Card key={post._id} item={post} />
                 ))
               }
             </Await>
