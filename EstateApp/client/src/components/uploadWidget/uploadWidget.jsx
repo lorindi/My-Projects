@@ -31,7 +31,7 @@ function UploadWidget({ uwConfig, setPublicId, setState }) {
         uwConfig,
         (error, result) => {
           if (!error && result && result.event === "success") {
-            console.log("Done! Here is the image info: ", result.info);
+            // console.log("Done! Here is the image info: ", result.info);
             // setPublicId(result.info.public_id);
             setState(prev=> [...prev, result.info.secure_url])
           }
