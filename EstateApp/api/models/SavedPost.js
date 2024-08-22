@@ -16,5 +16,6 @@ const savedPost = new mongoose.Schema({
     default: Date.now,
   },
 });
+// savedPost.index({ ownerId: 1, postId: 1 }, { unique: true });
 const SavedPost = mongoose.model("SavedPost", savedPost);
 export default SavedPost;
