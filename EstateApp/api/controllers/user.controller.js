@@ -1,17 +1,17 @@
 import SavedPost from "../models/SavedPost.js";
 import User from "../models/User.js";
 import bcrypt from "bcrypt";
-
-export const getUser = async (req, res) => {
-  const {id} = req.params.id
-  try {
-    const users = await User.find(id);
-    res.status(200).json(users);
-  } catch (err) {
-    console.log(err);
-    res.status(500).json({ message: "Failed to get users!" });
-  }
-};
+import Post from "../models/Post.js"
+// export const getUser = async (req, res) => {
+//   const {id} = req.params.id
+//   try {
+//     const users = await User.find(id);
+//     res.status(200).json(users);
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json({ message: "Failed to get users!" });
+//   }
+// };
 
 export const getUsers = async (req, res) => {
   const id = req.params.id;
@@ -67,30 +67,87 @@ export const deleteUser = async (req, res) => {
     res.status(500).json({ message: "Fail to delete user!" });
   }
 };
-
-
 export const savePost = async (req, res) => {
-  const postId = req.body.postId;
-  const tokenUserId = req.userId;
-
   try {
-    const savedPost = await SavedPost.findOne({
-      userId: tokenUserId,
+    const userId = req.userId; 
+    const { postId } = req.body;
+
+    // Check if the post exists
+    const post = await Post.findById(postId);
+    if (!post) {
+      return res.status(404).json({ message: "Post not found" });
+    }
+
+    // Check if the post is already saved by the user
+    const alreadySaved = await SavedPost.findOne({ ownerId: userId, postId });
+    if (alreadySaved) {
+      await SavedPost.findByIdAndDelete(alreadySaved._id);
+      await User.findByIdAndUpdate(userId, { $pull: { savedPosts: alreadySaved._id } });
+      return res.status(200).json({ message: "Post removed from saved posts" });
+    }
+
+    // Save the post to the user's saved posts
+    const newSavedPost = new SavedPost({
+      ownerId: userId,
       postId: postId,
     });
 
-    if (savedPost) {
-      await SavedPost.deleteOne({ _id: savedPost._id });
-      res.status(200).json({ message: "Post removed from saved list" });
-    } else {
-      await SavedPost.create({
-        userId: tokenUserId,
-        postId: postId,
-      });
-      res.status(200).json({ message: "Post saved" });
-    }
+    const savedPost = await newSavedPost.save();
+
+    // Update the user's savedPosts field
+    await User.findByIdAndUpdate(userId, { $push: { savedPosts: savedPost._id } });
+
+    return res.status(201).json({ message: "Post saved successfully" });
   } catch (err) {
-    console.log(err);
-    res.status(500).json({ message: "Fail to save post!" });
+    console.error(err);
+    res.status(500).json({ message: "An error occurred while saving the post" });
+  }
+};
+
+// export const savePost = async (req, res) => {
+//   const postId = req.body.postId;
+//   const tokenUserId = req.userId;
+
+//   try {
+//     const savedPost = await SavedPost.findOne({
+//       ownerId: tokenUserId,
+//       postId: postId,
+//     });
+
+//     if (savedPost) {
+//       await SavedPost.deleteOne({ _id: savedPost._id });
+//       res.status(200).json({ message: "Post removed from saved list" });
+//     } else {
+//       await SavedPost.create({
+//         ownerId: tokenUserId,
+//         postId: postId,
+//       });
+//       res.status(200).json({ message: "Post saved" });
+//     }
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json({ message: "Fail to save post!" });
+    
+//   }
+// };
+
+export const profilePosts = async (req, res) => {
+  try {
+    const userId = req.params.id; // Get userId from route parameters
+
+    // Fetch user posts (posts created by the user)
+    const userPosts = await Post.find({ ownerId: userId });
+
+    // Fetch saved posts (posts saved by the user)
+    const savedPostsData = await SavedPost.find({ ownerId: userId }).populate("postId");
+    
+    // Extract the post details from the populated data
+    const savedPosts = savedPostsData.map(savedPost => savedPost.postId);
+
+    // Send response with both user posts and saved posts
+    res.status(200).json({ userPosts, savedPosts });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "An error occurred while fetching posts." });
   }
 };
