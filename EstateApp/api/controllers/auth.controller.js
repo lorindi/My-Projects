@@ -7,7 +7,7 @@ import { JWT_SECRET_KEY } from "../constraints/constraints.js";
 export const register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
-    console.log("register:", name, email, password);
+    
     // Check if the user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -27,7 +27,7 @@ export const register = async (req, res) => {
     const savedUser = await newUser.save();
 
     // Log the saved user for debugging
-    console.log("User registered successfully:", savedUser);
+    // console.log("User registered successfully:", savedUser);
 
     // Send a success response
     res
@@ -43,7 +43,6 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    console.log("login:", email, password);
 
     // Check if the user exists
     const user = await User.findOne({ email });
@@ -54,8 +53,7 @@ export const login = async (req, res) => {
       password.trim(),
       user.password
     );
-    console.log(password, user.password);
-    console.log(await bcrypt.compare(password, user.password));
+ 
     if (!isPasswordValid)
       return res.status(401).json({ message: "Invalid Credential" });
 
@@ -82,7 +80,7 @@ export const login = async (req, res) => {
         maxAge: age,
       })
       .status(200)
-      // .json({ message: "Login Successful" });
+      // .json({ message: "Login Successful", userInfo})
       .json(userInfo);
   } catch (err) {
     console.error("Login error:", err);
