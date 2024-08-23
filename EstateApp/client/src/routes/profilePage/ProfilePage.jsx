@@ -7,13 +7,10 @@ import { Suspense, useContext, useEffect } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 function ProfilePage() {
-  const data = useLoaderData();
-  console.log(data);
-  
-  
-
   const { updateUser, currentUser } = useContext(AuthContext);
+  const data = useLoaderData();
   const navigate = useNavigate();
+
 
   useEffect(() => {
     if (!currentUser) {
