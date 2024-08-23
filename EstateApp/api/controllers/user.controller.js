@@ -107,13 +107,13 @@ export const savePost = async (req, res) => {
 
 export const profilePosts = async (req, res) => {
   try {
-    const userId = req.params.id; // Get userId from route parameters
+    const tokenUserId = req.userId;
 
     // Fetch user posts (posts created by the user)
-    const userPosts = await Post.find({ ownerId: userId });
+    const userPosts = await Post.find({ ownerId: tokenUserId });
 
     // Fetch saved posts (posts saved by the user)
-    const savedPostsData = await SavedPost.find({ ownerId: userId }).populate("postId");
+    const savedPostsData = await SavedPost.find({ ownerId: tokenUserId }).populate("postId");
     
     // Extract the post details from the populated data
     const savedPosts = savedPostsData.map(savedPost => savedPost.postId);
