@@ -1,9 +1,9 @@
-import "./register.scss";
+import "./RegisterPage.scss";
 import { Link, useNavigate } from "react-router-dom";
 import apiRequest from "../../lib/apiRequest";
 import { useState } from "react";
 
-function Register() {
+function RegisterPage() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
@@ -53,4 +53,4 @@ function Register() {
     </div>
   );
 }
-export default Register;
+export default RegisterPage;

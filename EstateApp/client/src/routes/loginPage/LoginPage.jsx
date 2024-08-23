@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import "./login.scss";
+import "./LoginPage.scss";
 import { Link, useNavigate } from "react-router-dom";
 import apiRequest from "../../lib/apiRequest";
 import { AuthContext } from "../../context/AuthContext";
 
-function Login() {
+function LoginPage() {
   const [error, serError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { updateUser } = useContext(AuthContext);
@@ -66,4 +66,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginPage;

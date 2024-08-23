@@ -1,5 +1,5 @@
 import { Email } from "../../components/email/Email";
-import "./Contact.scss";
+import "./ContactPage.scss";
 
 function Contact() {
   return (
