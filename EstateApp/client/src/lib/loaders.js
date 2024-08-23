@@ -1,7 +1,5 @@
-import { useContext } from "react";
 import apiRequest from "./apiRequest";
 import { defer } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext";
 
 export const singlePageLoader = async ({ request, params }) => {
   const res = await apiRequest("/posts/" + params.id);
@@ -17,8 +15,7 @@ export const listPageLoader = async ({ request, params }) => {
 };
 
 export const profilePageLoader = async () => {
-  const { currentUser } = useContext(AuthContext);
-  const postPromise = apiRequest(`/users/profilePosts/${currentUser._id}`);
+  const postPromise = apiRequest(`/users/profilePosts`);
   return defer({
     postResponse: postPromise,
   });
