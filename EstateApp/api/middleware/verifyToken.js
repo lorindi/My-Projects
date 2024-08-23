@@ -10,7 +10,6 @@ export const verifyToken = (req, res, next) => {
   jwt.verify(token, JWT_SECRET_KEY, async (err, payload) => {
     if (err) return res.status(403).json({ message: "Token is not Valid!" });
     req.userId = payload.id;
-    // console.log(req.userId, payload.id, req);
     next();
   });
 };
