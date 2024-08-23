@@ -35,6 +35,12 @@ const userSchema = new mongoose.Schema({
       ref: "SavedPost",
     },
   ],
+  chatIDs: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Chat",
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now,
