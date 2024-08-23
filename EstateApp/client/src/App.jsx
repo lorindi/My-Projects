@@ -5,23 +5,37 @@ import ListPage from "./routes/listPage/ListPage";
 import SinglePage from "./routes/singlePage/SinglePage";
 import ProfilePage from "./routes/profilePage/ProfilePage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/ProfileUpdatePage";
-
-import About from "./routes/about/About";
-import Contact from "./routes/contact/Contact";
-import Login from "./routes/login/Login";
-import Register from "./routes/register/Register";
+import About from "./routes/aboutPage/About";
+import Contact from "./routes/contactPage/ContactPage";
+import LoginPage from "./routes/loginPage/LoginPage";
+import RegisterPage from "./routes/registerPage/RegisterPage";
 import NewPostPage from "./routes/newPostPage/newPostPage";
+// import ErrorPage from "./routes/errorPage/ErrorPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
+import AgentsPage from "./routes/agentsPage/AgentsPage";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout />,
+      // errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
           element: <HomePage />,
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        {
+          path: "/agents",
+          element: <AgentsPage />,
         },
         {
           path: "/list",
@@ -35,26 +49,19 @@ function App() {
         },
 
         {
-          path: "/about",
-          element: <About />,
-        },
-        {
-          path: "/contact",
-          element: <Contact />,
-        },
-        {
           path: "/login",
-          element: <Login />,
+          element: <LoginPage />,
         },
         {
           path: "/register",
-          element: <Register />,
+          element: <RegisterPage />,
         },
       ],
     },
     {
       path: "/",
       element: <RequireAuth />,
+      // errorElement: <ErrorPage />,
       children: [
         {
           path: "/profile",
