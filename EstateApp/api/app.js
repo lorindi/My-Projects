@@ -6,6 +6,8 @@ import postRoute from "./routes/post.route.js";
 import authRoute from "./routes/auth.route.js";
 import testRoute from "./routes/test.route.js";
 import userRoute from "./routes/user.route.js";
+import chatRoute from "./routes/chat.route.js";
+import chatMessage from "./routes/message.route.js";
 import mongoose from "mongoose";
 import { PORT, MONGO_DB_CONNECTION_STRING } from "./constraints/constraints.js";
 
@@ -29,6 +31,8 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/test", testRoute);
+app.use("/api/chats", chatRoute);
+app.use("/api/messages", chatMessage);
 
 app.listen(PORT, () => {
   console.log(`Restful server is listening on port ${PORT}...`);
