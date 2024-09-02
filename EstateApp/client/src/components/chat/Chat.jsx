@@ -2,8 +2,9 @@ import "./Chat.scss";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-function Chat() {
+function Chat({ chats }) {
   const [close, setClose] = useState(true);
+  console.log(chats);
 
   const CloseIcon = ({ onClick }) => (
     <svg
@@ -31,102 +32,16 @@ function Chat() {
     <div className="chat">
       <div className="messages">
         <h1>Messages</h1>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
-        <div className="message">
-          <img
-            src="https://avatars.githubusercontent.com/u/92224899?v=4"
-            alt=""
-          />
-          <span>Lo Mitova</span>
-          <p>Lorem ipsum dolor sit, amet...</p>
-        </div>
+        {chats.map((c) => (
+          <div className="message" key={c._id}>
+            <img
+              src={c.ownerId.avatar || "/noavatar.png"}
+              alt=""
+            />
+            <span>{c.ownerId.name}</span>
+            <p>Lorem ipsum dolor sit, amet...</p>
+          </div>
+        ))}
       </div>
       {close && (
         <div className="chatBox">
