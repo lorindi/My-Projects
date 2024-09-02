@@ -25,7 +25,8 @@
     "react-quill": "^2.0.0",
     "react-router-dom": "^6.24.1",
     "react-toastify": "^10.0.5",
-    "sass": "^1.77.6"
+    "sass": "^1.77.6",
+    "timeago.js": "^4.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
