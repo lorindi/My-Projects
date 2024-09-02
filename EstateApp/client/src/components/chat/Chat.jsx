@@ -5,10 +5,10 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { AuthContext } from "../../context/AuthContext";
 import apiRequest from "../../lib/apiRequest";
 import { format } from "timeago.js";
+
 function Chat({ chats }) {
   const [chat, setChats] = useState(null);
   const { currentUser } = useContext(AuthContext);
-  console.log(chats);
 
   const handleOpenChat = async (id, receiver) => {
     try {
@@ -18,7 +18,21 @@ function Chat({ chats }) {
       console.log(err);
     }
   };
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const text = formData.get("text");
+    console.log(text);
+    
+    if (!text) return;
+    try {
+      const res = await apiRequest.post("/messages/" + chat._id, { text });
+      setChats((prev) => ({ ...prev, messages: [...prev.messages, res.data] }));
+      e.target.reset();
+    } catch (err) {
+      console.log(err);
+    }
+  };
   const CloseIcon = ({ onClick }) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -78,11 +92,11 @@ function Chat({ chats }) {
                 key={message.id}
                 style={{
                   alignSelf:
-                    message.ownerId === currentUser.id
+                    message.ownerId === currentUser._id
                       ? "flex-end"
                       : "flex-start",
                   textAlign:
-                    message.ownerId === currentUser.id ? "right" : "left",
+                    message.ownerId === currentUser._id ? "right" : "left",
                 }}
               >
                 <p>{message.text}</p>
@@ -90,12 +104,12 @@ function Chat({ chats }) {
               </div>
             ))}
           </div>
-          <div className="bottom">
-            <textarea name="" id=""></textarea>
+          <form onSubmit={handleSubmit} className="bottom">
+            <textarea name="text" id=""></textarea>
             <button>
               <FontAwesomeIcon icon={faPaperPlane} className="icon" />
             </button>
-          </div>
+          </form>
         </div>
       )}
     </div>
