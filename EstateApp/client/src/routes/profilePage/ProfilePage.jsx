@@ -11,7 +11,6 @@ function ProfilePage() {
   const data = useLoaderData();
   const navigate = useNavigate();
 
-
   useEffect(() => {
     if (!currentUser) {
       navigate("/login");
@@ -62,8 +61,7 @@ function ProfilePage() {
                 resolve={data.postResponse}
                 errorElement={<p>Error loading posts!</p>}
               >
-                {(postResponse) => <List posts = {postResponse.data.userPosts} />}
-                
+                {(postResponse) => <List posts={postResponse.data.userPosts} />}
               </Await>
             </Suspense>
 
@@ -75,14 +73,23 @@ function ProfilePage() {
                 resolve={data.postResponse}
                 errorElement={<p>Error loading posts!</p>}
               >
-                {(postResponse) => <List posts = {postResponse.data.savedPosts} />}
+                {(postResponse) => (
+                  <List posts={postResponse.data.savedPosts} />
+                )}
               </Await>
             </Suspense>
           </div>
         </div>
         <div className="chatContainer">
           <div className="wrapper">
-            <Chat />
+            <Suspense fallback={<p>Loading...</p>}>
+              <Await
+                resolve={data.chatResponse}
+                errorElement={<p>Error loading chats!</p>}
+              >
+                {(chatResponse) => <Chat chats={chatResponse.data}/>}
+              </Await>
+            </Suspense>
           </div>
         </div>
       </div>
