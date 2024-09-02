@@ -1,10 +1,23 @@
 import "./Chat.scss";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { AuthContext } from "../../context/AuthContext";
+import apiRequest from "../../lib/apiRequest";
+import { format } from "timeago.js";
 function Chat({ chats }) {
-  const [close, setClose] = useState(true);
+  const [chat, setChats] = useState(null);
+  const { currentUser } = useContext(AuthContext);
   console.log(chats);
+
+  const handleOpenChat = async (id, receiver) => {
+    try {
+      const res = await apiRequest("/chats/" + id);
+      setChats({ ...res.data, receiver });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const CloseIcon = ({ onClick }) => (
     <svg
@@ -33,53 +46,49 @@ function Chat({ chats }) {
       <div className="messages">
         <h1>Messages</h1>
         {chats.map((c) => (
-          <div className="message" key={c._id}>
-            <img
-              src={c.ownerId.avatar || "/noavatar.png"}
-              alt=""
-            />
-            <span>{c.ownerId.name}</span>
-            <p>Lorem ipsum dolor sit, amet...</p>
+          <div
+            className="message"
+            key={c._id}
+            style={{
+              backgroundColor: c.seenBy.includes(currentUser.id)
+                ? "white"
+                : "#fecd514e",
+            }}
+            onClick={() => handleOpenChat(c._id, c.receiver)}
+          >
+            <img src={c.receiver.avatar || "/noavatar.png"} alt="" />
+            <span>{c.receiver.name}</span>
+            <p>{c.lastMessage}</p>
           </div>
         ))}
       </div>
-      {close && (
+      {chat && (
         <div className="chatBox">
           <div className="top">
             <div className="user">
-              <img
-                src="https://avatars.githubusercontent.com/u/92224899?v=4"
-                alt=""
-              />
-              Lo Mitova
+              <img src={chat.receiver.avatar || "/noavatar.png"} alt="" />
+              {chat.receiver.name}
             </div>
             <CloseIcon onClick={() => setClose(null)} />
           </div>
           <div className="center">
-            <div className="chatMessage">
-              <p>Lorem ipsum dolor sit amet consectetur...?</p>
-              <span>1 hour ago</span>
-            </div>
-            <div className="chatMessage own">
-              <p>Lorem ipsum dolor sit amet consectetur...?</p>
-              <span>1 hour ago</span>
-            </div>
-            <div className="chatMessage">
-              <p>Lorem ipsum dolor sit amet consectetur...?</p>
-              <span>1 hour ago</span>
-            </div>
-            <div className="chatMessage own">
-              <p>Lorem ipsum dolor sit amet consectetur...?</p>
-              <span>1 hour ago</span>
-            </div>
-            <div className="chatMessage">
-              <p>Lorem ipsum dolor sit amet consectetur...?</p>
-              <span>1 hour ago</span>
-            </div>
-            <div className="chatMessage own">
-              <p>Lorem ipsum dolor sit amet consectetur...?</p>
-              <span>1 hour ago</span>
-            </div>
+            {chat.messages.map((message) => (
+              <div
+                className="chatMessage"
+                key={message.id}
+                style={{
+                  alignSelf:
+                    message.ownerId === currentUser.id
+                      ? "flex-end"
+                      : "flex-start",
+                  textAlign:
+                    message.ownerId === currentUser.id ? "right" : "left",
+                }}
+              >
+                <p>{message.text}</p>
+                <span>{format(message.createdAt)}</span>
+              </div>
+            ))}
           </div>
           <div className="bottom">
             <textarea name="" id=""></textarea>
