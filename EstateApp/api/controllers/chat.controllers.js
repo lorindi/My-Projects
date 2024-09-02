@@ -5,27 +5,26 @@ export const getChats = async (req, res) => {
   const tokenUserId = req.userId;
 
   try {
-    const chats = await Chat.find({ ownerId: tokenUserId });
+    const chats = await Chat.find({ ownerId: tokenUserId }).lean();  
 
     for (const chat of chats) {
       const receiverId = chat.ownerId.find(
         (id) => id.toString() !== tokenUserId.toString()
       );
-
-      const receiver = await User.findById(receiverId).select(
-        "id username avatar"
-      );
       
-
-      chat.receiver = receiver;
-      console.log(chat);
+      if (receiverId) {
+        const receiver = await User.findById(receiverId).select("name avatar");
+        chat.receiver = receiver;  
+      }
     }
+
     res.status(200).json(chats);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Failed to get chats!" });
   }
 };
+
 
 export const getChat = async (req, res) => {
   const tokenUserId = req.userId;
