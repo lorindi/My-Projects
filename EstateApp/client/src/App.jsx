@@ -10,7 +10,6 @@ import Contact from "./routes/contactPage/ContactPage";
 import LoginPage from "./routes/loginPage/LoginPage";
 import RegisterPage from "./routes/registerPage/RegisterPage";
 import NewPostPage from "./routes/newPostPage/newPostPage";
-// import ErrorPage from "./routes/errorPage/ErrorPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 import AgentsPage from "./routes/agentsPage/AgentsPage";
 
@@ -19,7 +18,6 @@ function App() {
     {
       path: "/",
       element: <Layout />,
-      // errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
@@ -61,7 +59,6 @@ function App() {
     {
       path: "/",
       element: <RequireAuth />,
-      // errorElement: <ErrorPage />,
       children: [
         {
           path: "/profile",
