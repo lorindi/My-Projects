@@ -26,3 +26,5 @@ npm i mongoose bcrypt jsonwebtoken
 npm install cors
 npm install validator
 npm i cookie-parser
+
+npm i socket.io
