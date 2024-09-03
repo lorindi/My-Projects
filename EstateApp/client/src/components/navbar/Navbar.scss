@@ -4,10 +4,12 @@ nav {
   justify-content: space-between;
   height: 100px;
   align-items: center;
+  width: 100%;
   
 
   a {
     transition: all 0.4s ease;
+    letter-spacing: 1.5px;
     // letter-spacing: 1px;
 
     @include sm {
