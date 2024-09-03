@@ -10,6 +10,7 @@ function ProfilePage() {
   const { updateUser, currentUser } = useContext(AuthContext);
   const data = useLoaderData();
   const navigate = useNavigate();
+  
 
   useEffect(() => {
     if (!currentUser) {
