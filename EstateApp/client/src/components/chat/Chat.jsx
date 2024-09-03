@@ -8,10 +8,10 @@ import { format } from "timeago.js";
 import { SocketContext } from "../../context/SocketContext";
 
 function Chat({ chats }) {
-  const [chat, setChats] = useState(null);
+  const [chat, setChat] = useState(null);
   const { currentUser } = useContext(AuthContext);
   const { socket } = useContext(SocketContext);
-  
+
   const messageEndRef = useRef();
 
   useEffect(() => {
@@ -21,7 +21,8 @@ function Chat({ chats }) {
   const handleOpenChat = async (id, receiver) => {
     try {
       const res = await apiRequest("/chats/" + id);
-      setChats({ ...res.data, receiver });
+      setChat({ ...res.data, receiver });
+      console.log(chat);
     } catch (err) {
       console.log(err);
     }
@@ -35,7 +36,7 @@ function Chat({ chats }) {
     if (!text) return;
     try {
       const res = await apiRequest.post("/messages/" + chat._id, { text });
-      setChats((prev) => ({ ...prev, messages: [...prev.messages, res.data] }));
+      setChat((prev) => ({ ...prev, messages: [...prev.messages, res.data] }));
       e.target.reset();
       socket.emit("sendMessage", {
         receiverId: chat.receiver._id,
@@ -83,13 +84,17 @@ function Chat({ chats }) {
 
     if (chat && socket) {
       socket.on("getMessage", (data) => {
-        if (chat.id === data.chatId) {
-          setChats((prev) => ({ ...prev, messages: [...prev.messages, data] }));
+        if (chat._id === data.chatId) {
+          setChat((prev) => ({ ...prev, messages: [...prev.messages, data] }));
           read();
         }
       });
     }
-  });
+    return () => {
+      socket.off("getMessage");
+    };
+  }, [socket, chat]);
+
 
   return (
     <div className="chat">
@@ -127,7 +132,7 @@ function Chat({ chats }) {
             {chat.messages.map((message) => (
               <div
                 className="chatMessage"
-                key={message.id}
+                key={message._id}
                 style={{
                   alignSelf:
                     message.ownerId === currentUser._id
