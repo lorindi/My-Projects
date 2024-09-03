@@ -1,14 +1,16 @@
 import "./Chat.scss";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { AuthContext } from "../../context/AuthContext";
 import apiRequest from "../../lib/apiRequest";
 import { format } from "timeago.js";
+import { SocketContext } from "../../context/SocketContext";
 
 function Chat({ chats }) {
   const [chat, setChats] = useState(null);
   const { currentUser } = useContext(AuthContext);
+  const { socket } = useContext(SocketContext);
 
   const handleOpenChat = async (id, receiver) => {
     try {
@@ -23,12 +25,16 @@ function Chat({ chats }) {
     const formData = new FormData(e.target);
     const text = formData.get("text");
     console.log(text);
-    
+
     if (!text) return;
     try {
       const res = await apiRequest.post("/messages/" + chat._id, { text });
       setChats((prev) => ({ ...prev, messages: [...prev.messages, res.data] }));
       e.target.reset();
+      socket.emit("sendMessage", {
+        receiverId: chat.receiver._id,
+        data: res.data,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -55,8 +61,33 @@ function Chat({ chats }) {
       />
     </svg>
   );
+
+  // const testSocket = () => {
+  //   socket.emit("test", "hi from client")
+  // }
+
+  useEffect(() => {
+    const read = async () => {
+      try {
+        await apiRequest.put("/chats/read/" + chat._id);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    if (chat && socket) {
+      socket.on("getMessage", (data) => {
+        if (chat.id === data.chatId) {
+          setChats((prev) => ({ ...prev, messages: [...prev.messages, data] }));
+          read();
+        }
+      });
+    }
+  });
+
   return (
     <div className="chat">
+      {/* <button onClick={testSocket}>Test me</button> */}
       <div className="messages">
         <h1>Messages</h1>
         {chats.map((c) => (
