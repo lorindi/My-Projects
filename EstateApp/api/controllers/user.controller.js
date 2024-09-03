@@ -1,7 +1,8 @@
 import SavedPost from "../models/SavedPost.js";
 import User from "../models/User.js";
 import bcrypt from "bcrypt";
-import Post from "../models/Post.js"
+import Post from "../models/Post.js";
+import Chat from "../models/Chat.js"
 // export const getUser = async (req, res) => {
 //   const {id} = req.params.id
 //   try {
@@ -25,7 +26,6 @@ export const getUsers = async (req, res) => {
   }
 };
 
-
 export const updateUser = async (req, res) => {
   const id = req.params.id;
   const tokenUserId = req.userId;
@@ -41,7 +41,11 @@ export const updateUser = async (req, res) => {
       inputs.password = hashedPassword;
     }
 
-    const updatedUser = await User.findByIdAndUpdate(id, { ...inputs, avatar }, { new: true });
+    const updatedUser = await User.findByIdAndUpdate(
+      id,
+      { ...inputs, avatar },
+      { new: true }
+    );
 
     const { password: userPassword, ...rest } = updatedUser._doc;
 
@@ -52,7 +56,6 @@ export const updateUser = async (req, res) => {
   }
 };
 
-
 export const deleteUser = async (req, res) => {
   const id = req.params.id;
   const tokenUserId = req.userId;
@@ -60,8 +63,8 @@ export const deleteUser = async (req, res) => {
     return res.status(403).json({ message: "Not Authorized" });
   }
   try {
-    await User.findByIdAndDelete({id});
-    res.status(200).json({message: "User deleted"});
+    await User.findByIdAndDelete({ id });
+    res.status(200).json({ message: "User deleted" });
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Fail to delete user!" });
@@ -69,7 +72,7 @@ export const deleteUser = async (req, res) => {
 };
 export const savePost = async (req, res) => {
   try {
-    const userId = req.userId; 
+    const userId = req.userId;
     const { postId } = req.body;
 
     // Check if the post exists
@@ -82,7 +85,9 @@ export const savePost = async (req, res) => {
     const alreadySaved = await SavedPost.findOne({ ownerId: userId, postId });
     if (alreadySaved) {
       await SavedPost.findByIdAndDelete(alreadySaved._id);
-      await User.findByIdAndUpdate(userId, { $pull: { savedPosts: alreadySaved._id } });
+      await User.findByIdAndUpdate(userId, {
+        $pull: { savedPosts: alreadySaved._id },
+      });
       return res.status(200).json({ message: "Post removed from saved posts" });
     }
 
@@ -95,15 +100,18 @@ export const savePost = async (req, res) => {
     const savedPost = await newSavedPost.save();
 
     // Update the user's savedPosts field
-    await User.findByIdAndUpdate(userId, { $push: { savedPosts: savedPost._id } });
+    await User.findByIdAndUpdate(userId, {
+      $push: { savedPosts: savedPost._id },
+    });
 
     return res.status(201).json({ message: "Post saved successfully" });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "An error occurred while saving the post" });
+    res
+      .status(500)
+      .json({ message: "An error occurred while saving the post" });
   }
 };
-
 
 export const profilePosts = async (req, res) => {
   try {
@@ -113,15 +121,33 @@ export const profilePosts = async (req, res) => {
     const userPosts = await Post.find({ ownerId: tokenUserId });
 
     // Fetch saved posts (posts saved by the user)
-    const savedPostsData = await SavedPost.find({ ownerId: tokenUserId }).populate("postId");
-    
+    const savedPostsData = await SavedPost.find({
+      ownerId: tokenUserId,
+    }).populate("postId");
+
     // Extract the post details from the populated data
-    const savedPosts = savedPostsData.map(savedPost => savedPost.postId);
+    const savedPosts = savedPostsData.map((savedPost) => savedPost.postId);
 
     // Send response with both user posts and saved posts
     res.status(200).json({ userPosts, savedPosts });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "An error occurred while fetching posts." });
+    res
+      .status(500)
+      .json({ message: "An error occurred while fetching posts." });
   }
 };
+export const getNotificationNumber = async (req, res) => {
+  const tokenUserId = req.userId;
+  try {
+    const number = await Chat.countDocuments({
+      ownerId: tokenUserId,
+      seenBy: { $ne: tokenUserId }
+    });
+    res.status(200).json(number);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Failed to get notification number!" });
+  }
+};
+
