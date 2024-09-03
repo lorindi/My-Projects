@@ -11,3 +11,9 @@ body {
     font-family: "Lato", sans-serif;
     overflow: hidden;
 }
+#root{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
