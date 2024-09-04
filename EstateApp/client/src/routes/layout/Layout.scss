@@ -10,15 +10,15 @@
   width: 100%;
 
   @include lg {
-    background-color: coral;
+    // background-color: coral;
     max-width: 1280px;
   }
   @include md {
-    background-color: cornflowerblue;
+    // background-color: cornflowerblue;
     max-width: 768px;
   }
   @include sm {
-    background-color: red;
+    // background-color: red;
     max-width: 640px;
   }
   .content {
