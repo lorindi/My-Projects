@@ -35,6 +35,9 @@
   .footer {
     width: 100%;
     // background-color: aqua;
-    min-height: 500px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
