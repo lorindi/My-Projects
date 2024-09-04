@@ -1,7 +1,8 @@
 @import "../../responsive.scss";
 .profilePage {
   display: flex;
-  height: 100%;
+  min-height: 90vh;
+  width: 100%;
 
   @include md {
     flex-direction: column;
@@ -21,6 +22,8 @@
   .details {
     flex: 3;
     overflow-y: scroll;
+    padding-top: 50px;
+
     /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
     &::-webkit-scrollbar {
       display: none;
@@ -95,6 +98,8 @@
     flex: 2;
     background-color: #fcf5f3;
     height: 100%;
+  padding-top: 50px;
+
     @include md {
       flex: none;
       height: max-content;
