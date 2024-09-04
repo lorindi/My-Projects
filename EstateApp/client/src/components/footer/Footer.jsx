@@ -11,6 +11,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="contentContactsLogoAddress">
+
         <ul className="contacts">
           <li className="">
             <CallOutline />
@@ -36,7 +37,7 @@ function Footer() {
             <span>LoEstate</span>
           </Link>
 
-          <div className="social">
+          <div className="contentSocial">
             <a href="#">
               <Instagram />
             </a>
@@ -48,11 +49,30 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div className="address">
-
+        <div className="contentMenu">
+          <Link
+            to=""
+            className=""
+          >
+            Menu
+          </Link>
+          <div className="menu">
+            <Link to="" className="">
+              Search
+            </Link>
+            <Link to="/profile" className="">
+              Profile
+            </Link>
+            <Link href="/add" className="">
+              Create Estate
+            </Link>
+            <Link to="/profile" className="">
+              My Estates
+            </Link>
+          </div>
         </div>
       </div>
-      {/* <div className="instagramImgs">
+      <div className="instagramImgs">
         <img
           src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
@@ -101,7 +121,7 @@ function Footer() {
           src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
         />
-      </div> */}
+      </div>
     </div>
   );
 }
