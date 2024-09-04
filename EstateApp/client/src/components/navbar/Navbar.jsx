@@ -49,14 +49,15 @@ function Navbar() {
             onClick={() => setOpen((prev) => !prev)}
           />
         </div>
-        <div className={open ? "menu active" : "menu"}>
+        {open && (<div className="mobileNavigation">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/agents">Agents</Link>
           <Link to="/sign-in">Sign in</Link>
           <Link to="/sign-up">Sign up</Link>
-        </div>
+        </div>)}
+        
       </div>
     </nav>
   );
