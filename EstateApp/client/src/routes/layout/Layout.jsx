@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import "./Layout.scss";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
+import Footer from "../../components/footer/Footer";
 
 function Layout() {
   return (
@@ -13,7 +14,9 @@ function Layout() {
       <div className="content">
         <Outlet />
       </div>
-      <div className="footer"></div>
+      <div className="footer">
+        <Footer/>
+      </div>
     </div>
   );
 }
@@ -31,7 +34,9 @@ function RequireAuth() {
       <div className="content">
         <Outlet />
       </div>
-      <div className="footer"></div>
+      <div className="footer">
+        <Footer/>
+      </div>
     </div>
   );
 }
