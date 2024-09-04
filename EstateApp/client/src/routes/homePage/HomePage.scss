@@ -2,7 +2,7 @@
 
 .homePage {
   display: flex;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 
   .textContainer {
@@ -17,11 +17,16 @@
       gap: 50px;
       height: 100%;
 
+
       @include md {
         padding: 0;
+        padding: 0px 10px;
+
       }
       @include sm {
         justify-content: flex-start;
+        padding: 0px 10px;
+
       }
 
       .title {
