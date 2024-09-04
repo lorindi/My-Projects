@@ -2,7 +2,7 @@
 
 .homePage {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 
   .textContainer {
@@ -14,29 +14,27 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 50px;
+      gap: 80px;
       height: 100%;
-
+      padding: 1% 100px 10% 0px;
 
       @include md {
         padding: 0;
         padding: 0px 10px;
-
       }
       @include sm {
         justify-content: flex-start;
         padding: 0px 10px;
-
       }
 
       .title {
         font-size: 64px;
-        color: #2D9CDB;
+        color: #2d9cdb;
         @include lg {
           font-size: 48px;
         }
       }
-      .description{
+      .description {
         color: #555;
         letter-spacing: 0.5px;
       }
