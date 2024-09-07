@@ -51,7 +51,7 @@ function Footer() {
         </div>
         <div className="contentMenu">
           <Link
-            to=""
+            to="/profile"
             className=""
           >
             Menu
@@ -63,7 +63,7 @@ function Footer() {
             <Link to="/profile" className="">
               Profile
             </Link>
-            <Link href="/add" className="">
+            <Link to="/add" className="">
               Create Estate
             </Link>
             <Link to="/profile" className="">
