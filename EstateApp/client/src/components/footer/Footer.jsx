@@ -55,7 +55,7 @@ function Footer() {
         </div>
 
         <div className="contentLogoSocial">
-          <Link class="logo" href="/">
+          <Link className="logo" href="/">
             <img src="/logo.png" alt="Logo" />
             <span>LoEstate</span>
           </Link>
