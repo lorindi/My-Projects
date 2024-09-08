@@ -1,24 +1,41 @@
-.footer {
+@import "../../responsive.scss";
+.footerContainer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
   width: 100%;
   min-height: 50vh;
-  padding: 10px;
+  padding: 20px 0px 20px 0px;
+
+  
 
   .contentContactsLogoAddress {
     display: flex;
     width: 100%;
     height: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
 
-    .contacts {
+    .center {
       flex: 1;
-      margin: 0;
-
-      li {
+        margin: 0;
         display: flex;
-        list-style: none;
+        flex-direction: column;
+        align-items: center;
+      .contacts {
+        flex: 1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+  
+        li {
+          display: flex;
+          list-style: none;
+          gap: 10px;
+        }
       }
     }
     .contentLogoSocial {
@@ -31,14 +48,15 @@
         align-items: center;
         justify-content: center;
         img {
-          width: 150px;
-          height: 150px;
+          width: 80px;
           object-fit: cover;
         }
         span {
-          font-weight: 600;
-          letter-spacing: 2px;
+          font-weight: bold;
           font-size: 20px;
+          display: flex;
+          align-items: center;
+          color: #2d9cdb;
         }
       }
       .contentSocial {
@@ -47,6 +65,7 @@
         justify-content: center;
         gap: 15px;
         width: 100%;
+
       }
     }
     .contentMenu {
@@ -66,11 +85,18 @@
 
   .instagramImgs {
     display: grid;
-
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     gap: 10px;
-    grid-template-areas:
-      "img1 img2 img3 img4 img5 img6"
-      "img7 img8 img9 img10 img11 img12";
+
+    @include md {
+      padding-left: 5px;
+    }
+
+
+    grid-template-areas: "img1 img2 img3 img4 img5 img6";
 
     img:nth-child(1) {
       grid-area: img1;
@@ -90,28 +116,24 @@
     img:nth-child(6) {
       grid-area: img6;
     }
-    img:nth-child(7) {
-      grid-area: img7;
-    }
-    img:nth-child(8) {
-      grid-area: img8;
-    }
-    img:nth-child(9) {
-      grid-area: img9;
-    }
-    img:nth-child(10) {
-      grid-area: img10;
-    }
-    img:nth-child(11) {
-      grid-area: img11;
-    }
-    img:nth-child(12) {
-      grid-area: img12;
-    }
+
     img {
-      width: 100%;
-      height: 100%;
+      width: 130%;
+      height: 50%;
       object-fit: cover;
+      border-radius: 5px;
+      opacity: 0.7;
+
+      @include md {
+        width: 100%;
+        height: 100%;
+
     }
+    }
+  }
+  .allRightsReserved {
+    letter-spacing: 1.5px;
+    color: gray;
+    margin-top: 20px;
   }
 }
