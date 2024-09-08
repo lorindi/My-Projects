@@ -9,7 +9,7 @@ import About from "./routes/aboutPage/About";
 import Contact from "./routes/contactPage/ContactPage";
 import LoginPage from "./routes/loginPage/LoginPage";
 import RegisterPage from "./routes/registerPage/RegisterPage";
-import NewPostPage from "./routes/newPostPage/newPostPage";
+import NewPostPage from "./routes/newPostPage/NewPostPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 import AgentsPage from "./routes/agentsPage/AgentsPage";
 
