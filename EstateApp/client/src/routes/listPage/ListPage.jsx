@@ -1,4 +1,4 @@
-import "./listPage.scss";
+import "./ListPage.scss";
 import Filter from "../../components/filter/Filter";
 import Card from "../../components/card/Card";
 import Map from "../../components/map/Map";
