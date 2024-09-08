@@ -1,9 +1,7 @@
-import React from "react";
 
-function LocationSvgHomePage({ className }) {
+function LocationSvgHomePage() {
   return (
     <svg
-      className={className}
       viewBox="0 0 107 125"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
