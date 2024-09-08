@@ -89,7 +89,8 @@
     background-color: #fcf5f3;
     height: 100%;
     padding-top: 50px;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
+
 
     @include md {
       flex: none;
