@@ -7,15 +7,10 @@
   @include md {
     flex-direction: column;
     overflow: scroll;
-    /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
     &::-webkit-scrollbar {
       display: none;
     }
-
-    /* Hide scrollbar for Firefox */
     scrollbar-width: none;
-
-    /* Hide scrollbar for Internet Explorer, Edge */
     -ms-overflow-style: none;
   }
 
@@ -24,15 +19,10 @@
     overflow-y: scroll;
     padding-top: 50px;
 
-    /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
     &::-webkit-scrollbar {
       display: none;
     }
-
-    /* Hide scrollbar for Firefox */
     scrollbar-width: none;
-
-    /* Hide scrollbar for Internet Explorer, Edge */
     -ms-overflow-style: none;
 
     @include md {
@@ -75,10 +65,10 @@
           gap: 20px;
         }
 
-        button{
+        button {
           width: 100px;
           background-color: teal;
-          border: none ;
+          border: none;
           color: white;
           padding: 15px;
           border-radius: 5px;
@@ -98,7 +88,7 @@
     flex: 2;
     background-color: #fcf5f3;
     height: 100%;
-  padding-top: 50px;
+    padding-top: 50px;
 
     @include md {
       flex: none;
