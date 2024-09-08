@@ -35,9 +35,13 @@
   .footer {
     width: 100%;
     // background-color: aqua;
-    min-height: 60vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include sm {
+     display: none;
+    }
   }
 }
