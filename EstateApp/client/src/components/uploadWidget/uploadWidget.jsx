@@ -61,5 +61,5 @@ function UploadWidget({ uwConfig, setPublicId, setState }) {
   );
 }
 
-export default  UploadWidget;
+export default UploadWidget;
 export { CloudinaryScriptContext };
