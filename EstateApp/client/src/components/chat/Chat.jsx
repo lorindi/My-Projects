@@ -126,7 +126,7 @@ function Chat({ chats }) {
               <img src={chat.receiver.avatar || "/noavatar.png"} alt="" />
               {chat.receiver.name}
             </div>
-            <CloseIcon onClick={() => setClose(null)} />
+            <CloseIcon/>
           </div>
           <div className="center">
             {chat.messages.map((message) => (
