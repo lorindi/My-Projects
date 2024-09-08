@@ -11,7 +11,7 @@ function SinglePage() {
   const { currentUser } = useContext(AuthContext);
   const [saved, setSaved] = useState(post.isSaved);
 
-  const handleSave = async (e) => {
+  const handleSave = async () => {
     //After react 19 update to use optimistic hook
     setSaved((prev) => !prev);
 
