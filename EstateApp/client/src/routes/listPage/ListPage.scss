@@ -1,8 +1,7 @@
 .listPage {
   display: flex;
-  min-height: 100vh;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 100px);
 
   .listContainer {
     flex: 3;
