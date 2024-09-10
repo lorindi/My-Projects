@@ -1,4 +1,4 @@
-import React from "react";
+
 import './TypeCard.scss'
 
 function TypeCard({ cardClass, imageSrc, title, city, price, content, type }) {
