@@ -14,7 +14,7 @@ function ProfilePage() {
 
   useEffect(() => {
     if (!currentUser) {
-      navigate("/login");
+      navigate("/sign-in");
     }
   }, [currentUser, navigate]);
 
