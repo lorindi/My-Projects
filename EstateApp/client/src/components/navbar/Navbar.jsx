@@ -37,7 +37,7 @@ function Navbar() {
               Sign in
             </Link>
             <Link className="register" to="/create-account">
-              Sign up
+              Create Account
             </Link>
           </>
         )}
