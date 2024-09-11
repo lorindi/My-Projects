@@ -2,79 +2,52 @@
 
 .containerContacts {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.701);
   width: 100%;
   position: relative;
-  min-height: 100vh;
-
+  min-height: calc(100vh - 100px);
 
   
-
   .contentContacts {
+    flex: 3;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    border-radius: 10px;
+    flex-direction: column;
+    gap: 30px;
     height: 100%;
 
+    .linksBlank {
+      display: flex;
+      gap: 20px;
+
+      .callOutlineContacts {
+        width: 37px;
+        height: 37px;
+      }
+    }
+  }
+  .contentImg {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #FCF5F3;
+    border-radius: 0px 0px 10px 10px;
+
     @include sm {
-      flex-direction: column;
+      display: none;
     }
     @include md {
-      flex-direction: column;
+      display: none;
     }
 
-    .contentContactsInfo {
-      display: flex;
-      flex: 3;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-
-      .contactInfoTitle {
-        text-align: center;
-        color: #2D9CDB;
-        font-size: 50px;
-      }
-
-      .contactInfo {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-top: 20px;
-        text-align: center;
-        height: 200px;
-
-        p {
-          margin: 10px 0;
-          text-align: center;
-        }
-      }
-    }
-
-    .emailContainer {
-      background-color: #fcf5f3;
-      height: 100%;
-      flex: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0px 0px 10px 10px;
-
-      @include sm {
-        background-color: white;
-      }
-      @include md {
-        background-color: white;
-      }
+    img {
+      width:  100%;
     }
   }
 }
