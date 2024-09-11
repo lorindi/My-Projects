@@ -7,8 +7,8 @@ import ProfilePage from "./routes/profilePage/ProfilePage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/ProfileUpdatePage";
 import About from "./routes/aboutPage/About";
 import Contact from "./routes/contactPage/ContactPage";
-import LoginPage from "./routes/loginPage/LoginPage";
-import RegisterPage from "./routes/registerPage/RegisterPage";
+import SignInPage from "./routes/signInPage/SignInPage";
+import CreateAccountPage from "./routes/createAccountPage/CreateAccountPage";
 import NewPostPage from "./routes/newPostPage/NewPostPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 import AgentsPage from "./routes/agentsPage/AgentsPage";
@@ -47,12 +47,12 @@ function App() {
         },
 
         {
-          path: "/login",
-          element: <LoginPage />,
+          path: "/sign-in",
+          element: <SignInPage />,
         },
         {
-          path: "/register",
-          element: <RegisterPage />,
+          path: "/create-account",
+          element: <CreateAccountPage />,
         },
       ],
     },
