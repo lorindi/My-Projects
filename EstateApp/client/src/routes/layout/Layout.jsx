@@ -7,8 +7,8 @@ import Footer from "../../components/footer/Footer";
 
 function Layout() {
   const location = useLocation();
-
-  const isContactPage = location.pathname === "/contact";
+  const noFooterPages = ["/contact", "/sign-in", "/create-account"];
+  const isNoFooterPage = noFooterPages.includes(location.pathname);
   return (
     <div className="layout">
       <div className="navbar">
@@ -17,7 +17,7 @@ function Layout() {
       <div className="content">
         <Outlet />
       </div>
-      <div className={`footer ${isContactPage ? "hidden" : ""}`}>
+      <div className={`footer ${isNoFooterPage ? "hidden" : ""}`}>
         <Footer/>
       </div>
     </div>
