@@ -5,6 +5,7 @@ function Contact() {
   return (
     <div className="containerContacts">
       <div className="contentContacts">
+
         <div className="contentContactsInfo">
           <h1 className="contactInfoTitle">Contact Us</h1>
           <div className="contactInfo">
@@ -19,6 +20,7 @@ function Contact() {
             </p>
           </div>
         </div>
+        
         <div className="emailContainer">
         <Email />
         </div>
