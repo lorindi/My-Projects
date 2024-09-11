@@ -10,8 +10,7 @@ nav {
 
   a {
     transition: all 0.4s ease;
-    letter-spacing: 1.5px;
-    // letter-spacing: 1px;
+    letter-spacing: 1px;
 
     @include sm {
       display: none;
@@ -110,7 +109,11 @@ nav {
       }
 
     }
-
+    .login{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .register {
       background-color: #fece51;
       border-radius: 5px;
@@ -126,6 +129,7 @@ nav {
         background-color: white;
         padding: 1px;
         border-radius: 100%;
+        margin-right: 10px;
       }
 
       @include sm {
