@@ -25,7 +25,7 @@ function RequireAuth() {
   const { currentUser } = useContext(AuthContext);
  
   return !currentUser ? (
-    <Navigate to="/login" />
+    <Navigate to="/sign-in" />
   ) : (
     <div className="layout">
       <div className="navbar">
