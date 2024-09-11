@@ -3,7 +3,7 @@ import "./ProfileUpdatePage.scss";
 import { AuthContext } from "../../context/AuthContext";
 import apiRequest from "../../lib/apiRequest";
 import { useNavigate } from "react-router-dom";
-import UploadWidget from "../../components/uploadWidget/UploadWidget";
+import Widget from "../../components/uploadWidget/Widget";
 
 function ProfileUpdatePage() {
   const { currentUser, updateUser } = useContext(AuthContext);
@@ -70,7 +70,7 @@ function ProfileUpdatePage() {
           alt=""
           className="avatar"
         />
-        <UploadWidget
+        <Widget
           uwConfig={{
             cloudName: "dn8znpqqw",
             uploadPreset: "estate",
