@@ -56,7 +56,7 @@ function SignInPage() {
           />
           <button disabled={isLoading}>Login</button>
           {error && <span>{error}</span>}
-          <Link to="/register">{"Don't"} you have an account?</Link>
+          <Link to="/create-account">{"Don't"} you have an account?</Link>
         </form>
       </div>
       <div className="imgContainer">
