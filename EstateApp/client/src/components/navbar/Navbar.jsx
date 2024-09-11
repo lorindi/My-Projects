@@ -33,10 +33,10 @@ function Navbar() {
           </div>
         ) : (
           <>
-            <Link className="login" to="/login">
+            <Link className="login" to="/sign-in">
               Sign in
             </Link>
-            <Link className="register" to="/register">
+            <Link className="register" to="/create-account">
               Sign up
             </Link>
           </>
@@ -55,7 +55,7 @@ function Navbar() {
           <Link to="/contact">Contact</Link>
           <Link to="/agents">Agents</Link>
           <Link to="/sign-in">Sign in</Link>
-          <Link to="/sign-up">Sign up</Link>
+          <Link to="/create-account">Create Account</Link>
         </div>)}
         
       </div>
