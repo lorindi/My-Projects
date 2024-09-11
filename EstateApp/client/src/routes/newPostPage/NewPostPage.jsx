@@ -2,7 +2,7 @@ import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import apiRequest from "../../lib/apiRequest";
-import Widget from "../../components/uploadWidget/Widget";
+import UploadWidget from "../../components/uploadWidget/UploadWidget";
 import { useNavigate } from "react-router-dom";
 import './NewPostPage.scss'
 
@@ -161,7 +161,7 @@ function NewPostPage() {
         {images.map((image, index) => (
           <img src={image} key={index} alt="" />
         ))}
-        <Widget
+        <UploadWidget
           uwConfig={{
             multiple: true,
             cloudName: "dn8znpqqw",
