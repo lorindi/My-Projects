@@ -36,7 +36,7 @@ function Footer() {
         <div className="center">
           <ul className="contacts">
             <li className="">
-              <CallOutline />
+              <CallOutline className="callOutlineFooter"/>
               <p className="">Call +359 899 999 999</p>
             </li>
             <li className="">
