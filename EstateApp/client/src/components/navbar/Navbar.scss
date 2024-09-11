@@ -151,6 +151,7 @@ nav {
       justify-content: center;
       font-size: 24px;
       text-align: center;
+      z-index: 998;
 
       @include sm {
         display: flex;
