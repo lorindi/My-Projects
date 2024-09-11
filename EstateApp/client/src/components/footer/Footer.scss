@@ -8,8 +8,6 @@
   min-height: 50vh;
   padding: 20px 0px 20px 0px;
 
-  
-
   .contentContactsLogoAddress {
     display: flex;
     width: 100%;
@@ -21,20 +19,25 @@
 
     .center {
       flex: 1;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .contacts {
         flex: 1;
         margin: 0;
         display: flex;
         flex-direction: column;
-  
+
         li {
           display: flex;
           list-style: none;
           gap: 10px;
+
+          .callOutlineFooter {
+            width: 24px;
+            height: 24px;
+          }
         }
       }
     }
@@ -65,7 +68,6 @@
         justify-content: center;
         gap: 15px;
         width: 100%;
-
       }
     }
     .contentMenu {
@@ -94,7 +96,6 @@
     @include md {
       padding-left: 5px;
     }
-
 
     grid-template-areas: "img1 img2 img3 img4 img5 img6";
 
@@ -127,8 +128,7 @@
       @include md {
         width: 100%;
         height: 100%;
-
-    }
+      }
     }
   }
   .allRightsReserved {
