@@ -1,6 +1,6 @@
 import Chat from "../../components/chat/Chat";
 import List from "../../components/list/List";
-import "./ProfilePage.scss";
+import "./Profile.scss";
 import apiRequest from "../../lib/apiRequest";
 import { Await, Link, useLoaderData, useNavigate } from "react-router-dom";
 import { Suspense, useContext, useEffect } from "react";
