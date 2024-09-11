@@ -8,7 +8,9 @@ function Navbar() {
   const { currentUser } = useContext(AuthContext);
   // const fetch = useNotificationStore((state) => state.fetch);
   const number = useNotificationStore((state) => state.fetch);
-
+  const handleLinkClick = () => {
+    setOpen(false);
+  };
   return (
     <nav>
       <div className="left">
@@ -50,12 +52,12 @@ function Navbar() {
           />
         </div>
         {open && (<div className="mobileNavigation">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/agents">Agents</Link>
-          <Link to="/sign-in">Sign in</Link>
-          <Link to="/create-account">Create Account</Link>
+          <Link onClick={handleLinkClick} to="/">Home</Link>
+          <Link onClick={handleLinkClick} to="/about">About</Link>
+          <Link onClick={handleLinkClick} to="/contact">Contact</Link>
+          <Link onClick={handleLinkClick} to="/agents">Agents</Link>
+          <Link onClick={handleLinkClick} to="/sign-in">Sign in</Link>
+          <Link onClick={handleLinkClick} to="/create-account">Create Account</Link>
         </div>)}
         
       </div>
