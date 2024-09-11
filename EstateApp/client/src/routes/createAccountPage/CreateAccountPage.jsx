@@ -26,7 +26,7 @@ function CreateAccountPage() {
         password,
       });
       console.log(res.data);
-      navigate("/login");
+      navigate("/sign-in");
     } catch (err) {
       console.log(err);
       setError(err.response.data.message);
