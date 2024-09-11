@@ -16,7 +16,7 @@ function SinglePage() {
     setSaved((prev) => !prev);
 
     if (!currentUser) {
-      redirect("/login");
+      redirect("/sign-in");
     }
     try {
       await apiRequest.post("/users/save", { postId: post._id });
