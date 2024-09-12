@@ -143,3 +143,32 @@ export const deletePosts = async (req, res) => {
     res.status(500).json({ message: "Failed to delete the post." });
   }
 };
+
+export const getFilteredPosts = async (req, res) => {
+  const query = req.query;
+
+  try {
+    const filter = {
+      ...(query.city && { city: query.city }),
+      ...(query.type && { type: query.type }),
+      ...(query.property && { property: query.property }),
+      ...(query.bedroom && { bedroom: parseInt(query.bedroom) }),
+      ...(query.minPrice || query.maxPrice
+        ? {
+            price: {
+              ...(query.minPrice && { $gte: parseFloat(query.minPrice) }),
+              ...(query.maxPrice && { $lte: parseFloat(query.maxPrice) }),
+            },
+          }
+        : {}),
+    };
+
+    const limit = query.limit ? parseInt(query.limit) : 10;
+
+    const posts = await Post.find(filter).limit(limit);
+
+    res.status(200).json(posts);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to get posts", error: error.message });
+  }
+};
