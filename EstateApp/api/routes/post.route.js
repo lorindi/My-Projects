@@ -6,9 +6,11 @@ import {
   addPost,
   updatePost,
   deletePosts,
+  getFilteredPosts
 } from "../controllers/post.controller.js";
 const router = express.Router();
 
+router.get("/filtered", getFilteredPosts);
 router.get("/", getPosts);
 router.get("/:id", getPost);
 router.post("/", verifyToken, addPost);
