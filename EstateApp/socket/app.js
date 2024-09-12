@@ -30,7 +30,14 @@ io.on("connection", (socket) => {
 
   socket.on("sendMessage", ({ receiverId, data }) => {
     const receiver = getUser(receiverId);
-    io.to(receiver.socketId).emit("getMessage", data);
+    console.log(receiver);
+    
+    if (receiver) {
+      io.to(receiver.socketId).emit("getMessage", data);
+    } else {
+      console.log(`Receiver with ID ${receiverId} is not online.`);
+    }
+
   });
 
   socket.on("disconnect", () => {
