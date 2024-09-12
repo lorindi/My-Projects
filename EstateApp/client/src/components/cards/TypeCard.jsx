@@ -1,12 +1,14 @@
+import "./TypeCard.scss";
 
-import './TypeCard.scss'
+function TypeCard({ post, className }) {
+  console.log(post);
 
-function TypeCard({ cardClass, imageSrc, title, city, price, content, type }) {
   return (
-    <div className={`card ${cardClass}`}>
-      <img src={imageSrc} alt="" />
-      <h2 className="cardTitle">{title}</h2>
-      <p className="cardContent">{content}</p>
+    <div className={`${className}`}>
+      <img src={post.images[0]} alt="" />
+      <div>
+        <span>{post.city}</span>
+      </div>
     </div>
   );
 }
