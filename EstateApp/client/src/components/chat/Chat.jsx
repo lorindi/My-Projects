@@ -36,12 +36,14 @@ function Chat({ chats }) {
     if (!text) return;
     try {
       const res = await apiRequest.post("/messages/" + chat._id, { text });
+      console.log(res);
+      
       setChat((prev) => ({ ...prev, messages: [...prev.messages, res.data] }));
-      e.target.reset();
       socket.emit("sendMessage", {
         receiverId: chat.receiver._id,
         data: res.data,
       });
+      e.target.reset();
     } catch (err) {
       console.log(err);
     }
