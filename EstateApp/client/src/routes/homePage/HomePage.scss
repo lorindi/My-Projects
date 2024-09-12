@@ -2,86 +2,94 @@
 
 .homePage {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  min-height: calc(100vh - 100px);
   height: 100%;
 
-
-  .textContainer {
-    flex: 3;
+  .homePageHeading {
+    display: flex;
     width: 100%;
+    min-height: calc(100vh - 100px);
+    height: 100%;
 
-    .wrapper {
-      padding-right: 100px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 80px;
-      height: 100%;
-      padding: 0% 100px 10% 0px;
+    .textContainer {
+      flex: 3;
+      width: 100%;
 
-      @include md {
-        padding: 0;
-        padding: 0px 10px;
-      }
-      @include sm {
-        justify-content: flex-start;
-        padding: 0px 10px;
-        gap: 30px;
-      }
-
-      .title {
-        font-size: 64px;
-        color: #2d9cdb;
-        @include lg {
-          font-size: 48px;
-        }
-      }
-      .description {
-        color: #555;
-        letter-spacing: 0.5px;
-      }
-
-      .boxes {
+      .wrapper {
+        padding-right: 100px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
+        gap: 80px;
+        height: 100%;
+        padding: 0% 100px 10% 0px;
+
+        @include md {
+          padding: 0;
+          padding: 0px 10px;
+        }
         @include sm {
-          display: none;
+          justify-content: flex-start;
+          padding: 0px 10px;
+          gap: 30px;
         }
 
-        h1 {
-          font-size: 36px;
+        .title {
+          font-size: 64px;
+          color: #2d9cdb;
           @include lg {
-            font-size: 32px;
+            font-size: 48px;
           }
         }
-        h2 {
-          font-size: 20px;
-          font-weight: 300;
+        .description {
+          color: #555;
+          letter-spacing: 0.5px;
+        }
+
+        .boxes {
+          display: flex;
+          justify-content: space-between;
+          @include sm {
+            display: none;
+          }
+
+          h1 {
+            font-size: 36px;
+            @include lg {
+              font-size: 32px;
+            }
+          }
+          h2 {
+            font-size: 20px;
+            font-weight: 300;
+          }
         }
       }
     }
-  }
-  .imgContainer {
-    flex: 2;
-    background-color: #fcf5f3;
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-radius: 0 0 10px 10px;
-
-
-    @include md {
-      display: none;
-    }
-    img {
+    .imgContainer {
+      flex: 2;
+      background-color: #fcf5f3;
+      position: relative;
       width: 100%;
-      position: absolute;
-      right: 0;
-      @include lg {
-        width: 105%;
+      display: flex;
+      align-items: center;
+      border-radius: 0 0 10px 10px;
+
+      @include md {
+        display: none;
+      }
+      img {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        @include lg {
+          width: 105%;
+        }
       }
     }
+    
+  }
+  .carouselSection{
   }
 }
