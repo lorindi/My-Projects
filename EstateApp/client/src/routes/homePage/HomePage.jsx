@@ -61,7 +61,6 @@ function HomePage() {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
-    
   };
   const handleCardClick = (city) => {
     navigate(`/list?city=${city}`);
@@ -129,23 +128,17 @@ function HomePage() {
       </div>
 
       <section className="summary">
-      <h2 className="summaryTitle">
-        Lorem ipsum odor amet
-      </h2>
-      <div className="summaryText">
-        Cursus ante mauris suspendisse laoreet placerat porta amet blandit.
-        Venenatis habitasse ligula imperdiet ac sed facilisi. Sodales eget dis
-        nibh natoque dictum ante cursus varius. Penatibus lacinia etiam mattis
-        mollis porttitor. Cursus ante mauris suspendisse laoreet placerat porta
-        amet blandit. Venenatis habitasse ligula imperdiet ac sed facilisi.
-        Sodales eget dis nibh natoque dictum ante cursus varius. Penatibus
-        lacinia etiam mattis mollis porttitor.
-      </div>
-    </section>
-
-      
-
-     
+        <h2 className="summaryTitle">Lorem ipsum odor amet</h2>
+        <div className="summaryText">
+          Cursus ante mauris suspendisse laoreet placerat porta amet blandit.
+          Venenatis habitasse ligula imperdiet ac sed facilisi. Sodales eget dis
+          nibh natoque dictum ante cursus varius. Penatibus lacinia etiam mattis
+          mollis porttitor. Cursus ante mauris suspendisse laoreet placerat
+          porta amet blandit. Venenatis habitasse ligula imperdiet ac sed
+          facilisi. Sodales eget dis nibh natoque dictum ante cursus varius.
+          Penatibus lacinia etiam mattis mollis porttitor.
+        </div>
+      </section>
     </div>
   );
 }
