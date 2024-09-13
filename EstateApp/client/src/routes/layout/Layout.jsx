@@ -7,7 +7,7 @@ import Footer from "../../components/footer/Footer";
 
 function Layout() {
   const location = useLocation();
-  const noFooterPages = ["/contact", "/sign-in", "/create-account"];
+  const noFooterPages = ["/contact", "/sign-in", "/create-account", "/profile-update"];
   const isNoFooterPage = noFooterPages.includes(location.pathname);
   return (
     <div className="layout">
@@ -26,6 +26,9 @@ function Layout() {
 
 function RequireAuth() {
   const { currentUser } = useContext(AuthContext);
+  const location = useLocation();
+  const noFooterPages = ["/profile-update"];
+  const isNoFooterPage = noFooterPages.includes(location.pathname);
  
   return !currentUser ? (
     <Navigate to="/sign-in" />
@@ -37,8 +40,8 @@ function RequireAuth() {
       <div className="content">
         <Outlet />
       </div>
-      <div className="footer">
-        <Footer/>
+      <div className={`footer ${isNoFooterPage ? "hidden" : ""}`}>
+        <Footer />
       </div>
     </div>
   );
