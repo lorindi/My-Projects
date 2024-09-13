@@ -1,4 +1,3 @@
-// import { useContext } from "react";
 import SearchBar from "../../components/searchBar/SearchBar";
 import "./HomePage.scss";
 import Slider from "react-slick";
@@ -7,45 +6,65 @@ import "slick-carousel/slick/slick-theme.css";
 import apiRequest from "../../lib/apiRequest";
 import { useEffect, useState } from "react";
 import TypeCard from "../../components/cards/TypeCard";
+import { Link } from "react-router-dom";
+import SeeMoreSvgHomePage from "../../components/Svg/SeeMoreSvgHomePage";
+import Loading from '../../components/loading/Loading'
 function HomePage() {
+  const cities = [
+    "Sofia",
+    "Plovdiv",
+    "Varna",
+    "Burgas",
+    "Ruse",
+    "Shumen",
+    "Veliko Tarnovo",
+  ];
   const [posts, setPosts] = useState([]);
-  const [city, setCity] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
-  const [minPrice, setMinPrice] = useState("");
-  const [limit, setLimit] = useState(3); 
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await apiRequest.get("/posts/filtered", {
-          params: {
-            city,
-            maxPrice,
-            minPrice,
-            limit,
-          },
-        });
-        console.log(response);
-        
-        setPosts(response.data);
+        const allPosts = [];
+
+        for (const town of cities) {
+          const response = await apiRequest.get("/posts/filtered", {
+            params: {
+              city: town,
+              limit: 1,
+            },
+          });
+          console.log(response);
+
+          if (response.data && response.data.length > 0) {
+            allPosts.push(response.data[0]);
+          }
+        }
+
+        setPosts(allPosts);
       } catch (error) {
         console.error("Error fetching posts:", error);
+      } finally {
+        setLoading(false); 
       }
     };
 
     fetchPosts();
-  }, [city, maxPrice, minPrice, limit]);
+  }, []);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
+    arrows: false,
   };
 
   return (
     <div className="homePage">
+      <div>
+      <Loading/>
+      </div>
       <div className="homePageHeading">
         <div className="textContainer">
           <div className="wrapper">
@@ -80,14 +99,23 @@ function HomePage() {
 
       {/* Carousel Section */}
       <div className="carouselSection">
-        <h2 className="carouselTitle">Explore Our Properties</h2>
-        <Slider {...settings}>
-          {posts.length > 0 ? (
-            posts.map((post) => <TypeCard key={post._id} post={post} className="sphere" />)
+        <div className="carouselHeading">
+          <h2>Explore Our Properties</h2>
+          <Link to="/list"><span>See More</span> <SeeMoreSvgHomePage className="seeMore" /></Link>
+        </div>
+        <div className="cityCarousel">
+          {loading ? ( 
+              <Loading/>
           ) : (
-            <p>No posts found with the specified criteria.</p>
+            posts.length > 0 && (
+              <Slider {...settings}>
+                {posts.map((post) => (
+                  <TypeCard key={post._id} post={post} className="sphere" />
+                ))}
+              </Slider>
+            )
           )}
-        </Slider>
+        </div>
       </div>
     </div>
   );
