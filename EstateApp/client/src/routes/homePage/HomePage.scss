@@ -88,8 +88,77 @@
         }
       }
     }
-    
   }
-  .carouselSection{
+  .carouselSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 500px;
+
+    @include lg {
+      min-height: 400px;
+    }
+    @include sm {
+      min-height: 200px;
+    }
+
+    .carouselHeading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0% 3%;
+
+      h2 {
+        font-size: 39px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+
+        @include lg {
+          font-size: 31px;
+          font-weight: 600;
+        }
+        @include sm {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+
+      a {
+        display: flex;
+        gap: 5px;
+        width: fit-content;
+        align-items: center;
+
+        span {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+
+          @include lg {
+            font-weight: 600;
+
+            font-size: 14px;
+          }
+          @include sm {
+            font-weight: 600;
+
+            font-size: 14px;
+          }
+        }
+        .seeMore {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .cityCarosel {
+
+    }
+
   }
 }
