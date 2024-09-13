@@ -8,8 +8,11 @@ import { useEffect, useState } from "react";
 import TypeCard from "../../components/cards/TypeCard";
 import { Link } from "react-router-dom";
 import SeeMoreSvgHomePage from "../../components/Svg/SeeMoreSvgHomePage";
-import Loading from '../../components/loading/Loading'
+import Loading from "../../components/loading/Loading";
+import { useNavigate } from "react-router-dom";
 function HomePage() {
+  const navigate = useNavigate();
+
   const cities = [
     "Sofia",
     "Plovdiv",
@@ -44,7 +47,7 @@ function HomePage() {
       } catch (error) {
         console.error("Error fetching posts:", error);
       } finally {
-        setLoading(false); 
+        setLoading(false);
       }
     };
 
@@ -58,13 +61,13 @@ function HomePage() {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
+    
   };
-
+  const handleCardClick = (city) => {
+    navigate(`/list?city=${city}`);
+  };
   return (
     <div className="homePage">
-      <div>
-      <Loading/>
-      </div>
       <div className="homePageHeading">
         <div className="textContainer">
           <div className="wrapper">
@@ -101,16 +104,23 @@ function HomePage() {
       <div className="carouselSection">
         <div className="carouselHeading">
           <h2>Explore Our Properties</h2>
-          <Link to="/list"><span>See More</span> <SeeMoreSvgHomePage className="seeMore" /></Link>
+          <Link to="/list">
+            <span>See More</span> <SeeMoreSvgHomePage className="seeMore" />
+          </Link>
         </div>
         <div className="cityCarousel">
-          {loading ? ( 
-              <Loading/>
+          {loading ? (
+            <Loading />
           ) : (
             posts.length > 0 && (
               <Slider {...settings}>
                 {posts.map((post) => (
-                  <TypeCard key={post._id} post={post} className="sphere" />
+                  <TypeCard
+                    key={post._id}
+                    post={post}
+                    className="sphere"
+                    onClick={() => handleCardClick(post.city)}
+                  />
                 ))}
               </Slider>
             )
