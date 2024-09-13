@@ -11,7 +11,6 @@ import SignInPage from "./routes/signInPage/SignInPage";
 import CreateAccountPage from "./routes/createAccountPage/CreateAccountPage";
 import NewPostPage from "./routes/newPostPage/NewPostPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
-import AgentsPage from "./routes/agentsPage/AgentsPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -30,10 +29,6 @@ function App() {
         {
           path: "/contact",
           element: <Contact />,
-        },
-        {
-          path: "/agents",
-          element: <AgentsPage />,
         },
         {
           path: "/list",
@@ -66,7 +61,7 @@ function App() {
           loader: profilePageLoader,
         },
         {
-          path: "/profile/update",
+          path: "/profile-update",
           element: <ProfileUpdatePage />,
         },
         {
