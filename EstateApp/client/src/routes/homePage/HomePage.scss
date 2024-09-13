@@ -9,9 +9,13 @@
   .homePageHeading {
     display: flex;
     width: 100%;
-    min-height: calc(100vh - 100px);
-    height: 100%;
+    height: calc(100% - 100px);
 
+
+    @include sm{
+      margin-top: 50px;
+    }
+ 
     .textContainer {
       flex: 3;
       width: 100%;
@@ -69,7 +73,7 @@
     }
     .imgContainer {
       flex: 2;
-      background-color: #fcf5f3;
+      // background-color: #fcf5f3;
       position: relative;
       width: 100%;
       display: flex;
@@ -89,13 +93,14 @@
       }
     }
   }
+
+  
   .carouselSection {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     min-height: 500px;
-
 
     @include lg {
       min-height: 400px;
@@ -109,7 +114,7 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      padding: 0% 3%;
+      // padding: 0% 3%;
 
       h2 {
         font-size: 39px;
@@ -156,10 +161,54 @@
         }
       }
     }
+  }
+  .summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
 
-    .cityCarosel {
-
+    @include sm {
+      display: none;
     }
 
+    .summaryTitle {
+      color: #081120;
+      font-weight: 500;
+      font-family: "Inter", sans-serif;
+      line-height: 58.5px;
+
+      @include md {
+        font-size: 39px;
+        margin-bottom: 20px;
+      }
+
+      @include sm {
+        font-size: 31px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .summaryText {
+      text-align: center;
+      color: #13294b;
+      font-weight: 400;
+      font-family: "Inter", sans-serif;
+      width: 90%;
+
+      @include md {
+        font-size: 1rem;
+        width: 766px;
+        padding: 0 20px;
+      }
+
+      @include sm {
+        font-size: 1.25rem;
+        width: 80%;
+      }
+    }
   }
+
 }
