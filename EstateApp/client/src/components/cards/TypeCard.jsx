@@ -1,9 +1,9 @@
 import "./TypeCard.scss";
 
-function TypeCard({ post, className }) {
+function TypeCard({ post, className, onClick }) {
 
   return (
-    <div className={`${className}`}>
+    <div className={`${className}`} onClick={onClick}>
       <img src={post.images[0]} alt="" />
       <div>
         <span>{post.city}</span>
