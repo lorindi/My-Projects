@@ -54,7 +54,7 @@ function SignInPage() {
             required
             placeholder="Password"
           />
-          <button disabled={isLoading}>Login</button>
+          <button disabled={isLoading}>Sign in</button>
           {error && <span>{error}</span>}
           <Link to="/create-account">{"Don't"} you have an account?</Link>
         </form>
