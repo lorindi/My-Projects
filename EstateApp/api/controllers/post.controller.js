@@ -3,8 +3,7 @@ import PostDetail from "../models/PostDetail.js";
 import jwt from "jsonwebtoken";
 import { JWT_SECRET_KEY } from "../constraints/constraints.js";
 import SavedPost from "../models/SavedPost.js";
-
-
+import mongoose from "mongoose";
 
 export const getPosts = async (req, res) => {
   const query = req.query;
@@ -25,7 +24,7 @@ export const getPosts = async (req, res) => {
         : {}),
     };
     const posts = await Post.find(filter);
-
+    
     setTimeout(() => {
       res.status(200).json(posts);
     }, 500);
@@ -40,7 +39,9 @@ export const getPosts = async (req, res) => {
 export const getPost = async (req, res) => {
   const { id } = req.params;
 
-  
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ message: "Invalid post ID format" });
+  }
 
   try {
     // Find the post and populate related fields
@@ -81,8 +82,6 @@ export const getPost = async (req, res) => {
   }
 };
 
-
-
 export const addPost = async (req, res) => {
   const { postData, postDetail } = req.body;
   const userId = req.userId;
@@ -96,14 +95,12 @@ export const addPost = async (req, res) => {
       postDetail: newPostDetail._id,
     });
 
-    res.status(200).json({message: "Successfully created on post", newPost});
+    res.status(200).json({ message: "Successfully created on post", newPost });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Failed to create post" });
   }
 };
-
-
 
 export const updatePost = async (req, res) => {
   const { id } = req.params;
@@ -123,8 +120,6 @@ export const updatePost = async (req, res) => {
     res.status(500).json({ message: "Failed to update post" });
   }
 };
-
-
 
 export const deletePosts = async (req, res) => {
   try {
