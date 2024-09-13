@@ -5,6 +5,7 @@ import apiRequest from "../../lib/apiRequest";
 import { Await, Link, useLoaderData, useNavigate } from "react-router-dom";
 import { Suspense, useContext, useEffect } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import Loading from "../../components/loading/Loading";
 
 function ProfilePage() {
   const { updateUser, currentUser } = useContext(AuthContext);
@@ -35,7 +36,7 @@ function ProfilePage() {
           <div className="wrapper">
             <div className="title">
               <h1>User Information</h1>
-              <Link to="/profile/update">
+              <Link to="/profile-update">
                 <button>Update Profile</button>
               </Link>
             </div>
@@ -57,7 +58,7 @@ function ProfilePage() {
               <Link to="/add">Create New Post</Link>
             </div>
 
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={<Loading/>}>
               <Await
                 resolve={data.postResponse}
                 errorElement={<p>Error loading posts!</p>}
@@ -69,7 +70,7 @@ function ProfilePage() {
             <div className="title">
               <h1>Saved List</h1>
             </div>
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={<Loading/>}>
               <Await
                 resolve={data.postResponse}
                 errorElement={<p>Error loading posts!</p>}
@@ -83,7 +84,7 @@ function ProfilePage() {
         </div>
         <div className="chatContainer">
           <div className="wrapper">
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={<Loading/>}>
               <Await
                 resolve={data.chatResponse}
                 errorElement={<p>Error loading chats!</p>}
