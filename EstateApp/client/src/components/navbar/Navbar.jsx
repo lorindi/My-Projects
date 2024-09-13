@@ -57,7 +57,6 @@ function Navbar() {
           <Link onClick={handleLinkClick} to="/">Home</Link>
           <Link onClick={handleLinkClick} to="/about">About</Link>
           <Link onClick={handleLinkClick} to="/contact">Contact</Link>
-          <Link onClick={handleLinkClick} to="/agents">Agents</Link>
           <Link onClick={handleLinkClick} to="/sign-in">Sign in</Link>
           <Link onClick={handleLinkClick} to="/create-account">Create Account</Link>
         </div>)}
