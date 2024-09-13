@@ -42,7 +42,7 @@ function CreateAccountPage() {
           <input name="name" type="text" placeholder="Name" />
           <input name="email" type="text" placeholder="Email" />
           <input name="password" type="password" placeholder="Password" />
-          <button disabled={isLoading}>Register</button>
+          <button disabled={isLoading}>Create Account</button>
           {error && <span>{error}</span>}
           <Link to="/login">Do you have an account?</Link>
         </form>
