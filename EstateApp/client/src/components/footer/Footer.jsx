@@ -49,7 +49,7 @@ function Footer() {
             </li>
             <li className="">
               <MapOutline />
-              <p className="">About</p>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </div>
@@ -74,7 +74,7 @@ function Footer() {
         </div>
         <div className="contentMenu">
           <div className="menu">
-            <Link to="" className="">
+            <Link to="/list" className="">
               Search
             </Link>
             <Link to="/profile" className="">
