@@ -5,12 +5,13 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+  cursor: pointer;
 
   img {
     border-radius: 100%;
     object-fit: cover;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 
     @include md {
       width: 160px;
