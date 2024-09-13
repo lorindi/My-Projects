@@ -127,6 +127,25 @@ function HomePage() {
           )}
         </div>
       </div>
+
+      <section className="summary">
+      <h2 className="summaryTitle">
+        Lorem ipsum odor amet
+      </h2>
+      <div className="summaryText">
+        Cursus ante mauris suspendisse laoreet placerat porta amet blandit.
+        Venenatis habitasse ligula imperdiet ac sed facilisi. Sodales eget dis
+        nibh natoque dictum ante cursus varius. Penatibus lacinia etiam mattis
+        mollis porttitor. Cursus ante mauris suspendisse laoreet placerat porta
+        amet blandit. Venenatis habitasse ligula imperdiet ac sed facilisi.
+        Sodales eget dis nibh natoque dictum ante cursus varius. Penatibus
+        lacinia etiam mattis mollis porttitor.
+      </div>
+    </section>
+
+      
+
+     
     </div>
   );
 }
