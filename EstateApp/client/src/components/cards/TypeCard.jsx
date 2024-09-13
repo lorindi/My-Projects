@@ -1,7 +1,6 @@
 import "./TypeCard.scss";
 
 function TypeCard({ post, className }) {
-  console.log(post);
 
   return (
     <div className={`${className}`}>
