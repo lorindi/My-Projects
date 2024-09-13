@@ -24,7 +24,7 @@ export const getPosts = async (req, res) => {
         : {}),
     };
     const posts = await Post.find(filter);
-    
+
     setTimeout(() => {
       res.status(200).json(posts);
     }, 500);
@@ -33,8 +33,6 @@ export const getPosts = async (req, res) => {
     res.status(500).json({ message: "Failed to get posts" });
   }
 };
-
-
 
 export const getPost = async (req, res) => {
   const { id } = req.params;
@@ -162,8 +160,12 @@ export const getFilteredPosts = async (req, res) => {
 
     const posts = await Post.find(filter).limit(limit);
 
-    res.status(200).json(posts);
+    setTimeout(() => {
+      res.status(200).json(posts);
+    }, 500);
   } catch (error) {
-    res.status(500).json({ message: "Failed to get posts", error: error.message });
+    res
+      .status(500)
+      .json({ message: "Failed to get posts", error: error.message });
   }
 };
