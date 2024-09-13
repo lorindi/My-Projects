@@ -1,12 +1,15 @@
 import { useContext, useState } from "react";
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useNotificationStore } from "../../lib/notificationStore";
 function Navbar() {
+
+  const isHomePage = location.pathname === "/";
+
   const [open, setOpen] = useState(false);
   const { currentUser } = useContext(AuthContext);
-  // const fetch = useNotificationStore((state) => state.fetch);
+
   const number = useNotificationStore((state) => state.fetch);
   const handleLinkClick = () => {
     setOpen(false);
@@ -23,7 +26,7 @@ function Navbar() {
         <Link to="/contact">Contact</Link>
         <Link to="/agents">Agents</Link>
       </div>
-      <div className="right">
+      <div className={`right ${isHomePage ? 'homeWhite' : 'homeColor'}`}>
         {currentUser ? (
           <div className="user">
             <img src={currentUser.avatar || "/noavatar.png"} alt="" />
