@@ -59,6 +59,10 @@
       @include sm {
         display: none;
       }
+      @include md {
+        background-color: white;
+
+      }
       img {
         width: 100%;
       }
