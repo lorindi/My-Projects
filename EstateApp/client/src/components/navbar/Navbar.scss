@@ -52,10 +52,18 @@ nav {
   }
   .homeWhite{
     background-color: white;
+
+ 
       
   }
   .homeColor{
     background-color: #fcf5f3;
+    @include md{
+      background-color: transparent;
+    }
+    @include sm{
+      background-color: transparent;
+    }
       
   }
   .right {
@@ -67,7 +75,7 @@ nav {
 
     
 
-    @include md {
+    @include sm{
       background-color: transparent;
     }
 
