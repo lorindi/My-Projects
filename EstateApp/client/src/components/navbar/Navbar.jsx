@@ -5,7 +5,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { useNotificationStore } from "../../lib/notificationStore";
 function Navbar() {
   const location = useLocation();
-  const noStylePages = ["/", "/about", "/contact"];
+  const noStylePages = ["/", "/about"];
 
   const [open, setOpen] = useState(false);
   const { currentUser } = useContext(AuthContext);
@@ -66,12 +66,29 @@ function Navbar() {
             <Link onClick={handleLinkClick} to="/contact">
               Contact
             </Link>
-            <Link onClick={handleLinkClick} to="/sign-in">
-              Sign in
-            </Link>
-            <Link onClick={handleLinkClick} to="/create-account">
-              Create Account
-            </Link>
+            {!currentUser && (
+              <>
+                <Link onClick={handleLinkClick} to="/sign-in">
+                  Sign in
+                </Link>
+                <Link onClick={handleLinkClick} to="/create-account">
+                  Create Account
+                </Link>
+              </>
+            )}
+            {currentUser && (
+              <>
+              <Link onClick={handleLinkClick} to="/list">
+                  Estates
+                </Link>
+                <Link onClick={handleLinkClick} to="/add">
+                  Add Estate
+                </Link>
+                <Link onClick={handleLinkClick} to="/profile">
+                  Profile
+                </Link>
+              </>
+            )}
           </div>
         )}
       </div>
