@@ -4,8 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useNotificationStore } from "../../lib/notificationStore";
 function Navbar() {
-
-  const isHomePage = location.pathname === "/";
+  const location = useLocation();
+  const noStylePages = ["/", "/about", "/contact"];
 
   const [open, setOpen] = useState(false);
   const { currentUser } = useContext(AuthContext);
@@ -14,6 +14,8 @@ function Navbar() {
   const handleLinkClick = () => {
     setOpen(false);
   };
+
+  const shouldApplyStyle = !noStylePages.includes(location.pathname);
   return (
     <nav>
       <div className="left">
@@ -25,7 +27,7 @@ function Navbar() {
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
       </div>
-      <div className={`right ${isHomePage ? 'homeWhite' : 'homeColor'}`}>
+      <div className={`right ${shouldApplyStyle ? "homeColor" : "homeWhite"}`}>
         {currentUser ? (
           <div className="user">
             <img src={currentUser.avatar || "/noavatar.png"} alt="" />
@@ -53,14 +55,25 @@ function Navbar() {
             onClick={() => setOpen((prev) => !prev)}
           />
         </div>
-        {open && (<div className="mobileNavigation">
-          <Link onClick={handleLinkClick} to="/">Home</Link>
-          <Link onClick={handleLinkClick} to="/about">About</Link>
-          <Link onClick={handleLinkClick} to="/contact">Contact</Link>
-          <Link onClick={handleLinkClick} to="/sign-in">Sign in</Link>
-          <Link onClick={handleLinkClick} to="/create-account">Create Account</Link>
-        </div>)}
-        
+        {open && (
+          <div className="mobileNavigation">
+            <Link onClick={handleLinkClick} to="/">
+              Home
+            </Link>
+            <Link onClick={handleLinkClick} to="/about">
+              About
+            </Link>
+            <Link onClick={handleLinkClick} to="/contact">
+              Contact
+            </Link>
+            <Link onClick={handleLinkClick} to="/sign-in">
+              Sign in
+            </Link>
+            <Link onClick={handleLinkClick} to="/create-account">
+              Create Account
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   );
