@@ -1,0 +1,93 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: #333;
+
+  .about-banner {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url("/bg.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        10deg,
+        white,
+        rgba(0, 13, 126, 0.384),
+        rgba(2, 1, 70, 0.267),
+        white
+      );
+      z-index: 1;
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    h1,
+    p {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 0;
+    }
+  }
+
+  .about-content {
+    margin: 40px auto;
+    width: 90%;
+    text-align: left;
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  }
+
+  .about-mission {
+    margin: 40px auto;
+    width: 100%;
+    background-color: #eef2f5;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #2980b9;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+}
