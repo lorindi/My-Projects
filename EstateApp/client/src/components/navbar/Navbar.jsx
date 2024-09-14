@@ -66,6 +66,9 @@ function Navbar() {
             <Link onClick={handleLinkClick} to="/contact">
               Contact
             </Link>
+            <Link onClick={handleLinkClick} to="/list">
+              Estates
+            </Link>
             {!currentUser && (
               <>
                 <Link onClick={handleLinkClick} to="/sign-in">
@@ -78,9 +81,6 @@ function Navbar() {
             )}
             {currentUser && (
               <>
-              <Link onClick={handleLinkClick} to="/list">
-                  Estates
-                </Link>
                 <Link onClick={handleLinkClick} to="/add">
                   Add Estate
                 </Link>
