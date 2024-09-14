@@ -41,9 +41,13 @@
 
     @include sm {
       display: none;
+    background-color: white;
+
     }
     @include md {
       display: none;
+    background-color: white;
+
     }
 
     img {
