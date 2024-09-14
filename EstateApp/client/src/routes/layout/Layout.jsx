@@ -7,7 +7,7 @@ import Footer from "../../components/footer/Footer";
 
 function Layout() {
   const location = useLocation();
-  const noFooterPages = ["/contact", "/sign-in", "/create-account", "/profile-update"];
+  const noFooterPages = ["/contact", "/sign-in", "/create-account", "/profile-update", "/about"];
   const isNoFooterPage = noFooterPages.includes(location.pathname);
   return (
     <div className="layout">
