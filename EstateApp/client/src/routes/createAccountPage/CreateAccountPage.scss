@@ -55,6 +55,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @include md {
+        background-color: white;
+
+      }
 
       @include sm {
         display: none;
