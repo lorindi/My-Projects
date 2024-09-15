@@ -2,7 +2,7 @@ import Chat from "../../components/chat/Chat";
 import List from "../../components/list/List";
 import "./Profile.scss";
 import apiRequest from "../../lib/apiRequest";
-import { Await, Link, useLoaderData, useNavigate } from "react-router-dom";
+import { Await, Link, useLoaderData, useNavigate, useSearchParams } from "react-router-dom";
 import { Suspense, useContext, useEffect } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import Loading from "../../components/loading/Loading";
@@ -11,13 +11,42 @@ function ProfilePage() {
   const { updateUser, currentUser } = useContext(AuthContext);
   const data = useLoaderData();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const startChatWith = searchParams.get("startChatWith");
   
 
   useEffect(() => {
     if (!currentUser) {
       navigate("/sign-in");
+    } else if (startChatWith) {
+      checkOrCreateChat(startChatWith);
     }
-  }, [currentUser, navigate]);
+  }, [currentUser, startChatWith]);
+
+  const checkOrCreateChat = async (receiverId) => {
+    try {
+      // First, get the list of existing chats
+      const res = await apiRequest.get("/chats");
+      const existingChats = res.data;
+
+      // Check if a chat with the specified receiverId already exists
+      const existingChat = existingChats.find(chat =>
+        chat.participants.includes(receiverId)
+      );
+
+      if (existingChat) {
+        // If chat exists, navigate to it (optional)
+        navigate(`/profile?chat=${existingChat._id}`);
+      } else {
+        // Otherwise, create a new chat
+        const newChatRes = await apiRequest.post("/chats", { receiverId });
+        navigate(`/profile?chat=${newChatRes.data._id}`);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
 
   const handleLogout = async () => {
     try {
