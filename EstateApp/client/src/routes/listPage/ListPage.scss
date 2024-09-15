@@ -11,16 +11,18 @@
 
     .wrapper {
       height: 100%;
-      padding: 50px;
+      padding: 50px 30px 0px 10px;
       display: flex;
       flex-direction: column;
       gap: 50px;
       overflow-y: scroll;
       padding-bottom: 50px;
 
-      @include sm{
-      padding: 20px;
-
+      @include sm {
+        padding: 20px;
+      }
+      @include md {
+        padding: 20px;
       }
 
       /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
