@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import SeeMoreSvgHomePage from "../../components/Svg/SeeMoreSvgHomePage";
 import Loading from "../../components/loading/Loading";
 import { useNavigate } from "react-router-dom";
-import { motion,useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const textVariants = {
   initial: {
@@ -161,24 +161,36 @@ function HomePage() {
             <Loading />
           ) : (
             posts.length > 0 && (
-              <Slider {...settings}>
-                {posts.map((post) => (
-                  <TypeCard
-                    key={post._id}
-                    post={post}
-                    className="sphere"
-                    onClick={() => handleCardClick(post.city)}
-                  />
-                ))}
-              </Slider>
+              <motion.div
+                className="carouselWrapper"
+                variants={carouselVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <Slider {...settings}>
+                  {posts.map((post) => (
+                    <TypeCard
+                      key={post._id}
+                      post={post}
+                      className="sphere"
+                      onClick={() => handleCardClick(post.city)}
+                    />
+                  ))}
+                </Slider>
+              </motion.div>
             )
           )}
         </div>
       </div>
 
-      <section className="summary">
-        <h2 className="summaryTitle">Lorem ipsum odor amet</h2>
-        <div className="summaryText">
+      <motion.section
+        className="summary"
+        variants={textVariants}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.h2 className="summaryTitle" variants={textVariants}>Lorem ipsum odor amet</motion.h2>
+        <motion.div className="summaryText" variants={textVariants}>
           Cursus ante mauris suspendisse laoreet placerat porta amet blandit.
           Venenatis habitasse ligula imperdiet ac sed facilisi. Sodales eget dis
           nibh natoque dictum ante cursus varius. Penatibus lacinia etiam mattis
@@ -186,8 +198,8 @@ function HomePage() {
           porta amet blandit. Venenatis habitasse ligula imperdiet ac sed
           facilisi. Sodales eget dis nibh natoque dictum ante cursus varius.
           Penatibus lacinia etiam mattis mollis porttitor.
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </div>
   );
 }
