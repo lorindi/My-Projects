@@ -36,7 +36,6 @@ function HomePage() {
               limit: 1,
             },
           });
-          console.log(response);
 
           if (response.data && response.data.length > 0) {
             allPosts.push(response.data[0]);
