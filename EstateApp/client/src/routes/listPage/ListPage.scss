@@ -1,3 +1,4 @@
+@import "../../responsive.scss";
 .listPage {
   display: flex;
   width: 100%;
@@ -36,5 +37,11 @@
     padding-top: 50px;
     border-radius: 0 0 10px 10px;
 
+    @include md {
+      display: none;
+    }
+    @include sm {
+      display: none;
+    }
   }
 }
