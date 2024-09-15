@@ -107,6 +107,8 @@
     height: 400px;
 
     @include lg {
+      min-height: 500px;
+
     }
     @include sm {
       min-height: 250px;
