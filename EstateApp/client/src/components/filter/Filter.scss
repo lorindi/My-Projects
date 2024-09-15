@@ -36,7 +36,7 @@
         padding: 10px;
 
         @include sm {
-          width: 100%;
+          width: 99%;
         }
       }
     }
@@ -46,7 +46,6 @@
     display: flex;
     align-items: flex-end;
     gap: 10px;
-
 
     @include sm {
       flex-direction: column;
@@ -81,6 +80,10 @@
       select {
         width: 100%;
         padding: 10px;
+        
+        @include sm {
+          width: 99%;
+        }
       }
     }
 
