@@ -7,36 +7,60 @@ import Instagram from "../Svg/Instagram";
 import Facebook from "../Svg/Facebook";
 import Linkedin from "../Svg/Linkedin";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const variantsImg = {
+  hidden: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+      staggerChildren: 1,
+    },
+  },
+};
+
 function Footer() {
   return (
     <div className="footerContainer">
-      <div className="instagramImgs">
-        <img
+      <motion.div
+        className="instagramImgs"
+        variants={variantsImg}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.img
+          variants={variantsImg}
           src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
         />
-        <img
+        <motion.img
+          variants={variantsImg}
           src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
         />
-        <img
+        <motion.img
+          variants={variantsImg}
           src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
         />
-        <img
+        <motion.img
+          variants={variantsImg}
           src="https://images.unsplash.com/photo-1505843795480-5cfb3c03f6ff?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
         />
-        <img
+        <motion.img
+          variants={variantsImg}
           src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
         />
-      </div>
+      </motion.div>
       <div className="contentContactsLogoAddress">
         <div className="center">
           <ul className="contacts">
             <li className="">
-              <CallOutline className="callOutlineFooter"/>
+              <CallOutline className="callOutlineFooter" />
               <p className="">Call +359 899 999 999</p>
             </li>
             <li className="">
