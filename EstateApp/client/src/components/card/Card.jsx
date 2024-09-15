@@ -32,7 +32,9 @@ function Card({ item }) {
               <img src="/save.png" alt="" />
             </div>
             <div className="icon">
-              <img src="/chat.png" alt="" />
+              <Link to="/profile">
+                <img src="/chat.png" alt="" />
+              </Link>
             </div>
           </div>
         </div>
