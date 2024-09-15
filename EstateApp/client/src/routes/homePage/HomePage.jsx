@@ -4,14 +4,58 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import apiRequest from "../../lib/apiRequest";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import TypeCard from "../../components/cards/TypeCard";
 import { Link } from "react-router-dom";
 import SeeMoreSvgHomePage from "../../components/Svg/SeeMoreSvgHomePage";
 import Loading from "../../components/loading/Loading";
 import { useNavigate } from "react-router-dom";
+import { motion,useInView } from "framer-motion";
+
+const textVariants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+const carouselVariants = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 function HomePage() {
   const navigate = useNavigate();
+  // const ref = useRef();
+  // const isInView = useInView(ref, { once: true });
 
   const cities = [
     "Sofia",
@@ -68,7 +112,13 @@ function HomePage() {
     <div className="homePage">
       <div className="homePageHeading">
         <div className="textContainer">
-          <div className="wrapper">
+          <motion.div
+            className="wrapper"
+            variants={textVariants}
+            initial="initial"
+            animate="animate"
+            // ref={ref}
+          >
             <h1 className="title">Find Real & Estate Get Your Dream Place</h1>
             <p className="description">
               Discover your dream home with Find Real & Estate! Our premier real
@@ -77,7 +127,7 @@ function HomePage() {
               expert advice. Your perfect home is just a click away!
             </p>
             <SearchBar />
-            <div className="boxes">
+            <motion.div variants={textVariants} className="boxes">
               <div className="box">
                 <h1>18+</h1>
                 <h2>Years of Experience</h2>
@@ -90,8 +140,8 @@ function HomePage() {
                 <h1>3000</h1>
                 <h2>Property Ready</h2>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
         <div className="imgContainer">
           <img src="/bg.png" alt="" />
