@@ -1,11 +1,10 @@
 import Slider from "../../components/slider/Slider";
 import "./SinglePage.scss";
 import Map from "../../components/map/Map";
-import { redirect, useLoaderData } from "react-router-dom";
+import { Link, redirect, useLoaderData } from "react-router-dom";
 import { useContext, useState } from "react";
 import apiRequest from "../../lib/apiRequest";
 import { AuthContext } from "../../context/AuthContext";
-
 function SinglePage() {
   const post = useLoaderData();
   const { currentUser } = useContext(AuthContext);
@@ -136,7 +135,7 @@ function SinglePage() {
           <div className="buttons">
             <button>
               <img src="/chat.png" alt="" />
-              Send a Message
+              <Link to="/profile">Send a Message</Link>
             </button>
             <button
               onClick={handleSave}
