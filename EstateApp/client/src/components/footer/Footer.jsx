@@ -7,7 +7,8 @@ import Instagram from "../Svg/Instagram";
 import Facebook from "../Svg/Facebook";
 import Linkedin from "../Svg/Linkedin";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const variantsImg = {
   hidden: { opacity: 0 },
@@ -22,13 +23,16 @@ const variantsImg = {
 };
 
 function Footer() {
+  const ref = useRef();
+  const isInView = useInView(ref, { once: true });
   return (
-    <div className="footerContainer">
+    <motion.div className="footerContainer">
       <motion.div
+        ref={ref}
         className="instagramImgs"
         variants={variantsImg}
         initial="initial"
-        animate="animate"
+        animate={isInView ? "animate" : "initial"}
       >
         <motion.img
           variants={variantsImg}
@@ -116,7 +120,7 @@ function Footer() {
       <p className="allRightsReserved">
         All rights reserved. The site was made by Lora Mitova
       </p>
-    </div>
+    </motion.div>
   );
 }
 
