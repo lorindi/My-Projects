@@ -1,7 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Card.scss";
+import {useContext} from "react";
+import { AuthContext } from "../../context/AuthContext";
+
 function Card({ item }) {
+  const { updateUser, currentUser } = useContext(AuthContext);
   const imageUrl = item?.images?.length > 0 ? item.images[0] : "/logo.png";
+  const navigate = useNavigate();
+
+  const handleMessageClick = () => {
+    if (!currentUser) {
+      return navigate("/sign-in");
+    }
+    navigate(`/profile?startChatWith=${item?.ownerId}`);
+  };
   return (
     <div className="card">
       <Link to={`/${item._id}`} className="imageContainer">
@@ -31,10 +43,8 @@ function Card({ item }) {
             <div className="icon">
               <img src="/save.png" alt="" />
             </div>
-            <div className="icon">
-              <Link to="/profile">
-                <img src="/chat.png" alt="" />
-              </Link>
+            <div className="icon" onClick={handleMessageClick}>
+              <img src="/chat.png" alt="" />
             </div>
           </div>
         </div>
