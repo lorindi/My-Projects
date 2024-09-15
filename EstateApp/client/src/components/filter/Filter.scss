@@ -1,56 +1,112 @@
+@import "../../responsive.scss";
 .filter {
   display: flex;
   flex-direction: column;
-  gap: 10px 
-  
-  h1 {
-    font-weight: 300;
-    font-size: 24px;
-  }
-
-  .item {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-
-    label {
-      font-size: 10px;
-    }
-
-    input,
-    select {
-      width: 100px;
-      padding: 10px;
-      border: 1px solid #e0e0e0;
-      border-radius: 5px;
-      font-size: 14px;
-    }
+  width: 100%;
+  gap: 10px;
+  padding: 0px 20px;
+  @include sm {
+    gap: 0px;
   }
 
   .top {
-    margin-bottom: 10px;
-    input {
+    .itemTop {
+      display: flex;
+      flex-direction: column;
       width: 100%;
+
+      @include sm {
+        align-items: center;
+      }
+
+      label {
+        margin-bottom: 5px;
+        @include sm {
+          width: 100%;
+          margin-bottom: 0px;
+          margin-top: 10px;
+        }
+
+        @include md {
+          font-size: 16px;
+        }
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+
+        @include sm {
+          width: 100%;
+        }
+      }
     }
   }
-  
+
   .bottom {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    align-items: flex-end;
+    gap: 10px;
 
-    button{
-        width: 100px;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        background-color: #fece51;
-        border-radius: 5px;
 
-        img{
-            width: 24px;
-            height: 24px;
+    @include sm {
+      flex-direction: column;
+    }
+
+    .itemBottom {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      flex: 1;
+
+      @include sm {
+        justify-content: center;
+        align-items: center;
+      }
+
+      label {
+        margin-bottom: 5px;
+
+        @include sm {
+          width: 100%;
+          margin-bottom: 0px;
+          margin-top: 15px;
         }
+
+        @include md {
+          font-size: 16px;
+        }
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      object-fit: contain;
+      width: 50px;
+      height: 50px;
+      flex: 0.5;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #fece51;
+      border-radius: 5px;
+
+      @include sm {
+        margin: 10px auto;
+        width: 100%;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }
