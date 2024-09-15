@@ -102,16 +102,16 @@
   .carouselSection {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     height: 400px;
 
     @include lg {
       min-height: 500px;
-
     }
     @include sm {
       min-height: 250px;
+      justify-content: center;
     }
 
     .carouselHeading {
@@ -120,6 +120,7 @@
       justify-content: space-between;
       width: 100%;
       padding: 0% 3%;
+      margin-bottom: 40px;
 
       h2 {
         font-size: 39px;
@@ -127,12 +128,15 @@
         font-weight: 500;
         line-height: 150%;
 
-        @include lg {
+        @include md {
           font-size: 31px;
           font-weight: 600;
+          margin-bottom: 10px;
         }
+
         @include sm {
           font-size: 16px;
+          margin-bottom: 0px;
           font-weight: 600;
         }
       }
