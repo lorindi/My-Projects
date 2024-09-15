@@ -1,7 +1,7 @@
 import Slider from "../../components/slider/Slider";
 import "./SinglePage.scss";
 import Map from "../../components/map/Map";
-import { Link, redirect, useLoaderData } from "react-router-dom";
+import { Link, redirect, useLoaderData, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import apiRequest from "../../lib/apiRequest";
 import { AuthContext } from "../../context/AuthContext";
@@ -9,6 +9,7 @@ function SinglePage() {
   const post = useLoaderData();
   const { currentUser } = useContext(AuthContext);
   const [saved, setSaved] = useState(post.isSaved);
+  const navigate = useNavigate();
 
   const handleSave = async () => {
     //After react 19 update to use optimistic hook
@@ -23,6 +24,13 @@ function SinglePage() {
       console.log(err);
       setSaved((prev) => !prev);
     }
+  };
+
+  const handleMessageClick = () => {
+    if (!currentUser) {
+      return navigate("/sign-in");
+    }
+    navigate(`/profile?startChatWith=${post.ownerId._id}`);
   };
   return (
     <div className="singlePage">
@@ -133,7 +141,7 @@ function SinglePage() {
           </div>
 
           <div className="buttons">
-            <button>
+            <button onClick={handleMessageClick}>
               <img src="/chat.png" alt="" />
               <Link to="/profile">Send a Message</Link>
             </button>
