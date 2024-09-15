@@ -30,7 +30,7 @@ function Filter() {
         Search results for <b>{searchParams.get("city")}</b>
       </h1>
       <div className="top">
-        <div className="item">
+        <div className="itemTop">
           <label htmlFor="city">Location</label>
           <input
             type="text"
@@ -43,7 +43,7 @@ function Filter() {
         </div>
       </div>
       <div className="bottom">
-        <div className="item">
+        <div className="itemBottom">
           <label htmlFor="type">Type</label>
           <select
             name="type"
@@ -56,7 +56,7 @@ function Filter() {
             <option value="rent">Rent</option>
           </select>
         </div>
-        <div className="item">
+        <div className="itemBottom">
           <label htmlFor="property">Property</label>
           <select
             name="property"
@@ -71,7 +71,7 @@ function Filter() {
             <option value="land">Land</option>
           </select>
         </div>
-        <div className="item">
+        <div className="itemBottom">
           <label htmlFor="minPrice">Min Price</label>
           <input
             type="number"
@@ -82,7 +82,7 @@ function Filter() {
             defaultValue={query.minPrice}
           />
         </div>
-        <div className="item">
+        <div className="itemBottom">
           <label htmlFor="maxPrice">Max Price</label>
           <input
             type="text"
@@ -93,7 +93,7 @@ function Filter() {
             defaultValue={query.maxPrice}
           />
         </div>
-        <div className="item">
+        <div className="itemBottom">
           <label htmlFor="bedroom">Bedroom</label>
           <input
             type="text"
