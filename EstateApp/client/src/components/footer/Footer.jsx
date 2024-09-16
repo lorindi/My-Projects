@@ -22,17 +22,39 @@ const variantsImg = {
   },
 };
 
+const footerVariants = {
+  initial: {
+    opacity: 0,
+    scale: 0.8,
+    rotate: -15,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    rotate: 0,
+    transition: {
+      duration: 2,
+      ease: [0.6, -0.05, 0.01, 0.99],
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 function Footer() {
-  const ref = useRef();
-  const isInView = useInView(ref, { once: true });
+  const showImages = useRef();
+  const isInViewImages = useInView(showImages, { once: true });
+
+  const showFooterSection = useRef();
+  const setShowFooterSection = useInView(showImages, { once: true });
   return (
     <motion.div className="footerContainer">
       <motion.div
-        ref={ref}
+        ref={showImages}
         className="instagramImgs"
         variants={variantsImg}
         initial="initial"
-        animate={isInView ? "animate" : "initial"}
+        animate={isInViewImages ? "animate" : "initial"}
       >
         <motion.img
           variants={variantsImg}
@@ -60,7 +82,13 @@ function Footer() {
           alt=""
         />
       </motion.div>
-      <div className="contentContactsLogoAddress">
+      <motion.div
+        ref={showFooterSection}
+        className="contentContactsLogoAddress"
+        variants={footerVariants}
+        initial="initial"
+        animate={setShowFooterSection ? "animate" : "initial"}
+      >
         <div className="center">
           <ul className="contacts">
             <li className="">
@@ -100,6 +128,7 @@ function Footer() {
             </a>
           </div>
         </div>
+
         <div className="contentMenu">
           <div className="menu">
             <Link to="/list" className="">
@@ -116,7 +145,7 @@ function Footer() {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
       <p className="allRightsReserved">
         All rights reserved. The site was made by Lora Mitova
       </p>
