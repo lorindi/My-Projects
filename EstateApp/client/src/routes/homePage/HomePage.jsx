@@ -21,23 +21,8 @@ const textVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 2,
       staggerChildren: 0.1,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 50,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
     },
   },
 };
@@ -54,8 +39,11 @@ const carouselVariants = {
 
 function HomePage() {
   const navigate = useNavigate();
-  // const ref = useRef();
-  // const isInView = useInView(ref, { once: true });
+ const headingRef = useRef();
+ const isHeadingInView = useInView(headingRef, { once: true });
+
+ const summaryRef = useRef();
+ const isSummaryInView = useInView(summaryRef, { once: true });
 
   const cities = [
     "Sofia",
@@ -116,8 +104,8 @@ function HomePage() {
             className="wrapper"
             variants={textVariants}
             initial="initial"
-            animate="animate"
-            // ref={ref}
+            ref={headingRef}
+            animate={isHeadingInView ? "animate" : "initial"}
           >
             <h1 className="title">Find Real & Estate Get Your Dream Place</h1>
             <p className="description">
@@ -127,7 +115,7 @@ function HomePage() {
               expert advice. Your perfect home is just a click away!
             </p>
             <SearchBar />
-            <motion.div variants={textVariants} className="boxes">
+            <motion.div variants={textVariants}  className="boxes">
               <div className="box">
                 <h1>18+</h1>
                 <h2>Years of Experience</h2>
@@ -187,10 +175,12 @@ function HomePage() {
         className="summary"
         variants={textVariants}
         initial="initial"
-        animate="animate"
+        ref={summaryRef}
+        animate={isSummaryInView ? "animate" : "initial"} 
+
       >
-        <motion.h2 className="summaryTitle" variants={textVariants}>Lorem ipsum odor amet</motion.h2>
-        <motion.div className="summaryText" variants={textVariants}>
+        <motion.h2 className="summaryTitle" >Lorem ipsum odor amet</motion.h2>
+        <motion.div className="summaryText" >
           Cursus ante mauris suspendisse laoreet placerat porta amet blandit.
           Venenatis habitasse ligula imperdiet ac sed facilisi. Sodales eget dis
           nibh natoque dictum ante cursus varius. Penatibus lacinia etiam mattis
