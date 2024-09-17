@@ -14,7 +14,7 @@ import { motion, useInView } from "framer-motion";
 
 const textVariants = {
   initial: {
-    x: -500,
+    x: -50,
     opacity: 0,
   },
   animate: {
@@ -39,21 +39,13 @@ const carouselVariants = {
 
 function HomePage() {
   const navigate = useNavigate();
- const headingRef = useRef();
- const isHeadingInView = useInView(headingRef, { once: true });
+  const headingRef = useRef();
+  const isHeadingInView = useInView(headingRef, { once: true });
 
- const summaryRef = useRef();
- const isSummaryInView = useInView(summaryRef, { once: true });
+  const summaryRef = useRef();
+  const isSummaryInView = useInView(summaryRef, { once: true });
 
-  const cities = [
-    "Sofia",
-    "Plovdiv",
-    "Varna",
-    "Burgas",
-    "Ruse",
-    "Shumen",
-    "Veliko Tarnovo",
-  ];
+  const cities = ["Sofia", "Plovdiv", "Varna", "Burgas"];
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -115,7 +107,7 @@ function HomePage() {
               expert advice. Your perfect home is just a click away!
             </p>
             <SearchBar />
-            <motion.div variants={textVariants}  className="boxes">
+            <motion.div variants={textVariants} className="boxes">
               <div className="box">
                 <h1>18+</h1>
                 <h2>Years of Experience</h2>
@@ -176,11 +168,10 @@ function HomePage() {
         variants={textVariants}
         initial="initial"
         ref={summaryRef}
-        animate={isSummaryInView ? "animate" : "initial"} 
-
+        animate={isSummaryInView ? "animate" : "initial"}
       >
-        <motion.h2 className="summaryTitle" >Lorem ipsum odor amet</motion.h2>
-        <motion.div className="summaryText" >
+        <motion.h2 className="summaryTitle">Lorem ipsum odor amet</motion.h2>
+        <motion.div className="summaryText">
           Cursus ante mauris suspendisse laoreet placerat porta amet blandit.
           Venenatis habitasse ligula imperdiet ac sed facilisi. Sodales eget dis
           nibh natoque dictum ante cursus varius. Penatibus lacinia etiam mattis
