@@ -123,7 +123,6 @@
       margin-bottom: 40px;
       margin-top: 50px;
 
-
       @include sm {
         margin-bottom: 10px;
         margin-top: 0px;
@@ -177,10 +176,49 @@
         }
       }
     }
-    // .cityCarousel {
-    //   .carouselWrapper {
-    //   }
-    // }
+
+    .cityCarousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .carouselWrapper {
+        width: 100%;
+
+        .slick-slider {
+          width: 100%;
+
+          .slick-list {
+            width: 100%;
+            overflow: hidden;
+          }
+
+          .slick-track {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .slick-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            width: auto;
+            padding: 0 10px;
+          }
+        }
+      }
+
+      .slick-prev,
+      .slick-next {
+        z-index: 1;
+        &:before {
+          color: #000;
+        }
+      }
+    }
   }
   .summary {
     display: flex;
