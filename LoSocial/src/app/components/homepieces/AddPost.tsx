@@ -3,7 +3,7 @@ import React from "react";
 
 function AddPost() {
   return (
-    <div className="flex justify-between text-sm p-4 bg-white rounded-sm gap-4">
+    <div className="flex justify-between text-sm p-4 rounded-lg shadow-md bg-white gap-4">
       {/* AVATAR */}
       <Image
         src="https://images.pexels.com/photos/28210217/pexels-photo-28210217/free-photo-of-a-mountain-covered-in-clouds-and-fog.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
