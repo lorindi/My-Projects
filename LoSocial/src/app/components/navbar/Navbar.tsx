@@ -16,15 +16,15 @@ function Navbar() {
         </Link>
       </div>
       {/* --------- CENTER* --------- */}
-      <div className="hidden md:flex w-[50%] text-sm">
+      <div className="hidden md:flex w-[50%] text-sm items-center justify-between">
         {/* --------- Links* --------- */}
         <div className="flex gap-6 text-gray-600">
-          <Link href="/home" className="flex gap-2 items-center">
+          <Link href="/" className="flex gap-2 items-center">
             <Image
               src="/home.png"
               alt=""
-              width={16}
-              height={16}
+              width={25}
+              height={25}
               className="w-4 h-4"
             />
             <span>Homepage</span>
@@ -33,8 +33,8 @@ function Navbar() {
             <Image
               src="/friends.png"
               alt=""
-              width={16}
-              height={16}
+              width={25}
+              height={25}
               className="w-4 h-4"
             />
             <span>Friends</span>
@@ -43,8 +43,8 @@ function Navbar() {
             <Image
               src="/stories.png"
               alt=""
-              width={16}
-              height={16}
+              width={25}
+              height={25}
               className="w-4 h-4"
             />
             <span>Stories</span>
@@ -53,8 +53,8 @@ function Navbar() {
             <Image
               src="/.png"
               alt=""
-              width={16}
-              height={16}
+              width={25}
+              height={25}
               className="w-4 h-4"
             />
             <span></span>
@@ -63,12 +63,17 @@ function Navbar() {
             <Image
               src="/.png"
               alt=""
-              width={16}
-              height={16}
+              width={25}
+              height={25}
               className="w-4 h-4"
             />
             <span></span>
           </Link>
+        </div>
+        <div className="hidden xl:flex p-2 bg-slate-100 items-center rounded-xl ">
+          <Image src="/search.png" alt="" width={25} height={25} />
+          <input type="text" placeholder="search..." className="bg-transparent outline-none"/>
+
         </div>
       </div>
       {/* --------- RIGHT --------- */}
@@ -79,19 +84,19 @@ function Navbar() {
         <ClerkLoaded>
           <SignedIn>
             <div className="cursor-pointer">
-              <Image src="/people.png" alt="" width={20} height={20} />
+              <Image src="/people.png" alt="" width={25} height={25} />
             </div>
             <div className="cursor-pointer">
-              <Image src="/messages.png" alt="" width={20} height={20} />
+              <Image src="/messages.png" alt="" width={25} height={25} />
             </div>
             <div className="cursor-pointer">
-              <Image src="/notifications.png" alt="" width={20} height={20} />
+              <Image src="/notifications.png" alt="" width={25} height={25} />
             </div>
             <UserButton />
           </SignedIn>
           <SignedOut>
             <div className="flex items-center gap-2 cursor-pointer">
-              <Image src="/noavatar.png" alt="" width={20} height={20} />
+              <Image src="/noavatar.png" alt="" width={25} height={25} />
               <Link href="/sign-in" className="text-black">Login/Register</Link>
             </div>
           </SignedOut>
