@@ -1,6 +1,6 @@
-import Feed from "@/app/components/homepieces/Feed";
-import LeftMenu from "@/app/components/homepieces/LeftMenu";
-import RightMenu from "@/app/components/homepieces/RightMenu";
+import Feed from "@/app/components/Feed";
+import LeftMenu from "@/app/components/LeftMenu";
+import RightMenu from "@/app/components/RightMenu";
 import React from "react";
 
 function ProfilePage() {

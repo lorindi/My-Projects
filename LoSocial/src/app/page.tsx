@@ -1,8 +1,8 @@
-import AddPost from "./components/homepieces/AddPost";
-import Feed from "./components/homepieces/Feed";
-import LeftMenu from "./components/homepieces/LeftMenu";
-import RightMenu from "./components/homepieces/RightMenu";
-import Stories from "./components/homepieces/Stories";
+import AddPost from "./components/AddPost";
+import Feed from "./components/Feed";
+import LeftMenu from "./components/LeftMenu";
+import RightMenu from "./components/RightMenu";
+import Stories from "./components/Stories";
 
 const Homepage = () => {
   const userId = "1"
