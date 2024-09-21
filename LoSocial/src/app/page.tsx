@@ -5,6 +5,7 @@ import RightMenu from "./components/homepieces/RightMenu";
 import Stories from "./components/homepieces/Stories";
 
 const Homepage = () => {
+  const userId = "1"
   return (
     <div className="flex gap-6 pt-6">
       <div className="hidden xl:block w-[20%]">
@@ -18,7 +19,7 @@ const Homepage = () => {
         </div>
       </div>
       <div className="hidden lg:block w-[30%]">
-        <RightMenu />
+        <RightMenu userId={userId} />
       </div>
     </div>
   );
