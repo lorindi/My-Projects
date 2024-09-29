@@ -27,7 +27,7 @@ function ProfilePage() {
                 alt=""
                 width={128}
                 height={128}
-                className="rounded-full w-32 h-32 absolute left-0 right-0 m-auto -bottom-16 ring-4 ring-white z-10 object-cover"
+                className="rounded-full w-32 h-32 absolute left-0 right-0 m-auto -bottom-16 ring-4 ring-white object-cover"
               />
             </div>
             <h1 className="mt-20 mb-4 text-2xl font-medium">Lora Mitova</h1>
