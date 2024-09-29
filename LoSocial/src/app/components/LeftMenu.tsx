@@ -159,7 +159,9 @@ function LeftMenu({ type }: { type: "home" | "profile" }) {
         </Link>
       </div>
 
-      {type === "profile" && <Ad size="sm" />}
+      {/* {type === "profile" &&  */}
+      <Ad size="sm" />
+      {/* } */}
     </div>
   );
 }
