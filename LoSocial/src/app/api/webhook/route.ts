@@ -2,10 +2,11 @@ import { WebhookEvent } from "@clerk/clerk-sdk-node";
 import { NextRequest, NextResponse } from "next/server";
 import connectionToDatabase from "../../../../lib/mongoose";
 import User from "../../../../models/User";
-// За да използвам Clerk в route.ts на Next.js, трябва да конфигурирам webhook в Clerk, 
-// но тъй като използвам loca.lt, при всяко стартиране с npm run dev трябва да актуализирам 
-// линка на webhook с новия URL от loca.lt, който получавам, след като стартирам npm run dev 
-// и в отделен терминал lt --port 3000.
+// To use Clerk in the route.ts file of Next.js, I need to configure a webhook in Clerk,
+// but since I am using loca.lt, every time I run npm run dev, I need to update
+// the webhook link with the new URL from loca.lt, which I get after running npm run dev
+// and in a separate terminal, I run lt --port 3000.
+
 
 export async function POST(req: NextRequest) {
   await connectionToDatabase();
@@ -14,9 +15,10 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const event: WebhookEvent = body;
 
-    // Обработка на събитие за създаване на потребител
+    // Handle user creation event
     if (event.type === "user.created") {
-      const { id, email_addresses, first_name, last_name, username } = event.data;
+      const { id, email_addresses, first_name, last_name, username } =
+        event.data;
       console.log(email_addresses);
 
       const email = email_addresses[0]?.email_address;
@@ -32,7 +34,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(newUser, { status: 201 });
     }
 
-    // Обработка на събитие за обновяване на потребител
+    // Handle user update event
     if (event.type === "user.updated") {
       const { id, email_addresses, first_name, last_name } = event.data;
 
@@ -50,17 +52,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Обработка на събитие за изтриване на потребител
+    // Handle user deletion event
     if (event.type === "user.deleted") {
       const { id } = event.data;
 
       await User.deleteOne({ clerkId: id });
 
-      // Върни 204 статус без тяло
-      return NextResponse.json(
-        { message: "User updated in MongoDB" },
-        { status: 204 }
-      );
+      return new NextResponse(null, { status: 204 });
     }
 
     return NextResponse.json({ message: "Unhandled event" }, { status: 400 });
