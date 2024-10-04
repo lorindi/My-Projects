@@ -6,7 +6,6 @@ import Stories from "./components/Stories";
 import connectionToDatabase from "../../lib/mongoose";
 const Homepage = () => {
   const userId = "1"
- connectionToDatabase();
   return (
     <div className="flex gap-6 pt-6">
       <div className="hidden xl:block w-[20%]">
