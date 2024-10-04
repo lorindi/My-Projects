@@ -2,7 +2,11 @@ import { WebhookEvent } from "@clerk/clerk-sdk-node";
 import { NextRequest, NextResponse } from "next/server";
 import connectionToDatabase from "../../../../lib/mongoose";
 import User from "../../../../models/User";
-// lt --port 3000
+// За да използвам Clerk в route.ts на Next.js, трябва да конфигурирам webhook в Clerk, 
+// но тъй като използвам loca.lt, при всяко стартиране с npm run dev трябва да актуализирам 
+// линка на webhook с новия URL от loca.lt, който получавам, след като стартирам npm run dev 
+// и в отделен терминал lt --port 3000.
+
 export async function POST(req: NextRequest) {
   await connectionToDatabase();
 
