@@ -1,11 +1,12 @@
 import { WebhookEvent } from "@clerk/clerk-sdk-node";
 import { NextRequest, NextResponse } from "next/server";
-import connectionToDatabase from "@/lib/mongoose";
+import connectionToDatabase from "../../../../lib/mongoose";
 import User from "@/models/User";
 
 export async function POST(req: NextRequest) {
   try {
     await connectionToDatabase();
+    
 
     const body = await req.json();
     const event: WebhookEvent = body;
@@ -13,6 +14,8 @@ export async function POST(req: NextRequest) {
     // Обработка на събитие за създаване на потребител
     if (event.type === "user.created") {
       const { id, email_addresses, first_name, last_name } = event.data;
+      console.log(email_addresses);
+      
 
       const email = email_addresses[0]?.email_address;
 
