@@ -1,6 +1,6 @@
 // Standard API route for creating users:
 import connectionToDatabase from "../../../../lib/mongoose";
-import User, { IUser } from "@/models/User";
+import User, { IUser } from "../../../../models/User";
 import { NextResponse } from "next/server";
 
 // Define the type for the req parameter
