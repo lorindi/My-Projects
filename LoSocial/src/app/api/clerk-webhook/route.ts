@@ -8,18 +8,16 @@ export async function POST(req: NextRequest) {
     await connectionToDatabase();
 
     const body = await req.json();
-    console.log(body);
-    
     const event: WebhookEvent = body;
 
     // Обработка на събитие за създаване на потребител
     if (event.type === "user.created") {
-      const { id, email_addresses, username } = event.data;
+      const { id, email_addresses, first_name, last_name } = event.data;
 
       const email = email_addresses[0]?.email_address;
 
       const newUser = new User({
-        username: username,
+        username: `${first_name} ${last_name}`,
         email: email,
         clerkId: id,
       });
@@ -31,13 +29,13 @@ export async function POST(req: NextRequest) {
 
     // Обработка на събитие за обновяване на потребител
     if (event.type === "user.updated") {
-      const { id, email_addresses, username, first_name, last_name } = event.data;
+      const { id, email_addresses, first_name, last_name } = event.data;
 
       const email = email_addresses[0]?.email_address;
 
       const updatedUser = await User.findOneAndUpdate(
         { clerkId: id },
-        { username: username, email: email },
+        { username: `${first_name} ${last_name}`, email: email },
         { new: true }
       );
 
@@ -51,7 +49,7 @@ export async function POST(req: NextRequest) {
       await User.deleteOne({ clerkId: id });
 
       // Върни 204 статус без тяло
-      return NextResponse.json({ status: 204 });
+      return NextResponse.json({ message: "User updated in MongoDB"}, { status: 204 });
     }
 
     return NextResponse.json({ message: "Unhandled event" }, { status: 400 });
