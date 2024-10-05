@@ -2,14 +2,14 @@ import { model, Schema, Types } from "mongoose";
 
 interface IBlock {
   createdAt: Date;
-  blocker: Types.ObjectId;
-  blocked: Types.ObjectId;
+  blockerId: Types.ObjectId;
+  blockedId: Types.ObjectId;
 }
 
 const blockSchema = new Schema<IBlock>({
   createdAt: { type: Date, default: Date.now },
-  blocker: { type: Schema.Types.ObjectId, ref: "User", required: true },
-  blocked: { type: Schema.Types.ObjectId, ref: "User", required: true },
+  blockerId: { type: Schema.Types.ObjectId, ref: "User", required: true },
+  blockedId: { type: Schema.Types.ObjectId, ref: "User", required: true },
 
 });
 
