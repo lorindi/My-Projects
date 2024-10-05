@@ -5,7 +5,7 @@ interface IPost {
   img?: string;
   createdAt: Date;
   updatedAt: Date;
-  user: Types.ObjectId;
+  userId: Types.ObjectId;
   comments: Types.ObjectId[];
   likes: Types.ObjectId[];
 }
@@ -15,7 +15,7 @@ const postSchema = new Schema<IPost>({
   img: { type: String },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
-  user: { type: Schema.Types.ObjectId, ref: "User", required: true },
+  userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
   comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
   likes: [{ type: Schema.Types.ObjectId, ref: "Like" }],
 });
