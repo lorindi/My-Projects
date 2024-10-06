@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 function AddPost() {
+  
   return (
     <div className="flex justify-between text-sm p-4 rounded-lg shadow-md bg-white gap-4">
       {/* AVATAR */}
