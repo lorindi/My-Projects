@@ -63,7 +63,16 @@ export async function POST(req: Request) {
 
   if (eventType === "user.created") {
     try {
-        
+      const newUser = new User({
+        clerkId: evt.data.id,
+        username: JSON.parse(body).data.username,
+        avatar: JSON.parse(body).data.image_url || "/noAvatar.png",
+        cover: null,
+      });
+
+      await newUser.save();
+
+      return new Response("User created successfully!", { status: 201 });
     } catch (err) {
       console.log(err);
       return new Response("Failed to create the user!", { status: 500 });
