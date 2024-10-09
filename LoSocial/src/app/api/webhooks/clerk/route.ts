@@ -62,11 +62,21 @@ export async function POST(req: Request) {
   //   console.log('Webhook body:', body)
 
   if (eventType === "user.created") {
+    const { email_addresses, username, image_url } = evt.data;
+  
+    // Extract the first email from the email_addresses array.
+    const email = email_addresses && email_addresses[0]?.email_address;
+  
+    if (!email) {
+      console.error("Email is missing in the user.created event payload");
+      return new Response("Email is missing", { status: 400 });
+    }
     try {
       const newUser = new User({
         clerkId: evt.data.id,
-        username: JSON.parse(body).data.username,
-        avatar: JSON.parse(body).data.image_url || "/noAvatar.png",
+        username: username,
+        email: email,
+        avatar: image_url || "/noAvatar.png",
         cover: null,
       });
 
@@ -80,11 +90,11 @@ export async function POST(req: Request) {
   }
   if (eventType === "user.updated") {
     const { id, email_addresses, username, image_url } = evt.data;
-
+    const email = email_addresses && email_addresses[0]?.email_address;
     try {
       const updatedUser = await User.findOneAndUpdate(
         { clerkId: id },
-        { username: username, avatar: image_url },
+        { username: username, avatar: image_url, email:email },
         { new: true }
       );
       return new Response("User updated successfully!", { status: 201 });
