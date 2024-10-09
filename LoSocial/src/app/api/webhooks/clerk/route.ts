@@ -79,7 +79,15 @@ export async function POST(req: Request) {
     }
   }
   if (eventType === "user.updated") {
+    const { id, email_addresses, username, image_url } = evt.data;
+
     try {
+      const updatedUser = await User.findOneAndUpdate(
+        { clerkId: id },
+        { username: username, avatar: image_url },
+        { new: true }
+      );
+      return new Response("User updated successfully!", { status: 201 });
     } catch (err) {
       console.log(err);
       return new Response("Failed to update the user!", { status: 500 });
@@ -93,5 +101,5 @@ export async function POST(req: Request) {
     }
   }
 
-  return new Response("", { status: 200 });
+  return new Response("Webhook received", { status: 200 });
 }
