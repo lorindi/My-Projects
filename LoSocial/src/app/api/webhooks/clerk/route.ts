@@ -63,10 +63,10 @@ export async function POST(req: Request) {
 
   if (eventType === "user.created") {
     const { email_addresses, username, image_url } = evt.data;
-  
+
     // Extract the first email from the email_addresses array.
     const email = email_addresses && email_addresses[0]?.email_address;
-  
+
     if (!email) {
       console.error("Email is missing in the user.created event payload");
       return new Response("Email is missing", { status: 400 });
@@ -94,7 +94,7 @@ export async function POST(req: Request) {
     try {
       const updatedUser = await User.findOneAndUpdate(
         { clerkId: id },
-        { username: username, avatar: image_url, email:email },
+        { username: username, avatar: image_url, email: email },
         { new: true }
       );
       return new Response("User updated successfully!", { status: 201 });
@@ -104,7 +104,11 @@ export async function POST(req: Request) {
     }
   }
   if (eventType === "user.deleted") {
+    const { id } = evt.data;
     try {
+      await User.deleteOne({ clerkId: id });
+
+      return new Response(null, { status: 204 });
     } catch (err) {
       console.log(err);
       return new Response("Failed to delete the user!", { status: 500 });
