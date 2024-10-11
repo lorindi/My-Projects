@@ -3,7 +3,7 @@ import Feed from "./components/Feed";
 import LeftMenu from "./components/LeftMenu";
 import RightMenu from "./components/RightMenu";
 import Stories from "./components/Stories";
-import connectionToDatabase from "../../lib/mongoose";
+import connectionToDatabase from "../lib/mongoose";
 const Homepage = () => {
   const userId = "1"
   return (

@@ -5,6 +5,7 @@ const nextConfig = {
     ppr: "incremental",
   },
   images: {
+    domains: ['img.clerk.com'],
     remotePatterns: [
       {
         protocol: "https",

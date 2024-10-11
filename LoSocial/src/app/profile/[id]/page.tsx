@@ -3,31 +3,24 @@ import LeftMenu from "@/app/components/LeftMenu";
 import RightMenu from "@/app/components/RightMenu";
 import Image from "next/image";
 import React from "react";
-import connectionToDatabase from "../../../../lib/mongoose";
-import User from "../../../../models/User";
-import Block from "../../../../models/Block";
+import connectionToDatabase from "../../../lib/mongoose";
+import User from "../../../models/User";
+import Block from "../../../models/Block";
 import { auth } from "@clerk/nextjs/server";
+import { IUser } from "../../../models/User"; 
 
 async function ProfilePage({ params }: { params: { id: string } }) {
-  try {
-    await connectionToDatabase();
-    console.log("Connected to database");
-  } catch (error) {
-    console.error("Error connecting to database:", error);
-    return <div>Failed to connect to database</div>;
-  }
+  await connectionToDatabase();
+  console.log("Connected to database");
 
   const { id: id } = params;
 
-  console.log(id, 'params.id');
+  console.log(id, "params.id");
 
-  const user = await User.findOne({clerkId: id}).lean();
-  console.log(user, 'user');
+  const user = await User.findOne({ clerkId: id }).lean();
+  console.log(user, "user");
 
-  if (!user) {
-    return <div>User not found</div>;
-  }
-
+  if (!user) return null;
 
   return (
     <div className="flex gap-6 pt-6">
@@ -39,13 +32,13 @@ async function ProfilePage({ params }: { params: { id: string } }) {
           <div className="flex flex-col items-center justify-center">
             <div className="w-full h-64 relative">
               <Image
-                src="https://images.pexels.com/photos/17514561/pexels-photo-17514561/free-photo-of-wooden-shed-near-water-in-countryside.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src={user.cover || "/noAvatar.png"}
                 alt=""
                 fill
                 className="object-cover rounded-md"
               />
               <Image
-                src="https://images.pexels.com/photos/20144254/pexels-photo-20144254/free-photo-of-vintage-tram-in-lisbon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src={user.avatar || "/noAvatar.png"}
                 alt=""
                 width={128}
                 height={128}
