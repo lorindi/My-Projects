@@ -8,20 +8,27 @@ import User from "../../../../models/User";
 import Block from "../../../../models/Block";
 import { auth } from "@clerk/nextjs/server";
 
-async function ProfilePage({ params }: { params: { username: string } }) {
-  await connectionToDatabase();
-
-  const { userId } = auth(); // This should now work correctly
-
-  if (!userId) {
-    return <div>You need to be logged in to view this page.</div>; 
+async function ProfilePage({ params }: { params: { id: string } }) {
+  try {
+    await connectionToDatabase();
+    console.log("Connected to database");
+  } catch (error) {
+    console.error("Error connecting to database:", error);
+    return <div>Failed to connect to database</div>;
   }
 
-  const user = await User.findOne({ clerkId: userId }).lean();
+  const { id: id } = params;
+
+  console.log(id, 'params.id');
+
+  const user = await User.findOne({clerkId: id}).lean();
+  console.log(user, 'user');
 
   if (!user) {
-    return <div>User not found in the database</div>; 
+    return <div>User not found</div>;
   }
+
+
   return (
     <div className="flex gap-6 pt-6">
       <div className="hidden xl:block w-[20%]">
@@ -65,7 +72,7 @@ async function ProfilePage({ params }: { params: { username: string } }) {
         </div>
       </div>
       <div className="hidden lg:block w-[30%]">
-        <RightMenu userId={userId} />
+        {/* <RightMenu userId={userId} /> */}
       </div>
     </div>
   );
