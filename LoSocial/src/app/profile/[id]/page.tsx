@@ -3,10 +3,25 @@ import LeftMenu from "@/app/components/LeftMenu";
 import RightMenu from "@/app/components/RightMenu";
 import Image from "next/image";
 import React from "react";
+import connectionToDatabase from "../../../../lib/mongoose";
+import User from "../../../../models/User";
+import Block from "../../../../models/Block";
+import { auth } from "@clerk/nextjs/server";
 
-function ProfilePage() {
-  const userId = "1";
+async function ProfilePage({ params }: { params: { username: string } }) {
+  await connectionToDatabase();
 
+  const { userId } = auth(); // This should now work correctly
+
+  if (!userId) {
+    return <div>You need to be logged in to view this page.</div>; 
+  }
+
+  const user = await User.findOne({ clerkId: userId }).lean();
+
+  if (!user) {
+    return <div>User not found in the database</div>; 
+  }
   return (
     <div className="flex gap-6 pt-6">
       <div className="hidden xl:block w-[20%]">
