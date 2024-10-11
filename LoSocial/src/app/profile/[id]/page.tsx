@@ -4,20 +4,18 @@ import RightMenu from "@/app/components/RightMenu";
 import Image from "next/image";
 import React from "react";
 import connectionToDatabase from "../../../lib/mongoose";
-import User from "../../../models/User";
-import Block from "../../../models/Block";
+import User, { IUser } from "../../../models/User"; 
 import { auth } from "@clerk/nextjs/server";
-import { IUser } from "../../../models/User"; 
 
 async function ProfilePage({ params }: { params: { id: string } }) {
   await connectionToDatabase();
   console.log("Connected to database");
 
-  const { id: id } = params;
-
+  const { id } = params;
   console.log(id, "params.id");
 
-  const user = await User.findOne({ clerkId: id }).lean();
+  // Use IUser type assertion to specify the expected return type
+  const user = await User.findOne({ clerkId: id }).lean<IUser>();
   console.log(user, "user");
 
   if (!user) return null;
@@ -45,18 +43,18 @@ async function ProfilePage({ params }: { params: { id: string } }) {
                 className="rounded-full w-32 h-32 absolute left-0 right-0 m-auto -bottom-16 ring-4 ring-white object-cover"
               />
             </div>
-            <h1 className="mt-20 mb-4 text-2xl font-medium">Lora Mitova</h1>
+            <h1 className="mt-20 mb-4 text-2xl font-medium">{user.name || "Unknown User"}</h1>
             <div className="flex items-center justify-center gap-12 bg-4">
               <div className="flex flex-col items-center">
-                <span className="font-medium">123</span>
+                <span className="font-medium">{user.posts.length}</span>
                 <span className="text-sm">Posts</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="font-medium">1.2K</span>
+                <span className="font-medium">{user.followers.length}</span>
                 <span className="text-sm">Followers</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="font-medium">1.3K</span>
+                <span className="font-medium">{user.followings.length}</span>
                 <span className="text-sm">Following</span>
               </div>
             </div>
@@ -65,7 +63,7 @@ async function ProfilePage({ params }: { params: { id: string } }) {
         </div>
       </div>
       <div className="hidden lg:block w-[30%]">
-        {/* <RightMenu userId={userId} /> */}
+        <RightMenu userId={id} />
       </div>
     </div>
   );
