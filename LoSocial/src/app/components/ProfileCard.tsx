@@ -1,7 +1,23 @@
+import connectionToDatabase from "@/lib/mongoose";
+import User, { IUser } from "@/models/User";
+import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
 import React from "react";
 
 async function ProfileCard() {
+  await connectionToDatabase();
+
+  const { userId } = auth();
+  console.log(userId);
+  
+
+  if (!userId) return null;
+
+  const user = await User.findOne({ clerkId: userId }).lean<IUser>();
+
+  console.log('user:', user);
+  
+
   return (
     <div className="p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-6">
       <div className="h-20 relative">
@@ -47,7 +63,9 @@ async function ProfileCard() {
           </div>
           <span className="text-xs text-gray-500">500 Followers</span>
         </div>
-        <button className="bg-blue-500 text-white text-xs p-2 rounded-md">My Profile</button>
+        <button className="bg-blue-500 text-white text-xs p-2 rounded-md">
+          My Profile
+        </button>
       </div>
     </div>
   );
