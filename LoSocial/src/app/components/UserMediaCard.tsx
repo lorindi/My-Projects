@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import User, { IUser } from "../../models/User";
 
-function UserMediaCard({ userId }: { userId: string }) {
+function UserMediaCard({ user }: { user: IUser }) {
   return (
     <div className="p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-4">
       {/* TOP */}
