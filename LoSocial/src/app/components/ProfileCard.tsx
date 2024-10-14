@@ -9,26 +9,26 @@ async function ProfileCard() {
 
   const { userId } = auth();
   console.log(userId);
-  
 
   if (!userId) return null;
 
   const user = await User.findOne({ clerkId: userId }).lean<IUser>();
 
-  console.log('user:', user);
-  
+  if (!user) return null;
+
+  console.log(user);
 
   return (
     <div className="p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-6">
       <div className="h-20 relative">
         <Image
-          src="https://images.pexels.com/photos/17514561/pexels-photo-17514561/free-photo-of-wooden-shed-near-water-in-countryside.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={user.avatar || "/noAvatar.png"}
           alt=""
           fill
           className="object-cover rounded-md"
         />
         <Image
-          src="https://images.pexels.com/photos/20144254/pexels-photo-20144254/free-photo-of-vintage-tram-in-lisbon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={user.avatar || "/noAvatar.png"}
           alt=""
           width={40}
           height={40}
@@ -36,7 +36,11 @@ async function ProfileCard() {
         />
       </div>
       <div className="flex flex-col h-20 gap-2 items-center">
-        <span className="font-semibold">Ivan Dimitrov</span>
+        <span className="font-semibold">
+          {user.name && user.surname
+            ? user.name + " " + user.surname
+            : user.username}
+        </span>
         <div className="flex items-center gap-4">
           <div className="flex">
             <Image
@@ -61,7 +65,9 @@ async function ProfileCard() {
               className="rounded-full w-3 h-3  object-cover"
             />
           </div>
-          <span className="text-xs text-gray-500">500 Followers</span>
+          <span className="text-xs text-gray-500">
+            {user.followers.length} Followers
+          </span>
         </div>
         <button className="bg-blue-500 text-white text-xs p-2 rounded-md">
           My Profile
