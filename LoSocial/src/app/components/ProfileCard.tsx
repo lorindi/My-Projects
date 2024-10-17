@@ -8,7 +8,6 @@ async function ProfileCard() {
   await connectionToDatabase();
 
   const { userId } = auth();
-  console.log(userId);
 
   if (!userId) return null;
 
@@ -16,7 +15,6 @@ async function ProfileCard() {
 
   if (!user) return null;
 
-  console.log(user);
 
   return (
     <div className="p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-6">
