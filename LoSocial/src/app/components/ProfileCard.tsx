@@ -1,5 +1,5 @@
 import connectionToDatabase from "@/lib/mongoose";
-import User, { IUser } from "@/models/User";
+import User, { IUser } from "../../models/User";
 import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
 import React from "react";
