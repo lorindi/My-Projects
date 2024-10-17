@@ -1,5 +1,4 @@
 import mongoose, { Types, Document } from "mongoose";
-import Follower from "@/models/Follower";
 export interface IUser extends Document {
   // _id: string;
   clerkId: string;
