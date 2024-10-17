@@ -25,19 +25,22 @@ async function ProfilePage({ params }: { params: { username: string } }) {
 
   let isBlocked;
 
-  if (currentUserId) {
+  // Ако потребителят разглежда собствения си профил
+  if (viewUserId === loggedInUserId) {
+    isBlocked = true;
+  } else if (currentUserId) {
+    // Проверка за блокиране в базата данни, само ако потребителят не разглежда собствения си профил
     const res = await Block.findOne({
       blockerId: viewUserId,
       blockedId: loggedInUserId,
     });
-
-    isBlocked = !!res;
-    
+  
+    isBlocked = !!res; // true ако е намерен запис за блокиране, false ако не
   } else {
-    isBlocked = false;
+    isBlocked = false; // Ако потребителят не е логнат
   }
 
-  if (!isBlocked) return notFound();
+  if (isBlocked) return notFound();
 
   return (
     <div className="flex gap-6 pt-6">
