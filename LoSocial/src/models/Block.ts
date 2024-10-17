@@ -1,6 +1,6 @@
-import { model, Schema, Types } from "mongoose";
+import mongoose,{ model, Schema, Types } from "mongoose";
 
-interface IBlock {
+export interface IBlock extends Document {
   createdAt: Date;
   blockerId: Types.ObjectId;
   blockedId: Types.ObjectId;
@@ -12,6 +12,5 @@ const blockSchema = new Schema<IBlock>({
   blockedId: { type: Schema.Types.ObjectId, ref: "User", required: true },
 
 });
-
-const Block = model<IBlock>('Block', blockSchema)
+const Block = mongoose.models.Block || mongoose.model<IBlock>("Block", blockSchema);
 export default Block
