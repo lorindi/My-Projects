@@ -20,7 +20,7 @@ async function ProfileCard() {
     <div className="p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-6">
       <div className="h-20 relative">
         <Image
-          src={user.avatar || "/noAvatar.png"}
+          src={user.cover || "/noCover.jpg"}
           alt=""
           fill
           className="object-cover rounded-md"
