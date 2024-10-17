@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import User, { IUser } from "../../models/User";
 
-function UserInformationCard({ user }: { user: IUser }) {
+async function UserInformationCard({ user }: { user: IUser }) {
   const createdAtDate = new Date(user.createdAt);
   const formattedDate = createdAtDate.toLocaleDateString("en-US", {
     year: "numeric",
