@@ -16,13 +16,20 @@ function UserInfoCardInteraction({
 }) {
   return (
     <>
-      <button className="w-full bg-blue-500 text-white text-sm rounded-md p-[5px]">
-      {isFollowing ? "Following" : isFollowingSent ? "Friend Request Sent" : "Follow"}
-
-      </button>
-      <span className="text-red-400 self-end text-xs cursor-pointer">
-        {isUserBlocked ? "Unblock User" : "Block User"}
-      </span>
+      <form action="">
+        <button className="w-full bg-blue-500 text-white text-sm rounded-md p-[5px]">
+          {isFollowing
+            ? "Following"
+            : isFollowingSent
+            ? "Friend Request Sent"
+            : "Follow"}
+        </button>
+      </form>
+      <form action="" className="self-end">
+        <span className="text-red-400 self-end text-xs cursor-pointer">
+          {isUserBlocked ? "Unblock User" : "Block User"}
+        </span>
+      </form>
     </>
   );
 }
