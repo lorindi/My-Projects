@@ -5,6 +5,7 @@ import User, { IUser } from "../../../models/User";
 import { auth } from "@clerk/nextjs/server";
 import Block from "@/models/Block";
 import Follower from "@/models/Follower";
+import UserInfoCardInteraction from "./UserInfoCardInteraction";
 
 async function UserInformationCard({ user }: { user: IUser }) {
   const createdAtDate = new Date(user.createdAt);
@@ -17,10 +18,10 @@ async function UserInformationCard({ user }: { user: IUser }) {
   let isFollowing = false;
   let isFollowingSent = false;
 
-  const { userId: currentUserId } = auth();
-  const loggedInUserId = (await User.findOne({ clerkId: currentUserId }))?._id;
+  const { userId } = auth();
+  const loggedInUserId = (await User.findOne({ clerkId: userId }))?._id;
 
-  if (currentUserId) {
+  if (userId) {
     const blockRes = await Block.findOne({
       blockerId: loggedInUserId,
       blockedId: user._id,
@@ -117,12 +118,15 @@ async function UserInformationCard({ user }: { user: IUser }) {
             <span>Joined {formattedDate}</span>
           </div>
         </div>
-        <button className="bg-blue-500 text-white text-sm rounded-md p-[5px]">
-          Follow
-        </button>
-        <span className="text-red-400 self-end text-xs cursor-pointer">
-          Block User
-        </span>
+        {userId && loggedInUserId && (
+          <UserInfoCardInteraction
+            userId={userId}
+            currentUserId={userId}
+            isUserBlocked={isUserBlocked}
+            isFollowing={isFollowing}
+            isFollowingSent={isFollowingSent}
+          />
+        )}
       </div>
     </div>
   );
