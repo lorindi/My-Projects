@@ -1,6 +1,4 @@
-import Feed from "@/app/components/Feed";
-import LeftMenu from "@/app/components/LeftMenu";
-import RightMenu from "@/app/components/RightMenu";
+
 import Image from "next/image";
 import React from "react";
 import connectionToDatabase from "../../../lib/mongoose";
@@ -8,6 +6,10 @@ import User, { IUser } from "../../../models/User";
 import { auth } from "@clerk/nextjs/server";
 import { notFound } from "next/navigation";
 import Block, { IBlock } from "@/models/Block";
+import LeftMenu from "@/app/components/leftMenu/LeftMenu";
+import Feed from "@/app/components/feed/Feed";
+import RightMenu from "@/app/components/rightMenu/RightMenu";
+
 
 async function ProfilePage({ params }: { params: { username: string } }) {
   await connectionToDatabase();
