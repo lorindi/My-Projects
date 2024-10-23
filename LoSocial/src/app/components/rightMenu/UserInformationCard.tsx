@@ -124,7 +124,6 @@ async function UserInformationCard({ user }: { user: IUser }) {
           <UserInfoCardInteraction
             userId={userId}
             currentUserId={userId}
-            loggedInUserId={loggedInUserId}
             isUserBlocked={isUserBlocked}
             isFollowing={isFollowing}
             isFollowingSent={isFollowingSent}
