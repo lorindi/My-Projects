@@ -7,8 +7,9 @@ import RightMenu from "./components/rightMenu/RightMenu";
 import Stories from "./components/Stories";
 import { auth } from "@clerk/nextjs/server";
 const Homepage = async () => {
-  const { userId } = auth();
-  const user = await User.findOne({ clerkId: userId });
+  // const { userId } = auth();
+  // const user = await User.findOne({ clerkId: userId });
+  const user = '1'
   return (
     <div className="flex gap-6 pt-6">
       <div className="hidden xl:block w-[20%]">
