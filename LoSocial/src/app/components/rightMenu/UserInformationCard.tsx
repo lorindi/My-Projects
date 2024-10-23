@@ -20,6 +20,8 @@ async function UserInformationCard({ user }: { user: IUser }) {
 
   const { userId } = auth();
   const loggedInUserId = (await User.findOne({ clerkId: userId }))?._id;
+  console.log('typeof', typeof loggedInUserId);
+  
 
   if (userId) {
     const blockRes = await Block.findOne({
@@ -122,6 +124,7 @@ async function UserInformationCard({ user }: { user: IUser }) {
           <UserInfoCardInteraction
             userId={userId}
             currentUserId={userId}
+            loggedInUserId={loggedInUserId}
             isUserBlocked={isUserBlocked}
             isFollowing={isFollowing}
             isFollowingSent={isFollowingSent}
