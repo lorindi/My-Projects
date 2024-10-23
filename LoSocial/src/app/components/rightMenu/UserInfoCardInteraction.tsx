@@ -4,7 +4,6 @@ import React, { useState } from "react";
 function UserInfoCardInteraction({
   userId,
   currentUserId,
-  loggedInUserId,
   isUserBlocked,
   isFollowing,
   isFollowingSent,
@@ -12,7 +11,6 @@ function UserInfoCardInteraction({
 }: {
   userId: string;
   currentUserId: string;
-  loggedInUserId: string;
   isUserBlocked: boolean;
   isFollowing: boolean;
   isFollowingSent: boolean;
