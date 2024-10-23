@@ -9,6 +9,7 @@ import connectionToDatabase from "../../../../lib/mongoose";
 import User from "../../../../models/User";
 export async function POST(req: Request) {
   await connectionToDatabase();
+  
   // You can find this in the Clerk Dashboard -> Webhooks -> choose the endpoint
   const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 
@@ -58,10 +59,11 @@ export async function POST(req: Request) {
   // For this guide, you simply log the payload to the console
   const { id } = evt.data;
   const eventType = evt.type;
-  //   console.log(`Webhook with and ID of ${id} and type of ${eventType}`)
-  //   console.log('Webhook body:', body)
+    // console.log(`Webhook with and ID of ${id} and type of ${eventType}`)
+    // console.log('Webhook body:', body)
 
   if (eventType === "user.created") {
+    
     const { email_addresses, username, image_url } = evt.data;
 
     // Extract the first email from the email_addresses array.
