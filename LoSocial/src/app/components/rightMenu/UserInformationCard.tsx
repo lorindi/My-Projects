@@ -5,7 +5,7 @@ import User, { IUser } from "../../../models/User";
 import { auth } from "@clerk/nextjs/server";
 import Block from "@/models/Block";
 import Follower from "@/models/Follower";
-// import UserInfoCardInteraction from "./UserInfoCardInteraction";
+import UserInfoCardInteraction from "./UserInfoCardInteraction";
 
 async function UserInformationCard({ user }: { user: IUser }) {
   const createdAtDate = new Date(user.createdAt);
@@ -14,34 +14,34 @@ async function UserInformationCard({ user }: { user: IUser }) {
     month: "long",
     day: "numeric",
   });
-  // let isUserBlocked = false;
-  // let isFollowing = false;
-  // let isFollowingSent = false;
+  let isUserBlocked = false;
+  let isFollowing = false;
+  let isFollowingSent = false;
 
-  // const { userId } = auth();
-  // const loggedInUserId = (await User.findOne({ clerkId: userId }))?._id;
-  // console.log('typeof', typeof loggedInUserId);
+  const { userId } = auth();
+  const loggedInUserId = (await User.findOne({ clerkId: userId }))?._id;
+  console.log('typeof', typeof loggedInUserId);
   
 
-  // if (userId) {
-  //   const blockRes = await Block.findOne({
-  //     blockerId: loggedInUserId,
-  //     blockedId: user._id,
-  //   });
-  //   blockRes ? (isUserBlocked = true) : (isUserBlocked = false);
+  if (userId) {
+    const blockRes = await Block.findOne({
+      blockerId: loggedInUserId,
+      blockedId: user._id,
+    });
+    blockRes ? (isUserBlocked = true) : (isUserBlocked = false);
 
-  //   const followRes = await Follower.findOne({
-  //     followerId: loggedInUserId,
-  //     followingId: user._id,
-  //   });
-  //   followRes ? (isFollowing = true) : (isFollowing = false);
+    const followRes = await Follower.findOne({
+      followerId: loggedInUserId,
+      followingId: user._id,
+    });
+    followRes ? (isFollowing = true) : (isFollowing = false);
 
-  //   const followReqRes = await Block.findOne({
-  //     senderId: loggedInUserId,
-  //     receiverId: user._id,
-  //   });
-  //   followReqRes ? (isFollowingSent = true) : (isFollowingSent = false);
-  // }
+    const followReqRes = await Block.findOne({
+      senderId: loggedInUserId,
+      receiverId: user._id,
+    });
+    followReqRes ? (isFollowingSent = true) : (isFollowingSent = false);
+  }
 
   return (
     <div className="p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-4">
@@ -120,7 +120,7 @@ async function UserInformationCard({ user }: { user: IUser }) {
             <span>Joined {formattedDate}</span>
           </div>
         </div>
-        {/* {userId && loggedInUserId && (
+        {userId && loggedInUserId && (
           <UserInfoCardInteraction
             userId={userId}
             currentUserId={userId}
@@ -128,7 +128,7 @@ async function UserInformationCard({ user }: { user: IUser }) {
             isFollowing={isFollowing}
             isFollowingSent={isFollowingSent}
           />
-        )} */}
+        )}
       </div>
     </div>
   );
