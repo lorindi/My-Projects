@@ -32,7 +32,6 @@ EstateApp application allows users to add, edit, delete properties, mark propert
 
 - **Express.js:** For creating the RESTful API.
 - **Mongoose:** For interacting with MongoDB.
-- **Prisma:** For handling database queries.
 - **Socket.io:** For real-time communication.
 - **Bcrypt:** For password hashing.
 - **JWT:** For user authentication.
