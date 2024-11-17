@@ -11,11 +11,12 @@ import AdminPanel from "./routes/adminPanel/AdminPanel";
 import NotFound from "./routes/notFound/NotFound";
 import CreateRecipe from "./routes/createRecipe/CreateRecipe";
 import RecipesList from "./components/recipesList/RecipesList";
-
+import Counter from "./features/counter/Counter";
 function App() {
   return (
     <div className="layout">
       <Header />
+      <Counter/>
       <main className="main">
         <Routes>
           <Route path="*" element={<NotFound />} />
