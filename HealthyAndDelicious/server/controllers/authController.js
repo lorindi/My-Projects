@@ -41,7 +41,7 @@ export const signIn = async (req, res) => {
 
     const passwordValid = await bcrypt.compare(password, user.password);
     if (!passwordValid)
-      return res.status(401), json({ message: "Password is not valid!" });
+      return res.status(401).json({ message: "Password is not valid!" });
 
     const oneWeek = 1000 * 60 * 60 * 24 * 7;
     const token = jwt.sign(
@@ -53,12 +53,12 @@ export const signIn = async (req, res) => {
       { expiresIn: oneWeek }
     );
 
-    const { password: userPassword, ...userInfo } = user;
+    const { password: userPassword, ...userInfo } = user._doc;
 
     res.cookie("token", token, {
       httpOnly: true,
       maxAge: oneWeek,
-    }).status(200).json(userInfo)
+    }).status(200).json({message:"User has successfully sign in.", userInfo})
   } catch (err) {
     console.log(err);
   }
