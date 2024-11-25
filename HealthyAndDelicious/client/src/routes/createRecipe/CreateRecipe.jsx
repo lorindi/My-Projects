@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './CreateRecipe.scss'
 function CreateRecipe() {
   
