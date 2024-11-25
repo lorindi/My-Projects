@@ -7,20 +7,6 @@
   position: relative;
   width: 100%;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url("/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    opacity: 0.4;
-  }
   .contentDashboardList {
     display: flex;
     flex-direction: row;
