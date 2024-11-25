@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faHouse, faX } from "@fortawesome/free-solid-svg-icons";
 function Mobile() {
   const [isShow, setIsShow] = useState(false);
-  const [isLogged, setIsLogged] = useState(true);
+  const [isLogged] = useState(true);
 
 
   const toggleIsShow = () => {
