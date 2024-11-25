@@ -31,8 +31,8 @@ export const listRecipesByUser = async (req, res) => {
     }
     res.status(200).json(recipes);
   } catch (err) {
-    console.error("Error listing user's recipes:", err);
-    res.status(500).json({ message: "Failed to list user's recipes" });
+    console.error("Error listing user`s recipes:", err);
+    res.status(500).json({ message: "Failed to list user`s recipes" });
   }
 };
 
