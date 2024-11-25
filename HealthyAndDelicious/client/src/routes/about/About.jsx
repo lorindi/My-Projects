@@ -15,13 +15,13 @@ function About() {
           <br />
           <p className="aboutUsSectionDescription">
             At Healthy Delicious, we believe that eating well should never mean
-            sacrificing flavor. That's why we're dedicated to bringing you a
+            sacrificing flavor. That`s why we`re dedicated to bringing you a
             diverse collection of recipes that are both good for your body and
             tantalizing for your taste buds.
           </p>
           <br />
           <p className="aboutUsSectionDescription">
-            Whether you're a seasoned chef or a kitchen novice, we've got
+            Whether you`re a seasoned chef or a kitchen novice, we`ve got
             something for everyone. From quick and easy weekday meals to
             impressive dishes for special occasions, our recipes are designed to
             be accessible and enjoyable for all.
@@ -30,7 +30,7 @@ function About() {
 
           <p className="aboutUsSectionDescription">
             Join us on this culinary journey towards a healthier, more vibrant
-            you. Let's make every meal a celebration of good food and good
+            you. Let`s make every meal a celebration of good food and good
             health!
           </p>
         </div>
