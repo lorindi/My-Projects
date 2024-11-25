@@ -1,6 +1,6 @@
-
 import { useState } from "react";
 import "./Search.scss";
+import PropTypes from "prop-types";
 
 const SearchIcon = ({ className }) => (
   <svg
@@ -26,6 +26,10 @@ const SearchIcon = ({ className }) => (
     </g>
   </svg>
 );
+
+SearchIcon.propTypes = {
+  className: PropTypes.string,
+};
 
 const Search = ({ handleNavClose }) => {
   const [query, setQuery] = useState("");
@@ -61,5 +65,7 @@ const Search = ({ handleNavClose }) => {
     </div>
   );
 };
-
+Search.propTypes = {
+  handleNavClose: PropTypes.func.isRequired,
+};
 export default Search;
