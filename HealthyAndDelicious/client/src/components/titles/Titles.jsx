@@ -1,6 +1,7 @@
 import './Titles.scss';
+import PropTypes from 'prop-types';
 
-const Title = ({ type, children }) => {
+const Titles = ({ type, children }) => {
   let className = '';
   let Title = 'h4';
 
@@ -22,4 +23,9 @@ const Title = ({ type, children }) => {
   return <Title className={className}>{children}</Title>;
 };
 
-export default Title;
+Titles.propTypes = {
+  type: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
+export default Titles;
