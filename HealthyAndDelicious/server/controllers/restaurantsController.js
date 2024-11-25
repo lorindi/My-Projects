@@ -104,7 +104,7 @@ export const addExistingRecipeToRestaurant = async (req, res) => {
     const recipe = await Recipe.findById(recipeId);
     if (!recipe) return res.status(404).json({ message: "Recipe not found" });
 
-    //Add the recipe to the restaurant's recipes array if it's not already added
+    //Add the recipe to the restaurant`s recipes array if it`s not already added
     if (!restaurant.recipes.include(recipeId)) {
       restaurant.recipes.push(recipeId);
       await restaurant.save();
