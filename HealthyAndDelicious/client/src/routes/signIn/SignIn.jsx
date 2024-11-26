@@ -34,6 +34,8 @@ const SignIn = () => {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(signInSchema),
+    mode: "onChange",
+    reValidateMode: "onChange",
   });
 
   const onSubmit = (data) => {
@@ -55,12 +57,17 @@ const SignIn = () => {
           background: "#fff",
           borderRadius: "8px",
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+          height: '400px',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: 'column'
+
         }}
       >
         <Typography variant="h5" align="center" gutterBottom>
           Sign In
         </Typography>
-        {error && <Typography color="error">{error.message}</Typography>}
         <form onSubmit={handleSubmit(onSubmit)}>
           <TextField
             {...register("email")}
@@ -68,7 +75,7 @@ const SignIn = () => {
             fullWidth
             margin="normal"
             error={!!errors.email}
-            helperText={errors.email?.message}
+            helperText={errors.email?.message || "Hint"}
           />
           <TextField
             {...register("password")}
@@ -77,13 +84,17 @@ const SignIn = () => {
             fullWidth
             margin="normal"
             error={!!errors.password}
-            helperText={errors.password?.message}
+            helperText={errors.password?.message || "Hint"}
           />
           <Button
             type="submit"
             fullWidth
             variant="contained"
-            sx={{ mt: 2 }}
+            sx={{ 
+              mt: 2,
+              background: 'orange'
+
+             }}
             disabled={status === "pending"}
           >
             {status === "pending" ? "Signing In..." : "Sign In"}
