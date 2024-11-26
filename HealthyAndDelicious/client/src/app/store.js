@@ -1,22 +1,22 @@
-// Импортиране на функцията configureStore от Redux Toolkit за създаване на Redux Store
+// Import the configureStore function from Redux Toolkit to create a Redux Store
 import { configureStore } from "@reduxjs/toolkit";
 
-// Импортиране на redux-thunk middleware за обработка на асинхронни действия
+// Import redux-thunk middleware for handling asynchronous actions
 import { thunk } from "redux-thunk";
 
-// Импортиране на редуктори от различни slice файлове
+// Import reducers from different slice files
 import counterReducer from "../features/counter/counterSlice";
 import accountReducer from "../features/account/accountSlice";
 import recipesReducer from "../features/recipes/recipesSlice";
 
-// Създаване и конфигуриране на Redux Store
+// Create and configure the Redux Store
 export const store = configureStore({
   reducer: {
-    // Дефиниране на редуктори за различни части на състоянието
-    counter: counterReducer, // Редуктор за управление на състоянието на брояча
-    account: accountReducer, // Редуктор за управление на състоянието на акаунта
-    recipes: recipesReducer, // Редуктор за управление на състоянието на рецепти
+    // Define reducers for different parts of the state
+    counter: counterReducer, 
+    account: accountReducer, // Reducer to manage the account state
+    recipes: recipesReducer, 
   },
-  // Добавяне на middleware, което включва thunk за обработка на асинхронни действия
+  // Add middleware, including thunk for handling asynchronous actions
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk)
 });
