@@ -1,96 +1,98 @@
+import React from "react";
 import { TextField, Button, Box, Typography, Container } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useDispatch, useSelector } from "react-redux";
 import { signInUser } from "../../features/account/accountAction";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-const schema = yup.object().shape({
+const signInSchema = yup.object().shape({
   email: yup.string().email("Invalid email").required("Email is required"),
-  password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
+  password: yup
+    .string()
+    .min(6, "Password must be at least 6 characters")
+    .required("Password is required"),
 });
 
-function SignIn() {
+const SignIn = () => {
   const dispatch = useDispatch();
-  const { control, handleSubmit } = useForm({
-    resolver: yupResolver(schema),
+  const { status, error } = useSelector((state) => state.account);
+  const isAuthenticated = useSelector((state) => state.account.isAuthenticated);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/"); 
+    }
+  }, [isAuthenticated, navigate]);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(signInSchema),
   });
-  const accountStatus = useSelector((state) => state.account.status);
-  const accountError = useSelector((state) => state.account.error);
 
   const onSubmit = (data) => {
     dispatch(signInUser(data));
-    console.log(data);
-    
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+      }}
+    >
       <Box
         sx={{
-          marginTop: 8,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          padding: "20px",
+          background: "#fff",
+          borderRadius: "8px",
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
         }}
       >
-        <Typography component="h1" variant="h5">
+        <Typography variant="h5" align="center" gutterBottom>
           Sign In
         </Typography>
-        <Box
-          component="form"
-          noValidate
-          onSubmit={handleSubmit(onSubmit)}
-          sx={{ mt: 1 }}
-        >
-          <Controller
-            name="email"
-            control={control}
-            defaultValue=""
-            render={({ field, fieldState }) => (
-              <TextField
-                {...field}
-                margin="normal"
-                fullWidth
-                label="Email Address"
-                error={!!fieldState.error}
-                helperText={fieldState.error?.message}
-              />
-            )}
+        {error && <Typography color="error">{error.message}</Typography>}
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <TextField
+            {...register("email")}
+            label="Email"
+            fullWidth
+            margin="normal"
+            error={!!errors.email}
+            helperText={errors.email?.message}
           />
-          <Controller
-            name="password"
-            control={control}
-            defaultValue=""
-            render={({ field, fieldState }) => (
-              <TextField
-                {...field}
-                margin="normal"
-                fullWidth
-                label="Password"
-                type="password"
-                error={!!fieldState.error}
-                helperText={fieldState.error?.message}
-              />
-            )}
+          <TextField
+            {...register("password")}
+            label="Password"
+            type="password"
+            fullWidth
+            margin="normal"
+            error={!!errors.password}
+            helperText={errors.password?.message}
           />
-          {accountError && (
-            <Typography color="error" variant="body2">
-              {accountError.message || "Sign-in failed. Please try again."}
-            </Typography>
-          )}
           <Button
             type="submit"
             fullWidth
             variant="contained"
-            sx={{ mt: 3, mb: 2 }}
+            sx={{ mt: 2 }}
+            disabled={status === "pending"}
           >
-            {accountStatus === "pending" ? "Signing In..." : "Sign In"}
+            {status === "pending" ? "Signing In..." : "Sign In"}
           </Button>
-        </Box>
+        </form>
       </Box>
     </Container>
   );
-}
+};
 
 export default SignIn;
+
