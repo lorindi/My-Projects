@@ -3,9 +3,8 @@ import "./Mobile.scss";
 import { Link} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faHouse, faX } from "@fortawesome/free-solid-svg-icons";
-function Mobile() {
+function Mobile({ isAuthenticated }) {
   const [isShow, setIsShow] = useState(false);
-  const [isLogged] = useState(true);
 
 
   const toggleIsShow = () => {
@@ -32,7 +31,7 @@ function Mobile() {
             <Link className="linkMobile" to="/">
               <FontAwesomeIcon icon={faHouse} />
             </Link>
-            {isLogged ? (
+            {isAuthenticated ? (
               <>
                 <Link className="linkMobile" to="/create-recipe">
                   Create Recipe
@@ -43,11 +42,11 @@ function Mobile() {
                 <Link className="linkMobile" to="/about">
                   About Us
                 </Link>
-                <Link className="linkMobile" to="/profile">
-                  Profile
-                </Link>
                 <Link className="linkMobile" to="/contact">
                   Contacts
+                </Link>
+                <Link className="linkMobile" to="/profile">
+                  Profile
                 </Link>
                 {/* <Link className="linkMobile" onClick={logout}>
                   Log out
@@ -55,17 +54,20 @@ function Mobile() {
               </>
             ) : (
               <>
+               <Link className="linkMobile" to="/recipes">
+                  Recipes
+                </Link>
                 <Link className="linkMobile" to="/about-us">
                   About Us
                 </Link>
                 <Link className="linkMobile" to="/contacts">
                   Contacts
                 </Link>
-                <Link className="linkMobile" to="/login">
-                  Log In
+                <Link className="linkMobile" to="/sign-in">
+                  Sign In
                 </Link>
-                <Link className="linkMobile" to="/register">
-                  Register
+                <Link className="linkMobile" to="/create-account">
+                  Create Account
                 </Link>
               </>
             )}
