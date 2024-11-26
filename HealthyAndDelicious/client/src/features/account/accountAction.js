@@ -22,7 +22,7 @@ export const signInUser = createAsyncThunk(
 // Асинхронно действие за създаване на акаунт
 export const registerUser = createAsyncThunk(
   "account/registerUser",
-  async (userData, { dispatch, rejectWithValue }) => {
+  async (userData, { dispatch, rejectWithValue }) => {  
     try {
       const response = await api.post("/auth/create-account", userData);
       dispatch(createAccount(response.data));
