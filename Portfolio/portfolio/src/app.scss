@@ -5,7 +5,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   color: gray;
 }
 
@@ -23,6 +23,7 @@ section {
   min-height: 100vh;
   scroll-snap-align: center;
   width: 100%;
+
 }
 
 @mixin mobile {
@@ -43,10 +44,9 @@ section {
   }
 }
 
-
 :root {
   --text-color: #7b7b7b;
   --btn-border-radius: 9px;
-  --btn-border-color: #9BC4F5;
+  --btn-border-color: #9bc4f5;
   --btn-bg-color: transparent;
 }
