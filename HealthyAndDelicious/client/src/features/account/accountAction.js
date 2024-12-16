@@ -10,6 +10,8 @@ export const signInUser = createAsyncThunk(
     try {
       const response = await api.post("/auth/sign-in", credentials);
       const token = response.data.token;
+      console.log(token);
+      
       localStorage.setItem("token", token);
       dispatch(signInAccount(response.data.userInfo));
       return response.data;
