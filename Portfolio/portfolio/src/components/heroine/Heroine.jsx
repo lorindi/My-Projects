@@ -2,6 +2,7 @@ import "./Heroine.scss";
 import loraImg from "./IMG_20231225_205932.jpg";
 import scrollImg from "./pngwing.com.png";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 const textVariants = {
   initial: {
     x: -500,
@@ -39,7 +40,39 @@ const sliderVariants = {
   },
 };
 
+const typewriterVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const letterVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
+const phrases = [
+  "I am Lora Mitova, a passionate developer.",
+  "I don't stop until I achieve my goals now.",
+  "I have no days off as coding is my passion."
+];
 export const Heroine = () => {
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="heroine">
       <div className="wrapper">
@@ -50,8 +83,24 @@ export const Heroine = () => {
           animate="animate"
         >
           <motion.h2 variants={textVariants}>Lora Mitova</motion.h2>
-          <motion.h1 variants={textVariants}>
-            Web developer and UI designer
+          <motion.h1
+            variants={textVariants}
+            key={currentPhraseIndex}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+          >
+            {phrases[currentPhraseIndex].split("").map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: index * 0.05 }}
+              >
+                {char}
+              </motion.span>
+            ))}
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <a href="#Portfolio">
