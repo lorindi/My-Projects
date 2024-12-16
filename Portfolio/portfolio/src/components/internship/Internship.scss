@@ -8,19 +8,23 @@
   align-items: center;
   justify-content: space-between;
 
+  @include mobile {
+    font-size: 14px;
+  }
+
   .title {
     font-size: 48px;
-    margin-bottom: 50px;
+    margin: 30px 0px;
     color: #7b7b7b;
 
     @include mobile {
-      font-size: 32px;
+      font-size: 25px;
       margin-bottom: 30px;
     }
   }
 
   .projectsContainer {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
 
     .slick-slide {
@@ -59,6 +63,10 @@
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 15px;
+
+      @include mobile {
+        height: 200px;
+      }
     }
 
     h3 {
@@ -79,12 +87,18 @@
       gap: 10px;
       margin-bottom: 15px;
 
+
       span {
         background: #f0f0f0;
         padding: 5px 10px;
         border-radius: 20px;
         font-size: 14px;
         color: #666;
+
+        @include mobile {
+          font-size: 12px;
+          padding: 6px 10px;
+        }
       }
     }
 
@@ -94,7 +108,7 @@
     }
     .projectLinks {
       position: absolute;
-      bottom:20px;
+      bottom: 20px;
       right: 20px;
       display: flex;
       justify-content: center;
@@ -114,7 +128,7 @@
           color: white;
 
           &:hover {
-            background-color: #3497DB;
+            background-color: #3497db;
           }
         }
 
