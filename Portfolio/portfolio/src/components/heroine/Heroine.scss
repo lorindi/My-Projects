@@ -16,7 +16,10 @@
   position: relative;
 
   @include mobile {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
   }
 
   .wrapper {
@@ -54,7 +57,7 @@
         color: #bf7fbf;
 
         @include mobile {
-          font-size: 25px;
+          font-size: 20px;
           letter-spacing: 5px;
         }
       }
@@ -67,7 +70,7 @@
         width: 440px;
 
         @include mobile {
-          font-size: 30px;
+          font-size: 20px;
           width: 100%;
         }
       }
@@ -113,8 +116,9 @@
       opacity: 0.5;
 
       @include mobile {
+        // display: none;
         position: absolute;
-        bottom: 300px;
+        bottom: 370px;
       }
     }
   }
@@ -147,8 +151,8 @@
       border-radius: 100%;
 
       @include mobile {
-        height: 320px;
-        width: 320px;
+        height: 250px;
+        width: 250px;
         // margin-top: 30px;
       }
     }
