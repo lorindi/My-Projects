@@ -7,6 +7,7 @@ import { Parallax } from "./components/parallax/Parallax";
 import { Portfolio } from "./components/portfolio/Portfolio";
 import { Services } from "./components/services/Services";
 import { Skills } from "./components/skills/Skills";
+import { Internship } from "./components/internship/Internship";
 function App() {
   return (
     <>
@@ -21,6 +22,9 @@ function App() {
         </section>
         <section>
           <Services />
+        </section>
+        <section id="Internship">
+          <Internship />
         </section>
         <section id="Portfolio">
           <Parallax type="portfolio" />
