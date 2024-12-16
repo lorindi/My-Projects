@@ -13,13 +13,11 @@
  
 
   h1 {
-    font-size: 70px;
+    font-size: 80px;
     margin-bottom: 50px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: white;
+    font-weight: 500;
+    color: #7B7B7B;
     z-index: 4;
-    text-shadow: 0px 0px 5px #525b7f;
 
     @include mobile {
       text-align: center;
