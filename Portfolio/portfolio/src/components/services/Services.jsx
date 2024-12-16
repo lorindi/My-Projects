@@ -1,87 +1,102 @@
 import "./Services.scss";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import serviceImg from "./Screenshot 2024-05-28 121853.png";
 
 export const Services = () => {
+  console.log("Rendering Services component");
+
   return (
     <motion.div className="services">
-      <motion.div
-        className="textContainer"
-        initial={{ opacity: 0, x: 300 }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            duration: 2,
-          },
-        }}
+      {/* Заглавна секция */}
+      <motion.div 
+        className="header"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
       >
-        <p>
-          I focus on helping your brand grow <br />
-          and move forward
-        </p>
-        <hr />
+        <h1>My Development Journey</h1>
+        <p>Where passion meets code</p>
       </motion.div>
-      <motion.div className="titleContainer">
-        <div className="title">
-          <img src={serviceImg} alt="" />
-          <h1>
-            <motion.b whileHover={{ color: "#98C1F4" }}>Unique</motion.b> Ideas
-          </h1>
-        </div>
-        <div className="title">
-          <h1>
-            <motion.b whileHover={{ color: "#98C1F4" }}>For Your</motion.b>{" "}
-            Business.
-          </h1>
-          <button>What I do?</button>
-        </div>
-      </motion.div>
-      <motion.div
-        className="listContainer"
-        initial={{ opacity: 0}}
-        whileInView={{
-          opacity: 1,
-         
-          transition: { staggerChildren: 0.1, duration: 2 },
-        }}
+
+      {/* Основна секция с карти */}
+      <motion.div 
+        className="cards-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ staggerChildren: 0.3 }}
       >
-        <motion.div
-          className="box"
-          whileHover={{ background: "white", color: "gray" }}
+        <motion.div 
+          className="card"
+          whileHover={{ 
+            scale: 1.05,
+            boxShadow: "0 10px 20px rgba(0,0,0,0.2)"
+          }}
         >
-          <h2>Visual Design</h2>
-          <p>
-            Hi, I'm Lora, a passionate designer specializing in creating unique
-            visual solutions. I love combining art with functionality to create
-            websites that impress and inspire.
-          </p>
-          <button>^ ^</button>
+          <div className="card-content">
+            <div className="icon-container">
+              <span className="code-icon">{"</>"}</span>
+            </div>
+            <h2>Coding Passion</h2>
+            <p>
+              Programming isn't just my profession - it's my passion. 
+              Every day, I immerse myself in the world of code, constantly 
+              learning and exploring new technologies.
+            </p>
+          </div>
         </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "white", color: "gray" }}
+
+        <motion.div 
+          className="card featured"
+          whileHover={{ 
+            scale: 1.05,
+            boxShadow: "0 10px 20px rgba(0,0,0,0.2)"
+          }}
         >
-          <h2>Functional Websites</h2>
-          <p>
-            As an experienced web developer, I create functional and interactive
-            websites. I always strive to offer the best user experience by
-            combining modern technologies with creative solutions.
-          </p>
-          <button>^ ^</button>
+          <div className="card-content">
+            <div className="icon-container">
+              <span className="brain-icon">🧠</span>
+            </div>
+            <h2>Problem Solving</h2>
+            <p>
+              The thrill of solving complex problems drives me forward. 
+              Each challenge is an opportunity to grow and create 
+              innovative solutions that make a difference.
+            </p>
+          </div>
         </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "white", color: "gray" }}
+
+        <motion.div 
+          className="card"
+          whileHover={{ 
+            scale: 1.05,
+            boxShadow: "0 10px 20px rgba(0,0,0,0.2)"
+          }}
         >
-          <h2>Artistic Approach</h2>
-          <p>
-            My artistic nature drives me to create designs that tell stories and
-            evoke emotions. I believe in the power of details and a personalized
-            approach to each project to make it unique and memorable.
-          </p>
-          <button>^ ^</button>
+          <div className="card-content">
+            <div className="icon-container">
+              <span className="growth-icon">📈</span>
+            </div>
+            <h2>Continuous Growth</h2>
+            <p>
+              Learning never stops in the world of development. 
+              I embrace new challenges and technologies, constantly 
+              expanding my skillset and knowledge.
+            </p>
+          </div>
         </motion.div>
+      </motion.div>
+
+      {/* Цитат секция */}
+      <motion.div 
+        className="quote-section"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <blockquote>
+          "Code is like humor. When you have to explain it, it's bad."
+          <span className="quote-author">- Cory House</span>
+        </blockquote>
       </motion.div>
     </motion.div>
   );
