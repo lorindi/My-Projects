@@ -1,161 +1,122 @@
 @import "../../app.scss";
-// @include mobile {
-// }
+
 .services {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  overflow: hidden;
-
-  @include mobile {
-    align-self: center;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #fafafa, #f5f5f5);
+  
+  .header {
     text-align: center;
-    flex-direction: column;
-  }
-
-  .textContainer {
-    flex: 1;
-    align-self: flex-end;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    @include mobile {
-      margin: 30px 0px 30px 0px;
+    margin-bottom: 60px;
+    
+    h1 {
+      font-size: 3rem;
+      color: #333;
+      margin-bottom: 15px;
+      font-weight: 600;
+      
+      @include mobile {
+        font-size: 2rem;
+      }
     }
-
+    
     p {
-      font-weight: 300;
-      font-size: 20px;
-      color: rgb(0, 0, 0);
-      text-align: right;
-
+      font-size: 1.2rem;
+      color: #666;
+      
       @include mobile {
-        font-size: 15px;
-      }
-    }
-
-    hr {
-      width: 500px;
-      border: none;
-      border-top: 0.5px solid gray;
-
-      @include mobile {
-        width: 50px;
+        font-size: 1rem;
       }
     }
   }
-  .titleContainer {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #7b7b7b;
-    justify-content: center;
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     
     @include mobile {
-      width: 100%;
+      grid-template-columns: 1fr;
+      padding: 10px;
     }
 
-    .title {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      color: #7b7b7b;
-
-      @include mobile {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-      }
-
-      img {
-        width: 300px;
-        height: 100px;
-        border-radius: 50px;
-        object-fit: cover;
-
-        @include mobile {
-          width: 200px;
-          height: 50px;
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      transition: all 0.3s ease;
+      
+      &.featured {
+        background: linear-gradient(135deg, #98C1F4, #BFA2DB);
+        color: white;
+        
+        .icon-container {
+          background: rgba(255, 255, 255, 0.2);
+        }
+        
+        h2 {
+          color: white;
+        }
+        
+        p {
+          color: rgba(255, 255, 255, 0.9);
         }
       }
-      h1 {
-        font-size: 96px;
-        font-weight: 100;
 
-        @include mobile {
-          font-size: 36px;
-          font-weight: 200;
+      .card-content {
+        .icon-container {
+          width: 60px;
+          height: 60px;
+          background: #f8f9fa;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          font-size: 24px;
         }
-      }
-      button {
-        width: 300px;
-        height: 100px;
-        border-radius: 50px;
-        background-color: plum;
-        border: none;
-        text-transform: uppercase;
-        cursor: pointer;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-size: 20px;
 
-        @include mobile {
-          font-size: 14px;
-          width: 150px;
-          height: 50px;
-          margin-bottom: 25px;
+        h2 {
+          font-size: 1.5rem;
+          color: #333;
+          margin-bottom: 15px;
+          font-weight: 600;
+        }
+
+        p {
+          color: #666;
+          line-height: 1.6;
+          font-size: 1rem;
         }
       }
     }
   }
-  .listContainer {
-    flex: 2;
-    display: flex;
-    max-width: 1366px;
-    margin: auto;
-    margin-bottom: 30px;
-    gap: 30px;
-    flex-direction: row;
 
-    @include mobile {
-      flex-direction: column;
-      width: 90%;
-    }
-
-    .box {
-      padding: 20px 50px;
-      border: 0.5px solid gray;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      color: gray;
-      border-radius: 50px;
-
-      p {
-        letter-spacing: 1px;
-        font-size: 16px;
-
-        @include mobile {
-        letter-spacing: 1px;
-
-        }
+  .quote-section {
+    max-width: 800px;
+    margin: 80px auto 0;
+    text-align: center;
+    padding: 40px 20px;
+    
+    blockquote {
+      font-size: 1.5rem;
+      color: #555;
+      font-style: italic;
+      line-height: 1.6;
+      
+      @include mobile {
+        font-size: 1.2rem;
       }
-
-      button {
-        padding: 10px;
-        background-color: #99c2f5;
-        border: none;
-        cursor: pointer;
-        border-radius: 50px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: white;
-
-        @include mobile {
-          margin-top: 10px;
-        }
+      
+      .quote-author {
+        display: block;
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #888;
+        font-style: normal;
       }
     }
   }
