@@ -42,7 +42,7 @@
           border-radius: 50%;
           background: #fff;
           top: -100px;
-          left: 10%;
+          left: -10%;
           
           @include mobile {
             width: 100px;
@@ -54,7 +54,7 @@
           width: 150px;
           height: 150px;
           background: #fff;
-          right: 15%;
+          right: 5%;
           top: 20%;
           transform: rotate(45deg);
           
@@ -70,8 +70,8 @@
           border-left: 100px solid transparent;
           border-right: 100px solid transparent;
           border-bottom: 173px solid #fff;
-          bottom: 10%;
-          left: 20%;
+          bottom: 1%;
+          left: 2%;
           
           @include mobile {
             border-left: 50px solid transparent;
@@ -112,7 +112,7 @@
     .floating-elements {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 3rem;
       margin-top: 3rem;
 
       .code-element, .project-element {
@@ -143,6 +143,7 @@
         font-size: 0.9rem;
         text-transform: uppercase;
         letter-spacing: 2px;
+        font-weight: 600;
       }
 
       .scroll-arrow {
