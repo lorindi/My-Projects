@@ -20,19 +20,19 @@ export const Parallax = ({ type }) => {
       ref={ref}
       style={{
         background:
-          type === "services"
-            ? "linear-gradient(180deg, #9ac5f5e1, #969BF3, #BA67F3)"
-            : "linear-gradient(180deg, #9ac5f5e1, #969bf3d2, #bb67f3c2)",
+        type === "services"
+          ? "linear-gradient(180deg, rgba(150, 255, 220, 0.25),rgba(156, 217, 255, 0.25),rgba(230, 180, 255, 0.25))"
+          : "linear-gradient(180deg,rgba(70, 180, 140, 0.15), rgba(76, 137, 175, 0.15),rgba(150, 100, 175, 0.15))",
       }}
     >
       <motion.h1 style={{ y: yText }}>
         {type === "services" ? "What am I doing?" : "What did I do?"}
       </motion.h1>
-      <motion.div className="mountains"></motion.div>
+      {/* <motion.div className="mountains"></motion.div>
       <motion.div style={{ y: yBg }} className="firstPlanet"></motion.div>
       <motion.div style={{ y: yBg }} className="secondPlanet"></motion.div>
 
-      <motion.div  style={{ y: yStars }}  className="stars"></motion.div>
+      <motion.div  style={{ y: yStars }}  className="stars"></motion.div> */}
     </motion.div>
   );
 };
