@@ -124,7 +124,7 @@ export const Internship = () => {
   return (
     <div className="internship">
       <motion.h1
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="title"
@@ -134,7 +134,7 @@ export const Internship = () => {
 
       <motion.div
         className="projectsContainer"
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0, x: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
