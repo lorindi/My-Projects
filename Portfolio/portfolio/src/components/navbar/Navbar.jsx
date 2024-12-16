@@ -5,6 +5,7 @@ import {
   faSquareInstagram,
   faSquareYoutube,
   faGithub,
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faBasketball } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
@@ -27,7 +28,15 @@ export const Navbar = () => {
           <a href="https://github.com/lorindi" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="https://dribbble.com/loramitova" target="_blank" rel="noopener noreferrer">
+          <a 
+            href="https://www.linkedin.com/in/lora-mitova-833a47261/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            title="LinkedIn"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          {/* <a href="https://dribbble.com/loramitova" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faBasketball} />
           </a>
           <a href="https://www.facebook.com/profile.php?id=100073735856715" target="_blank" rel="noopener noreferrer">
@@ -38,7 +47,7 @@ export const Navbar = () => {
           </a>
           <a href="https://www.youtube.com/channel/UCwMI0P9V0GUqlRXJIgFgKMA" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faSquareYoutube} />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
