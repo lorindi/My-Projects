@@ -16,10 +16,13 @@
   position: relative;
 
   @include mobile {
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: start;
     padding-bottom: 0px;
     justify-content: center;
     align-items: center;
-    gap: 0px;
+    gap: 15px;
   }
 
   .wrapper {
@@ -72,6 +75,7 @@
         @include mobile {
           font-size: 20px;
           width: 100%;
+          margin: 20px 0px;
         }
       }
 
@@ -89,18 +93,20 @@
 
         button {
           padding: 12px;
-          border: 2px solid #bf7fbf;
+          border: 2px solid var(--btn-border-color) ;
           border-radius: 50px;
-          background-color: transparent;
+          background-color: var(--btn-bg-color);
           color: #7b7b7b;
           margin-right: 20px;
           cursor: pointer;
           letter-spacing: 1px;
           font-weight: 600;
           font-size: 15px;
+          border-radius: var(--btn-border-radius);
 
           @include mobile {
             margin-right: 0;
+            padding: 7px 10px;
           }
         }
       }
@@ -116,9 +122,9 @@
       opacity: 0.5;
 
       @include mobile {
-        // display: none;
-        position: absolute;
-        bottom: 370px;
+        display: none;
+        // position: absolute;
+        // bottom: 370px;
       }
     }
   }
@@ -128,7 +134,7 @@
     font-size: 50vh;
     bottom: -180px;
     white-space: nowrap;
-    color: rgba(255, 255, 255, 0.515);
+    color: white;
     width: 50%;
     z-index: 0;
     font-weight: bold;
@@ -151,8 +157,8 @@
       border-radius: 100%;
 
       @include mobile {
-        height: 250px;
-        width: 250px;
+        height: 300px;
+        width: 300px;
         // margin-top: 30px;
       }
     }
