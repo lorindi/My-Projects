@@ -1,103 +1,153 @@
 @import "../../app.scss";
-// @include mobile {
-// }
-.parallax {
-  width: 100%;
+
+.parallax-container {
   height: 100vh;
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1;
   overflow: hidden;
- 
 
-  h1 {
-    font-size: 80px;
-    margin-bottom: 50px;
-    font-weight: 500;
-    color: #7B7B7B;
-    z-index: 4;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+  }
 
-    @include mobile {
+  .parallax-content {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    z-index: 2;
+
+    .geometric-shapes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      
+      .shape {
+        position: absolute;
+        opacity: 0.15;
+
+        &.circle {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background: #fff;
+          top: -100px;
+          left: 10%;
+          
+          @include mobile {
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        &.square {
+          width: 150px;
+          height: 150px;
+          background: #fff;
+          right: 15%;
+          top: 20%;
+          transform: rotate(45deg);
+          
+          @include mobile {
+            width: 80px;
+            height: 80px;
+          }
+        }
+
+        &.triangle {
+          width: 0;
+          height: 0;
+          border-left: 100px solid transparent;
+          border-right: 100px solid transparent;
+          border-bottom: 173px solid #fff;
+          bottom: 10%;
+          left: 20%;
+          
+          @include mobile {
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 86px solid #fff;
+          }
+        }
+      }
+    }
+
+    .text-content {
       text-align: center;
-      font-size: 45px;
-      width: 90%;
-      margin-bottom: 350px;
+      color: #fff;
+      mix-blend-mode: difference;
+
+      h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        
+        @include mobile {
+          font-size: 2.5rem;
+        }
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+        
+        @include mobile {
+          font-size: 1rem;
+        }
+      }
     }
-  }
 
-  .mountains {
-    background-image: url("./pngwing.com\ \(7\).png");
-    background-size: cover;
-    background-position: top;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    opacity: 0.9;
-    z-index: 3;
+    .floating-elements {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
 
-    @include mobile {
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: bottom;
+      .code-element, .project-element {
+        font-size: 2rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        backdrop-filter: blur(5px);
+        
+        @include mobile {
+          font-size: 1.5rem;
+          padding: 0.5rem;
+        }
+      }
     }
-  }
 
-  .firstPlanet {
-    background-image: url("./pngwing.com\ \(6\).png");
-    background-position: center;
-    object-fit: cover;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 20%;
-    width: 10%;
-    position: absolute;
-    left: 400px;
-    top: 150px;
-    opacity: 1;
-    z-index: 2;
+    .scroll-indicator {
+      position: absolute;
+      bottom: -10rem;
+      left: 40%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: #fff;
+      
+      span {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
 
-    @include mobile {
-      height: 12%;
-      width: 12%;
-      left: 30%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    
+      .scroll-arrow {
+        font-size: 1.5rem;
+      }
     }
-  }
-  .secondPlanet {
-    background-image: url("./pngwing.com\ \(5\).png");
-    background-position: center;
-    object-fit: cover;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 16.7%;
-    width: 8%;
-    position: absolute;
-    right: 400px;
-    top: 150px;
-    opacity: 1;
-    z-index: 2;
-
-    @include mobile {
-      height: 12%;
-      width: 12%;
-      left: 60%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    
-    }
-  }
-  .stars {
-    background-image: url("./stars.png");
-    background-size: cover;
-    background-position: bottom;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    opacity: 0.6;
-    z-index: 1;
   }
 }
