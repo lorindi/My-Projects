@@ -42,3 +42,11 @@ section {
     @content;
   }
 }
+
+
+:root {
+  --text-color: #7b7b7b;
+  --btn-border-radius: 4px;
+  --btn-border-color: #9BC4F5;
+  --btn-bg-color: transparent;
+}
