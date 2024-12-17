@@ -4,8 +4,8 @@
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: var(--card-bg);
   display: flex;
@@ -16,6 +16,7 @@
   box-shadow: 0 2px 5px var(--shadow-color);
   z-index: 1000;
   transition: all 0.3s ease;
+  padding: 15px;
 
   &:hover {
     transform: scale(1.1);
