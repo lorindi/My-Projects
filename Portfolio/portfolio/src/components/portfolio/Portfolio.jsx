@@ -12,7 +12,7 @@ const items = [
     id: 1,
     title: "EstateApp",
     img: EstateApp,
-    desc: "EstateApp application allows users to add, edit, delete properties, mark properties as favorites, and use an advanced search engine to find properties by category. The application is built with a React frontend and an Express.js backend, using MongoDB as the database.",
+    desc: "EstateApp application allows users to add, edit, delete properties, mark properties as favorites, and use an advanced search engine to find properties by category. The application is built with a React frontend and an Express.js backend, using MongoDB as the database. (Note: Currently, only the React frontend is deployed. Backend deployment coming soon.)",
     link: "https://loestate-app.vercel.app/",
     github: "https://github.com/lorindi/My-Projects/tree/main/EstateApp",
   },
