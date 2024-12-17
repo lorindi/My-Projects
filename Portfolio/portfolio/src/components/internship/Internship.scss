@@ -35,7 +35,7 @@
     .slick-dots {
       bottom: -40px;
 
-      li button:before {
+      li.button:before {
         color: var(--internship-dot-color);
         transition: color 0.3s ease;
       }
@@ -90,6 +90,7 @@
       color: var(--internship-secondary-text);
       margin-bottom: 15px;
       line-height: 1.5;
+      font-weight: 500;
     }
 
     .technologies {
@@ -99,11 +100,12 @@
       margin-bottom: 15px;
 
       span {
-        background-color: var(--bg-secondary); 
+        background-color: var(--internship-bg-technologies); 
         padding: 5px 10px;
         border-radius: 20px;
         font-size: 14px;
-        color: var(--text-primary);
+        color: var(--internship-secondary-text);
+
         
         &:hover {
           transform: scale(1.05);
@@ -128,7 +130,7 @@
       bottom: 20px;
       right: 20px;
       display: flex;
-      justify-content: center;
+      justify-content: end;
       gap: 1rem;
       margin-top: 1rem;
 
