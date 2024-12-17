@@ -23,10 +23,10 @@ a {
 
 section {
   min-height: 100vh;
-  scroll-snap-align: center;
   width: 100%;
-  
-  @media (min-width: 1074px) {
+  scroll-snap-align: none;
+
+  @media (min-width: 1074px) and (max-width: 1335px) {
     scroll-snap-align: center;
   }
 }
@@ -53,7 +53,6 @@ section {
     @content;
   }
 }
-
 
 :root {
   --text-color: #7b7b7b;
