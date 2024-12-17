@@ -1,157 +1,250 @@
 @import "../../app.scss";
-// @include mobile {
-// }
 .portfolio {
   position: relative;
-  min-height: 400vh;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  color: #ffffff;
+  min-height: 100vh;
 
   .progress {
     position: sticky;
     top: 0;
-    left: 0;
-    padding-top: 40px;
+    padding: 50px;
     text-align: center;
-    color: gray;
-    font-size: 36px;
+    background: inherit;
     z-index: 1;
 
-    @include mobile {
-      // padding-top: calc(100vh - 100px);
-      font-size: 23px;
-      width: 100%;
-      text-align: center;
-      padding-top: 10px;
-      top: 80px;
-    }
-
     h1 {
-      background-color: #fafafa;
-      box-shadow: 0px 0px 10px 10px #fafafa;
-
+      font-size: 36px;
+      background: linear-gradient(to right, #00ff88, #00a3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-out;
+      
       @include mobile {
-        text-align: center;
+        font-size: 24px;
+      }
+      
+      @include tablet {
+        font-size: 28px;
+      }
+      
+      @include laptop {
+        font-size: 32px;
       }
     }
+
     .progressBar {
-      height: 10px;
-      background-color: white;
-      border-radius: 100px;
+      height: 4px;
+      background: linear-gradient(to right, #00ff88, #00a3ff);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .portfolioContainer {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+
+    .container {
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+      padding: 50px 100px;
+      
+      @include mobile {
+        padding: 15px;
+      }
+      
+      @include tablet {
+        padding: 30px;
+      }
+      
+      @include laptop {
+        padding: 40px 60px;
+      }
+
+      .wrapper {
+        display: flex;
+        gap: 50px;
+        position: relative;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 20px;
+        padding: 50px;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        animation: slideIn 0.8s ease-out;
+        margin: 50px 0;
+        
+        @include mobile {
+          flex-direction: column;
+          padding: 15px;
+          gap: 15px;
+          margin: 30px 0;
+        }
+        
+        @include tablet {
+          padding: 30px;
+          gap: 30px;
+          margin: 40px 0;
+        }
+        
+        @include laptop {
+          padding: 40px;
+          gap: 40px;
+        }
+
+        .imageContainer {
+          flex: 1;
+          height: 500px;
+          transition: all 0.5s ease;
+
+          @include mobile {
+            height: 300px;
+          }
+          
+          @include tablet {
+            height: 400px;
+          }
+
+          &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          }
+        }
+
+        .textContainer {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 30px;
+          transition: transform 0.6s ease-out;
+
+          @include mobile {
+            gap: 20px;
+          }
+
+          h2 {
+            font-size: 32px;
+            background: linear-gradient(to right, #00ff88, #00a3ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: transform 0.3s ease;
+            
+            @include mobile {
+              font-size: 24px;
+            }
+            
+            @include tablet {
+              font-size: 28px;
+            }
+
+            &:hover {
+              transform: translateX(10px);
+            }
+          }
+
+          p {
+            color: #a6a6a6;
+            font-size: 16px;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+
+            @include mobile {
+              font-size: 14px;
+              line-height: 1.6;
+            }
+
+            &:hover {
+              color: #ffffff;
+            }
+          }
+
+          .buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 50px;
+            
+            @include mobile {
+              // flex-direction: column;
+              gap: 15px;
+            }
+            
+            @include tablet {
+              gap: 15px;
+            }
+
+            button {
+              padding: 12px 24px;
+              border: none;
+              border-radius: 10px;
+              font-size: 16px;
+              font-weight: 500;
+              cursor: pointer;
+              transition: all 0.3s ease;
+
+              @include mobile {
+                padding: 10px 20px;
+                font-size: 14px;
+              }
+
+              &.demo {
+                background: linear-gradient(45deg, #00ff88, #00a3ff);
+                color: #000;
+                
+                &:hover {
+                  transform: translateY(-3px);
+                  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+                }
+              }
+
+              &.github {
+                background: transparent;
+                border: 2px solid #00ff88;
+                color: #fff;
+                
+                &:hover {
+                  background: rgba(0, 255, 136, 0.1);
+                  transform: translateY(-3px);
+                  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2);
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
-.portfolioContainer {
-  height: 100vh;
 
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .wrapper {
-      max-width: 1366px;
-      min-height: 100%;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      gap: 50px;
-
-      @include mobile {
-        margin-top: 50px;
-        gap: 10px;
-
-        flex-direction: column;
-      }
-
-      .imageContainer {
-        flex: 1;
-        height: 50%;
-        z-index: -1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        @include mobile {
-          width: 100%;
-          max-height: 300px;
-        }
-
-        img {
-          width: 100%;
-          height: 100%;
-          background-position: center;
-          background-size: contain;
-          border-radius: 10px;
-          box-shadow: 0px 0px 5px 1px gainsboro;
-
-          @include mobile {
-            object-fit: contain;
-            margin-top: 50px;
-          }
-        }
-      }
-
-      .textContainer {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        height: 50%;
-
-        @include mobile {
-          transform: none !important;
-          padding: 15px;
-          align-items: center;
-          text-align: center;
-          gap: 10px;
-          justify-content: flex-start;
-        }
-
-        h2 {
-          font-size: 62px;
-
-          @include mobile {
-            font-size: 30px;
-            margin-bottom: 10px;
-          }
-        }
-        p {
-          color: gray;
-          font-size: 20px;
-          letter-spacing: 0.5px;
-          line-height: 32px;
-
-          @include mobile {
-            line-height: normal;
-            font-size: 14px;
-            text-align: justify;
-            margin-bottom: 10px;
-          }
-        }
-        button {
-          border: none;
-          border-radius: var(--btn-border-radius);
-          padding: 10px;
-          width: 200px;
-          cursor: pointer;
-          text-transform: uppercase;
-          font-weight: 600;
-          letter-spacing: 2px;
-          color: white;
-          background-color: #bb60f1;
-          font-size: 16px;
-        }
-        button:hover {
-          box-shadow: 0 0px 20px rgba(84, 1, 74, 0.52);
-          border-color: inherit;
-          background: linear-gradient(to right, #bb60f1, #9488f1);
-          color: white;
-        }
-      }
-    }
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
