@@ -7,6 +7,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
 
   @include mobile {
     font-size: 14px;
@@ -15,8 +17,7 @@
   .title {
     font-size: 48px;
     margin: 30px 0px;
-    color: #7b7b7b;
-
+    color: var(--internship-title);
     @include mobile {
       font-size: 25px;
       margin-bottom: 30px;
@@ -35,7 +36,12 @@
       bottom: -40px;
 
       li button:before {
-        color: #bf7fbf;
+        color: var(--internship-dot-color);
+        transition: color 0.3s ease;
+      }
+
+      li.slick-active button:before {
+        color: var(--internship-dot-active);
       }
     }
   }
@@ -51,11 +57,16 @@
   }
 
   .projectCard {
-    background: white;
+    background: var(--internship-card-bg);
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px var(--internship-card-shadow);
     transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px var(--internship-card-hover);
+    }
 
     img {
       width: 100%;
@@ -71,12 +82,12 @@
 
     h3 {
       font-size: 24px;
-      color: #7b7b7b;
+      color: var(--internship-text);
       margin-bottom: 10px;
     }
 
     p {
-      color: #666;
+      color: var(--internship-secondary-text);
       margin-bottom: 15px;
       line-height: 1.5;
     }
@@ -87,13 +98,18 @@
       gap: 10px;
       margin-bottom: 15px;
 
-
       span {
-        background: #f0f0f0;
+        background-color: var(--bg-secondary); 
         padding: 5px 10px;
         border-radius: 20px;
         font-size: 14px;
-        color: #666;
+        color: var(--text-primary);
+        
+        &:hover {
+          transform: scale(1.05);
+          background-color: var(--accent-primary);
+          color: var(--internship-card-bg);
+        }
 
         @include mobile {
           font-size: 12px;
@@ -104,8 +120,9 @@
 
     .teamSize {
       font-weight: 500;
-      color: #bf7fbf;
+      color: var(--internship-text);
     }
+
     .projectLinks {
       position: absolute;
       bottom: 20px;
@@ -124,20 +141,20 @@
         transition: all 0.3s ease;
 
         &.viewProject {
-          background-color: gray;
-          color: white;
+          background-color: var(--accent-primary);
+          color: var(--internship-card-bg);
 
           &:hover {
-            background-color: #3497db;
+            background-color: var(--accent-secondary);
           }
         }
 
         &.viewGithub {
-          background-color: #333;
-          color: white;
+          background-color: var(--bg-secondary);
+          color: var(--text-primary);
 
           &:hover {
-            background-color: #000;
+            background-color: var(--bg-primary);
           }
         }
       }
