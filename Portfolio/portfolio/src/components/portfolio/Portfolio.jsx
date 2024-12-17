@@ -92,7 +92,6 @@ const Single = ({ item }) => {
               {item.title}
             </motion.h2>
             <motion.p
-              whileHover={{ color: "#ffffff" }}
               transition={{ duration: 0.3 }}
             >
               {item.desc}
