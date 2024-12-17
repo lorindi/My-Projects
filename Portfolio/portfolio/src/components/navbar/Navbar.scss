@@ -2,6 +2,10 @@
 
 .navbar {
   height: 100px;
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease;
+
 
   .wrapper {
     max-width: 1336px;
@@ -19,6 +23,17 @@
 
     span {
       font-weight: bolder;
+      color: var(--navbar-logo-color);
+      transition: color 0.3s ease;
+      
+      &.logoTitle {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        
+        &:hover {
+          color: var(--accent-primary);
+        }
+      }
 
       @include mobile {
         display: none;
@@ -28,21 +43,34 @@
     .social {
       display: flex;
       gap: 30px;
+      
       @include mobile {
         gap: 20px;
       }
 
       a {
-        color: rgba(0, 0, 0, 0.519);
+        color: var(--social-icon-color);
         font-size: 25px;
-        transition: color 0.3s;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 50%;
 
         &:hover {
-          color: rgba(128, 0, 128, 0.502);
+          color: var(--social-icon-hover);
+          transform: translateY(-2px);
+          background-color: var(--floating-element-bg);
         }
 
         .fa-icon {
           margin-right: 5px;
+        }
+
+        @include mobile {
+          font-size: 22px;
+          padding: 6px;
         }
       }
     }
