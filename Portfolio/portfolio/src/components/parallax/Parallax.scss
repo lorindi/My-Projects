@@ -16,7 +16,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--parallax-overlay);
     backdrop-filter: blur(5px);
   }
 
@@ -44,7 +44,7 @@
           width: 200px;
           height: 200px;
           border-radius: 50%;
-          background: #fff;
+          background: var(--shape-color, #fff);
           top: -100px;
           left: -10%;
 
@@ -71,7 +71,7 @@
         &.square {
           width: 150px;
           height: 150px;
-          background: #fff;
+          background: var(--shape-color, #fff);
           right: 5%;
           top: 20%;
           transform: rotate(45deg);
@@ -101,26 +101,28 @@
           height: 0;
           border-left: 100px solid transparent;
           border-right: 100px solid transparent;
-          border-bottom: 173px solid #fff;
+          border-bottom: 173px solid var(--shape-color, #fff);
           bottom: 1%;
           left: 2%;
 
           @include mobile {
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
-            border-bottom: 86px solid #fff;
+            border-bottom: 86px solid var(--shape-color, #fff);
           }
 
           @include tablet {
             border-left: 70px solid transparent;
             border-right: 70px solid transparent;
-            border-bottom: 121px solid #fff;
+            border-bottom: 86px solid var(--shape-color, #fff);
+
           }
 
           @include laptop {
             border-left: 85px solid transparent;
             border-right: 85px solid transparent;
-            border-bottom: 147px solid #fff;
+            border-bottom: 86px solid var(--shape-color, #fff);
+
           }
         }
       }
@@ -128,14 +130,14 @@
 
     .text-content {
       text-align: center;
-      color: white;
+      color: var(--text-on-parallax);
       mix-blend-mode: difference;
 
       h1 {
         font-size: 5rem;
         font-weight: 700;
         margin-bottom: 1rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        text-shadow: var(--text-shadow);
 
         @include mobile {
           font-size: 2.5rem;
@@ -196,7 +198,7 @@
       .project-element {
         font-size: 2rem;
         padding: 1rem;
-        background: rgba(255, 255, 255, 0.1);
+        background: var(--floating-element-bg);
         border-radius: 12px;
         backdrop-filter: blur(5px);
         transition: transform 0.3s ease;
@@ -218,6 +220,7 @@
 
         &:hover {
           transform: scale(1.05);
+          background: var(--floating-element-hover-bg);
         }
       }
     }
@@ -228,7 +231,7 @@
       left: 40%;
       transform: translateX(-50%);
       text-align: center;
-      color: #fff;
+      color: var(--text-on-parallax);
       transition: transform 0.3s ease;
 
       @include mobile {
@@ -239,7 +242,6 @@
 
       @include tablet {
         bottom: -7rem;
-
       }
 
       span {
