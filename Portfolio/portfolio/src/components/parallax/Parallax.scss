@@ -10,7 +10,7 @@
   overflow: hidden;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -27,11 +27,15 @@
     padding: 0 20px;
     z-index: 2;
 
+    @include mobile {
+      padding: 0 15px;
+    }
+
     .geometric-shapes {
       position: absolute;
       width: 100%;
       height: 100%;
-      
+
       .shape {
         position: absolute;
         opacity: 0.15;
@@ -43,10 +47,24 @@
           background: #fff;
           top: -100px;
           left: -10%;
-          
+
           @include mobile {
             width: 100px;
             height: 100px;
+            top: -150px;
+            left: 5%;
+          }
+
+          @include tablet {
+            width: 150px;
+            height: 150px;
+            top: -75px;
+          }
+
+          @include laptop {
+            width: 180px;
+            height: 180px;
+            top: -90px;
           }
         }
 
@@ -57,10 +75,24 @@
           right: 5%;
           top: 20%;
           transform: rotate(45deg);
-          
+
           @include mobile {
             width: 80px;
             height: 80px;
+            right: 10%;
+            top: 40%;
+          }
+
+          @include tablet {
+            width: 100px;
+            height: 100px;
+            right: 3%;
+          }
+
+          @include laptop {
+            width: 120px;
+            height: 120px;
+            right: 4%;
           }
         }
 
@@ -72,11 +104,23 @@
           border-bottom: 173px solid #fff;
           bottom: 1%;
           left: 2%;
-          
+
           @include mobile {
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
             border-bottom: 86px solid #fff;
+          }
+
+          @include tablet {
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-bottom: 121px solid #fff;
+          }
+
+          @include laptop {
+            border-left: 85px solid transparent;
+            border-right: 85px solid transparent;
+            border-bottom: 147px solid #fff;
           }
         }
       }
@@ -84,7 +128,7 @@
 
     .text-content {
       text-align: center;
-      color: #fff;
+      color: white;
       mix-blend-mode: difference;
 
       h1 {
@@ -92,9 +136,19 @@
         font-weight: 700;
         margin-bottom: 1rem;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        
+
         @include mobile {
           font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        @include tablet {
+          font-size: 3.5rem;
+          margin-bottom: 0.75rem;
+        }
+
+        @include laptop {
+          font-size: 4rem;
         }
       }
 
@@ -102,9 +156,20 @@
         font-size: 1.5rem;
         opacity: 0.9;
         margin-bottom: 2rem;
-        
+        font-weight: 500;
+
         @include mobile {
           font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        @include tablet {
+          font-size: 1.25rem;
+          margin-bottom: 1.5rem;
+        }
+
+        @include laptop {
+          font-size: 1.35rem;
         }
       }
     }
@@ -115,16 +180,44 @@
       gap: 3rem;
       margin-top: 3rem;
 
-      .code-element, .project-element {
+      @include mobile {
+        gap: 1rem;
+        margin-top: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include tablet {
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .code-element,
+      .project-element {
         font-size: 2rem;
         padding: 1rem;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 12px;
         backdrop-filter: blur(5px);
-        
+        transition: transform 0.3s ease;
+
         @include mobile {
           font-size: 1.5rem;
           padding: 0.5rem;
+        }
+
+        @include tablet {
+          font-size: 1.75rem;
+          padding: 0.75rem;
+        }
+
+        @include laptop {
+          font-size: 1.85rem;
+          padding: 0.85rem;
+        }
+
+        &:hover {
+          transform: scale(1.05);
         }
       }
     }
@@ -136,7 +229,18 @@
       transform: translateX(-50%);
       text-align: center;
       color: #fff;
-      
+
+      @include mobile {
+        bottom: -5rem;
+        left: 30%;
+        right: 30%;
+      }
+
+      @include tablet {
+        bottom: -7rem;
+
+      }
+
       span {
         display: block;
         margin-bottom: 0.5rem;
@@ -144,10 +248,28 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 600;
+
+        @include mobile {
+          font-size: 0.7rem;
+          letter-spacing: 1px;
+        }
+
+        @include tablet {
+          font-size: 0.8rem;
+          letter-spacing: 1.5px;
+        }
       }
 
       .scroll-arrow {
         font-size: 1.5rem;
+
+        @include mobile {
+          font-size: 1.2rem;
+        }
+
+        @include tablet {
+          font-size: 1.3rem;
+        }
       }
     }
   }
