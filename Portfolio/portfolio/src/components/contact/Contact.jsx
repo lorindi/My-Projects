@@ -72,6 +72,7 @@ export const Contact = () => {
             </g>
           </svg>
         </motion.div>
+        
         <motion.div
           className="emailContainer"
           initial={{ opacity: 0 }}
