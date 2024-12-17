@@ -11,8 +11,19 @@
 
   @include mobile {
     flex-direction: column;
-    padding-top: 50px;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    padding: 30px 20px;
     gap: 30px;
+  }
+
+  @include laptop {
+    padding: 40px;
+    gap: 40px;
   }
 
   .textContainer {
@@ -21,10 +32,20 @@
     flex-direction: column;
     gap: 40px;
 
+
     @include mobile {
-      gap: 20px;
-      margin-top: 40px;
+      gap: 15px;
+      text-align: center;
+      width: 100%;
     }
+
+    @include tablet {
+      gap: 25px;
+      text-align: center;
+      width: 100%;
+    }
+
+
 
     .item {
       @include mobile {
@@ -32,15 +53,47 @@
         align-items: center;
         flex-direction: column;
       }
+
+      @include tablet {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      h2 {
+        margin-bottom: 5px;
+        
+        @include mobile {
+          font-size: 18px;
+        }
+        
+        @include tablet {
+          font-size: 22px;
+        }
+      }
     }
 
     h1 {
       font-size: 100px;
-      list-style: 88px;
+      line-height: 88px;
+      
       @include mobile {
-        font-size: 30px;
+        font-size: 36px;
+        line-height: 40px;
+        margin-top: 50px;
+      }
+      
+      @include tablet {
+        font-size: 60px;
+        line-height: 65px;
+      }
+      
+      @include laptop {
+        font-size: 80px;
+        line-height: 75px;
       }
     }
+    
     span {
       font-weight: 400;
     }
@@ -51,26 +104,35 @@
 
     .phoneSvg {
       position: absolute;
-      margin: auto;
       stroke: #8400ffe1;
       z-index: -1;
       height: 500px;
       width: 650px;
-
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); // Центрира елемента хоризонтално и вертикално
+    
       @include mobile {
         height: 250px;
         width: 250px;
-        bottom: 150px;
+        transform: translate(-50%, -30%); // Малко по-нагоре за мобилни
       }
-
+    
+      @include tablet {
+        height: 350px;
+        width: 350px;
+        transform: translate(-50%, -40%); // Малко по-нагоре за таблети
+      }
+    
+      @include laptop {
+        height: 450px;
+        width: 550px;
+        transform: translate(-50%, -45%);
+      }
+    
       svg {
-        height: 500px;
-        width: 500px;
-
-        @include mobile {
-          height: 250px;
-          width: 250px;
-        }
+        width: 100%;
+        height: 100%;
       }
     }
   }
