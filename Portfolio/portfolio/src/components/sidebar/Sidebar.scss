@@ -5,8 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  color: black;
+  background-color: var(--sidebar-bg);
+  color: var(--text-color);
   z-index: 1000;
 
   .bg {
@@ -15,7 +15,7 @@
     left: 0;
     bottom: 0;
     width: 400px;
-    background: white;
+    background: var(--sidebar-bg);
     z-index: 999;
 
     @include mobile {
