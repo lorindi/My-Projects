@@ -12,7 +12,6 @@
   padding-bottom: 80px;
   width: 100%;
   position: relative;
-  background-color: var(--bg-color);
 
   @include mobile {
     flex-direction: column-reverse;
@@ -30,7 +29,7 @@
     align-items: flex-start;
     justify-content: space-evenly;
     height: 250px;
-    z-index: 1;
+    z-index: -1;
 
     @include mobile {
       align-items: center;
@@ -125,7 +124,7 @@
       object-fit: cover;
       background-size: contain;
       opacity: var(--heroine-scroll-opacity);
-      transition: opacity 0.3s ease;
+      // transition: opacity 0.3s ease;
 
       @include mobile {
         display: none;
@@ -145,13 +144,15 @@
     z-index: 0;
     font-weight: bold;
     transition: color 0.3s ease;
+    z-index: -3;
+
 
     @include mobile {
     }
   }
 
   .imageContainer {
-    z-index: 1;
+    z-index: -1;
 
     img {
       width: 400px;
