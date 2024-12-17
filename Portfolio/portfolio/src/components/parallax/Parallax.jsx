@@ -11,7 +11,7 @@ export const Parallax = ({ type }) => {
     offset: ["start start", "end start"],
   });
 
-  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const yText = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
