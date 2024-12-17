@@ -8,11 +8,13 @@ import { Portfolio } from "./components/portfolio/Portfolio";
 import { Services } from "./components/services/Services";
 import { Skills } from "./components/skills/Skills";
 import { Internship } from "./components/internship/Internship";
+import { ThemeToggle } from "./components/theme/ThemeToggle";
 function App() {
   return (
     <>
       <div>
         <Cursor />
+        <ThemeToggle />
         <section id="Homepage">
           <Navbar />
           <Heroine />
