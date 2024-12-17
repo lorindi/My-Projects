@@ -5,6 +5,7 @@
   background: var(--portfolio-bg);
   color: var(--portfolio-text);
   min-height: 100vh;
+  z-index: -1;
 
   .progress {
     position: sticky;
