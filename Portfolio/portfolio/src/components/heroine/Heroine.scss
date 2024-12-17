@@ -29,7 +29,7 @@
     align-items: flex-start;
     justify-content: space-evenly;
     height: 250px;
-    z-index: -1;
+    // z-index: -1;
 
     @include mobile {
       align-items: center;
