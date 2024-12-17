@@ -160,6 +160,7 @@
         opacity: 0.9;
         margin-bottom: 2rem;
         font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
         @include mobile {
           font-size: 1rem;
@@ -203,6 +204,7 @@
         border-radius: 12px;
         backdrop-filter: blur(5px);
         transition: transform 0.3s ease;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
         @include mobile {
           font-size: 1.5rem;
@@ -222,6 +224,7 @@
         &:hover {
           transform: scale(1.05);
           background: var(--floating-element-hover-bg);
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
       }
     }
@@ -234,6 +237,7 @@
       text-align: center;
       color: var(--text-on-parallax);
       transition: transform 0.3s ease;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
       @include mobile {
         bottom: -5rem;
@@ -252,6 +256,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
         @include mobile {
           font-size: 0.7rem;
