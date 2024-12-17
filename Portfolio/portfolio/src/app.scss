@@ -23,26 +23,52 @@ section {
   min-height: 100vh;
   scroll-snap-align: center;
   width: 100%;
-
+  
+  @media (min-width: 1074px) {
+    scroll-snap-align: center;
+  }
 }
-
 @mixin mobile {
   @media (max-width: 738px) {
     @content;
   }
 }
 
+@mixin tablet {
+  @media (min-width: 739px) and (max-width: 1073px) {
+    @content;
+  }
+}
+
 @mixin laptop {
-  @media (max-width: 1074px) {
+  @media (min-width: 1074px) and (max-width: 1335px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (max-width: 1336px) {
+  @media (min-width: 1336px) {
     @content;
   }
 }
+
+// @mixin mobile {
+//   @media (max-width: 738px) {
+//     @content;
+//   }
+// }
+
+// @mixin laptop {
+//   @media (max-width: 1074px) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop {
+//   @media (max-width: 1336px) {
+//     @content;
+//   }
+// }
 
 :root {
   --text-color: #7b7b7b;
