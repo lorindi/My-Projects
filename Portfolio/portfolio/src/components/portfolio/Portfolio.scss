@@ -3,7 +3,7 @@
 .portfolio {
   position: relative;
   background: var(--portfolio-bg);
-  color: var(--portfolio-text);
+  // color: var(--portfolio-text);
   min-height: 100vh;
 
   .progress {
@@ -145,6 +145,7 @@
             color: var(--portfolio-description);
             font-size: 16px;
             line-height: 1.8;
+            font-weight: 500;
 
             @include mobile {
               font-size: 14px;
