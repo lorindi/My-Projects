@@ -1,6 +1,4 @@
 @import "../../app.scss";
-// @include mobile {
-// }
 
 .heroine {
   min-height: calc(100vh - 100px);
@@ -14,6 +12,7 @@
   padding-bottom: 80px;
   width: 100%;
   position: relative;
+  background-color: var(--bg-color);
 
   @include mobile {
     flex-direction: column-reverse;
@@ -57,7 +56,7 @@
         font-weight: 500;
         letter-spacing: 10px;
         font-size: 28px;
-        color: #bf7fbf;
+        color: var(--heroine-heading);
 
         @include mobile {
           font-size: 20px;
@@ -69,8 +68,9 @@
         font-weight: 700;
         letter-spacing: 1.5px;
         font-size: 30px;
-        color: #7b7b7b;
+        color: var(--heroine-text);
         width: 440px;
+        transition: color 0.3s ease;
 
         @include mobile {
           font-size: 20px;
@@ -93,16 +93,21 @@
 
         button {
           padding: 12px;
-          border: 2px solid var(--btn-border-color) ;
           border-radius: 50px;
-          background-color: var(--btn-bg-color);
           color: #7b7b7b;
           margin-right: 20px;
           cursor: pointer;
           letter-spacing: 1px;
           font-weight: 600;
           font-size: 15px;
+          border: 2px solid var(--btn-border-color);
           border-radius: var(--btn-border-radius);
+          background-color: var(--btn-bg-color);
+
+          &:hover {
+            background-color: var(--heroine-button-hover);
+            transform: translateY(-2px);
+          }
 
           @include mobile {
             margin-right: 0;
@@ -119,7 +124,8 @@
       background-position: center;
       object-fit: cover;
       background-size: contain;
-      opacity: 0.5;
+      opacity: var(--heroine-scroll-opacity);
+      transition: opacity 0.3s ease;
 
       @include mobile {
         display: none;
@@ -134,10 +140,11 @@
     font-size: 50vh;
     bottom: -180px;
     white-space: nowrap;
-    color: white;
+    color: var(--heroine-sliding-text);
     width: 50%;
     z-index: 0;
     font-weight: bold;
+    transition: color 0.3s ease;
 
     @include mobile {
     }
@@ -153,8 +160,10 @@
       background-position: center;
       object-fit: cover;
       background-size: contain;
-      opacity: 0.8;
+      opacity: var(--heroine-image-opacity);
       border-radius: 100%;
+      transition: opacity 0.3s ease;
+      box-shadow: 0 0 20px var(--shadow-color);
 
       @include mobile {
         height: 300px;
