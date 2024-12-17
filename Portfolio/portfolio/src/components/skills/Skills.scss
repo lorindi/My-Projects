@@ -1,6 +1,5 @@
 @import "../../app.scss";
-// @include mobile {
-// }
+
 .skills {
   display: flex;
   align-items: center;
@@ -9,12 +8,16 @@
   min-height: 100vh;
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: var(--skills-bg);
+  transition: background-color 0.3s ease;
 
   .titleSkills {
     font-size: 50px;
     letter-spacing: 3px;
     font-weight: 400;
     margin-bottom: 30px;
+    color: var(--skills-title);
+    transition: color 0.3s ease;
 
     @include mobile {
       font-size: 30px;
@@ -44,13 +47,18 @@
       list-style: none;
       width: 150px;
       height: 150px;
-      background-color: white;
+      background-color: var(--skills-card-bg);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       border-radius: 10px;
-      box-shadow: 0px 0px 1px 1px lightgray;
+      box-shadow: 0px 0px 10px var(--skills-card-shadow);
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0px 0px 15px var(--skills-card-hover-shadow);
+      }
 
       @include mobile {
         width: 90px;
@@ -62,10 +70,14 @@
         font-weight: 500;
         font-size: 18px;
         margin-top: 10px;
+        color: var(--skills-text);
+        transition: color 0.3s ease;
+        
         @include mobile {
           font-size: 14px;
         }
       }
+      
       img {
         width: 100px;
         height: 100px;
