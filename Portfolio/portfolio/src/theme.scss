@@ -1,0 +1,210 @@
+.light-theme {
+    --navbar-bg: #ffffff;
+    --navbar-text: #4a4a4a;
+    --navbar-logo-color: #7b7b7b;
+    --social-icon-color: rgba(0, 0, 0, 0.519);
+    --social-icon-hover: rgba(128, 0, 128, 0.502);
+    --navbar-shadow: rgba(0, 0, 0, 0.1);
+
+    --bg-color: #fafafa;
+    --text-color: #7b7b7b;
+    --heading-color: #4a4a4a;
+    --btn-border-color: #9bc4f5;
+    --btn-bg-color: transparent;
+    --navbar-bg: #ffffff;
+    --sidebar-bg: #ffffff;
+    --card-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    
+    // Основни цветове
+    --bg-primary: #fafafa;
+    --bg-secondary: #ffffff;
+    --text-primary: #7b7b7b;
+    --text-secondary: #4a4a4a;
+    --accent-primary: #9bc4f5;
+    --accent-secondary: #88b4d3;
+    
+    // Специфични компоненти
+    --services-gradient: linear-gradient(135deg, #98C1F4, #BFA2DB);
+    --portfolio-gradient: linear-gradient(45deg, #c7ddc9, #98ce99, #77bd79);
+    --card-hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --input-bg: #ffffff;
+    --input-border: #e0e0e0;
+    --button-text: #4a4a4a;
+    --social-icon-color: rgba(0, 0, 0, 0.6);
+    --hover-color: rgba(128, 0, 128, 0.5);
+
+    --heroine-heading: #bf7fbf;
+    --heroine-text: #7b7b7b;
+    --heroine-sliding-text: #f0f0f0;
+    --heroine-image-opacity: 0.8;
+    --heroine-scroll-opacity: 0.5;
+    --heroine-button-hover: rgba(155, 196, 245, 0.1);
+
+
+    --parallax-services: linear-gradient(45deg, #88b4d3, #a3c7e6, #72acdb);
+    --parallax-portfolio: linear-gradient(45deg, #c7ddc9, #98ce99, #77bd79);
+    --parallax-overlay: rgba(255, 255, 255, 0.1);
+    --shape-color: #ffffff;
+    --text-on-parallax: #ffffff;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    --floating-element-bg: rgba(255, 255, 255, 0.1);
+    --floating-element-hover-bg: rgba(255, 255, 255, 0.2);
+
+  // Internship специфични цветове
+  --internship-title: #4a4a4a;  // По-тъмен цвят за по-добър контраст
+  --internship-card-bg: #ffffff;
+  --internship-text: #2d2d2d;   // По-тъмен цвят за по-добра четимост
+  --internship-secondary-text: #666666;
+  --internship-card-shadow: rgba(0, 0, 0, 0.08);
+  --internship-card-hover: rgba(0, 0, 0, 0.12);
+  --internship-dot-color: #d4a5d4;  // По-светъл лилав цвят
+  --internship-dot-active: #7ba7e0;  // По-светъл син цвят
+
+
+  --portfolio-bg: linear-gradient(180deg, #fafafa, #ffffff);
+  --portfolio-text: #4a4a4a;
+  --portfolio-card-bg: rgba(255, 255, 255, 0.03);
+  --portfolio-card-shadow: rgba(0, 0, 0, 0.1);
+  --portfolio-heading-gradient: linear-gradient(to right, #88b4d3, #9bc4f5);
+  --portfolio-progress-bar: linear-gradient(to right, #88b4d3, #9bc4f5);
+  --portfolio-description: #7b7b7b;
+  --portfolio-button-demo-bg: linear-gradient(45deg, #88b4d3, #9bc4f5);
+  --portfolio-button-demo-text: #ffffff;
+  --portfolio-button-github-border: #88b4d3;
+  --portfolio-button-github-text: #4a4a4a;
+  --portfolio-button-github-hover: rgba(136, 180, 211, 0.1);
+
+  --skills-bg: #fafafa;
+  --skills-title: #4a4a4a;
+  --skills-card-bg: #ffffff;
+  --skills-card-shadow: rgba(0, 0, 0, 0.1);
+  --skills-text: #2d2d2d;
+  --skills-card-hover-shadow: rgba(0, 0, 0, 0.15);
+
+
+  --contact-bg: #fafafa;
+  --contact-title: #4a4a4a;
+  --contact-text: #7b7b7b;
+  --contact-item-title: #4a4a4a;
+  --contact-phone-svg: #8400ffe1;
+  
+  --contact-input-bg: #ffffff;
+  --contact-input-text: #4a4a4a;
+  --contact-input-border: #e0e0e0;
+  --contact-input-shadow: rgba(0, 0, 0, 0.1);
+  --contact-input-hover-shadow: rgba(155, 196, 245, 0.2);
+  --contact-input-hover-border: #9bc4f5;
+  
+  --contact-button-bg: #9bc4f5;
+  --contact-button-text: #ffffff;
+  --contact-button-shadow: rgba(0, 0, 0, 0.1);
+  --contact-button-hover-bg: linear-gradient(to right, #88b4d3, #9bc4f5);
+  --contact-button-hover-shadow: rgba(155, 196, 245, 0.4);
+  }
+  
+  .dark-theme {
+    --navbar-bg: #2d2d2d;
+    --navbar-text: #e0e0e0;
+    --navbar-logo-color: #ffffff;
+    --social-icon-color: rgba(255, 255, 255, 0.7);
+    --social-icon-hover: rgba(155, 196, 245, 0.8);
+    --navbar-shadow: rgba(0, 0, 0, 0.2);
+
+
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --btn-border-color: #4a90e2;
+    --btn-bg-color: transparent;
+    --navbar-bg: #2d2d2d;
+    --sidebar-bg: #2d2d2d;
+    --card-bg: #2d2d2d;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    
+    // Основни цветове
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #e0e0e0;
+    --text-secondary: #cccccc;
+    --accent-primary: #4a90e2;
+    --accent-secondary: #357abd;
+    
+    // Специфични компоненти
+    --services-gradient: linear-gradient(45deg, #2c3e50, #3498db, #2980b9);
+    --portfolio-gradient: linear-gradient(45deg, #27ae60, #2ecc71, #27ae60);
+    --card-hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    --input-bg: #2d2d2d;
+    --input-border: #404040;
+    --button-text: #ffffff;
+    --social-icon-color: rgba(255, 255, 255, 0.6);
+    --hover-color: rgba(128, 0, 128, 0.8);
+
+    --heroine-heading: #e5a5e5;
+    --heroine-text: #e0e0e0;
+    --heroine-sliding-text: #2d2d2d;
+    --heroine-image-opacity: 0.9;
+    --heroine-scroll-opacity: 0.7;
+    --heroine-button-hover: rgba(74, 144, 226, 0.1);
+
+
+    --parallax-services: linear-gradient(45deg, #2c3e50, #3498db, #2980b9);
+    --parallax-portfolio: linear-gradient(45deg, #3b5043, #16af56, #1b6439);
+    --parallax-overlay: rgba(0, 0, 0, 0.2);
+    --shape-color: #ffffff;
+    --text-on-parallax: #ffffff;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    --floating-element-bg: rgba(255, 255, 255, 0.15);
+    --floating-element-hover-bg: rgba(255, 255, 255, 0.25);
+
+  // Internship специфични цветове
+  --internship-title: #f0f0f0; 
+  --internship-card-bg: #2a2a2a;
+  --internship-text: #ffffff;
+  --internship-secondary-text: #b8b8b8;
+  --internship-card-shadow: rgba(0, 0, 0, 0.4);
+  --internship-card-hover: rgba(255, 255, 255, 0.15);
+  --internship-dot-color: #e0b8e0;
+  --internship-dot-active: #5a9be8; 
+
+  --portfolio-bg: #1a1a1a;
+  --portfolio-text: #ffffff;
+  --portfolio-card-bg: rgba(255, 255, 255, 0.03);
+  --portfolio-card-shadow: rgba(0, 0, 0, 0.3);
+  --portfolio-heading-gradient: linear-gradient(to right, #00ff88, #00a3ff);
+  --portfolio-progress-bar: linear-gradient(to right, #00ff88, #00a3ff);
+  --portfolio-description: #a6a6a6;
+  --portfolio-button-demo-bg: linear-gradient(45deg, #00ff88, #00a3ff);
+  --portfolio-button-demo-text: #000000;
+  --portfolio-button-github-border: #00ff88;
+  --portfolio-button-github-text: #ffffff;
+  --portfolio-button-github-hover: rgba(0, 255, 136, 0.1);
+
+
+  --skills-bg: #1a1a1a;
+  --skills-title: #ffffff;
+  --skills-card-bg: #2d2d2d;
+  --skills-card-shadow: rgba(255, 255, 255, 0.1);
+  --skills-text: #e0e0e0;
+  --skills-card-hover-shadow: rgba(255, 255, 255, 0.2);
+
+
+  --contact-bg: #1a1a1a;
+  --contact-title: #ffffff;
+  --contact-text: #e0e0e0;
+  --contact-item-title: #ffffff;
+  --contact-phone-svg: #4a90e2;
+  
+  --contact-input-bg: #2d2d2d;
+  --contact-input-text: #e0e0e0;
+  --contact-input-border: #404040;
+  --contact-input-shadow: rgba(0, 0, 0, 0.3);
+  --contact-input-hover-shadow: rgba(74, 144, 226, 0.2);
+  --contact-input-hover-border: #4a90e2;
+  
+  --contact-button-bg: #4a90e2;
+  --contact-button-text: #ffffff;
+  --contact-button-shadow: rgba(0, 0, 0, 0.3);
+  --contact-button-hover-bg: linear-gradient(to right, #357abd, #4a90e2);
+  --contact-button-hover-shadow: rgba(74, 144, 226, 0.4);
+  }
