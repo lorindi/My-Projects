@@ -7,7 +7,7 @@
   justify-content: center;
   background-color: var(--sidebar-bg);
   color: var(--text-color);
-  z-index: 1000;
+  z-index: 9999;
 
   .bg {
     position: fixed;
@@ -16,7 +16,7 @@
     bottom: 0;
     width: 400px;
     background: var(--sidebar-bg);
-    z-index: 999;
+    z-index: 9998;
 
     @include mobile {
       width: 320px;
@@ -56,6 +56,6 @@
     background-color: white;
     border: none;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 10000;
   }
 }
