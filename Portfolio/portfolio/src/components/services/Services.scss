@@ -3,7 +3,7 @@
 .services {
   min-height: 100vh;
   padding: 80px 20px;
-  background: var(--bg-primary);
+  background: var(--services-bg);
   
   .header {
     text-align: center;
@@ -11,7 +11,7 @@
     
     h1 {
       font-size: 3rem;
-      color: var(--heading-color);
+      color: var(--services-title);
       margin-bottom: 15px;
       font-weight: 600;
       
@@ -22,7 +22,7 @@
     
     p {
       font-size: 1.2rem;
-      color: var(--text-primary);
+      color: var(--services-subtitle);
       
       @include mobile {
         font-size: 1rem;
@@ -44,25 +44,25 @@
     }
 
     .card {
-      background: var(--card-bg);
+      background: var(--services-card-bg);
       border-radius: 20px;
       padding: 30px;
       transition: all 0.3s ease;
+      box-shadow: 0 5px 15px var(--services-card-shadow);
+      
+      &:hover {
+        box-shadow: 0 8px 25px var(--services-card-hover-shadow);
+      }
       
       &.featured {
         background: var(--services-gradient);
-        color: var(--text-secondary);
         
         .icon-container {
-          background: rgba(255, 255, 255, 0.2);
+          background: var(--services-featured-icon-bg);
         }
         
-        h2 {
-          color: var(--heading-color);
-        }
-        
-        p {
-          color: var(--text-primary);
+        h2, p {
+          color: var(--services-featured-card-text);
         }
       }
 
@@ -70,7 +70,8 @@
         .icon-container {
           width: 60px;
           height: 60px;
-          background: var(--bg-secondary);
+          background: var(--services-icon-bg);
+          color: var(--services-icon-color);
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -81,15 +82,16 @@
 
         h2 {
           font-size: 1.5rem;
-          color: var(--heading-color);
+          color: var(--services-card-title);
           margin-bottom: 15px;
           font-weight: 600;
         }
 
         p {
-          color: var(--text-primary);
+          color: var(--services-card-text);
           line-height: 1.6;
           font-size: 1rem;
+          font-weight: 500;
         }
       }
     }
@@ -103,7 +105,7 @@
     
     blockquote {
       font-size: 1.5rem;
-      color: var(--text-secondary);
+      color: var(--services-quote-text);
       font-style: italic;
       line-height: 1.6;
       
@@ -115,7 +117,7 @@
         display: block;
         margin-top: 20px;
         font-size: 1rem;
-        color: var(--text-primary);
+        color: var(--services-quote-author);
         font-style: normal;
       }
     }
