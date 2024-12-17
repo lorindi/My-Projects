@@ -1,3 +1,4 @@
+@import "./theme.scss";
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -5,8 +6,9 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #fafafa;
-  color: gray;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }
 
 * {
@@ -52,23 +54,6 @@ section {
   }
 }
 
-// @mixin mobile {
-//   @media (max-width: 738px) {
-//     @content;
-//   }
-// }
-
-// @mixin laptop {
-//   @media (max-width: 1074px) {
-//     @content;
-//   }
-// }
-
-// @mixin desktop {
-//   @media (max-width: 1336px) {
-//     @content;
-//   }
-// }
 
 :root {
   --text-color: #7b7b7b;
