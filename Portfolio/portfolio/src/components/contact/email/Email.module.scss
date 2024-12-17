@@ -1,6 +1,5 @@
 @import "../../../app.scss";
-// @include mobile {
-// }
+
 .gmailForm {
   display: flex;
   flex-direction: column;
@@ -19,11 +18,11 @@
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
-    background-color: initial;
-    border: 1px solid gray;
+    background-color: var(--contact-input-bg);
+    color: var(--contact-input-text);
+    border: 1px solid var(--contact-input-border);
     transition: all 0.3s ease-in-out 0s;
-    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.5),
-      -7px -7px 12px rgba(255, 255, 255, 0.03);
+    box-shadow: 5px 5px 15px var(--contact-input-shadow);
 
     @include mobile {
       width: 300px;
@@ -41,28 +40,25 @@
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
-    color: black;
-    background-color: initial;
-    border: 1px solid gray;
-    transition: all 0.05s ease-in-out 0s;
-    box-shadow: 5px 5px 17px rgb(0, 0, 0, 0.5),
-      -13px -13px 23px rgba(255, 255, 255, 0.03);
+    background-color: var(--contact-input-bg);
+    color: var(--contact-input-text);
+    border: 1px solid var(--contact-input-border);
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: 5px 5px 15px var(--contact-input-shadow);
+
     @include mobile {
       width: 300px;
       margin-top: 15px;
-
     }
   }
+
   .gmailFormInput:hover,
   .gmailFormTextarea:hover {
-    background-color: transparent;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.058),
-      -13px -13px 23px rgba(255, 255, 255, 0.03),
-      inset 4px 4px 13px rgb(0, 0, 0, 0.2),
-      inset -7px -7px 15px rgba(255, 255, 255, 0.04);
-    border-color: white;
-    color: purple;
+    background-color: var(--contact-input-bg);
+    box-shadow: 5px 5px 15px var(--contact-input-hover-shadow);
+    border-color: var(--contact-input-hover-border);
   }
+
   .gmailFormButton {
     width: 550px;
     padding: 10px;
@@ -70,33 +66,24 @@
     border: none;
     text-transform: uppercase;
     font-weight: 600;
-    background-color: #a289f3;
+    background-color: var(--contact-button-bg);
+    color: var(--contact-button-text);
     cursor: pointer;
     font-size: 16px;
     transition: all 0.5s;
     letter-spacing: 5px;
-    outline: none !important;
-    box-shadow: 1px 3px 8px rgb(0, 0, 0, 0.4),
-      -3px -3px 7px rgba(255, 255, 255, 0.06),
-      inset 3px 3px 7px rgba(0, 0, 0, 0.095),
-      inset -1px -1px 7px rgba(255, 255, 255, 0.05);
-    border-width: 1px 0px 0px 1px;
-    border-style: solid;
-    border-color: #2f4d2e7a;
-    transition: all 0.3s ease-in-out 0s;
-    color: white;
+    outline: none;
+    box-shadow: 1px 3px 8px var(--contact-button-shadow);
     margin-top: 30px;
 
     @include mobile {
       width: 300px;
       margin-top: 15px;
-
     }
-  }
-  .gmailFormButton:hover {
-    box-shadow: 0 0px 20px rgba(84, 1, 74, 0.7);
-    border-color: inherit;
-    background: linear-gradient(to right, #bb60f1, #98bef3, #9488f1);
-    color: white;
+
+    &:hover {
+      background: var(--contact-button-hover-bg);
+      box-shadow: 0 0px 20px var(--contact-button-hover-shadow);
+    }
   }
 }
