@@ -229,6 +229,7 @@
       transform: translateX(-50%);
       text-align: center;
       color: #fff;
+      transition: transform 0.3s ease;
 
       @include mobile {
         bottom: -5rem;
