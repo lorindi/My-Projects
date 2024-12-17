@@ -43,7 +43,8 @@ const items = [
 
 const Single = ({ item }) => {
   const ref = useRef();
-  
+  console.log("Single component rendered");
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start 0.9", "start 0.1"]
@@ -51,17 +52,23 @@ const Single = ({ item }) => {
 
   const y = useTransform(scrollYProgress, [0, 1], [-50, 50]);
 
-  useEffect(() => {
-    console.log("Single component mounted");
-  }, []);
-
   return (
     <section className="portfolioContainer">
       <div className="container">
-        <div className="wrapper">
-          <div className="imageContainer" ref={ref}>
+        <motion.div 
+          className="wrapper"
+          initial={{ opacity: 0, x: -25 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div 
+            className="imageContainer" 
+            ref={ref}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
             <img src={item.img} alt={item.title} />
-          </div>
+          </motion.div>
           <motion.div 
             className="textContainer" 
             style={{ y }}
@@ -69,18 +76,40 @@ const Single = ({ item }) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h2>{item.title}</h2>
-            <p>{item.desc}</p>
+            <motion.h2
+              whileHover={{ x: 10 }}
+              transition={{ duration: 0.3 }}
+            >
+              {item.title}
+            </motion.h2>
+            <motion.p
+              whileHover={{ color: "#ffffff" }}
+              transition={{ duration: 0.3 }}
+            >
+              {item.desc}
+            </motion.p>
             <div className="buttons">
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <motion.a 
+                href={item.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                whileHover={{ y: -3 }}
+                transition={{ duration: 0.3 }}
+              >
                 <button className="demo">See Demo</button>
-              </a>
-              <a href={item.github} target="_blank" rel="noopener noreferrer">
+              </motion.a>
+              <motion.a 
+                href={item.github} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                whileHover={{ y: -3 }}
+                transition={{ duration: 0.3 }}
+              >
                 <button className="github">GitHub</button>
-              </a>
+              </motion.a>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -88,6 +117,7 @@ const Single = ({ item }) => {
 
 export const Portfolio = () => {
   const ref = useRef();
+  console.log("Portfolio component rendered");
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -99,14 +129,16 @@ export const Portfolio = () => {
     damping: 30,
   });
 
-  useEffect(() => {
-    console.log("Portfolio component mounted");
-  }, []);
-
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
-        <h1>Featured Works</h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          Featured Works
+        </motion.h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (
