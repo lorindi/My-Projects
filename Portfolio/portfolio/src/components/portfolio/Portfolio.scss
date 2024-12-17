@@ -1,4 +1,5 @@
 @import "../../app.scss";
+
 .portfolio {
   position: relative;
   background: linear-gradient(180deg, #0c0c1d, #111132);
@@ -19,7 +20,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 20px;
-      animation: fadeIn 1s ease-out;
       
       @include mobile {
         font-size: 24px;
@@ -74,7 +74,6 @@
         padding: 50px;
         backdrop-filter: blur(5px);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        animation: slideIn 0.8s ease-out;
         margin: 50px 0;
         
         @include mobile {
@@ -98,7 +97,6 @@
         .imageContainer {
           flex: 1;
           height: 500px;
-          transition: all 0.5s ease;
 
           @include mobile {
             height: 300px;
@@ -106,11 +104,6 @@
           
           @include tablet {
             height: 400px;
-          }
-
-          &:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
           }
 
           img {
@@ -128,7 +121,6 @@
           flex-direction: column;
           justify-content: center;
           gap: 30px;
-          transition: transform 0.6s ease-out;
 
           @include mobile {
             gap: 20px;
@@ -139,7 +131,6 @@
             background: linear-gradient(to right, #00ff88, #00a3ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            transition: transform 0.3s ease;
             
             @include mobile {
               font-size: 24px;
@@ -148,25 +139,16 @@
             @include tablet {
               font-size: 28px;
             }
-
-            &:hover {
-              transform: translateX(10px);
-            }
           }
 
           p {
             color: #a6a6a6;
             font-size: 16px;
             line-height: 1.8;
-            transition: color 0.3s ease;
 
             @include mobile {
               font-size: 14px;
               line-height: 1.6;
-            }
-
-            &:hover {
-              color: #ffffff;
             }
           }
 
@@ -176,7 +158,6 @@
             margin-bottom: 50px;
             
             @include mobile {
-              // flex-direction: column;
               gap: 15px;
             }
             
@@ -203,7 +184,6 @@
                 color: #000;
                 
                 &:hover {
-                  transform: translateY(-3px);
                   box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
                 }
               }
@@ -215,7 +195,6 @@
                 
                 &:hover {
                   background: rgba(0, 255, 136, 0.1);
-                  transform: translateY(-3px);
                   box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2);
                 }
               }
@@ -224,27 +203,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
