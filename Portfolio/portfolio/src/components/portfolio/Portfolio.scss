@@ -2,8 +2,8 @@
 
 .portfolio {
   position: relative;
-  background: linear-gradient(180deg, #0c0c1d, #111132);
-  color: #ffffff;
+  background: var(--portfolio-bg);
+  color: var(--portfolio-text);
   min-height: 100vh;
 
   .progress {
@@ -16,8 +16,8 @@
 
     h1 {
       font-size: 36px;
-      background: linear-gradient(to right, #00ff88, #00a3ff);
-      -webkit-background-clip: text;
+      background: var(--portfolio-heading-gradient);
+      -webkit-background-clip: text; 
       -webkit-text-fill-color: transparent;
       margin-bottom: 20px;
       
@@ -36,7 +36,7 @@
 
     .progressBar {
       height: 4px;
-      background: linear-gradient(to right, #00ff88, #00a3ff);
+      background: var(--portfolio-progress-bar);
       border-radius: 10px;
       transition: transform 0.3s ease;
     }
@@ -69,11 +69,11 @@
         display: flex;
         gap: 50px;
         position: relative;
-        background: rgba(255, 255, 255, 0.03);
+        background: var(--portfolio-card-bg);
         border-radius: 20px;
         padding: 50px;
         backdrop-filter: blur(5px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 32px var(--portfolio-card-shadow);
         margin: 50px 0;
         
         @include mobile {
@@ -111,7 +111,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 15px var(--portfolio-card-shadow);
           }
         }
 
@@ -128,7 +128,7 @@
 
           h2 {
             font-size: 32px;
-            background: linear-gradient(to right, #00ff88, #00a3ff);
+            background: var(--portfolio-heading-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             
@@ -142,7 +142,7 @@
           }
 
           p {
-            color: #a6a6a6;
+            color: var(--portfolio-description);
             font-size: 16px;
             line-height: 1.8;
 
@@ -180,22 +180,22 @@
               }
 
               &.demo {
-                background: linear-gradient(45deg, #00ff88, #00a3ff);
-                color: #000;
+                background: var(--portfolio-button-demo-bg);
+                color: var(--portfolio-button-demo-text);
                 
                 &:hover {
-                  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+                  box-shadow: 0 5px 15px var(--portfolio-card-shadow);
                 }
               }
 
               &.github {
                 background: transparent;
-                border: 2px solid #00ff88;
-                color: #fff;
+                border: 2px solid var(--portfolio-button-github-border);
+                color: var(--portfolio-button-github-text);
                 
                 &:hover {
-                  background: rgba(0, 255, 136, 0.1);
-                  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2);
+                  background: var(--portfolio-button-github-hover);
+                  box-shadow: 0 5px 15px var(--portfolio-card-shadow);
                 }
               }
             }
