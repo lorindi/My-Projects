@@ -2,7 +2,7 @@
 
 .theme-toggle {
   position: fixed;
-  top: 25px;
+  bottom: 25px;
   right: 25px;
   width: 40px;
   height: 40px;
@@ -22,7 +22,7 @@
   }
 
   @include mobile {
-    top: 15px;
+    bottom: 15px;
     right: 15px;
     width: 35px;
     height: 35px;
