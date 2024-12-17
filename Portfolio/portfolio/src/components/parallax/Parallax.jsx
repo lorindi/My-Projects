@@ -20,10 +20,9 @@ export const Parallax = ({ type }) => {
       className="parallax-container"
       ref={ref}
       style={{
-        background:
-          type === "services"
-            ? "linear-gradient(45deg, #88b4d3, #a3c7e6, #72acdb)"
-            : "linear-gradient(45deg, #c7ddc9, #98ce99, #77bd79)",
+        background: type === "services" 
+          ? "var(--parallax-services)"
+          : "var(--parallax-portfolio)"
       }}
     >
       <div className="parallax-content">
