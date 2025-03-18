@@ -77,7 +77,7 @@ export async function POST(req: Request) {
       const newUser = new User({
         clerkId: evt.data.id,
         username: username,
-        email: email,
+        email: email,                   
         avatar: image_url || "/noAvatar.png",
         cover: null,
       });
