@@ -48,9 +48,9 @@
 
 .recommendations-carousel {
   position: relative;
-  max-width: 900px;
-  margin: 0 auto;
   width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
@@ -63,7 +63,9 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
+  margin: 0 auto;
   
   &:hover {
     transform: translateY(-5px);
@@ -157,6 +159,10 @@
   white-space: pre-line;
   word-wrap: break-word;
   max-width: 100%;
+  margin: 0 auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 .recommendation-footer {
