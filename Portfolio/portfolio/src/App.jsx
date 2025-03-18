@@ -23,7 +23,7 @@ function App() {
           <Heroine />
         </section>
 
-        
+
         <section id="Services">
           <Parallax 
             type="services" 
@@ -75,6 +75,14 @@ function App() {
         </section>
         <section id="Certificates">
           <Certificates />
+        </section>
+
+        <section id="Contact">
+          <Parallax 
+            type="contact" 
+            title="Contact Me" 
+            subtitle="Let's connect and discuss your next project" 
+          />
         </section>
         <section id="Contact">
           <Contact />
