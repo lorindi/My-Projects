@@ -9,7 +9,8 @@
   justify-content: space-between;
   background-color: var(--bg-color);
   transition: background-color 0.3s ease;
-
+  justify-content: center;
+  
   @include mobile {
     font-size: 14px;
   }
@@ -100,13 +101,12 @@
       margin-bottom: 15px;
 
       span {
-        background-color: var(--internship-bg-technologies); 
+        background-color: var(--internship-bg-technologies);
         padding: 5px 10px;
         border-radius: 20px;
         font-size: 14px;
         color: var(--internship-secondary-text);
 
-        
         &:hover {
           transform: scale(1.05);
           background-color: var(--accent-primary);
