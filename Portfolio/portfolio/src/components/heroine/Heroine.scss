@@ -137,9 +137,9 @@
   .slidingTextContainer {
     position: absolute;
     font-size: 50vh;
-    bottom: -180px;
+    bottom: -100px;
     white-space: nowrap;
-    color: var(--heroine-sliding-text);
+    color: rgba(128, 128, 128, 0.034);
     width: 50%;
     z-index: 0;
     font-weight: bold;
