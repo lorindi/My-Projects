@@ -20,10 +20,7 @@ export const Parallax = ({ type, title, subtitle }) => {
       className="parallax-container"
       ref={ref}
       style={{
-        background:
-          type === "services"
-            ? "var(--parallax-services)"
-            : "var(--parallax-portfolio)",
+        background: "#1A1A1A"
       }}
     >
       <div className="parallax-content">
