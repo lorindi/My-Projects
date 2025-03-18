@@ -29,7 +29,7 @@
     max-width: 1200px;
 
     .slick-slide {
-      padding: 0 15px;
+      padding: 0 10px;
     }
 
     .slick-dots {
@@ -59,7 +59,7 @@
   .projectCard {
     background: var(--internship-card-bg);
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 5px 15px var(--internship-card-shadow);
     transition: transform 0.3s ease;
 
@@ -70,7 +70,7 @@
 
     img {
       width: 100%;
-      height: 350px;
+      height: 200px;
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 15px;
