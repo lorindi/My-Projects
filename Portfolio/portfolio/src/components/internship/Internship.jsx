@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FamilyTree from "./Family Tree.png";
 import Jauntster from "./Jauntster.png";
-import ERP from "./ERP.png";
+import ERP from "./Erp.png";
 const projects = [
   {
     id: 1,
