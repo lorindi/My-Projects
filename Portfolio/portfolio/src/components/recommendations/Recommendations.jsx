@@ -75,7 +75,7 @@ const Recommendations = () => {
       specialist in frontend development.`
     },
     
-  ];;
+  ];
 
   const handlePrevious = () => {
     setActiveIndex((prevIndex) => (prevIndex === 0 ? recommendations.length - 1 : prevIndex - 1));
