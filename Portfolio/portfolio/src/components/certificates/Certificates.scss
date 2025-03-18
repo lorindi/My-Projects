@@ -46,6 +46,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     margin-bottom: 40px;
+
   }
   
   .certificate-card {
@@ -63,12 +64,23 @@
   }
   
   .certificate-image-container {
-    height: 525px;
+    height: 425px;
     overflow: hidden;
     background-color: var(--bg-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+      height: 315px;
+
+    }
+  
+    @include tablet {
+      height: 390px;
+
+    }
+
   }
   
   .certificate-image {
@@ -157,7 +169,7 @@
     }
   }
   
-  // Модален карусел
+
   .certificate-modal {
     position: fixed;
     top: 0;
