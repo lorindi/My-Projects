@@ -143,7 +143,7 @@ const Certificates = () => {
         date: "November 2024",
         image: November,
         pdfUrl: "/certificates/VueJS - November 2024 - Certificate.pdf",
-        originalUrl: "",
+        originalUrl: "https://softuni.bg/Certificates/Details/235119/5259e69e",
       },
       {
         id: 10,
@@ -163,7 +163,7 @@ const Certificates = () => {
         image: PythonFundamentals,
         pdfUrl:
           "/certificates/Programming Fundamentals with Python - May 2022 - Certificate.pdf",
-        originalUrl: "",
+        originalUrl: "https://softuni.bg/Certificates/Details/138727/619b3e82",
       },
       {
         id: 12,
@@ -172,7 +172,7 @@ const Certificates = () => {
         date: "2023",
         image: SoftwareEngineerWithPython,
         pdfUrl: "/certificates/Diploma for Software Engineer with Python.pdf",
-        originalUrl: "",
+        originalUrl: "https://softuni.bg/Certificates/Details/198244/a97372ae",
       },
     ];
 
