@@ -1,6 +1,19 @@
 import { useState, useEffect } from "react";
 import "./Certificates.scss";
 
+import TypeScript from "./TypeScript - April 2024 - Certificate.jpeg";
+import ReactJs from "./ReactJS - October 2023 - Certificate.jpeg";
+import JSFrontEnd from "./JS Front-End - February 2023 - Certificate.jpeg";
+import htmlCss from "./HTML & CSS - January 2023 - Certificate.jpeg";
+import PythonWebFramework from "./Python Web Framework - June 2023 - Certificate.jpeg";
+import PythonWebBasics from "./Python Web Basics - May 2023 - Certificate.jpeg";
+import PythonOop from "./Python OOP - October 2022 - Certificate.jpeg";
+import PythonAdvanced from "./Python Advanced - September 2022 - Certificate.jpeg";
+import November from "./VueJS - November 2024 - Certificate.jpeg";
+import PythonBasics from "./Programming Basics - October 2021 - Certificate.jpeg";
+import PythonFundamentals from "./Programming Fundamentals with Python - May 2022 - Certificate.jpeg";
+import SoftwareEngineerWithPython from "./Diploma for Software Engineer with Python.jpeg";
+
 const ArrowLeftSVG = () => (
   <svg
     width="24"
@@ -54,10 +67,8 @@ const Certificates = () => {
         title: "TypeScript",
         issuer: "SoftUni",
         date: "2024",
-        image:
-          "/certificates/TypeScript - April 2024 - Certificate.jpeg",
-        pdfUrl:
-          "/certificates/TypeScript - April 2024 - Certificate.pdf",
+        image: TypeScript,
+        pdfUrl: "/certificates/TypeScript - April 2024 - Certificate.pdf",
         originalUrl: "https://softuni.bg/Certificates/Details/215498/d68ac7d7",
       },
       {
@@ -65,10 +76,8 @@ const Certificates = () => {
         title: "React",
         issuer: "SoftUni",
         date: "October 2023",
-        image:
-          "/certificates/ReactJS - October 2023 - Certificate.jpeg",
-        pdfUrl:
-          "/certificates/ReactJS - October 2023 - Certificate.pdf",
+        image: ReactJs,
+        pdfUrl: "/certificates/ReactJS - October 2023 - Certificate.pdf",
         originalUrl: "https://softuni.bg/Certificates/Details/197736/bee59b2a",
       },
       {
@@ -76,10 +85,8 @@ const Certificates = () => {
         title: "JS Front-End",
         issuer: "SoftUni",
         date: "February 2023",
-        image:
-          "/certificates/JS Front-End - February 2023 - Certificate.jpeg",
-        pdfUrl:
-          "/certificates/JS Front-End - February 2023 - Certificate.pdf",
+        image: JSFrontEnd,
+        pdfUrl: "/certificates/JS Front-End - February 2023 - Certificate.pdf",
         originalUrl: "https://softuni.bg/Certificates/Details/170702/e4ebec81",
       },
       {
@@ -87,10 +94,8 @@ const Certificates = () => {
         title: "HTML & CSS",
         issuer: "SoftUni",
         date: "January 2023",
-        image:
-          "/certificates/HTML & CSS - January 2023 - Certificate.jpeg",
-        pdfUrl:
-          "/certificates/HTML & CSS - January 2023 - Certificate.pdf",
+        image: htmlCss,
+        pdfUrl: "/certificates/HTML & CSS - January 2023 - Certificate.pdf",
         originalUrl: "https://softuni.bg/Certificates/Details/182398/8fa320ee",
       },
       {
@@ -98,8 +103,7 @@ const Certificates = () => {
         title: "Python Web Framework",
         issuer: "SoftUni",
         date: "June 2023",
-        image:
-          "/certificates/Python Web Framework - June 2023 - Certificate.jpeg",
+        image: PythonWebFramework,
         pdfUrl:
           "/certificates/Python Web Framework - June 2023 - Certificate.pdf",
         originalUrl: "https://softuni.bg/Certificates/Details/182398/8fa320ee",
@@ -109,10 +113,8 @@ const Certificates = () => {
         title: "Python Web Basics",
         issuer: "SoftUni",
         date: "May 2023",
-        image:
-          "/certificates/Python Web Basics - May 2023 - Certificate.jpeg",
-        pdfUrl:
-          "/certificates/Python Web Basics - May 2023 - Certificate.pdf",
+        image: PythonWebBasics,
+        pdfUrl: "/certificates/Python Web Basics - May 2023 - Certificate.pdf",
         originalUrl: "https://softuni.bg/Certificates/Details/177869/ae364f64",
       },
       {
@@ -120,10 +122,8 @@ const Certificates = () => {
         title: "Python OOP",
         issuer: "SoftUni",
         date: "October 2022",
-        image:
-          "/certificates/Python OOP - October 2022 - Certificate.jpeg",
-        pdfUrl:
-          "/certificates/Python OOP - October 2022 - Certificate.pdf",
+        image: PythonOop,
+        pdfUrl: "/certificates/Python OOP - October 2022 - Certificate.pdf",
         originalUrl: "https://softuni.bg/Certificates/Details/150379/778f00f2",
       },
       {
@@ -131,8 +131,7 @@ const Certificates = () => {
         title: "Python Advanced",
         issuer: "SoftUni",
         date: "September 2022",
-        image:
-          "/certificates/Python Advanced - September 2022 - Certificate.jpeg",
+        image: PythonAdvanced,
         pdfUrl:
           "/certificates/Python Advanced - September 2022 - Certificate.pdf",
         originalUrl: "https://softuni.bg/Certificates/Details/152067/65987736",
@@ -142,10 +141,8 @@ const Certificates = () => {
         title: "VueJS",
         issuer: "SoftUni",
         date: "November 2024",
-        image:
-          "/certificates/VueJS - November 2024 - Certificate.jpeg",
-        pdfUrl:
-          "/certificates/VueJS - November 2024 - Certificate.pdf",
+        image: November,
+        pdfUrl: "/certificates/VueJS - November 2024 - Certificate.pdf",
         originalUrl: "",
       },
       {
@@ -153,8 +150,7 @@ const Certificates = () => {
         title: "Python Basics",
         issuer: "SoftUni",
         date: "October 2021",
-        image:
-          "/certificates/Programming Basics - October 2021 - Certificate.jpeg",
+        image: PythonBasics,
         pdfUrl:
           "/certificates/Programming Basics - October 2021 - Certificate.pdf",
         originalUrl: "https://softuni.bg/Certificates/Details/118302/075f9e34",
@@ -164,8 +160,7 @@ const Certificates = () => {
         title: "Python Fundamentals",
         issuer: "SoftUni",
         date: "May 2022",
-        image:
-          "/certificates/Programming Fundamentals with Python - May 2022 - Certificate.jpeg",
+        image: PythonFundamentals,
         pdfUrl:
           "/certificates/Programming Fundamentals with Python - May 2022 - Certificate.pdf",
         originalUrl: "",
@@ -175,10 +170,8 @@ const Certificates = () => {
         title: "Software Engineer with Python",
         issuer: "SoftUni",
         date: "2023",
-        image:
-          "/certificates/Diploma for Software Engineer with Python.jpeg",
-        pdfUrl:
-          "/certificates/Diploma for Software Engineer with Python.pdf",
+        image: SoftwareEngineerWithPython,
+        pdfUrl: "/certificates/Diploma for Software Engineer with Python.pdf",
         originalUrl: "",
       },
     ];
@@ -466,7 +459,8 @@ const Certificates = () => {
                         className="certificate-button original-link"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <i className="fas fa-external-link-alt"></i> View Original
+                        <i className="fas fa-external-link-alt"></i> View
+                        Original
                       </a>
                     )}
 
