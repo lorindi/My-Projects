@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FamilyTree from "./Family Tree.png";
 import Jauntster from "./Jauntster.png";
-
+import ERP from "./ERP.png";
 const projects = [
   {
     id: 1,
@@ -50,10 +50,31 @@ const projects = [
     ],
     teamSize: 7,
   },
+  {
+    id: 3,
+    title: "ERP System",
+    description: "The project is an advanced ERP system built with React and Material-UI, offering a rich user interface, integrated data management system, and advanced administrative functionalities.",
+    image: ERP,
+    projectLink: "https://srverp.com/",
+    technologies: [
+        "React",
+        "Material-UI (MUI)",
+        "Redux Toolkit",
+        "React Router",
+        "React Hook Form", 
+        "Axios",
+        "Yup",
+        "Vite",
+        "Vitest",
+        "TailwindCSS",
+        "JWT",
+        "Recharts"
+    ],
+    teamSize: 4,
+}
 ];
 
 export const Internship = () => {
-  console.log("Rendering Internship component");
 
   const settings = {
     dots: true,
