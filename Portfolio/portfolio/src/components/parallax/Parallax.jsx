@@ -2,7 +2,7 @@ import { useRef } from "react";
 import "./Parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export const Parallax = ({ type }) => {
+export const Parallax = ({ type, title, subtitle }) => {
   const ref = useRef();
   console.log("Rendering Parallax component");
 
@@ -20,76 +20,65 @@ export const Parallax = ({ type }) => {
       className="parallax-container"
       ref={ref}
       style={{
-        background: type === "services" 
-          ? "var(--parallax-services)"
-          : "var(--parallax-portfolio)"
+        background:
+          type === "services"
+            ? "var(--parallax-services)"
+            : "var(--parallax-portfolio)",
       }}
     >
       <div className="parallax-content">
-        <motion.div 
-          className="geometric-shapes"
-          style={{ opacity }}
-        >
+        <motion.div className="geometric-shapes" style={{ opacity }}>
           <div className="shape circle"></div>
           <div className="shape square"></div>
           <div className="shape triangle"></div>
         </motion.div>
 
-        <motion.div 
-          className="text-content"
-          style={{ y: yText, scale }}
-        >
-          <h1>{type === "services" ? "My Services" : "Portfolio"}</h1>
-          <motion.div 
+        <motion.div className="text-content" style={{ y: yText, scale }}>
+          <h1>{title || "Default Title"}</h1>
+
+          {/* <h1>{type === "services" ? "My Services" : "Portfolio"}</h1> */}
+          <motion.div
             className="subtitle"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            {type === "services" ? (
+            <p>{subtitle || "Default subtitle text goes here"}</p>
+
+            {/* {type === "services" ? (
               <p>Crafting digital experiences with passion and precision</p>
             ) : (
               <p>Showcasing my journey through code and creativity</p>
-            )}
+            )} */}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="floating-elements"
-            animate={{ 
+            animate={{
               y: [0, -10, 0],
-              rotate: [0, 5, -5, 0]
+              rotate: [0, 5, -5, 0],
             }}
-            transition={{ 
+            transition={{
               duration: 5,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           >
-            {type === "services" ? (
-              <>
-                <div className="code-element">&lt;code/&gt;</div>
-                <div className="code-element">{"{ }"}</div>
-                <div className="code-element">&lt;/&gt;</div>
-              </>
-            ) : (
-              <>
-                <div className="project-element">💻</div>
-                <div className="project-element">🚀</div>
-                <div className="project-element">⚡</div>
-              </>
-            )}
+            <div className="code-element">&lt;code/&gt;</div>
+            <div className="code-element">{"{ }"}</div>
+            <div className="code-element">&lt;/&gt;</div>
           </motion.div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="scroll-indicator"
-          animate={{ 
+          animate={{
             y: [0, 10, 0],
           }}
-          transition={{ 
+          transition={{
             duration: 2,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         >
           <span>Scroll to explore</span>
