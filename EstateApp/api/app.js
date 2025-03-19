@@ -37,3 +37,5 @@ app.use("/api/messages", chatMessage);
 app.listen(PORT, () => {
   console.log(`Restful server is listening on port ${PORT}...`);
 });
+
+export default app;
