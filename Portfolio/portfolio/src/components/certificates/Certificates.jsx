@@ -81,7 +81,7 @@ const Certificates = () => {
         issuer: "SoftUni",
         date: "2024",
         image: TypeScript,
-        pdfUrl: "/certificates/TypeScript-April-2024-Certificate.pdf",
+        pdfUrl: TypeScriptPdf,
         originalUrl: "https://softuni.bg/Certificates/Details/215498/d68ac7d7",
       },
       {
