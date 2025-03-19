@@ -41,7 +41,7 @@
 .recommendations-underline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+  background: var(--portfolio-heading-gradient, linear-gradient(90deg, #6366f1, #8b5cf6));
   margin: 0 auto 40px;
   border-radius: 2px;
 }
