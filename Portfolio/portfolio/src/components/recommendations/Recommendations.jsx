@@ -1,5 +1,8 @@
 import { useState, useRef } from "react";
 import "./Recommendations.scss";
+import Job_Recommendation_Lora from "./Лора Митова Препоръка.pdf";
+import Job_Recommendation_Hristo from "./Job Recomendation- Lory.pdf";
+
 
 const Recommendations = () => {
   console.log("Rendering Recommendations component");
@@ -15,7 +18,7 @@ const Recommendations = () => {
       company: "Cost-Effective Solutions",
       contact: "0898702676",
       email: "jivko214@gmail.com",
-      pdfFile: "Job_Recommendation_Lora.pdf",
+      pdfFile: Job_Recommendation_Lora,
       content: `This recommendation is issued to Lora Mitova as part of the Jauntster team
       (Front-End)
       
@@ -49,7 +52,7 @@ const Recommendations = () => {
       position: "Project Team Lead – ERP for SRV",
       company: "Cost-Effective Solutions Program",
       contact: "0883479646",
-      pdfFile: "Lora_Mitova_Recommendation.pdf",
+      pdfFile: Job_Recommendation_Hristo,
       content: `I am pleased to recommend Lora Mitova as a developer with excellent technical skills and
       a drive for high results. During our collaboration, she demonstrated responsibility,
       professionalism, and the ability to work effectively in a team, actively contributing
@@ -90,7 +93,7 @@ const Recommendations = () => {
   };
 
   const handleViewPdf = () => {
-    window.open(`/src/components/recommendations/${recommendations[activeIndex].pdfFile}`, "_blank");
+    window.open(recommendations[activeIndex].pdfFile, "_blank");
   };
 
   return (
