@@ -27,7 +27,7 @@
   .certificates-underline {
     height: 4px;
     width: 70px;
-    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    background: var(--portfolio-heading-gradient, linear-gradient(90deg, #6366f1, #8b5cf6));
     margin: 0 auto 20px;
     border-radius: 2px;
   }
