@@ -155,7 +155,7 @@
     display: block;
     margin: 0 auto;
     padding: 12px 30px;
-    background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+    background-color: var(--button-color);
     color: white;
     border: none;
     border-radius: var(--button-border-radius);
@@ -538,7 +538,6 @@
     }
   }
   
-  // Светла тема специфични стилове
   &.light-theme, .light-theme {
     .certificate-frame {
       background-color: var(--bg-secondary);
@@ -615,7 +614,6 @@
     }
   }
   
-  // Тъмна тема специфични стилове
   &.dark-theme, .dark-theme {
     .certificate-frame {
       background-color: var(--bg-secondary);

@@ -185,7 +185,7 @@
 }
 
 .view-pdf-btn {
-  background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+  background-color: var(--button-color);
   color: white;
   border: none;
   border-radius: var(--button-border-radius);

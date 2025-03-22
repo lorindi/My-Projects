@@ -109,7 +109,7 @@
 
         &:hover {
           transform: scale(1.05);
-          background-color: var(--accent-primary);
+          background-color: var(--button-color);
           color: var(--internship-card-bg);
         }
 
@@ -143,11 +143,11 @@
         transition: all 0.3s ease;
 
         &.viewProject {
-          background-color: var(--accent-primary);
+          background-color: var(--button-color);
           color: var(--internship-card-bg);
 
           &:hover {
-            background-color: var(--accent-secondary);
+            background-color: var(--button-hover-color);
           }
         }
 
