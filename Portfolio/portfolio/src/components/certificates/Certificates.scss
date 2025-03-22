@@ -29,7 +29,7 @@
     width: 70px;
     background: var(--portfolio-heading-gradient, linear-gradient(90deg, #6366f1, #8b5cf6));
     margin: 0 auto 20px;
-    border-radius: 2px;
+    border-radius: var(--button-border-radius);
   }
   
   .certificates-description {
@@ -51,7 +51,7 @@
   
   .certificate-card {
     background-color: var(--card-bg);
-    border-radius: 10px;
+    border-radius: var(--button-border-radius);
     overflow: hidden;
     box-shadow: 0 5px 15px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -100,7 +100,7 @@
     width: 100%;
     max-height: 500px;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: var(--button-border-radius);
     background-color: var(--bg-secondary);
   }
   
@@ -158,7 +158,7 @@
     background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: var(--button-border-radius);
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -204,7 +204,7 @@
     max-width: 1000px;
     max-height: 90vh;
     background-color: var(--card-bg);
-    border-radius: 15px;
+    border-radius: var(--button-border-radius);
     padding: 30px;
     z-index: 1001;
     overflow: auto;
@@ -230,7 +230,7 @@
     z-index: 1002;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: var(--button-border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,7 +256,7 @@
     border: none;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: var(--button-border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -333,7 +333,7 @@
   .certificate-frame {
     width: 100%;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: var(--button-border-radius);
     overflow: hidden;
     box-shadow: 0 8px 20px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
@@ -357,7 +357,7 @@
   
   .certificate-button {
     padding: 12px 25px;
-    border-radius: 30px;
+    border-radius: var(--button-border-radius);
     font-weight: 500;
     transition: all 0.2s ease;
     display: flex;
@@ -456,8 +456,7 @@
     .thumbnail {
       width: 12px;
       height: 12px;
-      border-radius: 50%;
-      background-color: rgba(128, 128, 128, 0.3);
+      border-radius: var(--button-border-radius);
       cursor: pointer;
       transition: all 0.2s ease;
       display: flex;
@@ -467,7 +466,7 @@
       .thumbnail-dot {
         width: 6px;
         height: 6px;
-        border-radius: 50%;
+        border-radius: var(--button-border-radius);
         background-color: transparent;
         transition: all 0.2s ease;
       }

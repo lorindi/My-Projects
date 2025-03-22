@@ -6,7 +6,7 @@
   right: 25px;
   width: 70px;
   height: 70px;
-  border-radius: 50%;
+  border-radius: var(--button-border-radius);
   background-color: var(--card-bg);
   display: flex;
   align-items: center;

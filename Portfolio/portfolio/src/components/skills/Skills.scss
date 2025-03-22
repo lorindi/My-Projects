@@ -35,7 +35,7 @@
     height: 4px;
     background: var(--portfolio-heading-gradient, linear-gradient(90deg, #6366f1, #8b5cf6));
     margin-bottom: 50px;
-    border-radius: 2px;
+    border-radius: var(--button-border-radius);
 
     @include mobile {
       width: 60px;
@@ -68,7 +68,7 @@
   .skillsCategory {
     display: flex;
     flex-direction: column;
-    border-radius: 16px;
+    border-radius: var(--button-border-radius);
     padding: 30px;
     width: 32%;
     min-width: 320px;
@@ -155,7 +155,7 @@
       .skillButton {
         display: flex;
         align-items: center;
-        border-radius: 10px;
+        border-radius: var(--button-border-radius);
         padding: 10px 14px;
         cursor: pointer;
         transition: all 0.3s ease;

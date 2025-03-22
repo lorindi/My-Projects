@@ -43,7 +43,7 @@
   height: 4px;
   background: var(--portfolio-heading-gradient, linear-gradient(90deg, #6366f1, #8b5cf6));
   margin: 0 auto 40px;
-  border-radius: 2px;
+  border-radius: var(--button-border-radius);
 }
 
 .recommendations-carousel {
@@ -56,7 +56,7 @@
 
 .recommendation-card {
   background-color: var(--card-bg);
-  border-radius: 12px;
+  border-radius: var(--button-border-radius);
   padding: 40px;
   box-shadow: 0 8px 30px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -127,12 +127,12 @@
   
   &::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.05);
-    border-radius: 3px;
+    border-radius: var(--button-border-radius);
   }
   
   &::-webkit-scrollbar-thumb {
     background: var(--accent-primary);
-    border-radius: 3px;
+    border-radius: var(--button-border-radius);
   }
 }
 
@@ -188,7 +188,7 @@
   background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
   color: white;
   border: none;
-  border-radius: 30px;
+  border-radius: var(--button-border-radius);
   padding: 10px 20px;
   font-size: 0.9rem;
   cursor: pointer;
@@ -222,7 +222,7 @@
   border: none;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: var(--button-border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -249,7 +249,7 @@
 .dot {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: var(--button-border-radius);
   background-color: var(--text-color);
   opacity: 0.3;
   margin: 0 5px;

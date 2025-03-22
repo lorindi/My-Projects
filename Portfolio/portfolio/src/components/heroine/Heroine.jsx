@@ -1,5 +1,5 @@
 import "./Heroine.scss";
-import loraImg from "./IMG_20231225_205932.jpg";
+import loraImg from "./Polish_20250322_010348975.png";
 import scrollImg from "./pngwing.com.png";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";

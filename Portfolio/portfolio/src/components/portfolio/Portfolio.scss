@@ -37,7 +37,7 @@
     .progressBar {
       height: 4px;
       background: var(--portfolio-progress-bar);
-      border-radius: 10px;
+      border-radius: var(--button-border-radius);
       transition: transform 0.3s ease;
     }
   }
@@ -70,7 +70,7 @@
         gap: 50px;
         position: relative;
         background: var(--portfolio-card-bg);
-        border-radius: 20px;
+        border-radius: var(--button-border-radius);
         padding: 50px;
         backdrop-filter: blur(5px);
         box-shadow: 0 8px 32px var(--portfolio-card-shadow);
@@ -110,7 +110,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 15px;
+            border-radius: var(--button-border-radius);
             box-shadow: 0 5px 15px var(--portfolio-card-shadow);
           }
         }
@@ -169,7 +169,7 @@
             button {
               padding: 12px 24px;
               border: none;
-              border-radius: 10px;
+              border-radius: var(--button-border-radius);
               font-size: 16px;
               font-weight: 500;
               cursor: pointer;

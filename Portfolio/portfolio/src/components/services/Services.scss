@@ -46,7 +46,7 @@
 
     .card {
       background: var(--services-card-bg);
-      border-radius: 20px;
+      border-radius: var(--button-border-radius);
       padding: 30px;
       transition: all 0.3s ease;
       box-shadow: 0 5px 15px var(--services-card-shadow);
@@ -73,7 +73,7 @@
           height: 60px;
           background: var(--services-icon-bg);
           color: var(--services-icon-color);
-          border-radius: 50%;
+          border-radius: var(--button-border-radius);
           display: flex;
           align-items: center;
           justify-content: center;

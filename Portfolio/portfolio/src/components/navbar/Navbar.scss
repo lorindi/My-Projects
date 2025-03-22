@@ -21,11 +21,11 @@
       font-weight: bolder;
       color: var(--navbar-logo-color);
       transition: color 0.3s ease;
-      
+
       &.logoTitle {
         font-size: 1.2rem;
         letter-spacing: 1px;
-        
+
         &:hover {
           color: var(--accent-primary);
         }
@@ -39,7 +39,7 @@
     .social {
       display: flex;
       gap: 30px;
-      
+
       @include mobile {
         gap: 20px;
       }
@@ -52,7 +52,7 @@
         align-items: center;
         justify-content: center;
         padding: 8px;
-        border-radius: 50%;
+        border-radius: var(--button-border-radius);
 
         &:hover {
           color: var(--social-icon-hover);

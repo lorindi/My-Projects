@@ -201,7 +201,7 @@
         font-size: 2rem;
         padding: 1rem;
         background: var(--floating-element-bg);
-        border-radius: 12px;
+        border-radius: var(--button-border-radius);
         backdrop-filter: blur(5px);
         transition: transform 0.3s ease;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);

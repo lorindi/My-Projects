@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap-reverse;
-  gap: 75px;
+  gap: 65px;
   padding-bottom: 80px;
   width: 100%;
   position: relative;
@@ -81,7 +81,7 @@
       .buttons {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
         align-items: center;
         justify-content: center;
 
@@ -92,16 +92,15 @@
 
         button {
           padding: 12px;
-          border-radius: 50px;
-          color: #7b7b7b;
-          margin-right: 20px;
+          color: var(--shape-color);
           cursor: pointer;
           letter-spacing: 1px;
           font-weight: 600;
           font-size: 15px;
-          border: 2px solid var(--btn-border-color);
-          border-radius: var(--btn-border-radius);
-          background-color: var(--btn-bg-color);
+          border: 2px solid var(--heroine-button-color);
+          border-radius: var(--button-border-radius);
+
+          background-color: var(--heroine-button-color);
 
           &:hover {
             background-color: var(--heroine-button-hover);
@@ -146,7 +145,6 @@
     transition: color 0.3s ease;
     z-index: -3;
 
-
     @include mobile {
       display: none;
     }
@@ -158,18 +156,17 @@
     img {
       width: 400px;
       height: 400px;
-      padding: 10px;
-      background-position: center;
+      background-position: bottom;
       object-fit: cover;
       background-size: contain;
       opacity: var(--heroine-image-opacity);
       border-radius: 100%;
       transition: opacity 0.3s ease;
       box-shadow: 0 0 20px var(--shadow-color);
-
+      
       @include mobile {
-        height: 300px;
-        width: 300px;
+        height: 280px;
+        width: 280px;
         // margin-top: 30px;
       }
     }

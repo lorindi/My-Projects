@@ -1,4 +1,8 @@
 .light-theme {
+  --button-border-radius: 10px;
+  --button-color: #333333c2;
+  --button-hover-color: #3333339f;
+
   --navbar-bg: #ffffff;
   --navbar-text: #4a4a4a;
   --navbar-logo-color: #7b7b7b;
@@ -32,12 +36,13 @@
   --social-icon-color: rgba(0, 0, 0, 0.6);
   --hover-color: rgba(128, 0, 128, 0.5);
 
-  --heroine-heading: #bf7fbf;
+  --heroine-heading: #333333c0;
   --heroine-text: #7b7b7b;
   --heroine-sliding-text: #f0f0f0;
   --heroine-image-opacity: 0.8;
   --heroine-scroll-opacity: 0.5;
-  --heroine-button-hover: rgba(155, 196, 245, 0.1);
+  --heroine-button-hover: #3333339f;
+  --heroine-button-color:   #333333c2;
 
   --parallax-services: linear-gradient(45deg, #88b4d3, #a3c7e6, #72acdb);
   --parallax-portfolio: linear-gradient(45deg, #c7ddc9, #98ce99, #77bd79);
@@ -115,6 +120,10 @@
 }
 
 .dark-theme {
+  --button-border-radius: 10px;
+  --button-color: #4a90e2;
+  --button-hover-color: #357abd;
+
   --navbar-bg: #2d2d2d;
   --navbar-text: #e0e0e0;
   --navbar-logo-color: #ffffff;
@@ -148,8 +157,8 @@
   --social-icon-color: rgba(255, 255, 255, 0.6);
   --hover-color: rgba(128, 0, 128, 0.8);
 
-  --heroine-heading: #e5a5e5;
-  --heroine-text: #e0e0e0;
+  --heroine-heading: #FAFAFA;
+  --heroine-text: gray;
   --heroine-sliding-text: #2d2d2d;
   --heroine-image-opacity: 0.9;
   --heroine-scroll-opacity: 0.7;
