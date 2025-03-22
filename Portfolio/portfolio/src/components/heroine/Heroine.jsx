@@ -74,14 +74,14 @@ export const Heroine = () => {
           alt=""
         />
       </div>
-      <motion.div
+      {/* <motion.div
         className="slidingTextContainer"
         variants={sliderVariants}
         initial="initial"
         animate="animate"
       >
         Writer Content Creator Influencer
-      </motion.div>
+      </motion.div> */}
       <div className="imageContainer">
         <img src={loraImg} alt="" />
       </div>
