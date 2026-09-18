@@ -1,2 +1,0 @@
-const JWT_SECRET_KEY = '5e31bd17-d124-4e2f-8943-36fb696a9f28';
-export { JWT_SECRET_KEY };
